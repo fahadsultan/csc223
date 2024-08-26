@@ -1,0 +1,32 @@
+---
+title: "PROGRAMMING, IN JAVA"
+toc: true
+numbered: true
+---
+
+Data (values and variables) are to code what nouns are to prose.
+
+Operations (arithmetic, logical, relational) are the verbs.
+
+Control flow (if-else, loops) are the plot. 
+
+Abstractions (functions, classes) are metaphors.
+
+---
+
+Programming in Java is different from programming in Python primarily because: 
+
+* Java is a **statically typed** language.
+* Every Java program must have a `main` method.
+* Java is a **compiled** language, where Python is an **interpreted** language. 
+* While Pythn is also object-oriented, Java is more **strictly** object-oriented.
+
+---
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```

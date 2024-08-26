@@ -1,0 +1,38 @@
+---
+title: Control Flow
+toc: true
+---
+
+
+```{important}
+This page is <span style="color:red">**under construction**</span>. All or part of the <span style="color:red">**content may be incomplete or incorrect**</span>.
+``` 
+
+<!-- 
+
+### `if` Statements
+
+* `if` statements are used to execute code **conditionally**.
+
+* The code inside the `if` statement is executed **only if** the condition is `True`.
+
+* The condition is a **boolean expression**.
+
+* The code inside the `if` statement is **indented**.
+
+* The `if` statement **ends** when the indentation ends. -->
+
+
+## Flow / Directionality of Execution 
+
+1. **Programs** (multiple lines of code) run each line of code sequentially **top to bottom**
+
+
+2. **Statements** (single line of code) run **right to left**
+
+    * Expression on right hand side of assignment/boolean operator is executed first
+    
+    * Then, left hand expression of assignment operator is executed
+
+
+3. **Expressions** ( < 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run **left to right**. 

@@ -1,0 +1,24 @@
+# Calendar {.unnumbered}
+
+::: {.callout-caution}
+Please note that this is a tentative plan and is subject to change.
+:::
+
+| # | TOPIC | READING | MEETING 1 | MEETING 2 | WRITTEN  ASSIGNMENT | PROGRAMMING ASSIGNMENT |
+|---|----|---|---|---|---|---|
+| 1 | Git |  |    |  | | |
+| 2 |  | |  |  | | |
+| 3 |  | |  |  | | |
+| 4 |  | |  |  | | |
+| 5 |  | |  |  | | |
+| 6 |  | |  |  | | |
+| 7 |  | |  |  | | |
+| 8 |  | |  |  | | |
+| 9 |  | |  |  | | |
+| 10 |  | |  |  | | |
+| 11 |  | |  |  | | |
+| 12 |  | |  |  | | |
+| 13 |  | |  |  | | |
+| 14 |  | |  |  | | |
+| 15 |  | |  |  | | |
+| 16 |  | |  |  | | |

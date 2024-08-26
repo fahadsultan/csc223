@@ -1,0 +1,32 @@
+---
+title: Introduction
+toc: true
+---
+
+
+# About Me
+
+<span style="font-size: 2.0em; font-weight: bold;">
+Syed Fahad Sultan سید فہد سلطان </span> 
+
+**Pronunciation**:  Saiyyad Fahad Sool-tahn
+
+_Just call me **“Dr. Sultan”**_ (click on the speaker for a short audio clip: [🔈](https://upload.wikimedia.org/wikipedia/commons/c/cd/LL-Q9292_%28aze%29-Azerbaijani_audiorecordings-sultan.wav))
+
+<br/>
+<center><img style="filter:invert(1)" width="80%" src="assets/name.png"></center>
+<br/>
+
+I am originally from **[Lahore, Pakistan](https://en.wikipedia.org/wiki/Lahore)** and joined **Furman University** in Fall 2022 after earning my Ph.D. in Computer Science from **State University of New York at Stony Brook**.
+
+<br/>
+<center><img width="70%" src="https://i.ibb.co/wJGFKqB/badshahi-mosque.png"></center>
+<br/>
+
+
+Fresh out of college, I worked as a professional video game developer for a startup that later got acquired by the Japanese gaming giant **DeNA**. During this time, I was part of the team that built **TapFish**, the top-grossing game worldwide, for two weeks in 2011, on both the App Store and Google Play.
+
+I then went on to work at **Technology for People Initiative**, an applied research lab in my where I mined social media and cell phone data for proxies of socio-economic indicators that allowed more inclusive policy-making for marginalized communities. During these years, I also dabbled in data journalism and helped organize a boot camp on using data for journalists with the support of the International Center for Journalists (ICFJ) and the Knight Foundation.
+
+
+

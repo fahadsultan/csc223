@@ -1,0 +1,42 @@
+
+# Grading
+
+## Grade Breakdown
+
+| Component | Percentage |
+|---------|------|
+| Class Participation $^1$ | 10% |
+| Written Assignments | 10% |
+| Labs / Programming Assignments $^2$ | 20% |
+| Exam 1 | 10% |
+| Exam 2 | 20% |
+| Final (Cumulative)   | 30% |
+
+$^1$ Details in [Introduction](../intro.qmd)
+
+$^2$ Labs / Programming assignments will only be graded in-person in my office or in the lab, within 10 calendar days of them being posted. 
+
+Use [this link](https://calendly.com/ssultan-dpq/) to schedule a time to get your assignments graded. 
+
+## Grading Scale 
+(+/- at instructor's discretion)
+
+| Letter Grade | Range |
+|---------|------|
+| A  | > 90 % |
+| B  | 80 - 90 % |
+| C  | 70 - 80 % |
+| D  | 60 - 70 % |
+| F  | < 60 % |
+
+## Minimum Requirements
+
+In order to pass this class, you must
+1. Earn $\geq$ 60% of the total points
+2. Attend $\geq$ 80% of the lectures and labs. 
+3. Submit $\geq$ 80% of written and programmming assignments. 
+4. Take ALL tests and final! 
+
+In other words, you cannot blow off an entire aspect of the course and pass this class! 
+
+Note that this basic requirement is necessary but not sufficient to pass the class.

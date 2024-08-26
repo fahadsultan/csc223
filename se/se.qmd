@@ -1,0 +1,8 @@
+---
+title: "SOFTWARE ENGINEERING"
+toc: true
+---
+
+Software engineering is the application of engineering to the design, development, implementation, testing, and maintenance of software in a systematic method.
+
+It is a very broad field that includes a wide range of subfields. In this course, we will focus on a 

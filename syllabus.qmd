@@ -1,0 +1,13 @@
+---
+toc: true
+---
+
+# Syllabus {.unnumbered}
+
+## Pre-requisites
+
+* CSC-122: Introduction to Computer Science
+
+## Course Description
+
+## Course Objectives

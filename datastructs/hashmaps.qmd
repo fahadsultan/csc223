@@ -1,0 +1,4 @@
+---
+title: "Hashmaps"
+toc: true
+---

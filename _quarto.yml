@@ -1,0 +1,108 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  favicon: logo.png
+  navbar:
+    logo: logo.png
+    background: dark
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Calendar"
+        href: calendar.qmd
+      - sidebar:syllabus
+      - text: "Purposeful Pathways"
+        href: syllabus/pathways.qmd
+      - text: "Office Hours"
+        href: syllabus/appointment.md
+      - text: "Moodle Page"
+        href: https://courses.furman.edu/course/view.php?id=18720
+      - text: "Github Classroom"
+        href: https://classroom.github.com/classrooms/179249964-csc-223
+    tools:
+      - icon: facebook
+        href: https://fahadsultan.com
+      - icon: twitter
+        href: https://twitter.com
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
+  sidebar:
+    - id: content
+      background: "#2d2d2d"
+      style: "floating"
+      search: true
+      contents:
+        - text: "Home"
+          href: index.qmd
+        - text: "Introduction"
+          href: intro.qmd
+        - section: 
+          href: se/se.qmd
+          contents:
+          - section: "Version Control"
+            href: se/version_control/version_control.qmd
+            contents:
+              - se/version_control/git_solo.qmd
+              - se/version_control/git_colab.qmd
+              - se/version_control/github.qmd
+          - se/tdd.qmd
+        - section: 
+          href: basics/java.qmd
+          contents:
+            - basics/data.ipynb
+            - section: "Operations"
+              href: basics/operations/operations.ipynb
+              contents:
+                - basics/operations/math_operators.ipynb
+                - basics/operations/precedence_associativity.ipynb
+                - basics/operations/file_io.ipynb
+            - section: "Control Flow"
+              href: basics/controls/controls.qmd
+              contents:
+                - basics/controls/conditionals.ipynb
+                - basics/controls/loops.ipynb
+            - section: "Abstractions"
+              href: basics/abstractions/abstractions.qmd
+              contents:
+                - basics/abstractions/functions.qmd
+                - basics/abstractions/classes.qmd
+        - section: 
+          href: datastructs/datastructs.qmd
+          contents:
+            - datastructs/hashmaps.qmd
+            - datastructs/trees.qmd
+            - datastructs/heaps.qmd
+            - datastructs/graphs.qmd
+        - section: 
+          href: algos/algos.qmd
+          contents:
+            - algos/backtracking.qmd
+            - algos/greedy.qmd
+            - algos/dp.qmd
+    - id: syllabus
+      title: "Syllabus"
+      background: light
+      collapse-level: 2
+      contents:
+        - syllabus/grading.qmd
+        - syllabus/academic_success.md
+        - syllabus/textbook.md
+        - syllabus/integrity.md
+        - syllabus/mental_health.md
+        - syllabus/accomodations.md
+        - syllabus/title_9.md
+format:
+  html:
+    theme: 
+      - darkly
+      - custom.scss
+    css: style.css
+    monobackgroundcolor: "#CCCCFF"
+    highlight-style: monokai #atom-one, github, dracula, monokai
