@@ -1,4 +1,12 @@
 
+div.sidebar-item-container .active, div.sidebar-item-container .show>.nav-link, div.sidebar-item-container .sidebar-link>code {
+    color: #9772e1;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #9772e1;
+}
+
 .navbar-logo {
     width: 200px;
     max-height: fit-content;
@@ -35,4 +43,17 @@
 .navbar{
     /* background: #222; */
     border-bottom: 1px solid #383838;
+}
+
+code {
+    font-size: 0.875em;
+    color: var(--bs-code-color);
+    color: #8a5abb;
+    /* background-color: #f8f9fa; */
+    background-color: #222;
+    border-radius: .25rem;
+    padding: .125rem .25rem;
+    word-wrap: break-word;
+    border-radius: 5px; 
+    border: 1px solid #BCBEC0;
 }

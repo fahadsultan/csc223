@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Git (Solo)</title>
+<title>Git (Individual)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../logo.png" rel="icon" type="image/png">
+<link href="../../favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,6 +137,10 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
         <li>
+    <a class="dropdown-item" href="../../syllabus/about.html">
+ <span class="dropdown-text">Course Description and Goals</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../syllabus/grading.html">
  <span class="dropdown-text">Grading</span></a>
   </li>  
@@ -133,10 +171,6 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus/pathways.html"> 
-<span class="menu-text">Purposeful Pathways</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../syllabus/appointment.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
@@ -148,11 +182,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="https://classroom.github.com/classrooms/179249964-csc-223"> 
 <span class="menu-text">Github Classroom</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://calendly.com/ssultan-dpq/"> 
+<span class="menu-text">Set an Appointment</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
-    <a href="https://fahadsultan.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-facebook"></i></a>
-    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+            <div class="quarto-navbar-tools">
+    <a href="https://www.instagram.com/furmancompsci/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -176,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../../se/version_control/version_control.html">Version Control</a></li><li class="breadcrumb-item"><a href="../../se/version_control/git_solo.html">Git (Solo)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../../se/version_control/version_control.html">Version Control</a></li><li class="breadcrumb-item"><a href="../../se/version_control/git_solo.html">Git (Individual)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -229,19 +266,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Git (Solo)</span></a>
+ <span class="menu-text">Git (Individual)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Git (Collaboration)</span></a>
+ <span class="menu-text">Git (Team)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../se/version_control/github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Github</span></a>
+ <span class="menu-text">Github (Community)</span></a>
   </div>
 </li>
       </ul>
@@ -250,6 +287,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../se/tdd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Test Driven Development</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../se/interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Interviews</span></a>
   </div>
 </li>
       </ul>
@@ -420,23 +463,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#git-version-control" id="toc-git-version-control" class="nav-link active" data-scroll-target="#git-version-control">Git: Version Control</a>
-  <ul class="collapse">
-  <li><a href="#initial-setup" id="toc-initial-setup" class="nav-link" data-scroll-target="#initial-setup">Initial Setup</a>
+  <li><a href="#initial-setup" id="toc-initial-setup" class="nav-link active" data-scroll-target="#initial-setup">Initial Setup</a>
   <ul class="collapse">
   <li><a href="#starting-from-scratch" id="toc-starting-from-scratch" class="nav-link" data-scroll-target="#starting-from-scratch">Starting from scratch</a></li>
+  <li><a href="#starting-from-an-existing-repo-on-github" id="toc-starting-from-an-existing-repo-on-github" class="nav-link" data-scroll-target="#starting-from-an-existing-repo-on-github">Starting from an existing repo on Github</a></li>
   </ul></li>
-  <li><a href="#normal-day-at-work-by-yourself" id="toc-normal-day-at-work-by-yourself" class="nav-link" data-scroll-target="#normal-day-at-work-by-yourself">Normal day at work (by yourself)</a>
+  <li><a href="#workflow-individual" id="toc-workflow-individual" class="nav-link" data-scroll-target="#workflow-individual">Workflow (individual)</a>
   <ul class="collapse">
+  <li><a href="#git-status" id="toc-git-status" class="nav-link" data-scroll-target="#git-status">1. <code>git status</code></a></li>
   <li><a href="#git-diff-optional" id="toc-git-diff-optional" class="nav-link" data-scroll-target="#git-diff-optional">* <code>git diff</code> (optional)</a></li>
+  <li><a href="#git-add" id="toc-git-add" class="nav-link" data-scroll-target="#git-add">2. <code>git add</code></a></li>
   <li><a href="#git-commit" id="toc-git-commit" class="nav-link" data-scroll-target="#git-commit">3. <code>git commit</code></a></li>
   <li><a href="#git-push" id="toc-git-push" class="nav-link" data-scroll-target="#git-push">5. <code>git push</code></a></li>
   </ul></li>
-  <li><a href="#normal-day-at-work-in-a-team" id="toc-normal-day-at-work-in-a-team" class="nav-link" data-scroll-target="#normal-day-at-work-in-a-team">Normal day at work (in a team)</a></li>
   <li><a href="#umm..-idk-what-happened" id="toc-umm..-idk-what-happened" class="nav-link" data-scroll-target="#umm..-idk-what-happened">Umm.. IDK what happened…</a>
   <ul class="collapse">
   <li><a href="#git-log" id="toc-git-log" class="nav-link" data-scroll-target="#git-log"><code>git log</code></a></li>
-  </ul></li>
+  <li><a href="#git-revert" id="toc-git-revert" class="nav-link" data-scroll-target="#git-revert"><code>git revert</code></a></li>
+  <li><a href="#git-reset" id="toc-git-reset" class="nav-link" data-scroll-target="#git-reset"><code>git reset</code></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -444,9 +488,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../../se/version_control/version_control.html">Version Control</a></li><li class="breadcrumb-item"><a href="../../se/version_control/git_solo.html">Git (Solo)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../../se/version_control/version_control.html">Version Control</a></li><li class="breadcrumb-item"><a href="../../se/version_control/git_solo.html">Git (Individual)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Git (Solo)</h1>
+<h1 class="title">Git (Individual)</h1>
 </div>
 
 
@@ -463,105 +507,79 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="git-version-control" class="level1">
-<h1>Git: Version Control</h1>
 <hr>
-<p><img style="invert(1);" align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png" width="30%"></p>
-<p>Git is a distributed Version Control System (VCS). Version control systems are tools used to track changes to source code (or other collections of files and folders). As the name implies, these tools help maintain a history of changes; furthermore, they facilitate collaboration.</p>
-<p>`````tmeqecymbmzv <a href="https://www.theregister.com/2015/01/19/got_bugs_got_anger_just_get_them_out_says_linus_torvalds/">“I’m not a nice person and I don’t care about you”</a> :class: note</p>
-<p><code>kvbjeis https://media.newyorker.com/photos/5ba177da9eb2f7420aadeb98/4:3/w_1229,h_921,c_limit/Cohen-Linus-Torvalds.jpg :width: 35% :align: right</code></p>
-<p>Git was developed by <strong><a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a></strong>, who also created the open source operating system <strong>Linux</strong> (portmanteau of Linus and Unix).</p>
-<p>Torvalds is known for his technical brilliance but also his very abrasive personality. This <a href="https://www.youtube.com/watch?v=o8NPllzkFhE&amp;ab_channel=TED">interview on TED</a> of Torvalds is a good introduction to him.</p>
-<p>`````</p>
-<p>VCSs track changes to a folder and its contents in a series of snapshots, where each snapshot encapsulates the entire state of files/folders within a top-level directory. VCSs also maintain metadata like who created each snapshot, messages associated with each snapshot, and so on.</p>
-<p><img align="right" src="https://imgs.xkcd.com/comics/git.png" width="30%"></p>
-<p>Individual snapshots can be compared to each other, and differences can be extracted. For example, you can ask questions like what changed between this snapshot and the previous snapshot? Who made those changes? etc.</p>
-<p>While other VCSs exist, Git is the de facto standard for version control. This XKCD comic captures Git’s reputation:</p>
-<p>Because Git’s interface is a leaky abstraction, learning Git top-down (starting with its interface / command-line interface) can lead to a lot of confusion. It’s possible to memorize a handful of commands and think of them as magic incantations, and follow the approach in the comic above whenever anything goes wrong.</p>
 <section id="initial-setup" class="level2">
 <h2 class="anchored" data-anchor-id="initial-setup">Initial Setup</h2>
-<pre class="{note}"><code>
-If this is the first time you've installed Git, you may need to configure it. You only need to do this once per machine.
-
-You can configure your Git username and email using the following commands, replacing _John Doe's_ info with your own. 
-
-`$ git config --global user.name "John Doe"`
-
-`$ git config --global user.email johndoe@example.com`
-
-These details will be associated with any commits that you make and blame will be correctly assigned.
-</code></pre>
+<div class="callout-notice">
+<p>If this is the first time you’ve installed Git, you may need to configure it. You only need to do this once per machine.</p>
+<p>You can configure your Git username and email using the following commands, replacing <em>John Doe’s</em> info with your own.</p>
+<p><code>$ git config --global user.name "John Doe"</code></p>
+<p><code>$ git config --global user.email johndoe@example.com</code></p>
+<p>These details will be associated with any commits that you make and blame will be correctly assigned.</p>
+</div>
 <section id="starting-from-scratch" class="level3">
 <h3 class="anchored" data-anchor-id="starting-from-scratch">Starting from scratch</h3>
 <section id="fire-it-up-git-init" class="level4">
 <h4 class="anchored" data-anchor-id="fire-it-up-git-init">Fire it up: <code>git init</code></h4>
 <p>Git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new Git repository in the current directory. This will create a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. (See the next section to learn how to start tracking files.)</p>
-<!-- <img align="center" src="assets/git_init.png" width="75%"> -->
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>```oqmafssk ../assets/git_init.png</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name: git_init</td>
-</tr>
-<tr class="even">
-<td>width: 75%</td>
-</tr>
-</tbody>
-</table>
-<p>Git init</p>
-<pre><code>
-#### Link it to your Github repository: `git remote add origin`
+<center>
+<img align="center" src="../../assets/git_init.png" width="100%" style="filter:invert(1);">
+</center>
+<!-- ```{figure} ../assets/git_init.png
 
 
 
 
-Git remote is a command to manage the set of remotes associated with a repository. A remote in Git is a common repository that all team members use to exchange their changes. In most cases, such a remote repository is stored on a code hosting service like GitHub or on an internal server. In contrast to a local repository, a remote typically does not provide a file tree of the project's current state. Instead, it only consists of the .git versioning data.
+---
+name: git_init
+width: 75%
+---
 
-``` bash   
-$ git remote add origin &lt;remote repository URL&gt;
-$ git remote -v</code></pre>
-<!-- <img align="center" src="assets/git_remote.png"> -->
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>```oqmafssk ../assets/git_remote.png</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name: git_init</td>
-</tr>
-<tr class="even">
-<td>width: 75%</td>
-</tr>
-</tbody>
-</table>
-<p>git remote</p>
-<pre><code>&lt;br/&gt;
 
-The remote repository URL is the URL of the repository on GitHub. The `git remote -v` command lists the URLs that Git has stored for the shortname to be used when reading and writing to that remote.
 
-On Github, you can find the URL of your repository by clicking on the green button that says "Code" and copying the URL that appears &lt;u&gt;under SSH&lt;/u&gt; tab. 
 
-### Starting from an existing repo on Github
+Git init
+``` -->
+</section>
+<section id="link-it-to-your-github-repository-git-remote-add-origin" class="level4">
+<h4 class="anchored" data-anchor-id="link-it-to-your-github-repository-git-remote-add-origin">Link it to your Github repository: <code>git remote add origin</code></h4>
+<p>Git remote is a command to manage the set of remotes associated with a repository. A remote in Git is a common repository that all team members use to exchange their changes. In most cases, such a remote repository is stored on a code hosting service like GitHub or on an internal server. In contrast to a local repository, a remote typically does not provide a file tree of the project’s current state. Instead, it only consists of the .git versioning data.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote add origin <span class="op">&lt;</span>remote repository URL<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<center>
+<img src="../../assets/git_remote.png" width="100%" style="filter:invert(1);">
+</center>
+<!-- ```{figure} ../assets/git_remote.png
 
-Git clone is a command for downloading existing source code from a remote repository (like Github, for example). Cloning a repository downloads an exact copy of all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. You can push your changes to the remote repository on GitHub, or pull other people's changes from GitHub. 
 
-The syntax for git clone is as follows:
 
-```bash
-$ git clone &lt;repo URL&gt;</code></pre>
+
+---
+name: git_init
+width: 75%
+---
+
+
+
+
+git remote
+```
+<br/> -->
+<p>The remote repository URL is the URL of the repository on GitHub. The <code>git remote -v</code> command lists the URLs that Git has stored for the shortname to be used when reading and writing to that remote.</p>
+<p>On Github, you can find the URL of your repository by clicking on the green button that says “Code” and copying the URL that appears <u>under SSH</u> tab.</p>
+</section>
+</section>
+<section id="starting-from-an-existing-repo-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="starting-from-an-existing-repo-on-github">Starting from an existing repo on Github</h3>
+<p>Git clone is a command for downloading existing source code from a remote repository (like Github, for example). Cloning a repository downloads an exact copy of all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. You can push your changes to the remote repository on GitHub, or pull other people’s changes from GitHub.</p>
+<p>The syntax for git clone is as follows:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone <span class="op">&lt;</span>repo URL<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can find the URL of your repository by clicking on the green button that says “Code” and copying the URL that appears <u>under SSH</u> tab.</p>
 <p>You don’t need to run <code>git init</code> or <code>git remote add origin</code> if you are cloning an existing repository.</p>
 </section>
 </section>
-</section>
-<section id="normal-day-at-work-by-yourself" class="level2">
-<h2 class="anchored" data-anchor-id="normal-day-at-work-by-yourself">Normal day at work (by yourself)</h2>
+<section id="workflow-individual" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-individual">Workflow (individual)</h2>
 <p>When you are not collaborating with others, using git is pretty straightforward.</p>
 <p>In git, there are four main states that your files can reside in. They are:</p>
 <ul>
@@ -570,62 +588,43 @@ $ git clone &lt;repo URL&gt;</code></pre>
 <li><p><strong>committed</strong>: means that the data is safely stored in your local database.</p></li>
 <li><p><strong>pushed</strong>: means that your data has been transferred to a remote repository.</p></li>
 </ul>
-<!-- <img src="assets/git.png"> -->
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>```oqmafssk https://i.ibb.co/gdSwjCr/git.png</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name: git_init</td>
-</tr>
-<tr class="even">
-<td>width: 75%</td>
-</tr>
-</tbody>
-</table>
-<p>git flow of operations</p>
-<pre><code>
-### 1. `git status`
+<center>
+<img src="https://i.ibb.co/gdSwjCr/git.png" width="100%" style="filter:invert(1);">
+</center>
+<section id="git-status" class="level3">
+<h3 class="anchored" data-anchor-id="git-status">1. <code>git status</code></h3>
+<p>Git status is a command that displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does not show you any information regarding the committed project history. For this, you need to use git log.</p>
+<center>
+<img src="../../assets/git_status.png" width="100%" style="filter:invert(1);">
+</center>
+<!-- <img width="70%" align="center" src="assets/git_status.png"> -->
+<!-- ```{figure} ../assets/git_status.png
 
-Git status is a command that displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does not show you any information regarding the committed project history. For this, you need to use git log.
 
-&lt;!-- &lt;img width="70%" align="center" src="assets/git_status.png"&gt; --&gt;
-```{figure} ../assets/git_status.png
+
+
 ---
 name: git_init
 width: 75%
 ---
-git status</code></pre>
+
+
+
+
+git status
+``` -->
+</section>
 <section id="git-diff-optional" class="level3">
 <h3 class="anchored" data-anchor-id="git-diff-optional">* <code>git diff</code> (optional)</h3>
 <p>Git diff is a multi-use Git command that when executed runs a diff function on Git data sources. These data sources can be commits, branches, files and more. The git diff command is often used along with git status and git log to analyze the current state of a Git repo.</p>
-<!-- <img align="center" src="assets/git_diff.png"> -->
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>```oqmafssk ../assets/git_diff.png</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name: git_init</td>
-</tr>
-<tr class="even">
-<td>width: 75%</td>
-</tr>
-</tbody>
-</table>
-<p>git diff</p>
-<pre><code>
-### 2. `git add`
-
-Git add is a command used to add files to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn’t really affect the repository in any significant way—changes are not actually recorded until you run git commit.
-
-``` shell
-
+<center>
+<img src="../../assets/git_diff.png" width="100%" style="filter:invert(1);">
+</center>
+</section>
+<section id="git-add" class="level3">
+<h3 class="anchored" data-anchor-id="git-add">2. <code>git add</code></h3>
+<p>Git add is a command used to add files to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn’t really affect the repository in any significant way—changes are not actually recorded until you run git commit.</p>
+<pre class="shell"><code>
 git add &lt;file-name-1&gt;
 git add &lt;file-name-2&gt;
 git add &lt;file-name-3&gt;
@@ -646,88 +645,68 @@ git commit -m &lt;Short text msg to communicate what are the changes made in the
 <pre class="shell"><code>git push -u origin main</code></pre>
 </section>
 </section>
-<section id="normal-day-at-work-in-a-team" class="level2">
-<h2 class="anchored" data-anchor-id="normal-day-at-work-in-a-team">Normal day at work (in a team)</h2>
-<p>For future lecture.</p>
-</section>
 <section id="umm..-idk-what-happened" class="level2">
 <h2 class="anchored" data-anchor-id="umm..-idk-what-happened">Umm.. IDK what happened…</h2>
-<pre class="{tip}"><code>[This webpage](https://ohshitgit.com/), with an easy to remember name, is a great resource for such situations! </code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://ohshitgit.com/">This webpage</a>, with an easy to remember name, is a great resource for such situations!</p>
+</div>
+</div>
 <p>While working on a project, you may find yourself in a situation where you need to undo a commit. Git offers two main ways to undo changes to commits: <code>git revert</code> and <code>git reset</code>.</p>
 <section id="git-log" class="level3">
 <h3 class="anchored" data-anchor-id="git-log"><code>git log</code></h3>
 <p>The first thing you should do is when you inevitably mess up is to assess the situation and identify the most recent commit up to which everything was working fine.</p>
 <p>Git log is a command used to display the commit history of a repository. By default, git log displays the commit hash, the author and the commit message. The git log command allows you to customize the output using a large number of flags and options.</p>
 <p>It is often a good idea to use <code>git log --oneline</code> to get a more concise view of the commit history.</p>
+<center>
+<img src="../../assets/git_log.png" width="100%" style="filter:invert(1);">
+</center>
 <!-- <img align="center" src="assets/git_log.png"> -->
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>```oqmafssk ../assets/git_log.png</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name: git_init</td>
-</tr>
-<tr class="even">
-<td>width: 75%</td>
-</tr>
-</tbody>
-</table>
-<p>git log</p>
-<pre><code>
-&lt;br/&gt;
-
-Git reset is a powerful command that is used to undo local changes to the state of a Git repo. Git reset operates on "The Three Trees of Git". These trees are the Commit History ( HEAD ), the Staging Index, and the Working Directory.
-
-
-
-### `git revert`
-
-`revert` is the command we use when we want to take a previous `commit` and add it as a new `commit`, keeping the `log` intact.
-
-**Step 1**: Find the previous `commit`:
-
-&lt;!-- &lt;img width="60%" src="https://www.w3schools.com/git/img_revert_part1.gif"&gt; --&gt;
-&lt;img width="60%" src="https://i.ibb.co/1Gp478j/git-revert.png"&gt;
-
-
-1.1. First thing, we need to find the point we want to return to. To do that, we need to go through the `log`.
-
-To avoid the very long log list, we are going to use the `--oneline` option, which gives just one line per commit showing i) the first seven characters of the `commit hash` and ii) the `commit message`
-
-**Step 2**: Use it to make a new `commit`:
-
-&lt;img width="60%" src="https://www.w3schools.com/git/img_revert_part2.gif"&gt;
-
-&lt;br/&gt;&lt;br/&gt;
-
-`git revert HEAD --no-edit`
-
-To revert to earlier commits, use `git revert HEAD~x` (x being a number. 1 going back one more, 2 going back two more, etc.)
-
-### `git reset`
-
-`reset` is the command we use when we want to go back to a previous `commit` and erase everything that happened after it.
-
-&lt;!-- &lt;img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part1.gif"&gt; --&gt;
-&lt;img width="60%" align="center" src="https://i.ibb.co/9Y0ypHk/git-reset.png"&gt;
-
-
-&lt;img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part2.gif"&gt;
-
-Similar to `revert`, we first need to find the `commit` we want to go back to using `git log`. 
-
-Next, we need to use the `reset` command.
-
-To reset to earlier commits, use `git reset ` followed by the first seven characters of the `commit hash` of the commit you want to go back to. 
-
-```bash
-git reset 1a2b3c4d</code></pre>
-
-
+<!-- 
+```yarzaukv ../assets/git_log.png
+---
+name: git_init
+width: 75%
+---
+git log
+``` -->
+<p><br></p>
+<p>Git reset is a powerful command that is used to undo local changes to the state of a Git repo. Git reset operates on “The Three Trees of Git”. These trees are the Commit History ( HEAD ), the Staging Index, and the Working Directory.</p>
 </section>
+<section id="git-revert" class="level3">
+<h3 class="anchored" data-anchor-id="git-revert"><code>git revert</code></h3>
+<p><code>revert</code> is the command we use when we want to take a previous <code>commit</code> and add it as a new <code>commit</code>, keeping the <code>log</code> intact.</p>
+<p><strong>Step 1</strong>: Find the previous <code>commit</code>:</p>
+<!-- <img width="60%" src="https://www.w3schools.com/git/img_revert_part1.gif"> -->
+<p><img width="60%" src="https://i.ibb.co/1Gp478j/git-revert.png" style="filter:invert(1);"></p>
+<p>1.1. First thing, we need to find the point we want to return to. To do that, we need to go through the <code>log</code>.</p>
+<p>To avoid the very long log list, we are going to use the <code>--oneline</code> option, which gives just one line per commit showing i) the first seven characters of the <code>commit hash</code> and ii) the <code>commit message</code></p>
+<p><strong>Step 2</strong>: Use it to make a new <code>commit</code>:</p>
+<p><img width="60%" src="https://www.w3schools.com/git/img_revert_part2.gif" style="filter:invert(1);"></p>
+<p><br><br></p>
+<p><code>git revert HEAD --no-edit</code></p>
+<p>To revert to earlier commits, use <code>git revert HEAD~x</code> (x being a number. 1 going back one more, 2 going back two more, etc.)</p>
+</section>
+<section id="git-reset" class="level3">
+<h3 class="anchored" data-anchor-id="git-reset"><code>git reset</code></h3>
+<p><code>reset</code> is the command we use when we want to go back to a previous <code>commit</code> and erase everything that happened after it.</p>
+<!-- <img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part1.gif"> -->
+<p><img width="60%" align="center" src="https://i.ibb.co/9Y0ypHk/git-reset.png" style="filter:invert(1);"></p>
+<p><img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part2.gif" style="filter:invert(1);"></p>
+<p>Similar to <code>revert</code>, we first need to find the <code>commit</code> we want to go back to using <code>git log</code>.</p>
+<p>Next, we need to use the <code>reset</code> command.</p>
+<p>To reset to earlier commits, use <code>git reset</code> followed by the first seven characters of the <code>commit hash</code> of the commit you want to go back to.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset 1a2b3c4d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
 </section>
 </section>
 
