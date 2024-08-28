@@ -1,49 +1,14 @@
 ---
-title: "Git (Solo)"
+title: "Git (Individual)"
 toc: true
 ---
 
 
-# Git: Version Control
-
-
 <hr/>
-
-
-<img style="invert(1);" align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png" width="30%">
-
-Git is a distributed Version Control System (VCS). Version control systems are tools used to track changes to source code (or other collections of files and folders). As the name implies, these tools help maintain a history of changes; furthermore, they facilitate collaboration. 
-
-`````{admonition} ["I'm not a nice person and I don't care about you"](https://www.theregister.com/2015/01/19/got_bugs_got_anger_just_get_them_out_says_linus_torvalds/)
-:class: note
-
-
-```{image} https://media.newyorker.com/photos/5ba177da9eb2f7420aadeb98/4:3/w_1229,h_921,c_limit/Cohen-Linus-Torvalds.jpg
-:width: 35%
-:align: right
-```
-
-Git was developed by **[Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)**, who also created the open source operating system **Linux** (portmanteau of Linus and Unix). 
-
-Torvalds is known for his technical brilliance but also his very abrasive personality. This [interview on TED](https://www.youtube.com/watch?v=o8NPllzkFhE&ab_channel=TED) of Torvalds is a good introduction to him. 
-
-`````
-
-VCSs track changes to a folder and its contents in a series of snapshots, where each snapshot encapsulates the entire state of files/folders within a top-level directory. VCSs also maintain metadata like who created each snapshot, messages associated with each snapshot, and so on.
-
-
-<img align="right" src="https://imgs.xkcd.com/comics/git.png" width="30%">
-
-Individual snapshots can be compared to each other, and differences can be extracted. For example, you can ask questions like what changed between this snapshot and the previous snapshot? Who made those changes? etc.
-
-While other VCSs exist, Git is the de facto standard for version control. This XKCD comic captures Git’s reputation:
-
-Because Git’s interface is a leaky abstraction, learning Git top-down (starting with its interface / command-line interface) can lead to a lot of confusion. It’s possible to memorize a handful of commands and think of them as magic incantations, and follow the approach in the comic above whenever anything goes wrong.
-
 
 ## Initial Setup 
 
-``` {note}
+::: {.callout-notice}
 
 If this is the first time you've installed Git, you may need to configure it. You only need to do this once per machine.
 
@@ -55,7 +20,7 @@ You can configure your Git username and email using the following commands, repl
 
 These details will be associated with any commits that you make and blame will be correctly assigned.
 
-```
+:::
 
 ### Starting from scratch
 
@@ -64,14 +29,14 @@ These details will be associated with any commits that you make and blame will b
 Git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new Git repository in the current directory. This will create a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. (See the next section to learn how to start tracking files.)
 
 
-<!-- <img align="center" src="assets/git_init.png" width="75%"> -->
-```{figure} ../assets/git_init.png
+<center><img align="center" src="../../assets/git_init.png" width="100%"  style="filter:invert(1);"></center>
+<!-- ```{figure} ../assets/git_init.png
 ---
 name: git_init
 width: 75%
 ---
 Git init
-```
+``` -->
 
 #### Link it to your Github repository: `git remote add origin`
 
@@ -85,15 +50,17 @@ $ git remote add origin <remote repository URL>
 $ git remote -v
 ```
 
-<!-- <img align="center" src="assets/git_remote.png"> -->
-```{figure} ../assets/git_remote.png
+
+<center><img src="../../assets/git_remote.png" width="100%" style="filter:invert(1);"></center>
+
+<!-- ```{figure} ../assets/git_remote.png
 ---
 name: git_init
 width: 75%
 ---
 git remote
 ```
-<br/>
+<br/> -->
 
 The remote repository URL is the URL of the repository on GitHub. The `git remote -v` command lists the URLs that Git has stored for the shortname to be used when reading and writing to that remote.
 
@@ -113,7 +80,7 @@ You can find the URL of your repository by clicking on the green button that say
 
 You don't need to run `git init` or `git remote add origin` if you are cloning an existing repository.
 
-## Normal day at work (by yourself)
+## Workflow (individual)
 
 When you are not collaborating with others, using git is pretty straightforward.
 
@@ -127,41 +94,29 @@ In git, there are four main states that your files can reside in. They are:
 
 * **pushed**: means that your data has been transferred to a remote repository.
 
-<!-- <img src="assets/git.png"> -->
-```{figure} https://i.ibb.co/gdSwjCr/git.png
----
-name: git_init
-width: 75%
----
-git flow of operations
-```
+<center><img src="https://i.ibb.co/gdSwjCr/git.png" width="100%" style="filter:invert(1);"></center>
 
 ### 1. `git status`
 
 Git status is a command that displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does not show you any information regarding the committed project history. For this, you need to use git log.
 
+<center><img src="../../assets/git_status.png" width="100%" style="filter:invert(1);"></center>
+
 <!-- <img width="70%" align="center" src="assets/git_status.png"> -->
-```{figure} ../assets/git_status.png
+<!-- ```{figure} ../assets/git_status.png
 ---
 name: git_init
 width: 75%
 ---
 git status
-```
+``` -->
 
 ### * `git diff` (optional)
 
 Git diff is a multi-use Git command that when executed runs a diff function on Git data sources. These data sources can be commits, branches, files and more. The git diff command is often used along with git status and git log to analyze the current state of a Git repo.
 
 
-<!-- <img align="center" src="assets/git_diff.png"> -->
-```{figure} ../assets/git_diff.png
----
-name: git_init
-width: 75%
----
-git diff
-```
+<center><img src="../../assets/git_diff.png" width="100%" style="filter:invert(1);"></center>
 
 ### 2. `git add`
 
@@ -195,15 +150,11 @@ git push -u origin main
 ```
 
 
-## Normal day at work (in a team)
-
-For future lecture. 
-
 ## Umm.. IDK what happened... 
 
-``` {tip}
+::: {.callout-tip}
 [This webpage](https://ohshitgit.com/), with an easy to remember name, is a great resource for such situations! 
-```
+:::
 
 While working on a project, you may find yourself in a situation where you need to undo a commit. Git offers two main ways to undo changes to commits: `git revert` and `git reset`.
 
@@ -215,15 +166,18 @@ Git log is a command used to display the commit history of a repository. By defa
 
 It is often a good idea to use `git log --oneline` to get a more concise view of the commit history.
 
-<!-- <img align="center" src="assets/git_log.png"> -->
 
+<center><img src="../../assets/git_log.png" width="100%" style="filter:invert(1);"></center>
+
+<!-- <img align="center" src="assets/git_log.png"> -->
+<!-- 
 ```{figure} ../assets/git_log.png
 ---
 name: git_init
 width: 75%
 ---
 git log
-```
+``` -->
 
 <br/>
 
@@ -238,7 +192,7 @@ Git reset is a powerful command that is used to undo local changes to the state 
 **Step 1**: Find the previous `commit`:
 
 <!-- <img width="60%" src="https://www.w3schools.com/git/img_revert_part1.gif"> -->
-<img width="60%" src="https://i.ibb.co/1Gp478j/git-revert.png">
+<img width="60%" src="https://i.ibb.co/1Gp478j/git-revert.png" style="filter:invert(1);">
 
 
 1.1. First thing, we need to find the point we want to return to. To do that, we need to go through the `log`.
@@ -247,7 +201,7 @@ To avoid the very long log list, we are going to use the `--oneline` option, whi
 
 **Step 2**: Use it to make a new `commit`:
 
-<img width="60%" src="https://www.w3schools.com/git/img_revert_part2.gif">
+<img width="60%" src="https://www.w3schools.com/git/img_revert_part2.gif" style="filter:invert(1);">
 
 <br/><br/>
 
@@ -260,10 +214,10 @@ To revert to earlier commits, use `git revert HEAD~x` (x being a number. 1 going
 `reset` is the command we use when we want to go back to a previous `commit` and erase everything that happened after it.
 
 <!-- <img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part1.gif"> -->
-<img width="60%" align="center" src="https://i.ibb.co/9Y0ypHk/git-reset.png">
+<img width="60%" align="center" src="https://i.ibb.co/9Y0ypHk/git-reset.png" style="filter:invert(1);">
 
 
-<img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part2.gif">
+<img width="60%" align="center" src="https://www.w3schools.com/git/img_reset_part2.gif" style="filter:invert(1);">
 
 Similar to `revert`, we first need to find the `commit` we want to go back to using `git log`. 
 
@@ -274,3 +228,4 @@ To reset to earlier commits, use `git reset ` followed by the first seven charac
 ```bash
 git reset 1a2b3c4d
 ```
+

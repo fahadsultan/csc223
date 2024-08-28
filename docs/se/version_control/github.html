@@ -231,6 +231,18 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../se/shell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shell (sh)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../se/ssh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Secure Shell (ssh)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Individual)</span></a>
   </div>
@@ -424,8 +436,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sign-up-for-github" id="toc-sign-up-for-github" class="nav-link active" data-scroll-target="#sign-up-for-github">Sign up for GitHub</a></li>
+  <li><a href="#github-profile" id="toc-github-profile" class="nav-link" data-scroll-target="#github-profile">Github Profile</a></li>
+  <li><a href="#repositories-and-projects" id="toc-repositories-and-projects" class="nav-link" data-scroll-target="#repositories-and-projects">Repositories and Projects</a></li>
+  <li><a href="#creating-a-repository" id="toc-creating-a-repository" class="nav-link" data-scroll-target="#creating-a-repository">Creating a Repository</a></li>
+  <li><a href="#add-ssh-key-to-github" id="toc-add-ssh-key-to-github" class="nav-link" data-scroll-target="#add-ssh-key-to-github">Add SSH key to GitHub</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -449,8 +471,77 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" align="right" width="20%" style="filter:invert(1)"></p>
+<p>GitHub is a code hosting platform for version control and and social network for collaboration. It lets you and others work together on projects from anywhere.</p>
+<!-- ## Create and use a repository -->
+<!-- Make changes to a file and push them to GitHub as commits
+Open and merge a pull request -->
+<section id="sign-up-for-github" class="level2">
+<h2 class="anchored" data-anchor-id="sign-up-for-github">Sign up for GitHub</h2>
+<p>If you don’t already have an account, you can sign up for a free account at <strong><a href="https://github.com/">github.com</a></strong></p>
+<p><img src="https://git-scm.com/book/en/v2/images/signup.png" align="right" width="35%" style="filter:invert(1)"></p>
+<p>This process is like signing up for any other web service. You’ll need to: pick a username, provide an email address and choose a password. Fairly standard stuff.</p>
+</section>
+<section id="github-profile" class="level2">
+<h2 class="anchored" data-anchor-id="github-profile">Github Profile</h2>
+<p>Your GitHub profile is the place where you can share information about yourself, your projects, and your interests. You can also use it to follow other developers, discover new code, and contribute to projects.</p>
+<p>It is a good idea to add a profile picture and a bio to your profile. This will help others to know who you are and what you are interested in.</p>
+<center>
+<img src="https://i.ibb.co/ZH2nYxh/profile2.png" width="70%">
+</center>
+<center>
+<img src="https://i.ibb.co/z6SGSgN/profile1.png" width="70%">
+</center>
+</section>
+<section id="repositories-and-projects" class="level2">
+<h2 class="anchored" data-anchor-id="repositories-and-projects">Repositories and Projects</h2>
+<p>A repository is the most basic element of GitHub. They’re easiest to imagine as a project’s folder. A repository contains all of the project files (including documentation), and stores each file’s revision history. Repositories can have multiple collaborators and can be either public or private.</p>
+</section>
+<section id="creating-a-repository" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-repository">Creating a Repository</h2>
+<p>A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. Often, repositories include a README file, a file with information about your project. README files are written in the plain text Markdown language. You can use this cheat sheet to get started with Markdown syntax. GitHub lets you add a README file at the same time you create your new repository. GitHub also offers other common options such as a license file, but you do not have to select any of them now.</p>
+<p>Your <code>hello-world</code> repository can be a place where you store ideas, resources, or even share and discuss things with others.</p>
+<ol type="1">
+<li>In the upper-right corner of any page, use the drop-down menu, and select <strong>New repository</strong>.</li>
+</ol>
+<center>
+<img width="35%" align="center" src="https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp">
+</center>
+<p><br></p>
+<ol start="2" type="1">
+<li>Type a name for your repository, and an optional description.</li>
+</ol>
+<center>
+<img width="80%" align="center" src="https://docs.github.com/assets/cb-61138/mw-1440/images/help/repository/create-repository-name.webp">
+</center>
+<p><br></p>
+<ol start="3" type="1">
+<li>Choose <em>Public</em> for repository visibility.</li>
+</ol>
+<p><br></p>
+<ol start="4" type="1">
+<li>Click <strong>Create repository</strong>.</li>
+</ol>
+</section>
+<section id="add-ssh-key-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="add-ssh-key-to-github">Add SSH key to GitHub</h2>
+<p><img width="35%" align="right" src="https://docs.github.com/assets/cb-65929/mw-1440/images/help/settings/userbar-account-settings.webp"></p>
+<p>Go to your GitHub account settings and click on SSH and GPG keys. Then click on New SSH key. Give a title to your key (ideally this should be something like Macbook 2023) and paste the key in the box below. Click on Add SSH key.</p>
+<ol type="1">
+<li><p>Copy the SSH public key to your clipboard. If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don’t add any newlines or whitespace. <br> <br></p></li>
+<li><p>In the upper-right corner of any page, click your profile photo, then click Settings. <br> <br></p></li>
+<li><p>In the “Access” section of the sidebar, click <strong>SSH and GPG keys</strong>. <br> <br></p></li>
+<li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>. <br> <br></p></li>
+<li><p>In the “Title” field, add a descriptive label for the new key. For example, if you’re using a personal laptop, you might call this key “Personal laptop”. <br> <br></p></li>
+<li><p>In the “Key” field, paste your public key. <br> <br></p></li>
+<li><p>Click <strong>Add SSH key</strong>.</p></li>
+</ol>
+<center>
+<img width="90%" src="https://fahadsultan.com/potpourri/_images/ssh_key.png">
+</center>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

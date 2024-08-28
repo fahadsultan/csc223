@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  favicon: logo.png
+  favicon: favicon.png
   navbar:
     logo: logo.png
     background: dark
@@ -14,19 +14,17 @@ website:
       - text: "Calendar"
         href: calendar.qmd
       - sidebar:syllabus
-      - text: "Purposeful Pathways"
-        href: syllabus/pathways.qmd
       - text: "Office Hours"
         href: syllabus/appointment.md
       - text: "Moodle Page"
         href: https://courses.furman.edu/course/view.php?id=18720
       - text: "Github Classroom"
         href: https://classroom.github.com/classrooms/179249964-csc-223
+      - text: "Set an Appointment"
+        href: https://calendly.com/ssultan-dpq/
     tools:
-      - icon: facebook
-        href: https://fahadsultan.com
-      - icon: twitter
-        href: https://twitter.com
+      - icon: instagram
+        href: https://www.instagram.com/furmancompsci/
       - icon: github
         menu:
           - text: Source Code
@@ -49,10 +47,13 @@ website:
           - section: "Version Control"
             href: se/version_control/version_control.qmd
             contents:
+              - se/shell.ipynb
+              - se/ssh.qmd
               - se/version_control/git_solo.qmd
               - se/version_control/git_colab.qmd
               - se/version_control/github.qmd
           - se/tdd.qmd
+          - se/interview.qmd
         - section: 
           href: basics/java.qmd
           contents:
@@ -91,6 +92,7 @@ website:
       background: light
       collapse-level: 2
       contents:
+        - syllabus/about.qmd
         - syllabus/grading.qmd
         - syllabus/academic_success.md
         - syllabus/textbook.md
@@ -104,5 +106,5 @@ format:
       - darkly
       - custom.scss
     css: style.css
-    monobackgroundcolor: "#CCCCFF"
+    monobackgroundcolor: "black"
     highlight-style: monokai #atom-one, github, dracula, monokai

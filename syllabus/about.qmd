@@ -1,0 +1,29 @@
+
+# Course Description and Goals
+
+## Pre-requisites
+
+* CSC-122 Data Structures and Algorithms
+
+## Fulfills requirements
+
+* Core course required for all Computer Science majors
+* Pre-requisite for, among others:
+    * CSC-343 Artificial Intelligence
+    * CSC-344 Computer Graphics and Image Processing
+    * CSC-348 Game Design & Development
+    * CSC-353 Software Engineering
+    * CSC-346 Operating Systems
+    * CSC-331 Computer Architecture
+
+## Course Description
+
+This course introduces non-linear data structures (such as hash tables, trees, and graphs) as well as advanced algorithmic paradigms (such as Backtracking, Greedy Algorithms and Dynamic Programming). Students will extensively use version control software and learn about software engineering practices.
+
+## Course Goals
+
+* Understand and implement non-linear data structures
+* Understand and implement advanced algorithmic paradigms
+* Understand and apply software engineering practices
+* Understand and apply version control software
+

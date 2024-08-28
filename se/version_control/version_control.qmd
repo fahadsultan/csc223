@@ -6,3 +6,39 @@ toc: true
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. 
 
 It allows you to revert files back to a previous state, revert the entire project back to a previous state, compare changes over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more.
+
+<center><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660374303921/oQRHZgTpQ.png" width="100%" style="filter:invert(1);"></center>
+
+<br/><br/>
+
+Version control systems (VCS) are tools used to track changes to source code (or other collections of files and folders). As the name implies, these tools help maintain a history of changes; furthermore, they facilitate collaboration. 
+
+
+<img align="right" style="filter:invert(1);" src="https://imgs.xkcd.com/comics/git.png" width="30%">
+
+VCSs track changes to a folder and its contents in a series of snapshots, where each snapshot encapsulates the entire state of files/folders within a top-level directory. VCSs also maintain metadata like who created each snapshot, messages associated with each snapshot, and so on.
+
+
+
+Individual snapshots can be compared to each other, and differences can be extracted. For example, you can ask questions like what changed between this snapshot and the previous snapshot? Who made those changes? etc.
+
+## Git
+
+<img style="filter:invert(1);" align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png" width="30%">
+
+
+While other VCSs exist, Git is the de facto standard for version control. This XKCD comic captures Git’s reputation:
+
+Because Git’s interface is a leaky abstraction, learning Git top-down (starting with its interface / command-line interface) can lead to a lot of confusion. It’s possible to memorize a handful of commands and think of them as magic incantations, and follow the approach in the comic above whenever anything goes wrong.
+
+::: {.callout-note}
+
+<img align="right" width="30%" src="https://media.newyorker.com/photos/5ba177da9eb2f7420aadeb98/4:3/w_1229,h_921,c_limit/Cohen-Linus-Torvalds.jpg" />
+
+["I'm not a nice person and I don't care about you"](https://www.theregister.com/2015/01/19/got_bugs_got_anger_just_get_them_out_says_linus_torvalds/)
+
+Git was developed by **[Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)**, who also created the open source operating system **Linux** (portmanteau of Linus and Unix). 
+
+Torvalds is known for his technical brilliance but also his very abrasive personality. This [interview on TED](https://www.youtube.com/watch?v=o8NPllzkFhE&ab_channel=TED) and [New Yorker profile](https://www.newyorker.com/science/elements/after-years-of-abusive-e-mails-the-creator-of-linux-steps-aside) of Torvalds is a good introduction to him."
+
+:::

@@ -1,4 +1,4 @@
 ---
-title: "Git (Collaboration)"
+title: "Git (Team)"
 toc: true
 ---

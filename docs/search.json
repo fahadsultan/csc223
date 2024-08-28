@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nGit 1\n\n\n\n\n\n\n\n2\nGit 2\n\n\n\n\n\n\n\n3\nJava 1\n\n\n\n\n\n\n\n4\nJava 2\n\n\n\n\n\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction\n\nIntro\nVersion Control\n\nPA 1\n\n\n2\nGit\n\n\n\n\n\n\n\n3\nJava 1\n\n\n\n\n\n\n\n4\nJava 2\n\n\n\n\n\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -99,7 +99,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nCourse page on Moodle; used mostly for submitting assignments and uploading grades",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nDeliverable\n\n\n\nProgramming Assignment 1 is due on Sept 3rd, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -270,6 +270,145 @@
     ]
   },
   {
+    "objectID": "se/interview.html",
+    "href": "se/interview.html",
+    "title": "Technical Interviews",
+    "section": "",
+    "text": "Technical Interviews are a common part of the hiring process for software engineers. They are used to assess a candidate’s technical knowledge, problem-solving skills, and ability to work under pressure. Many companies use multiple rounds of technical interviews to evaluate candidates, and the questions asked can cover a wide range of topics, including data structures, algorithms, and system design.\nThe hiring process at a typical tech company might include a phone screen, a coding challenge, and multiple rounds of technical interviews. The technical interviews are usually conducted by engineers at the company, and they can be conducted in person or remotely. During the interview, the candidate is asked to solve coding problems on a whiteboard or a computer, and they are expected to explain their thought process as they work through the problem.\nTechnical interviews are generally about an hour long and involve solving one or two coding problems. At the end of the interview, the candidate is usually given the opportunity to ask questions about the company or the role.\nMost technical interviews focus on problem-solving skills and algorithmic thinking. Candidates are expected to be able to write clean, efficient code and to explain their solutions clearly. In addition to coding problems, technical interviews may also include questions about system design, object-oriented design, and other technical topics.\nThe following video shows a mock technical interview that you can watch to get a sense of what to expect in a technical interview:",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Technical Interviews"
+    ]
+  },
+  {
+    "objectID": "se/interview.html#leetcode",
+    "href": "se/interview.html#leetcode",
+    "title": "Technical Interviews",
+    "section": "LeetCode",
+    "text": "LeetCode\nLeetCode is a popular platform for practicing coding interview questions, and many candidates use it to prepare for technical interviews. The problems on LeetCode cover a wide range of topics and difficulty levels, making it a valuable resource for interview preparation.\nLeetCode premium allows simulating interviews with questions from specific companies like Google, Facebook, Amazon, and Microsoft. It also provides video solutions and additional features to help you prepare for technical interviews.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Technical Interviews"
+    ]
+  },
+  {
+    "objectID": "se/interview.html#neetcode",
+    "href": "se/interview.html#neetcode",
+    "title": "Technical Interviews",
+    "section": "Neetcode",
+    "text": "Neetcode\nThe incredible breadth of problems on LeetCode can be overwhelming for beginners. You might want to consider starting with a smaller curated list of 75 problems called the “Blind 75”. This is a very popular tech insider shortlist of commonly asked interview questions. The best place to start with Blind 75, in my opinion, is NeetCode. The roadmap on the website is a great way to sequentially work through categories of problems. Moreover, each problem has an accompanying youtube video that does a great job at explaining the problem and the solution.\nCompetitive Programming: If you enjoyed the competitive programming aspect of the course, I would first recommend marking your calendar with The Thirty-First Annual CCSE: Southeastern Programming Contest is scheduled for 10 a.m.-1 p.m. on Saturday, November 2, 2024 in Riley Hall at Furman University. I honestly believe that we can beat Bob Jones and win the competition this year! The problems from past years are here. You should continue practicing these on your own with a stopwatch running (optionally with the Eye of the Tiger playing in the background).",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Technical Interviews"
+    ]
+  },
+  {
+    "objectID": "se/interview.html#hiring-process",
+    "href": "se/interview.html#hiring-process",
+    "title": "Technical Interviews",
+    "section": "Hiring Process",
+    "text": "Hiring Process\nHiring process at FAANG (Facebook, Amazon, Apple, Netflix, Google) companies is explained here and Interviewing.io has a blog that provides insights into the technical interview process. For instance, this link gives a pretty good overview of the hiring process at big tech companies. The processes are also broken down by company, for example, Google.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Technical Interviews"
+    ]
+  },
+  {
+    "objectID": "se/shell.html",
+    "href": "se/shell.html",
+    "title": "Shell (sh)",
+    "section": "",
+    "text": "Shell is a program that takes commands from the keyboard and gives them to the operating system to perform.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
+    "objectID": "se/shell.html#preliminaries",
+    "href": "se/shell.html#preliminaries",
+    "title": "Shell (sh)",
+    "section": "0. Preliminaries",
+    "text": "0. Preliminaries\n\n0.1. File Structure\nFile structure is a way of organizing files and directories in a computer. Most operating systems use a hierarchical file system.\n\n\n\n\n\n0.2. File Path\nFile path is the location of a file or folder in a directory structure. An example of a file is C:\\Users\\Documents\\file.txt.\n\n\n\n\n\n\nTip\n\n\n\nNote that Unix based systems (e.g. MacOS, Linux etc.) use / whereas Windows uses \\ as the path separator.\n\n\nThe file path is made up of the drive name (e.g. C:\\), the folders (e.g. Users\\), and the file name (e.g. Documents\\file.txt).",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
+    "objectID": "se/shell.html#launch-command-line-interface",
+    "href": "se/shell.html#launch-command-line-interface",
+    "title": "Shell (sh)",
+    "section": "1. Launch Command Line Interface",
+    "text": "1. Launch Command Line Interface\n\nMacOSWindows\n\n\n\nPress Command + Space to open Spotlight Search.\nType terminal and press Enter.\n\n\n\n\n\nPress Win + R to open the Run dialog box.\nType cmd and press Enter.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
+    "objectID": "se/shell.html#where-am-i",
+    "href": "se/shell.html#where-am-i",
+    "title": "Shell (sh)",
+    "section": "2. Where Am I?",
+    "text": "2. Where Am I?\n\nMacWindows\n\n\npwd command is used to print the current working directory.\n\n\ncd command, without any parameters, is used to print the current working directory.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
+    "objectID": "se/shell.html#whats-in-here",
+    "href": "se/shell.html#whats-in-here",
+    "title": "Shell (sh)",
+    "section": "3. What’s in Here?",
+    "text": "3. What’s in Here?\n\nMacWindows\n\n\nls [OPTION]... [FILE]...\nls command is used to list the files and directories in the current working directory.\nls -lt command is used to list the files and directories in the current working directory in long listing format and sorted by time modified.\n\n\ndir command is used to list the files and directories in the current working directory.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
+    "objectID": "se/shell.html#lets-go",
+    "href": "se/shell.html#lets-go",
+    "title": "Shell (sh)",
+    "section": "4. Let’s Go!",
+    "text": "4. Let’s Go!\nThe following can be used to jump to locations: cd &lt;location you want to move to&gt; (Change Directory)\nSome common shortcuts:\n\n~: Home Directory\n.: Current Directory\n..: Parent Directory\n/: Root Directory",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
+    "objectID": "se/shell.html#lets-create-a-folder",
+    "href": "se/shell.html#lets-create-a-folder",
+    "title": "Shell (sh)",
+    "section": "5. Let’s create a folder",
+    "text": "5. Let’s create a folder\nA folder can be created using mkdir &lt;folder name&gt;",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Shell (sh)"
+    ]
+  },
+  {
     "objectID": "se/version_control/git_solo.html#initial-setup",
     "href": "se/version_control/git_solo.html#initial-setup",
     "title": "Git (Individual)",
@@ -320,6 +459,84 @@
     ]
   },
   {
+    "objectID": "se/version_control/github.html",
+    "href": "se/version_control/github.html",
+    "title": "Github (Community)",
+    "section": "",
+    "text": "GitHub is a code hosting platform for version control and and social network for collaboration. It lets you and others work together on projects from anywhere.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#sign-up-for-github",
+    "href": "se/version_control/github.html#sign-up-for-github",
+    "title": "Github (Community)",
+    "section": "Sign up for GitHub",
+    "text": "Sign up for GitHub\nIf you don’t already have an account, you can sign up for a free account at github.com\n\nThis process is like signing up for any other web service. You’ll need to: pick a username, provide an email address and choose a password. Fairly standard stuff.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#github-profile",
+    "href": "se/version_control/github.html#github-profile",
+    "title": "Github (Community)",
+    "section": "Github Profile",
+    "text": "Github Profile\nYour GitHub profile is the place where you can share information about yourself, your projects, and your interests. You can also use it to follow other developers, discover new code, and contribute to projects.\nIt is a good idea to add a profile picture and a bio to your profile. This will help others to know who you are and what you are interested in.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#repositories-and-projects",
+    "href": "se/version_control/github.html#repositories-and-projects",
+    "title": "Github (Community)",
+    "section": "Repositories and Projects",
+    "text": "Repositories and Projects\nA repository is the most basic element of GitHub. They’re easiest to imagine as a project’s folder. A repository contains all of the project files (including documentation), and stores each file’s revision history. Repositories can have multiple collaborators and can be either public or private.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#creating-a-repository",
+    "href": "se/version_control/github.html#creating-a-repository",
+    "title": "Github (Community)",
+    "section": "Creating a Repository",
+    "text": "Creating a Repository\nA repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. Often, repositories include a README file, a file with information about your project. README files are written in the plain text Markdown language. You can use this cheat sheet to get started with Markdown syntax. GitHub lets you add a README file at the same time you create your new repository. GitHub also offers other common options such as a license file, but you do not have to select any of them now.\nYour hello-world repository can be a place where you store ideas, resources, or even share and discuss things with others.\n\nIn the upper-right corner of any page, use the drop-down menu, and select New repository.\n\n\n\n\n\n\nType a name for your repository, and an optional description.\n\n\n\n\n\n\nChoose Public for repository visibility.\n\n\n\nClick Create repository.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#add-ssh-key-to-github",
+    "href": "se/version_control/github.html#add-ssh-key-to-github",
+    "title": "Github (Community)",
+    "section": "Add SSH key to GitHub",
+    "text": "Add SSH key to GitHub\n\nGo to your GitHub account settings and click on SSH and GPG keys. Then click on New SSH key. Give a title to your key (ideally this should be something like Macbook 2023) and paste the key in the box below. Click on Add SSH key.\n\nCopy the SSH public key to your clipboard. If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don’t add any newlines or whitespace.  \nIn the upper-right corner of any page, click your profile photo, then click Settings.  \nIn the “Access” section of the sidebar, click SSH and GPG keys.  \nClick New SSH key or Add SSH key.  \nIn the “Title” field, add a descriptive label for the new key. For example, if you’re using a personal laptop, you might call this key “Personal laptop”.  \nIn the “Key” field, paste your public key.  \nClick Add SSH key.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
     "objectID": "se/version_control/version_control.html",
     "href": "se/version_control/version_control.html",
     "title": "Version Control",
@@ -344,51 +561,29 @@
     ]
   },
   {
-    "objectID": "se/interview.html",
-    "href": "se/interview.html",
-    "title": "Technical Interviews",
+    "objectID": "se/ssh.html",
+    "href": "se/ssh.html",
+    "title": "Secure Shell (ssh)",
     "section": "",
-    "text": "Technical Interviews are a common part of the hiring process for software engineers. They are used to assess a candidate’s technical knowledge, problem-solving skills, and ability to work under pressure. Many companies use multiple rounds of technical interviews to evaluate candidates, and the questions asked can cover a wide range of topics, including data structures, algorithms, and system design.\nThe hiring process at a typical tech company might include a phone screen, a coding challenge, and multiple rounds of technical interviews. The technical interviews are usually conducted by engineers at the company, and they can be conducted in person or remotely. During the interview, the candidate is asked to solve coding problems on a whiteboard or a computer, and they are expected to explain their thought process as they work through the problem.\nTechnical interviews are generally about an hour long and involve solving one or two coding problems. At the end of the interview, the candidate is usually given the opportunity to ask questions about the company or the role.\nMost technical interviews focus on problem-solving skills and algorithmic thinking. Candidates are expected to be able to write clean, efficient code and to explain their solutions clearly. In addition to coding problems, technical interviews may also include questions about system design, object-oriented design, and other technical topics.\nThe following video shows a mock technical interview that you can watch to get a sense of what to expect in a technical interview:",
+    "text": "Just as HTTP is a protocol for unencrypted web traffic and HTTPS is a protocol for encrypted web traffic, SSH is a protocol for encrypted remote login and other secure network services.\nUsing the SSH protocol, you can connect and authenticate to remote servers and services.\nIn simple words, you can use SSH to access another computer over a network and execute commands on the other computer. All of this takes place in the command line, without needing a graphical interface. This is how most servers are administered.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
-      "Technical Interviews"
+      "Version Control",
+      "Secure Shell (ssh)"
     ]
   },
   {
-    "objectID": "se/interview.html#leetcode",
-    "href": "se/interview.html#leetcode",
-    "title": "Technical Interviews",
-    "section": "LeetCode",
-    "text": "LeetCode\nLeetCode is a popular platform for practicing coding interview questions, and many candidates use it to prepare for technical interviews. The problems on LeetCode cover a wide range of topics and difficulty levels, making it a valuable resource for interview preparation.\nLeetCode premium allows simulating interviews with questions from specific companies like Google, Facebook, Amazon, and Microsoft. It also provides video solutions and additional features to help you prepare for technical interviews.",
+    "objectID": "se/ssh.html#ssh-keys",
+    "href": "se/ssh.html#ssh-keys",
+    "title": "Secure Shell (ssh)",
+    "section": "SSH Keys",
+    "text": "SSH Keys\nSSH keys are a way to identify trusted computers and communicate with them without involving passwords.\nSSH keys are two files that are generated together: a public key and a private key. The private key is kept on the computer you log in from, while the public key is shared with all the computers you want to log communicate with.\n\n\n\n\n\n\nCaution\n\n\n\nNever share or upload your private SSH key!\n\n\n\n\n\n\nCheck if you already have an SSH key\nIf you want to check if you already have an SSH key, you can use the following command:\nls -al ~/.ssh\n\n\n\n\n\n\nNote\n\n\n\nFor Windows Users If you are using Windows and the above command does not work, you can use the following commands: dir ~/.ssh or notepad ~/.ssh/id_rsa.pub\nAlternatively, check [your home directory]/.ssh/id_rsa where [your home directory] is the directory where your home directory (C:) is located.\nWorst case, just download and install Git Bash or PuTTY.\n\n\nls: prints the contents of a directory -a: list all files in long format -l: use a long listing format ~/.ssh: path to the ssh folder ~: home directory .ssh: hidden ssh folder in your home directory\nIf you see a file named id_rsa.pub, you already have an SSH key pair and you can skip the next step.\nThe filename ending with .pub is your public key. The other file is the corresponding private key. If you don’t have these files (or you don’t even have a .ssh directory), you need to create them.\n\n\nGenerate a new SSH key, if needed\nSSH keys are generated using a command line tool called ssh-keygen. This tool is installed by default on most systems.\n\nssh-keygen -t ed25519 -C \"your_email@example.com\"\n    \n-t: the type of encryption to use\ned25519: the encryption type\n-C: comment to help you identify the key\nTry the ls -al ~/.ssh command again to see your new SSH key.\n\n\nCopy the SSH key to your clipboard\n\nMacWindows\n\n\npbcopy &lt; ~/.ssh/id_rsa.pub\n\n\nclip &lt; ~/.ssh/id_rsa.pub\n\n\n\nNow you can paste your public ssh key on the website you want to use it on.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
-      "Technical Interviews"
-    ]
-  },
-  {
-    "objectID": "se/interview.html#neetcode",
-    "href": "se/interview.html#neetcode",
-    "title": "Technical Interviews",
-    "section": "Neetcode",
-    "text": "Neetcode\nThe incredible breadth of problems on LeetCode can be overwhelming for beginners. You might want to consider starting with a smaller curated list of 75 problems called the “Blind 75”. This is a very popular tech insider shortlist of commonly asked interview questions. The best place to start with Blind 75, in my opinion, is NeetCode. The roadmap on the website is a great way to sequentially work through categories of problems. Moreover, each problem has an accompanying youtube video that does a great job at explaining the problem and the solution.\nCompetitive Programming: If you enjoyed the competitive programming aspect of the course, I would first recommend marking your calendar with The Thirty-First Annual CCSE: Southeastern Programming Contest is scheduled for 10 a.m.-1 p.m. on Saturday, November 2, 2024 in Riley Hall at Furman University. I honestly believe that we can beat Bob Jones and win the competition this year! The problems from past years are here. You should continue practicing these on your own with a stopwatch running (optionally with the Eye of the Tiger playing in the background).",
-    "crumbs": [
-      "Home",
-      "SOFTWARE ENGINEERING",
-      "Technical Interviews"
-    ]
-  },
-  {
-    "objectID": "se/interview.html#hiring-process",
-    "href": "se/interview.html#hiring-process",
-    "title": "Technical Interviews",
-    "section": "Hiring Process",
-    "text": "Hiring Process\nHiring process at FAANG (Facebook, Amazon, Apple, Netflix, Google) companies is explained here and Interviewing.io has a blog that provides insights into the technical interview process. For instance, this link gives a pretty good overview of the hiring process at big tech companies. The processes are also broken down by company, for example, Google.",
-    "crumbs": [
-      "Home",
-      "SOFTWARE ENGINEERING",
-      "Technical Interviews"
+      "Version Control",
+      "Secure Shell (ssh)"
     ]
   },
   {
@@ -742,7 +937,7 @@
     "href": "basics/data.html#dynamic-and-strong-typing",
     "title": "Data",
     "section": "Dynamic and Strong Typing",
-    "text": "Dynamic and Strong Typing\nYou (and Python) can identify strings because they are enclosed in quotation marks \".\nPython is a dynamically typed language, which means that the type of a value is inferred at runtime (as opposed to compile time) based on the value.\nPython is a dynamically typed language, which means two things:\n\nThe type of a value is inferred at runtime (as opposed to compile time) based on the value\nThe same variable can be assigned values of different types at different times.\n\n\n\n\n```mzumpsik https://res.cloudinary.com/practicaldev/image/fetch/s–i1yqfSl1–/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2ABddwVWW6hFU0miT9DCbUWQ.png\n\n\n\n\nwidth: 50%\n\n\nname: dynamic-strong-typing\n\n\n\nDifferent programming languages have different approaches to types. Python is a dynamically typed and strongly typed programming language.\n\nPython is also a **strongly typed** language, which means that every \n\nThe `=` symbol in Python is called the **assignment operator**. It allows us to creates new variables (names) and _assign_ (refer) them values. \n\nNote that the assignment operator assigns the value on the right to the variable on the left. In other words, the directionality of assignment in `x = 42` is  $x \\leftarrow 42$.\n\nVariables can naturally be assigned different values at different times.\n\nIn fact, the same variable can be assigned values of different types at different times.\n\n::: {#cell-5 .cell}\n``` {.python .cell-code}\nmessage = \"What's up, Doc?\"\nn = 17\npi = 3.14159\n:::\nThis example makes three assignments. The first assigns the string \"What's up, Doc?\" to a new variable named message. The second gives the integer 17 to n, and the third gives the floating-point number 3.14159 to pi.\nThe assignment operator, =, should not be confused with an equals sign (even though it uses the same character). Assignment operators link a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:\n\n17 = n # Error: can't assign to literal\nA common way to represent variables on paper is to write the name with an arrow pointing to the variable’s value. This kind of figure is called a state diagram because it shows what state each of the variables is in (think of it as the variable’s state of mind). This diagram shows the result of the assignment statements\n\nThe print statement also works with variables.\n\nprint(message), print(n), print(pi)\n\nIn each case the result is the value of the variable. Variables also have types; again, we can ask the interpreter what they are.\n\ntype(message), type(n), type(pi)\n\nThe type of a variable is the type of the value it refers to.\n\nten_percent = 3\nten_percent\n\n\nTen_percent = 10\nTen_percent\n\n\nTEN_PERCENT = 10000\nTEN_PERCENT\n\n\nten_percent = 5\nten_percent\n\n\nage = 2\nage\n\n\nAge = 20\nAge\n\n\nAGE = 200\nAGE\n\nWhich of the following variable names would throw a Syntax Errox?\n\n10_percent = 27.03 / 10\n\nten_percent = 27.03 / 10\nten_percent\n\n_10_percent = 27.03 / 10\n_10_percent\n\n20_percent = 27.03 / 10\n\ntwenty_percent = 27.03 / 10\n\ntwenty_% = 27.03 / 10\n\n\nReserved words\nIn Python, there are 33 reserved words. These are words that have special meaning to Python. You cannot use reserved words as variable names.\nFalse, def, if, raise, None, del, import, return, True, elif ,in, try, and, else, is, while, as, except, lambda, with assert, finally, nonlocal, yield break, for, not\nclass, from, or,\ncontinue, global, pass\n\nA programming language is more than just a means for instructing a computer to perform tasks.\nIt also serves as a framework within which we organize our ideas about computational processes.\nPrograms serve to communicate those ideas among the members of a programming community.\nThus, let me re-emphasize programs must be written for people to read, and only incidentally for machines to execute.\n\n\n\nYou can get the data type of any variable using the built-in type() function\nPython programming language is both:\n\n\nStrongly typed:\n\nAll variables have a type\nThe type matters when performing operations on a variable.\n\nDynamically typed:\n\nIn Python, the data type is set when you assign a value to a variable (during runtime).",
+    "text": "Dynamic and Strong Typing\nYou (and Python) can identify strings because they are enclosed in quotation marks \".\nPython is a dynamically typed language, which means that the type of a value is inferred at runtime (as opposed to compile time) based on the value.\nPython is a dynamically typed language, which means two things:\n\nThe type of a value is inferred at runtime (as opposed to compile time) based on the value\nThe same variable can be assigned values of different types at different times.\n\n\n\n\n```kbpmayra https://res.cloudinary.com/practicaldev/image/fetch/s–i1yqfSl1–/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2ABddwVWW6hFU0miT9DCbUWQ.png\n\n\n\n\nwidth: 50%\n\n\nname: dynamic-strong-typing\n\n\n\nDifferent programming languages have different approaches to types. Python is a dynamically typed and strongly typed programming language.\n\nPython is also a **strongly typed** language, which means that every \n\nThe `=` symbol in Python is called the **assignment operator**. It allows us to creates new variables (names) and _assign_ (refer) them values. \n\nNote that the assignment operator assigns the value on the right to the variable on the left. In other words, the directionality of assignment in `x = 42` is  $x \\leftarrow 42$.\n\nVariables can naturally be assigned different values at different times.\n\nIn fact, the same variable can be assigned values of different types at different times.\n\n::: {#cell-5 .cell}\n``` {.python .cell-code}\nmessage = \"What's up, Doc?\"\nn = 17\npi = 3.14159\n:::\nThis example makes three assignments. The first assigns the string \"What's up, Doc?\" to a new variable named message. The second gives the integer 17 to n, and the third gives the floating-point number 3.14159 to pi.\nThe assignment operator, =, should not be confused with an equals sign (even though it uses the same character). Assignment operators link a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:\n\n17 = n # Error: can't assign to literal\nA common way to represent variables on paper is to write the name with an arrow pointing to the variable’s value. This kind of figure is called a state diagram because it shows what state each of the variables is in (think of it as the variable’s state of mind). This diagram shows the result of the assignment statements\n\nThe print statement also works with variables.\n\nprint(message), print(n), print(pi)\n\nIn each case the result is the value of the variable. Variables also have types; again, we can ask the interpreter what they are.\n\ntype(message), type(n), type(pi)\n\nThe type of a variable is the type of the value it refers to.\n\nten_percent = 3\nten_percent\n\n\nTen_percent = 10\nTen_percent\n\n\nTEN_PERCENT = 10000\nTEN_PERCENT\n\n\nten_percent = 5\nten_percent\n\n\nage = 2\nage\n\n\nAge = 20\nAge\n\n\nAGE = 200\nAGE\n\nWhich of the following variable names would throw a Syntax Errox?\n\n10_percent = 27.03 / 10\n\nten_percent = 27.03 / 10\nten_percent\n\n_10_percent = 27.03 / 10\n_10_percent\n\n20_percent = 27.03 / 10\n\ntwenty_percent = 27.03 / 10\n\ntwenty_% = 27.03 / 10\n\n\nReserved words\nIn Python, there are 33 reserved words. These are words that have special meaning to Python. You cannot use reserved words as variable names.\nFalse, def, if, raise, None, del, import, return, True, elif ,in, try, and, else, is, while, as, except, lambda, with assert, finally, nonlocal, yield break, for, not\nclass, from, or,\ncontinue, global, pass\n\nA programming language is more than just a means for instructing a computer to perform tasks.\nIt also serves as a framework within which we organize our ideas about computational processes.\nPrograms serve to communicate those ideas among the members of a programming community.\nThus, let me re-emphasize programs must be written for people to read, and only incidentally for machines to execute.\n\n\n\nYou can get the data type of any variable using the built-in type() function\nPython programming language is both:\n\n\nStrongly typed:\n\nAll variables have a type\nThe type matters when performing operations on a variable.\n\nDynamically typed:\n\nIn Python, the data type is set when you assign a value to a variable (during runtime).",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",

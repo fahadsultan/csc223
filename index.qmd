@@ -11,6 +11,12 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 👇🏾 Below, you can find important links and important announcements.
 
+::: {.callout-caution}
+
+# Deliverable
+
+[Programming Assignment 1](https://docs.google.com/document/d/1HIKpiqWcxSTER-SAyb88wG-b-Qe_S9w_L5uRBXlrwaY/edit?usp=sharing) is due on Sept 3rd, 2024 11:59 PM.
+:::
 
 ::: {.callout-tip}
 ## Open-Door Policy
@@ -19,7 +25,3 @@ I have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM -
 Alternatively, send me an email or schedule an appointment
 :::
 
-::: {.callout-note}
-## Open-Door Policy
-Course page on Moodle; used mostly for submitting assignments and uploading grades
-:::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>operations</title>
+<title>Shell (sh)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,60 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -113,8 +79,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../logo.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,11 +90,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../calendar.html"> 
+    <a class="nav-link" href="../calendar.html"> 
 <span class="menu-text">Calendar</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -137,41 +103,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
         <li>
-    <a class="dropdown-item" href="../../syllabus/about.html">
+    <a class="dropdown-item" href="../syllabus/about.html">
  <span class="dropdown-text">Course Description and Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/grading.html">
+    <a class="dropdown-item" href="../syllabus/grading.html">
  <span class="dropdown-text">Grading</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/academic_success.html">
+    <a class="dropdown-item" href="../syllabus/academic_success.html">
  <span class="dropdown-text">Center for Academic Success</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/textbook.html">
+    <a class="dropdown-item" href="../syllabus/textbook.html">
  <span class="dropdown-text">Textbooks &amp; Other Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/integrity.html">
+    <a class="dropdown-item" href="../syllabus/integrity.html">
  <span class="dropdown-text">Academic Integrity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/mental_health.html">
+    <a class="dropdown-item" href="../syllabus/mental_health.html">
  <span class="dropdown-text">Mental Health Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/accomodations.html">
+    <a class="dropdown-item" href="../syllabus/accomodations.html">
  <span class="dropdown-text">Accomodations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/title_9.html">
+    <a class="dropdown-item" href="../syllabus/title_9.html">
  <span class="dropdown-text">Nondiscrimination Policy and Sexual Misconduct</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus/appointment.html"> 
+    <a class="nav-link" href="../syllabus/appointment.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
   <li class="nav-item">
@@ -213,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../se/version_control/version_control.html">Version Control</a></li><li class="breadcrumb-item"><a href="../se/shell.html">Shell (sh)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -235,19 +201,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../se/se.html" class="sidebar-item-text sidebar-link">
+            <a href="../se/se.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOFTWARE ENGINEERING</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -256,40 +222,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
+            <a href="../se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/shell.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/shell.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Shell (sh)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/ssh.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secure Shell (ssh)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Individual)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Team)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/version_control/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github (Community)</span></a>
   </div>
 </li>
@@ -297,13 +263,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/tdd.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/tdd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Test Driven Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/interview.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/interview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technical Interviews</span></a>
   </div>
 </li>
@@ -311,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/java.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/java.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PROGRAMMING, IN JAVA</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -320,34 +286,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/data.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/operations/operations.html" class="sidebar-item-text sidebar-link active">
+            <a href="../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Operations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mathematical Operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/precedence_associativity.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/precedence_associativity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Precedence, Associativity and Type Conversion</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Files</span></a>
   </div>
 </li>
@@ -355,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Flow</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -364,13 +330,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conditionals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops</span></a>
   </div>
 </li>
@@ -378,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abstractions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -387,13 +353,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classes</span></a>
   </div>
 </li>
@@ -403,7 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../datastructs/datastructs.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/datastructs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DATA STRUCTURES</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -412,25 +378,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hashmaps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/trees.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trees</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Heaps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
   </div>
 </li>
@@ -438,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../algos/algos.html" class="sidebar-item-text sidebar-link">
+            <a href="../algos/algos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ALGORITHMS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -447,19 +413,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../algos/backtracking.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/backtracking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Backtracking</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../algos/greedy.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/greedy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greedy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../algos/dp.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/dp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dynamic Programming</span></a>
   </div>
 </li>
@@ -475,65 +441,142 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#operations" id="toc-operations" class="nav-link active" data-scroll-target="#operations">Operations</a>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link active" data-scroll-target="#preliminaries">0. Preliminaries</a>
   <ul class="collapse">
-  <li><a href="#expressions-statements-and-programs" id="toc-expressions-statements-and-programs" class="nav-link" data-scroll-target="#expressions-statements-and-programs">Expressions, Statements, and Programs</a></li>
+  <li><a href="#file-structure" id="toc-file-structure" class="nav-link" data-scroll-target="#file-structure">0.1. File Structure</a></li>
+  <li><a href="#file-path" id="toc-file-path" class="nav-link" data-scroll-target="#file-path">0.2. File Path</a></li>
   </ul></li>
+  <li><a href="#launch-command-line-interface" id="toc-launch-command-line-interface" class="nav-link" data-scroll-target="#launch-command-line-interface">1. Launch Command Line Interface</a></li>
+  <li><a href="#where-am-i" id="toc-where-am-i" class="nav-link" data-scroll-target="#where-am-i">2. Where Am I?</a></li>
+  <li><a href="#whats-in-here" id="toc-whats-in-here" class="nav-link" data-scroll-target="#whats-in-here">3. What’s in Here?</a></li>
+  <li><a href="#lets-go" id="toc-lets-go" class="nav-link" data-scroll-target="#lets-go">4. Let’s Go!</a></li>
+  <li><a href="#lets-create-a-folder" id="toc-lets-create-a-folder" class="nav-link" data-scroll-target="#lets-create-a-folder">5. Let’s create a folder</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<section id="operations" class="level1">
-<h1>Operations</h1>
-<pre class="{important}"><code>This page is &lt;span style="color:red"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style="color:red"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.</code></pre>
-<section id="expressions-statements-and-programs" class="level2">
-<h2 class="anchored" data-anchor-id="expressions-statements-and-programs">Expressions, Statements, and Programs</h2>
-<p>An <strong>expression</strong> is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable, so the following are all legal expressions: <code>42</code>, <code>x</code>, <code>x+1</code></p>
-<!-- 
-```python
-42
-x
-x + 1
-``` -->
-<p>When you type an expression at the prompt, the interpreter <strong>evaluates</strong> it, which means that it finds the value of the expression. In this example, <code>x + 1</code>, the interpreter adds one to the current value of <code>x</code>. But it doesn’t display the value unless you tell it to:</p>
-<div id="cell-1" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../se/version_control/version_control.html">Version Control</a></li><li class="breadcrumb-item"><a href="../se/shell.html">Shell (sh)</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Shell (sh)</h1>
 </div>
-<p>A <strong>statement</strong> is a unit of code that has an effect, like creating a variable or displaying a value.</p>
-<div id="cell-3" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The first line is an <strong>assignment statement</strong> that gives a value to <code>x</code>. The second line is a <strong>print statement</strong> that displays the value of <code>x</code>.</p>
-<p>The types of statements we have seen so far are assignments and print statements. Other types of statements include:</p>
-<ul>
-<li><strong>Import statements</strong>: Import a module.</li>
-<li><strong>If statements</strong>: Execute code depending on the value of a condition.</li>
-<li><strong>For statements</strong>: Execute code for each item in a sequence.</li>
-<li><strong>While statements</strong>: Execute code while a condition is true.</li>
-<li><strong>Def statements</strong>: Define a function.</li>
-<li><strong>Return statements</strong>: Exit a function and return a value.</li>
-<li><strong>Break statements</strong>: Exit a loop.</li>
-<li><strong>Continue statements</strong>: Skip the rest of the loop body.</li>
-</ul>
-<p>When you type a statement, the interpreter <strong>executes</strong> it, which means that it does whatever the statement says. In general, statements don’t have values.</p>
-<p>A <strong>program</strong> is a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.</p>
-<p>For example, the script below contains three statements:</p>
-<div id="cell-5" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The output of this program is <code>42</code>. The second line displays the value of <code>x</code>, which is <code>42</code>. The third line increases the value of <code>x</code> by one. But it doesn’t display the value.</p>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img align="right" width="20%" src="https://raw.githubusercontent.com/github/explore/aca0b3b69ca680013b925338b0cc428190aa42dc/topics/cli/cli.png" style="filter:invert(1)"></p>
+<p>Shell is a program that takes commands from the keyboard and gives them to the operating system to perform.</p>
+<section id="preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="preliminaries">0. Preliminaries</h2>
+<section id="file-structure" class="level3">
+<h3 class="anchored" data-anchor-id="file-structure">0.1. File Structure</h3>
+<p>File structure is a way of organizing files and directories in a computer. Most operating systems use a hierarchical file system.</p>
+<center>
+<img src="https://qph.cf2.quoracdn.net/main-qimg-cd17398a5fe73d3537af64952d78608a" style="filter:invert(1)" width="70%">
+</center>
 </section>
+<section id="file-path" class="level3">
+<h3 class="anchored" data-anchor-id="file-path">0.2. File Path</h3>
+<p>File path is the location of a file or folder in a directory structure. An example of a file is <code>C:\Users\Documents\file.txt</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that Unix based systems (e.g.&nbsp;MacOS, Linux etc.) use <code>/</code> whereas Windows uses <code>\</code> as the path separator.</p>
+</div>
+</div>
+<p>The file path is made up of the drive name (e.g.&nbsp;<code>C:\</code>), the folders (e.g.&nbsp;<code>Users\</code>), and the file name (e.g.&nbsp;<code>Documents\file.txt</code>).</p>
+<center>
+<img align="center" src="https://9infotech.weebly.com/uploads/1/7/5/2/17521169/sample-file-path_orig.png" style="filter:invert(1)" width="75%">
+</center>
+</section>
+</section>
+<section id="launch-command-line-interface" class="level2">
+<h2 class="anchored" data-anchor-id="launch-command-line-interface">1. Launch Command Line Interface</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ol type="1">
+<li>Press <code>Command</code> + <code>Space</code> to open Spotlight Search.</li>
+<li>Type <code>terminal</code> and press <code>Enter</code>.</li>
+</ol>
+<p><img src="../assets/terminal.png" style="filter:invert(1)" width="60%"></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li>Press <code>Win</code> + <code>R</code> to open the Run dialog box.</li>
+<li>Type <code>cmd</code> and press <code>Enter</code>.</li>
+</ol>
+<p><img src="../assets/commandprompt.png" style="filter:invert(1)" width="60%"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="where-am-i" class="level2">
+<h2 class="anchored" data-anchor-id="where-am-i">2. Where Am I?</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><code>pwd</code> command is used to print the current working directory.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><code>cd</code> command, without any parameters, is used to print the current working directory.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="whats-in-here" class="level2">
+<h2 class="anchored" data-anchor-id="whats-in-here">3. What’s in Here?</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><code>ls [OPTION]... [FILE]...</code></p>
+<p><code>ls</code> command is used to <strong>list</strong> the files and directories in the current working directory.</p>
+<p><code>ls -lt</code> command is used to <strong>list</strong> the files and directories in the current working directory in <strong>long listing format</strong> and <strong>sorted by time modified</strong>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><code>dir</code> command is used to <strong>list</strong> the files and directories in the current working directory.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="lets-go" class="level2">
+<h2 class="anchored" data-anchor-id="lets-go">4. Let’s Go!</h2>
+<p>The following can be used to jump to locations: <code>cd &lt;location you want to move to&gt;</code> (Change Directory)</p>
+<p>Some common shortcuts:</p>
+<ul>
+<li><code>~</code>: Home Directory</li>
+<li><code>.</code>: Current Directory</li>
+<li><code>..</code>: Parent Directory</li>
+<li><code>/</code>: Root Directory</li>
+</ul>
+</section>
+<section id="lets-create-a-folder" class="level2">
+<h2 class="anchored" data-anchor-id="lets-create-a-folder">5. Let’s create a folder</h2>
+<p>A folder can be created using <code>mkdir &lt;folder name&gt;</code></p>
+
+
 </section>
 
 </main> <!-- /main -->
