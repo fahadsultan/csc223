@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -436,8 +470,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#git-fetch" id="toc-git-fetch" class="nav-link active" data-scroll-target="#git-fetch"><code>git fetch</code></a></li>
+  <li><a href="#git-merge" id="toc-git-merge" class="nav-link" data-scroll-target="#git-merge"><code>git merge</code></a></li>
+  <li><a href="#git-pull" id="toc-git-pull" class="nav-link" data-scroll-target="#git-pull"><code>git pull</code></a></li>
+  <li><a href="#resolving-conflicts" id="toc-resolving-conflicts" class="nav-link" data-scroll-target="#resolving-conflicts">Resolving Conflicts</a></li>
+  <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests">Pull Requests</a></li>
+  <li><a href="#working-with-branches" id="toc-working-with-branches" class="nav-link" data-scroll-target="#working-with-branches">Working with Branches</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -461,8 +506,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>When working in a team, it is important to have a good version control system. Git is a popular version control system that allows you to keep track of changes to your code and collaborate with others. In this guide, we will cover some of the basics of using Git in a team setting.</p>
+<section id="git-fetch" class="level2">
+<h2 class="anchored" data-anchor-id="git-fetch"><code>git fetch</code></h2>
+<p>The <code>git fetch</code> command is used to download changes from a remote repository. It will download any new branches or changes that have been made since the last time you fetched.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git fetch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These changes will be downloaded to your local repository, but they will not be merged into your working directory. To merge the changes into your working directory, you can use the <code>git merge</code> command.</p>
+</section>
+<section id="git-merge" class="level2">
+<h2 class="anchored" data-anchor-id="git-merge"><code>git merge</code></h2>
+<p>The <code>git merge</code> command is used to merge changes from one branch into another. It will take the changes from the specified branch and apply them to the current branch.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If there are any conflicts between the two branches, Git will prompt you to resolve them before completing the merge.</p>
+<p>There are two ways to resolve conflicts: manually editing the conflicted files or using a merge tool. Some popular merge tools include <code>vimdiff</code>, <code>kdiff3</code>, and <code>meld</code>.</p>
+</section>
+<section id="git-pull" class="level2">
+<h2 class="anchored" data-anchor-id="git-pull"><code>git pull</code></h2>
+<p>The <code>git pull</code> command is a combination of <code>git fetch</code> and <code>git merge</code>. It will download changes from a remote repository and merge them into your working directory in one step.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="resolving-conflicts" class="level2">
+<h2 class="anchored" data-anchor-id="resolving-conflicts">Resolving Conflicts</h2>
+<p>Conflicts can occur when the same lines of code have been changed in both branches. You will need to manually resolve these conflicts before the merge can be completed.</p>
+<p>The way to resolve conflicts is to open the conflicted file in your text editor and manually edit the file to resolve the conflicts. Once you have resolved all the conflicts, you can save the file and commit the changes. This manual edit process takes place in the working directory after a merge has been attempted and failed due to conflicts.</p>
+</section>
+<section id="pull-requests" class="level2">
+<h2 class="anchored" data-anchor-id="pull-requests">Pull Requests</h2>
+<p>Pull requests are a way to propose changes to a repository and collaborate with others. When you create a pull request, you are asking the repository owner to review and merge your changes into the main branch.</p>
+<p>To create a pull request, you will need to push your changes to a remote branch and then create the pull request on the Git hosting service.</p>
+</section>
+<section id="working-with-branches" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-branches">Working with Branches</h2>
+<p>Branches are an important concept in Git that allow you to work on different features or fixes in isolation. When you create a new branch, you are creating a new line of development that is independent of the main branch (usually called <code>master</code> or <code>main</code>).</p>
+<p>To <u>create a new branch</u>, you can use the <code>git checkout -b</code> command. This will create a new branch and switch to it in one step.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Once you have made changes on a branch, you can <u>merge those changes back into the main</u> branch using the <code>git merge</code> command.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout main</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<center>
+<img src="https://cdn.prod.website-files.com/622642781cd7e96ac1f66807/62d0ef2b68ea1652c722e7a6_image-10.png" width="80%" style="filter:invert(1);">
+</center>
+<p>At any point, you can check which branch you are on using the <code>git branch</code> command.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
