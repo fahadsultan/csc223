@@ -7,6 +7,7 @@ toc: true
 
 GitHub is a code hosting platform for version control and and social network for collaboration. It lets you and others work together on projects from anywhere.
 
+
 <!-- ## Create and use a repository -->
 
 <!-- Make changes to a file and push them to GitHub as commits
@@ -85,3 +86,30 @@ Go to your GitHub account settings and click on SSH and GPG keys. Then click on 
 8. Click **Add SSH key**.
 
 <center><img width="90%" src="https://fahadsultan.com/potpourri/_images/ssh_key.png"></center>
+
+## Fork a Repository
+
+A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+To fork a repository, click the Fork button in the header of the repository.
+
+<center><img width="90%" src="https://docs.github.com/assets/cb-34352/mw-1440/images/help/repository/fork-button.webp" style="filter:invert(1)"></center>
+
+<br/>
+
+After forking the repository, you can clone it to your local machine and make changes. Once you are done, you can create a pull request to propose your changes to the original repository.
+
+## Pull Requests
+
+When you are ready to share your work, submit a pull request. Pull requests show differences between the content from both branches. The changes, additions, and subtractions are shown in green and red.
+
+As soon as you make a commit, you can open a pull request and start a discussion, even before the code is finished.
+
+By using GitHub's @mention system in your pull request message, you can ask for feedback from specific people or teams, whether they're down the hall or 10 time zones away.
+
+You can even open pull requests in your own repository and merge them yourself. It's a great way to learn the GitHub flow before working on larger projects.
+
+<img src="https://axolo.s3.eu-west-3.amazonaws.com/communication/blog/ultimate-pull-request/Branches+in+GitHub.png" width="100%" style="filter:invert(1)">
+

@@ -2,3 +2,74 @@
 title: "Git (Team)"
 toc: true
 ---
+
+When working in a team, it is important to have a good version control system. Git is a popular version control system that allows you to keep track of changes to your code and collaborate with others. In this guide, we will cover some of the basics of using Git in a team setting.
+
+
+## `git fetch`
+
+The `git fetch` command is used to download changes from a remote repository. It will download any new branches or changes that have been made since the last time you fetched.
+
+```bash
+$ git fetch
+```
+
+These changes will be downloaded to your local repository, but they will not be merged into your working directory. To merge the changes into your working directory, you can use the `git merge` command.
+
+## `git merge`
+
+The `git merge` command is used to merge changes from one branch into another. It will take the changes from the specified branch and apply them to the current branch.
+
+```bash
+$ git merge <branch name>
+```
+
+If there are any conflicts between the two branches, Git will prompt you to resolve them before completing the merge.
+
+There are two ways to resolve conflicts: manually editing the conflicted files or using a merge tool. Some popular merge tools include `vimdiff`, `kdiff3`, and `meld`.
+
+## `git pull`
+
+The `git pull` command is a combination of `git fetch` and `git merge`. It will download changes from a remote repository and merge them into your working directory in one step.
+
+```bash
+$ git pull
+```
+
+## Resolving Conflicts
+
+Conflicts can occur when the same lines of code have been changed in both branches. You will need to manually resolve these conflicts before the merge can be completed.
+
+The way to resolve conflicts is to open the conflicted file in your text editor and manually edit the file to resolve the conflicts. Once you have resolved all the conflicts, you can save the file and commit the changes. This manual edit process takes place in the working directory after a merge has been attempted and failed due to conflicts.
+
+## Pull Requests
+
+Pull requests are a way to propose changes to a repository and collaborate with others. When you create a pull request, you are asking the repository owner to review and merge your changes into the main branch.
+
+To create a pull request, you will need to push your changes to a remote branch and then create the pull request on the Git hosting service.
+
+
+## Working with Branches
+
+Branches are an important concept in Git that allow you to work on different features or fixes in isolation. When you create a new branch, you are creating a new line of development that is independent of the main branch (usually called `master` or `main`).
+
+To <u>create a new branch</u>, you can use the `git checkout -b` command. This will create a new branch and switch to it in one step.
+
+```bash
+$ git checkout -b <branch name>
+```
+
+Once you have made changes on a branch, you can <u>merge those changes back into the main</u> branch using the `git merge` command.
+
+```bash
+$ git checkout main
+$ git merge <branch name>
+```
+
+<center><img src="https://cdn.prod.website-files.com/622642781cd7e96ac1f66807/62d0ef2b68ea1652c722e7a6_image-10.png" width="80%" style="filter:invert(1);"></center>
+
+At any point, you can check which branch you are on using the `git branch` command. 
+
+```bash
+$ git branch
+``` 

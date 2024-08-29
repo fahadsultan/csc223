@@ -409,6 +409,97 @@
     ]
   },
   {
+    "objectID": "se/version_control/git_colab.html",
+    "href": "se/version_control/git_colab.html",
+    "title": "Git (Team)",
+    "section": "",
+    "text": "When working in a team, it is important to have a good version control system. Git is a popular version control system that allows you to keep track of changes to your code and collaborate with others. In this guide, we will cover some of the basics of using Git in a team setting.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/git_colab.html#git-fetch",
+    "href": "se/version_control/git_colab.html#git-fetch",
+    "title": "Git (Team)",
+    "section": "git fetch",
+    "text": "git fetch\nThe git fetch command is used to download changes from a remote repository. It will download any new branches or changes that have been made since the last time you fetched.\n$ git fetch\nThese changes will be downloaded to your local repository, but they will not be merged into your working directory. To merge the changes into your working directory, you can use the git merge command.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/git_colab.html#git-merge",
+    "href": "se/version_control/git_colab.html#git-merge",
+    "title": "Git (Team)",
+    "section": "git merge",
+    "text": "git merge\nThe git merge command is used to merge changes from one branch into another. It will take the changes from the specified branch and apply them to the current branch.\n$ git merge &lt;branch name&gt;\nIf there are any conflicts between the two branches, Git will prompt you to resolve them before completing the merge.\nThere are two ways to resolve conflicts: manually editing the conflicted files or using a merge tool. Some popular merge tools include vimdiff, kdiff3, and meld.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/git_colab.html#git-pull",
+    "href": "se/version_control/git_colab.html#git-pull",
+    "title": "Git (Team)",
+    "section": "git pull",
+    "text": "git pull\nThe git pull command is a combination of git fetch and git merge. It will download changes from a remote repository and merge them into your working directory in one step.\n$ git pull",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/git_colab.html#resolving-conflicts",
+    "href": "se/version_control/git_colab.html#resolving-conflicts",
+    "title": "Git (Team)",
+    "section": "Resolving Conflicts",
+    "text": "Resolving Conflicts\nConflicts can occur when the same lines of code have been changed in both branches. You will need to manually resolve these conflicts before the merge can be completed.\nThe way to resolve conflicts is to open the conflicted file in your text editor and manually edit the file to resolve the conflicts. Once you have resolved all the conflicts, you can save the file and commit the changes. This manual edit process takes place in the working directory after a merge has been attempted and failed due to conflicts.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/git_colab.html#pull-requests",
+    "href": "se/version_control/git_colab.html#pull-requests",
+    "title": "Git (Team)",
+    "section": "Pull Requests",
+    "text": "Pull Requests\nPull requests are a way to propose changes to a repository and collaborate with others. When you create a pull request, you are asking the repository owner to review and merge your changes into the main branch.\nTo create a pull request, you will need to push your changes to a remote branch and then create the pull request on the Git hosting service.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/git_colab.html#working-with-branches",
+    "href": "se/version_control/git_colab.html#working-with-branches",
+    "title": "Git (Team)",
+    "section": "Working with Branches",
+    "text": "Working with Branches\nBranches are an important concept in Git that allow you to work on different features or fixes in isolation. When you create a new branch, you are creating a new line of development that is independent of the main branch (usually called master or main).\nTo create a new branch, you can use the git checkout -b command. This will create a new branch and switch to it in one step.\n$ git checkout -b &lt;branch name&gt;\nOnce you have made changes on a branch, you can merge those changes back into the main branch using the git merge command.\n$ git checkout main\n$ git merge &lt;branch name&gt;\n\n\n\nAt any point, you can check which branch you are on using the git branch command.\n$ git branch",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Git (Team)"
+    ]
+  },
+  {
     "objectID": "se/version_control/git_solo.html#initial-setup",
     "href": "se/version_control/git_solo.html#initial-setup",
     "title": "Git (Individual)",
@@ -529,6 +620,32 @@
     "title": "Github (Community)",
     "section": "Add SSH key to GitHub",
     "text": "Add SSH key to GitHub\n\nGo to your GitHub account settings and click on SSH and GPG keys. Then click on New SSH key. Give a title to your key (ideally this should be something like Macbook 2023) and paste the key in the box below. Click on Add SSH key.\n\nCopy the SSH public key to your clipboard. If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don’t add any newlines or whitespace.  \nIn the upper-right corner of any page, click your profile photo, then click Settings.  \nIn the “Access” section of the sidebar, click SSH and GPG keys.  \nClick New SSH key or Add SSH key.  \nIn the “Title” field, add a descriptive label for the new key. For example, if you’re using a personal laptop, you might call this key “Personal laptop”.  \nIn the “Key” field, paste your public key.  \nClick Add SSH key.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#fork-a-repository",
+    "href": "se/version_control/github.html#fork-a-repository",
+    "title": "Github (Community)",
+    "section": "Fork a Repository",
+    "text": "Fork a Repository\nA fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.\nMost commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.\nTo fork a repository, click the Fork button in the header of the repository.\n\n\n\n\nAfter forking the repository, you can clone it to your local machine and make changes. Once you are done, you can create a pull request to propose your changes to the original repository.",
+    "crumbs": [
+      "Home",
+      "SOFTWARE ENGINEERING",
+      "Version Control",
+      "Github (Community)"
+    ]
+  },
+  {
+    "objectID": "se/version_control/github.html#pull-requests",
+    "href": "se/version_control/github.html#pull-requests",
+    "title": "Github (Community)",
+    "section": "Pull Requests",
+    "text": "Pull Requests\nWhen you are ready to share your work, submit a pull request. Pull requests show differences between the content from both branches. The changes, additions, and subtractions are shown in green and red.\nAs soon as you make a commit, you can open a pull request and start a discussion, even before the code is finished.\nBy using GitHub’s @mention system in your pull request message, you can ask for feedback from specific people or teams, whether they’re down the hall or 10 time zones away.\nYou can even open pull requests in your own repository and merge them yourself. It’s a great way to learn the GitHub flow before working on larger projects.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -937,7 +1054,7 @@
     "href": "basics/data.html#dynamic-and-strong-typing",
     "title": "Data",
     "section": "Dynamic and Strong Typing",
-    "text": "Dynamic and Strong Typing\nYou (and Python) can identify strings because they are enclosed in quotation marks \".\nPython is a dynamically typed language, which means that the type of a value is inferred at runtime (as opposed to compile time) based on the value.\nPython is a dynamically typed language, which means two things:\n\nThe type of a value is inferred at runtime (as opposed to compile time) based on the value\nThe same variable can be assigned values of different types at different times.\n\n\n\n\n```kbpmayra https://res.cloudinary.com/practicaldev/image/fetch/s–i1yqfSl1–/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2ABddwVWW6hFU0miT9DCbUWQ.png\n\n\n\n\nwidth: 50%\n\n\nname: dynamic-strong-typing\n\n\n\nDifferent programming languages have different approaches to types. Python is a dynamically typed and strongly typed programming language.\n\nPython is also a **strongly typed** language, which means that every \n\nThe `=` symbol in Python is called the **assignment operator**. It allows us to creates new variables (names) and _assign_ (refer) them values. \n\nNote that the assignment operator assigns the value on the right to the variable on the left. In other words, the directionality of assignment in `x = 42` is  $x \\leftarrow 42$.\n\nVariables can naturally be assigned different values at different times.\n\nIn fact, the same variable can be assigned values of different types at different times.\n\n::: {#cell-5 .cell}\n``` {.python .cell-code}\nmessage = \"What's up, Doc?\"\nn = 17\npi = 3.14159\n:::\nThis example makes three assignments. The first assigns the string \"What's up, Doc?\" to a new variable named message. The second gives the integer 17 to n, and the third gives the floating-point number 3.14159 to pi.\nThe assignment operator, =, should not be confused with an equals sign (even though it uses the same character). Assignment operators link a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:\n\n17 = n # Error: can't assign to literal\nA common way to represent variables on paper is to write the name with an arrow pointing to the variable’s value. This kind of figure is called a state diagram because it shows what state each of the variables is in (think of it as the variable’s state of mind). This diagram shows the result of the assignment statements\n\nThe print statement also works with variables.\n\nprint(message), print(n), print(pi)\n\nIn each case the result is the value of the variable. Variables also have types; again, we can ask the interpreter what they are.\n\ntype(message), type(n), type(pi)\n\nThe type of a variable is the type of the value it refers to.\n\nten_percent = 3\nten_percent\n\n\nTen_percent = 10\nTen_percent\n\n\nTEN_PERCENT = 10000\nTEN_PERCENT\n\n\nten_percent = 5\nten_percent\n\n\nage = 2\nage\n\n\nAge = 20\nAge\n\n\nAGE = 200\nAGE\n\nWhich of the following variable names would throw a Syntax Errox?\n\n10_percent = 27.03 / 10\n\nten_percent = 27.03 / 10\nten_percent\n\n_10_percent = 27.03 / 10\n_10_percent\n\n20_percent = 27.03 / 10\n\ntwenty_percent = 27.03 / 10\n\ntwenty_% = 27.03 / 10\n\n\nReserved words\nIn Python, there are 33 reserved words. These are words that have special meaning to Python. You cannot use reserved words as variable names.\nFalse, def, if, raise, None, del, import, return, True, elif ,in, try, and, else, is, while, as, except, lambda, with assert, finally, nonlocal, yield break, for, not\nclass, from, or,\ncontinue, global, pass\n\nA programming language is more than just a means for instructing a computer to perform tasks.\nIt also serves as a framework within which we organize our ideas about computational processes.\nPrograms serve to communicate those ideas among the members of a programming community.\nThus, let me re-emphasize programs must be written for people to read, and only incidentally for machines to execute.\n\n\n\nYou can get the data type of any variable using the built-in type() function\nPython programming language is both:\n\n\nStrongly typed:\n\nAll variables have a type\nThe type matters when performing operations on a variable.\n\nDynamically typed:\n\nIn Python, the data type is set when you assign a value to a variable (during runtime).",
+    "text": "Dynamic and Strong Typing\nYou (and Python) can identify strings because they are enclosed in quotation marks \".\nPython is a dynamically typed language, which means that the type of a value is inferred at runtime (as opposed to compile time) based on the value.\nPython is a dynamically typed language, which means two things:\n\nThe type of a value is inferred at runtime (as opposed to compile time) based on the value\nThe same variable can be assigned values of different types at different times.\n\n\n\n\n```srfrcoul https://res.cloudinary.com/practicaldev/image/fetch/s–i1yqfSl1–/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2ABddwVWW6hFU0miT9DCbUWQ.png\n\n\n\n\nwidth: 50%\n\n\nname: dynamic-strong-typing\n\n\n\nDifferent programming languages have different approaches to types. Python is a dynamically typed and strongly typed programming language.\n\nPython is also a **strongly typed** language, which means that every \n\nThe `=` symbol in Python is called the **assignment operator**. It allows us to creates new variables (names) and _assign_ (refer) them values. \n\nNote that the assignment operator assigns the value on the right to the variable on the left. In other words, the directionality of assignment in `x = 42` is  $x \\leftarrow 42$.\n\nVariables can naturally be assigned different values at different times.\n\nIn fact, the same variable can be assigned values of different types at different times.\n\n::: {#cell-5 .cell}\n``` {.python .cell-code}\nmessage = \"What's up, Doc?\"\nn = 17\npi = 3.14159\n:::\nThis example makes three assignments. The first assigns the string \"What's up, Doc?\" to a new variable named message. The second gives the integer 17 to n, and the third gives the floating-point number 3.14159 to pi.\nThe assignment operator, =, should not be confused with an equals sign (even though it uses the same character). Assignment operators link a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:\n\n17 = n # Error: can't assign to literal\nA common way to represent variables on paper is to write the name with an arrow pointing to the variable’s value. This kind of figure is called a state diagram because it shows what state each of the variables is in (think of it as the variable’s state of mind). This diagram shows the result of the assignment statements\n\nThe print statement also works with variables.\n\nprint(message), print(n), print(pi)\n\nIn each case the result is the value of the variable. Variables also have types; again, we can ask the interpreter what they are.\n\ntype(message), type(n), type(pi)\n\nThe type of a variable is the type of the value it refers to.\n\nten_percent = 3\nten_percent\n\n\nTen_percent = 10\nTen_percent\n\n\nTEN_PERCENT = 10000\nTEN_PERCENT\n\n\nten_percent = 5\nten_percent\n\n\nage = 2\nage\n\n\nAge = 20\nAge\n\n\nAGE = 200\nAGE\n\nWhich of the following variable names would throw a Syntax Errox?\n\n10_percent = 27.03 / 10\n\nten_percent = 27.03 / 10\nten_percent\n\n_10_percent = 27.03 / 10\n_10_percent\n\n20_percent = 27.03 / 10\n\ntwenty_percent = 27.03 / 10\n\ntwenty_% = 27.03 / 10\n\n\nReserved words\nIn Python, there are 33 reserved words. These are words that have special meaning to Python. You cannot use reserved words as variable names.\nFalse, def, if, raise, None, del, import, return, True, elif ,in, try, and, else, is, while, as, except, lambda, with assert, finally, nonlocal, yield break, for, not\nclass, from, or,\ncontinue, global, pass\n\nA programming language is more than just a means for instructing a computer to perform tasks.\nIt also serves as a framework within which we organize our ideas about computational processes.\nPrograms serve to communicate those ideas among the members of a programming community.\nThus, let me re-emphasize programs must be written for people to read, and only incidentally for machines to execute.\n\n\n\nYou can get the data type of any variable using the built-in type() function\nPython programming language is both:\n\n\nStrongly typed:\n\nAll variables have a type\nThe type matters when performing operations on a variable.\n\nDynamically typed:\n\nIn Python, the data type is set when you assign a value to a variable (during runtime).",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
