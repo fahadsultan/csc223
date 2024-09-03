@@ -3,11 +3,6 @@ title: Control Flow
 toc: true
 ---
 
-
-```{important}
-This page is <span style="color:red">**under construction**</span>. All or part of the <span style="color:red">**content may be incomplete or incorrect**</span>.
-``` 
-
 <!-- 
 
 ### `if` Statements
@@ -36,3 +31,4 @@ This page is <span style="color:red">**under construction**</span>. All or part 
 
 
 3. **Expressions** ( < 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run **left to right**. 
+

@@ -1,0 +1,77 @@
+---
+title: "Built-in Functions"
+toc: true
+---
+
+Java provides a set of built-in functions that perform common operations such as mathematical calculations, string manipulation, and input/output operations. These functions are part of the Java standard library and can be used directly in your programs. In this tutorial, we will learn about some of the most commonly used built-in functions in Java.
+
+## Input/Output Functions
+
+Java provides a set of input/output functions that allow you to read data from the standard input, write data to the standard output, and perform file I/O operations. Here are some examples of input/output functions in Java:
+
+| Function                | Description                                      | Example                           |
+|-------------------------|--------------------------------------------------|-----------------------------------|
+| `System.out.println(x)` | Prints the value of `x` to the standard output   | `System.out.println("Hello")` prints `Hello`|
+| `System.in.read()`      | Reads a single character from the standard input | `char c = (char) System.in.read()` reads a character|
+
+Reading from the standard input using `System.in.read()` can be cumbersome, so Java provides the `Scanner` class to simplify input operations. Here is an example of reading an integer from the standard input using `Scanner`:
+
+```java
+import java.util.Scanner;
+
+public class ReadInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int num = scanner.nextInt();
+        System.out.println("You entered: " + num);
+        scanner.close();
+    }
+}
+```
+
+## Mathematical Functions
+
+Java provides a set of mathematical functions that allow you to perform common mathematical operations such as rounding, exponentiation, and trigonometry. Here are some examples of mathematical functions in Java:
+
+| Function          | Description                                      | Example                   |
+|-------------------|--------------------------------------------------|---------------------------|
+| `Math.abs(x)`     | Returns the absolute value of `x`                | `Math.abs(-5)` returns `5`|
+| `Math.pow(x, y)`  | Returns `x` raised to the power of `y`           | `Math.pow(2, 3)` returns `8`|
+| `Math.sqrt(x)`    | Returns the square root of `x`                   | `Math.sqrt(16)` returns `4`|
+| `Math.round(x)`   | Rounds `x` to the nearest integer                | `Math.round(3.5)` returns `4`|
+| `Math.max(x, y)`  | Returns the larger of `x` and `y`                | `Math.max(10, 20)` returns `20`|
+| `Math.min(x, y)`  | Returns the smaller of `x` and `y`               | `Math.min(10, 20)` returns `10`|
+| `Math.sin(x)`     | Returns the sine of `x` in radians               | `Math.sin(Math.PI/2)` returns `1.0`|
+| `Math.cos(x)`     | Returns the cosine of `x` in radians             | `Math.cos(0)` returns `1.0`|
+| `Math.tan(x)`     | Returns the tangent of `x` in radians            | `Math.tan(Math.PI/4)` returns `1.0`|
+
+
+## String Functions
+
+Java provides a set of string functions that allow you to manipulate strings in various ways. Here are some examples of string functions in Java:
+
+| Function                | Description                                      | Example                           |
+|-------------------------|--------------------------------------------------|-----------------------------------|
+| `str.length()`          | Returns the length of the string `str`           | `"Hello".length()` returns `5`    |
+| `str.charAt(index)`     | Returns the character at the specified index     | `"Hello".charAt(0)` returns `H`   |
+| `str.substring(start)`  | Returns a substring starting from `start` index  | `"Hello".substring(1)` returns `ello`|
+| `str.indexOf(substr)`   | Returns the index of the first occurrence of `substr` | `"Hello".indexOf("l")` returns `2`|
+| `str.toUpperCase()`     | Converts the string to uppercase                 | `"hello".toUpperCase()` returns `HELLO`|
+| `str.toLowerCase()`     | Converts the string to lowercase                 | `"HELLO".toLowerCase()` returns `hello`|
+
+StringBuilder and StringBuffer classes are used to create mutable strings in Java. These classes provide methods for appending, inserting, deleting, and modifying string content.
+
+Some commonly used methods of StringBuilder and StringBuffer classes are:
+
+| Method                | Description                                      | Example                           |
+|-----------------------|--------------------------------------------------|-----------------------------------|
+| `append(str)`         | Appends the string `str` to the StringBuilder    | `sb.append("Hello")` appends `Hello`|
+| `insert(index, str)`  | Inserts the string `str` at the specified index  | `sb.insert(0, "World")` inserts `World` at the beginning|
+| `delete(start, end)`  | Deletes the characters from `start` to `end`     | `sb.delete(0, 5)` deletes characters from 0 to 4|
+| `reverse()`           | Reverses the characters in the StringBuilder      | `sb.reverse()` reverses the content|
+
+
+
+
+

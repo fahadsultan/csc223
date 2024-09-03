@@ -2,3 +2,22 @@
 title: "Abstractions"
 toc: true
 ---
+
+Abstraction is the process of hiding the complex implementation details and showing only the necessary features of an object. In other words, it helps to reduce programming complexity and effort.
+
+## Why Abstraction?
+
+- **Reduce Complexity**: Abstraction helps to reduce programming complexity and effort.
+- **Security**: It helps to hide the internal details of an object and show only the necessary features of an object.
+- **Code Reusability**: Abstraction helps to reuse the code and use it in multiple places.
+- **Flexibility**: It helps to change the implementation of an object without affecting the rest of the code.
+
+## Programming Abstractions
+
+In programming, abstraction is achieved using three main concepts:
+
+1. **Data and Variables**: Variables are used to store data values. They are used to represent the state of an object. They allow abstracting operations and algorithms from the specific values they operate on.
+
+2. **Functions and Methods**: Functions and methods are used to define abstract behavior only in terms of inputs and outputs. They also allow abstracting the implementation details of an algorithm. 
+
+3. **Classes and Objects**: Classes and objects are used to define abstract data types. They allow abstracting the data structure and behavior of an object.

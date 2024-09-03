@@ -57,23 +57,29 @@ website:
         - section: 
           href: basics/java.qmd
           contents:
-            - basics/data.ipynb
-            - section: "Operations"
-              href: basics/operations/operations.ipynb
-              contents:
-                - basics/operations/math_operators.ipynb
-                - basics/operations/precedence_associativity.ipynb
-                - basics/operations/file_io.ipynb
-            - section: "Control Flow"
-              href: basics/controls/controls.qmd
-              contents:
-                - basics/controls/conditionals.ipynb
-                - basics/controls/loops.ipynb
             - section: "Abstractions"
               href: basics/abstractions/abstractions.qmd
               contents:
-                - basics/abstractions/functions.qmd
+                - basics/data.qmd
                 - basics/abstractions/classes.qmd
+                # - basics/abstractions/functions.qmd
+                - basics/abstractions/datastructures.qmd
+            - section: "Operations"
+              href: basics/operations/operations.ipynb
+              contents:
+                - basics/operations/math_operators.qmd
+                # - basics/operations/precedence_associativity.ipynb
+                - basics/operations/builtinfuncs.qmd
+                # - basics/operations/file_io.ipynb
+                - basics/operations/file_io.qmd
+                - test.qmd
+            - section: "Control Flow"
+              href: basics/controls/controls.qmd
+              contents:
+                # - basics/controls/conditionals.ipynb
+                # - basics/controls/loops.ipynb
+                - basics/controls/conditionals.qmd
+                - basics/controls/loops.qmd
         - section: 
           href: datastructs/datastructs.qmd
           contents:

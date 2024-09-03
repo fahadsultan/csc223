@@ -1,0 +1,177 @@
+---
+title: "Data"
+toc: true
+---
+
+## Values and Types
+
+* The atomic indivisible unit of data in computer programming is called a **value**. 
+
+* Values are the most basic things that a computer program manipulates or calculates.
+
+For example, the number `42` is a value. So is `"Hello World!"`.
+
+* Each value belongs to a **type**.
+
+* The type of a value determines its interpretation by the computer and the operations that can be performed on it.
+
+For example, the value `42` is of type `int` (short for integer) and the value `"Hello World!"` is of type `str` (short for string, so-called because it contains a _string_ of letters).
+
+* In Java, every value has a type, and every type is defined by the Java programming language.
+
+## Primitive Data Types
+
+Java comes with the following built-in numeric data types:
+
+1. **byte**: 8-bit signed integer. Range: -128 to 127.
+2. **short**: 16-bit signed integer. Range: -32,768 to 32,767.
+3. **int**: 32-bit signed integer. Range: -2,147,483,648 to 2,147,483,647.
+4. **long**: 64-bit signed integer. Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+5. **float**: 32-bit floating point number.
+6. **double**: 64-bit floating point number.
+
+Other primitive data types include:
+
+1. **boolean**: Represents true or false values.
+2. **char**: Represents a single 16-bit Unicode character.
+
+## Comparison with Python
+
+### Primitive Data Types vs. Objects
+
+* Java has a clear distinction between primitive data types (e.g., int, char, float, boolean) and objects. Primitive data types in Java are not objects and are stored directly in memory. They are more efficient but have fewer capabilities compared to objects.
+
+* Python does not have primitive data types in the same way Java does. In Python, everything is an object, including what Java would consider primitives like integers and floats. This means even simple data types in Python have methods and are more versatile, though potentially less efficient in terms of memory.
+
+### Wrappers and Autoboxing
+
+Java has wrapper classes for each primitive type (e.g., Integer for int, Float for float). These wrappers allow primitive values to be treated as objects when necessary. Java also supports autoboxing, which automatically converts between primitives and their corresponding wrapper types.
+
+In Python, since everything is an object, there is no need for separate wrapper classes or autoboxing.
+
+### Fixed-Size Memory Allocation
+
+Java uses fixed-size memory allocation for primitive types, which makes memory usage predictable and efficient. For example, an int always uses 4 bytes, a float uses 4 bytes, etc.
+
+In contrast, Python’s objects (including what would be primitives in Java) are dynamically allocated, meaning their memory size can vary. Python integers and floats use more memory than their Java counterparts because they are objects and include metadata.
+
+## Reference Data Types
+
+Java also has non-primitive data types, which are called reference types. These include:
+
+1. **Arrays**: A collection of elements of the same type.
+2. **Classes**: User-defined data types that can have fields, methods, and constructors.
+3. **Interfaces**: Similar to classes but with only method signatures and no implementation.
+4. **Enums**: A special type that defines a set of constants.
+5. **Strings**: A sequence of characters.
+
+Reference types store references (memory addresses) to objects rather than the objects themselves. This allows Java to manage memory more efficiently and handle complex data structures.
+
+### Arrays
+
+* An array is a collection of elements of the same type stored in contiguous memory locations.
+
+* Arrays in Java are fixed in size, meaning the number of elements in an array is determined when the array is created and cannot be changed.
+
+* Arrays are indexed starting from 0. The index represents the position of an element in the array.
+
+* To access an element in an array, you use the index enclosed in square brackets after the array name (e.g., `arr[0]`).
+
+An example of creating and accessing elements in an array:
+
+```java
+int[] arr = new int[5]; // Create an array of 5 integers
+arr[0] = 10; // Assign 10 to the first element
+arr[1] = 20; // Assign 20 to the second element
+System.out.println(arr[0]); // Output: 10
+System.out.println(arr[1]); // Output: 20
+```
+
+Note that arrays are different from Python lists, which can grow or shrink dynamically and don't need to have length specified at the time of creation. Also, Python lists can contain elements of different types, while Java arrays are homogeneous (contain elements of the same type).
+
+To modify the values of an array, you can assign new values to individual elements using their indices.
+
+To access subarrays or slices of an array, you can use the `Arrays.copyOfRange()` method or loop through the array and copy elements to a new array.
+
+
+## Strings
+
+In Java, strings are objects of the `String` class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.
+
+Strings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the `String` class constructor. 
+
+### Creating Strings
+
+You can create strings in Java using string literals or the `String` class constructor
+
+Here is an example of creating strings:
+
+```java
+// Using string literals
+String str1 = "Hello, World!";
+String str2 = "Java Programming";
+
+// Using the String class constructor
+String str3 = new String("Welcome to Java!");
+```
+
+In the above example, we created strings using string literals and the `String` class constructor.
+
+### Read String Length
+
+You can get the length of a string using the `length()` method of the `String` class. The `length()` method returns the number of characters in the string.
+
+Here is an example of getting the length of a string:
+
+```java
+String str = "Hello, World!";
+int length = str.length(); // length = 13
+```
+
+### Accessing Characters
+
+In order to read an individual character from a string, you can use the `charAt()` method. The `charAt()` method returns the character at a specified index in the string.
+
+Here is an example of accessing characters in a string:
+
+```java
+String str = "Java Programming";
+char firstChar = str.charAt(0); // firstChar = 'J'
+char lastChar = str.charAt(str.length() - 1); // lastChar = 'g'
+```
+
+### Substring Extraction
+
+You can extract a substring from a string using the `substring()` method. The `substring()` method takes the starting index and optionally the ending index of the substring to be extracted.
+
+Here is an example of extracting a substring from a string:
+
+```java
+String str = "Hello, World!";
+String subStr = str.substring(7); // subStr = "World!"
+```
+
+### String Concatenation
+
+You can concatenate strings in Java using the `+` operator or the `concat()` method of the `String` class.
+
+Here is an example of concatenating strings:
+
+```java
+String str1 = "Hello, ";
+String str2 = "World!";
+String result = str1 + str2; // result = "Hello, World!"
+```
+
+### String Comparison
+
+You can compare strings in Java using the `equals()` method or the `compareTo()` method of the `String` class. The `equals()` method checks if two strings have the same content, while the `compareTo()` method compares two strings lexicographically.
+
+Here is an example of comparing strings:
+
+```java
+String str1 = "Hello";
+String str2 = "Hello";
+boolean isEqual = str1.equals(str2); // isEqual = true
+int result = str1.compareTo("World"); // result = -15
+```

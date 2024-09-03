@@ -102,35 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -242,7 +213,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Data</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -347,37 +318,66 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstractions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Operations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mathematical Operators</span></a>
+  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basics/operations/precedence_associativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Precedence, Associativity and Type Conversion</span></a>
+  <a href="../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Built-in Data Structures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Math Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Built-in Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Files</span></a>
+ <span class="menu-text">File I/O</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing</span></a>
   </div>
 </li>
       </ul>
@@ -386,11 +386,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Flow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
@@ -401,29 +401,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Abstractions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../basics/abstractions/functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Functions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes</span></a>
   </div>
 </li>
       </ul>
@@ -505,17 +482,33 @@ window.Quarto = {
    
   <ul>
   <li><a href="#values-and-types" id="toc-values-and-types" class="nav-link active" data-scroll-target="#values-and-types">Values and Types</a></li>
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
-  <li><a href="#dynamic-and-strong-typing" id="toc-dynamic-and-strong-typing" class="nav-link" data-scroll-target="#dynamic-and-strong-typing">Dynamic and Strong Typing</a></li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><em>Glossary</em></a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><em>Exercises</em></a></li>
+  <li><a href="#primitive-data-types" id="toc-primitive-data-types" class="nav-link" data-scroll-target="#primitive-data-types">Primitive Data Types</a></li>
+  <li><a href="#comparison-with-python" id="toc-comparison-with-python" class="nav-link" data-scroll-target="#comparison-with-python">Comparison with Python</a>
+  <ul class="collapse">
+  <li><a href="#primitive-data-types-vs.-objects" id="toc-primitive-data-types-vs.-objects" class="nav-link" data-scroll-target="#primitive-data-types-vs.-objects">Primitive Data Types vs.&nbsp;Objects</a></li>
+  <li><a href="#wrappers-and-autoboxing" id="toc-wrappers-and-autoboxing" class="nav-link" data-scroll-target="#wrappers-and-autoboxing">Wrappers and Autoboxing</a></li>
+  <li><a href="#fixed-size-memory-allocation" id="toc-fixed-size-memory-allocation" class="nav-link" data-scroll-target="#fixed-size-memory-allocation">Fixed-Size Memory Allocation</a></li>
+  </ul></li>
+  <li><a href="#reference-data-types" id="toc-reference-data-types" class="nav-link" data-scroll-target="#reference-data-types">Reference Data Types</a>
+  <ul class="collapse">
+  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays">Arrays</a></li>
+  </ul></li>
+  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings">Strings</a>
+  <ul class="collapse">
+  <li><a href="#creating-strings" id="toc-creating-strings" class="nav-link" data-scroll-target="#creating-strings">Creating Strings</a></li>
+  <li><a href="#read-string-length" id="toc-read-string-length" class="nav-link" data-scroll-target="#read-string-length">Read String Length</a></li>
+  <li><a href="#accessing-characters" id="toc-accessing-characters" class="nav-link" data-scroll-target="#accessing-characters">Accessing Characters</a></li>
+  <li><a href="#substring-extraction" id="toc-substring-extraction" class="nav-link" data-scroll-target="#substring-extraction">Substring Extraction</a></li>
+  <li><a href="#string-concatenation" id="toc-string-concatenation" class="nav-link" data-scroll-target="#string-concatenation">String Concatenation</a></li>
+  <li><a href="#string-comparison" id="toc-string-comparison" class="nav-link" data-scroll-target="#string-comparison">String Comparison</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Data</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data</h1>
 </div>
@@ -534,12 +527,6 @@ window.Quarto = {
 </header>
 
 
-<pre class="{important}"><code>This page is &lt;span style="color:red"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style="color:red"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.</code></pre>
-<p><img src="https://lh4.googleusercontent.com/xRzzFQ_aSMaMqRn81S85qXKhQNpFKJtZSbXaPuwnJxXnBz-gku-0MtO5k5DSNu2kKU6HHXWNh1YjCK2VodIQ4BEu1M6jTKY7wCiHDycNPwZLxsjcnzYqRmU_As0arxTuRmylfRwi" align="right" width="35%"></p>
-<p>Data is to computer science what chemicals are to chemistry or organisms are to biology.</p>
-<p>Data is the raw material that we process, analyze, and transform into insight and knowledge.</p>
-<p>In this section, we will learn about how to represent elementary data in Python. Later, we will learn about how to represent more complex data structures.</p>
-<hr>
 <section id="values-and-types" class="level2">
 <h2 class="anchored" data-anchor-id="values-and-types">Values and Types</h2>
 <ul>
@@ -552,476 +539,134 @@ window.Quarto = {
 <li><p>The type of a value determines its interpretation by the computer and the operations that can be performed on it.</p></li>
 </ul>
 <p>For example, the value <code>42</code> is of type <code>int</code> (short for integer) and the value <code>"Hello World!"</code> is of type <code>str</code> (short for string, so-called because it contains a <em>string</em> of letters).</p>
-<p>Python comes with the following built-in data types:</p>
-<!-- 
-| Category | Python Data Types |
-| :----------- | -----------: |
-| Numeric Types:      | **`int`**, **`float`**, `complex` |
-| Boolean Type:      | **`bool`** |
-| Text Type:      | **`str`** |
-| Sequence Types: | `list`, `tuple`, `range` |
-| Mapping Type: | `dict`|
-| Set Types: | `set`, `frozenset`|
-| Binary Type: | `bytes`, `bytearray`, `memoryview`|
-| NoneType: | `Nonetype`| -->
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Python Data Type</th>
-<th style="text-align: right;">Description</th>
-<th style="text-align: right;">Category</th>
-<th style="text-align: right;">Mutable</th>
-<th style="text-align: right;">Example Values</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>int</code></td>
-<td style="text-align: right;">Integers</td>
-<td style="text-align: right;">Numeric</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>42</code>, <code>0</code>, <code>-1</code>, <code>10000000000</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>float</code></td>
-<td style="text-align: right;">Floating point numbers</td>
-<td style="text-align: right;">Numeric</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>3.14159</code>, <code>0.0</code>, <code>-1.0</code>, <code>1.0e10</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>complex</code></td>
-<td style="text-align: right;">Complex numbers</td>
-<td style="text-align: right;">Numeric</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>3 + 4j</code>, <code>1j</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>bool</code></td>
-<td style="text-align: right;">Boolean values</td>
-<td style="text-align: right;">Boolean</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>True</code>, <code>False</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>str</code></td>
-<td style="text-align: right;">String values</td>
-<td style="text-align: right;">Text</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>"Hello World!"</code>, <code>"42"</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>list</code></td>
-<td style="text-align: right;">Ordered mutable sequences of values</td>
-<td style="text-align: right;">Sequence</td>
-<td style="text-align: right;">✅</td>
-<td style="text-align: right;"><code>[1, 2, 3]</code>, <code>["Hello", "World"]</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>tuple</code></td>
-<td style="text-align: right;">Ordered immutable sequences of values</td>
-<td style="text-align: right;">Sequence</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>(1, 2, 3)</code>, <code>("Hello", "World")</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>range</code></td>
-<td style="text-align: right;">Immutable sequence of numbers</td>
-<td style="text-align: right;">Sequence</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>range(10)</code>, <code>range(1, 10, 2)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>dict</code></td>
-<td style="text-align: right;">Unordered mapping of keys to values</td>
-<td style="text-align: right;">Mapping</td>
-<td style="text-align: right;">✅</td>
-<td style="text-align: right;"><code>{"a": 1, "b": 2}</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>set</code></td>
-<td style="text-align: right;">Unordered collection of unique values</td>
-<td style="text-align: right;">Set</td>
-<td style="text-align: right;">✅</td>
-<td style="text-align: right;"><code>{1, 2, 3}</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>frozenset</code></td>
-<td style="text-align: right;">Immutable set</td>
-<td style="text-align: right;">Set</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>frozenset({1, 2, 3})</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>bytes</code></td>
-<td style="text-align: right;">Sequence of bytes</td>
-<td style="text-align: right;">Binary</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>b"Hello World!"</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>bytearray</code></td>
-<td style="text-align: right;">Mutable sequence of bytes</td>
-<td style="text-align: right;">Binary</td>
-<td style="text-align: right;">✅</td>
-<td style="text-align: right;"><code>bytearray(b"Hello World!")</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>memoryview</code></td>
-<td style="text-align: right;">Memory view of bytes</td>
-<td style="text-align: right;">Binary</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>memoryview(b"Hello World!")</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>NoneType</code></td>
-<td style="text-align: right;">Special type indicating no value</td>
-<td style="text-align: right;">NoneType</td>
-<td style="text-align: right;">❌</td>
-<td style="text-align: right;"><code>None</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="variables" class="level2">
-<h2 class="anchored" data-anchor-id="variables">Variables</h2>
-<p>One of the most powerful features of a programming language is the ability to manipulate <strong>variables</strong>.</p>
-<p>Similar to algebra, variables in computer programming are <strong>names that refer to values</strong>.</p>
-<p>In algebra, the following statement declares that the variable <code>x</code> has the value <code>42</code>:</p>
-<p><span class="math display">\[x = 42\]</span></p>
-<p>In Python, the following statement declares that the variable <code>x</code> has the value <code>42</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In Python, a variable is a just a name. Values are somewhere else, and a variable refers to a value. Multiple names can refer to the same value. Python calls whatever is needed to refer to a value a reference. Assigning to a variable (or object field, or …) simply makes it refer to another value. The whole model of storage locations does not apply to Python, the programmer never handles storage locations for values. All he stores and shuffles around are Python references, and those are not values in Python, so they cannot be target of other Python references.</p>
-<p>Variables are the first means of abstraction in computer programming. They allow us to abstract away the details of the value and refer to computations in more general terms.</p>
-<p><strong>Rules for Naming Variables:</strong></p>
-<p>In Python, variable names can be arbitrarily long. They can contain both letters and numbers, but they have to begin with a letter or an underscore (variable names can not start with a number).</p>
 <ul>
-<li><p><em><strong>Variable Names must be descriptive!</strong></em></p></li>
-<li><p>A variable name <strong>must start with a letter or the underscore character</strong></p></li>
-<li><p>A variable name <strong>cannot start with a number</strong></p></li>
-<li><p>A variable name can <strong>only contain alpha-numeric characters and underscores</strong> (<code>A-z</code>, <code>0-9</code>, and <code>_</code> )</p></li>
-<li><p>Variable names are <strong>case-sensitive</strong> (<code>age</code>, <code>Age</code> and <code>AGE</code> are three different variables)</p></li>
-<li><p>In Python, the convention is to <strong><em>NOT</em> use upper case letters</strong> anywhere in the name. In case of multi-word names, use <code>_</code> .</p></li>
+<li>In Java, every value has a type, and every type is defined by the Java programming language.</li>
 </ul>
 </section>
-<section id="dynamic-and-strong-typing" class="level2">
-<h2 class="anchored" data-anchor-id="dynamic-and-strong-typing">Dynamic and Strong Typing</h2>
-<p>You (and Python) can identify strings because they are enclosed in quotation marks <code>"</code>.</p>
-<p>Python is a <strong>dynamically typed</strong> language, which means that the type of a value is inferred at runtime (as opposed to compile time) based on the value.</p>
-<p>Python is a <strong>dynamically typed</strong> language, which means two things:</p>
+<section id="primitive-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="primitive-data-types">Primitive Data Types</h2>
+<p>Java comes with the following built-in numeric data types:</p>
 <ol type="1">
-<li>The type of a value is inferred at runtime (as opposed to compile time) based on the value</li>
-<li>The same variable can be assigned values of different types at different times.</li>
+<li><strong>byte</strong>: 8-bit signed integer. Range: -128 to 127.</li>
+<li><strong>short</strong>: 16-bit signed integer. Range: -32,768 to 32,767.</li>
+<li><strong>int</strong>: 32-bit signed integer. Range: -2,147,483,648 to 2,147,483,647.</li>
+<li><strong>long</strong>: 64-bit signed integer. Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.</li>
+<li><strong>float</strong>: 32-bit floating point number.</li>
+<li><strong>double</strong>: 64-bit floating point number.</li>
 </ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>```srfrcoul https://res.cloudinary.com/practicaldev/image/fetch/s–i1yqfSl1–/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2ABddwVWW6hFU0miT9DCbUWQ.png</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>width: 50%</td>
-</tr>
-<tr class="even">
-<td>name: dynamic-strong-typing</td>
-</tr>
-</tbody>
-</table>
-<p>Different programming languages have different approaches to types. Python is a <strong>dynamically typed</strong> and <strong>strongly typed</strong> programming language.</p>
-<pre><code>
-Python is also a **strongly typed** language, which means that every 
-
-The `=` symbol in Python is called the **assignment operator**. It allows us to creates new variables (names) and _assign_ (refer) them values. 
-
-Note that the assignment operator assigns the value on the right to the variable on the left. In other words, the directionality of assignment in `x = 42` is  $x \leftarrow 42$.
-
-Variables can naturally be assigned different values at different times.
-
-In fact, the same variable can be assigned values of different types at different times.
-
-::: {#cell-5 .cell}
-``` {.python .cell-code}
-message = "What's up, Doc?"
-n = 17
-pi = 3.14159</code></pre>
-<p>:::</p>
-<p>This example makes three assignments. The first assigns the string <code>"What's up, Doc?"</code> to a new variable named <code>message</code>. The second gives the integer <code>17</code> to <code>n</code>, and the third gives the floating-point number <code>3.14159</code> to <code>pi</code>.</p>
-<p>The <strong>assignment operator</strong>, <code>=</code>, should not be confused with an equals sign (even though it uses the same character). Assignment operators link a <em>name</em>, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">17</span> <span class="op">=</span> n <span class="co"># Error: can't assign to literal</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A common way to represent variables on paper is to write the name with an arrow pointing to the variable’s value. This kind of figure is called a <strong>state diagram</strong> because it shows what state each of the variables is in (think of it as the variable’s state of mind). This diagram shows the result of the assignment statements</p>
-<p><img src="https://www.cs.swarthmore.edu/courses/CS21Book/_images/state.png"></p>
-<p>The print statement also works with variables.</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(message), <span class="bu">print</span>(n), <span class="bu">print</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In each case the result is the value of the variable. Variables also have types; again, we can ask the interpreter what they are.</p>
-<div id="cell-9" class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(message), <span class="bu">type</span>(n), <span class="bu">type</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The type of a variable is the type of the value it refers to.</p>
-<div id="cell-12" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ten_percent <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ten_percent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Ten_percent <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Ten_percent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-14" class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>TEN_PERCENT <span class="op">=</span> <span class="dv">10000</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>TEN_PERCENT</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-15" class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ten_percent <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ten_percent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-16" class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-17" class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Age <span class="op">=</span> <span class="dv">20</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-18" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>AGE <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>AGE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Which of the following variable names would throw a Syntax Errox?</p>
-<div id="cell-20" class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="er">_percent</span> <span class="op">=</span> <span class="fl">27.03</span> <span class="op">/</span> <span class="dv">10</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>ten_percent <span class="op">=</span> <span class="fl">27.03</span> <span class="op">/</span> <span class="dv">10</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>ten_percent</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>_10_percent <span class="op">=</span> <span class="fl">27.03</span> <span class="op">/</span> <span class="dv">10</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>_10_percent</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="dv">20</span><span class="er">_percent</span> <span class="op">=</span> <span class="fl">27.03</span> <span class="op">/</span> <span class="dv">10</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>twenty_percent <span class="op">=</span> <span class="fl">27.03</span> <span class="op">/</span> <span class="dv">10</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>twenty_<span class="op">%</span> <span class="op">=</span> <span class="fl">27.03</span> <span class="op">/</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<hr>
-<p><strong>Reserved words</strong></p>
-<p>In Python, there are 33 reserved words. These are words that have special meaning to Python. You cannot use reserved words as variable names.</p>
-<p><code>False</code>, <code>def</code>, <code>if</code>, <code>raise</code>, <code>None</code>, <code>del</code>, <code>import</code>, <code>return</code>, <code>True</code>, <code>elif</code> ,<code>in</code>, <code>try</code>, <code>and</code>, <code>else</code>, <code>is</code>, <code>while</code>, <code>as</code>, <code>except</code>, <code>lambda</code>, <code>with</code> <code>assert</code>, <code>finally</code>, <code>nonlocal</code>, <code>yield</code> <code>break</code>, <code>for</code>, <code>not</code><br>
-<code>class</code>, <code>from</code>, <code>or</code>,<br>
-<code>continue</code>, <code>global</code>, <code>pass</code></p>
-<ul>
-<li><p>A programming language is more than just a means for instructing a computer to perform tasks.</p></li>
-<li><p>It also serves as a <u><strong>framework within which we organize our ideas</strong></u> about computational processes.</p></li>
-<li><p>Programs serve to communicate those ideas among the members of a programming community.</p></li>
-<li><p>Thus, let me re-emphasize <strong>programs must be written for people to read, and only incidentally for machines to execute.</strong></p></li>
-</ul>
-<hr>
-<ul>
-<li><p>You can get the data type of any variable using the built-in <strong><code>type()</code></strong> function</p></li>
-<li><p>Python programming language is both:</p></li>
-</ul>
+<p>Other primitive data types include:</p>
 <ol type="1">
-<li><strong>Strongly typed</strong>:
-<ul>
-<li>All variables have a type</li>
-<li>The type matters when performing operations on a variable.</li>
-</ul></li>
-<li><strong>Dynamically typed</strong>:
-<ul>
-<li>In Python, the data type is set when you assign a value to a variable (during runtime).</li>
-</ul></li>
+<li><strong>boolean</strong>: Represents true or false values.</li>
+<li><strong>char</strong>: Represents a single 16-bit Unicode character.</li>
 </ol>
 </section>
-<section id="glossary" class="level2">
-<h2 class="anchored" data-anchor-id="glossary"><em>Glossary</em></h2>
-<pre class="{glossary}"><code>
-value
-    The most basic thing a program works with. Values include numbers (like `42` or `3.14159`) and strings (like `"Hello World!"`).
-
-type
-    A category of values. The types we have seen so far are integers (type `int`), floating-point numbers (type `float`), and strings (type `str`).
-
-variable
-    A name that refers to a value.
-
-
-Strongly typed
-    All variables have a type and the type matters when performing operations on a variable. 
-
-Dynamically typed
-    The data type is set when you assign a value to a variable (during runtime).
-
-Weakly typed
-    The data type is set when you assign a value to a variable (during compile time).
-
-Static typed
-    The data type is set when you assign a value to a variable (during compile time).
-</code></pre>
-<hr>
+<section id="comparison-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-with-python">Comparison with Python</h2>
+<section id="primitive-data-types-vs.-objects" class="level3">
+<h3 class="anchored" data-anchor-id="primitive-data-types-vs.-objects">Primitive Data Types vs.&nbsp;Objects</h3>
+<ul>
+<li><p>Java has a clear distinction between primitive data types (e.g., int, char, float, boolean) and objects. Primitive data types in Java are not objects and are stored directly in memory. They are more efficient but have fewer capabilities compared to objects.</p></li>
+<li><p>Python does not have primitive data types in the same way Java does. In Python, everything is an object, including what Java would consider primitives like integers and floats. This means even simple data types in Python have methods and are more versatile, though potentially less efficient in terms of memory.</p></li>
+</ul>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises"><em>Exercises</em></h2>
+<section id="wrappers-and-autoboxing" class="level3">
+<h3 class="anchored" data-anchor-id="wrappers-and-autoboxing">Wrappers and Autoboxing</h3>
+<p>Java has wrapper classes for each primitive type (e.g., Integer for int, Float for float). These wrappers allow primitive values to be treated as objects when necessary. Java also supports autoboxing, which automatically converts between primitives and their corresponding wrapper types.</p>
+<p>In Python, since everything is an object, there is no need for separate wrapper classes or autoboxing.</p>
+</section>
+<section id="fixed-size-memory-allocation" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-size-memory-allocation">Fixed-Size Memory Allocation</h3>
+<p>Java uses fixed-size memory allocation for primitive types, which makes memory usage predictable and efficient. For example, an int always uses 4 bytes, a float uses 4 bytes, etc.</p>
+<p>In contrast, Python’s objects (including what would be primitives in Java) are dynamically allocated, meaning their memory size can vary. Python integers and floats use more memory than their Java counterparts because they are objects and include metadata.</p>
+</section>
+</section>
+<section id="reference-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="reference-data-types">Reference Data Types</h2>
+<p>Java also has non-primitive data types, which are called reference types. These include:</p>
 <ol type="1">
-<li><i>Which of the following are valid variable names in Python? Why or why not?</i></li><i>
-</i></ol><i>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Variable Name</th>
-<th style="text-align: right;">Valid?</th>
-<th style="text-align: right;">Why or Why Not?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">i.</td>
-<td style="text-align: left;"><code>age</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ii.</td>
-<td style="text-align: left;"><code>Age</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">iii.</td>
-<td style="text-align: left;"><code>AGE</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">iv.</td>
-<td style="text-align: left;"><code>age_</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">v.</td>
-<td style="text-align: left;"><code>age!</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">vi.</td>
-<td style="text-align: left;"><code>age@</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">vii.</td>
-<td style="text-align: left;"><code>age$</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">viii.</td>
-<td style="text-align: left;"><code>False</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">ix.</td>
-<td style="text-align: left;"><code>false</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">x.</td>
-<td style="text-align: left;"><code>while</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">xi.</td>
-<td style="text-align: left;"><code>_while</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">xii.</td>
-<td style="text-align: left;"><code>while_</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">xiii.</td>
-<td style="text-align: left;"><code>def</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">xiv.</td>
-<td style="text-align: left;"><code>if</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">xv.</td>
-<td style="text-align: left;"><code>elif</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">xvi.</td>
-<td style="text-align: left;"><code>else</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">xvii.</td>
-<td style="text-align: left;"><code>return</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">xviii.</td>
-<td style="text-align: left;"><code>None</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">xix.</td>
-<td style="text-align: left;"><code>none</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">xx.</td>
-<td style="text-align: left;"><code>NoneType</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">xxi.</td>
-<td style="text-align: left;"><code>none_type</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">xxii.</td>
-<td style="text-align: left;"><code>none-type</code></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-</tbody>
-</table>
-</i><p><i></i></p>
-<br>
-<hr>
+<li><strong>Arrays</strong>: A collection of elements of the same type.</li>
+<li><strong>Classes</strong>: User-defined data types that can have fields, methods, and constructors.</li>
+<li><strong>Interfaces</strong>: Similar to classes but with only method signatures and no implementation.</li>
+<li><strong>Enums</strong>: A special type that defines a set of constants.</li>
+<li><strong>Strings</strong>: A sequence of characters.</li>
+</ol>
+<p>Reference types store references (memory addresses) to objects rather than the objects themselves. This allows Java to manage memory more efficiently and handle complex data structures.</p>
+<section id="arrays" class="level3">
+<h3 class="anchored" data-anchor-id="arrays">Arrays</h3>
+<ul>
+<li><p>An array is a collection of elements of the same type stored in contiguous memory locations.</p></li>
+<li><p>Arrays in Java are fixed in size, meaning the number of elements in an array is determined when the array is created and cannot be changed.</p></li>
+<li><p>Arrays are indexed starting from 0. The index represents the position of an element in the array.</p></li>
+<li><p>To access an element in an array, you use the index enclosed in square brackets after the array name (e.g., <code>arr[0]</code>).</p></li>
+</ul>
+<p>An example of creating and accessing elements in an array:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span><span class="op">[]</span> arr <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">5</span><span class="op">];</span> <span class="co">// Create an array of 5 integers</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>arr<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="dv">10</span><span class="op">;</span> <span class="co">// Assign 10 to the first element</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>arr<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="dv">20</span><span class="op">;</span> <span class="co">// Assign 20 to the second element</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>arr<span class="op">[</span><span class="dv">0</span><span class="op">]);</span> <span class="co">// Output: 10</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>arr<span class="op">[</span><span class="dv">1</span><span class="op">]);</span> <span class="co">// Output: 20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that arrays are different from Python lists, which can grow or shrink dynamically and don’t need to have length specified at the time of creation. Also, Python lists can contain elements of different types, while Java arrays are homogeneous (contain elements of the same type).</p>
+<p>To modify the values of an array, you can assign new values to individual elements using their indices.</p>
+<p>To access subarrays or slices of an array, you can use the <code>Arrays.copyOfRange()</code> method or loop through the array and copy elements to a new array.</p>
+</section>
+</section>
+<section id="strings" class="level2">
+<h2 class="anchored" data-anchor-id="strings">Strings</h2>
+<p>In Java, strings are objects of the <code>String</code> class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.</p>
+<p>Strings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the <code>String</code> class constructor.</p>
+<section id="creating-strings" class="level3">
+<h3 class="anchored" data-anchor-id="creating-strings">Creating Strings</h3>
+<p>You can create strings in Java using string literals or the <code>String</code> class constructor</p>
+<p>Here is an example of creating strings:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Using string literals</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str1 <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str2 <span class="op">=</span> <span class="st">"Java Programming"</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Using the String class constructor</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str3 <span class="op">=</span> <span class="kw">new</span> <span class="bu">String</span><span class="op">(</span><span class="st">"Welcome to Java!"</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, we created strings using string literals and the <code>String</code> class constructor.</p>
+</section>
+<section id="read-string-length" class="level3">
+<h3 class="anchored" data-anchor-id="read-string-length">Read String Length</h3>
+<p>You can get the length of a string using the <code>length()</code> method of the <code>String</code> class. The <code>length()</code> method returns the number of characters in the string.</p>
+<p>Here is an example of getting the length of a string:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> length <span class="op">=</span> str<span class="op">.</span><span class="fu">length</span><span class="op">();</span> <span class="co">// length = 13</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="accessing-characters" class="level3">
+<h3 class="anchored" data-anchor-id="accessing-characters">Accessing Characters</h3>
+<p>In order to read an individual character from a string, you can use the <code>charAt()</code> method. The <code>charAt()</code> method returns the character at a specified index in the string.</p>
+<p>Here is an example of accessing characters in a string:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str <span class="op">=</span> <span class="st">"Java Programming"</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> firstChar <span class="op">=</span> str<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span> <span class="co">// firstChar = 'J'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> lastChar <span class="op">=</span> str<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span>str<span class="op">.</span><span class="fu">length</span><span class="op">()</span> <span class="op">-</span> <span class="dv">1</span><span class="op">);</span> <span class="co">// lastChar = 'g'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="substring-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="substring-extraction">Substring Extraction</h3>
+<p>You can extract a substring from a string using the <code>substring()</code> method. The <code>substring()</code> method takes the starting index and optionally the ending index of the substring to be extracted.</p>
+<p>Here is an example of extracting a substring from a string:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> subStr <span class="op">=</span> str<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">7</span><span class="op">);</span> <span class="co">// subStr = "World!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="string-concatenation" class="level3">
+<h3 class="anchored" data-anchor-id="string-concatenation">String Concatenation</h3>
+<p>You can concatenate strings in Java using the <code>+</code> operator or the <code>concat()</code> method of the <code>String</code> class.</p>
+<p>Here is an example of concatenating strings:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str1 <span class="op">=</span> <span class="st">"Hello, "</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str2 <span class="op">=</span> <span class="st">"World!"</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> result <span class="op">=</span> str1 <span class="op">+</span> str2<span class="op">;</span> <span class="co">// result = "Hello, World!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="string-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="string-comparison">String Comparison</h3>
+<p>You can compare strings in Java using the <code>equals()</code> method or the <code>compareTo()</code> method of the <code>String</code> class. The <code>equals()</code> method checks if two strings have the same content, while the <code>compareTo()</code> method compares two strings lexicographically.</p>
+<p>Here is an example of comparing strings:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str1 <span class="op">=</span> <span class="st">"Hello"</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str2 <span class="op">=</span> <span class="st">"Hello"</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isEqual <span class="op">=</span> str1<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>str2<span class="op">);</span> <span class="co">// isEqual = true</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> str1<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span><span class="st">"World"</span><span class="op">);</span> <span class="co">// result = -15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

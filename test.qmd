@@ -1,2 +1,48 @@
 
 # Testing
+
+Testing in Java is a crucial part of the development process. It helps to ensure that the code is working as expected and that any changes made to the code do not introduce new bugs. In this section, we will discuss the basics of testing in Java, including unit testing, integration testing, and test-driven development.
+
+## Unit Testing
+
+Unit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.
+
+### JUnit Framework
+
+JUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAddition() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(2, 3);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testSubtraction() {
+        Calculator calculator = new Calculator();
+        int result = calculator.subtract(5, 3);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above example, we have a test class `CalculatorTest` that contains two test methods `testAddition` and `testSubtraction`. Each test method creates an instance of the `Calculator` class, calls a method on it, and asserts that the result is as expected using the `assertEquals` method.
+
+The name of the test class should end with `Test`, and the test methods should be annotated with `@Test`. The `assertEquals` method is used to compare the expected result with the actual result.
+
+### Running Tests
+
+To run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the `java` command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:
+
+```bash
+java -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path
+```
+
+In the above command, `junit-platform-console-standalone-1.8.2.jar` is the JUnit platform launcher JAR file, `target/test-classes` is the directory containing the compiled test classes, and `--scan-class-path` tells

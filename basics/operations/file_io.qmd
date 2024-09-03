@@ -1,0 +1,60 @@
+
+---
+title: "File I/O"
+toc: true
+---
+
+File Input/Output (I/O) operations are used to read data from files or write data to files. In Java, file I/O operations are performed using classes from the `java.io` package. In this tutorial, we will learn how to read from and write to files in Java.
+
+## Reading from a File
+
+To read data from a file in Java, you can use the `FileInputStream` and `BufferedReader` classes. The `FileInputStream` class is used to read bytes from a file, and the `BufferedReader` class is used to read text from a character-input stream. Here is an example of reading data from a file:
+
+```java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadFile {
+    public static void main(String[] args) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
+            String line = reader.readLine();
+            while (line != null) {
+                System.out.println(line);
+                line = reader.readLine();
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In the above example, we use the `BufferedReader` class to read data from a file named `input.txt`. We read each line from the file using the `readLine()` method and print it to the console.
+
+## Writing to a File
+
+To write data to a file in Java, you can use the `FileOutputStream` and `BufferedWriter` classes. The `FileOutputStream` class is used to write bytes to a file, and the `BufferedWriter` class is used to write text to a character-output stream. Here is an example of writing data to a file:
+
+```java
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteFile {
+    public static void main(String[] args) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+            writer.write("Hello, World!");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In the above example, we use the `BufferedWriter` class to write the text "Hello, World!" to a file named `output.txt`.
+

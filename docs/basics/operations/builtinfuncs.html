@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Control Flow</title>
+<title>Built-in Functions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -179,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/controls/controls.html">Control Flow</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="../../basics/operations/builtinfuncs.html">Built-in Functions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -317,11 +351,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Operations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
@@ -330,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Built-in Functions</span></a>
   </div>
 </li>
@@ -350,13 +384,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/controls/controls.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Flow</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
@@ -447,16 +481,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#flow-directionality-of-execution" id="toc-flow-directionality-of-execution" class="nav-link active" data-scroll-target="#flow-directionality-of-execution">Flow / Directionality of Execution</a></li>
+  <li><a href="#inputoutput-functions" id="toc-inputoutput-functions" class="nav-link active" data-scroll-target="#inputoutput-functions">Input/Output Functions</a></li>
+  <li><a href="#mathematical-functions" id="toc-mathematical-functions" class="nav-link" data-scroll-target="#mathematical-functions">Mathematical Functions</a></li>
+  <li><a href="#string-functions" id="toc-string-functions" class="nav-link" data-scroll-target="#string-functions">String Functions</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/controls/controls.html">Control Flow</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="../../basics/operations/builtinfuncs.html">Built-in Functions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Control Flow</h1>
+<h1 class="title">Built-in Functions</h1>
 </div>
 
 
@@ -473,30 +509,201 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- 
-
-### `if` Statements
-
-* `if` statements are used to execute code **conditionally**.
-
-* The code inside the `if` statement is executed **only if** the condition is `True`.
-
-* The condition is a **boolean expression**.
-
-* The code inside the `if` statement is **indented**.
-
-* The `if` statement **ends** when the indentation ends. -->
-<section id="flow-directionality-of-execution" class="level2">
-<h2 class="anchored" data-anchor-id="flow-directionality-of-execution">Flow / Directionality of Execution</h2>
-<ol type="1">
-<li><p><strong>Programs</strong> (multiple lines of code) run each line of code sequentially <strong>top to bottom</strong></p></li>
-<li><p><strong>Statements</strong> (single line of code) run <strong>right to left</strong></p>
-<ul>
-<li><p>Expression on right hand side of assignment/boolean operator is executed first</p></li>
-<li><p>Then, left hand expression of assignment operator is executed</p></li>
-</ul></li>
-<li><p><strong>Expressions</strong> ( &lt; 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run <strong>left to right</strong>.</p></li>
-</ol>
+<p>Java provides a set of built-in functions that perform common operations such as mathematical calculations, string manipulation, and input/output operations. These functions are part of the Java standard library and can be used directly in your programs. In this tutorial, we will learn about some of the most commonly used built-in functions in Java.</p>
+<section id="inputoutput-functions" class="level2">
+<h2 class="anchored" data-anchor-id="inputoutput-functions">Input/Output Functions</h2>
+<p>Java provides a set of input/output functions that allow you to read data from the standard input, write data to the standard output, and perform file I/O operations. Here are some examples of input/output functions in Java:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 45%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>System.out.println(x)</code></td>
+<td>Prints the value of <code>x</code> to the standard output</td>
+<td><code>System.out.println("Hello")</code> prints <code>Hello</code></td>
+</tr>
+<tr class="even">
+<td><code>System.in.read()</code></td>
+<td>Reads a single character from the standard input</td>
+<td><code>char c = (char) System.in.read()</code> reads a character</td>
+</tr>
+</tbody>
+</table>
+<p>Reading from the standard input using <code>System.in.read()</code> can be cumbersome, so Java provides the <code>Scanner</code> class to simplify input operations. Here is an example of reading an integer from the standard input using <code>Scanner</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ReadInput <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter an integer: "</span><span class="op">);</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> num <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"You entered: "</span> <span class="op">+</span> num<span class="op">);</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mathematical-functions" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-functions">Mathematical Functions</h2>
+<p>Java provides a set of mathematical functions that allow you to perform common mathematical operations such as rounding, exponentiation, and trigonometry. Here are some examples of mathematical functions in Java:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 52%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Math.abs(x)</code></td>
+<td>Returns the absolute value of <code>x</code></td>
+<td><code>Math.abs(-5)</code> returns <code>5</code></td>
+</tr>
+<tr class="even">
+<td><code>Math.pow(x, y)</code></td>
+<td>Returns <code>x</code> raised to the power of <code>y</code></td>
+<td><code>Math.pow(2, 3)</code> returns <code>8</code></td>
+</tr>
+<tr class="odd">
+<td><code>Math.sqrt(x)</code></td>
+<td>Returns the square root of <code>x</code></td>
+<td><code>Math.sqrt(16)</code> returns <code>4</code></td>
+</tr>
+<tr class="even">
+<td><code>Math.round(x)</code></td>
+<td>Rounds <code>x</code> to the nearest integer</td>
+<td><code>Math.round(3.5)</code> returns <code>4</code></td>
+</tr>
+<tr class="odd">
+<td><code>Math.max(x, y)</code></td>
+<td>Returns the larger of <code>x</code> and <code>y</code></td>
+<td><code>Math.max(10, 20)</code> returns <code>20</code></td>
+</tr>
+<tr class="even">
+<td><code>Math.min(x, y)</code></td>
+<td>Returns the smaller of <code>x</code> and <code>y</code></td>
+<td><code>Math.min(10, 20)</code> returns <code>10</code></td>
+</tr>
+<tr class="odd">
+<td><code>Math.sin(x)</code></td>
+<td>Returns the sine of <code>x</code> in radians</td>
+<td><code>Math.sin(Math.PI/2)</code> returns <code>1.0</code></td>
+</tr>
+<tr class="even">
+<td><code>Math.cos(x)</code></td>
+<td>Returns the cosine of <code>x</code> in radians</td>
+<td><code>Math.cos(0)</code> returns <code>1.0</code></td>
+</tr>
+<tr class="odd">
+<td><code>Math.tan(x)</code></td>
+<td>Returns the tangent of <code>x</code> in radians</td>
+<td><code>Math.tan(Math.PI/4)</code> returns <code>1.0</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="string-functions" class="level2">
+<h2 class="anchored" data-anchor-id="string-functions">String Functions</h2>
+<p>Java provides a set of string functions that allow you to manipulate strings in various ways. Here are some examples of string functions in Java:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 45%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>str.length()</code></td>
+<td>Returns the length of the string <code>str</code></td>
+<td><code>"Hello".length()</code> returns <code>5</code></td>
+</tr>
+<tr class="even">
+<td><code>str.charAt(index)</code></td>
+<td>Returns the character at the specified index</td>
+<td><code>"Hello".charAt(0)</code> returns <code>H</code></td>
+</tr>
+<tr class="odd">
+<td><code>str.substring(start)</code></td>
+<td>Returns a substring starting from <code>start</code> index</td>
+<td><code>"Hello".substring(1)</code> returns <code>ello</code></td>
+</tr>
+<tr class="even">
+<td><code>str.indexOf(substr)</code></td>
+<td>Returns the index of the first occurrence of <code>substr</code></td>
+<td><code>"Hello".indexOf("l")</code> returns <code>2</code></td>
+</tr>
+<tr class="odd">
+<td><code>str.toUpperCase()</code></td>
+<td>Converts the string to uppercase</td>
+<td><code>"hello".toUpperCase()</code> returns <code>HELLO</code></td>
+</tr>
+<tr class="even">
+<td><code>str.toLowerCase()</code></td>
+<td>Converts the string to lowercase</td>
+<td><code>"HELLO".toLowerCase()</code> returns <code>hello</code></td>
+</tr>
+</tbody>
+</table>
+<p>StringBuilder and StringBuffer classes are used to create mutable strings in Java. These classes provide methods for appending, inserting, deleting, and modifying string content.</p>
+<p>Some commonly used methods of StringBuilder and StringBuffer classes are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 46%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>append(str)</code></td>
+<td>Appends the string <code>str</code> to the StringBuilder</td>
+<td><code>sb.append("Hello")</code> appends <code>Hello</code></td>
+</tr>
+<tr class="even">
+<td><code>insert(index, str)</code></td>
+<td>Inserts the string <code>str</code> at the specified index</td>
+<td><code>sb.insert(0, "World")</code> inserts <code>World</code> at the beginning</td>
+</tr>
+<tr class="odd">
+<td><code>delete(start, end)</code></td>
+<td>Deletes the characters from <code>start</code> to <code>end</code></td>
+<td><code>sb.delete(0, 5)</code> deletes characters from 0 to 4</td>
+</tr>
+<tr class="even">
+<td><code>reverse()</code></td>
+<td>Reverses the characters in the StringBuilder</td>
+<td><code>sb.reverse()</code> reverses the content</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

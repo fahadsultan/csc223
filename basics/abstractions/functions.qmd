@@ -2,3 +2,15 @@
 title: "Functions"
 toc: true
 ---
+
+Functions in Java are blocks of code that perform a specific task. They are used to break down the program into smaller and modular pieces. Functions help in organizing the code and making it more readable and maintainable. In this tutorial, we will learn about functions in Java.
+
+## Declaring a Function
+
+A function in Java is declared using the `static` keyword followed by the return type, function name, and parameters. The return type specifies the type of value that the function will return. If the function does not return any value, the return type is `void`. Here is an example of a function declaration:
+
+```java
+public static int add(int a, int b) {
+    return a + b;
+}
+```

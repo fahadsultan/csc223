@@ -1,0 +1,119 @@
+
+Here are five basic questions to help you practice Java:
+
+### 1. **Write a Java Program to Check if a Number is Even or Odd**
+   - **Problem**: Create a Java program that reads an integer from the user and determines whether the number is even or odd.
+   - **Hints**: Use the modulus operator `%` to check the remainder when the number is divided by 2.
+
+   ```java
+   import java.util.Scanner;
+
+   public class EvenOdd {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+           System.out.print("Enter a number: ");
+           int number = scanner.nextInt();
+
+           if (number % 2 == 0) {
+               System.out.println(number + " is even.");
+           } else {
+               System.out.println(number + " is odd.");
+           }
+       }
+   }
+   ```
+
+### 2. **Write a Java Program to Find the Largest of Three Numbers**
+   - **Problem**: Write a Java program that takes three numbers as input from the user and determines the largest of the three.
+   - **Hints**: Use nested `if-else` statements or the `Math.max()` function.
+
+   ```java
+   import java.util.Scanner;
+
+   public class LargestNumber {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+           System.out.print("Enter first number: ");
+           int num1 = scanner.nextInt();
+           System.out.print("Enter second number: ");
+           int num2 = scanner.nextInt();
+           System.out.print("Enter third number: ");
+           int num3 = scanner.nextInt();
+
+           int largest = Math.max(num1, Math.max(num2, num3));
+           System.out.println("The largest number is: " + largest);
+       }
+   }
+   ```
+
+### 3. **Write a Java Program to Print the Fibonacci Series Up to `n` Terms**
+   - **Problem**: Write a program that generates the Fibonacci series up to `n` terms, where `n` is provided by the user.
+   - **Hints**: Use a loop to generate the sequence and store the current and previous terms.
+
+   ```java
+   import java.util.Scanner;
+
+   public class FibonacciSeries {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+           System.out.print("Enter the number of terms: ");
+           int n = scanner.nextInt();
+
+           int a = 0, b = 1;
+           System.out.print("Fibonacci Series: " + a + " " + b);
+
+           for (int i = 2; i < n; i++) {
+               int next = a + b;
+               System.out.print(" " + next);
+               a = b;
+               b = next;
+           }
+       }
+   }
+   ```
+
+### 4. **Write a Java Program to Reverse a String**
+   - **Problem**: Write a Java program that takes a string as input and outputs the reversed string.
+   - **Hints**: Use a loop to iterate over the string from the end to the beginning or use the `StringBuilder` class.
+
+   ```java
+   import java.util.Scanner;
+
+   public class ReverseString {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+           System.out.print("Enter a string: ");
+           String input = scanner.nextLine();
+
+           StringBuilder reversed = new StringBuilder(input);
+           reversed.reverse();
+
+           System.out.println("Reversed string: " + reversed);
+       }
+   }
+   ```
+
+### 5. **Write a Java Program to Calculate the Factorial of a Number**
+   - **Problem**: Write a Java program that calculates the factorial of a given number `n` (where `n` is input by the user).
+   - **Hints**: Use a loop to multiply numbers from `1` to `n`.
+
+   ```java
+   import java.util.Scanner;
+
+   public class Factorial {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+           System.out.print("Enter a number: ");
+           int n = scanner.nextInt();
+
+           int factorial = 1;
+           for (int i = 1; i <= n; i++) {
+               factorial *= i;
+           }
+
+           System.out.println("Factorial of " + n + " is: " + factorial);
+       }
+   }
+   ```
+
+These basic questions cover fundamental Java concepts like loops, conditionals, and string manipulation, and provide a solid foundation for further learning.

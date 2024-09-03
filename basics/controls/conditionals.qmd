@@ -1,0 +1,175 @@
+---
+title: "Conditionals"
+toc: true
+---
+
+Conditionals in Java are used to make decisions based on certain conditions. They allow the program to execute different blocks of code based on whether a condition is true or false. In this tutorial, we will learn about conditionals in Java.
+
+## `if` Statement
+
+The `if` statement is used to execute a block of code only if a specified condition is true. If the condition is false, the code block is skipped. The basic syntax of the `if` statement is as follows:
+
+```java
+if (condition) {
+    // code block to be executed if the condition is true
+}
+```
+
+Here is an example of using the `if` statement:
+
+```java
+int x = 10;
+
+if (x > 5) {
+    System.out.println("x is greater than 5");
+}
+
+// Output: x is greater than 5
+```
+
+In the above example, the code block inside the `if` statement is executed because the condition `x > 5` is true.
+
+## `if-else` Statement
+
+The `if-else` statement is used to execute one block of code if a specified condition is true and another block of code if the condition is false. The basic syntax of the `if-else` statement is as follows:
+
+```java
+if (condition) {
+    // code block to be executed if the condition is true
+} else {
+    // code block to be executed if the condition is false
+}
+```
+
+Here is an example of using the `if-else` statement:
+
+```java
+int x = 3;
+
+if (x > 5) {
+    System.out.println("x is greater than 5");
+} else {
+    System.out.println("x is less than or equal to 5");
+}
+
+// Output: x is less than or equal to 5
+
+```
+
+In the above example, the code block inside the `if` statement is skipped because the condition `x > 5` is false, and the code block inside the `else` statement is executed.
+
+## `if-else if-else` Statement
+
+The `if-else if-else` statement is used to execute one block of code if a specified condition is true, another block of code if a different condition is true, and a default block of code if none of the conditions are true. The basic syntax of the `if-else if-else` statement is as follows:
+
+```java
+if (condition1) {
+    // code block to be executed if condition1 is true
+} else if (condition2) {
+    // code block to be executed if condition2 is true
+} else {
+    // code block to be executed if none of the conditions are true
+}
+
+```
+
+Here is an example of using the `if-else if-else` statement:
+
+```java
+int x = 3;
+
+if (x > 5) {
+    System.out.println("x is greater than 5");
+} else if (x < 5) {
+    System.out.println("x is less than 5");
+} else {
+    System.out.println("x is equal to 5");
+}
+```
+
+In the above example, the code block inside the `else if` statement is executed because the condition `x < 5` is true.
+
+## Nested `if` Statements
+
+Nested `if` statements are `if` statements inside another `if` statement. They are used to test multiple conditions in sequence. The inner `if` statement is executed only if the outer `if` statement's condition is true. Here is an example of nested `if` statements:
+
+```java
+int x = 10;
+int y = 20;
+
+if (x == 10) {
+    if (y == 20) {
+        System.out.println("x is 10 and y is 20");
+    }
+}
+```
+
+In the above example, the code block inside the inner `if` statement is executed only if both conditions `x == 10` and `y == 20` are true.
+
+## Ternary Operator
+
+The ternary operator `? :` is a shorthand way of writing an `if-else` statement. It is used to assign a value to a variable based on a condition. The basic syntax of the ternary operator is as follows:
+
+```java
+variable = (condition) ? value1 : value2;
+```
+
+Here is an example of using the ternary operator:
+
+```java
+int x = 10;
+int result = (x > 5) ? 1 : 0;
+
+System.out.println(result);
+
+// Output: 1
+```
+
+In the above example, the value of `result` is assigned `1` if the condition `x > 5` is true, and `0` otherwise.
+
+## Switch Statement
+
+The `switch` statement is used to execute different blocks of code based on the value of an expression. It is an alternative to using multiple `if-else if-else` statements. The basic syntax of the `switch` statement is as follows:
+
+```java
+switch (expression) {
+    case value1:
+        // code block to be executed if expression equals value1
+        break;
+    case value2:
+        // code block to be executed if expression equals value2
+        break;
+    ...
+    default:
+        // code block to be executed if none of the values match
+}
+
+```
+
+Here is an example of using the `switch` statement:
+
+```java
+int day = 3;
+String dayName;
+
+switch (day) {
+    case 1:
+        dayName = "Monday";
+        break;
+    case 2:
+        dayName = "Tuesday";
+        break;
+    case 3:
+        dayName = "Wednesday";
+        break;
+    default:
+        dayName = "Invalid day";
+}
+
+System.out.println("Day: " + dayName);
+
+// Output: Day: Wednesday
+
+```
+
+In the above example, the value of `dayName` is assigned based on the value of the `day` variable using the `switch` statement.

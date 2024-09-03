@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction\n\nIntro\nVersion Control\n\nPA 1\n\n\n2\nGit\n\n\n\n\n\n\n\n3\nJava 1\n\n\n\n\n\n\n\n4\nJava 2\n\n\n\n\n\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction\n\nIntro\nVersion Control\nWA 1\nPA 1\n\n\n2\nGit\n\n\n\n\n\n\n\n3\nJava 1\n\n\n\n\n\n\n\n4\nJava 2\n\n\n\n\n\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -99,171 +99,455 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nCourse page on Moodle; used mostly for submitting assignments and uploading grades",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nDeliverable\n\n\n\nWritten Assignment 1 is due on Fri, Sept 6th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nDeliverable\n\n\n\nProgramming Assignment 1 is due on Sept 3rd, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
   },
   {
-    "objectID": "basics/controls/controls.html",
-    "href": "basics/controls/controls.html",
-    "title": "Control Flow",
+    "objectID": "basics/abstractions/datastructures.html",
+    "href": "basics/abstractions/datastructures.html",
+    "title": "Built-in Data Structures",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.",
+    "text": "In Java, built-in data structures can be categorized into two main types: arrays and collections. Arrays are fixed-size data structures that store elements of the same type in contiguous memory locations. Collections are dynamic-size data structures that store elements of different types and provide additional functionality for managing and manipulating the data.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Control Flow"
+      "Abstractions",
+      "Built-in Data Structures"
     ]
   },
   {
-    "objectID": "basics/controls/controls.html#flow-directionality-of-execution",
-    "href": "basics/controls/controls.html#flow-directionality-of-execution",
-    "title": "Control Flow",
-    "section": "Flow / Directionality of Execution",
-    "text": "Flow / Directionality of Execution\n\nPrograms (multiple lines of code) run each line of code sequentially top to bottom\nStatements (single line of code) run right to left\n\nExpression on right hand side of assignment/boolean operator is executed first\nThen, left hand expression of assignment operator is executed\n\nExpressions ( &lt; 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run left to right.",
+    "objectID": "basics/abstractions/datastructures.html#arrays",
+    "href": "basics/abstractions/datastructures.html#arrays",
+    "title": "Built-in Data Structures",
+    "section": "Arrays",
+    "text": "Arrays\nAn array is a fixed-size collection of elements of the same type stored in contiguous memory locations. Arrays in Java are indexed starting from 0, and the index represents the position of an element in the array. The size of an array is determined when the array is created and cannot be changed.\n\nDeclaring and Initializing Arrays\nTo declare an array in Java, you specify the type of elements the array will hold, followed by square brackets [] and the array name. You can initialize the array with values using an array initializer enclosed in curly braces {}.\nHere is an example of declaring and initializing an array of integers:\n// Declare and initialize an array of integers\nint[] numbers = {10, 20, 30, 40, 50};\nIn the above example, we declared an array numbers of integers and initialized it with five elements.\n\n\nAccessing Array Elements\nYou can access elements in an array using the index enclosed in square brackets [] after the array name. The index starts from 0 for the first element and increments by 1 for each subsequent element.\nHere is an example of accessing elements in an array:\nint[] numbers = {10, 20, 30, 40, 50};\n\n// Access the first element\nint firstElement = numbers[0]; // firstElement = 10\n\n// Access the third element\nint thirdElement = numbers[2]; // thirdElement = 30\n\n\nArray Length\nYou can get the length of an array using the length property of the array. The length property returns the number of elements in the array.\nHere is an example of getting the length of an array:\nint[] numbers = {10, 20, 30, 40, 50};\n\n// Get the length of the array\nint length = numbers.length; // length = 5\n\n\nIterating Over Arrays\nYou can iterate over the elements of an array using a loop, such as a for loop or a foreach loop. By iterating over the array, you can access and process each element in the array.\nHere is an example of iterating over an array using a for loop:\n\nint[] numbers = {10, 20, 30, 40, 50};\n\n// Iterate over the array using a for loop\n\nfor (int i = 0; i &lt; numbers.length; i++) {\n    System.out.println(numbers[i]); // Output each element\n}\nIn the above example, we used a for loop to iterate over the numbers array and print each element to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Control Flow"
+      "Abstractions",
+      "Built-in Data Structures"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/datastructures.html#collections",
+    "href": "basics/abstractions/datastructures.html#collections",
+    "title": "Built-in Data Structures",
+    "section": "Collections",
+    "text": "Collections\nCollections in Java are dynamic-size data structures that store elements of different types and provide additional functionality for managing and manipulating the data. Java provides a rich set of collection classes in the java.util package that implement various data structures such as lists, sets, maps, queues, and more.\n\nList Interface\nThe List interface in Java represents an ordered collection of elements that allows duplicate elements. Lists maintain the insertion order of elements and provide methods to add, remove, and access elements by index.\n\nArrayList\nThe ArrayList class in Java implements the List interface and provides a dynamic array that can grow or shrink in size. ArrayList allows duplicate elements and maintains the insertion order of elements.\nHere is an example of creating and using an ArrayList:\nimport java.util.ArrayList;\n\n// Create an ArrayList of strings\nArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();\n\n// Add elements to the ArrayList\nnames.add(\"Alice\");\nnames.add(\"Bob\");\nnames.add(\"Charlie\");\n\n// Access elements by index\nString firstElement = names.get(0); // firstElement = \"Alice\"\n\n// Iterate over the ArrayList\nfor (String name : names) {\n    System.out.println(name); // Output each name\n}\nIn the above example, we created an ArrayList of strings, added elements to the list, accessed elements by index, and iterated over the list using a foreach loop.\n\n\n\nSet Interface\nThe Set interface in Java represents a collection of elements that does not allow duplicate elements. Sets do not maintain the insertion order of elements and provide methods to add, remove, and check for the presence of elements.\n\nHashSet\nThe HashSet class in Java implements the Set interface and provides a collection of unique elements. HashSet does not allow duplicate elements and does not maintain the insertion order of elements.\nHere is an example of creating and using a HashSet:\nimport java.util.HashSet;\n\n// Create a HashSet of integers\nHashSet&lt;Integer&gt; numbers = new HashSet&lt;&gt;();\n\n// Add elements to the HashSet\nnumbers.add(10);\nnumbers.add(20);\nnumbers.add(30);\n\n// Check if an element is present\nboolean containsTwenty = numbers.contains(20); // containsTwenty = true\n\n// Iterate over the HashSet\nfor (int number : numbers) {\n    System.out.println(number); // Output each number\n}\nIn the above example, we created a HashSet of integers, added elements to the set, checked for the presence of an element, and iterated over the set using a foreach loop.\n\n\n\nMap Interface\nThe Map interface in Java represents a collection of key-value pairs where each key is unique. Maps provide methods to add, remove, and access elements by key. Java provides several implementations of the Map interface, such as HashMap, TreeMap, and LinkedHashMap.\n\nHashMap (Dictionary)\nThe HashMap class in Java implements the Map interface and provides a collection of key-value pairs. HashMap allows null keys and values, and does not maintain the insertion order of elements.\nHere is an example of creating and using a HashMap:\nimport java.util.HashMap;\n\n// Create a HashMap of student names and IDs\nHashMap&lt;String, Integer&gt; studentIds = new HashMap&lt;&gt;();\n\n// Add key-value pairs to the HashMap\nstudentIds.put(\"Alice\", 101);\nstudentIds.put(\"Bob\", 102);\nstudentIds.put(\"Charlie\", 103);\n\n// Access values by key\nint aliceId = studentIds.get(\"Alice\"); // aliceId = 101\n\n// Iterate over the HashMap\nfor (String name : studentIds.keySet()) {\n    int id = studentIds.get(name);\n    System.out.println(name + \": \" + id); // Output each name and ID\n}\nIn the above example, we created a HashMap of student names and IDs, added key-value pairs to the map, accessed values by key, and iterated over the map to print each name and ID.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Built-in Data Structures"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/abstractions.html",
+    "href": "basics/abstractions/abstractions.html",
+    "title": "Abstractions",
+    "section": "",
+    "text": "Abstraction is the process of hiding the complex implementation details and showing only the necessary features of an object. In other words, it helps to reduce programming complexity and effort.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/abstractions.html#why-abstraction",
+    "href": "basics/abstractions/abstractions.html#why-abstraction",
+    "title": "Abstractions",
+    "section": "Why Abstraction?",
+    "text": "Why Abstraction?\n\nReduce Complexity: Abstraction helps to reduce programming complexity and effort.\nSecurity: It helps to hide the internal details of an object and show only the necessary features of an object.\nCode Reusability: Abstraction helps to reuse the code and use it in multiple places.\nFlexibility: It helps to change the implementation of an object without affecting the rest of the code.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/abstractions.html#programming-abstractions",
+    "href": "basics/abstractions/abstractions.html#programming-abstractions",
+    "title": "Abstractions",
+    "section": "Programming Abstractions",
+    "text": "Programming Abstractions\nIn programming, abstraction is achieved using three main concepts:\n\nData and Variables: Variables are used to store data values. They are used to represent the state of an object. They allow abstracting operations and algorithms from the specific values they operate on.\nFunctions and Methods: Functions and methods are used to define abstract behavior only in terms of inputs and outputs. They also allow abstracting the implementation details of an algorithm.\nClasses and Objects: Classes and objects are used to define abstract data types. They allow abstracting the data structure and behavior of an object.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html",
+    "href": "basics/abstractions/classes.html",
+    "title": "Classes",
+    "section": "",
+    "text": "Classes in Java are the blueprints for objects. They define the structure and behavior of objects. A class is a template for objects, and an object is an instance of a class. In this tutorial, we will learn about classes in Java.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#declaring-a-class",
+    "href": "basics/abstractions/classes.html#declaring-a-class",
+    "title": "Classes",
+    "section": "Declaring a Class",
+    "text": "Declaring a Class\nA class in Java is declared using the class keyword followed by the class name. The class name should start with an uppercase letter. Here is an example of a class declaration\npublic class Person {\n    // class members\n}\nIn the above example, we have declared a class named Person. The class body is enclosed within curly braces {}. The class body contains class members such as fields, methods, constructors, and nested classes.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#class-members",
+    "href": "basics/abstractions/classes.html#class-members",
+    "title": "Classes",
+    "section": "Class Members",
+    "text": "Class Members\nA class can have the following members:\n\nAttributes (aka Fields): These are variables declared inside a class. They represent the state of an object.\nMethods: Methods are functions defined inside a class. They represent the behavior of an object.\nConstructors: Constructors are special methods used to initialize objects.\nNested Classes: A class can be defined inside another class. These are called nested classes.\n\n\n\n\n\nLet’s see an example of a class with fields, methods, and a constructor.\npublic class Person {\n    // fields\n    private String name;\n    private int age;\n\n    // constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    // method\n    public void display() {\n        System.out.println(\"Name: \" + name);\n        System.out.println(\"Age: \" + age);\n    }\n}\nIn the above example, we have defined a class Person with two fields name and age, a constructor that initializes the fields, and a method display that prints the name and age of the person.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#creating-objects",
+    "href": "basics/abstractions/classes.html#creating-objects",
+    "title": "Classes",
+    "section": "Creating Objects",
+    "text": "Creating Objects\nTo create an object of a class, we use the new keyword followed by the class name and constructor arguments. Here is an example of creating an object of the Person class.\npublic class Main {\n    public static void main(String[] args) {\n        // create an object of Person class\n        Person person = new Person(\"Alice\", 30);\n\n        // call the display method\n        person.display();\n    }\n}\nIn the above example, we have created an object person of the Person class using the constructor with arguments \"Alice\" and 30. We then called the display method on the object to print the name and age of the person.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#attributes",
+    "href": "basics/abstractions/classes.html#attributes",
+    "title": "Classes",
+    "section": "Attributes",
+    "text": "Attributes\nAttributes are variables declared inside a class. They represent the state of an object. Attributes are also known as fields.\nThe types of attributes are:\n\nInstance Variables: These are non-static variables declared inside a class. Each object of the class has its own copy of instance variables.\nStatic Variables: These are class-level variables declared with the static keyword. They are shared among all objects of the class.\nFinal Variables: These are constants declared with the final keyword. Their value cannot be changed once initialized.\n\n\nInstance Attributes\nInstance attributes are non-static variables declared inside a class. Each object of the class has its own copy of instance attributes. Here is an example of instance attributes in a class.\npublic class Person {\n    // instance variables\n    private String name;\n    private int age;\n}\nIn the above example, name and age are instance attributes of the Person class.\n\n\nStatic Attributes\nStatic attributes are class-level variables declared with the static keyword. They are shared among all objects of the class. Here is an example of static attributes in a class.\npublic class Counter {\n    // static variable\n    private static int count = 0;\n}\nIn the above example, count is a static attribute of the Counter class.\n\n\nFinal Attributes\nFinal attributes are constants declared with the final keyword. Their value cannot be changed once initialized. Here is an example of final attributes in a class.\npublic class Constants {\n    // final variable\n    public static final double PI = 3.14159;\n}\nIn the above example, PI is a final attribute of the Constants class.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#methods",
+    "href": "basics/abstractions/classes.html#methods",
+    "title": "Classes",
+    "section": "Methods",
+    "text": "Methods\nMethods are functions defined inside a class. They represent the behavior of an object. Methods can be of two types:\n\nInstance Methods: These methods operate on the instance variables of the class. They are called on objects of the class.\nStatic Methods: These methods are declared with the static keyword. They can access only static variables of the class.\n\n\nInstance Methods\nInstance methods operate on the instance variables of the class. They are called on objects of the class. Here is an example of an instance method in a class.\npublic class Person {\n    // instance method\n    public void display() {\n        System.out.println(\"Displaying person information\");\n    }\n}\nIn the above example, display is an instance method of the Person class.\n\n\nStatic Methods\nStatic methods are declared with the static keyword. They can access only static variables of the class. Here is an example of a static method in a class.\npublic class MathUtils {\n    // static method\n    public static int add(int a, int b) {\n        return a + b;\n    }\n}\nIn the above example, add is a static method of the MathUtils class.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#constructors",
+    "href": "basics/abstractions/classes.html#constructors",
+    "title": "Classes",
+    "section": "Constructors",
+    "text": "Constructors\nConstructors are special methods used to initialize objects. They have the same name as the class and do not have a return type. Constructors are called when an object is created using the new keyword.\n\nDefault Constructor\nIf a class does not have any constructor defined, Java provides a default constructor that initializes the object with default values. Here is an example of a default constructor.\npublic class Person {\n    // default constructor\n    public Person() {\n        System.out.println(\"Person object created\");\n    }\n}\nIn the above example, Person class has a default constructor that prints a message when a Person object is created.\n\n\nParameterized Constructor\nA parameterized constructor is a constructor with parameters. It is used to initialize the object with the specified values. Here is an example of a parameterized constructor.\npublic class Person {\n    // fields\n    private String name;\n    private int age;\n\n    // parameterized constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n}\nIn the above example, Person class has a parameterized constructor that initializes the name and age fields of the object.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/classes.html#this-keyword",
+    "href": "basics/abstractions/classes.html#this-keyword",
+    "title": "Classes",
+    "section": "this Keyword",
+    "text": "this Keyword\nThe this keyword in Java is a reference to the current object. It is used to refer to the current instance of the class. The this keyword is used to differentiate between instance variables and parameters with the same name.\nThe this keyword is used to access instance variables and methods of the current object. Here is an example of using the this keyword.\npublic class Person {\n    // fields\n    private String name;\n    private int age;\n\n    // constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    // method\n    public void display() {\n        System.out.println(\"Name: \" + this.name);\n        System.out.println(\"Age: \" + this.age);\n    }\n}\nNote that this is similar to very similar to self in Python.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Classes"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html",
+    "href": "basics/controls/conditionals.html",
+    "title": "Conditionals",
+    "section": "",
+    "text": "Conditionals in Java are used to make decisions based on certain conditions. They allow the program to execute different blocks of code based on whether a condition is true or false. In this tutorial, we will learn about conditionals in Java.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html#if-statement",
+    "href": "basics/controls/conditionals.html#if-statement",
+    "title": "Conditionals",
+    "section": "if Statement",
+    "text": "if Statement\nThe if statement is used to execute a block of code only if a specified condition is true. If the condition is false, the code block is skipped. The basic syntax of the if statement is as follows:\nif (condition) {\n    // code block to be executed if the condition is true\n}\nHere is an example of using the if statement:\nint x = 10;\n\nif (x &gt; 5) {\n    System.out.println(\"x is greater than 5\");\n}\n\n// Output: x is greater than 5\nIn the above example, the code block inside the if statement is executed because the condition x &gt; 5 is true.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html#if-else-statement",
+    "href": "basics/controls/conditionals.html#if-else-statement",
+    "title": "Conditionals",
+    "section": "if-else Statement",
+    "text": "if-else Statement\nThe if-else statement is used to execute one block of code if a specified condition is true and another block of code if the condition is false. The basic syntax of the if-else statement is as follows:\nif (condition) {\n    // code block to be executed if the condition is true\n} else {\n    // code block to be executed if the condition is false\n}\nHere is an example of using the if-else statement:\nint x = 3;\n\nif (x &gt; 5) {\n    System.out.println(\"x is greater than 5\");\n} else {\n    System.out.println(\"x is less than or equal to 5\");\n}\n\n// Output: x is less than or equal to 5\nIn the above example, the code block inside the if statement is skipped because the condition x &gt; 5 is false, and the code block inside the else statement is executed.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html#if-else-if-else-statement",
+    "href": "basics/controls/conditionals.html#if-else-if-else-statement",
+    "title": "Conditionals",
+    "section": "if-else if-else Statement",
+    "text": "if-else if-else Statement\nThe if-else if-else statement is used to execute one block of code if a specified condition is true, another block of code if a different condition is true, and a default block of code if none of the conditions are true. The basic syntax of the if-else if-else statement is as follows:\nif (condition1) {\n    // code block to be executed if condition1 is true\n} else if (condition2) {\n    // code block to be executed if condition2 is true\n} else {\n    // code block to be executed if none of the conditions are true\n}\nHere is an example of using the if-else if-else statement:\nint x = 3;\n\nif (x &gt; 5) {\n    System.out.println(\"x is greater than 5\");\n} else if (x &lt; 5) {\n    System.out.println(\"x is less than 5\");\n} else {\n    System.out.println(\"x is equal to 5\");\n}\nIn the above example, the code block inside the else if statement is executed because the condition x &lt; 5 is true.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html#nested-if-statements",
+    "href": "basics/controls/conditionals.html#nested-if-statements",
+    "title": "Conditionals",
+    "section": "Nested if Statements",
+    "text": "Nested if Statements\nNested if statements are if statements inside another if statement. They are used to test multiple conditions in sequence. The inner if statement is executed only if the outer if statement’s condition is true. Here is an example of nested if statements:\nint x = 10;\nint y = 20;\n\nif (x == 10) {\n    if (y == 20) {\n        System.out.println(\"x is 10 and y is 20\");\n    }\n}\nIn the above example, the code block inside the inner if statement is executed only if both conditions x == 10 and y == 20 are true.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html#ternary-operator",
+    "href": "basics/controls/conditionals.html#ternary-operator",
+    "title": "Conditionals",
+    "section": "Ternary Operator",
+    "text": "Ternary Operator\nThe ternary operator ? : is a shorthand way of writing an if-else statement. It is used to assign a value to a variable based on a condition. The basic syntax of the ternary operator is as follows:\nvariable = (condition) ? value1 : value2;\nHere is an example of using the ternary operator:\nint x = 10;\nint result = (x &gt; 5) ? 1 : 0;\n\nSystem.out.println(result);\n\n// Output: 1\nIn the above example, the value of result is assigned 1 if the condition x &gt; 5 is true, and 0 otherwise.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
+    ]
+  },
+  {
+    "objectID": "basics/controls/conditionals.html#switch-statement",
+    "href": "basics/controls/conditionals.html#switch-statement",
+    "title": "Conditionals",
+    "section": "Switch Statement",
+    "text": "Switch Statement\nThe switch statement is used to execute different blocks of code based on the value of an expression. It is an alternative to using multiple if-else if-else statements. The basic syntax of the switch statement is as follows:\nswitch (expression) {\n    case value1:\n        // code block to be executed if expression equals value1\n        break;\n    case value2:\n        // code block to be executed if expression equals value2\n        break;\n    ...\n    default:\n        // code block to be executed if none of the values match\n}\nHere is an example of using the switch statement:\nint day = 3;\nString dayName;\n\nswitch (day) {\n    case 1:\n        dayName = \"Monday\";\n        break;\n    case 2:\n        dayName = \"Tuesday\";\n        break;\n    case 3:\n        dayName = \"Wednesday\";\n        break;\n    default:\n        dayName = \"Invalid day\";\n}\n\nSystem.out.println(\"Day: \" + dayName);\n\n// Output: Day: Wednesday\nIn the above example, the value of dayName is assigned based on the value of the day variable using the switch statement.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Conditionals"
     ]
   },
   {
     "objectID": "basics/operations/file_io.html",
     "href": "basics/operations/file_io.html",
-    "title": "Files",
+    "title": "File I/O",
     "section": "",
-    "text": "Standard IO is the default IO for a program. It is the IO that is used when no other IO is specified.\nStandard Input is the default input for a program. It is the input that is used when no other input is specified. In most cases, Standard Input is the keyboard.\nStandard Output is the default output for a program. It is the output that is used when no other output is specified. In most cases, Standard Output is the screen.\nStandard Error is the default error output for a program. It is the error output that is used when no other error output is specified. In most cases, Standard Error is the screen.\nIn Python, Standard Input is represented by the stdin object, Standard Output is represented by the stdout object, and Standard Error is represented by the stderr object.\nTo use Standard Input, Standard Output, or Standard Error, you must import the sys module.\nimport sys\nYou can redirect Standard Input, Standard Output, and Standard Error to a file or another program by using the &lt;, &gt;, and | operators. For example, to redirect Standard Input to a file, you would use the &lt; operator.\npython3 my_program.py &lt; input.txt\nTo redirect Standard Output to a file, you would use the &gt; operator.\npython3 my_program.py &gt; output.txt\nTo redirect Standard Error to a file, you would use the 2&gt; operator.\npython3 my_program.py 2&gt; error.txt\n\n\nThe input function is used to get input from the user. It takes one argument, a string, which is the prompt that is displayed to the user. The input function returns a string.\nname = input(\"What is your name? \")\n\n\n\nThe print function is used to display output to the user. It takes one or more arguments, which are the values to be displayed. The print function returns None.\nprint(\"Hello, World!\")\n\n\n\n\n\n\n\nWhile a program is running, its data is stored in Random Access Memory (RAM).\nRAM is Fast and Inexpensive, but it is also Volatile\n\nVolatile memory means that when the program ends, or the computer shuts down, data in RAM disappears.\n\nTo make data available the next time you turn on your computer and start your program, you have to write it to a Non-volatile Storage medium, such as the Hard Drive. \n\nData on non-volatile Storage media is stored in named locations on the media called Files.\nBy reading and writing data to files, programs can save information between program runs.\nWorking with files is a lot like working with a Jupyter notebook.\n\nTo use a notebook, you have to open it.\nWhen you’re done, you have to close it.\nWhile the notebook is open, you can either write in it or read from it. \n\n\n\n\n\n\n\nThe key function for working with files in Python is the open() function.\nThe open() function takes two parameters:\n\nfilename (required)\nmode (optional, default value: \"r\")\n\n\n\nf = open(\"words.txt\") \n\n\n\nThere are four primary methods modes for opening a file:\n\n“r” - Read - Default value. Opens a file for reading\n\nerror if the file does not exist\n\n“a” - Append - Opens a file for appending\n\ncreates the file if it does not exist\n\n“w” - Write - Opens a file for writing\n\ncreates the file if it does not exist\n\n“x” - Create - Creates the specified file\n\nreturns an error if the file exists\n\n\n\n\n\n\n\nTo open a file for reading it is enough to specify the name of the file:\n\nf = open(\"countries.txt\")\n\n\nThe code above is the same as:\n\n\nf = open(\"countries.txt\", \"r\")\n\n\nBecause \"r\" for read is the default value for the second input (mode), you do not need to specify it.\nMake sure the file exists, or else you will get a FileNotFoundError error.\n\n\n\n\n\n\nTo open the file, use the built-in open() function.\nThe open() function returns a file object\nFile objects have a read() method for reading the content of the file:\n\n\nf = open(\"countries.txt\", \"r\")\ncontent = f.read()\nprint(content)\n\n\n\nIf you try to read a file that does not exist, you will get a FileNotFoundError\nIf the file is located in a different location, you will have to specify the file path, like this:\n\n\nf = open(\"countries.txt\")\n\n\n#Open a file on a different location:\n\nf = open(\"/Users/fsultan/Downloads/csc121/notebooks/countries.txt\", \"r\")\nprint(f.read())\n\n\n\n\n\n\nFile extensions have to be explicitly specified in the file name, when opening an existing file\n\n\nf = open('countries.txt')\nprint(f.read())\nf.close()\n\n\n\n\n\n\nIt is often not feasible to read large files with simply read\nThis is often because:\n\nThe size of the file can exceed the capacity of RAM\nThe software may have a limit on how much data it can read\n\nTo avoid the software/app from crashing\n\n\n\n\nf = open(\"words.txt\", \"r\")\nprint(f.read())\n\n\n\n\n\n\nBy default the read() method returns the whole text\nHowever, read() takes an input, which lets you specify how many characters to read:\n\n\n# Example\n# Return the first 20 characters of the file:\n\nf = open(\"words.txt\", \"r\")\nprint(f.read(20))\n\n\n\n\n\n\nYou can return one line by using the readline() method:\n\n\nf = open(\"words.txt\", \"r\")\nline = f.readline()\nprint(line)\n\n\nBy calling readline() two times, you can read the two first lines:\n\n\n# Read two lines of the file \n\nf = open(\"words.txt\", \"r\")\n\nline1 = f.readline()\n\nline2 = f.readline()\n\nline3 = f.readline()\n\nprint(\"Line 1:\", line1)\nprint(\"Line 2:\", line2)\nprint(\"Line 3:\", line3)\n\n\n\n\n\n\nBy looping through the lines of the file, you can read the whole file, line by line:\n\n\nf = open(\"words.txt\", \"r\")\nline = f.readline()\nwhile line != \"\":\n    line = f.readline()\n    print(line)\nf.close()\n\n\n\n\n\n\nSince contents (lines) of a file are a sequence, we can loop over lines using a for loop with line as a target variable:\n\n\nf = open(\"countries.txt\", \"r\")\nfor line in f:\n    print(line)\n\n\nf = open(\"countries.txt\", \"r\")\nline = f.readline()\nwhile line != \"\":\n    print(line)\n    line = f.readline()\n\n\n\n\n\n\nIt is a strongly recommended to close the file when you are done with it.\nThis clears up memory consumed by contents of the file.\nFile object cannot be used to read, write or append after it has been closed.\n\n\nf = open(\"countries.txt\", \"r\")\nprint(f.readline())\nf.close()\n\nf.readline()\n\n\n\n\n\n\nopen(filename,\"w\") mode “w” - Write - allows writing to a file with name filename\nIf a file with name filename already exists, it overwrites any existing content.\n\nIn other words, existing content gets deleted and new content is added.\n\nIf a file with name filename does not exist, it creates a new file and writes to it.\n\n\nf = open(\"newfile.txt\", \"w\")\nf.write(\"Now the newfile.txt exists and this is it's content!\")\nf.close()\n\n\n\n\n\n\nWhen writing to a file, do not forget the newlines: \\n\nWithout newlines \\n, all content would be written to the same line\n\n\nf = open(\"newfile.txt\", \"w\")\nf.write(\"Line1\")\nf.write(\"Line2\")\nf.close()\n\n\nf = open(\"newfile.txt\", \"r\")\nprint(f.read())\nf.close()\n\n\n\n\n\n\nopen(filename,\"a\") mode “a” - Append - allows appending to the end of a file with name filename\nIf a file with name filename already exists, it adds new content to the end of the file.\nIf a file with name filename does not exist, it creates a new file and writes to it.\n\n\nf = open(\"countries.txt\", \"a\")\nf.write(\"Wakanda\")\nf.close()\n\n\nf = open(\"newfile.txt\", \"a\")\nf.write(\"testing\")\nf.close()\n\n\n\n\n\n\n\nopen(filename,\"x\") mode “x” - eXclusive creation- allows creating a new file with name filename\n\nOnly if a file with that name does not exist\n\nIf a file with name filename already exists, it throws a FileExistsError.\nIf a file with name filename does not exist, it creates a new file and writes to it.\n\n\nf = open(\"newfile.txt\", \"x\")\nf.write(\"This is a brand new file\")\nf.close()\n\n\n\n\n\n\nIf a file is opened in write mode, you can not read from it\nIf a file is opened in read mode, you can not write to it\n\n\n\n\n\nQuestion 1. Count lines\nWrite a function count_lines that accepts as input a string filename and returns the number of lines in that file\n\ndef count_lines(filename):\n    \n\nprint(count_lines(\"words.txt\"))\nprint(count_lines(\"countries.txt\"))\n\nQuestion 2. Print lines ending with suffix\nWrite a function search_lines that accepts as inputs a string filename and a string suffix and prints all lines that end with suffix\n\ndef search_lines(filename, suffix):\n\n\nsearch_lines(\"countries.txt\", \"land\")\n\nQuestion 3. Write Left Triangle\nWrite a function left_triangle that accepts two inputs: 1. a string variable filename 2. an integer n. The function creates a file named filename and writes to the file a left triangle of height n.\nFor example, filename=\"abc.txt\" and n=5 prints the following:\n*\n**\n***\n****\n*****\nto a file named abc.txt\n\ndef left_triangle(filename, n):\n    \n    return\n\nleft_triangle('t4.txt',  4)\nleft_triangle('t10.txt', 10)\n\n\nQuestion 4. Copy File\nWrite a function copy_file that takes two string inputs: 1. oldfile 2. newfile and copies all the contents of oldfile to newfile.\n\ndef copy_file(oldfile, newfile):\n    \n    return",
+    "text": "File Input/Output (I/O) operations are used to read data from files or write data to files. In Java, file I/O operations are performed using classes from the java.io package. In this tutorial, we will learn how to read from and write to files in Java.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Operations",
-      "Files"
+      "File I/O"
     ]
   },
   {
-    "objectID": "basics/operations/file_io.html#standard-io",
-    "href": "basics/operations/file_io.html#standard-io",
-    "title": "Files",
+    "objectID": "basics/operations/file_io.html#reading-from-a-file",
+    "href": "basics/operations/file_io.html#reading-from-a-file",
+    "title": "File I/O",
+    "section": "Reading from a File",
+    "text": "Reading from a File\nTo read data from a file in Java, you can use the FileInputStream and BufferedReader classes. The FileInputStream class is used to read bytes from a file, and the BufferedReader class is used to read text from a character-input stream. Here is an example of reading data from a file:\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"));\n            String line = reader.readLine();\n            while (line != null) {\n                System.out.println(line);\n                line = reader.readLine();\n            }\n            reader.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedReader class to read data from a file named input.txt. We read each line from the file using the readLine() method and print it to the console.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "File I/O"
+    ]
+  },
+  {
+    "objectID": "basics/operations/file_io.html#writing-to-a-file",
+    "href": "basics/operations/file_io.html#writing-to-a-file",
+    "title": "File I/O",
+    "section": "Writing to a File",
+    "text": "Writing to a File\nTo write data to a file in Java, you can use the FileOutputStream and BufferedWriter classes. The FileOutputStream class is used to write bytes to a file, and the BufferedWriter class is used to write text to a character-output stream. Here is an example of writing data to a file:\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFile {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Hello, World!\");\n            writer.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedWriter class to write the text “Hello, World!” to a file named output.txt.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "File I/O"
+    ]
+  },
+  {
+    "objectID": "basics/operations/operations.html",
+    "href": "basics/operations/operations.html",
+    "title": "Operations",
     "section": "",
-    "text": "Standard IO is the default IO for a program. It is the IO that is used when no other IO is specified.\nStandard Input is the default input for a program. It is the input that is used when no other input is specified. In most cases, Standard Input is the keyboard.\nStandard Output is the default output for a program. It is the output that is used when no other output is specified. In most cases, Standard Output is the screen.\nStandard Error is the default error output for a program. It is the error output that is used when no other error output is specified. In most cases, Standard Error is the screen.\nIn Python, Standard Input is represented by the stdin object, Standard Output is represented by the stdout object, and Standard Error is represented by the stderr object.\nTo use Standard Input, Standard Output, or Standard Error, you must import the sys module.\nimport sys\nYou can redirect Standard Input, Standard Output, and Standard Error to a file or another program by using the &lt;, &gt;, and | operators. For example, to redirect Standard Input to a file, you would use the &lt; operator.\npython3 my_program.py &lt; input.txt\nTo redirect Standard Output to a file, you would use the &gt; operator.\npython3 my_program.py &gt; output.txt\nTo redirect Standard Error to a file, you would use the 2&gt; operator.\npython3 my_program.py 2&gt; error.txt\n\n\nThe input function is used to get input from the user. It takes one argument, a string, which is the prompt that is displayed to the user. The input function returns a string.\nname = input(\"What is your name? \")\n\n\n\nThe print function is used to display output to the user. It takes one or more arguments, which are the values to be displayed. The print function returns None.\nprint(\"Hello, World!\")",
+    "text": "An expression is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable, so the following are all legal expressions: 42, x, x+1\n\nWhen you type an expression at the prompt, the interpreter evaluates it, which means that it finds the value of the expression. In this example, x + 1, the interpreter adds one to the current value of x. But it doesn’t display the value unless you tell it to:\n\nx = 42\nx + 1\n\nA statement is a unit of code that has an effect, like creating a variable or displaying a value.\n\nx = 42\nprint(x)\n\nThe first line is an assignment statement that gives a value to x. The second line is a print statement that displays the value of x.\nThe types of statements we have seen so far are assignments and print statements. Other types of statements include:\n\nImport statements: Import a module.\nIf statements: Execute code depending on the value of a condition.\nFor statements: Execute code for each item in a sequence.\nWhile statements: Execute code while a condition is true.\nDef statements: Define a function.\nReturn statements: Exit a function and return a value.\nBreak statements: Exit a loop.\nContinue statements: Skip the rest of the loop body.\n\nWhen you type a statement, the interpreter executes it, which means that it does whatever the statement says. In general, statements don’t have values.\nA program is a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.\nFor example, the script below contains three statements:\n\nx = 42\nprint(x)\nx = x + 1\n\nThe output of this program is 42. The second line displays the value of x, which is 42. The third line increases the value of x by one. But it doesn’t display the value.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Files"
+      "Operations"
     ]
   },
   {
-    "objectID": "basics/operations/file_io.html#file-io",
-    "href": "basics/operations/file_io.html#file-io",
-    "title": "Files",
+    "objectID": "basics/operations/operations.html#expressions-statements-and-programs",
+    "href": "basics/operations/operations.html#expressions-statements-and-programs",
+    "title": "Operations",
     "section": "",
-    "text": "While a program is running, its data is stored in Random Access Memory (RAM).\nRAM is Fast and Inexpensive, but it is also Volatile\n\nVolatile memory means that when the program ends, or the computer shuts down, data in RAM disappears.\n\nTo make data available the next time you turn on your computer and start your program, you have to write it to a Non-volatile Storage medium, such as the Hard Drive. \n\nData on non-volatile Storage media is stored in named locations on the media called Files.\nBy reading and writing data to files, programs can save information between program runs.\nWorking with files is a lot like working with a Jupyter notebook.\n\nTo use a notebook, you have to open it.\nWhen you’re done, you have to close it.\nWhile the notebook is open, you can either write in it or read from it. \n\n\n\n\n\n\n\nThe key function for working with files in Python is the open() function.\nThe open() function takes two parameters:\n\nfilename (required)\nmode (optional, default value: \"r\")\n\n\n\nf = open(\"words.txt\") \n\n\n\nThere are four primary methods modes for opening a file:\n\n“r” - Read - Default value. Opens a file for reading\n\nerror if the file does not exist\n\n“a” - Append - Opens a file for appending\n\ncreates the file if it does not exist\n\n“w” - Write - Opens a file for writing\n\ncreates the file if it does not exist\n\n“x” - Create - Creates the specified file\n\nreturns an error if the file exists\n\n\n\n\n\n\n\nTo open a file for reading it is enough to specify the name of the file:\n\nf = open(\"countries.txt\")\n\n\nThe code above is the same as:\n\n\nf = open(\"countries.txt\", \"r\")\n\n\nBecause \"r\" for read is the default value for the second input (mode), you do not need to specify it.\nMake sure the file exists, or else you will get a FileNotFoundError error.\n\n\n\n\n\n\nTo open the file, use the built-in open() function.\nThe open() function returns a file object\nFile objects have a read() method for reading the content of the file:\n\n\nf = open(\"countries.txt\", \"r\")\ncontent = f.read()\nprint(content)\n\n\n\nIf you try to read a file that does not exist, you will get a FileNotFoundError\nIf the file is located in a different location, you will have to specify the file path, like this:\n\n\nf = open(\"countries.txt\")\n\n\n#Open a file on a different location:\n\nf = open(\"/Users/fsultan/Downloads/csc121/notebooks/countries.txt\", \"r\")\nprint(f.read())\n\n\n\n\n\n\nFile extensions have to be explicitly specified in the file name, when opening an existing file\n\n\nf = open('countries.txt')\nprint(f.read())\nf.close()\n\n\n\n\n\n\nIt is often not feasible to read large files with simply read\nThis is often because:\n\nThe size of the file can exceed the capacity of RAM\nThe software may have a limit on how much data it can read\n\nTo avoid the software/app from crashing\n\n\n\n\nf = open(\"words.txt\", \"r\")\nprint(f.read())\n\n\n\n\n\n\nBy default the read() method returns the whole text\nHowever, read() takes an input, which lets you specify how many characters to read:\n\n\n# Example\n# Return the first 20 characters of the file:\n\nf = open(\"words.txt\", \"r\")\nprint(f.read(20))\n\n\n\n\n\n\nYou can return one line by using the readline() method:\n\n\nf = open(\"words.txt\", \"r\")\nline = f.readline()\nprint(line)\n\n\nBy calling readline() two times, you can read the two first lines:\n\n\n# Read two lines of the file \n\nf = open(\"words.txt\", \"r\")\n\nline1 = f.readline()\n\nline2 = f.readline()\n\nline3 = f.readline()\n\nprint(\"Line 1:\", line1)\nprint(\"Line 2:\", line2)\nprint(\"Line 3:\", line3)\n\n\n\n\n\n\nBy looping through the lines of the file, you can read the whole file, line by line:\n\n\nf = open(\"words.txt\", \"r\")\nline = f.readline()\nwhile line != \"\":\n    line = f.readline()\n    print(line)\nf.close()\n\n\n\n\n\n\nSince contents (lines) of a file are a sequence, we can loop over lines using a for loop with line as a target variable:\n\n\nf = open(\"countries.txt\", \"r\")\nfor line in f:\n    print(line)\n\n\nf = open(\"countries.txt\", \"r\")\nline = f.readline()\nwhile line != \"\":\n    print(line)\n    line = f.readline()\n\n\n\n\n\n\nIt is a strongly recommended to close the file when you are done with it.\nThis clears up memory consumed by contents of the file.\nFile object cannot be used to read, write or append after it has been closed.\n\n\nf = open(\"countries.txt\", \"r\")\nprint(f.readline())\nf.close()\n\nf.readline()\n\n\n\n\n\n\nopen(filename,\"w\") mode “w” - Write - allows writing to a file with name filename\nIf a file with name filename already exists, it overwrites any existing content.\n\nIn other words, existing content gets deleted and new content is added.\n\nIf a file with name filename does not exist, it creates a new file and writes to it.\n\n\nf = open(\"newfile.txt\", \"w\")\nf.write(\"Now the newfile.txt exists and this is it's content!\")\nf.close()\n\n\n\n\n\n\nWhen writing to a file, do not forget the newlines: \\n\nWithout newlines \\n, all content would be written to the same line\n\n\nf = open(\"newfile.txt\", \"w\")\nf.write(\"Line1\")\nf.write(\"Line2\")\nf.close()\n\n\nf = open(\"newfile.txt\", \"r\")\nprint(f.read())\nf.close()\n\n\n\n\n\n\nopen(filename,\"a\") mode “a” - Append - allows appending to the end of a file with name filename\nIf a file with name filename already exists, it adds new content to the end of the file.\nIf a file with name filename does not exist, it creates a new file and writes to it.\n\n\nf = open(\"countries.txt\", \"a\")\nf.write(\"Wakanda\")\nf.close()\n\n\nf = open(\"newfile.txt\", \"a\")\nf.write(\"testing\")\nf.close()\n\n\n\n\n\n\n\nopen(filename,\"x\") mode “x” - eXclusive creation- allows creating a new file with name filename\n\nOnly if a file with that name does not exist\n\nIf a file with name filename already exists, it throws a FileExistsError.\nIf a file with name filename does not exist, it creates a new file and writes to it.\n\n\nf = open(\"newfile.txt\", \"x\")\nf.write(\"This is a brand new file\")\nf.close()\n\n\n\n\n\n\nIf a file is opened in write mode, you can not read from it\nIf a file is opened in read mode, you can not write to it\n\n\n\n\n\nQuestion 1. Count lines\nWrite a function count_lines that accepts as input a string filename and returns the number of lines in that file\n\ndef count_lines(filename):\n    \n\nprint(count_lines(\"words.txt\"))\nprint(count_lines(\"countries.txt\"))\n\nQuestion 2. Print lines ending with suffix\nWrite a function search_lines that accepts as inputs a string filename and a string suffix and prints all lines that end with suffix\n\ndef search_lines(filename, suffix):\n\n\nsearch_lines(\"countries.txt\", \"land\")\n\nQuestion 3. Write Left Triangle\nWrite a function left_triangle that accepts two inputs: 1. a string variable filename 2. an integer n. The function creates a file named filename and writes to the file a left triangle of height n.\nFor example, filename=\"abc.txt\" and n=5 prints the following:\n*\n**\n***\n****\n*****\nto a file named abc.txt\n\ndef left_triangle(filename, n):\n    \n    return\n\nleft_triangle('t4.txt',  4)\nleft_triangle('t10.txt', 10)\n\n\nQuestion 4. Copy File\nWrite a function copy_file that takes two string inputs: 1. oldfile 2. newfile and copies all the contents of oldfile to newfile.\n\ndef copy_file(oldfile, newfile):\n    \n    return",
+    "text": "An expression is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable, so the following are all legal expressions: 42, x, x+1\n\nWhen you type an expression at the prompt, the interpreter evaluates it, which means that it finds the value of the expression. In this example, x + 1, the interpreter adds one to the current value of x. But it doesn’t display the value unless you tell it to:\n\nx = 42\nx + 1\n\nA statement is a unit of code that has an effect, like creating a variable or displaying a value.\n\nx = 42\nprint(x)\n\nThe first line is an assignment statement that gives a value to x. The second line is a print statement that displays the value of x.\nThe types of statements we have seen so far are assignments and print statements. Other types of statements include:\n\nImport statements: Import a module.\nIf statements: Execute code depending on the value of a condition.\nFor statements: Execute code for each item in a sequence.\nWhile statements: Execute code while a condition is true.\nDef statements: Define a function.\nReturn statements: Exit a function and return a value.\nBreak statements: Exit a loop.\nContinue statements: Skip the rest of the loop body.\n\nWhen you type a statement, the interpreter executes it, which means that it does whatever the statement says. In general, statements don’t have values.\nA program is a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.\nFor example, the script below contains three statements:\n\nx = 42\nprint(x)\nx = x + 1\n\nThe output of this program is 42. The second line displays the value of x, which is 42. The third line increases the value of x by one. But it doesn’t display the value.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Files"
+      "Operations"
     ]
   },
   {
-    "objectID": "basics/operations/math_operators.html",
-    "href": "basics/operations/math_operators.html",
-    "title": "Mathematical Operators",
+    "objectID": "basics/operations/precedence_associativity.html",
+    "href": "basics/operations/precedence_associativity.html",
+    "title": "Precedence, Associativity and Type Conversion",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
+    "text": "The following table lists the operator precedence in Java. Operators with higher precedence are evaluated before operators with lower precedence. Operators with the same precedence are evaluated from left to right.\nJava operators are listed top to bottom, in descending precedence.\n\n\n\n\n\n\n\nOperator\nDescription\n\n\n\n\n()\nParentheses\n\n\n[]\nArray subscript\n\n\n.\nMember access\n\n\n()\nMethod call\n\n\n++, --\nPostfix increment/decrement\n\n\n+, -, ~, !\nUnary plus, Unary minus, Bitwise NOT, Logical NOT\n\n\n*, /, %\nMultiplication, Division, Modulus\n\n\n+, -\nAddition, Subtraction\n\n\n&lt;&lt;, &gt;&gt;, &gt;&gt;&gt;\nBitwise shift left, Bitwise shift right, Bitwise shift right zero fill\n\n\n&lt;, &lt;=, &gt;, &gt;=, instanceof\nRelational less than, Relational less than or equal, Relational greater than, Relational greater than or equal, Type comparison\n\n\n==, !=\nRelational equal, Relational not equal\n\n\n&\nBitwise AND\n\n\n^\nBitwise XOR\n\n\n|\nBitwise OR\n\n\n&&\nLogical AND\n\n\n||\nLogical OR\n\n\n? :\nTernary conditional\n\n\n=, +=, -=, *=, /=, %=, &=, ^=, |=, &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;=\nAssignment, Assignment by sum, Assignment by difference, Assignment by product, Assignment by quotient, Assignment by remainder, Assignment by bitwise AND, Assignment by bitwise XOR, Assignment by bitwise OR, Assignment by bitwise shift left, Assignment by bitwise shift right, Assignment by bitwise shift right zero fill\n\n\n,\nComma"
   },
   {
-    "objectID": "basics/operations/math_operators.html#arithmetic-operators",
-    "href": "basics/operations/math_operators.html#arithmetic-operators",
-    "title": "Mathematical Operators",
-    "section": "Arithmetic Operators",
-    "text": "Arithmetic Operators\nThe following table lists the arithmetic operators in Python. The first four operators are the basic arithmetic operators. The last two operators are the floor division and modulo operators, respectively.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n+\nAddition\n1 + 2\n3\n\n\n-\nSubtraction\n1 - 2\n-1\n\n\n*\nMultiplication\n1 * 2\n2\n\n\n/\nDivision\n1 / 2\n0.5\n\n\n//\nFloor Division\n1 // 2\n0\n\n\n%\nModulo\n1 % 2\n1",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
+    "objectID": "basics/operations/precedence_associativity.html#operator-precedence",
+    "href": "basics/operations/precedence_associativity.html#operator-precedence",
+    "title": "Precedence, Associativity and Type Conversion",
+    "section": "",
+    "text": "The following table lists the operator precedence in Java. Operators with higher precedence are evaluated before operators with lower precedence. Operators with the same precedence are evaluated from left to right.\nJava operators are listed top to bottom, in descending precedence.\n\n\n\n\n\n\n\nOperator\nDescription\n\n\n\n\n()\nParentheses\n\n\n[]\nArray subscript\n\n\n.\nMember access\n\n\n()\nMethod call\n\n\n++, --\nPostfix increment/decrement\n\n\n+, -, ~, !\nUnary plus, Unary minus, Bitwise NOT, Logical NOT\n\n\n*, /, %\nMultiplication, Division, Modulus\n\n\n+, -\nAddition, Subtraction\n\n\n&lt;&lt;, &gt;&gt;, &gt;&gt;&gt;\nBitwise shift left, Bitwise shift right, Bitwise shift right zero fill\n\n\n&lt;, &lt;=, &gt;, &gt;=, instanceof\nRelational less than, Relational less than or equal, Relational greater than, Relational greater than or equal, Type comparison\n\n\n==, !=\nRelational equal, Relational not equal\n\n\n&\nBitwise AND\n\n\n^\nBitwise XOR\n\n\n|\nBitwise OR\n\n\n&&\nLogical AND\n\n\n||\nLogical OR\n\n\n? :\nTernary conditional\n\n\n=, +=, -=, *=, /=, %=, &=, ^=, |=, &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;=\nAssignment, Assignment by sum, Assignment by difference, Assignment by product, Assignment by quotient, Assignment by remainder, Assignment by bitwise AND, Assignment by bitwise XOR, Assignment by bitwise OR, Assignment by bitwise shift left, Assignment by bitwise shift right, Assignment by bitwise shift right zero fill\n\n\n,\nComma"
   },
   {
-    "objectID": "basics/operations/math_operators.html#boolean-operators",
-    "href": "basics/operations/math_operators.html#boolean-operators",
-    "title": "Mathematical Operators",
-    "section": "Boolean Operators",
-    "text": "Boolean Operators\nThese operators return True or False (i.e. boolean data type).\n\n\n\n\n\n\n\n\nOperator\nDescription\nExample.\n\n\n\n\n==\nReturns True if left hand operand is equal to right hand operand. Otherwise, returns False\na+b == b+a\n\n\n!=\nReturns True if left hand operand is NOT equal to right hand operand. Otherwise, returns False.\na*b != b/a\n\n\n&lt;\nReturns True if left hand operand is less than right hand operand. Otherwise, returns False.\nb/a &lt; b\n\n\n&gt;\nReturns True if left hand operand is greater than right hand operand. Otherwise, returns False.\na*b &gt; b\n\n\n&lt;=\nReturns True if left hand operand is less than or equal to right hand operand. Otherwise, returns False.\na-b &lt;= a\n\n\n&gt;=\nReturns True if left hand operand is greater than or equal to right hand operand. Otherwise, returns False.\na*b &gt;= b*a\n\n\n\n\na = 2\nb = 10\n\n\na+b == b+a\n\n\na+b != a*b\n\n\na**2 == a*2\n\n\na+b &lt; a+b\n\n\na+b &lt;= a+b\n\n\nComparison Operators\nThe following table lists the comparison operators in Python. These operators compare two operands and evaluate to either True or False.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n==\nEqual To\n1 == 2\nFalse\n\n\n!=\nNot Equal To\n1 != 2\nTrue\n\n\n&gt;\nGreater Than\n1 &gt; 2\nFalse\n\n\n&gt;=\nGreater Than or Equal To\n1 &gt;= 2\nFalse\n\n\n&lt;\nLess Than\n1 &lt; 2\nTrue\n\n\n&lt;=\nLess Than or Equal To\n1 &lt;= 2\nTrue\n\n\n\n\n\nLogical Operators\nThe following table lists the logical operators in Python. These operators combine two or more boolean expressions and evaluate to either True or False.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nand\nLogical AND\nTrue and False\nFalse\n\n\nor\nLogical OR\nTrue or False\nTrue\n\n\nnot\nLogical NOT\nnot True\nFalse\n\n\n\n\n\nIdentity Operators\nThe following table lists the identity operators in Python. These operators compare the memory addresses of two operands and evaluate to either True or False.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nis\nIdentity\n1 is 1\nTrue\n\n\nis not\nNon-Identity\n1 is not 1\nFalse\n\n\n\n\n\nMembership Operators\nThe following table lists the membership operators in Python. These operators evaluate to either True or False depending on whether a value is a member of a sequence.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nin\nMembership\n1 in [1, 2, 3]\nTrue\n\n\nnot in\nNon-Membership\n1 not in [1, 2, 3]\nFalse",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
+    "objectID": "basics/operations/precedence_associativity.html#operator-associativity",
+    "href": "basics/operations/precedence_associativity.html#operator-associativity",
+    "title": "Precedence, Associativity and Type Conversion",
+    "section": "Operator Associativity",
+    "text": "Operator Associativity\nThe following table lists the operator associativity in Python. Operators with left associativity are evaluated from left to right. Operators with right associativity are evaluated from right to left.\n\n\n\n\n\n\n\nOperator\nAssociativity\n\n\n\n\n**\nRight\n\n\n~\nRight\n\n\n*, /, //, %\nLeft\n\n\n+, -\nLeft\n\n\n&lt;&lt;, &gt;&gt;\nLeft\n\n\n&\nLeft\n\n\n^\nLeft\n\n\n|\nLeft\n\n\n==, !=, &gt;, &gt;=, &lt;, &lt;=, is, is not, in, not in\nLeft\n\n\nnot\nRight\n\n\nand\nLeft\n\n\nor\nLeft\n\n\n=\nRight\n\n\n+=, -=, *=, /=, //=, %=, &=, ^=, |=, &lt;&lt;=, &gt;&gt;=\nRight"
   },
   {
-    "objectID": "basics/operations/math_operators.html#assignment-operators",
-    "href": "basics/operations/math_operators.html#assignment-operators",
-    "title": "Mathematical Operators",
-    "section": "Assignment Operators",
-    "text": "Assignment Operators\nWe have already seen the assignment operator = in the previous sections.\nThe assignment operator has many variations that combine assignment with another operator (primarily arithmetic operators).\nThe following table lists the assignment operators in Python. These operators assign a value to a variable.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n=\nAssignment\nx = 1\n1\n\n\n+=\nAddition Assignment\nx += 1\n2\n\n\n-=\nSubtraction Assignment\nx -= 1\n1\n\n\n*=\nMultiplication Assignment\nx *= 2\n2\n\n\n/=\nDivision Assignment\nx /= 2\n1\n\n\n//=\nFloor Division Assignment\nx //= 2\n0\n\n\n%=\nModulo Assignment\nx %= 2\n1\n\n\n&=\nBitwise AND Assignment\nx &= 0b101\n0b101",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
-  },
-  {
-    "objectID": "basics/operations/math_operators.html#bitwise-operators",
-    "href": "basics/operations/math_operators.html#bitwise-operators",
-    "title": "Mathematical Operators",
-    "section": "Bitwise Operators",
-    "text": "Bitwise Operators\nThe following table lists the bitwise operators in Python. These operators combine two or more bit patterns and evaluate to a new bit pattern.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n&\nBitwise AND\n0b101 & 0b110\n0b100\n\n\n\\|\nBitwise OR\n0b101 \\| 0b110\n0b111\n\n\n^\nBitwise XOR\n0b101 ^ 0b110\n0b011\n\n\n~\nBitwise NOT\n~0b101\n0b010\n\n\n&lt;&lt;\nBitwise Left Shift\n0b101 &lt;&lt; 1\n0b1010\n\n\n&gt;&gt;\nBitwise Right Shift\n0b101 &gt;&gt; 1\n0b10",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
-  },
-  {
-    "objectID": "basics/operations/math_operators.html#glossary",
-    "href": "basics/operations/math_operators.html#glossary",
-    "title": "Mathematical Operators",
-    "section": "Glossary",
-    "text": "Glossary\n\narithmetic operator\n    An operator that performs a mathematical operation on two operands.\n\nassignment operator\n    An operator that assigns a value to a variable.\n\nbitwise operator\n    An operator that performs a bitwise operation on two or more bit patterns.\n\nboolean operator\n    An operator that returns a boolean value.\n\ncomparison operator\n    An operator that compares two operands and evaluates to either `True` or `False`.\n\nfloor division\n    An operator that performs integer division and returns the floor of the result.\n\nidentity operator\n    An operator that compares the memory addresses of two operands and evaluates to either `True` or `False`.\n\nlogical operator\n    An operator that combines two or more boolean expressions and evaluates to either `True` or `False`.\n\nmodulo\n    An operator that performs integer division and returns the remainder of the result.",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
-  },
-  {
-    "objectID": "basics/operations/math_operators.html#exercise",
-    "href": "basics/operations/math_operators.html#exercise",
-    "title": "Mathematical Operators",
-    "section": "Exercise",
-    "text": "Exercise\n\nWhat is the result of the following expression?\n\n\n\n\n\nExpression\nResult\n\n\n\n\ni.\n1 + 2 * 3\n\n\n\nii.\n(1 + 2) * 3\n\n\n\niii.\n1 + 2 * 3 - 4 / 5\n\n\n\niv.\n1 + 2 * (3 - 4) / 5\n\n\n\nv.\n1 + 2 * 3 - 4 / 5 ** 6\n\n\n\nvi.\n1 + 2 * 3 - 4 / 5 ** 6 % 7\n\n\n\nvii.\n1 + 2 * 3 - 4 / 5 ** 6 % 7 // 8",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Mathematical Operators"
-    ]
+    "objectID": "basics/operations/precedence_associativity.html#implicit-type-conversion",
+    "href": "basics/operations/precedence_associativity.html#implicit-type-conversion",
+    "title": "Precedence, Associativity and Type Conversion",
+    "section": "Implicit Type Conversion",
+    "text": "Implicit Type Conversion\n\nAutomatic conversion from one data type to another data type as result of an operation.\n\nPython always converts “smaller” data types to “larger” data types to avoid the loss of information.\n\ninteger_part = 21\nfractional_part = 0.03\n\nprint(\"Datatype of integer_part:\", type(integer_part))\nprint(\"Datatype of fractional_part:\", type(fractional_part))\n\nnew_number = integer_part + fractional_part\n\nprint(\"Value of new_number:\",new_number)\nprint(\"Datatype of new_number:\",type(new_number))\n\nprint(\"Datatype of integer_part:\", type(integer_part))\n\n\ninteger_part = \"21\"\nfractional_part = \"0.03\"\n\nnew_number = integer_part + fractional_part\n\nprint(\"Datatype of integer_part:\", type(integer_part))\nprint(\"Datatype of fractional_part:\", type(fractional_part))\n\nprint(\"Value of new_number:\",new_number)\nprint(\"Datatype of new_number:\",type(new_number))"
   },
   {
     "objectID": "basics/java.html",
     "href": "basics/java.html",
     "title": "PROGRAMMING, IN JAVA",
     "section": "",
-    "text": "Data (values and variables) are to code what nouns are to prose.\nOperations (arithmetic, logical, relational) are the verbs.\nControl flow (if-else, loops) are the plot.\nAbstractions (functions, classes) are metaphors.\n\nProgramming in Java is different from programming in Python primarily because:\n\nJava is a statically typed language.\nEvery Java program must have a main method.\nJava is a compiled language, where Python is an interpreted language.\nWhile Pythn is also object-oriented, Java is more strictly object-oriented.\n\n\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+    "text": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is intended to let application developers Write Once, Run Anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.\nJava is used in a wide variety of computing platforms from embedded devices and mobile phones to enterprise servers and supercomputers. It is also used in developing games, mobile applications, and enterprise software. Some popular software written in Java includes Workday, Minecraft and essentially all Android applications.\nJava up until very recently was the most popular programming language in the world. In recent years, it has been overtaken by Python (came out in 1991) and JavaScript (came out in 1995) in terms of popularity, but it still remains one of the most widely used programming languages in the world. In fact, Java is still the most popular programming language in the world for developing enterprise applications (applications used by businesses and organizations).\nRanking of Java as measured by different indexes:\nIn recent years, JVM languages like Kotlin and Scala have also gained popularity. Kotlin is a modern programming language that is fully interoperable with Java and is used to develop Android applications. Scala is a functional programming language that is also interoperable with Java and is used to develop big data applications.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#java-architecture",
+    "href": "basics/java.html#java-architecture",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Java Architecture",
+    "text": "Java Architecture\nJava was developed by Sun Microsystems (which has since been acquired by Oracle) and released in 1995. For the time, it was a revolutionary language that was designed to be platform-independent, meaning that it could run on any device hardware that had a Java Virtual Machine (JVM).\n\nThe Java platform consists of three main components:\n\nJava Development Kit (JDK): JDK is a software development kit used to develop Java applications and applets. It includes the JRE, an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and other tools needed in Java development.\nJava Runtime Environment (JRE): JRE is a software package that provides Java class libraries, along with Java Virtual Machine (JVM), and other components to run applications written in Java programming.\nJava Virtual Machine (JVM): JVM is a software that can be ported to different hardware platforms and execute Java bytecode.\n\nBefore Java, most programming languages were compiled to platform-specific machine code as an executable file or binary e.g. .exe in Windows or .app in macOS. This meant that the same executable (application file or binary) could not run on different platforms, since the machine code was different. Java solved this problem by compiling to an intermediate bytecode that could be run on any platform that had a JVM.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#setting-up-vs-code-for-java-development",
+    "href": "basics/java.html#setting-up-vs-code-for-java-development",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Setting up VS Code for Java development",
+    "text": "Setting up VS Code for Java development\nTo help you set up quickly, you can install the [Coding Pack for Java], which includes VS Code, the Java Development Kit (JDK), and essential Java extensions. The Coding Pack can be used as a clean installation, or to update or repair an existing development environment.\n\nInstall the Coding Pack for Java - Windows\nInstall the Coding Pack for Java - macOS\n\nNote: The Coding Pack for Java is only available for Windows and macOS. For other operating systems, you will need to manually install a JDK, VS Code, and Java extensions.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#creating-a-source-code-file",
+    "href": "basics/java.html#creating-a-source-code-file",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Creating a source code file",
+    "text": "Creating a source code file\nCreate a folder for your Java program and open the folder with VS Code. Then in VS Code, create a new file and save it with the name Hello.java. When you open that file, the Java Language Server automatically starts loading, and you should see a language status item with a loading icon on the right side of the Status Bar showing the language status is busy. After it finishes loading, you can hover on the language status item and find the loading process has been finished successfully. You can also choose to pin the status item in the status bar.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you open a Java file in VS Code without opening its folder, the Java Language Server might not work properly.\n\n\nVS Code will also try to figure out the correct package for the new type and fill the new file from a template. See Create new file.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#creating-a-java-project",
+    "href": "basics/java.html#creating-a-java-project",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Creating a Java project",
+    "text": "Creating a Java project\nYou can also create a Java project using the Java: Create Java Project command. Bring up the Command Palette (⇧⌘P) and then type java to search for this command. After selecting the command, you will be prompted for the location and name of the project. You can also choose your build tool from this command.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#running-and-debugging-your-program",
+    "href": "basics/java.html#running-and-debugging-your-program",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Running and debugging your program",
+    "text": "Running and debugging your program\nTo run and debug Java code, set a breakpoint, then either press F5 on your keyboard or use the “Run &gt; Start Debugging” menu item. You can also use the “Run|Debug” CodeLens option in the editor. After the code compiles, you can see all your variables and threads in the “Run and Debug” view.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#java-vs.-python",
+    "href": "basics/java.html#java-vs.-python",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Java vs. Python",
+    "text": "Java vs. Python\nBefore we dive into “Hello World” in Java, let’s first understand the differences between programming in Java and programming in Python.\nProgramming in Java is different from programming in Python primarily because:\n\nJava is very strictly an object-oriented language, whereas Python is a multi-paradigm language. This means that Java is designed around the concept of objects and classes, whereas Python can be used in an object-oriented, procedural, or functional style. Every Java program must be inside a class, and every program must have a main method. In Python, you can write code outside of a class or function.\nJava is a statically typed language. This means that you have to declare the type of a variable when you declare it. For example, in Java, you would declare a variable as int x = 5;, whereas in Python, you would declare a variable as x = 5.\nJava is a compiled language, where Python is an interpreted language. This means that running a Java program is a two-step process:\n\nfirst you compile the Java code into bytecode, and then\nyou run the bytecode on the Java Virtual Machine (JVM). In Python, you run the Python code in one-step that is directly on the Python interpreter.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA"
+    ]
+  },
+  {
+    "objectID": "basics/java.html#hello-world",
+    "href": "basics/java.html#hello-world",
+    "title": "PROGRAMMING, IN JAVA",
+    "section": "Hello World",
+    "text": "Hello World\nThe following is a simple Java program that prints “Hello, World!” to the console:\n\nJavaPythonPython (OOP)\n\n\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n\n\nprint(\"Hello, World!\")\n\n\nclass HelloWorld:\n    def __init__(self):\n        print(\"Hello, World!\")\n\n\n\nLet’s break down the Java program line by line:\n\npublic class HelloWorld {\nThis line declares a class named HelloWorld.\n\nIn Java, every program must be inside a class.\nThe class name must match the name of the file. In this case, the file is named HelloWorld.java, so the class name must be HelloWorld.\nThe public keyword is an access modifier that specifies that the class is accessible from other classes. Every class in Java must have an access modifier: public, private, protected, or package-private.\nThe {} delimits the body of the class. In Java, {} is used to delimit blocks of code. Python uses indentation to delimit blocks of code.\n\n\n\n\n  public static void main(String[] args) {\nThis line declares a method named main.\n\nIn Java, the main method is the entry point of the program.\nThe public keyword is an access modifier that specifies that the method is accessible from other classes. Similar to the class, every method in Java must have an access modifier.\nThe static keyword means that the method belongs to the class, not an instance of the class.\nThe void keyword means that the method does not return a value.\nThe String[] args parameter is an array of strings that are passed to the main method.\n\n\n\n\n    System.out.println(\"Hello, World!\");\nThis line prints “Hello, World!” to the console.\n\nThe System.out.println method is used to print a string to the console. This is a method of the System.out object, which is a static member of the System class that represents the standard output stream. This is imported by default in every Java program.\nNote that the println is equivalent to the built-in print() function in Python.\nNote that semi-colon ; is used to end the statement. This is mandatory in Java. Every statement in Java must end with a semi-colon. In contrast, Python uses whitespace to delimit statements.\n\n\n\n\n  }\nThis line marks the end of the main method.\n\n\n\n}\nThis line marks the end of the HelloWorld class.\n\n\nData (values and variables) are to code what nouns are to prose.\nOperations (arithmetic, logical, relational) are the verbs.\nControl flow (if-else, loops) are the plot.\nAbstractions (functions, classes) are metaphors.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA"
@@ -322,7 +606,7 @@
     "href": "se/shell.html",
     "title": "Shell (sh)",
     "section": "",
-    "text": "Shell is a program that takes commands from the keyboard and gives them to the operating system to perform.",
+    "text": "Note\n\n\n\nDemonstrating deployment using git\nShell is a program that takes commands from the keyboard and gives them to the operating system to perform.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -704,79 +988,75 @@
     ]
   },
   {
-    "objectID": "basics/operations/precedence_associativity.html",
-    "href": "basics/operations/precedence_associativity.html",
-    "title": "Precedence, Associativity and Type Conversion",
+    "objectID": "basics/operations/tmp.html",
+    "href": "basics/operations/tmp.html",
+    "title": "",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Precedence, Associativity and Type Conversion"
-    ]
+    "text": "Here are five basic questions to help you practice Java:\n\n1. Write a Java Program to Check if a Number is Even or Odd\n\nProblem: Create a Java program that reads an integer from the user and determines whether the number is even or odd.\nHints: Use the modulus operator % to check the remainder when the number is divided by 2.\n\nimport java.util.Scanner;\n\npublic class EvenOdd {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a number: \");\n        int number = scanner.nextInt();\n\n        if (number % 2 == 0) {\n            System.out.println(number + \" is even.\");\n        } else {\n            System.out.println(number + \" is odd.\");\n        }\n    }\n}\n\n\n2. Write a Java Program to Find the Largest of Three Numbers\n\nProblem: Write a Java program that takes three numbers as input from the user and determines the largest of the three.\nHints: Use nested if-else statements or the Math.max() function.\n\nimport java.util.Scanner;\n\npublic class LargestNumber {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first number: \");\n        int num1 = scanner.nextInt();\n        System.out.print(\"Enter second number: \");\n        int num2 = scanner.nextInt();\n        System.out.print(\"Enter third number: \");\n        int num3 = scanner.nextInt();\n\n        int largest = Math.max(num1, Math.max(num2, num3));\n        System.out.println(\"The largest number is: \" + largest);\n    }\n}\n\n\n3. Write a Java Program to Print the Fibonacci Series Up to n Terms\n\nProblem: Write a program that generates the Fibonacci series up to n terms, where n is provided by the user.\nHints: Use a loop to generate the sequence and store the current and previous terms.\n\nimport java.util.Scanner;\n\npublic class FibonacciSeries {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter the number of terms: \");\n        int n = scanner.nextInt();\n\n        int a = 0, b = 1;\n        System.out.print(\"Fibonacci Series: \" + a + \" \" + b);\n\n        for (int i = 2; i &lt; n; i++) {\n            int next = a + b;\n            System.out.print(\" \" + next);\n            a = b;\n            b = next;\n        }\n    }\n}\n\n\n4. Write a Java Program to Reverse a String\n\nProblem: Write a Java program that takes a string as input and outputs the reversed string.\nHints: Use a loop to iterate over the string from the end to the beginning or use the StringBuilder class.\n\nimport java.util.Scanner;\n\npublic class ReverseString {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a string: \");\n        String input = scanner.nextLine();\n\n        StringBuilder reversed = new StringBuilder(input);\n        reversed.reverse();\n\n        System.out.println(\"Reversed string: \" + reversed);\n    }\n}\n\n\n5. Write a Java Program to Calculate the Factorial of a Number\n\nProblem: Write a Java program that calculates the factorial of a given number n (where n is input by the user).\nHints: Use a loop to multiply numbers from 1 to n.\n\nimport java.util.Scanner;\n\npublic class Factorial {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a number: \");\n        int n = scanner.nextInt();\n\n        int factorial = 1;\n        for (int i = 1; i &lt;= n; i++) {\n            factorial *= i;\n        }\n\n        System.out.println(\"Factorial of \" + n + \" is: \" + factorial);\n    }\n}\nThese basic questions cover fundamental Java concepts like loops, conditionals, and string manipulation, and provide a solid foundation for further learning."
   },
   {
-    "objectID": "basics/operations/precedence_associativity.html#operator-precedence",
-    "href": "basics/operations/precedence_associativity.html#operator-precedence",
-    "title": "Precedence, Associativity and Type Conversion",
-    "section": "Operator Precedence",
-    "text": "Operator Precedence\nThe following table lists the operator precedence in Python. Operators with higher precedence are evaluated before operators with lower precedence. Operators with the same precedence are evaluated from left to right.\n\n\n\n\n\n\n\nOperator\nDescription\n\n\n\n\n()\nParentheses\n\n\n**\nExponentiation\n\n\n~\nBitwise NOT\n\n\n*, /, //, %\nMultiplication, Division, Floor Division, Modulo\n\n\n+, -\nAddition, Subtraction\n\n\n&lt;&lt;, &gt;&gt;\nBitwise Left Shift, Bitwise Right Shift\n\n\n&\nBitwise AND\n\n\n^\nBitwise XOR\n\n\n|\nBitwise OR\n\n\n==, !=, &gt;, &gt;=, &lt;, &lt;=, is, is not, in, not in\nComparison, Identity, Membership\n\n\nnot\nLogical NOT\n\n\nand\nLogical AND\n\n\nor\nLogical OR\n\n\n=\nAssignment\n\n\n+=, -=, *=, /=, //=, %=, &=, ^=, |=, &lt;&lt;=, &gt;&gt;=\nAssignment Operators",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Precedence, Associativity and Type Conversion"
-    ]
-  },
-  {
-    "objectID": "basics/operations/precedence_associativity.html#operator-associativity",
-    "href": "basics/operations/precedence_associativity.html#operator-associativity",
-    "title": "Precedence, Associativity and Type Conversion",
-    "section": "Operator Associativity",
-    "text": "Operator Associativity\nThe following table lists the operator associativity in Python. Operators with left associativity are evaluated from left to right. Operators with right associativity are evaluated from right to left.\n\n\n\n\n\n\n\nOperator\nAssociativity\n\n\n\n\n**\nRight\n\n\n~\nRight\n\n\n*, /, //, %\nLeft\n\n\n+, -\nLeft\n\n\n&lt;&lt;, &gt;&gt;\nLeft\n\n\n&\nLeft\n\n\n^\nLeft\n\n\n|\nLeft\n\n\n==, !=, &gt;, &gt;=, &lt;, &lt;=, is, is not, in, not in\nLeft\n\n\nnot\nRight\n\n\nand\nLeft\n\n\nor\nLeft\n\n\n=\nRight\n\n\n+=, -=, *=, /=, //=, %=, &=, ^=, |=, &lt;&lt;=, &gt;&gt;=\nRight",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Precedence, Associativity and Type Conversion"
-    ]
-  },
-  {
-    "objectID": "basics/operations/precedence_associativity.html#implicit-type-conversion",
-    "href": "basics/operations/precedence_associativity.html#implicit-type-conversion",
-    "title": "Precedence, Associativity and Type Conversion",
-    "section": "Implicit Type Conversion",
-    "text": "Implicit Type Conversion\n\nAutomatic conversion from one data type to another data type as result of an operation.\n\nPython always converts “smaller” data types to “larger” data types to avoid the loss of information.\n\ninteger_part = 21\nfractional_part = 0.03\n\nprint(\"Datatype of integer_part:\", type(integer_part))\nprint(\"Datatype of fractional_part:\", type(fractional_part))\n\nnew_number = integer_part + fractional_part\n\nprint(\"Value of new_number:\",new_number)\nprint(\"Datatype of new_number:\",type(new_number))\n\nprint(\"Datatype of integer_part:\", type(integer_part))\n\n\ninteger_part = \"21\"\nfractional_part = \"0.03\"\n\nnew_number = integer_part + fractional_part\n\nprint(\"Datatype of integer_part:\", type(integer_part))\nprint(\"Datatype of fractional_part:\", type(fractional_part))\n\nprint(\"Value of new_number:\",new_number)\nprint(\"Datatype of new_number:\",type(new_number))",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "Precedence, Associativity and Type Conversion"
-    ]
-  },
-  {
-    "objectID": "basics/operations/operations.html",
-    "href": "basics/operations/operations.html",
-    "title": "Operations",
+    "objectID": "basics/operations/math_operators.html",
+    "href": "basics/operations/math_operators.html",
+    "title": "Math Operators",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.\n\n\nAn expression is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable, so the following are all legal expressions: 42, x, x+1\n\nWhen you type an expression at the prompt, the interpreter evaluates it, which means that it finds the value of the expression. In this example, x + 1, the interpreter adds one to the current value of x. But it doesn’t display the value unless you tell it to:\n\nx = 42\nx + 1\n\nA statement is a unit of code that has an effect, like creating a variable or displaying a value.\n\nx = 42\nprint(x)\n\nThe first line is an assignment statement that gives a value to x. The second line is a print statement that displays the value of x.\nThe types of statements we have seen so far are assignments and print statements. Other types of statements include:\n\nImport statements: Import a module.\nIf statements: Execute code depending on the value of a condition.\nFor statements: Execute code for each item in a sequence.\nWhile statements: Execute code while a condition is true.\nDef statements: Define a function.\nReturn statements: Exit a function and return a value.\nBreak statements: Exit a loop.\nContinue statements: Skip the rest of the loop body.\n\nWhen you type a statement, the interpreter executes it, which means that it does whatever the statement says. In general, statements don’t have values.\nA program is a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.\nFor example, the script below contains three statements:\n\nx = 42\nprint(x)\nx = x + 1\n\nThe output of this program is 42. The second line displays the value of x, which is 42. The third line increases the value of x by one. But it doesn’t display the value.",
+    "text": "Python and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:\n\n1. Basic Arithmetic Operators\nBoth Python and Java use the same basic arithmetic operators: - Addition (+): Adds two operands. - Subtraction (-): Subtracts the second operand from the first. - Multiplication (*): Multiplies two operands. - Division (/): Divides the first operand by the second. - Modulus (%): Returns the remainder of a division operation.\n\n\n2. Division (/)\n\nPython:\n\nThe / operator performs true division and always returns a float, even if both operands are integers.\nInteger division can be performed using the // operator, which returns the floor of the division.\n\n5 / 2   # Returns 2.5\n5 // 2  # Returns 2\nJava:\n\nThe / operator performs division, but the result depends on the operand types:\n\nIf both operands are integers, integer division is performed, and the result is an integer.\nIf either operand is a floating-point number (float or double), floating-point division is performed, returning a float or double.\n\nint result = 5 / 2;  // Returns 2 (integer division)\ndouble result = 5.0 / 2;  // Returns 2.5 (floating-point division)\n\n\n\n\n3. Exponentiation\n\nPython:\n\nPython has a built-in operator for exponentiation: **.\n\n2 ** 3  # Returns 8\nJava:\n\nJava does not have a built-in exponentiation operator. Instead, you use the Math.pow() method to perform exponentiation.\n\ndouble result = Math.pow(2, 3);  // Returns 8.0\n\n\n\n4. Unary Operators\n\nPython:\n\nSupports unary operators like + and - for positive and negative values.\n\nx = -5\ny = +5\nJava:\n\nJava also supports unary operators + and -, as well as the increment (++) and decrement (--) operators.\n\nint x = -5;\nint y = +5;\nint z = ++x;  // Increments x by 1, then assigns to z\n\n\n\n5. Modulus Operator (%)\n\nPython:\n\nThe % operator returns the remainder of a division operation. It handles both positive and negative numbers, with the result having the same sign as the divisor.\n\n5 % 3   # Returns 2\n-5 % 3  # Returns 1\nJava:\n\nThe % operator also returns the remainder, but the result has the same sign as the dividend.\n\n5 % 3   # Returns 2\n-5 % 3  # Returns -2\n\n\n\n6. Operator Overloading\n\nPython:\n\nSupports operator overloading, allowing operators to be redefined for user-defined classes.\nExample: You can define how + behaves for a custom class.\n\nclass Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\nJava:\n\nDoes not support operator overloading. Operators have fixed behavior based on the data types they are used with.\n\n\n\n\n7. Comparison Operators\n\nPython:\n\nComparison operators (&lt;, &lt;=, &gt;, &gt;=, ==, !=) can be used with numbers, strings, and other types.\nPython also supports chaining comparisons (e.g., 1 &lt; x &lt; 10).\n\nJava:\n\nComparison operators are used primarily with primitive types and do not support chaining like Python.\n\n\n\n\n8. Handling Large Numbers\n\nPython:\n\nPython’s int type automatically handles large integers, with no fixed size limit, constrained only by available memory.\n\nJava:\n\nJava’s int type is a 32-bit signed integer. To handle large integers, you need to use long (64-bit) or BigInteger for arbitrarily large numbers.\n\n\n\n\nSummary:\n\nPython’s operators are more flexible, particularly with automatic type conversions, true division, and operator overloading.\nJava’s operators are more rigid, with clear distinctions between integer and floating-point division, and no operator overloading.\nPython provides a more intuitive experience for mathematical operations, especially for beginners, while Java’s stricter rules align with its statically-typed nature.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Operations"
+      "Operations",
+      "Math Operators"
     ]
   },
   {
-    "objectID": "basics/operations/operations.html#expressions-statements-and-programs",
-    "href": "basics/operations/operations.html#expressions-statements-and-programs",
-    "title": "Operations",
+    "objectID": "basics/operations/builtinfuncs.html",
+    "href": "basics/operations/builtinfuncs.html",
+    "title": "Built-in Functions",
     "section": "",
-    "text": "An expression is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable, so the following are all legal expressions: 42, x, x+1\n\nWhen you type an expression at the prompt, the interpreter evaluates it, which means that it finds the value of the expression. In this example, x + 1, the interpreter adds one to the current value of x. But it doesn’t display the value unless you tell it to:\n\nx = 42\nx + 1\n\nA statement is a unit of code that has an effect, like creating a variable or displaying a value.\n\nx = 42\nprint(x)\n\nThe first line is an assignment statement that gives a value to x. The second line is a print statement that displays the value of x.\nThe types of statements we have seen so far are assignments and print statements. Other types of statements include:\n\nImport statements: Import a module.\nIf statements: Execute code depending on the value of a condition.\nFor statements: Execute code for each item in a sequence.\nWhile statements: Execute code while a condition is true.\nDef statements: Define a function.\nReturn statements: Exit a function and return a value.\nBreak statements: Exit a loop.\nContinue statements: Skip the rest of the loop body.\n\nWhen you type a statement, the interpreter executes it, which means that it does whatever the statement says. In general, statements don’t have values.\nA program is a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.\nFor example, the script below contains three statements:\n\nx = 42\nprint(x)\nx = x + 1\n\nThe output of this program is 42. The second line displays the value of x, which is 42. The third line increases the value of x by one. But it doesn’t display the value.",
+    "text": "Java provides a set of built-in functions that perform common operations such as mathematical calculations, string manipulation, and input/output operations. These functions are part of the Java standard library and can be used directly in your programs. In this tutorial, we will learn about some of the most commonly used built-in functions in Java.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Operations"
+      "Operations",
+      "Built-in Functions"
+    ]
+  },
+  {
+    "objectID": "basics/operations/builtinfuncs.html#inputoutput-functions",
+    "href": "basics/operations/builtinfuncs.html#inputoutput-functions",
+    "title": "Built-in Functions",
+    "section": "Input/Output Functions",
+    "text": "Input/Output Functions\nJava provides a set of input/output functions that allow you to read data from the standard input, write data to the standard output, and perform file I/O operations. Here are some examples of input/output functions in Java:\n\n\n\n\n\n\n\n\nFunction\nDescription\nExample\n\n\n\n\nSystem.out.println(x)\nPrints the value of x to the standard output\nSystem.out.println(\"Hello\") prints Hello\n\n\nSystem.in.read()\nReads a single character from the standard input\nchar c = (char) System.in.read() reads a character\n\n\n\nReading from the standard input using System.in.read() can be cumbersome, so Java provides the Scanner class to simplify input operations. Here is an example of reading an integer from the standard input using Scanner:\nimport java.util.Scanner;\n\npublic class ReadInput {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter an integer: \");\n        int num = scanner.nextInt();\n        System.out.println(\"You entered: \" + num);\n        scanner.close();\n    }\n}",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Built-in Functions"
+    ]
+  },
+  {
+    "objectID": "basics/operations/builtinfuncs.html#mathematical-functions",
+    "href": "basics/operations/builtinfuncs.html#mathematical-functions",
+    "title": "Built-in Functions",
+    "section": "Mathematical Functions",
+    "text": "Mathematical Functions\nJava provides a set of mathematical functions that allow you to perform common mathematical operations such as rounding, exponentiation, and trigonometry. Here are some examples of mathematical functions in Java:\n\n\n\n\n\n\n\n\nFunction\nDescription\nExample\n\n\n\n\nMath.abs(x)\nReturns the absolute value of x\nMath.abs(-5) returns 5\n\n\nMath.pow(x, y)\nReturns x raised to the power of y\nMath.pow(2, 3) returns 8\n\n\nMath.sqrt(x)\nReturns the square root of x\nMath.sqrt(16) returns 4\n\n\nMath.round(x)\nRounds x to the nearest integer\nMath.round(3.5) returns 4\n\n\nMath.max(x, y)\nReturns the larger of x and y\nMath.max(10, 20) returns 20\n\n\nMath.min(x, y)\nReturns the smaller of x and y\nMath.min(10, 20) returns 10\n\n\nMath.sin(x)\nReturns the sine of x in radians\nMath.sin(Math.PI/2) returns 1.0\n\n\nMath.cos(x)\nReturns the cosine of x in radians\nMath.cos(0) returns 1.0\n\n\nMath.tan(x)\nReturns the tangent of x in radians\nMath.tan(Math.PI/4) returns 1.0",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Built-in Functions"
+    ]
+  },
+  {
+    "objectID": "basics/operations/builtinfuncs.html#string-functions",
+    "href": "basics/operations/builtinfuncs.html#string-functions",
+    "title": "Built-in Functions",
+    "section": "String Functions",
+    "text": "String Functions\nJava provides a set of string functions that allow you to manipulate strings in various ways. Here are some examples of string functions in Java:\n\n\n\n\n\n\n\n\nFunction\nDescription\nExample\n\n\n\n\nstr.length()\nReturns the length of the string str\n\"Hello\".length() returns 5\n\n\nstr.charAt(index)\nReturns the character at the specified index\n\"Hello\".charAt(0) returns H\n\n\nstr.substring(start)\nReturns a substring starting from start index\n\"Hello\".substring(1) returns ello\n\n\nstr.indexOf(substr)\nReturns the index of the first occurrence of substr\n\"Hello\".indexOf(\"l\") returns 2\n\n\nstr.toUpperCase()\nConverts the string to uppercase\n\"hello\".toUpperCase() returns HELLO\n\n\nstr.toLowerCase()\nConverts the string to lowercase\n\"HELLO\".toLowerCase() returns hello\n\n\n\nStringBuilder and StringBuffer classes are used to create mutable strings in Java. These classes provide methods for appending, inserting, deleting, and modifying string content.\nSome commonly used methods of StringBuilder and StringBuffer classes are:\n\n\n\n\n\n\n\n\nMethod\nDescription\nExample\n\n\n\n\nappend(str)\nAppends the string str to the StringBuilder\nsb.append(\"Hello\") appends Hello\n\n\ninsert(index, str)\nInserts the string str at the specified index\nsb.insert(0, \"World\") inserts World at the beginning\n\n\ndelete(start, end)\nDeletes the characters from start to end\nsb.delete(0, 5) deletes characters from 0 to 4\n\n\nreverse()\nReverses the characters in the StringBuilder\nsb.reverse() reverses the content",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Built-in Functions"
     ]
   },
   {
@@ -784,7 +1064,20 @@
     "href": "basics/controls/loops.html",
     "title": "Loops",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.",
+    "text": "Loops in Java are used to execute a block of code repeatedly. They allow you to iterate over a sequence of elements or execute a block of code until a certain condition is met. In this tutorial, we will learn about loops in Java.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Control Flow",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "basics/controls/loops.html#for-loop",
+    "href": "basics/controls/loops.html#for-loop",
+    "title": "Loops",
+    "section": "for Loop",
+    "text": "for Loop\nThe for loop is used to iterate over a sequence of elements a fixed number of times. It consists of three parts: initialization, condition, and increment/decrement. The basic syntax of the for loop is as follows:\nfor (initialization; condition; increment/decrement) {\n    // code block to be executed\n}\nHere is an example of using the for loop to print numbers from 1 to 5:\nfor (int i = 1; i &lt;= 5; i++) {\n    System.out.println(i);\n}\nIn the above example, the for loop iterates over the numbers from 1 to 5 and prints each number to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -796,8 +1089,8 @@
     "objectID": "basics/controls/loops.html#while-loop",
     "href": "basics/controls/loops.html#while-loop",
     "title": "Loops",
-    "section": "while loop",
-    "text": "while loop\n\nLoops allow conditional repetition of a set of statements.\nIn simple terms, loops repeatedly execute a block of indented statements as long as a corresponding boolean condition evaluates to True.\nwhile loops are the most basic looping construct in the most programming languages, including Python.\n\nRecall, for if...else statements:\n\nif boolean_condition_A: \n    #Indented Block B\nelse:\n    #Indented Block C\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIt is called a loop because flow of execution keeps looping back to the start of the while statement until the condition becomes False.\nWhen the condition becomes False, flow of execution moves to the statement that follows the indented while block.\nThe net effect is that the loop’s body is executed repeatedly while the condition at the top is True.\nEach execution of the loop’s body is called an iteration and the variable(s) in the condition are called iterator(s).\nThe while statement consists of:\n\na header line with a boolean condition\na body of one or more indented statements\n\n\n\nstatement 0\nwhile (boolean condition): &gt; statement 1\n&gt; statement 2\n.\n.\n.\nstatement n\nstatement n+1\n\ni = 0\n\nwhile i &lt; 10:\n    \n    print(i)\n    \n    i = i + 1\n    \nprint(\"Outside loop\")\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\nOutside loop",
+    "section": "while Loop",
+    "text": "while Loop\nThe while loop is used to execute a block of code repeatedly as long as a specified condition is true. The loop continues to execute until the condition becomes false. The basic syntax of the while loop is as follows:\nwhile (condition) {\n    // code block to be executed\n}\nHere is an example of using the while loop to print numbers from 1 to 5:\n\nint i = 1;\n\nwhile (i &lt;= 5) {\n    System.out.println(i);\n    i++;\n}\nIn the above example, the while loop iterates over the numbers from 1 to 5 and prints each number to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -806,11 +1099,11 @@
     ]
   },
   {
-    "objectID": "basics/controls/loops.html#loop-design-pattern",
-    "href": "basics/controls/loops.html#loop-design-pattern",
+    "objectID": "basics/controls/loops.html#do-while-loop",
+    "href": "basics/controls/loops.html#do-while-loop",
     "title": "Loops",
-    "section": "Loop Design Pattern",
-    "text": "Loop Design Pattern\n\nMost loops (not all of them) have the following common parts, in this order:\n\n\nInitialization of iterator, result and other variables.\nContinuation condition (a.k.a. Termination condition)\nBody of the loop (Indented)\nUpdate of result and iterator variables (Indented)\n\nLast lines of the body\n\n\ninitialization\nwhile ( continuation-condition ) { &gt; body\n&gt; update\n\\(summ = \\sum_{i=1}^{n} k\\)\n\ndef summation_k(k, n):\n\n    #initialization result\n    summ = 0 \n\n    #initialization iterator\n    i = 0    \n    \n    #condition\n    while i &lt; n: \n        \n        #update of result\n        summ = summ + k\n        \n        #update of iterator\n        i = i + 1\n        \n    return summ\n\nprint(summation_k(10, 10))\n\n100\n\n\n\\(\\sum_{i=1}^{n} i\\)\n\n\ndef summation_i(n):\n\n    summ = 0\n    i = 0\n    while i &lt;= n:\n        summ = summ + k\n        i = i + 1\n\n    return summ",
+    "section": "do-while Loop",
+    "text": "do-while Loop\nThe do-while loop is similar to the while loop, but the condition is checked after the block of code is executed. This means that the block of code is executed at least once, even if the condition is false. The basic syntax of the do-while loop is as follows:\ndo {\n    // code block to be executed\n} while (condition);\nHere is an example of using the do-while loop to print numbers from 1 to 5:\nint i = 1;\n\ndo {\n    System.out.println(i);\n    i++;\n} while (i &lt;= 5);\nIn the above example, the do-while loop iterates over the numbers from 1 to 5 and prints each number to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -819,11 +1112,11 @@
     ]
   },
   {
-    "objectID": "basics/controls/loops.html#infinite-loops",
-    "href": "basics/controls/loops.html#infinite-loops",
+    "objectID": "basics/controls/loops.html#loop-control-statements",
+    "href": "basics/controls/loops.html#loop-control-statements",
     "title": "Loops",
-    "section": "Infinite Loops",
-    "text": "Infinite Loops\n\ni = 0\n\nwhile i &gt;= 0:\n    \n    print(i)\n    i = i + 1\n\nprint(\"Outside loop\")",
+    "section": "Loop Control Statements",
+    "text": "Loop Control Statements\nJava provides loop control statements that allow you to control the flow of the loop. The loop control statements include break, continue, and return.\n\nbreak Statement\nThe break statement is used to exit the loop prematurely. It is often used to terminate the loop when a certain condition is met. When the break statement is encountered, the loop is terminated, and the control is transferred to the statement following the loop.\nHere is an example of using the break statement to exit a loop when the value of i is 3:\n\nfor (int i = 1; i &lt;= 5; i++) {\n    if (i == 3) {\n        break;\n    }\n    System.out.println(i);\n}\nIn the above example, the loop is terminated when the value of i is 3.\n\n\ncontinue Statement\nThe continue statement is used to skip the current iteration of the loop and continue with the next iteration. It is often used to skip certain elements in the loop based on a condition.\nHere is an example of using the continue statement to skip printing even numbers:\n\nfor (int i = 1; i &lt;= 5; i++) {\n    if (i % 2 == 0) {\n        continue;\n    }\n    System.out.println(i);\n}\nIn the above example, the loop skips printing even numbers using the continue statement.\n\n\nreturn Statement\nThe return statement is used to exit a method prematurely. When the return statement is encountered inside a loop, the loop is terminated, and the control is transferred back to the caller of the method.\nHere is an example of using the return statement inside a loop:\n\npublic void printNumbers() {\n    for (int i = 1; i &lt;= 5; i++) {\n        if (i == 3) {\n            return;\n        }\n        System.out.println(i);\n    }\n}\nIn the above example, the loop is terminated when the value of i is 3 using the return statement.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -832,11 +1125,11 @@
     ]
   },
   {
-    "objectID": "basics/controls/loops.html#break",
-    "href": "basics/controls/loops.html#break",
+    "objectID": "basics/controls/loops.html#nested-loops",
+    "href": "basics/controls/loops.html#nested-loops",
     "title": "Loops",
-    "section": "break",
-    "text": "break\n\nFor immediately exiting the loop i.e. Python jumps out of the loop’s body (past the entire loop statement) when it encounters a break statement\nGenerally used within an if statement within the loop’s body\nInside the loop’s body, the code that follows the break statement is never executed",
+    "section": "Nested Loops",
+    "text": "Nested Loops\nNested loops are loops inside another loop. They are used to perform repetitive tasks that require multiple levels of iteration. Nested loops can be of any type, such as for, while, or do-while.\nHere is an example of using nested loops to print a pattern:\n\nfor (int i = 1; i &lt;= 5; i++) {\n    for (int j = 1; j &lt;= i; j++) {\n        System.out.print(\"* \");\n    }\n    System.out.println();\n}\nIn the above example, the nested loops are used to print a pattern of stars.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -845,183 +1138,88 @@
     ]
   },
   {
-    "objectID": "basics/controls/loops.html#for-loops",
-    "href": "basics/controls/loops.html#for-loops",
-    "title": "Loops",
-    "section": "for loops",
-    "text": "for loops\n\nfor loops are used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Loops"
-    ]
-  },
-  {
-    "objectID": "basics/controls/loops.html#continue",
-    "href": "basics/controls/loops.html#continue",
-    "title": "Loops",
-    "section": "continue",
-    "text": "continue",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Loops"
-    ]
-  },
-  {
-    "objectID": "basics/controls/conditionals.html",
-    "href": "basics/controls/conditionals.html",
-    "title": "Conditionals",
+    "objectID": "basics/controls/controls.html",
+    "href": "basics/controls/controls.html",
+    "title": "Control Flow",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.",
+    "text": "Programs (multiple lines of code) run each line of code sequentially top to bottom\nStatements (single line of code) run right to left\n\nExpression on right hand side of assignment/boolean operator is executed first\nThen, left hand expression of assignment operator is executed\n\nExpressions ( &lt; 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run left to right.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
+      "Control Flow"
     ]
   },
   {
-    "objectID": "basics/controls/conditionals.html#flow-chart",
-    "href": "basics/controls/conditionals.html#flow-chart",
-    "title": "Conditionals",
-    "section": "Flow Chart",
-    "text": "Flow Chart",
+    "objectID": "basics/controls/controls.html#flow-directionality-of-execution",
+    "href": "basics/controls/controls.html#flow-directionality-of-execution",
+    "title": "Control Flow",
+    "section": "",
+    "text": "Programs (multiple lines of code) run each line of code sequentially top to bottom\nStatements (single line of code) run right to left\n\nExpression on right hand side of assignment/boolean operator is executed first\nThen, left hand expression of assignment operator is executed\n\nExpressions ( &lt; 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run left to right.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
+      "Control Flow"
     ]
   },
   {
-    "objectID": "basics/controls/conditionals.html#syntax-of-if-else",
-    "href": "basics/controls/conditionals.html#syntax-of-if-else",
-    "title": "Conditionals",
-    "section": "Syntax of if … else",
-    "text": "Syntax of if … else\nif boolean condition :\nTrue statement 1\n.\n.\n.\nTrue statement n \nelse :\nFalse statement 1 \n. \n. \n. \nFalse statement m \n\na = 3\nif a &gt; 2:\n    print('Greater than 2')\nelse:\n    print(\"Less than or equal to 2\")  \n    print('Second else statement')\nprint('Regardless of condition')",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/functions.html",
+    "href": "basics/abstractions/functions.html",
+    "title": "Functions",
+    "section": "",
+    "text": "Functions in Java are blocks of code that perform a specific task. They are used to break down the program into smaller and modular pieces. Functions help in organizing the code and making it more readable and maintainable. In this tutorial, we will learn about functions in Java."
   },
   {
-    "objectID": "basics/controls/conditionals.html#boolean-operators",
-    "href": "basics/controls/conditionals.html#boolean-operators",
-    "title": "Conditionals",
-    "section": "Boolean Operators",
-    "text": "Boolean Operators\n\nThese operators return True or False (i.e. boolean data type).\nWe will use these for conditions in if statements:\n\n\n\n\n\n\n\n\n\nOperator\nDescription\nExample.\n\n\n\n\n==\nReturns True if left hand operand is equal to right hand operand. Otherwise, returns False\na+b == b+a\n\n\n!=\nReturns True if left hand operand is NOT equal to right hand operand. Otherwise, returns False.\na*b != b/a\n\n\n&lt;\nReturns True if left hand operand is less than right hand operand. Otherwise, returns False.\nb/a &lt; b\n\n\n&gt;\nReturns True if left hand operand is greater than right hand operand. Otherwise, returns False.\na*b &gt; b\n\n\n&lt;=\nReturns True if left hand operand is less than or equal to right hand operand. Otherwise, returns False.\na-b &lt;= a\n\n\n&gt;=\nReturns True if left hand operand is greater than or equal to right hand operand. Otherwise, returns False.\na*b &gt;= b*a",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/functions.html#declaring-a-function",
+    "href": "basics/abstractions/functions.html#declaring-a-function",
+    "title": "Functions",
+    "section": "Declaring a Function",
+    "text": "Declaring a Function\nA function in Java is declared using the static keyword followed by the return type, function name, and parameters. The return type specifies the type of value that the function will return. If the function does not return any value, the return type is void. Here is an example of a function declaration:\npublic static int add(int a, int b) {\n    return a + b;\n}"
   },
   {
-    "objectID": "basics/controls/conditionals.html#logical-operators",
-    "href": "basics/controls/conditionals.html#logical-operators",
-    "title": "Conditionals",
-    "section": "Logical Operators",
-    "text": "Logical Operators\nWe will use these for conditions in if statements:\n\n\n\n\n\n\n\nOperator\nDescription\n\n\n\n\nnot\nInverts the existing boolean value i.e. not True = False; not False = True\n\n\nand\nTrue iff all boolean expressions are True, False otherwise\n\n\nor\nTrue iff any boolean expression is True, False iff all are False\n\n\n\n\na = 0\nb = 3\n\nif not (((b != 3) or (a &lt; 1)) and (b !=0)):\n    print('South')\nelse:\n    print('Carolina')",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/oop1.html",
+    "href": "basics/abstractions/oop1.html",
+    "title": "User-defined Types",
+    "section": "",
+    "text": "Most modern programming languages provide a way to define new data types through the use of classes.\nA particular class essentially defines a new user-defined data type detailing how a particular kind of data is going to be structured and how it can be manipulated.\nA class therefore, at its essence, is a blueprint for creating objects (of that class). An object is an instance of a class, similar to how 7 is an instance of the int class and “Hello World!” is an instance of the str class."
   },
   {
-    "objectID": "basics/controls/conditionals.html#indentation",
-    "href": "basics/controls/conditionals.html#indentation",
-    "title": "Conditionals",
-    "section": "Indentation",
-    "text": "Indentation\n\nThe body of the if and else statements start with an indentation (whitespace at the beginning of a line) and the first unindented line marks the end.\nIf the statements in the body are not indented OR the intendentation is not consistent, IndentationError would result\n\n\na = 1\nif a &gt; 2:\n    print('Greater than 2')\nelse:\n    print(\"Less than 2\")  \n    print('Today is Friday')\n    print(\"Abc\")\n    \nprint(\"we have a long weekend coming up\")",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/oop1.html#class-keyword",
+    "href": "basics/abstractions/oop1.html#class-keyword",
+    "title": "User-defined Types",
+    "section": "class keyword",
+    "text": "class keyword\n\nConsider the concept of a Point in euclidean space.\nIn two dimensions, a point is two numbers (coordinates) that are treated collectively as a single object. In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, (0, 0) represents the origin, and (x, y) represents the point \\(x\\) units to the right and \\(y\\) units up from the origin.\nA natural way to represent a point in Python is with two numeric values. The question, then, is how to group these two values into a compound object. The quick and dirty solution is to use a list or tuple, and for some applications that might be the best choice.\nAn alternative is to define a new user-defined compound type, also called a class. This approach involves a bit more effort, but it has advantages that will be apparent soon.\nA class definition looks like this:\n\nclass Point:\n    \"\"\"Represents a point in 2-D space.\"\"\"\n    pass\nclass Point {\n    // instance variables\n    double x;\n    double y;\n}\nClass definitions can appear anywhere in a program, but they are usually near the beginning (after the import statements). The syntax rules for a class definition are the same as for other compound statements. There is a header which begins with the keyword, class, followed by the name of the class, and ending with a colon.\nThis definition creates a new class called Point. The pass statement has no effect; it is only necessary because a compound statement must have something in its body. A docstring could serve the same purpose:\n\nclass Point:\n    \"Point class for storing mathematical points.\"\n    pass\n\nBy creating the Point class, we created a new type, also called Point. The members of this type are called instances of the type or objects. Creating a new instance is called instantiation, and is accomplished by calling the class. Classes, like functions, are callable, and we instantiate a Point object by calling the Point class:\n\ntype(Point)\n\n\np = Point()\ntype(p)\n\nThe variable p is assigned a reference to a new Point object.\nIt may be helpful to think of a class as a factory for making objects, so our Point class is a factory for making points. The class itself isn’t an instance of a point, but it contains the machinary to make point instances."
   },
   {
-    "objectID": "basics/controls/conditionals.html#if-else-vs.-booleans",
-    "href": "basics/controls/conditionals.html#if-else-vs.-booleans",
-    "title": "Conditionals",
-    "section": "If … else vs. booleans",
-    "text": "If … else vs. booleans\n\ncollege = 4\nexperience = 0\ngpa = 3.7\nalready_employee = False\n\ngood_candidate = (college &gt;= 4 and (experience &gt;= 5 or gpa &gt; 3.5) and not already_employee)\nbad_candidate = not good_candidate\n\n## A. \nanswer = (good_candidate*\"Hired!\") + (bad_candidate*\"We regret to inform you...\")\nprint(answer)\n\n## B. \nif good_candidate: \n    answer = \"Hired!\"\nelse:\n    answer = \"We regret to inform you... \"\nprint(answer)\n\n## A. == B.",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/oop1.html#dot-.-operator",
+    "href": "basics/abstractions/oop1.html#dot-.-operator",
+    "title": "User-defined Types",
+    "section": "Dot . operator",
+    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```pdekdiph https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
   },
   {
-    "objectID": "basics/controls/conditionals.html#nested-if-else",
-    "href": "basics/controls/conditionals.html#nested-if-else",
-    "title": "Conditionals",
-    "section": "Nested if else",
-    "text": "Nested if else\n\n#C.\n\nif (college &gt;= 4):\n    if (experience &gt;= 5 or gpa &gt; 3.5):\n        if not already_employee:\n            print(\"Hired\")\nelse:\n    print(\"We regret to inform you...\")\n    \n#A. == B. == C.\n\n\n\n\nCriteria\nLetter Grade\n\n\n\n\nTotal points ≥ 90%\nA\n\n\n80% ≤ Total points &lt; 90%\nB\n\n\n70% ≤ Total points &lt; 80%\nC\n\n\n60% ≤ Total points &lt; 70%\nD\n\n\nTotal points &lt; 60%\nF\n\n\n\n\n\"\"\"Implement the letter grade \ntable above, using if-else\n\"\"\"\n\n#Inputs, assume percentage \ntotal_points = 75\n\nletter_grade = \"TBD\"\n\nif total_points &lt;60:\n    letter_grade = \"F\"\nelse:\n    if (total_points &lt; 70) and (total_points &gt;= 60):\n        letter_grade = \"D\"    \n    else:\n        if (total_points &lt; 80) and (total_points &gt;= 70):\n            letter_grade = \"C\"    \n        else:   \n            if total_points &lt; 90 and total_points &gt;= 80:\n                letter_grade = \"B\"\n            else: \n                letter_grade = \"A\"\n#                 if totals_points &lt; 100 and total_points &gt;= 90:\n#                 else:\n#                     letter_grade = \"A+\"\n\n#Output(s)\nprint(letter_grade)\n\nC",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/oop1.html#methods",
+    "href": "basics/abstractions/oop1.html#methods",
+    "title": "User-defined Types",
+    "section": "Methods",
+    "text": "Methods\nThe second part of the class definition is a suite of methods. A method is a function that is associated with a particular class . As examples below show, the syntax for defining a method is the same as for defining a function.\n\n\n\n\n\nInstance Methods\nInstance methods are defined inside the body of the class definition. They are used to perform operations and manipulate the instance attributes of our objects. The vast majority of the methods in a class are instance methods.\nThe first input to all instance methods is self, which is a reference to the specific instance (object) of the class on which the method is called.\n\nself\nThe self parameter is a reference to the instance of the class. It is used to access variables that belong to the class. It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any function in the class.\nWhen you create a new instance of the class, Python automatically determines what self is (the instance of the class) and passes it to the __init__ method.\n\n\n__init__\nSince our Point class is intended to represent two dimensional mathematical points, ALL point instances ought to have x and y attributes, but that is not yet so with our Point objects.\n\np2 = Point()\np2.x\n\nTo solve this problem we add an initialization method to our class.\n\nclass Point:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n\nA method behaves like a function but it is part of an object. Like a data attribute it is accessed using dot notation. The initialization method is called automatically when the class is called.\nLet’s add another method, distance_from_origin, to see better how methods work:\nclass Point:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n\n    def distance_from_origin(self):\n        return ((self.x ** 2) + (self.y ** 2)) ** 0.5\nLet’s create a few point instances, look at their attributes, and call our new method on them:\n&gt;&gt;&gt; p = Point(3, 4)\n&gt;&gt;&gt; p.x\n3\n&gt;&gt;&gt; p.y\n4\n&gt;&gt;&gt; p.distance_from_origin()\n5.0\n&gt;&gt;&gt; q = Point(5, 12)\n&gt;&gt;&gt; q.x\n5\n&gt;&gt;&gt; q.y\n12\n&gt;&gt;&gt; q.distance_from_origin()\n13.0\n&gt;&gt;&gt; r = Point()\n&gt;&gt;&gt; r.x\n0\n&gt;&gt;&gt; r.y\n0\n&gt;&gt;&gt; r.distance_from_origin()\n0.0\nWhen defining a method, the first parameter refers to the instance being created. It is customary to name this parameter self. In the example session above, the self parameter refers to the instances p, q, and r respectively.\n\n\nGetters and Setters\nIn general it is considered bad practice to access and modify the attributes of an object directly.\nInstead, it is better to use getter and setter methods to access and modify the attributes of an object.\nA getter method is a method that returns the value of an attribute of an object. A setter method is a method that sets the value of an attribute of an object.\nclass Point:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n\n    def get_x(self):\n        return self.x\n\n    def set_x(self, x):\n        self.x = x\n\n    def get_y(self):\n        return self.y\n\n    def set_y(self, y):\n        self.y = y\nThe get_x and get_y methods are getter methods for the x and y attributes respectively. The set_x and set_y methods are setter methods for the x and y attributes respectively.\nThe following code demonstrates how to use the getter and setter methods:\n\np = Point(3, 4)\nprint(\"p.x: \", p.get_x())\nprint(\"p.y: \", p.get_y())\n\np.set_x(100)\np.set_y(200)\nprint(\"p.x: \", p.get_x())\nprint(\"p.y: \", p.get_y())\n\n\n\n\nClass Methods\nA class method is a method that is bound to the class and not the object of the class. They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance.\nThey can modify a class state that would apply across all the instances of the class. For example it can modify a class variable that will be applicable to all the instances.\nClass methods are defined using the @classmethod decorator. They take a cls parameter that points to the class and not the object instance.\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\n\n    @classmethod\n    def get_n(cls):\n        return cls.n\n\n\nStatic Methods\nStatic methods are methods that are not bound to an instance of a class.\nStatic methods are defined using the @staticmethod decorator. They do NOT take the self parameter and can be called on the class itself.\nclass Point:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n\n    @staticmethod\n    def distance_from_origin(x, y):\n        return ((x ** 2) + (y ** 2)) ** 0.5"
   },
   {
-    "objectID": "basics/controls/conditionals.html#if-elif-else",
-    "href": "basics/controls/conditionals.html#if-elif-else",
-    "title": "Conditionals",
-    "section": "if … elif … else",
-    "text": "if … elif … else\n\nThe elif keyword allow additional (boolean) conditions, in case the condition for if was False\nYou can have as many elifs as you want\nGenerally, a more readable alternative to nested if.. else statements\n\nSyntax:\nif test expression:\nBody of if \nelif test expression:\nBody of elif\n   \nelse :\nBody of else",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
-  },
-  {
-    "objectID": "basics/controls/conditionals.html#elif-flowchart",
-    "href": "basics/controls/conditionals.html#elif-flowchart",
-    "title": "Conditionals",
-    "section": "elif flowchart",
-    "text": "elif flowchart\n\n\n\"\"\"Elif example\"\"\"\n\na = 33\nb = 33\n\n\"\"\"A\"\"\"\nif b &gt; a:\n    print(\"Block A - b is greater than a\")\nelif b &lt; a:\n    print(\"Block A - b is less than a\")\nelse:\n    print(\"A == B\") \n    \n\"\"\"B\"\"\"\nif b &gt; a:\n    print(\"Block A - b is greater than a\")\nelse:\n    if b &lt; a:\n        print(\"Block A - b is less than a\")\n    else:\n        print(\"A == B\")\n        \n\nA == B\n\n\n\n\n\nCriteria\nLetter Grade\n\n\n\n\nTotal points ≥ 90%\nA\n\n\n80% ≤ Total points &lt; 90%\nB\n\n\n70% ≤ Total points &lt; 80%\nC\n\n\n60% ≤ Total points &lt; 70%\nD\n\n\nTotal points &lt; 60%\nF\n\n\n\n\n\"\"\"Implement the letter grade \ntable above, using if-else\n\"\"\"\n\n#Inputs, assume percentage \ntotal_points = 85\n\nif total_points &gt;= 90 and total_points &lt;= 100:\n    letter_grade = \"A\"\nelif total_points &gt;= 80:# and total_points &lt;= 89:\n    letter_grade = \"B\"\nelif total_points &gt;= 70:# and total_points &lt;= 79:\n    letter_grade = \"C\"\nelif total_points &gt;= 60:# and total_points &lt;= 69:\n    letter_grade = \"D\"\nelse:\n    letter_grade = \"F\"\n\nprint(letter_grade)\n\nA",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
-  },
-  {
-    "objectID": "basics/controls/conditionals.html#exercises",
-    "href": "basics/controls/conditionals.html#exercises",
-    "title": "Conditionals",
-    "section": "Exercises",
-    "text": "Exercises\nPlease re-implement solutions to the following problems from previous classes, labs and assignments, now using if … else statements\nQ1. Tip 20% for good service, tip 10% otherwise (from Lecture 1.3.)\n\ncheque_amount = 100\n\nservice_quality = input(\"Our bill is $\"+str(cheque_amount)+\". How much should we tip? Was the service good? \")\n\n# #True if input is \"Yes\"\ngood_service = service_quality == \"Yes\"\n\nbad_service  = not good_service\n\ntwenty_percent_tip = 0.2 * cheque_amount\nten_percent_tip    = 0.1 * cheque_amount\n\ntip = (good_service * twenty_percent_tip) + (bad_service * ten_percent_tip)\n\nprint(\"Let's tip $\", tip)\n\nQ2. Round a floating point number, without using round() (from Week-1 lab)\n\nAssume inputs are always positive and you are to only round to the nearest integer (no digit precision).\nRound up (ceil) for .5\n\n\n#Input\nfloat_number = 7.6\n\n#Insert your line(s) of code here\n\n#Output\nrounded = \n\nQ3. Convert time from 12-hr. format to 24-hr. format (Q2 from Assignment 1)\nGiven three integers clock_12hrs_hrs, clock_12hrs_mins and pm representing hours, minutes and AM/PM respectively in 12-hour time format, set integers clock_24hrs_hrs and clock_24hrs_mins to corresponding hours and minutes in 24-hour format time.\npm \\(=0\\) indicates input time is AM and pm \\(= 1\\) means otherwise.\nFeel free to introduce new variables, as needed.\nConstraints on input:\n$0 $ pm $ $\n$1 $ clock_12hrs_hrs \\(\\leq 12\\)\n$ 0 $ clock_12hrs_mins $ $\nExample 1\nInput : 7:30 PM\nclock_12hrs_hrs  = 7\nclock_12hrs_mins = 30\npm = 1\nOutputs: 19:30\nclock_24hrs_hrs = 19\nclock_24hrs_mins = 30\nExample 2\nInput : 3:14 AM\nclock_12hrs_hrs  = 3\nclock_12hrs_mins = 14\npm = 0\nOutputs: 3:14\nclock_24hrs_hrs = 3\nclock_24hrs_mins = 14\nExample 3\nInput : 12:00 PM\nclock_12hrs_hrs  = 12\nclock_12hrs_mins = 0\npm = 1\nOutputs: 12:00\nclock_24hrs_hrs = 12\nclock_24hrs_mins = 0\nExample 4\nInput : 12:00 AM\nclock_12hrs_hrs  = 12\nclock_12hrs_mins = 0\npm = 0\nOutputs: 0:00\nclock_24hrs_hrs = 0\nclock_24hrs_mins = 0\nMake sure you test your code for inputs other than the ones provided above\n\n\"\"\" Inputs \"\"\"\nclock_12hrs_hrs   = 12  # Test for values: 1, 2, 3,...., 10, 11, 12\nclock_12hrs_mins  = 0 # Test for values: 0, 1, 2, 3,...., 57, 58, 59 \npm                = 0  # Test for values: 0, 1\n\n\"\"\"Insert your lines of code here\n\nOutputs\n------- \n\"\"\"\n\n\nclock_24hrs_hrs  = clock_12hrs_hrs % 12 + 12*pm\nclock_24hrs_mins = clock_12hrs_mins\n\nprint(\"Inputs: \", clock_12hrs_hrs, clock_12hrs_mins, pm)\nprint(\"Outputs: \",  clock_24hrs_hrs, clock_24hrs_mins)",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Control Flow",
-      "Conditionals"
-    ]
+    "objectID": "basics/abstractions/oop1.html#public-protected-and-private-access-levels",
+    "href": "basics/abstractions/oop1.html#public-protected-and-private-access-levels",
+    "title": "User-defined Types",
+    "section": "Public, Protected and Private Access Levels",
+    "text": "Public, Protected and Private Access Levels\nIn Python, there are 3 types of access levels:\n\nPublic attributes can be accessed by anyone.\nProtected attributes are those attributes that follow the single underscore _ convention. These attributes should not be accessed directly. However, they can be accessed and modified in a derived class. Accessing protected attributes directly is not considered a good practice.\nPrivate attributes are those attributes that follow the double underscore __ convention. These attributes should not be accessed directly. However, they can be accessed and modified in a derived class. Accessing private attributes directly is not allowed and will result in an AttributeError.\n\n\nclass Car:\n    def __init__(self):\n        self.__maxspeed = 200\n        self._name = \"Supercar\"\n\n    def drive(self):\n        print('driving. maxspeed ' + str(self.__maxspeed))\n\ncar = Car()\ncar.drive()\nprint(car._name)\nprint(car.__maxspeed)\n\ndriving. maxspeed 200\nSupercar\n\n\n\n---------------------------------------------------------------------------\n\nAttributeError                            Traceback (most recent call last)\n\nCell In[2], line 12\n\n     10 car.drive()\n\n     11 print(car._name)\n\n---&gt; 12 print(car.__maxspeed)\n\n\n\nAttributeError: 'Car' object has no attribute '__maxspeed'"
   },
   {
     "objectID": "basics/data.html",
     "href": "basics/data.html",
     "title": "Data",
     "section": "",
-    "text": "This page is &lt;span style=\"color:red\"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style=\"color:red\"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.\nData is to computer science what chemicals are to chemistry or organisms are to biology.\nData is the raw material that we process, analyze, and transform into insight and knowledge.\nIn this section, we will learn about how to represent elementary data in Python. Later, we will learn about how to represent more complex data structures.",
+    "text": "The atomic indivisible unit of data in computer programming is called a value.\nValues are the most basic things that a computer program manipulates or calculates.\n\nFor example, the number 42 is a value. So is \"Hello World!\".\n\nEach value belongs to a type.\nThe type of a value determines its interpretation by the computer and the operations that can be performed on it.\n\nFor example, the value 42 is of type int (short for integer) and the value \"Hello World!\" is of type str (short for string, so-called because it contains a string of letters).\n\nIn Java, every value has a type, and every type is defined by the Java programming language.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
+      "Abstractions",
       "Data"
     ]
   },
@@ -1029,59 +1227,64 @@
     "objectID": "basics/data.html#values-and-types",
     "href": "basics/data.html#values-and-types",
     "title": "Data",
-    "section": "Values and Types",
-    "text": "Values and Types\n\nThe atomic indivisible unit of data in computer programming is called a value.\nValues are the most basic things that a computer program manipulates or calculates.\n\nFor example, the number 42 is a value. So is \"Hello World!\".\n\nEach value belongs to a type.\nThe type of a value determines its interpretation by the computer and the operations that can be performed on it.\n\nFor example, the value 42 is of type int (short for integer) and the value \"Hello World!\" is of type str (short for string, so-called because it contains a string of letters).\nPython comes with the following built-in data types:\n\n\n\n\n\n\n\n\n\n\n\nPython Data Type\nDescription\nCategory\nMutable\nExample Values\n\n\n\n\nint\nIntegers\nNumeric\n❌\n42, 0, -1, 10000000000\n\n\nfloat\nFloating point numbers\nNumeric\n❌\n3.14159, 0.0, -1.0, 1.0e10\n\n\ncomplex\nComplex numbers\nNumeric\n❌\n3 + 4j, 1j\n\n\nbool\nBoolean values\nBoolean\n❌\nTrue, False\n\n\nstr\nString values\nText\n❌\n\"Hello World!\", \"42\"\n\n\nlist\nOrdered mutable sequences of values\nSequence\n✅\n[1, 2, 3], [\"Hello\", \"World\"]\n\n\ntuple\nOrdered immutable sequences of values\nSequence\n❌\n(1, 2, 3), (\"Hello\", \"World\")\n\n\nrange\nImmutable sequence of numbers\nSequence\n❌\nrange(10), range(1, 10, 2)\n\n\ndict\nUnordered mapping of keys to values\nMapping\n✅\n{\"a\": 1, \"b\": 2}\n\n\nset\nUnordered collection of unique values\nSet\n✅\n{1, 2, 3}\n\n\nfrozenset\nImmutable set\nSet\n❌\nfrozenset({1, 2, 3})\n\n\nbytes\nSequence of bytes\nBinary\n❌\nb\"Hello World!\"\n\n\nbytearray\nMutable sequence of bytes\nBinary\n✅\nbytearray(b\"Hello World!\")\n\n\nmemoryview\nMemory view of bytes\nBinary\n❌\nmemoryview(b\"Hello World!\")\n\n\nNoneType\nSpecial type indicating no value\nNoneType\n❌\nNone",
+    "section": "",
+    "text": "The atomic indivisible unit of data in computer programming is called a value.\nValues are the most basic things that a computer program manipulates or calculates.\n\nFor example, the number 42 is a value. So is \"Hello World!\".\n\nEach value belongs to a type.\nThe type of a value determines its interpretation by the computer and the operations that can be performed on it.\n\nFor example, the value 42 is of type int (short for integer) and the value \"Hello World!\" is of type str (short for string, so-called because it contains a string of letters).\n\nIn Java, every value has a type, and every type is defined by the Java programming language.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
+      "Abstractions",
       "Data"
     ]
   },
   {
-    "objectID": "basics/data.html#variables",
-    "href": "basics/data.html#variables",
+    "objectID": "basics/data.html#primitive-data-types",
+    "href": "basics/data.html#primitive-data-types",
     "title": "Data",
-    "section": "Variables",
-    "text": "Variables\nOne of the most powerful features of a programming language is the ability to manipulate variables.\nSimilar to algebra, variables in computer programming are names that refer to values.\nIn algebra, the following statement declares that the variable x has the value 42:\n\\[x = 42\\]\nIn Python, the following statement declares that the variable x has the value 42:\nx = 42\nIn Python, a variable is a just a name. Values are somewhere else, and a variable refers to a value. Multiple names can refer to the same value. Python calls whatever is needed to refer to a value a reference. Assigning to a variable (or object field, or …) simply makes it refer to another value. The whole model of storage locations does not apply to Python, the programmer never handles storage locations for values. All he stores and shuffles around are Python references, and those are not values in Python, so they cannot be target of other Python references.\nVariables are the first means of abstraction in computer programming. They allow us to abstract away the details of the value and refer to computations in more general terms.\nRules for Naming Variables:\nIn Python, variable names can be arbitrarily long. They can contain both letters and numbers, but they have to begin with a letter or an underscore (variable names can not start with a number).\n\nVariable Names must be descriptive!\nA variable name must start with a letter or the underscore character\nA variable name cannot start with a number\nA variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )\nVariable names are case-sensitive (age, Age and AGE are three different variables)\nIn Python, the convention is to NOT use upper case letters anywhere in the name. In case of multi-word names, use _ .",
+    "section": "Primitive Data Types",
+    "text": "Primitive Data Types\nJava comes with the following built-in numeric data types:\n\nbyte: 8-bit signed integer. Range: -128 to 127.\nshort: 16-bit signed integer. Range: -32,768 to 32,767.\nint: 32-bit signed integer. Range: -2,147,483,648 to 2,147,483,647.\nlong: 64-bit signed integer. Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.\nfloat: 32-bit floating point number.\ndouble: 64-bit floating point number.\n\nOther primitive data types include:\n\nboolean: Represents true or false values.\nchar: Represents a single 16-bit Unicode character.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
+      "Abstractions",
       "Data"
     ]
   },
   {
-    "objectID": "basics/data.html#dynamic-and-strong-typing",
-    "href": "basics/data.html#dynamic-and-strong-typing",
+    "objectID": "basics/data.html#comparison-with-python",
+    "href": "basics/data.html#comparison-with-python",
     "title": "Data",
-    "section": "Dynamic and Strong Typing",
-    "text": "Dynamic and Strong Typing\nYou (and Python) can identify strings because they are enclosed in quotation marks \".\nPython is a dynamically typed language, which means that the type of a value is inferred at runtime (as opposed to compile time) based on the value.\nPython is a dynamically typed language, which means two things:\n\nThe type of a value is inferred at runtime (as opposed to compile time) based on the value\nThe same variable can be assigned values of different types at different times.\n\n\n\n\n```srfrcoul https://res.cloudinary.com/practicaldev/image/fetch/s–i1yqfSl1–/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2ABddwVWW6hFU0miT9DCbUWQ.png\n\n\n\n\nwidth: 50%\n\n\nname: dynamic-strong-typing\n\n\n\nDifferent programming languages have different approaches to types. Python is a dynamically typed and strongly typed programming language.\n\nPython is also a **strongly typed** language, which means that every \n\nThe `=` symbol in Python is called the **assignment operator**. It allows us to creates new variables (names) and _assign_ (refer) them values. \n\nNote that the assignment operator assigns the value on the right to the variable on the left. In other words, the directionality of assignment in `x = 42` is  $x \\leftarrow 42$.\n\nVariables can naturally be assigned different values at different times.\n\nIn fact, the same variable can be assigned values of different types at different times.\n\n::: {#cell-5 .cell}\n``` {.python .cell-code}\nmessage = \"What's up, Doc?\"\nn = 17\npi = 3.14159\n:::\nThis example makes three assignments. The first assigns the string \"What's up, Doc?\" to a new variable named message. The second gives the integer 17 to n, and the third gives the floating-point number 3.14159 to pi.\nThe assignment operator, =, should not be confused with an equals sign (even though it uses the same character). Assignment operators link a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:\n\n17 = n # Error: can't assign to literal\nA common way to represent variables on paper is to write the name with an arrow pointing to the variable’s value. This kind of figure is called a state diagram because it shows what state each of the variables is in (think of it as the variable’s state of mind). This diagram shows the result of the assignment statements\n\nThe print statement also works with variables.\n\nprint(message), print(n), print(pi)\n\nIn each case the result is the value of the variable. Variables also have types; again, we can ask the interpreter what they are.\n\ntype(message), type(n), type(pi)\n\nThe type of a variable is the type of the value it refers to.\n\nten_percent = 3\nten_percent\n\n\nTen_percent = 10\nTen_percent\n\n\nTEN_PERCENT = 10000\nTEN_PERCENT\n\n\nten_percent = 5\nten_percent\n\n\nage = 2\nage\n\n\nAge = 20\nAge\n\n\nAGE = 200\nAGE\n\nWhich of the following variable names would throw a Syntax Errox?\n\n10_percent = 27.03 / 10\n\nten_percent = 27.03 / 10\nten_percent\n\n_10_percent = 27.03 / 10\n_10_percent\n\n20_percent = 27.03 / 10\n\ntwenty_percent = 27.03 / 10\n\ntwenty_% = 27.03 / 10\n\n\nReserved words\nIn Python, there are 33 reserved words. These are words that have special meaning to Python. You cannot use reserved words as variable names.\nFalse, def, if, raise, None, del, import, return, True, elif ,in, try, and, else, is, while, as, except, lambda, with assert, finally, nonlocal, yield break, for, not\nclass, from, or,\ncontinue, global, pass\n\nA programming language is more than just a means for instructing a computer to perform tasks.\nIt also serves as a framework within which we organize our ideas about computational processes.\nPrograms serve to communicate those ideas among the members of a programming community.\nThus, let me re-emphasize programs must be written for people to read, and only incidentally for machines to execute.\n\n\n\nYou can get the data type of any variable using the built-in type() function\nPython programming language is both:\n\n\nStrongly typed:\n\nAll variables have a type\nThe type matters when performing operations on a variable.\n\nDynamically typed:\n\nIn Python, the data type is set when you assign a value to a variable (during runtime).",
+    "section": "Comparison with Python",
+    "text": "Comparison with Python\n\nPrimitive Data Types vs. Objects\n\nJava has a clear distinction between primitive data types (e.g., int, char, float, boolean) and objects. Primitive data types in Java are not objects and are stored directly in memory. They are more efficient but have fewer capabilities compared to objects.\nPython does not have primitive data types in the same way Java does. In Python, everything is an object, including what Java would consider primitives like integers and floats. This means even simple data types in Python have methods and are more versatile, though potentially less efficient in terms of memory.\n\n\n\nWrappers and Autoboxing\nJava has wrapper classes for each primitive type (e.g., Integer for int, Float for float). These wrappers allow primitive values to be treated as objects when necessary. Java also supports autoboxing, which automatically converts between primitives and their corresponding wrapper types.\nIn Python, since everything is an object, there is no need for separate wrapper classes or autoboxing.\n\n\nFixed-Size Memory Allocation\nJava uses fixed-size memory allocation for primitive types, which makes memory usage predictable and efficient. For example, an int always uses 4 bytes, a float uses 4 bytes, etc.\nIn contrast, Python’s objects (including what would be primitives in Java) are dynamically allocated, meaning their memory size can vary. Python integers and floats use more memory than their Java counterparts because they are objects and include metadata.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
+      "Abstractions",
       "Data"
     ]
   },
   {
-    "objectID": "basics/data.html#glossary",
-    "href": "basics/data.html#glossary",
+    "objectID": "basics/data.html#reference-data-types",
+    "href": "basics/data.html#reference-data-types",
     "title": "Data",
-    "section": "Glossary",
-    "text": "Glossary\n\nvalue\n    The most basic thing a program works with. Values include numbers (like `42` or `3.14159`) and strings (like `\"Hello World!\"`).\n\ntype\n    A category of values. The types we have seen so far are integers (type `int`), floating-point numbers (type `float`), and strings (type `str`).\n\nvariable\n    A name that refers to a value.\n\n\nStrongly typed\n    All variables have a type and the type matters when performing operations on a variable. \n\nDynamically typed\n    The data type is set when you assign a value to a variable (during runtime).\n\nWeakly typed\n    The data type is set when you assign a value to a variable (during compile time).\n\nStatic typed\n    The data type is set when you assign a value to a variable (during compile time).",
+    "section": "Reference Data Types",
+    "text": "Reference Data Types\nJava also has non-primitive data types, which are called reference types. These include:\n\nArrays: A collection of elements of the same type.\nClasses: User-defined data types that can have fields, methods, and constructors.\nInterfaces: Similar to classes but with only method signatures and no implementation.\nEnums: A special type that defines a set of constants.\nStrings: A sequence of characters.\n\nReference types store references (memory addresses) to objects rather than the objects themselves. This allows Java to manage memory more efficiently and handle complex data structures.\n\nArrays\n\nAn array is a collection of elements of the same type stored in contiguous memory locations.\nArrays in Java are fixed in size, meaning the number of elements in an array is determined when the array is created and cannot be changed.\nArrays are indexed starting from 0. The index represents the position of an element in the array.\nTo access an element in an array, you use the index enclosed in square brackets after the array name (e.g., arr[0]).\n\nAn example of creating and accessing elements in an array:\nint[] arr = new int[5]; // Create an array of 5 integers\narr[0] = 10; // Assign 10 to the first element\narr[1] = 20; // Assign 20 to the second element\nSystem.out.println(arr[0]); // Output: 10\nSystem.out.println(arr[1]); // Output: 20\nNote that arrays are different from Python lists, which can grow or shrink dynamically and don’t need to have length specified at the time of creation. Also, Python lists can contain elements of different types, while Java arrays are homogeneous (contain elements of the same type).\nTo modify the values of an array, you can assign new values to individual elements using their indices.\nTo access subarrays or slices of an array, you can use the Arrays.copyOfRange() method or loop through the array and copy elements to a new array.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
+      "Abstractions",
       "Data"
     ]
   },
   {
-    "objectID": "basics/data.html#exercises",
-    "href": "basics/data.html#exercises",
+    "objectID": "basics/data.html#strings",
+    "href": "basics/data.html#strings",
     "title": "Data",
-    "section": "Exercises",
-    "text": "Exercises\n\nWhich of the following are valid variable names in Python? Why or why not?\n\n\n\n\n\nVariable Name\nValid?\nWhy or Why Not?\n\n\n\n\ni.\nage\n\n\n\n\nii.\nAge\n\n\n\n\niii.\nAGE\n\n\n\n\niv.\nage_\n\n\n\n\nv.\nage!\n\n\n\n\nvi.\nage@\n\n\n\n\nvii.\nage$\n\n\n\n\nviii.\nFalse\n\n\n\n\nix.\nfalse\n\n\n\n\nx.\nwhile\n\n\n\n\nxi.\n_while\n\n\n\n\nxii.\nwhile_\n\n\n\n\nxiii.\ndef\n\n\n\n\nxiv.\nif\n\n\n\n\nxv.\nelif\n\n\n\n\nxvi.\nelse\n\n\n\n\nxvii.\nreturn\n\n\n\n\nxviii.\nNone\n\n\n\n\nxix.\nnone\n\n\n\n\nxx.\nNoneType\n\n\n\n\nxxi.\nnone_type\n\n\n\n\nxxii.\nnone-type",
+    "section": "Strings",
+    "text": "Strings\nIn Java, strings are objects of the String class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.\nStrings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the String class constructor.\n\nCreating Strings\nYou can create strings in Java using string literals or the String class constructor\nHere is an example of creating strings:\n// Using string literals\nString str1 = \"Hello, World!\";\nString str2 = \"Java Programming\";\n\n// Using the String class constructor\nString str3 = new String(\"Welcome to Java!\");\nIn the above example, we created strings using string literals and the String class constructor.\n\n\nRead String Length\nYou can get the length of a string using the length() method of the String class. The length() method returns the number of characters in the string.\nHere is an example of getting the length of a string:\nString str = \"Hello, World!\";\nint length = str.length(); // length = 13\n\n\nAccessing Characters\nIn order to read an individual character from a string, you can use the charAt() method. The charAt() method returns the character at a specified index in the string.\nHere is an example of accessing characters in a string:\nString str = \"Java Programming\";\nchar firstChar = str.charAt(0); // firstChar = 'J'\nchar lastChar = str.charAt(str.length() - 1); // lastChar = 'g'\n\n\nSubstring Extraction\nYou can extract a substring from a string using the substring() method. The substring() method takes the starting index and optionally the ending index of the substring to be extracted.\nHere is an example of extracting a substring from a string:\nString str = \"Hello, World!\";\nString subStr = str.substring(7); // subStr = \"World!\"\n\n\nString Concatenation\nYou can concatenate strings in Java using the + operator or the concat() method of the String class.\nHere is an example of concatenating strings:\nString str1 = \"Hello, \";\nString str2 = \"World!\";\nString result = str1 + str2; // result = \"Hello, World!\"\n\n\nString Comparison\nYou can compare strings in Java using the equals() method or the compareTo() method of the String class. The equals() method checks if two strings have the same content, while the compareTo() method compares two strings lexicographically.\nHere is an example of comparing strings:\nString str1 = \"Hello\";\nString str2 = \"Hello\";\nboolean isEqual = str1.equals(str2); // isEqual = true\nint result = str1.compareTo(\"World\"); // result = -15",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
+      "Abstractions",
       "Data"
     ]
   },
@@ -1300,6 +1503,25 @@
     "href": "test.html",
     "title": "Testing",
     "section": "",
-    "text": "Testing"
+    "text": "Testing in Java is a crucial part of the development process. It helps to ensure that the code is working as expected and that any changes made to the code do not introduce new bugs. In this section, we will discuss the basics of testing in Java, including unit testing, integration testing, and test-driven development.\n\n\nUnit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\n\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\n\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Testing"
+    ]
+  },
+  {
+    "objectID": "test.html#unit-testing",
+    "href": "test.html#unit-testing",
+    "title": "Testing",
+    "section": "",
+    "text": "Unit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\n\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\n\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Testing"
+    ]
   }
 ]

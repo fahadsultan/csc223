@@ -2,3 +2,236 @@
 title: "Classes"
 toc: true
 ---
+
+Classes in Java are the blueprints for objects. They define the structure and behavior of objects. A class is a template for objects, and an object is an instance of a class. In this tutorial, we will learn about classes in Java.
+
+## Declaring a Class
+
+A class in Java is declared using the `class` keyword followed by the class name. The class name should start with an uppercase letter. Here is an example of a class declaration
+
+```java
+public class Person {
+    // class members
+}
+
+```
+
+In the above example, we have declared a class named `Person`. The class body is enclosed within curly braces `{}`. The class body contains class members such as fields, methods, constructors, and nested classes.
+
+## Class Members
+
+
+A class can have the following members:
+
+1. Attributes (aka Fields): These are variables declared inside a class. They represent the state of an object.
+
+2. Methods: Methods are functions defined inside a class. They represent the behavior of an object.
+
+3. Constructors: Constructors are special methods used to initialize objects.
+
+4. Nested Classes: A class can be defined inside another class. These are called nested classes.
+
+<center><img src="https://i.ibb.co/YbpDxmC/oop-hierarchy.png" width="100%" style="filter:invert(1)"></center>
+<br/>
+
+Let's see an example of a class with fields, methods, and a constructor.
+
+```java
+public class Person {
+    // fields
+    private String name;
+    private int age;
+
+    // constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // method
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+```
+
+In the above example, we have defined a class `Person` with two fields `name` and `age`, a constructor that initializes the fields, and a method `display` that prints the name and age of the person.
+
+## Creating Objects
+
+To create an object of a class, we use the `new` keyword followed by the class name and constructor arguments. Here is an example of creating an object of the `Person` class.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // create an object of Person class
+        Person person = new Person("Alice", 30);
+
+        // call the display method
+        person.display();
+    }
+}
+```
+
+In the above example, we have created an object `person` of the `Person` class using the constructor with arguments `"Alice"` and `30`. We then called the `display` method on the object to print the name and age of the person.
+
+## Attributes 
+
+Attributes are variables declared inside a class. They represent the state of an object. Attributes are also known as fields. 
+
+The types of attributes are:
+
+1. Instance Variables: These are non-static variables declared inside a class. Each object of the class has its own copy of instance variables.
+
+2. Static Variables: These are class-level variables declared with the `static` keyword. They are shared among all objects of the class.
+
+3. Final Variables: These are constants declared with the `final` keyword. Their value cannot be changed once initialized.
+
+### Instance Attributes
+
+Instance attributes are non-static variables declared inside a class. Each object of the class has its own copy of instance attributes. Here is an example of instance attributes in a class.
+
+```java
+public class Person {
+    // instance variables
+    private String name;
+    private int age;
+}
+
+```
+
+In the above example, `name` and `age` are instance attributes of the `Person` class.
+
+### Static Attributes
+
+Static attributes are class-level variables declared with the `static` keyword. They are shared among all objects of the class. Here is an example of static attributes in a class.
+
+```java
+public class Counter {
+    // static variable
+    private static int count = 0;
+}
+```
+
+In the above example, `count` is a static attribute of the `Counter` class.
+
+### Final Attributes
+
+Final attributes are constants declared with the `final` keyword. Their value cannot be changed once initialized. Here is an example of final attributes in a class.
+
+```java
+public class Constants {
+    // final variable
+    public static final double PI = 3.14159;
+}
+```
+
+In the above example, `PI` is a final attribute of the `Constants` class.
+
+## Methods
+
+Methods are functions defined inside a class. They represent the behavior of an object. Methods can be of two types:
+
+1. Instance Methods: These methods operate on the instance variables of the class. They are called on objects of the class.
+
+2. Static Methods: These methods are declared with the `static` keyword. They can access only static variables of the class.
+
+### Instance Methods
+
+Instance methods operate on the instance variables of the class. They are called on objects of the class. Here is an example of an instance method in a class.
+
+
+```java
+public class Person {
+    // instance method
+    public void display() {
+        System.out.println("Displaying person information");
+    }
+}
+```
+
+In the above example, `display` is an instance method of the `Person` class.
+
+### Static Methods
+
+Static methods are declared with the `static` keyword. They can access only static variables of the class. Here is an example of a static method in a class.
+
+```java
+public class MathUtils {
+    // static method
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+In the above example, `add` is a static method of the `MathUtils` class.
+
+## Constructors
+
+Constructors are special methods used to initialize objects. They have the same name as the class and do not have a return type. Constructors are called when an object is created using the `new` keyword.
+
+### Default Constructor
+
+If a class does not have any constructor defined, Java provides a default constructor that initializes the object with default values. Here is an example of a default constructor.
+
+```java
+public class Person {
+    // default constructor
+    public Person() {
+        System.out.println("Person object created");
+    }
+}
+```
+
+In the above example, `Person` class has a default constructor that prints a message when a `Person` object is created.
+
+### Parameterized Constructor
+
+A parameterized constructor is a constructor with parameters. It is used to initialize the object with the specified values. Here is an example of a parameterized constructor.
+
+```java
+public class Person {
+    // fields
+    private String name;
+    private int age;
+
+    // parameterized constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+In the above example, `Person` class has a parameterized constructor that initializes the `name` and `age` fields of the object.
+
+## `this` Keyword
+
+The `this` keyword in Java is a reference to the current object. It is used to refer to the current instance of the class. The `this` keyword is used to differentiate between instance variables and parameters with the same name.
+
+The `this` keyword is used to access instance variables and methods of the current object. Here is an example of using the `this` keyword.
+
+```java
+public class Person {
+    // fields
+    private String name;
+    private int age;
+
+    // constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // method
+    public void display() {
+        System.out.println("Name: " + this.name);
+        System.out.println("Age: " + this.age);
+    }
+}
+```
+
+Note that `this` is similar to very similar to `self` in Python.  
+

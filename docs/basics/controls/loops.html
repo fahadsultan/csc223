@@ -102,35 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../style.css">
 </head>
@@ -347,16 +318,10 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../basics/data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data</span></a>
-  </div>
-</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Operations</span></a>
+            <a href="../../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstractions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -364,20 +329,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mathematical Operators</span></a>
+  <a href="../../basics/data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/precedence_associativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Precedence, Associativity and Type Conversion</span></a>
+  <a href="../../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Built-in Data Structures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Math Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Built-in Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Files</span></a>
+ <span class="menu-text">File I/O</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing</span></a>
   </div>
 </li>
       </ul>
@@ -386,11 +386,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Flow</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
@@ -401,29 +401,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../basics/controls/loops.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Loops</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Abstractions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Functions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes</span></a>
   </div>
 </li>
       </ul>
@@ -504,12 +481,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#while-loop" id="toc-while-loop" class="nav-link active" data-scroll-target="#while-loop"><code>while</code> loop</a></li>
-  <li><a href="#loop-design-pattern" id="toc-loop-design-pattern" class="nav-link" data-scroll-target="#loop-design-pattern">Loop Design Pattern</a></li>
-  <li><a href="#infinite-loops" id="toc-infinite-loops" class="nav-link" data-scroll-target="#infinite-loops">Infinite Loops</a></li>
-  <li><a href="#break" id="toc-break" class="nav-link" data-scroll-target="#break"><code>break</code></a></li>
-  <li><a href="#for-loops" id="toc-for-loops" class="nav-link" data-scroll-target="#for-loops"><code>for</code> loops</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue"><code>continue</code></a></li>
+  <li><a href="#for-loop" id="toc-for-loop" class="nav-link active" data-scroll-target="#for-loop"><code>for</code> Loop</a></li>
+  <li><a href="#while-loop" id="toc-while-loop" class="nav-link" data-scroll-target="#while-loop"><code>while</code> Loop</a></li>
+  <li><a href="#do-while-loop" id="toc-do-while-loop" class="nav-link" data-scroll-target="#do-while-loop"><code>do-while</code> Loop</a></li>
+  <li><a href="#loop-control-statements" id="toc-loop-control-statements" class="nav-link" data-scroll-target="#loop-control-statements">Loop Control Statements</a>
+  <ul class="collapse">
+  <li><a href="#break-statement" id="toc-break-statement" class="nav-link" data-scroll-target="#break-statement"><code>break</code> Statement</a></li>
+  <li><a href="#continue-statement" id="toc-continue-statement" class="nav-link" data-scroll-target="#continue-statement"><code>continue</code> Statement</a></li>
+  <li><a href="#return-statement" id="toc-return-statement" class="nav-link" data-scroll-target="#return-statement"><code>return</code> Statement</a></li>
+  </ul></li>
+  <li><a href="#nested-loops" id="toc-nested-loops" class="nav-link" data-scroll-target="#nested-loops">Nested Loops</a></li>
   </ul>
 </nav>
     </div>
@@ -535,166 +516,107 @@ window.Quarto = {
 </header>
 
 
-<pre class="{important}"><code>This page is &lt;span style="color:red"&gt;**under construction**&lt;/span&gt;. All or part of the &lt;span style="color:red"&gt;**content may be incomplete or incorrect**&lt;/span&gt;.</code></pre>
+<p>Loops in Java are used to execute a block of code repeatedly. They allow you to iterate over a sequence of elements or execute a block of code until a certain condition is met. In this tutorial, we will learn about loops in Java.</p>
+<section id="for-loop" class="level2">
+<h2 class="anchored" data-anchor-id="for-loop"><code>for</code> Loop</h2>
+<p>The <code>for</code> loop is used to iterate over a sequence of elements a fixed number of times. It consists of three parts: initialization, condition, and increment/decrement. The basic syntax of the <code>for</code> loop is as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span>initialization<span class="op">;</span> condition<span class="op">;</span> increment<span class="op">/</span>decrement<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// code block to be executed</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here is an example of using the <code>for</code> loop to print numbers from 1 to 5:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the <code>for</code> loop iterates over the numbers from 1 to 5 and prints each number to the console.</p>
+</section>
 <section id="while-loop" class="level2">
-<h2 class="anchored" data-anchor-id="while-loop"><code>while</code> loop</h2>
-<ul>
-<li><p>Loops allow <strong>conditional repetition</strong> of a set of statements.</p></li>
-<li><p>In simple terms, loops <strong>repeatedly execute</strong> a <strong>block of indented statements</strong> as long as a corresponding <strong>boolean condition</strong> evaluates to <code>True</code>.</p></li>
-<li><p><strong><code>while</code> loops</strong> are the most basic looping construct in the most programming languages, including Python.</p></li>
-</ul>
-<p>Recall, for <code>if...else</code> statements:</p>
-<div id="de135eaa" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> boolean_condition_A: </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Indented Block B</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Indented Block C</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><img align="center" width="450" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/If-Then-Else-diagram.svg"></p>
-<table>
-<tbody><tr>
-<td style="border: 1px solid black;">
-<img align="center" width="500" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/If-Then-Else-diagram.svg">
-</td>
-<td>
-</td>
-<td style="border: 1px solid black;">
-<img align="center" width="500" src="https://upload.wikimedia.org/wikipedia/commons/4/43/While-loop-diagram.svg">
-</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>It is called a <strong>loop</strong> because <strong>flow of execution keeps looping back to the start</strong> of the while statement <strong>until the condition becomes <code>False</code></strong>.</p></li>
-<li><p>When the condition becomes <code>False</code>, flow of execution moves to the statement that follows the indented <code>while</code> block.</p></li>
-<li><p>The net effect is that the loop’s body is executed repeatedly while the condition at the top is <code>True</code>.</p></li>
-<li><p>Each execution of the loop’s body is called an <strong>iteration</strong> and the variable(s) in the condition are called <strong>iterator(s)</strong>.</p></li>
-<li><p>The <code>while</code> statement consists of:</p>
-<ul>
-<li>a header line with a <strong>boolean condition</strong></li>
-<li>a body of one or more indented statements
-<hr></li>
-</ul></li>
-</ul>
-<p>statement 0</p>
-<p><code>while</code> (boolean condition): &gt; statement 1<br>
-&gt; statement 2<br>
-.<br>
-.<br>
-.<br>
-statement n</p>
-<p>statement n+1</p>
-<div id="68e42270" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;slide&quot;}" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">10</span>:</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Outside loop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-Outside loop</code></pre>
-</div>
-</div>
+<h2 class="anchored" data-anchor-id="while-loop"><code>while</code> Loop</h2>
+<p>The <code>while</code> loop is used to execute a block of code repeatedly as long as a specified condition is true. The loop continues to execute until the condition becomes false. The basic syntax of the <code>while</code> loop is as follows:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>condition<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// code block to be executed</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here is an example of using the <code>while</code> loop to print numbers from 1 to 5:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    i<span class="op">++;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the <code>while</code> loop iterates over the numbers from 1 to 5 and prints each number to the console.</p>
 </section>
-<section id="loop-design-pattern" class="level2">
-<h2 class="anchored" data-anchor-id="loop-design-pattern">Loop Design Pattern</h2>
-<ul>
-<li>Most loops (not all of them) have the following common parts, in this order:</li>
-</ul>
-<ol type="1">
-<li><p><strong>Initialization of iterator, result and other variables</strong>.</p></li>
-<li><p><strong>Continuation condition</strong> (a.k.a. Termination condition)</p></li>
-<li><p><strong>Body</strong> of the loop (Indented)</p></li>
-<li><p>Update of result and iterator variables (Indented)</p>
-<ul>
-<li>Last lines of the body</li>
-</ul></li>
-</ol>
-<p><code>initialization</code><br>
-<code>while ( continuation-condition ) {</code> &gt; <code>body</code><br>
-&gt; <code>update</code></p>
-<p><span class="math inline">\(summ = \sum_{i=1}^{n} k\)</span></p>
-<div id="c70c16b0" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summation_k(k, n):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initialization result</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    summ <span class="op">=</span> <span class="dv">0</span> </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initialization iterator</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span>    </span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#condition</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> i <span class="op">&lt;</span> n: </span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">#update of result</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        summ <span class="op">=</span> summ <span class="op">+</span> k</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">#update of iterator</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> summ</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summation_k(<span class="dv">10</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>100</code></pre>
-</div>
-</div>
-<p><span class="math inline">\(\sum_{i=1}^{n} i\)</span></p>
-<!--  = \frac{n(n+1)}{2} -->
-<div id="8cf60adc" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summation_i(n):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    summ <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> i <span class="op">&lt;=</span> n:</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        summ <span class="op">=</span> summ <span class="op">+</span> k</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> summ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="do-while-loop" class="level2">
+<h2 class="anchored" data-anchor-id="do-while-loop"><code>do-while</code> Loop</h2>
+<p>The <code>do-while</code> loop is similar to the <code>while</code> loop, but the condition is checked after the block of code is executed. This means that the block of code is executed at least once, even if the condition is false. The basic syntax of the <code>do-while</code> loop is as follows:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// code block to be executed</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">while</span> <span class="op">(</span>condition<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here is an example of using the <code>do-while</code> loop to print numbers from 1 to 5:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span> <span class="op">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    i<span class="op">++;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the <code>do-while</code> loop iterates over the numbers from 1 to 5 and prints each number to the console.</p>
 </section>
-<section id="infinite-loops" class="level2">
-<h2 class="anchored" data-anchor-id="infinite-loops">Infinite Loops</h2>
-<div id="63320dd4" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Outside loop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="loop-control-statements" class="level2">
+<h2 class="anchored" data-anchor-id="loop-control-statements">Loop Control Statements</h2>
+<p>Java provides loop control statements that allow you to control the flow of the loop. The loop control statements include <code>break</code>, <code>continue</code>, and <code>return</code>.</p>
+<section id="break-statement" class="level3">
+<h3 class="anchored" data-anchor-id="break-statement"><code>break</code> Statement</h3>
+<p>The <code>break</code> statement is used to exit the loop prematurely. It is often used to terminate the loop when a certain condition is met. When the <code>break</code> statement is encountered, the loop is terminated, and the control is transferred to the statement following the loop.</p>
+<p>Here is an example of using the <code>break</code> statement to exit a loop when the value of <code>i</code> is 3:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>i <span class="op">==</span> <span class="dv">3</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the loop is terminated when the value of <code>i</code> is 3.</p>
 </section>
-<section id="break" class="level2">
-<h2 class="anchored" data-anchor-id="break"><code>break</code></h2>
-<ul>
-<li><p>For <strong>immediately exiting</strong> the loop i.e.&nbsp;Python jumps out of the loop’s body (past the entire loop statement) when it encounters a <code>break statement</code></p></li>
-<li><p>Generally <strong>used within an <code>if</code> statement</strong> within the loop’s body</p></li>
-<li><p>Inside the loop’s body, the <strong>code that follows the <code>break</code> statement is never executed</strong></p></li>
-</ul>
-<p><img width="500" src="https://www.askpython.com/wp-content/uploads/2019/07/break-statement-flow-diagram.png"></p>
+<section id="continue-statement" class="level3">
+<h3 class="anchored" data-anchor-id="continue-statement"><code>continue</code> Statement</h3>
+<p>The <code>continue</code> statement is used to skip the current iteration of the loop and continue with the next iteration. It is often used to skip certain elements in the loop based on a condition.</p>
+<p>Here is an example of using the <code>continue</code> statement to skip printing even numbers:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span><span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the loop skips printing even numbers using the <code>continue</code> statement.</p>
 </section>
-<section id="for-loops" class="level2">
-<h2 class="anchored" data-anchor-id="for-loops"><code>for</code> loops</h2>
-<ul>
-<li><code>for</code> loops are <strong>used for iterating over a sequence</strong> (that is either a list, a tuple, a dictionary, a set, or a string).</li>
-</ul>
+<section id="return-statement" class="level3">
+<h3 class="anchored" data-anchor-id="return-statement"><code>return</code> Statement</h3>
+<p>The <code>return</code> statement is used to exit a method prematurely. When the <code>return</code> statement is encountered inside a loop, the loop is terminated, and the control is transferred back to the caller of the method.</p>
+<p>Here is an example of using the <code>return</code> statement inside a loop:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">printNumbers</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>i <span class="op">==</span> <span class="dv">3</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>i<span class="op">);</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the loop is terminated when the value of <code>i</code> is 3 using the <code>return</code> statement.</p>
 </section>
-<section id="continue" class="level2">
-<h2 class="anchored" data-anchor-id="continue"><code>continue</code></h2>
+</section>
+<section id="nested-loops" class="level2">
+<h2 class="anchored" data-anchor-id="nested-loops">Nested Loops</h2>
+<p>Nested loops are loops inside another loop. They are used to perform repetitive tasks that require multiple levels of iteration. Nested loops can be of any type, such as <code>for</code>, <code>while</code>, or <code>do-while</code>.</p>
+<p>Here is an example of using nested loops to print a pattern:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;=</span> i<span class="op">;</span> j<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"* "</span><span class="op">);</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, the nested loops are used to print a pattern of stars.</p>
 
 
 </section>
