@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction\n\nIntro\nVersion Control\nWA 1\nPA 1\n\n\n2\nGit\n\n\n\n\n\n\n\n3\nJava 1\n\n\n\n\n\n\n\n4\nJava 2\n\n\n\n\n\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction\n\nIntro\nVersion Control\nWA 1\nPA 1\n\n\n2\nJava 1\n\n\n\n\nPA 2\n\n\n3\nJava 2\n\n\n\n\n\n\n\n4\nJava 3\n\n\n\n\n\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -99,7 +99,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nDeliverable\n\n\n\nWritten Assignment 1 is due on Fri, Sept 6th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nDeliverable\n\n\n\nProgramming Assignment 1 is due on Sept 3rd, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nDeliverable\n\n\n\nProgramming Assignment 2 is due on Tue, Sept 10th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nDeliverable\n\n\n\nWritten Assignment 1 is due on Fri, Sept 6th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -1523,5 +1523,47 @@
       "Operations",
       "Testing"
     ]
+  },
+  {
+    "objectID": "PAs/PA2.html",
+    "href": "PAs/PA2.html",
+    "title": "Programming Assignment 2",
+    "section": "",
+    "text": "The Fibonacci numbers are defined as follows:\n\\(F(0) = 0, F(1) = 1,\\) and \\(F(n) = F(n-1) + F(n-2)\\) for \\(n \\geq 2\\).\nWrite a program that computes the \\(n\\)th Fibonacci number for a given \\(n\\).\n\n\nThe input consists of a single integer \\(n\\) \\((0 \\leq n \\leq 45)\\).\n\n\n\nPrint the \\(n\\)th Fibonacci number.\n\n\n\n10"
+  },
+  {
+    "objectID": "PAs/PA2.html#q1.-fibonacci-number",
+    "href": "PAs/PA2.html#q1.-fibonacci-number",
+    "title": "Programming Assignment 2",
+    "section": "",
+    "text": "The Fibonacci numbers are defined as follows:\n\\(F(0) = 0, F(1) = 1,\\) and \\(F(n) = F(n-1) + F(n-2)\\) for \\(n \\geq 2\\).\nWrite a program that computes the \\(n\\)th Fibonacci number for a given \\(n\\).\n\n\nThe input consists of a single integer \\(n\\) \\((0 \\leq n \\leq 45)\\).\n\n\n\nPrint the \\(n\\)th Fibonacci number.\n\n\n\n10"
+  },
+  {
+    "objectID": "PAs/PA2.html#q2.-maximum-pairwise-product",
+    "href": "PAs/PA2.html#q2.-maximum-pairwise-product",
+    "title": "Programming Assignment 2",
+    "section": "Q2. Maximum Pairwise Product",
+    "text": "Q2. Maximum Pairwise Product\nGiven a sequence of non-negative integers, find the maximum pairwise product.\n\nInput\nThe input consists of a single integer \\(n\\) \\((2 \\leq n \\leq 2 \\times 10^5)\\), followed by a sequence of \\(n\\) non-negative integers \\(a_1, a_2, \\ldots, a_n\\) \\((0 \\leq a_i \\leq 10^5)\\).\n\n\nOutput\nPrint the maximum pairwise product of the sequence.\n\n\nSample Input 2\n6\n1 2 3 4 5 6\n\n\nSample Output 2\n30"
+  },
+  {
+    "objectID": "PAs/PA2.html#q3.-binary-search",
+    "href": "PAs/PA2.html#q3.-binary-search",
+    "title": "Programming Assignment 2",
+    "section": "Q3. Binary Search",
+    "text": "Q3. Binary Search\nGiven a sorted array of integers, perform a binary search to find the index of a given target value.\n\nInput\nThe input consists of a single integer \\(n\\) \\((1 \\leq n \\leq 10^5)\\), followed by a sorted sequence of \\(n\\) integers \\(a_1, a_2, \\ldots, a_n\\) \\((0 \\leq a_i \\leq 10^9)\\), and a target integer \\(x\\) \\((0 \\leq x \\leq 10^9)\\).\n\n\nOutput\nPrint the index of the target value in the array, or \\(-1\\) if the target is not found.\n\n\nSample Input 3\n5\n1 2 3 4 5\n3\n\n\nSample Output 3\n2"
+  },
+  {
+    "objectID": "PAs/PA2.html#q4.-majority-element",
+    "href": "PAs/PA2.html#q4.-majority-element",
+    "title": "Programming Assignment 2",
+    "section": "Q4. Majority Element",
+    "text": "Q4. Majority Element\nGiven a sequence of integers, find the majority element (an element that appears more than \\(\\frac{n}{2}\\) times).\n\nInput\nThe input consists of a single integer \\(n\\) \\((1 \\leq n \\leq 10^5)\\), followed by a sequence of \\(n\\) integers \\(a_1, a_2, \\ldots, a_n\\) \\((0 \\leq a_i \\leq 10^9)\\).\n\n\nOutput\nPrint the majority element if it exists, or \\(-1\\) otherwise.\n\n\nSample Input 4"
+  },
+  {
+    "objectID": "PAs/PA2.html#q5.-fiz-buzz",
+    "href": "PAs/PA2.html#q5.-fiz-buzz",
+    "title": "Programming Assignment 2",
+    "section": "Q5. Fiz Buzz",
+    "text": "Q5. Fiz Buzz"
   }
 ]
