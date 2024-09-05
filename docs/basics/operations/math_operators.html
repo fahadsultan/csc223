@@ -330,19 +330,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes</span></a>
+ <span class="menu-text">Primitive Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Built-in Data Structures</span></a>
+ <span class="menu-text">Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes: User Defined Types</span></a>
   </div>
 </li>
       </ul>
@@ -377,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Testing</span></a>
+ <span class="menu-text">Testing in Java</span></a>
   </div>
 </li>
       </ul>
@@ -481,15 +481,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basic-arithmetic-operators" id="toc-basic-arithmetic-operators" class="nav-link active" data-scroll-target="#basic-arithmetic-operators">1. <strong>Basic Arithmetic Operators</strong></a></li>
+  <li><a href="#arithmetic-operators" id="toc-arithmetic-operators" class="nav-link active" data-scroll-target="#arithmetic-operators">Arithmetic Operators</a>
+  <ul class="collapse">
+  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">Comparison Operators</a></li>
+  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">Logical Operators</a></li>
+  <li><a href="#membership-operators" id="toc-membership-operators" class="nav-link" data-scroll-target="#membership-operators">Membership Operators</a></li>
+  <li><a href="#identity-operators" id="toc-identity-operators" class="nav-link" data-scroll-target="#identity-operators">Identity Operators</a></li>
+  </ul></li>
+  <li><a href="#assignment-operators" id="toc-assignment-operators" class="nav-link" data-scroll-target="#assignment-operators">Assignment Operators</a></li>
+  <li><a href="#bitwise-operators" id="toc-bitwise-operators" class="nav-link" data-scroll-target="#bitwise-operators">Bitwise Operators</a></li>
+  <li><a href="#comparison-with-python" id="toc-comparison-with-python" class="nav-link" data-scroll-target="#comparison-with-python">Comparison with Python</a>
+  <ul class="collapse">
+  <li><a href="#basic-arithmetic-operators" id="toc-basic-arithmetic-operators" class="nav-link" data-scroll-target="#basic-arithmetic-operators">1. <strong>Basic Arithmetic Operators</strong></a></li>
   <li><a href="#division" id="toc-division" class="nav-link" data-scroll-target="#division">2. <strong>Division (<code>/</code>)</strong></a></li>
   <li><a href="#exponentiation" id="toc-exponentiation" class="nav-link" data-scroll-target="#exponentiation">3. <strong>Exponentiation</strong></a></li>
   <li><a href="#unary-operators" id="toc-unary-operators" class="nav-link" data-scroll-target="#unary-operators">4. <strong>Unary Operators</strong></a></li>
   <li><a href="#modulus-operator" id="toc-modulus-operator" class="nav-link" data-scroll-target="#modulus-operator">5. <strong>Modulus Operator (<code>%</code>)</strong></a></li>
   <li><a href="#operator-overloading" id="toc-operator-overloading" class="nav-link" data-scroll-target="#operator-overloading">6. <strong>Operator Overloading</strong></a></li>
-  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">7. <strong>Comparison Operators</strong></a></li>
+  <li><a href="#comparison-operators-1" id="toc-comparison-operators-1" class="nav-link" data-scroll-target="#comparison-operators-1">7. <strong>Comparison Operators</strong></a></li>
   <li><a href="#handling-large-numbers" id="toc-handling-large-numbers" class="nav-link" data-scroll-target="#handling-large-numbers">8. <strong>Handling Large Numbers</strong></a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -515,6 +527,320 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="arithmetic-operators" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-operators">Arithmetic Operators</h2>
+<p>The following table lists the arithmetic operators in Java. The first four operators are the basic arithmetic operators. The last two operators are the floor division and modulo operators, respectively.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>+</code></td>
+<td>Addition</td>
+<td><code>1 + 2</code></td>
+<td><code>3</code></td>
+</tr>
+<tr class="even">
+<td><code>-</code></td>
+<td>Subtraction</td>
+<td><code>1 - 2</code></td>
+<td><code>-1</code></td>
+</tr>
+<tr class="odd">
+<td><code>*</code></td>
+<td>Multiplication</td>
+<td><code>1 * 2</code></td>
+<td><code>2</code></td>
+</tr>
+<tr class="even">
+<td><code>/</code></td>
+<td>Division</td>
+<td><code>1 / 2</code></td>
+<td><code>0.5</code></td>
+</tr>
+<tr class="odd">
+<td><code>//</code></td>
+<td>Floor Division</td>
+<td><code>1 // 2</code></td>
+<td><code>0</code></td>
+</tr>
+<tr class="even">
+<td><code>%</code></td>
+<td>Modulo</td>
+<td><code>1 % 2</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<section id="comparison-operators" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-operators">Comparison Operators</h3>
+<p>The following table lists the comparison operators in Java. These operators compare two operands and evaluate to either <code>true</code> or <code>false</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+<td><code>1 == 1</code></td>
+<td><code>true</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+<td><code>1 != 1</code></td>
+<td><code>false</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>1 &gt; 1</code></td>
+<td><code>false</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>1 &lt; 1</code></td>
+<td><code>false</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+<td><code>1 &gt;= 1</code></td>
+<td><code>true</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>1 &lt;= 1</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="logical-operators" class="level3">
+<h3 class="anchored" data-anchor-id="logical-operators">Logical Operators</h3>
+<p>The following table lists the logical operators in Java. These operators combine two or more boolean expressions and evaluate to either <code>true</code> or <code>false</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&amp;&amp;</code></td>
+<td>Logical AND</td>
+<td><code>true &amp;&amp; false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr class="even">
+<td><code>||</code></td>
+<td>Logical OR</td>
+<td><code>true || false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr class="odd">
+<td><code>!</code></td>
+<td>Logical NOT</td>
+<td><code>!true</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="membership-operators" class="level3">
+<h3 class="anchored" data-anchor-id="membership-operators">Membership Operators</h3>
+<p>The following table lists the membership operators in Java. These operators test for membership in a sequence and evaluate to either <code>true</code> or <code>false</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>in</code></td>
+<td>Membership</td>
+<td><code>1 in [1, 2, 3]</code></td>
+<td><code>true</code></td>
+</tr>
+<tr class="even">
+<td><code>not in</code></td>
+<td>Negated Membership</td>
+<td><code>1 not in [1, 2, 3]</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="identity-operators" class="level3">
+<h3 class="anchored" data-anchor-id="identity-operators">Identity Operators</h3>
+<p>The following table lists the identity operators in Java. These operators compare the memory locations of two objects and evaluate to either <code>true</code> or <code>false</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>is</code></td>
+<td>Identity</td>
+<td><code>1 is 1</code></td>
+<td><code>true</code></td>
+</tr>
+<tr class="even">
+<td><code>is not</code></td>
+<td>Negated Identity</td>
+<td><code>1 is not 1</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="assignment-operators" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-operators">Assignment Operators</h2>
+<p>We have already seen the assignment operator <code>=</code> in the previous sections.</p>
+<p>The assignment operator has many variations that combine assignment with another operator (primarily arithmetic operators).</p>
+<p>The following table lists the assignment operators in Java.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>=</code></td>
+<td>Assign</td>
+<td><code>a = 1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr class="even">
+<td><code>+=</code></td>
+<td>Add and Assign</td>
+<td><code>a += 1</code></td>
+<td><code>2</code></td>
+</tr>
+<tr class="odd">
+<td><code>-=</code></td>
+<td>Subtract and Assign</td>
+<td><code>a -= 1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr class="even">
+<td><code>*=</code></td>
+<td>Multiply and Assign</td>
+<td><code>a *= 2</code></td>
+<td><code>2</code></td>
+</tr>
+<tr class="odd">
+<td><code>/=</code></td>
+<td>Divide and Assign</td>
+<td><code>a /= 2</code></td>
+<td><code>0.5</code></td>
+</tr>
+<tr class="even">
+<td><code>//=</code></td>
+<td>Floor Divide and Assign</td>
+<td><code>a //= 2</code></td>
+<td><code>0</code></td>
+</tr>
+<tr class="odd">
+<td><code>%=</code></td>
+<td>Modulo and Assign</td>
+<td><code>a %= 2</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bitwise-operators" class="level2">
+<h2 class="anchored" data-anchor-id="bitwise-operators">Bitwise Operators</h2>
+<p>The following table lists the bitwise operators in Java. These operators perform bitwise operations on integers.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&amp;</code></td>
+<td>Bitwise AND</td>
+<td><code>1 &amp; 2</code></td>
+<td><code>0</code></td>
+</tr>
+<tr class="even">
+<td><code>|</code></td>
+<td>Bitwise OR</td>
+<td><code>1 | 2</code></td>
+<td><code>3</code></td>
+</tr>
+<tr class="odd">
+<td><code>^</code></td>
+<td>Bitwise XOR</td>
+<td><code>1 ^ 2</code></td>
+<td><code>3</code></td>
+</tr>
+<tr class="even">
+<td><code>~</code></td>
+<td>Bitwise NOT</td>
+<td><code>~1</code></td>
+<td><code>-2</code></td>
+</tr>
+<tr class="odd">
+<td><code>&lt;&lt;</code></td>
+<td>Left Shift</td>
+<td><code>1 &lt;&lt; 2</code></td>
+<td><code>4</code></td>
+</tr>
+<tr class="even">
+<td><code>&gt;&gt;</code></td>
+<td>Right Shift</td>
+<td><code>4 &gt;&gt; 2</code></td>
+<td><code>1</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;&gt;&gt;</code></td>
+<td>Unsigned Right Shift</td>
+<td><code>4 &gt;&gt;&gt; 2</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comparison-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-with-python">Comparison with Python</h2>
 <p>Python and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:</p>
 <section id="basic-arithmetic-operators" class="level3">
 <h3 class="anchored" data-anchor-id="basic-arithmetic-operators">1. <strong>Basic Arithmetic Operators</strong></h3>
@@ -612,8 +938,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="comparison-operators" class="level3">
-<h3 class="anchored" data-anchor-id="comparison-operators">7. <strong>Comparison Operators</strong></h3>
+<section id="comparison-operators-1" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-operators-1">7. <strong>Comparison Operators</strong></h3>
 <ul>
 <li><strong>Python</strong>:
 <ul>
@@ -648,6 +974,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

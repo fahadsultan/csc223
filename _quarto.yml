@@ -61,9 +61,9 @@ website:
               href: basics/abstractions/abstractions.qmd
               contents:
                 - basics/data.qmd
-                - basics/abstractions/classes.qmd
                 # - basics/abstractions/functions.qmd
                 - basics/abstractions/datastructures.qmd
+                - basics/abstractions/classes.qmd
             - section: "Operations"
               href: basics/operations/operations.ipynb
               contents:

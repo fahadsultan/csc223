@@ -3,6 +3,99 @@ title: "Math Operators"
 toc: true
 --- 
 
+## Arithmetic Operators
+
+The following table lists the arithmetic operators in Java. The first four operators are the basic arithmetic operators. The last two operators are the floor division and modulo operators, respectively.
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `+` | Addition | `1 + 2` | `3` |
+| `-` | Subtraction | `1 - 2` | `-1` |
+| `*` | Multiplication | `1 * 2` | `2` |
+| `/` | Division | `1 / 2` | `0.5` |
+| `//` | Floor Division | `1 // 2` | `0` |
+| `%` | Modulo | `1 % 2` | `1` |
+
+### Comparison Operators
+
+The following table lists the comparison operators in Java. These operators compare two operands and evaluate to either `true` or `false`.
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `==` | Equal to | `1 == 1` | `true` |
+| `!=` | Not equal to | `1 != 1` | `false` |
+| `>` | Greater than | `1 > 1` | `false` |
+| `<` | Less than | `1 < 1` | `false` |
+| `>=` | Greater than or equal to | `1 >= 1` | `true` |
+| `<=` | Less than or equal to | `1 <= 1` | `true` |
+
+
+### Logical Operators
+
+The following table lists the logical operators in Java. These operators combine two or more boolean expressions and evaluate to either `true` or `false`.
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `&&` | Logical AND | `true && false` | `false` |
+| `||` | Logical OR | `true || false` | `true` |
+| `!` | Logical NOT | `!true` | `false` |
+
+
+### Membership Operators
+
+The following table lists the membership operators in Java. These operators test for membership in a sequence and evaluate to either `true` or `false`.
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `in` | Membership | `1 in [1, 2, 3]` | `true` |
+| `not in` | Negated Membership | `1 not in [1, 2, 3]` | `false` |
+
+### Identity Operators
+
+The following table lists the identity operators in Java. These operators compare the memory locations of two objects and evaluate to either `true` or `false`.
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `is` | Identity | `1 is 1` | `true` |
+| `is not` | Negated Identity | `1 is not 1` | `false` |
+
+
+
+## Assignment Operators
+
+We have already seen the assignment operator `=` in the previous sections. 
+
+The assignment operator has many variations that combine assignment with another operator (primarily arithmetic operators).
+
+The following table lists the assignment operators in Java. 
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `=` | Assign | `a = 1` | `1` |
+| `+=` | Add and Assign | `a += 1` | `2` |
+| `-=` | Subtract and Assign | `a -= 1` | `0` |
+| `*=` | Multiply and Assign | `a *= 2` | `2` |
+| `/=` | Divide and Assign | `a /= 2` | `0.5` |
+| `//=` | Floor Divide and Assign | `a //= 2` | `0` |
+| `%=` | Modulo and Assign | `a %= 2` | `1` |
+
+## Bitwise Operators
+
+The following table lists the bitwise operators in Java. These operators perform bitwise operations on integers.
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| `&` | Bitwise AND | `1 & 2` | `0` |
+| `|` | Bitwise OR | `1 | 2` | `3` |
+| `^` | Bitwise XOR | `1 ^ 2` | `3` |
+| `~` | Bitwise NOT | `~1` | `-2` |
+| `<<` | Left Shift | `1 << 2` | `4` |
+| `>>` | Right Shift | `4 >> 2` | `1` |
+| `>>>` | Unsigned Right Shift | `4 >>> 2` | `1` |
+
+
+## Comparison with Python
+
 Python and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:
 
 ### 1. **Basic Arithmetic Operators**

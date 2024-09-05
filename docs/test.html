@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>test</title>
+<title>Testing in Java</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="./basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="./test.html">Testing</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="./basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="./test.html">Testing in Java</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -330,19 +330,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basics/data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes</span></a>
+ <span class="menu-text">Primitive Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Built-in Data Structures</span></a>
+ <span class="menu-text">Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes: User Defined Types</span></a>
   </div>
 </li>
       </ul>
@@ -377,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./test.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Testing</span></a>
+ <span class="menu-text">Testing in Java</span></a>
   </div>
 </li>
       </ul>
@@ -476,15 +476,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unit-testing" id="toc-unit-testing" class="nav-link active" data-scroll-target="#unit-testing">Unit Testing</a>
+  <ul class="collapse">
+  <li><a href="#junit-framework" id="toc-junit-framework" class="nav-link" data-scroll-target="#junit-framework">JUnit Framework</a></li>
+  <li><a href="#running-tests" id="toc-running-tests" class="nav-link" data-scroll-target="#running-tests">Running Tests</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="./basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="./test.html">Testing in Java</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Testing in Java</h1>
+</div>
 
 
 
-<section id="testing" class="level1">
-<h1>Testing</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Testing in Java is a crucial part of the development process. It helps to ensure that the code is working as expected and that any changes made to the code do not introduce new bugs. In this section, we will discuss the basics of testing in Java, including unit testing, integration testing, and test-driven development.</p>
 <section id="unit-testing" class="level2">
 <h2 class="anchored" data-anchor-id="unit-testing">Unit Testing</h2>
@@ -521,7 +547,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the above command, <code>junit-platform-console-standalone-1.8.2.jar</code> is the JUnit platform launcher JAR file, <code>target/test-classes</code> is the directory containing the compiled test classes, and <code>--scan-class-path</code> tells</p>
 
 
-</section>
 </section>
 </section>
 

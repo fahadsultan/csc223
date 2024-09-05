@@ -107,40 +107,53 @@
   {
     "objectID": "basics/abstractions/datastructures.html",
     "href": "basics/abstractions/datastructures.html",
-    "title": "Built-in Data Structures",
+    "title": "Reference Data Types",
     "section": "",
     "text": "In Java, built-in data structures can be categorized into two main types: arrays and collections. Arrays are fixed-size data structures that store elements of the same type in contiguous memory locations. Collections are dynamic-size data structures that store elements of different types and provide additional functionality for managing and manipulating the data.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Built-in Data Structures"
+      "Reference Data Types"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/datastructures.html#strings",
+    "href": "basics/abstractions/datastructures.html#strings",
+    "title": "Reference Data Types",
+    "section": "Strings",
+    "text": "Strings\nIn Java, strings are objects of the String class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.\nStrings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the String class constructor.\n\nCreating Strings\nYou can create strings in Java using string literals or the String class constructor\nHere is an example of creating strings:\n// Using string literals\nString str1 = \"Hello, World!\";\nString str2 = \"Java Programming\";\n\n// Using the String class constructor\nString str3 = new String(\"Welcome to Java!\");\nIn the above example, we created strings using string literals and the String class constructor.\n\n\nRead String Length\nYou can get the length of a string using the length() method of the String class. The length() method returns the number of characters in the string.\nHere is an example of getting the length of a string:\nString str = \"Hello, World!\";\nint length = str.length(); // length = 13\n\n\nAccessing Characters\nIn order to read an individual character from a string, you can use the charAt() method. The charAt() method returns the character at a specified index in the string.\nHere is an example of accessing characters in a string:\nString str = \"Java Programming\";\nchar firstChar = str.charAt(0); // firstChar = 'J'\nchar lastChar = str.charAt(str.length() - 1); // lastChar = 'g'\n\n\nSubstring Extraction\nYou can extract a substring from a string using the substring() method. The substring() method takes the starting index and optionally the ending index of the substring to be extracted.\nHere is an example of extracting a substring from a string:\nString str = \"Hello, World!\";\nString subStr = str.substring(7); // subStr = \"World!\"\n\n\nString Concatenation\nYou can concatenate strings in Java using the + operator or the concat() method of the String class.\nHere is an example of concatenating strings:\nString str1 = \"Hello, \";\nString str2 = \"World!\";\nString result = str1 + str2; // result = \"Hello, World!\"\n\n\nString Comparison\nYou can compare strings in Java using the equals() method or the compareTo() method of the String class. The equals() method checks if two strings have the same content, while the compareTo() method compares two strings lexicographically.\nHere is an example of comparing strings:\nString str1 = \"Hello\";\nString str2 = \"Hello\";\nboolean isEqual = str1.equals(str2); // isEqual = true\nint result = str1.compareTo(\"World\"); // result = -15",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Reference Data Types"
     ]
   },
   {
     "objectID": "basics/abstractions/datastructures.html#arrays",
     "href": "basics/abstractions/datastructures.html#arrays",
-    "title": "Built-in Data Structures",
+    "title": "Reference Data Types",
     "section": "Arrays",
     "text": "Arrays\nAn array is a fixed-size collection of elements of the same type stored in contiguous memory locations. Arrays in Java are indexed starting from 0, and the index represents the position of an element in the array. The size of an array is determined when the array is created and cannot be changed.\n\nDeclaring and Initializing Arrays\nTo declare an array in Java, you specify the type of elements the array will hold, followed by square brackets [] and the array name. You can initialize the array with values using an array initializer enclosed in curly braces {}.\nHere is an example of declaring and initializing an array of integers:\n// Declare and initialize an array of integers\nint[] numbers = {10, 20, 30, 40, 50};\nIn the above example, we declared an array numbers of integers and initialized it with five elements.\n\n\nAccessing Array Elements\nYou can access elements in an array using the index enclosed in square brackets [] after the array name. The index starts from 0 for the first element and increments by 1 for each subsequent element.\nHere is an example of accessing elements in an array:\nint[] numbers = {10, 20, 30, 40, 50};\n\n// Access the first element\nint firstElement = numbers[0]; // firstElement = 10\n\n// Access the third element\nint thirdElement = numbers[2]; // thirdElement = 30\n\n\nArray Length\nYou can get the length of an array using the length property of the array. The length property returns the number of elements in the array.\nHere is an example of getting the length of an array:\nint[] numbers = {10, 20, 30, 40, 50};\n\n// Get the length of the array\nint length = numbers.length; // length = 5\n\n\nIterating Over Arrays\nYou can iterate over the elements of an array using a loop, such as a for loop or a foreach loop. By iterating over the array, you can access and process each element in the array.\nHere is an example of iterating over an array using a for loop:\n\nint[] numbers = {10, 20, 30, 40, 50};\n\n// Iterate over the array using a for loop\n\nfor (int i = 0; i &lt; numbers.length; i++) {\n    System.out.println(numbers[i]); // Output each element\n}\nIn the above example, we used a for loop to iterate over the numbers array and print each element to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Built-in Data Structures"
+      "Reference Data Types"
     ]
   },
   {
     "objectID": "basics/abstractions/datastructures.html#collections",
     "href": "basics/abstractions/datastructures.html#collections",
-    "title": "Built-in Data Structures",
+    "title": "Reference Data Types",
     "section": "Collections",
     "text": "Collections\nCollections in Java are dynamic-size data structures that store elements of different types and provide additional functionality for managing and manipulating the data. Java provides a rich set of collection classes in the java.util package that implement various data structures such as lists, sets, maps, queues, and more.\n\nList Interface\nThe List interface in Java represents an ordered collection of elements that allows duplicate elements. Lists maintain the insertion order of elements and provide methods to add, remove, and access elements by index.\n\nArrayList\nThe ArrayList class in Java implements the List interface and provides a dynamic array that can grow or shrink in size. ArrayList allows duplicate elements and maintains the insertion order of elements.\nHere is an example of creating and using an ArrayList:\nimport java.util.ArrayList;\n\n// Create an ArrayList of strings\nArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();\n\n// Add elements to the ArrayList\nnames.add(\"Alice\");\nnames.add(\"Bob\");\nnames.add(\"Charlie\");\n\n// Access elements by index\nString firstElement = names.get(0); // firstElement = \"Alice\"\n\n// Iterate over the ArrayList\nfor (String name : names) {\n    System.out.println(name); // Output each name\n}\nIn the above example, we created an ArrayList of strings, added elements to the list, accessed elements by index, and iterated over the list using a foreach loop.\n\n\n\nSet Interface\nThe Set interface in Java represents a collection of elements that does not allow duplicate elements. Sets do not maintain the insertion order of elements and provide methods to add, remove, and check for the presence of elements.\n\nHashSet\nThe HashSet class in Java implements the Set interface and provides a collection of unique elements. HashSet does not allow duplicate elements and does not maintain the insertion order of elements.\nHere is an example of creating and using a HashSet:\nimport java.util.HashSet;\n\n// Create a HashSet of integers\nHashSet&lt;Integer&gt; numbers = new HashSet&lt;&gt;();\n\n// Add elements to the HashSet\nnumbers.add(10);\nnumbers.add(20);\nnumbers.add(30);\n\n// Check if an element is present\nboolean containsTwenty = numbers.contains(20); // containsTwenty = true\n\n// Iterate over the HashSet\nfor (int number : numbers) {\n    System.out.println(number); // Output each number\n}\nIn the above example, we created a HashSet of integers, added elements to the set, checked for the presence of an element, and iterated over the set using a foreach loop.\n\n\n\nMap Interface\nThe Map interface in Java represents a collection of key-value pairs where each key is unique. Maps provide methods to add, remove, and access elements by key. Java provides several implementations of the Map interface, such as HashMap, TreeMap, and LinkedHashMap.\n\nHashMap (Dictionary)\nThe HashMap class in Java implements the Map interface and provides a collection of key-value pairs. HashMap allows null keys and values, and does not maintain the insertion order of elements.\nHere is an example of creating and using a HashMap:\nimport java.util.HashMap;\n\n// Create a HashMap of student names and IDs\nHashMap&lt;String, Integer&gt; studentIds = new HashMap&lt;&gt;();\n\n// Add key-value pairs to the HashMap\nstudentIds.put(\"Alice\", 101);\nstudentIds.put(\"Bob\", 102);\nstudentIds.put(\"Charlie\", 103);\n\n// Access values by key\nint aliceId = studentIds.get(\"Alice\"); // aliceId = 101\n\n// Iterate over the HashMap\nfor (String name : studentIds.keySet()) {\n    int id = studentIds.get(name);\n    System.out.println(name + \": \" + id); // Output each name and ID\n}\nIn the above example, we created a HashMap of student names and IDs, added key-value pairs to the map, accessed values by key, and iterated over the map to print each name and ID.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Built-in Data Structures"
+      "Reference Data Types"
     ]
   },
   {
@@ -182,105 +195,105 @@
   {
     "objectID": "basics/abstractions/classes.html",
     "href": "basics/abstractions/classes.html",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "",
     "text": "Classes in Java are the blueprints for objects. They define the structure and behavior of objects. A class is a template for objects, and an object is an instance of a class. In this tutorial, we will learn about classes in Java.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#declaring-a-class",
     "href": "basics/abstractions/classes.html#declaring-a-class",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "Declaring a Class",
     "text": "Declaring a Class\nA class in Java is declared using the class keyword followed by the class name. The class name should start with an uppercase letter. Here is an example of a class declaration\npublic class Person {\n    // class members\n}\nIn the above example, we have declared a class named Person. The class body is enclosed within curly braces {}. The class body contains class members such as fields, methods, constructors, and nested classes.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#class-members",
     "href": "basics/abstractions/classes.html#class-members",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "Class Members",
     "text": "Class Members\nA class can have the following members:\n\nAttributes (aka Fields): These are variables declared inside a class. They represent the state of an object.\nMethods: Methods are functions defined inside a class. They represent the behavior of an object.\nConstructors: Constructors are special methods used to initialize objects.\nNested Classes: A class can be defined inside another class. These are called nested classes.\n\n\n\n\n\nLet’s see an example of a class with fields, methods, and a constructor.\npublic class Person {\n    // fields\n    private String name;\n    private int age;\n\n    // constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    // method\n    public void display() {\n        System.out.println(\"Name: \" + name);\n        System.out.println(\"Age: \" + age);\n    }\n}\nIn the above example, we have defined a class Person with two fields name and age, a constructor that initializes the fields, and a method display that prints the name and age of the person.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#creating-objects",
     "href": "basics/abstractions/classes.html#creating-objects",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "Creating Objects",
     "text": "Creating Objects\nTo create an object of a class, we use the new keyword followed by the class name and constructor arguments. Here is an example of creating an object of the Person class.\npublic class Main {\n    public static void main(String[] args) {\n        // create an object of Person class\n        Person person = new Person(\"Alice\", 30);\n\n        // call the display method\n        person.display();\n    }\n}\nIn the above example, we have created an object person of the Person class using the constructor with arguments \"Alice\" and 30. We then called the display method on the object to print the name and age of the person.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#attributes",
     "href": "basics/abstractions/classes.html#attributes",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "Attributes",
     "text": "Attributes\nAttributes are variables declared inside a class. They represent the state of an object. Attributes are also known as fields.\nThe types of attributes are:\n\nInstance Variables: These are non-static variables declared inside a class. Each object of the class has its own copy of instance variables.\nStatic Variables: These are class-level variables declared with the static keyword. They are shared among all objects of the class.\nFinal Variables: These are constants declared with the final keyword. Their value cannot be changed once initialized.\n\n\nInstance Attributes\nInstance attributes are non-static variables declared inside a class. Each object of the class has its own copy of instance attributes. Here is an example of instance attributes in a class.\npublic class Person {\n    // instance variables\n    private String name;\n    private int age;\n}\nIn the above example, name and age are instance attributes of the Person class.\n\n\nStatic Attributes\nStatic attributes are class-level variables declared with the static keyword. They are shared among all objects of the class. Here is an example of static attributes in a class.\npublic class Counter {\n    // static variable\n    private static int count = 0;\n}\nIn the above example, count is a static attribute of the Counter class.\n\n\nFinal Attributes\nFinal attributes are constants declared with the final keyword. Their value cannot be changed once initialized. Here is an example of final attributes in a class.\npublic class Constants {\n    // final variable\n    public static final double PI = 3.14159;\n}\nIn the above example, PI is a final attribute of the Constants class.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#methods",
     "href": "basics/abstractions/classes.html#methods",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "Methods",
     "text": "Methods\nMethods are functions defined inside a class. They represent the behavior of an object. Methods can be of two types:\n\nInstance Methods: These methods operate on the instance variables of the class. They are called on objects of the class.\nStatic Methods: These methods are declared with the static keyword. They can access only static variables of the class.\n\n\nInstance Methods\nInstance methods operate on the instance variables of the class. They are called on objects of the class. Here is an example of an instance method in a class.\npublic class Person {\n    // instance method\n    public void display() {\n        System.out.println(\"Displaying person information\");\n    }\n}\nIn the above example, display is an instance method of the Person class.\n\n\nStatic Methods\nStatic methods are declared with the static keyword. They can access only static variables of the class. Here is an example of a static method in a class.\npublic class MathUtils {\n    // static method\n    public static int add(int a, int b) {\n        return a + b;\n    }\n}\nIn the above example, add is a static method of the MathUtils class.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#constructors",
     "href": "basics/abstractions/classes.html#constructors",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "Constructors",
     "text": "Constructors\nConstructors are special methods used to initialize objects. They have the same name as the class and do not have a return type. Constructors are called when an object is created using the new keyword.\n\nDefault Constructor\nIf a class does not have any constructor defined, Java provides a default constructor that initializes the object with default values. Here is an example of a default constructor.\npublic class Person {\n    // default constructor\n    public Person() {\n        System.out.println(\"Person object created\");\n    }\n}\nIn the above example, Person class has a default constructor that prints a message when a Person object is created.\n\n\nParameterized Constructor\nA parameterized constructor is a constructor with parameters. It is used to initialize the object with the specified values. Here is an example of a parameterized constructor.\npublic class Person {\n    // fields\n    private String name;\n    private int age;\n\n    // parameterized constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n}\nIn the above example, Person class has a parameterized constructor that initializes the name and age fields of the object.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
     "objectID": "basics/abstractions/classes.html#this-keyword",
     "href": "basics/abstractions/classes.html#this-keyword",
-    "title": "Classes",
+    "title": "Classes: User Defined Types",
     "section": "this Keyword",
     "text": "this Keyword\nThe this keyword in Java is a reference to the current object. It is used to refer to the current instance of the class. The this keyword is used to differentiate between instance variables and parameters with the same name.\nThe this keyword is used to access instance variables and methods of the current object. Here is an example of using the this keyword.\npublic class Person {\n    // fields\n    private String name;\n    private int age;\n\n    // constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    // method\n    public void display() {\n        System.out.println(\"Name: \" + this.name);\n        System.out.println(\"Age: \" + this.age);\n    }\n}\nNote that this is similar to very similar to self in Python.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Classes"
+      "Classes: User Defined Types"
     ]
   },
   {
@@ -992,14 +1005,66 @@
     "href": "basics/operations/tmp.html",
     "title": "",
     "section": "",
-    "text": "Here are five basic questions to help you practice Java:\n\n1. Write a Java Program to Check if a Number is Even or Odd\n\nProblem: Create a Java program that reads an integer from the user and determines whether the number is even or odd.\nHints: Use the modulus operator % to check the remainder when the number is divided by 2.\n\nimport java.util.Scanner;\n\npublic class EvenOdd {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a number: \");\n        int number = scanner.nextInt();\n\n        if (number % 2 == 0) {\n            System.out.println(number + \" is even.\");\n        } else {\n            System.out.println(number + \" is odd.\");\n        }\n    }\n}\n\n\n2. Write a Java Program to Find the Largest of Three Numbers\n\nProblem: Write a Java program that takes three numbers as input from the user and determines the largest of the three.\nHints: Use nested if-else statements or the Math.max() function.\n\nimport java.util.Scanner;\n\npublic class LargestNumber {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first number: \");\n        int num1 = scanner.nextInt();\n        System.out.print(\"Enter second number: \");\n        int num2 = scanner.nextInt();\n        System.out.print(\"Enter third number: \");\n        int num3 = scanner.nextInt();\n\n        int largest = Math.max(num1, Math.max(num2, num3));\n        System.out.println(\"The largest number is: \" + largest);\n    }\n}\n\n\n3. Write a Java Program to Print the Fibonacci Series Up to n Terms\n\nProblem: Write a program that generates the Fibonacci series up to n terms, where n is provided by the user.\nHints: Use a loop to generate the sequence and store the current and previous terms.\n\nimport java.util.Scanner;\n\npublic class FibonacciSeries {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter the number of terms: \");\n        int n = scanner.nextInt();\n\n        int a = 0, b = 1;\n        System.out.print(\"Fibonacci Series: \" + a + \" \" + b);\n\n        for (int i = 2; i &lt; n; i++) {\n            int next = a + b;\n            System.out.print(\" \" + next);\n            a = b;\n            b = next;\n        }\n    }\n}\n\n\n4. Write a Java Program to Reverse a String\n\nProblem: Write a Java program that takes a string as input and outputs the reversed string.\nHints: Use a loop to iterate over the string from the end to the beginning or use the StringBuilder class.\n\nimport java.util.Scanner;\n\npublic class ReverseString {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a string: \");\n        String input = scanner.nextLine();\n\n        StringBuilder reversed = new StringBuilder(input);\n        reversed.reverse();\n\n        System.out.println(\"Reversed string: \" + reversed);\n    }\n}\n\n\n5. Write a Java Program to Calculate the Factorial of a Number\n\nProblem: Write a Java program that calculates the factorial of a given number n (where n is input by the user).\nHints: Use a loop to multiply numbers from 1 to n.\n\nimport java.util.Scanner;\n\npublic class Factorial {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a number: \");\n        int n = scanner.nextInt();\n\n        int factorial = 1;\n        for (int i = 1; i &lt;= n; i++) {\n            factorial *= i;\n        }\n\n        System.out.println(\"Factorial of \" + n + \" is: \" + factorial);\n    }\n}\nThese basic questions cover fundamental Java concepts like loops, conditionals, and string manipulation, and provide a solid foundation for further learning."
+    "text": "Here are five basic questions to help you practice Java:\n\n1. Write a Java Program to Check if a Number is Even or Odd\n\nProblem: Create a Java program that reads an integer from the user and determines whether the number is even or odd.\nHints: Use the modulus operator % to check the remainder when the number is divided by 2.\n\nimport java.util.Scanner;\n\npublic class EvenOdd {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a number: \");\n        int number = scanner.nextInt();\n\n        if (number % 2 == 0) {\n            System.out.println(number + \" is even.\");\n        } else {\n            System.out.println(number + \" is odd.\");\n        }\n    }\n}\n\n\n2. Write a Java Program to Find the Largest of Three Numbers\n\nProblem: Write a Java program that takes three numbers as input from the user and determines the largest of the three.\nHints: Use nested if-else statements or the Math.max() function.\n\nimport java.util.Scanner;\n\npublic class LargestNumber {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first number: \");\n        int num1 = scanner.nextInt();\n        System.out.print(\"Enter second number: \");\n        int num2 = scanner.nextInt();\n        System.out.print(\"Enter third number: \");\n        int num3 = scanner.nextInt();\n\n        int largest = Math.max(num1, Math.max(num2, num3));\n        System.out.println(\"The largest number is: \" + largest);\n    }\n}\n\n\n3. Write a Java Program to Print the Fibonacci Series Up to n Terms\n\nProblem: Write a program that generates the Fibonacci series up to n terms, where n is provided by the user.\nHints: Use a loop to generate the sequence and store the current and previous terms.\n\nimport java.util.Scanner;\n\npublic class FibonacciSeries {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter the number of terms: \");\n        int n = scanner.nextInt();\n\n        int a = 0, b = 1;\n        System.out.print(\"Fibonacci Series: \" + a + \" \" + b);\n\n        for (int i = 2; i &lt; n; i++) {\n            int next = a + b;\n            System.out.print(\" \" + next);\n            a = b;\n            b = next;\n        }\n    }\n}\n\n\n4. Write a Java Program to Reverse a String\n\nProblem: Write a Java program that takes a string as input and outputs the reversed string.\nHints: Use a loop to iterate over the string from the end to the beginning or use the StringBuilder class.\n\nimport java.util.Scanner;\n\npublic class ReverseString {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a string: \");\n        String input = scanner.nextLine();\n\n        StringBuilder reversed = new StringBuilder(input);\n        reversed.reverse();\n\n        System.out.println(\"Reversed string: \" + reversed);\n    }\n}\n\n\n5. Write a Java Program to Calculate the Factorial of a Number\n\nProblem: Write a Java program that calculates the factorial of a given number n (where n is input by the user).\nHints: Use a loop to multiply numbers from 1 to n.\n\nimport java.util.Scanner;\n\npublic class Factorial {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a number: \");\n        int n = scanner.nextInt();\n\n        int factorial = 1;\n        for (int i = 1; i &lt;= n; i++) {\n            factorial *= i;\n        }\n\n        System.out.println(\"Factorial of \" + n + \" is: \" + factorial);\n    }\n}\nThese basic questions cover fundamental Java concepts like loops, conditionals, and string manipulation, and provide a solid foundation for further learning.\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class Stack {\n\n    private int[] data;\n    private int top;\n\n    public Stack() {\n        this.data = new int[10];\n        this.top = -1;\n    }\n\n    public void push(int value) {\n        if (top == data.length - 1) {\n            System.out.println(\"Stack is full\");\n            return;\n        }\n        data[++top] = value;\n    }\n\n    public void pop() {\n        if (top == -1) {\n            System.out.println(\"Stack is empty\");\n            return;\n        }\n        top--;\n    }\n\n    public void print() {\n        for (int i = 0; i &lt;= top; i++) {\n            System.out.print(data[i] + \" \");\n        }\n        System.out.println();\n    }\n\n    public void peek() {\n        if (top == -1) {\n            System.out.println(\"Stack is empty\");\n            return;\n        }\n        System.out.println(data[top]);\n    }\n\n    public static void main(String[] args) {\n\n        // Create a stack\n        Stack stack = new Stack();\n\n        // Push elements to the stack\n        stack.push(1);\n        result = stack.pop();\n        assertEquals(1, result);\n    }\n    \n}"
   },
   {
     "objectID": "basics/operations/math_operators.html",
     "href": "basics/operations/math_operators.html",
     "title": "Math Operators",
     "section": "",
-    "text": "Python and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:\n\n1. Basic Arithmetic Operators\nBoth Python and Java use the same basic arithmetic operators: - Addition (+): Adds two operands. - Subtraction (-): Subtracts the second operand from the first. - Multiplication (*): Multiplies two operands. - Division (/): Divides the first operand by the second. - Modulus (%): Returns the remainder of a division operation.\n\n\n2. Division (/)\n\nPython:\n\nThe / operator performs true division and always returns a float, even if both operands are integers.\nInteger division can be performed using the // operator, which returns the floor of the division.\n\n5 / 2   # Returns 2.5\n5 // 2  # Returns 2\nJava:\n\nThe / operator performs division, but the result depends on the operand types:\n\nIf both operands are integers, integer division is performed, and the result is an integer.\nIf either operand is a floating-point number (float or double), floating-point division is performed, returning a float or double.\n\nint result = 5 / 2;  // Returns 2 (integer division)\ndouble result = 5.0 / 2;  // Returns 2.5 (floating-point division)\n\n\n\n\n3. Exponentiation\n\nPython:\n\nPython has a built-in operator for exponentiation: **.\n\n2 ** 3  # Returns 8\nJava:\n\nJava does not have a built-in exponentiation operator. Instead, you use the Math.pow() method to perform exponentiation.\n\ndouble result = Math.pow(2, 3);  // Returns 8.0\n\n\n\n4. Unary Operators\n\nPython:\n\nSupports unary operators like + and - for positive and negative values.\n\nx = -5\ny = +5\nJava:\n\nJava also supports unary operators + and -, as well as the increment (++) and decrement (--) operators.\n\nint x = -5;\nint y = +5;\nint z = ++x;  // Increments x by 1, then assigns to z\n\n\n\n5. Modulus Operator (%)\n\nPython:\n\nThe % operator returns the remainder of a division operation. It handles both positive and negative numbers, with the result having the same sign as the divisor.\n\n5 % 3   # Returns 2\n-5 % 3  # Returns 1\nJava:\n\nThe % operator also returns the remainder, but the result has the same sign as the dividend.\n\n5 % 3   # Returns 2\n-5 % 3  # Returns -2\n\n\n\n6. Operator Overloading\n\nPython:\n\nSupports operator overloading, allowing operators to be redefined for user-defined classes.\nExample: You can define how + behaves for a custom class.\n\nclass Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\nJava:\n\nDoes not support operator overloading. Operators have fixed behavior based on the data types they are used with.\n\n\n\n\n7. Comparison Operators\n\nPython:\n\nComparison operators (&lt;, &lt;=, &gt;, &gt;=, ==, !=) can be used with numbers, strings, and other types.\nPython also supports chaining comparisons (e.g., 1 &lt; x &lt; 10).\n\nJava:\n\nComparison operators are used primarily with primitive types and do not support chaining like Python.\n\n\n\n\n8. Handling Large Numbers\n\nPython:\n\nPython’s int type automatically handles large integers, with no fixed size limit, constrained only by available memory.\n\nJava:\n\nJava’s int type is a 32-bit signed integer. To handle large integers, you need to use long (64-bit) or BigInteger for arbitrarily large numbers.\n\n\n\n\nSummary:\n\nPython’s operators are more flexible, particularly with automatic type conversions, true division, and operator overloading.\nJava’s operators are more rigid, with clear distinctions between integer and floating-point division, and no operator overloading.\nPython provides a more intuitive experience for mathematical operations, especially for beginners, while Java’s stricter rules align with its statically-typed nature.",
+    "text": "The following table lists the arithmetic operators in Java. The first four operators are the basic arithmetic operators. The last two operators are the floor division and modulo operators, respectively.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n+\nAddition\n1 + 2\n3\n\n\n-\nSubtraction\n1 - 2\n-1\n\n\n*\nMultiplication\n1 * 2\n2\n\n\n/\nDivision\n1 / 2\n0.5\n\n\n//\nFloor Division\n1 // 2\n0\n\n\n%\nModulo\n1 % 2\n1\n\n\n\n\n\nThe following table lists the comparison operators in Java. These operators compare two operands and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n==\nEqual to\n1 == 1\ntrue\n\n\n!=\nNot equal to\n1 != 1\nfalse\n\n\n&gt;\nGreater than\n1 &gt; 1\nfalse\n\n\n&lt;\nLess than\n1 &lt; 1\nfalse\n\n\n&gt;=\nGreater than or equal to\n1 &gt;= 1\ntrue\n\n\n&lt;=\nLess than or equal to\n1 &lt;= 1\ntrue\n\n\n\n\n\n\nThe following table lists the logical operators in Java. These operators combine two or more boolean expressions and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n&&\nLogical AND\ntrue && false\nfalse\n\n\n||\nLogical OR\ntrue || false\ntrue\n\n\n!\nLogical NOT\n!true\nfalse\n\n\n\n\n\n\nThe following table lists the membership operators in Java. These operators test for membership in a sequence and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nin\nMembership\n1 in [1, 2, 3]\ntrue\n\n\nnot in\nNegated Membership\n1 not in [1, 2, 3]\nfalse\n\n\n\n\n\n\nThe following table lists the identity operators in Java. These operators compare the memory locations of two objects and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nis\nIdentity\n1 is 1\ntrue\n\n\nis not\nNegated Identity\n1 is not 1\nfalse",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Math Operators"
+    ]
+  },
+  {
+    "objectID": "basics/operations/math_operators.html#arithmetic-operators",
+    "href": "basics/operations/math_operators.html#arithmetic-operators",
+    "title": "Math Operators",
+    "section": "",
+    "text": "The following table lists the arithmetic operators in Java. The first four operators are the basic arithmetic operators. The last two operators are the floor division and modulo operators, respectively.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n+\nAddition\n1 + 2\n3\n\n\n-\nSubtraction\n1 - 2\n-1\n\n\n*\nMultiplication\n1 * 2\n2\n\n\n/\nDivision\n1 / 2\n0.5\n\n\n//\nFloor Division\n1 // 2\n0\n\n\n%\nModulo\n1 % 2\n1\n\n\n\n\n\nThe following table lists the comparison operators in Java. These operators compare two operands and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n==\nEqual to\n1 == 1\ntrue\n\n\n!=\nNot equal to\n1 != 1\nfalse\n\n\n&gt;\nGreater than\n1 &gt; 1\nfalse\n\n\n&lt;\nLess than\n1 &lt; 1\nfalse\n\n\n&gt;=\nGreater than or equal to\n1 &gt;= 1\ntrue\n\n\n&lt;=\nLess than or equal to\n1 &lt;= 1\ntrue\n\n\n\n\n\n\nThe following table lists the logical operators in Java. These operators combine two or more boolean expressions and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n&&\nLogical AND\ntrue && false\nfalse\n\n\n||\nLogical OR\ntrue || false\ntrue\n\n\n!\nLogical NOT\n!true\nfalse\n\n\n\n\n\n\nThe following table lists the membership operators in Java. These operators test for membership in a sequence and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nin\nMembership\n1 in [1, 2, 3]\ntrue\n\n\nnot in\nNegated Membership\n1 not in [1, 2, 3]\nfalse\n\n\n\n\n\n\nThe following table lists the identity operators in Java. These operators compare the memory locations of two objects and evaluate to either true or false.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\nis\nIdentity\n1 is 1\ntrue\n\n\nis not\nNegated Identity\n1 is not 1\nfalse",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Math Operators"
+    ]
+  },
+  {
+    "objectID": "basics/operations/math_operators.html#assignment-operators",
+    "href": "basics/operations/math_operators.html#assignment-operators",
+    "title": "Math Operators",
+    "section": "Assignment Operators",
+    "text": "Assignment Operators\nWe have already seen the assignment operator = in the previous sections.\nThe assignment operator has many variations that combine assignment with another operator (primarily arithmetic operators).\nThe following table lists the assignment operators in Java.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n=\nAssign\na = 1\n1\n\n\n+=\nAdd and Assign\na += 1\n2\n\n\n-=\nSubtract and Assign\na -= 1\n0\n\n\n*=\nMultiply and Assign\na *= 2\n2\n\n\n/=\nDivide and Assign\na /= 2\n0.5\n\n\n//=\nFloor Divide and Assign\na //= 2\n0\n\n\n%=\nModulo and Assign\na %= 2\n1",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Math Operators"
+    ]
+  },
+  {
+    "objectID": "basics/operations/math_operators.html#bitwise-operators",
+    "href": "basics/operations/math_operators.html#bitwise-operators",
+    "title": "Math Operators",
+    "section": "Bitwise Operators",
+    "text": "Bitwise Operators\nThe following table lists the bitwise operators in Java. These operators perform bitwise operations on integers.\n\n\n\nOperator\nDescription\nExample\nResult\n\n\n\n\n&\nBitwise AND\n1 & 2\n0\n\n\n|\nBitwise OR\n1 | 2\n3\n\n\n^\nBitwise XOR\n1 ^ 2\n3\n\n\n~\nBitwise NOT\n~1\n-2\n\n\n&lt;&lt;\nLeft Shift\n1 &lt;&lt; 2\n4\n\n\n&gt;&gt;\nRight Shift\n4 &gt;&gt; 2\n1\n\n\n&gt;&gt;&gt;\nUnsigned Right Shift\n4 &gt;&gt;&gt; 2\n1",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Math Operators"
+    ]
+  },
+  {
+    "objectID": "basics/operations/math_operators.html#comparison-with-python",
+    "href": "basics/operations/math_operators.html#comparison-with-python",
+    "title": "Math Operators",
+    "section": "Comparison with Python",
+    "text": "Comparison with Python\nPython and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:\n\n1. Basic Arithmetic Operators\nBoth Python and Java use the same basic arithmetic operators: - Addition (+): Adds two operands. - Subtraction (-): Subtracts the second operand from the first. - Multiplication (*): Multiplies two operands. - Division (/): Divides the first operand by the second. - Modulus (%): Returns the remainder of a division operation.\n\n\n2. Division (/)\n\nPython:\n\nThe / operator performs true division and always returns a float, even if both operands are integers.\nInteger division can be performed using the // operator, which returns the floor of the division.\n\n5 / 2   # Returns 2.5\n5 // 2  # Returns 2\nJava:\n\nThe / operator performs division, but the result depends on the operand types:\n\nIf both operands are integers, integer division is performed, and the result is an integer.\nIf either operand is a floating-point number (float or double), floating-point division is performed, returning a float or double.\n\nint result = 5 / 2;  // Returns 2 (integer division)\ndouble result = 5.0 / 2;  // Returns 2.5 (floating-point division)\n\n\n\n\n3. Exponentiation\n\nPython:\n\nPython has a built-in operator for exponentiation: **.\n\n2 ** 3  # Returns 8\nJava:\n\nJava does not have a built-in exponentiation operator. Instead, you use the Math.pow() method to perform exponentiation.\n\ndouble result = Math.pow(2, 3);  // Returns 8.0\n\n\n\n4. Unary Operators\n\nPython:\n\nSupports unary operators like + and - for positive and negative values.\n\nx = -5\ny = +5\nJava:\n\nJava also supports unary operators + and -, as well as the increment (++) and decrement (--) operators.\n\nint x = -5;\nint y = +5;\nint z = ++x;  // Increments x by 1, then assigns to z\n\n\n\n5. Modulus Operator (%)\n\nPython:\n\nThe % operator returns the remainder of a division operation. It handles both positive and negative numbers, with the result having the same sign as the divisor.\n\n5 % 3   # Returns 2\n-5 % 3  # Returns 1\nJava:\n\nThe % operator also returns the remainder, but the result has the same sign as the dividend.\n\n5 % 3   # Returns 2\n-5 % 3  # Returns -2\n\n\n\n6. Operator Overloading\n\nPython:\n\nSupports operator overloading, allowing operators to be redefined for user-defined classes.\nExample: You can define how + behaves for a custom class.\n\nclass Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\nJava:\n\nDoes not support operator overloading. Operators have fixed behavior based on the data types they are used with.\n\n\n\n\n7. Comparison Operators\n\nPython:\n\nComparison operators (&lt;, &lt;=, &gt;, &gt;=, ==, !=) can be used with numbers, strings, and other types.\nPython also supports chaining comparisons (e.g., 1 &lt; x &lt; 10).\n\nJava:\n\nComparison operators are used primarily with primitive types and do not support chaining like Python.\n\n\n\n\n8. Handling Large Numbers\n\nPython:\n\nPython’s int type automatically handles large integers, with no fixed size limit, constrained only by available memory.\n\nJava:\n\nJava’s int type is a 32-bit signed integer. To handle large integers, you need to use long (64-bit) or BigInteger for arbitrarily large numbers.\n\n\n\n\nSummary:\n\nPython’s operators are more flexible, particularly with automatic type conversions, true division, and operator overloading.\nJava’s operators are more rigid, with clear distinctions between integer and floating-point division, and no operator overloading.\nPython provides a more intuitive experience for mathematical operations, especially for beginners, while Java’s stricter rules align with its statically-typed nature.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -1194,7 +1259,7 @@
     "href": "basics/abstractions/oop1.html#dot-.-operator",
     "title": "User-defined Types",
     "section": "Dot . operator",
-    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```pdekdiph https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
+    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```uvxmzmby https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
   },
   {
     "objectID": "basics/abstractions/oop1.html#methods",
@@ -1213,79 +1278,66 @@
   {
     "objectID": "basics/data.html",
     "href": "basics/data.html",
-    "title": "Data",
+    "title": "Primitive Data Types",
     "section": "",
     "text": "The atomic indivisible unit of data in computer programming is called a value.\nValues are the most basic things that a computer program manipulates or calculates.\n\nFor example, the number 42 is a value. So is \"Hello World!\".\n\nEach value belongs to a type.\nThe type of a value determines its interpretation by the computer and the operations that can be performed on it.\n\nFor example, the value 42 is of type int (short for integer) and the value \"Hello World!\" is of type str (short for string, so-called because it contains a string of letters).\n\nIn Java, every value has a type, and every type is defined by the Java programming language.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Data"
+      "Primitive Data Types"
     ]
   },
   {
     "objectID": "basics/data.html#values-and-types",
     "href": "basics/data.html#values-and-types",
-    "title": "Data",
+    "title": "Primitive Data Types",
     "section": "",
     "text": "The atomic indivisible unit of data in computer programming is called a value.\nValues are the most basic things that a computer program manipulates or calculates.\n\nFor example, the number 42 is a value. So is \"Hello World!\".\n\nEach value belongs to a type.\nThe type of a value determines its interpretation by the computer and the operations that can be performed on it.\n\nFor example, the value 42 is of type int (short for integer) and the value \"Hello World!\" is of type str (short for string, so-called because it contains a string of letters).\n\nIn Java, every value has a type, and every type is defined by the Java programming language.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Data"
+      "Primitive Data Types"
     ]
   },
   {
     "objectID": "basics/data.html#primitive-data-types",
     "href": "basics/data.html#primitive-data-types",
-    "title": "Data",
+    "title": "Primitive Data Types",
     "section": "Primitive Data Types",
     "text": "Primitive Data Types\nJava comes with the following built-in numeric data types:\n\nbyte: 8-bit signed integer. Range: -128 to 127.\nshort: 16-bit signed integer. Range: -32,768 to 32,767.\nint: 32-bit signed integer. Range: -2,147,483,648 to 2,147,483,647.\nlong: 64-bit signed integer. Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.\nfloat: 32-bit floating point number.\ndouble: 64-bit floating point number.\n\nOther primitive data types include:\n\nboolean: Represents true or false values.\nchar: Represents a single 16-bit Unicode character.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Data"
+      "Primitive Data Types"
     ]
   },
   {
     "objectID": "basics/data.html#comparison-with-python",
     "href": "basics/data.html#comparison-with-python",
-    "title": "Data",
+    "title": "Primitive Data Types",
     "section": "Comparison with Python",
     "text": "Comparison with Python\n\nPrimitive Data Types vs. Objects\n\nJava has a clear distinction between primitive data types (e.g., int, char, float, boolean) and objects. Primitive data types in Java are not objects and are stored directly in memory. They are more efficient but have fewer capabilities compared to objects.\nPython does not have primitive data types in the same way Java does. In Python, everything is an object, including what Java would consider primitives like integers and floats. This means even simple data types in Python have methods and are more versatile, though potentially less efficient in terms of memory.\n\n\n\nWrappers and Autoboxing\nJava has wrapper classes for each primitive type (e.g., Integer for int, Float for float). These wrappers allow primitive values to be treated as objects when necessary. Java also supports autoboxing, which automatically converts between primitives and their corresponding wrapper types.\nIn Python, since everything is an object, there is no need for separate wrapper classes or autoboxing.\n\n\nFixed-Size Memory Allocation\nJava uses fixed-size memory allocation for primitive types, which makes memory usage predictable and efficient. For example, an int always uses 4 bytes, a float uses 4 bytes, etc.\nIn contrast, Python’s objects (including what would be primitives in Java) are dynamically allocated, meaning their memory size can vary. Python integers and floats use more memory than their Java counterparts because they are objects and include metadata.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Data"
+      "Primitive Data Types"
     ]
   },
   {
     "objectID": "basics/data.html#reference-data-types",
     "href": "basics/data.html#reference-data-types",
-    "title": "Data",
+    "title": "Primitive Data Types",
     "section": "Reference Data Types",
     "text": "Reference Data Types\nJava also has non-primitive data types, which are called reference types. These include:\n\nArrays: A collection of elements of the same type.\nClasses: User-defined data types that can have fields, methods, and constructors.\nInterfaces: Similar to classes but with only method signatures and no implementation.\nEnums: A special type that defines a set of constants.\nStrings: A sequence of characters.\n\nReference types store references (memory addresses) to objects rather than the objects themselves. This allows Java to manage memory more efficiently and handle complex data structures.\n\nArrays\n\nAn array is a collection of elements of the same type stored in contiguous memory locations.\nArrays in Java are fixed in size, meaning the number of elements in an array is determined when the array is created and cannot be changed.\nArrays are indexed starting from 0. The index represents the position of an element in the array.\nTo access an element in an array, you use the index enclosed in square brackets after the array name (e.g., arr[0]).\n\nAn example of creating and accessing elements in an array:\nint[] arr = new int[5]; // Create an array of 5 integers\narr[0] = 10; // Assign 10 to the first element\narr[1] = 20; // Assign 20 to the second element\nSystem.out.println(arr[0]); // Output: 10\nSystem.out.println(arr[1]); // Output: 20\nNote that arrays are different from Python lists, which can grow or shrink dynamically and don’t need to have length specified at the time of creation. Also, Python lists can contain elements of different types, while Java arrays are homogeneous (contain elements of the same type).\nTo modify the values of an array, you can assign new values to individual elements using their indices.\nTo access subarrays or slices of an array, you can use the Arrays.copyOfRange() method or loop through the array and copy elements to a new array.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Data"
-    ]
-  },
-  {
-    "objectID": "basics/data.html#strings",
-    "href": "basics/data.html#strings",
-    "title": "Data",
-    "section": "Strings",
-    "text": "Strings\nIn Java, strings are objects of the String class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.\nStrings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the String class constructor.\n\nCreating Strings\nYou can create strings in Java using string literals or the String class constructor\nHere is an example of creating strings:\n// Using string literals\nString str1 = \"Hello, World!\";\nString str2 = \"Java Programming\";\n\n// Using the String class constructor\nString str3 = new String(\"Welcome to Java!\");\nIn the above example, we created strings using string literals and the String class constructor.\n\n\nRead String Length\nYou can get the length of a string using the length() method of the String class. The length() method returns the number of characters in the string.\nHere is an example of getting the length of a string:\nString str = \"Hello, World!\";\nint length = str.length(); // length = 13\n\n\nAccessing Characters\nIn order to read an individual character from a string, you can use the charAt() method. The charAt() method returns the character at a specified index in the string.\nHere is an example of accessing characters in a string:\nString str = \"Java Programming\";\nchar firstChar = str.charAt(0); // firstChar = 'J'\nchar lastChar = str.charAt(str.length() - 1); // lastChar = 'g'\n\n\nSubstring Extraction\nYou can extract a substring from a string using the substring() method. The substring() method takes the starting index and optionally the ending index of the substring to be extracted.\nHere is an example of extracting a substring from a string:\nString str = \"Hello, World!\";\nString subStr = str.substring(7); // subStr = \"World!\"\n\n\nString Concatenation\nYou can concatenate strings in Java using the + operator or the concat() method of the String class.\nHere is an example of concatenating strings:\nString str1 = \"Hello, \";\nString str2 = \"World!\";\nString result = str1 + str2; // result = \"Hello, World!\"\n\n\nString Comparison\nYou can compare strings in Java using the equals() method or the compareTo() method of the String class. The equals() method checks if two strings have the same content, while the compareTo() method compares two strings lexicographically.\nHere is an example of comparing strings:\nString str1 = \"Hello\";\nString str2 = \"Hello\";\nboolean isEqual = str1.equals(str2); // isEqual = true\nint result = str1.compareTo(\"World\"); // result = -15",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Abstractions",
-      "Data"
+      "Primitive Data Types"
     ]
   },
   {
@@ -1501,69 +1553,27 @@
   {
     "objectID": "test.html",
     "href": "test.html",
-    "title": "Testing",
+    "title": "Testing in Java",
     "section": "",
-    "text": "Testing in Java is a crucial part of the development process. It helps to ensure that the code is working as expected and that any changes made to the code do not introduce new bugs. In this section, we will discuss the basics of testing in Java, including unit testing, integration testing, and test-driven development.\n\n\nUnit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\n\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\n\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells",
+    "text": "Testing in Java is a crucial part of the development process. It helps to ensure that the code is working as expected and that any changes made to the code do not introduce new bugs. In this section, we will discuss the basics of testing in Java, including unit testing, integration testing, and test-driven development.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Operations",
-      "Testing"
+      "Testing in Java"
     ]
   },
   {
     "objectID": "test.html#unit-testing",
     "href": "test.html#unit-testing",
-    "title": "Testing",
-    "section": "",
-    "text": "Unit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\n\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\n\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells",
+    "title": "Testing in Java",
+    "section": "Unit Testing",
+    "text": "Unit Testing\nUnit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\nJUnit Framework\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\nRunning Tests\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Operations",
-      "Testing"
+      "Testing in Java"
     ]
-  },
-  {
-    "objectID": "PAs/PA2.html",
-    "href": "PAs/PA2.html",
-    "title": "Programming Assignment 2",
-    "section": "",
-    "text": "The Fibonacci numbers are defined as follows:\n\\(F(0) = 0, F(1) = 1,\\) and \\(F(n) = F(n-1) + F(n-2)\\) for \\(n \\geq 2\\).\nWrite a program that computes the \\(n\\)th Fibonacci number for a given \\(n\\).\n\n\nThe input consists of a single integer \\(n\\) \\((0 \\leq n \\leq 45)\\).\n\n\n\nPrint the \\(n\\)th Fibonacci number.\n\n\n\n10"
-  },
-  {
-    "objectID": "PAs/PA2.html#q1.-fibonacci-number",
-    "href": "PAs/PA2.html#q1.-fibonacci-number",
-    "title": "Programming Assignment 2",
-    "section": "",
-    "text": "The Fibonacci numbers are defined as follows:\n\\(F(0) = 0, F(1) = 1,\\) and \\(F(n) = F(n-1) + F(n-2)\\) for \\(n \\geq 2\\).\nWrite a program that computes the \\(n\\)th Fibonacci number for a given \\(n\\).\n\n\nThe input consists of a single integer \\(n\\) \\((0 \\leq n \\leq 45)\\).\n\n\n\nPrint the \\(n\\)th Fibonacci number.\n\n\n\n10"
-  },
-  {
-    "objectID": "PAs/PA2.html#q2.-maximum-pairwise-product",
-    "href": "PAs/PA2.html#q2.-maximum-pairwise-product",
-    "title": "Programming Assignment 2",
-    "section": "Q2. Maximum Pairwise Product",
-    "text": "Q2. Maximum Pairwise Product\nGiven a sequence of non-negative integers, find the maximum pairwise product.\n\nInput\nThe input consists of a single integer \\(n\\) \\((2 \\leq n \\leq 2 \\times 10^5)\\), followed by a sequence of \\(n\\) non-negative integers \\(a_1, a_2, \\ldots, a_n\\) \\((0 \\leq a_i \\leq 10^5)\\).\n\n\nOutput\nPrint the maximum pairwise product of the sequence.\n\n\nSample Input 2\n6\n1 2 3 4 5 6\n\n\nSample Output 2\n30"
-  },
-  {
-    "objectID": "PAs/PA2.html#q3.-binary-search",
-    "href": "PAs/PA2.html#q3.-binary-search",
-    "title": "Programming Assignment 2",
-    "section": "Q3. Binary Search",
-    "text": "Q3. Binary Search\nGiven a sorted array of integers, perform a binary search to find the index of a given target value.\n\nInput\nThe input consists of a single integer \\(n\\) \\((1 \\leq n \\leq 10^5)\\), followed by a sorted sequence of \\(n\\) integers \\(a_1, a_2, \\ldots, a_n\\) \\((0 \\leq a_i \\leq 10^9)\\), and a target integer \\(x\\) \\((0 \\leq x \\leq 10^9)\\).\n\n\nOutput\nPrint the index of the target value in the array, or \\(-1\\) if the target is not found.\n\n\nSample Input 3\n5\n1 2 3 4 5\n3\n\n\nSample Output 3\n2"
-  },
-  {
-    "objectID": "PAs/PA2.html#q4.-majority-element",
-    "href": "PAs/PA2.html#q4.-majority-element",
-    "title": "Programming Assignment 2",
-    "section": "Q4. Majority Element",
-    "text": "Q4. Majority Element\nGiven a sequence of integers, find the majority element (an element that appears more than \\(\\frac{n}{2}\\) times).\n\nInput\nThe input consists of a single integer \\(n\\) \\((1 \\leq n \\leq 10^5)\\), followed by a sequence of \\(n\\) integers \\(a_1, a_2, \\ldots, a_n\\) \\((0 \\leq a_i \\leq 10^9)\\).\n\n\nOutput\nPrint the majority element if it exists, or \\(-1\\) otherwise.\n\n\nSample Input 4"
-  },
-  {
-    "objectID": "PAs/PA2.html#q5.-fiz-buzz",
-    "href": "PAs/PA2.html#q5.-fiz-buzz",
-    "title": "Programming Assignment 2",
-    "section": "Q5. Fiz Buzz",
-    "text": "Q5. Fiz Buzz"
   }
 ]

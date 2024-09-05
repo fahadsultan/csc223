@@ -117,3 +117,62 @@ Here are five basic questions to help you practice Java:
    ```
 
 These basic questions cover fundamental Java concepts like loops, conditionals, and string manipulation, and provide a solid foundation for further learning.
+
+``` java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class Stack {
+
+    private int[] data;
+    private int top;
+
+    public Stack() {
+        this.data = new int[10];
+        this.top = -1;
+    }
+
+    public void push(int value) {
+        if (top == data.length - 1) {
+            System.out.println("Stack is full");
+            return;
+        }
+        data[++top] = value;
+    }
+
+    public void pop() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        top--;
+    }
+
+    public void print() {
+        for (int i = 0; i <= top; i++) {
+            System.out.print(data[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public void peek() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println(data[top]);
+    }
+
+    public static void main(String[] args) {
+
+        // Create a stack
+        Stack stack = new Stack();
+
+        // Push elements to the stack
+        stack.push(1);
+        result = stack.pop();
+        assertEquals(1, result);
+    }
+    
+}
+```

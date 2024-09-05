@@ -1,5 +1,5 @@
 ---
-title: "Classes"
+title: "Classes: User Defined Types"
 toc: true
 ---
 

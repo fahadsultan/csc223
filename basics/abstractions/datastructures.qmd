@@ -1,9 +1,91 @@
 ---
-title: "Built-in Data Structures"
+title: "Reference Data Types"
 toc: true
 ---
 
 In Java, built-in data structures can be categorized into two main types: arrays and collections. Arrays are fixed-size data structures that store elements of the same type in contiguous memory locations. Collections are dynamic-size data structures that store elements of different types and provide additional functionality for managing and manipulating the data.
+
+## Strings
+
+In Java, strings are objects of the `String` class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.
+
+Strings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the `String` class constructor. 
+
+### Creating Strings
+
+You can create strings in Java using string literals or the `String` class constructor
+
+Here is an example of creating strings:
+
+```java
+// Using string literals
+String str1 = "Hello, World!";
+String str2 = "Java Programming";
+
+// Using the String class constructor
+String str3 = new String("Welcome to Java!");
+```
+
+In the above example, we created strings using string literals and the `String` class constructor.
+
+### Read String Length
+
+You can get the length of a string using the `length()` method of the `String` class. The `length()` method returns the number of characters in the string.
+
+Here is an example of getting the length of a string:
+
+```java
+String str = "Hello, World!";
+int length = str.length(); // length = 13
+```
+
+### Accessing Characters
+
+In order to read an individual character from a string, you can use the `charAt()` method. The `charAt()` method returns the character at a specified index in the string.
+
+Here is an example of accessing characters in a string:
+
+```java
+String str = "Java Programming";
+char firstChar = str.charAt(0); // firstChar = 'J'
+char lastChar = str.charAt(str.length() - 1); // lastChar = 'g'
+```
+
+### Substring Extraction
+
+You can extract a substring from a string using the `substring()` method. The `substring()` method takes the starting index and optionally the ending index of the substring to be extracted.
+
+Here is an example of extracting a substring from a string:
+
+```java
+String str = "Hello, World!";
+String subStr = str.substring(7); // subStr = "World!"
+```
+
+### String Concatenation
+
+You can concatenate strings in Java using the `+` operator or the `concat()` method of the `String` class.
+
+Here is an example of concatenating strings:
+
+```java
+String str1 = "Hello, ";
+String str2 = "World!";
+String result = str1 + str2; // result = "Hello, World!"
+```
+
+### String Comparison
+
+You can compare strings in Java using the `equals()` method or the `compareTo()` method of the `String` class. The `equals()` method checks if two strings have the same content, while the `compareTo()` method compares two strings lexicographically.
+
+Here is an example of comparing strings:
+
+```java
+String str1 = "Hello";
+String str2 = "Hello";
+boolean isEqual = str1.equals(str2); // isEqual = true
+int result = str1.compareTo("World"); // result = -15
+```
 
 ## Arrays
 

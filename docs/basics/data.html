@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data</title>
+<title>Primitive Data Types</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Primitive Data Types</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -330,19 +330,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/data.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes</span></a>
+ <span class="menu-text">Primitive Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Built-in Data Structures</span></a>
+ <span class="menu-text">Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes: User Defined Types</span></a>
   </div>
 </li>
       </ul>
@@ -377,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Testing</span></a>
+ <span class="menu-text">Testing in Java</span></a>
   </div>
 </li>
       </ul>
@@ -493,24 +493,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays">Arrays</a></li>
   </ul></li>
-  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings">Strings</a>
-  <ul class="collapse">
-  <li><a href="#creating-strings" id="toc-creating-strings" class="nav-link" data-scroll-target="#creating-strings">Creating Strings</a></li>
-  <li><a href="#read-string-length" id="toc-read-string-length" class="nav-link" data-scroll-target="#read-string-length">Read String Length</a></li>
-  <li><a href="#accessing-characters" id="toc-accessing-characters" class="nav-link" data-scroll-target="#accessing-characters">Accessing Characters</a></li>
-  <li><a href="#substring-extraction" id="toc-substring-extraction" class="nav-link" data-scroll-target="#substring-extraction">Substring Extraction</a></li>
-  <li><a href="#string-concatenation" id="toc-string-concatenation" class="nav-link" data-scroll-target="#string-concatenation">String Concatenation</a></li>
-  <li><a href="#string-comparison" id="toc-string-comparison" class="nav-link" data-scroll-target="#string-comparison">String Comparison</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../basics/data.html">Primitive Data Types</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Data</h1>
+<h1 class="title">Primitive Data Types</h1>
 </div>
 
 
@@ -542,6 +533,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>In Java, every value has a type, and every type is defined by the Java programming language.</li>
 </ul>
+<p><img src="https://i0.wp.com/www.softwaretestingmaterial.com/wp-content/uploads/2018/03/Data-Types.png?ssl=1" width="100%" style="filter:invert(1)"></p>
+<center>
+<img src="https://media.licdn.com/dms/image/D4D12AQHSTVojmsQEUg/article-cover_image-shrink_600_2000/0/1659081799614?e=2147483647&amp;v=beta&amp;t=-UkbQsyWG5qPleze9ftMlyGhnHslyjH47G3X5zDKR28" width="80%" style="filter:invert(1)">
+</center>
 </section>
 <section id="primitive-data-types" class="level2">
 <h2 class="anchored" data-anchor-id="primitive-data-types">Primitive Data Types</h2>
@@ -608,62 +603,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note that arrays are different from Python lists, which can grow or shrink dynamically and don’t need to have length specified at the time of creation. Also, Python lists can contain elements of different types, while Java arrays are homogeneous (contain elements of the same type).</p>
 <p>To modify the values of an array, you can assign new values to individual elements using their indices.</p>
 <p>To access subarrays or slices of an array, you can use the <code>Arrays.copyOfRange()</code> method or loop through the array and copy elements to a new array.</p>
-</section>
-</section>
-<section id="strings" class="level2">
-<h2 class="anchored" data-anchor-id="strings">Strings</h2>
-<p>In Java, strings are objects of the <code>String</code> class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.</p>
-<p>Strings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the <code>String</code> class constructor.</p>
-<section id="creating-strings" class="level3">
-<h3 class="anchored" data-anchor-id="creating-strings">Creating Strings</h3>
-<p>You can create strings in Java using string literals or the <code>String</code> class constructor</p>
-<p>Here is an example of creating strings:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Using string literals</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str1 <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str2 <span class="op">=</span> <span class="st">"Java Programming"</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Using the String class constructor</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str3 <span class="op">=</span> <span class="kw">new</span> <span class="bu">String</span><span class="op">(</span><span class="st">"Welcome to Java!"</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In the above example, we created strings using string literals and the <code>String</code> class constructor.</p>
-</section>
-<section id="read-string-length" class="level3">
-<h3 class="anchored" data-anchor-id="read-string-length">Read String Length</h3>
-<p>You can get the length of a string using the <code>length()</code> method of the <code>String</code> class. The <code>length()</code> method returns the number of characters in the string.</p>
-<p>Here is an example of getting the length of a string:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> length <span class="op">=</span> str<span class="op">.</span><span class="fu">length</span><span class="op">();</span> <span class="co">// length = 13</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="accessing-characters" class="level3">
-<h3 class="anchored" data-anchor-id="accessing-characters">Accessing Characters</h3>
-<p>In order to read an individual character from a string, you can use the <code>charAt()</code> method. The <code>charAt()</code> method returns the character at a specified index in the string.</p>
-<p>Here is an example of accessing characters in a string:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str <span class="op">=</span> <span class="st">"Java Programming"</span><span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> firstChar <span class="op">=</span> str<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span> <span class="co">// firstChar = 'J'</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> lastChar <span class="op">=</span> str<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span>str<span class="op">.</span><span class="fu">length</span><span class="op">()</span> <span class="op">-</span> <span class="dv">1</span><span class="op">);</span> <span class="co">// lastChar = 'g'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="substring-extraction" class="level3">
-<h3 class="anchored" data-anchor-id="substring-extraction">Substring Extraction</h3>
-<p>You can extract a substring from a string using the <code>substring()</code> method. The <code>substring()</code> method takes the starting index and optionally the ending index of the substring to be extracted.</p>
-<p>Here is an example of extracting a substring from a string:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> subStr <span class="op">=</span> str<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">7</span><span class="op">);</span> <span class="co">// subStr = "World!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="string-concatenation" class="level3">
-<h3 class="anchored" data-anchor-id="string-concatenation">String Concatenation</h3>
-<p>You can concatenate strings in Java using the <code>+</code> operator or the <code>concat()</code> method of the <code>String</code> class.</p>
-<p>Here is an example of concatenating strings:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str1 <span class="op">=</span> <span class="st">"Hello, "</span><span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str2 <span class="op">=</span> <span class="st">"World!"</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> result <span class="op">=</span> str1 <span class="op">+</span> str2<span class="op">;</span> <span class="co">// result = "Hello, World!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="string-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="string-comparison">String Comparison</h3>
-<p>You can compare strings in Java using the <code>equals()</code> method or the <code>compareTo()</code> method of the <code>String</code> class. The <code>equals()</code> method checks if two strings have the same content, while the <code>compareTo()</code> method compares two strings lexicographically.</p>
-<p>Here is an example of comparing strings:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str1 <span class="op">=</span> <span class="st">"Hello"</span><span class="op">;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> str2 <span class="op">=</span> <span class="st">"Hello"</span><span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isEqual <span class="op">=</span> str1<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>str2<span class="op">);</span> <span class="co">// isEqual = true</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> str1<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span><span class="st">"World"</span><span class="op">);</span> <span class="co">// result = -15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

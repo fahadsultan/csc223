@@ -1,5 +1,5 @@
 ---
-title: "Data"
+title: "Primitive Data Types"
 toc: true
 ---
 
@@ -18,6 +18,10 @@ For example, the number `42` is a value. So is `"Hello World!"`.
 For example, the value `42` is of type `int` (short for integer) and the value `"Hello World!"` is of type `str` (short for string, so-called because it contains a _string_ of letters).
 
 * In Java, every value has a type, and every type is defined by the Java programming language.
+
+<img src="https://i0.wp.com/www.softwaretestingmaterial.com/wp-content/uploads/2018/03/Data-Types.png?ssl=1" width="100%" style="filter:invert(1)">
+
+<center><img src="https://media.licdn.com/dms/image/D4D12AQHSTVojmsQEUg/article-cover_image-shrink_600_2000/0/1659081799614?e=2147483647&v=beta&t=-UkbQsyWG5qPleze9ftMlyGhnHslyjH47G3X5zDKR28" width="80%" style="filter:invert(1)"></center>
 
 ## Primitive Data Types
 
@@ -94,84 +98,3 @@ To modify the values of an array, you can assign new values to individual elemen
 To access subarrays or slices of an array, you can use the `Arrays.copyOfRange()` method or loop through the array and copy elements to a new array.
 
 
-## Strings
-
-In Java, strings are objects of the `String` class that represent sequences of characters. Strings in Java are immutable, meaning their values cannot be changed once they are created. Java provides a rich set of methods for working with strings, such as concatenation, substring extraction, searching, and more.
-
-Strings are part of the Java standard library and do not need to be imported explicitly. You can create strings using string literals or the `String` class constructor. 
-
-### Creating Strings
-
-You can create strings in Java using string literals or the `String` class constructor
-
-Here is an example of creating strings:
-
-```java
-// Using string literals
-String str1 = "Hello, World!";
-String str2 = "Java Programming";
-
-// Using the String class constructor
-String str3 = new String("Welcome to Java!");
-```
-
-In the above example, we created strings using string literals and the `String` class constructor.
-
-### Read String Length
-
-You can get the length of a string using the `length()` method of the `String` class. The `length()` method returns the number of characters in the string.
-
-Here is an example of getting the length of a string:
-
-```java
-String str = "Hello, World!";
-int length = str.length(); // length = 13
-```
-
-### Accessing Characters
-
-In order to read an individual character from a string, you can use the `charAt()` method. The `charAt()` method returns the character at a specified index in the string.
-
-Here is an example of accessing characters in a string:
-
-```java
-String str = "Java Programming";
-char firstChar = str.charAt(0); // firstChar = 'J'
-char lastChar = str.charAt(str.length() - 1); // lastChar = 'g'
-```
-
-### Substring Extraction
-
-You can extract a substring from a string using the `substring()` method. The `substring()` method takes the starting index and optionally the ending index of the substring to be extracted.
-
-Here is an example of extracting a substring from a string:
-
-```java
-String str = "Hello, World!";
-String subStr = str.substring(7); // subStr = "World!"
-```
-
-### String Concatenation
-
-You can concatenate strings in Java using the `+` operator or the `concat()` method of the `String` class.
-
-Here is an example of concatenating strings:
-
-```java
-String str1 = "Hello, ";
-String str2 = "World!";
-String result = str1 + str2; // result = "Hello, World!"
-```
-
-### String Comparison
-
-You can compare strings in Java using the `equals()` method or the `compareTo()` method of the `String` class. The `equals()` method checks if two strings have the same content, while the `compareTo()` method compares two strings lexicographically.
-
-Here is an example of comparing strings:
-
-```java
-String str1 = "Hello";
-String str2 = "Hello";
-boolean isEqual = str1.equals(str2); // isEqual = true
-int result = str1.compareTo("World"); // result = -15
-```
