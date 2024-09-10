@@ -1,0 +1,103 @@
+---
+title: "Dynamic-Size Reference Data Types"
+toc: true
+---
+
+## Collections
+
+Collections in Java are dynamic-size data structures that store elements of different types and provide additional functionality for managing and manipulating the data. Java provides a rich set of collection classes in the `java.util` package that implement various data structures such as lists, sets, maps, queues, and more.
+
+### ArrayList
+
+The `ArrayList` class in Java implements the `List` interface and provides a dynamic array that can grow or shrink in size. `ArrayList` allows duplicate elements and maintains the insertion order of elements.
+
+The `List` interface in Java represents an ordered collection of elements that allows duplicate elements. Lists maintain the insertion order of elements and provide methods to add, remove, and access elements by index.
+
+Here is an example of creating and using an `ArrayList`:
+
+```java
+import java.util.ArrayList;
+
+// Create an ArrayList of strings
+ArrayList<String> names = new ArrayList<>();
+
+// Add elements to the ArrayList
+names.add("Alice");
+names.add("Bob");
+names.add("Charlie");
+
+// Access elements by index
+String firstElement = names.get(0); // firstElement = "Alice"
+
+// Iterate over the ArrayList
+for (String name : names) {
+    System.out.println(name); // Output each name
+}
+
+```
+
+In the above example, we created an `ArrayList` of strings, added elements to the list, accessed elements by index, and iterated over the list using a `foreach` loop.
+
+### HashSet
+
+The `HashSet` class in Java implements the `Set` interface and provides a collection of unique elements. `HashSet` does not allow duplicate elements and does not maintain the insertion order of elements.
+
+The `Set` interface in Java represents a collection of elements that does not allow duplicate elements. Sets do not maintain the insertion order of elements and provide methods to add, remove, and check for the presence of elements.
+
+Here is an example of creating and using a `HashSet`:
+
+```java
+import java.util.HashSet;
+
+// Create a HashSet of integers
+HashSet<Integer> numbers = new HashSet<>();
+
+// Add elements to the HashSet
+numbers.add(10);
+numbers.add(20);
+numbers.add(30);
+
+// Check if an element is present
+boolean containsTwenty = numbers.contains(20); // containsTwenty = true
+
+// Iterate over the HashSet
+for (int number : numbers) {
+    System.out.println(number); // Output each number
+}
+
+```
+
+In the above example, we created a `HashSet` of integers, added elements to the set, checked for the presence of an element, and iterated over the set using a `foreach` loop.
+
+
+### HashMap (Dictionary)
+
+The `HashMap` class in Java implements the `Map` interface and provides a collection of key-value pairs. `HashMap` allows null keys and values, and does not maintain the insertion order of elements.
+
+The `Map` interface in Java represents a collection of key-value pairs where each key is unique. Maps provide methods to add, remove, and access elements by key. Java provides several implementations of the `Map` interface, such as `HashMap`, `TreeMap`, and `LinkedHashMap`.
+
+Here is an example of creating and using a `HashMap`:
+
+```java
+import java.util.HashMap;
+
+// Create a HashMap of student names and IDs
+HashMap<String, Integer> studentIds = new HashMap<>();
+
+// Add key-value pairs to the HashMap
+studentIds.put("Alice", 101);
+studentIds.put("Bob", 102);
+studentIds.put("Charlie", 103);
+
+// Access values by key
+int aliceId = studentIds.get("Alice"); // aliceId = 101
+
+// Iterate over the HashMap
+for (String name : studentIds.keySet()) {
+    int id = studentIds.get(name);
+    System.out.println(name + ": " + id); // Output each name and ID
+}
+
+```
+
+In the above example, we created a `HashMap` of student names and IDs, added key-value pairs to the map, accessed values by key, and iterated over the map to print each name and ID.

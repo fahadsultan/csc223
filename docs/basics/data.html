@@ -336,7 +336,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reference Data Types</span></a>
+ <span class="menu-text">Fixed-Size Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dynamic-Size Reference Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -403,6 +409,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Loops</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exception Handling</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -416,12 +428,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hashmaps</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link">
@@ -438,6 +444,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hashmaps</span></a>
   </div>
 </li>
       </ul>
@@ -489,9 +501,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#wrappers-and-autoboxing" id="toc-wrappers-and-autoboxing" class="nav-link" data-scroll-target="#wrappers-and-autoboxing">Wrappers and Autoboxing</a></li>
   <li><a href="#fixed-size-memory-allocation" id="toc-fixed-size-memory-allocation" class="nav-link" data-scroll-target="#fixed-size-memory-allocation">Fixed-Size Memory Allocation</a></li>
   </ul></li>
-  <li><a href="#reference-data-types" id="toc-reference-data-types" class="nav-link" data-scroll-target="#reference-data-types">Reference Data Types</a>
+  <li><a href="#type-conversion" id="toc-type-conversion" class="nav-link" data-scroll-target="#type-conversion">Type Conversion</a>
   <ul class="collapse">
-  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays">Arrays</a></li>
+  <li><a href="#automatic-type-conversion-type-promotion" id="toc-automatic-type-conversion-type-promotion" class="nav-link" data-scroll-target="#automatic-type-conversion-type-promotion">Automatic Type Conversion (Type Promotion)</a></li>
+  <li><a href="#explicit-type-conversion-type-casting" id="toc-explicit-type-conversion-type-casting" class="nav-link" data-scroll-target="#explicit-type-conversion-type-casting">Explicit Type Conversion (Type Casting)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -575,34 +588,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In contrast, Python’s objects (including what would be primitives in Java) are dynamically allocated, meaning their memory size can vary. Python integers and floats use more memory than their Java counterparts because they are objects and include metadata.</p>
 </section>
 </section>
-<section id="reference-data-types" class="level2">
-<h2 class="anchored" data-anchor-id="reference-data-types">Reference Data Types</h2>
-<p>Java also has non-primitive data types, which are called reference types. These include:</p>
+<section id="type-conversion" class="level2">
+<h2 class="anchored" data-anchor-id="type-conversion">Type Conversion</h2>
+<p>In Java, there are two types of type conversion:</p>
 <ol type="1">
-<li><strong>Arrays</strong>: A collection of elements of the same type.</li>
-<li><strong>Classes</strong>: User-defined data types that can have fields, methods, and constructors.</li>
-<li><strong>Interfaces</strong>: Similar to classes but with only method signatures and no implementation.</li>
-<li><strong>Enums</strong>: A special type that defines a set of constants.</li>
-<li><strong>Strings</strong>: A sequence of characters.</li>
+<li><p><strong>Automatic Type Conversion</strong>: Java supports automatic type conversion when values of different types are combined in an expression. This is known as <strong>type promotion</strong>.</p></li>
+<li><p><strong>Explicit Type Conversion (Type Casting)</strong>: Java also supports explicit type conversion, known as <strong>type casting</strong>, which allows you to convert a value from one type to another.</p></li>
 </ol>
-<p>Reference types store references (memory addresses) to objects rather than the objects themselves. This allows Java to manage memory more efficiently and handle complex data structures.</p>
-<section id="arrays" class="level3">
-<h3 class="anchored" data-anchor-id="arrays">Arrays</h3>
+<section id="automatic-type-conversion-type-promotion" class="level3">
+<h3 class="anchored" data-anchor-id="automatic-type-conversion-type-promotion">Automatic Type Conversion (Type Promotion)</h3>
 <ul>
-<li><p>An array is a collection of elements of the same type stored in contiguous memory locations.</p></li>
-<li><p>Arrays in Java are fixed in size, meaning the number of elements in an array is determined when the array is created and cannot be changed.</p></li>
-<li><p>Arrays are indexed starting from 0. The index represents the position of an element in the array.</p></li>
-<li><p>To access an element in an array, you use the index enclosed in square brackets after the array name (e.g., <code>arr[0]</code>).</p></li>
+<li><p>When values of different types are combined in an expression, Java automatically promotes the values to a common type.</p></li>
+<li><p>The rules for type promotion are as follows:</p></li>
 </ul>
-<p>An example of creating and accessing elements in an array:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span><span class="op">[]</span> arr <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">5</span><span class="op">];</span> <span class="co">// Create an array of 5 integers</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>arr<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="dv">10</span><span class="op">;</span> <span class="co">// Assign 10 to the first element</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>arr<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="dv">20</span><span class="op">;</span> <span class="co">// Assign 20 to the second element</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>arr<span class="op">[</span><span class="dv">0</span><span class="op">]);</span> <span class="co">// Output: 10</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>arr<span class="op">[</span><span class="dv">1</span><span class="op">]);</span> <span class="co">// Output: 20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that arrays are different from Python lists, which can grow or shrink dynamically and don’t need to have length specified at the time of creation. Also, Python lists can contain elements of different types, while Java arrays are homogeneous (contain elements of the same type).</p>
-<p>To modify the values of an array, you can assign new values to individual elements using their indices.</p>
-<p>To access subarrays or slices of an array, you can use the <code>Arrays.copyOfRange()</code> method or loop through the array and copy elements to a new array.</p>
+<ol type="1">
+<li>If one of the values is a <code>double</code>, the other value is converted to a <code>double</code>.</li>
+<li>If one of the values is a <code>float</code>, the other value is converted to a <code>float</code>.</li>
+<li>If one of the values is a <code>long</code>, the other value is converted to a <code>long</code>.</li>
+<li>Otherwise, both values are converted to an <code>int</code>.</li>
+</ol>
+<p>For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">long</span> b <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> c <span class="op">=</span> <span class="fl">30.0f</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> d <span class="op">=</span> <span class="fl">40.0</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> result <span class="op">=</span> a <span class="op">*</span> b <span class="op">+</span> c <span class="op">/</span> d<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example, the <code>int</code> value <code>a</code> is promoted to a <code>long</code>, the <code>float</code> value <code>c</code> is promoted to a <code>double</code>, and the result is a <code>double</code>.</p>
+<p>In other words, the <u>data type of the result is determined by the data type of the most precise or the operand with the highest memory size</u>.</p>
+</section>
+<section id="explicit-type-conversion-type-casting" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-type-conversion-type-casting">Explicit Type Conversion (Type Casting)</h3>
+<ul>
+<li><p>Java allows you to explicitly convert a value from one type to another using type casting.</p></li>
+<li><p>Type casting is done by placing the desired type in parentheses before the value to be converted.</p></li>
+</ul>
+<p>For example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">long</span> b <span class="op">=</span> <span class="op">(</span><span class="dt">long</span><span class="op">)</span> a<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example, the <code>int</code> value <code>a</code> is explicitly cast to a <code>long</code>.</p>
+<ul>
+<li>Type casting can result in data loss if the value being converted cannot be represented in the target type.</li>
+</ul>
+<p>For example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">1000</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">byte</span> b <span class="op">=</span> <span class="op">(</span><span class="dt">byte</span><span class="op">)</span> a<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example, the <code>int</code> value <code>a</code> is cast to a <code>byte</code>. Since a <code>byte</code> can only represent values from -128 to 127, the result is -24, which is the remainder of 1000 divided by 256.</p>
 
 
 </section>

@@ -336,7 +336,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reference Data Types</span></a>
+ <span class="menu-text">Fixed-Size Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dynamic-Size Reference Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -403,6 +409,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Loops</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exception Handling</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -416,12 +428,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hashmaps</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../datastructs/trees.html" class="sidebar-item-text sidebar-link">
@@ -438,6 +444,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hashmaps</span></a>
   </div>
 </li>
       </ul>
@@ -483,25 +495,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#arithmetic-operators" id="toc-arithmetic-operators" class="nav-link active" data-scroll-target="#arithmetic-operators">Arithmetic Operators</a>
   <ul class="collapse">
-  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">Comparison Operators</a></li>
+  <li><a href="#comparison-with-python" id="toc-comparison-with-python" class="nav-link" data-scroll-target="#comparison-with-python">Comparison with Python</a></li>
+  </ul></li>
+  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">Comparison Operators</a>
+  <ul class="collapse">
+  <li><a href="#comparison-with-python-1" id="toc-comparison-with-python-1" class="nav-link" data-scroll-target="#comparison-with-python-1">Comparison with Python</a></li>
+  </ul></li>
   <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">Logical Operators</a></li>
   <li><a href="#membership-operators" id="toc-membership-operators" class="nav-link" data-scroll-target="#membership-operators">Membership Operators</a></li>
   <li><a href="#identity-operators" id="toc-identity-operators" class="nav-link" data-scroll-target="#identity-operators">Identity Operators</a></li>
-  </ul></li>
   <li><a href="#assignment-operators" id="toc-assignment-operators" class="nav-link" data-scroll-target="#assignment-operators">Assignment Operators</a></li>
   <li><a href="#bitwise-operators" id="toc-bitwise-operators" class="nav-link" data-scroll-target="#bitwise-operators">Bitwise Operators</a></li>
-  <li><a href="#comparison-with-python" id="toc-comparison-with-python" class="nav-link" data-scroll-target="#comparison-with-python">Comparison with Python</a>
-  <ul class="collapse">
-  <li><a href="#basic-arithmetic-operators" id="toc-basic-arithmetic-operators" class="nav-link" data-scroll-target="#basic-arithmetic-operators">1. <strong>Basic Arithmetic Operators</strong></a></li>
-  <li><a href="#division" id="toc-division" class="nav-link" data-scroll-target="#division">2. <strong>Division (<code>/</code>)</strong></a></li>
-  <li><a href="#exponentiation" id="toc-exponentiation" class="nav-link" data-scroll-target="#exponentiation">3. <strong>Exponentiation</strong></a></li>
-  <li><a href="#unary-operators" id="toc-unary-operators" class="nav-link" data-scroll-target="#unary-operators">4. <strong>Unary Operators</strong></a></li>
-  <li><a href="#modulus-operator" id="toc-modulus-operator" class="nav-link" data-scroll-target="#modulus-operator">5. <strong>Modulus Operator (<code>%</code>)</strong></a></li>
-  <li><a href="#operator-overloading" id="toc-operator-overloading" class="nav-link" data-scroll-target="#operator-overloading">6. <strong>Operator Overloading</strong></a></li>
-  <li><a href="#comparison-operators-1" id="toc-comparison-operators-1" class="nav-link" data-scroll-target="#comparison-operators-1">7. <strong>Comparison Operators</strong></a></li>
-  <li><a href="#handling-large-numbers" id="toc-handling-large-numbers" class="nav-link" data-scroll-target="#handling-large-numbers">8. <strong>Handling Large Numbers</strong></a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
-  </ul></li>
+  <li><a href="#operator-overloading" id="toc-operator-overloading" class="nav-link" data-scroll-target="#operator-overloading"><strong>Operator Overloading</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -578,8 +583,89 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<section id="comparison-operators" class="level3">
-<h3 class="anchored" data-anchor-id="comparison-operators">Comparison Operators</h3>
+<section id="comparison-with-python" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-with-python">Comparison with Python</h3>
+<p>Python and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:</p>
+<section id="basic-arithmetic-operators" class="level4">
+<h4 class="anchored" data-anchor-id="basic-arithmetic-operators">1. <strong>Basic Arithmetic Operators</strong></h4>
+<p>Both Python and Java use the same basic arithmetic operators: - <strong>Addition (<code>+</code>)</strong>: Adds two operands. - <strong>Subtraction (<code>-</code>)</strong>: Subtracts the second operand from the first. - <strong>Multiplication (<code>*</code>)</strong>: Multiplies two operands. - <strong>Division (<code>/</code>)</strong>: Divides the first operand by the second. - <strong>Modulus (<code>%</code>)</strong>: Returns the remainder of a division operation.</p>
+</section>
+<section id="division" class="level4">
+<h4 class="anchored" data-anchor-id="division">2. <strong>Division (<code>/</code>)</strong></h4>
+<ul>
+<li><strong>Python</strong>:
+<ul>
+<li>The <code>/</code> operator performs <strong>true division</strong> and always returns a float, even if both operands are integers.</li>
+<li><strong>Integer division</strong> can be performed using the <code>//</code> operator, which returns the floor of the division.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span>   <span class="co"># Returns 2.5</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">//</span> <span class="dv">2</span>  <span class="co"># Returns 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><strong>Java</strong>:
+<ul>
+<li>The <code>/</code> operator performs division, but the result depends on the operand types:
+<ul>
+<li>If both operands are integers, <strong>integer division</strong> is performed, and the result is an integer.</li>
+<li>If either operand is a floating-point number (<code>float</code> or <code>double</code>), <strong>floating-point division</strong> is performed, returning a float or double.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>  <span class="co">// Returns 2 (integer division)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> result <span class="op">=</span> <span class="fl">5.0</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>  <span class="co">// Returns 2.5 (floating-point division)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+</ul>
+</section>
+<section id="exponentiation" class="level4">
+<h4 class="anchored" data-anchor-id="exponentiation">3. <strong>Exponentiation</strong></h4>
+<ul>
+<li><strong>Python</strong>:
+<ul>
+<li>Python has a built-in operator for exponentiation: <code>**</code>.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span>  <span class="co"># Returns 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><strong>Java</strong>:
+<ul>
+<li>Java does not have a built-in exponentiation operator. Instead, you use the <code>Math.pow()</code> method to perform exponentiation.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> result <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">);</span>  <span class="co">// Returns 8.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</section>
+<section id="unary-operators" class="level4">
+<h4 class="anchored" data-anchor-id="unary-operators">4. <strong>Unary Operators</strong></h4>
+<ul>
+<li><strong>Python</strong>:
+<ul>
+<li>Supports unary operators like <code>+</code> and <code>-</code> for positive and negative values.</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">-</span><span class="dv">5</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">+</span><span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><strong>Java</strong>:
+<ul>
+<li>Java also supports unary operators <code>+</code> and <code>-</code>, as well as the increment (<code>++</code>) and decrement (<code>--</code>) operators.</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="op">-</span><span class="dv">5</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> y <span class="op">=</span> <span class="op">+</span><span class="dv">5</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> z <span class="op">=</span> <span class="op">++</span>x<span class="op">;</span>  <span class="co">// Increments x by 1, then assigns to z</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</section>
+<section id="modulus-operator" class="level4">
+<h4 class="anchored" data-anchor-id="modulus-operator">5. <strong>Modulus Operator (<code>%</code>)</strong></h4>
+<ul>
+<li><strong>Python</strong>:
+<ul>
+<li>The <code>%</code> operator returns the remainder of a division operation. It handles both positive and negative numbers, with the result having the same sign as the divisor.</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>   <span class="co"># Returns 2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>  <span class="co"># Returns 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><strong>Java</strong>:
+<ul>
+<li>The <code>%</code> operator also returns the remainder, but the result has the same sign as the dividend.</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>   # Returns <span class="dv">2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>  # Returns <span class="op">-</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="comparison-operators" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-operators">Comparison Operators</h2>
 <p>The following table lists the comparison operators in Java. These operators compare two operands and evaluate to either <code>true</code> or <code>false</code>.</p>
 <table class="caption-top table">
 <thead>
@@ -629,9 +715,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<section id="comparison-with-python-1" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-with-python-1">Comparison with Python</h3>
+<ul>
+<li><strong>Python</strong>:
+<ul>
+<li>Comparison operators (<code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code>) can be used with numbers, strings, and other types.</li>
+<li>Python also supports chaining comparisons (e.g., <code>1 &lt; x &lt; 10</code>).</li>
+</ul></li>
+<li><strong>Java</strong>:
+<ul>
+<li>Comparison operators are used primarily with primitive types and do not support chaining like Python.</li>
+</ul></li>
+</ul>
 </section>
-<section id="logical-operators" class="level3">
-<h3 class="anchored" data-anchor-id="logical-operators">Logical Operators</h3>
+</section>
+<section id="logical-operators" class="level2">
+<h2 class="anchored" data-anchor-id="logical-operators">Logical Operators</h2>
 <p>The following table lists the logical operators in Java. These operators combine two or more boolean expressions and evaluate to either <code>true</code> or <code>false</code>.</p>
 <table class="caption-top table">
 <thead>
@@ -664,8 +764,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="membership-operators" class="level3">
-<h3 class="anchored" data-anchor-id="membership-operators">Membership Operators</h3>
+<section id="membership-operators" class="level2">
+<h2 class="anchored" data-anchor-id="membership-operators">Membership Operators</h2>
 <p>The following table lists the membership operators in Java. These operators test for membership in a sequence and evaluate to either <code>true</code> or <code>false</code>.</p>
 <table class="caption-top table">
 <thead>
@@ -692,8 +792,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="identity-operators" class="level3">
-<h3 class="anchored" data-anchor-id="identity-operators">Identity Operators</h3>
+<section id="identity-operators" class="level2">
+<h2 class="anchored" data-anchor-id="identity-operators">Identity Operators</h2>
 <p>The following table lists the identity operators in Java. These operators compare the memory locations of two objects and evaluate to either <code>true</code> or <code>false</code>.</p>
 <table class="caption-top table">
 <thead>
@@ -719,7 +819,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-</section>
 </section>
 <section id="assignment-operators" class="level2">
 <h2 class="anchored" data-anchor-id="assignment-operators">Assignment Operators</h2>
@@ -839,87 +938,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="comparison-with-python" class="level2">
-<h2 class="anchored" data-anchor-id="comparison-with-python">Comparison with Python</h2>
-<p>Python and Java have some similarities in their use of mathematical operators, but there are notable differences in their behavior and usage. Here’s a comparison:</p>
-<section id="basic-arithmetic-operators" class="level3">
-<h3 class="anchored" data-anchor-id="basic-arithmetic-operators">1. <strong>Basic Arithmetic Operators</strong></h3>
-<p>Both Python and Java use the same basic arithmetic operators: - <strong>Addition (<code>+</code>)</strong>: Adds two operands. - <strong>Subtraction (<code>-</code>)</strong>: Subtracts the second operand from the first. - <strong>Multiplication (<code>*</code>)</strong>: Multiplies two operands. - <strong>Division (<code>/</code>)</strong>: Divides the first operand by the second. - <strong>Modulus (<code>%</code>)</strong>: Returns the remainder of a division operation.</p>
-</section>
-<section id="division" class="level3">
-<h3 class="anchored" data-anchor-id="division">2. <strong>Division (<code>/</code>)</strong></h3>
-<ul>
-<li><strong>Python</strong>:
-<ul>
-<li>The <code>/</code> operator performs <strong>true division</strong> and always returns a float, even if both operands are integers.</li>
-<li><strong>Integer division</strong> can be performed using the <code>//</code> operator, which returns the floor of the division.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span>   <span class="co"># Returns 2.5</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">//</span> <span class="dv">2</span>  <span class="co"># Returns 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><strong>Java</strong>:
-<ul>
-<li>The <code>/</code> operator performs division, but the result depends on the operand types:
-<ul>
-<li>If both operands are integers, <strong>integer division</strong> is performed, and the result is an integer.</li>
-<li>If either operand is a floating-point number (<code>float</code> or <code>double</code>), <strong>floating-point division</strong> is performed, returning a float or double.</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>  <span class="co">// Returns 2 (integer division)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> result <span class="op">=</span> <span class="fl">5.0</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>  <span class="co">// Returns 2.5 (floating-point division)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
-</ul>
-</section>
-<section id="exponentiation" class="level3">
-<h3 class="anchored" data-anchor-id="exponentiation">3. <strong>Exponentiation</strong></h3>
-<ul>
-<li><strong>Python</strong>:
-<ul>
-<li>Python has a built-in operator for exponentiation: <code>**</code>.</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span>  <span class="co"># Returns 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><strong>Java</strong>:
-<ul>
-<li>Java does not have a built-in exponentiation operator. Instead, you use the <code>Math.pow()</code> method to perform exponentiation.</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> result <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">);</span>  <span class="co">// Returns 8.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="unary-operators" class="level3">
-<h3 class="anchored" data-anchor-id="unary-operators">4. <strong>Unary Operators</strong></h3>
-<ul>
-<li><strong>Python</strong>:
-<ul>
-<li>Supports unary operators like <code>+</code> and <code>-</code> for positive and negative values.</li>
-</ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">-</span><span class="dv">5</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">+</span><span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><strong>Java</strong>:
-<ul>
-<li>Java also supports unary operators <code>+</code> and <code>-</code>, as well as the increment (<code>++</code>) and decrement (<code>--</code>) operators.</li>
-</ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="op">-</span><span class="dv">5</span><span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> y <span class="op">=</span> <span class="op">+</span><span class="dv">5</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> z <span class="op">=</span> <span class="op">++</span>x<span class="op">;</span>  <span class="co">// Increments x by 1, then assigns to z</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="modulus-operator" class="level3">
-<h3 class="anchored" data-anchor-id="modulus-operator">5. <strong>Modulus Operator (<code>%</code>)</strong></h3>
-<ul>
-<li><strong>Python</strong>:
-<ul>
-<li>The <code>%</code> operator returns the remainder of a division operation. It handles both positive and negative numbers, with the result having the same sign as the divisor.</li>
-</ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>   <span class="co"># Returns 2</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>  <span class="co"># Returns 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><strong>Java</strong>:
-<ul>
-<li>The <code>%</code> operator also returns the remainder, but the result has the same sign as the dividend.</li>
-</ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>   # Returns <span class="dv">2</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>  # Returns <span class="op">-</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="operator-overloading" class="level3">
-<h3 class="anchored" data-anchor-id="operator-overloading">6. <strong>Operator Overloading</strong></h3>
+<section id="operator-overloading" class="level2">
+<h2 class="anchored" data-anchor-id="operator-overloading"><strong>Operator Overloading</strong></h2>
 <ul>
 <li><strong>Python</strong>:
 <ul>
@@ -937,44 +957,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Does not support operator overloading. Operators have fixed behavior based on the data types they are used with.</li>
 </ul></li>
 </ul>
-</section>
-<section id="comparison-operators-1" class="level3">
-<h3 class="anchored" data-anchor-id="comparison-operators-1">7. <strong>Comparison Operators</strong></h3>
-<ul>
-<li><strong>Python</strong>:
-<ul>
-<li>Comparison operators (<code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code>) can be used with numbers, strings, and other types.</li>
-<li>Python also supports chaining comparisons (e.g., <code>1 &lt; x &lt; 10</code>).</li>
-</ul></li>
-<li><strong>Java</strong>:
-<ul>
-<li>Comparison operators are used primarily with primitive types and do not support chaining like Python.</li>
-</ul></li>
-</ul>
-</section>
-<section id="handling-large-numbers" class="level3">
-<h3 class="anchored" data-anchor-id="handling-large-numbers">8. <strong>Handling Large Numbers</strong></h3>
-<ul>
-<li><strong>Python</strong>:
-<ul>
-<li>Python’s <code>int</code> type automatically handles large integers, with no fixed size limit, constrained only by available memory.</li>
-</ul></li>
-<li><strong>Java</strong>:
-<ul>
-<li>Java’s <code>int</code> type is a 32-bit signed integer. To handle large integers, you need to use <code>long</code> (64-bit) or <code>BigInteger</code> for arbitrarily large numbers.</li>
-</ul></li>
-</ul>
-</section>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>Python’s operators are more flexible, particularly with automatic type conversions, true division, and operator overloading.</li>
-<li>Java’s operators are more rigid, with clear distinctions between integer and floating-point division, and no operator overloading.</li>
-<li>Python provides a more intuitive experience for mathematical operations, especially for beginners, while Java’s stricter rules align with its statically-typed nature.</li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

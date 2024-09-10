@@ -63,6 +63,7 @@ website:
                 - basics/data.qmd
                 # - basics/abstractions/functions.qmd
                 - basics/abstractions/datastructures.qmd
+                - basics/abstractions/datastructures2.qmd
                 - basics/abstractions/classes.qmd
             - section: "Operations"
               href: basics/operations/operations.ipynb
@@ -80,13 +81,14 @@ website:
                 # - basics/controls/loops.ipynb
                 - basics/controls/conditionals.qmd
                 - basics/controls/loops.qmd
+                - basics/controls/exceptions.qmd
         - section: 
           href: datastructs/datastructs.qmd
           contents:
-            - datastructs/hashmaps.qmd
             - datastructs/trees.qmd
             - datastructs/heaps.qmd
             - datastructs/graphs.qmd
+            - datastructs/hashmaps.qmd
         - section: 
           href: algos/algos.qmd
           contents:

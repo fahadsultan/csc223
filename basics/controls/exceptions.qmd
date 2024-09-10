@@ -1,0 +1,102 @@
+---
+title: "Exception Handling"
+toc: true
+---
+
+An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. When an exception occurs, the program terminates abruptly, and the control is transferred to the exception handler.
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230613122108/Exception-Handling-768.png" alt="Exception Handling" width="80%" style="filter:invert(1)">
+</center>
+<br/>
+
+In Java, exceptions are objects that represent an abnormal condition or error. Exceptions can occur due to various reasons, such as invalid input, file not found, network issues, arithmetic errors, etc.
+
+## Types of Exceptions
+
+Java exceptions are divided into two categories: checked exceptions and unchecked exceptions.
+
+In Java, exceptions are organized in a hierarchy of classes. The `Throwable` class is the superclass of all exceptions and errors in Java. The `Exception` class is a subclass of `Throwable` and is the superclass of all checked exceptions. The `RuntimeException` class is a subclass of `Exception` and is the superclass of all unchecked exceptions.
+
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240730174225/Exceptions-in-Java-1-768.webp" alt="Types of Exceptions" width="80%" style="filter:invert(1)"></center>
+
+### Checked Exceptions
+
+Checked exceptions are exceptions that are checked at compile time. These exceptions are subclasses of the `Exception` class but not subclasses of the `RuntimeException` class. Checked exceptions must be caught or declared in the method signature using the `throws` keyword.
+
+Examples of checked exceptions include `IOException`, `SQLException`, `ClassNotFoundException`, etc.
+
+### Unchecked Exceptions
+
+Unchecked exceptions are exceptions that are not checked at compile time. These exceptions are subclasses of the `RuntimeException` class. Unchecked exceptions do not need to be caught or declared in the method signature.
+
+Examples of unchecked exceptions include `ArithmeticException`, `NullPointerException`, `ArrayIndexOutOfBoundsException`, etc.
+
+## Exception Handling in Java
+
+Java provides a robust exception handling mechanism to deal with exceptions. The `try`, `catch`, and `finally` blocks are used to handle exceptions in Java.
+
+### `try` Block
+
+The `try` block is used to enclose the code that might throw an exception. It is followed by one or more `catch` blocks and an optional `finally` block.
+
+### `catch` Block
+
+The `catch` block is used to handle the exception that is thrown in the `try` block. It contains the code that handles the exception. A `try` block can have multiple `catch` blocks to handle different types of exceptions.
+
+### `finally` Block
+
+The `finally` block is used to execute the code that should be run regardless of whether an exception is thrown or not. It is executed after the `try` block and any associated `catch` blocks.
+
+### Example of Exception Handling
+
+Here is an example of exception handling in Java:
+
+```java
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+
+    public static int divide(int a, int b) {
+        return a / b;
+    }
+}
+```
+
+In this example, the `divide` method throws an `ArithmeticException` when dividing by zero. The exception is caught in the `catch` block, and the `finally` block is executed regardless of whether an exception occurs or not.
+
+
+## Custom Exceptions
+
+In addition to the built-in exceptions provided by Java, you can create your own custom exceptions by extending the `Exception` class or one of its subclasses. Custom exceptions are useful for handling application-specific errors or conditions.
+
+Here is an example of a custom exception:
+
+```java
+public class CustomExceptionExample {
+    public static void main(String[] args) {
+        try {
+            throw new CustomException("Custom exception message");
+        } catch (CustomException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+
+class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+```
+
+In this example, we define a custom exception `CustomException` that extends the `Exception` class. We then throw this custom exception and catch it in the `main` method.
