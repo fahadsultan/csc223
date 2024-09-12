@@ -1,0 +1,242 @@
+---
+title: "Binary Search Tree"
+toc: true
+---
+
+A **binary search tree (BST)** is a binary tree data structure that follows the property of the binary search algorithm. In a BST, each node has a key (value), and the keys in the left subtree are less than the key in the root, while the keys in the right subtree are greater than the key in the root.
+
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240418110011/Binary-Search-Tree.webp" style="filter:invert(1);" width="90%">
+</center>
+
+## Operations on Trees
+
+
+### **Search**: Finding a specific node in the tree.
+
+#### Depth First Search (DFS)
+
+A traversal algorithm that explores as far as possible along each branch before backtracking.
+
+```python
+def dfs(root, target):
+	if root is None:
+		return False
+	if root.val == target:
+		return True
+	return dfs(root.left, target) or dfs(root.right, target)
+```
+
+<img src="https://www.freelancinggig.com/blog/wp-content/uploads/2019/02/BFS-and-DFS-Algorithms.png" style="filter:invert(1);" width="80%">
+
+#### Breadth First Search (BFS)
+
+A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.
+
+
+```python
+def bfs(root, target):
+	if root is None:
+		return False
+	queue = [root]
+	while queue:
+		node = queue.pop(0)
+		if node.val == target:
+			return True
+		if node.left:
+			queue.append(node.left)
+		if node.right:
+			queue.append(node.right)
+	return False
+```
+
+
+### **Traversal**
+
+Traversal is the process of <u>visiting each node in the tree in a specific order</u>.
+
+<hr/>
+
+#### Preorder Traversal (DFS: Root-Left-Right)
+
+<br/>
+
+Visit the root node first, then recursively do a preorder traversal of the left subtree, followed by a preorder traversal of the right subtree.
+
+```python
+def preorder_traversal(root):
+	if root is None:
+		return
+	print(root.val) 		# Visit the root node
+	preorder_traversal(root.left) 	# Visit the left subtree
+	preorder_traversal(root.right) 	# Visit the right subtree
+```
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124832/Inorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%">
+</center>
+
+<hr/>
+
+#### In-order Traversal (DFS: Left-Root-Right)
+<br/>
+Visit the left subtree first, then visit the root node, followed by a recursive inorder traversal of the right subtree.
+
+```python
+def inorder_traversal(root):
+	if root is None:
+		return
+	inorder_traversal(root.left) 	# Visit the left subtree
+	print(root.val) 		# Visit the root node
+	inorder_traversal(root.right) 	# Visit the right subtree
+```
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124538/Preorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%">
+</center>
+
+<hr/>
+
+#### Post-order Traversal (DFS: Left-Right-Root)
+<br/>
+Recursively do a postorder traversal of the left subtree, followed by a postorder traversal of the right subtree, and then visit the root node.
+
+<center>
+<img  src="https://media.geeksforgeeks.org/wp-content/uploads/20240429125100/Postorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%">
+</center>
+<br/>
+
+```python
+def postorder_traversal(root):
+	if root is None:
+		return
+
+	postorder_traversal(root.left) # Visit the left subtree
+	postorder_traversal(root.right) # Visit the right subtree
+	print(root.val) # Visit the root node
+```
+
+<hr/>
+
+
+
+## Binary Search Tree Operations
+
+### **Insertion**
+
+Adding a new node to the tree.
+
+```python
+class TreeNode:
+	def __init__(self, val=0, left=None, right=None):
+		self.val = val
+		self.left = left
+		self.right = right
+
+
+def insert(root, val): 
+	"""
+	Inserts a new node with value `val` into the binary search tree.
+	"""
+	if root is None:
+		return TreeNode(val)
+	if val < root.val:
+		root.left = insert(root.left, val)
+	else:
+		root.right = insert(root.right, val)
+	return root
+```
+### **Deletion**
+
+Removing a node from the tree.
+
+```python
+def delete(root, val):
+	"""
+	Deletes a node with value `val` from the binary search tree.
+	"""
+	if root is None:
+		return root
+	if val < root.val:
+		root.left = delete(root.left, val)
+	elif val > root.val:
+		root.right = delete(root.right, val)
+	else:
+		if root.left is None:
+			return root.right
+		elif root.right is None:
+			return root.left
+		root.val = find_min(root.right)
+		root.right = delete(root.right, root.val)
+	return root
+```
+
+### **Update**
+
+Changing the data value of a node in the tree.
+
+```python
+def update(root, target, new_val):
+	"""
+	Updates the value of the node with value `target` to `new_val`.
+	"""
+	if root is None:
+		return
+	if root.val == target:
+		root.val = new_val
+	update(root.left, target, new_val)
+	update(root.right, target, new_val)
+```
+
+
+
+<!-- ## Depth First Search -->
+
+<!-- Maximum Depth of Binary Tree
+	Solution
+	Easy
+
+	Leaf-Similar Trees
+	Solution
+	Easy
+
+	Count Good Nodes in Binary Tree
+	Solution
+	Medium
+
+	Path Sum III
+	Solution
+	Medium
+
+	Longest ZigZag Path in a Binary Tree
+	Solution
+	Medium
+
+	Lowest Common Ancestor of a Binary Tree
+	Solution
+	Medium -->
+
+<!-- ## Breadth First Search -->
+
+<!--
+	Binary Tree Right Side View
+	Solution
+	Medium
+
+	Maximum Level Sum of a Binary Tree
+	Solution
+	Medium
+-->
+
+<!-- # Binary Search Tree -->
+
+<!--
+	Search in a Binary Search Tree
+	Solution
+	Easy
+
+	Delete Node in a BST
+	Solution
+	Medium
+-->

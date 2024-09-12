@@ -1,0 +1,61 @@
+---
+title: "Binary Tree"
+toc: true
+---
+
+Binary trees are a type of tree data structure in which each node has <u>at most two children</u>, referred to as the left child and the right child. 
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200219144238/General-Tree-vs-Binary-Tree.png" style="filter:invert(1);" width="80%">
+</center>
+
+
+<br/>
+
+## Properties of a Binary Tree
+
+Trees have the following properties:
+
+* A tree with $n$ nodes has $n-1$ edges.
+
+* A tree with height $h$ has at most $2^h - 1$ nodes.
+
+* A binary tree with height $h$ has at most $2^{(h+1)} - 1$ nodes.
+
+* The height of a binary tree with $n$ nodes is $log(n+1) - 1$.
+
+<!-- 
+## Traversal of a Binary Tree
+
+Traversal is the process of visiting each node in the tree in a specific order. There are three main types of tree traversal:
+
+* **Inorder Traversal**: In this traversal, the left subtree is visited first, followed by the root, and then the right subtree.
+
+* **Preorder Traversal**: In this traversal, the root node is visited first, followed by the left subtree, and then the right subtree.
+
+* **Postorder Traversal**: In this traversal, the left subtree is visited first, followed by the right subtree, and then the root node. -->
+
+
+## Level Order Traversal (Breath-First Traversal)
+
+Level-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.
+
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429134701/Level-Order-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="80%">
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*6eyB7JKPDzsXI6C4PQHH5g.gif" style="filter:invert(1);" width="80%">
+</center>
+
+<br/>
+
+Psuedocode for level order traversal:
+
+> 1. _Create a queue and enqueue the root node._
+> 2. _While the queue is not empty:_ \
+>    2.1. _Dequeue a node from the queue._ \
+>    2.2. _Process the node (e.g., print its value)._ \
+>    2.3. _Enqueue the left child of the node if it exists._ \
+>    2.4. _Enqueue the right child of the node if it exists._ \
+
+The time complexity of level order traversal is $O(n)$, where $n$ is the number of nodes in the binary tree.
+

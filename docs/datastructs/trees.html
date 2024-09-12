@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -394,12 +423,29 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Trees</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Trees</span></a>
+  <a href="../datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binary Tree</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/bst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binary Search Tree</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
@@ -454,8 +500,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#terminology" id="toc-terminology" class="nav-link active" data-scroll-target="#terminology">Terminology</a></li>
+  <li><a href="#types-of-trees" id="toc-types-of-trees" class="nav-link" data-scroll-target="#types-of-trees">Types of Trees</a></li>
+  <li><a href="#properties-of-trees" id="toc-properties-of-trees" class="nav-link" data-scroll-target="#properties-of-trees">Properties of Trees</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -479,8 +533,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Trees are one of the most important data structures in computer science. They are a non-linear data structure that store data in a hierarchical manner.</p>
+<p>Trees offer efficient insertion, deletion, and search operations, making them a versatile data structure for a wide range of applications.</p>
+<p>Trees are ubiquitous in computer science and are used for a wide variety of applications, including file systems, parsing languages, and artificial intelligence to plan out strategies and make decisions.</p>
+<p><br></p>
+<center>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">File system</th>
+<th style="text-align: center;">Artificial Intelligence</th>
+<th style="text-align: center;">Parsing Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://cl.indiana.edu/~ftyers/courses/2023/Autumn/L-555/practicals/graphics/UnixDirectoryTree.png" style="filter:invert(1);" width="100%"></td>
+<td style="text-align: center;"><img src="https://ksvi.mff.cuni.cz/~dingle/2019-20/prog_2/tic_tac_toe.svg" style="filter:invert(1);" width="100%"></td>
+<td style="text-align: center;"><img src="https://64.media.tumblr.com/5698447be4b9a4eca13bebda0cef8c4d/tumblr_inline_p8kde3Po6y1rplshr_400.png" style="filter:invert(1);" width="100%"></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p><br></p>
+<section id="terminology" class="level2">
+<h2 class="anchored" data-anchor-id="terminology">Terminology</h2>
+<p>The tree data structure come with a non-trivial amount of terminology. Here are some of the key terms:</p>
+<ul>
+<li><p><strong><u>Nodes</u></strong>: The individual elements in a tree that store data. These are depicted as circles in the diagram. They are very similar to linked list nodes.</p></li>
+<li><p><strong><u>Edges</u></strong>: The connections between nodes. These are depicted as lines in the diagram.</p></li>
+<li><p><strong><u>Root Node</u></strong>: The topmost node in a tree. It is the only node in the tree that has no parent.</p></li>
+</ul>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221124153129/Treedatastructure.png" style="filter:invert(1);" width="90%">
+</center>
+<p><br></p>
+<ul>
+<li><p><strong><u>Parent Node</u></strong>: A node that has child nodes. Each node in the tree, except the root node, has exactly one parent node.</p></li>
+<li><p><strong><u>Child Node</u></strong>: A node that is connected to a parent node. Each node in the tree can have zero or more children.</p></li>
+<li><p><strong><u>Leaf</u></strong>: Nodes that have no child nodes. They are the nodes at the bottom of the tree.</p></li>
+<li><p><strong><u>Path</u></strong>: A sequence of nodes connected by edges.</p></li>
+<li><p><strong><u>Height of a tree</u></strong>: The length of the longest path from the root to a leaf. Length is measured in the number of edges.</p></li>
+<li><p><strong><u>Height of a node</u></strong>: The length of the longest path from the node to a leaf. Length is measured in the number of edges.</p></li>
+<li><p><strong><u>Depth</u></strong>: The length of the path from the root to a node. Length is measured in the number of edges.</p></li>
+<li><p><strong><u>Level</u></strong>: The depth of a node in the tree. The root node is at level 0.</p></li>
+<li><p><strong><u>Subtree</u></strong>: A tree that is part of a larger tree. It consists of a node and all its descendants.</p></li>
+<li><p><strong><u>Internal Node</u></strong>: A node that has at least one child node. Essentially, any node that is not a leaf.</p></li>
+<li><p><strong><u>External Node</u></strong>: A node that has no child nodes. Essentially, a leaf node.</p></li>
+<li><p><strong><u>Sibling</u></strong>: Nodes that share the same parent.</p></li>
+<li><p><strong><u>Ancestors of a node</u></strong>: A node that is on the upward path a given node to the root.</p></li>
+<li><p><strong><u>Descendant of a node</u></strong>: A node that is on the path from a given node to a leaf.</p></li>
+</ul>
+</section>
+<section id="types-of-trees" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-trees">Types of Trees</h2>
+<p>There are many different types of trees, each with its own unique properties and characteristics. Here we are focusing on types of trees based on the number of children each node can have.</p>
+<p>Note that we are going the following mathematical notation for trees:</p>
+<ul>
+<li><span class="math inline">\(n\)</span> to represent the number of nodes in the tree,</li>
+<li><span class="math inline">\(N\)</span> to represent the maximum number of children each node can have</li>
+<li><span class="math inline">\(h\)</span> to represent the height of the tree.</li>
+</ul>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230111154258/typoes1-768.png" style="filter:invert(1);" width="80%">
+</center>
+<p><br></p>
+<p>The most common types of trees Binary trees that have at most two children per node. Binary trees are further classified into different types based on their properties.</p>
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:16000/1*CMGFtehu01ZEBgzHG71sMg.png" style="filter:invert(1);" width="100%">
+</center>
+<ul>
+<li><p><strong><u>Full Tree</u></strong></p>
+<p>An <span class="math inline">\(N\)</span>-ary tree in which every node has either zero or <span class="math inline">\(N\)</span> children.</p></li>
+<li><p><strong><u>Complete Tree</u></strong></p>
+<p>An <span class="math inline">\(N\)</span>-ary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.</p></li>
+<li><p><strong><u>Degenerate Tree</u></strong></p>
+<p>A tree in which each parent node has only one child node. This is essentially a linked list.</p></li>
+<li><p><strong><u>Perfect Tree</u></strong></p>
+<p>An <span class="math inline">\(N\)</span>-ary tree in which all interior nodes have <span class="math inline">\(N\)</span> children and all leaves have the same depth or same level.</p></li>
+<li><p><strong><u>Balanced Tree</u></strong></p>
+<p>A <span class="math inline">\(N\)</span>-ary tree in which the heights of all the subtrees of each node differ by at most one.</p></li>
+</ul>
+</section>
+<section id="properties-of-trees" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-trees">Properties of Trees</h2>
+<p>Trees have the following properties:</p>
+<ul>
+<li><p><strong><u>Tree Property</u></strong>: A tree with <span class="math inline">\(n\)</span> nodes has <span class="math inline">\(n-1\)</span> edges.</p>
+<p>The number of edges in a tree is always one less than the number of nodes.</p>
+<p>This is because each node, except the root node, has exactly one parent node.</p></li>
+<li><p><strong><u>Full Tree Property</u></strong>: An N-ary tree with height <span class="math inline">\(h\)</span> has at most <span class="math inline">\(N^h\)</span> nodes.</p>
+<p>A full tree is a tree in which each node has exactly <span class="math inline">\(N\)</span> children.</p></li>
+<li><p><strong><u>Height Property</u></strong>: The height of an N-ary tree with <span class="math inline">\(n\)</span> nodes is <span class="math inline">\(\log_N(n+1) - 1\)</span>.</p>
+<p>The height of a tree is the length of the longest path from the root to a leaf.</p></li>
+</ul>
+<!-- <iframe width="80%" height="315" src="https://www.youtube.com/embed/7tCNu4CnjVc?si=EsLQTGdHb1UqWDS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="80%" height="315" src="https://www.youtube.com/embed/oSWTXtMglKE?si=afb2v8kJXgX9enJj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

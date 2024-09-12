@@ -85,7 +85,11 @@ website:
         - section: 
           href: datastructs/datastructs.qmd
           contents:
-            - datastructs/trees.qmd
+            - section:
+              href: datastructs/trees.qmd
+              contents: 
+                - datastructs/binarytree.qmd
+                - datastructs/bst.qmd
             - datastructs/heaps.qmd
             - datastructs/graphs.qmd
             - datastructs/hashmaps.qmd

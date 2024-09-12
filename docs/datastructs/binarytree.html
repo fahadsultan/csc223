@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Greedy</title>
+<title>Binary Tree</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -179,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algos/algos.html">ALGORITHMS</a></li><li class="breadcrumb-item"><a href="../algos/greedy.html">Greedy</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/trees.html">Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/binarytree.html">Binary Tree</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -398,14 +427,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trees</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/binarytree.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Binary Tree</span></a>
   </div>
 </li>
@@ -454,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algos/greedy.html" class="sidebar-item-text sidebar-link active">
+  <a href="../algos/greedy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greedy</span></a>
   </div>
 </li>
@@ -471,15 +500,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#properties-of-a-binary-tree" id="toc-properties-of-a-binary-tree" class="nav-link active" data-scroll-target="#properties-of-a-binary-tree">Properties of a Binary Tree</a></li>
+  <li><a href="#level-order-traversal-breath-first-traversal" id="toc-level-order-traversal-breath-first-traversal" class="nav-link" data-scroll-target="#level-order-traversal-breath-first-traversal">Level Order Traversal (Breath-First Traversal)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algos/algos.html">ALGORITHMS</a></li><li class="breadcrumb-item"><a href="../algos/greedy.html">Greedy</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/trees.html">Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/binarytree.html">Binary Tree</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Greedy</h1>
+<h1 class="title">Binary Tree</h1>
 </div>
 
 
@@ -496,8 +532,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Binary trees are a type of tree data structure in which each node has <u>at most two children</u>, referred to as the left child and the right child.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200219144238/General-Tree-vs-Binary-Tree.png" style="filter:invert(1);" width="80%">
+</center>
+<p><br></p>
+<section id="properties-of-a-binary-tree" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-a-binary-tree">Properties of a Binary Tree</h2>
+<p>Trees have the following properties:</p>
+<ul>
+<li><p>A tree with <span class="math inline">\(n\)</span> nodes has <span class="math inline">\(n-1\)</span> edges.</p></li>
+<li><p>A tree with height <span class="math inline">\(h\)</span> has at most <span class="math inline">\(2^h - 1\)</span> nodes.</p></li>
+<li><p>A binary tree with height <span class="math inline">\(h\)</span> has at most <span class="math inline">\(2^{(h+1)} - 1\)</span> nodes.</p></li>
+<li><p>The height of a binary tree with <span class="math inline">\(n\)</span> nodes is <span class="math inline">\(log(n+1) - 1\)</span>.</p></li>
+</ul>
+<!-- 
+## Traversal of a Binary Tree
+
+Traversal is the process of visiting each node in the tree in a specific order. There are three main types of tree traversal:
+
+* **Inorder Traversal**: In this traversal, the left subtree is visited first, followed by the root, and then the right subtree.
+
+* **Preorder Traversal**: In this traversal, the root node is visited first, followed by the left subtree, and then the right subtree.
+
+* **Postorder Traversal**: In this traversal, the left subtree is visited first, followed by the right subtree, and then the root node. -->
+</section>
+<section id="level-order-traversal-breath-first-traversal" class="level2">
+<h2 class="anchored" data-anchor-id="level-order-traversal-breath-first-traversal">Level Order Traversal (Breath-First Traversal)</h2>
+<p>Level-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429134701/Level-Order-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="80%"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*6eyB7JKPDzsXI6C4PQHH5g.gif" style="filter:invert(1);" width="80%">
+</center>
+<p><br></p>
+<p>Psuedocode for level order traversal:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Create a queue and enqueue the root node.</em></li>
+<li><em>While the queue is not empty:</em><br>
+2.1. <em>Dequeue a node from the queue.</em><br>
+2.2. <em>Process the node (e.g., print its value).</em><br>
+2.3. <em>Enqueue the left child of the node if it exists.</em><br>
+2.4. <em>Enqueue the right child of the node if it exists.</em><br>
+</li>
+</ol>
+</blockquote>
+<p>The time complexity of level order traversal is <span class="math inline">\(O(n)\)</span>, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

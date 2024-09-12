@@ -2,3 +2,136 @@
 title: "Trees"
 toc: true
 ---
+
+Trees are one of the most important data structures in computer science. They are a non-linear data structure that store data in a hierarchical manner. 
+
+Trees offer efficient insertion, deletion, and search operations, making them a versatile data structure for a wide range of applications.
+
+Trees are ubiquitous in computer science and are used for a wide variety of applications, including file systems, parsing languages, and artificial intelligence to plan out strategies and make decisions.
+
+<br/>
+
+<center>
+
+| File system | Artificial Intelligence | Parsing Language | 
+|:---:|:---:|:---:|
+| <img src="https://cl.indiana.edu/~ftyers/courses/2023/Autumn/L-555/practicals/graphics/UnixDirectoryTree.png" style="filter:invert(1);" width="100%"> |  <img src="https://ksvi.mff.cuni.cz/~dingle/2019-20/prog_2/tic_tac_toe.svg" style="filter:invert(1);" width="100%"> | <img src="https://64.media.tumblr.com/5698447be4b9a4eca13bebda0cef8c4d/tumblr_inline_p8kde3Po6y1rplshr_400.png" style="filter:invert(1);" width="100%"> |
+
+</center>
+
+<br/>
+
+## Terminology
+
+The tree data structure come with a non-trivial amount of terminology. Here are some of the key terms:
+
+* **<u>Nodes</u>**: The individual elements in a tree that store data. These are depicted as circles in the diagram. They are very similar to linked list nodes.
+
+* **<u>Edges</u>**: The connections between nodes. These are depicted as lines in the diagram.
+
+* **<u>Root Node</u>**: The topmost node in a tree. It is the only node in the tree that has no parent.
+
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221124153129/Treedatastructure.png" style="filter:invert(1);" width="90%">
+</center>
+<br/>
+
+* **<u>Parent Node</u>**: A node that has child nodes. Each node in the tree, except the root node, has exactly one parent node.
+
+* **<u>Child Node</u>**: A node that is connected to a parent node. Each node in the tree can have zero or more children.
+
+* **<u>Leaf</u>**: Nodes that have no child nodes. They are the nodes at the bottom of the tree.
+
+* **<u>Path</u>**: A sequence of nodes connected by edges.
+
+* **<u>Height of a tree</u>**: The length of the longest path from the root to a leaf. Length is measured in the number of edges.
+
+* **<u>Height of a node</u>**: The length of the longest path from the node to a leaf. Length is measured in the number of edges.
+
+* **<u>Depth</u>**: The length of the path from the root to a node. Length is measured in the number of edges.
+
+* **<u>Level</u>**: The depth of a node in the tree. The root node is at level 0.
+
+* **<u>Subtree</u>**: A tree that is part of a larger tree. It consists of a node and all its descendants.
+
+* **<u>Internal Node</u>**: A node that has at least one child node. Essentially, any node that is not a leaf.
+
+* **<u>External Node</u>**: A node that has no child nodes. Essentially, a leaf node.
+
+* **<u>Sibling</u>**: Nodes that share the same parent.
+
+* **<u>Ancestors of a node</u>**: A node that is on the upward path a given node to the root. 
+
+* **<u>Descendant of a node</u>**: A node that is on the path from a given node to a leaf.
+
+## Types of Trees
+
+There are many different types of trees, each with its own unique properties and characteristics. Here we are focusing on types of trees based on the number of children each node can have.
+
+
+Note that we are going the following mathematical notation for trees:
+
+* $n$ to represent the number of nodes in the tree, 
+* $N$ to represent the maximum number of children each node can have 
+* $h$ to represent the height of the tree.
+
+
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230111154258/typoes1-768.png" style="filter:invert(1);" width="80%"></center>
+
+<br/>
+
+The most common types of trees Binary trees that have at most two children per node. Binary trees are further classified into different types based on their properties.
+
+
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:16000/1*CMGFtehu01ZEBgzHG71sMg.png" style="filter:invert(1);" width="100%">
+</center>
+
+* **<u>Full Tree</u>** 
+
+	An $N$-ary tree in which every node has either zero or $N$ children.
+
+* **<u>Complete Tree</u>**
+	
+	An $N$-ary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
+
+* **<u>Degenerate Tree</u>**
+
+	A tree in which each parent node has only one child node. This is essentially a linked list.
+
+* **<u>Perfect Tree</u>**
+
+	An $N$-ary tree in which all interior nodes have $N$ children and all leaves have the same depth or same level.
+
+* **<u>Balanced Tree</u>**
+
+	A $N$-ary tree in which the heights of all the subtrees of each node differ by at most one.
+
+## Properties of Trees
+
+Trees have the following properties:
+
+* **<u>Tree Property</u>**: A tree with $n$ nodes has $n-1$ edges. 
+
+	 The number of edges in a tree is always one less than the number of nodes. 
+	
+	This is because each node, except the root node, has exactly one parent node.
+
+* **<u>Full Tree Property</u>**: An N-ary tree with height $h$ has at most $N^h$ nodes. 
+
+	A full tree is a tree in which each node has exactly $N$ children.
+
+* **<u>Height Property</u>**: The height of an N-ary tree with $n$ nodes is $\log_N(n+1) - 1$.
+
+	The height of a tree is the length of the longest path from the root to a leaf.
+
+
+
+<!-- <iframe width="80%" height="315" src="https://www.youtube.com/embed/7tCNu4CnjVc?si=EsLQTGdHb1UqWDS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="80%" height="315" src="https://www.youtube.com/embed/oSWTXtMglKE?si=afb2v8kJXgX9enJj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+
+
+
