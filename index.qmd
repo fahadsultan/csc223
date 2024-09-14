@@ -18,20 +18,21 @@ Please note that my office is now in Riley Hall **200-H** ✅, previously it was
 
 ::: {.callout-caution}
 # Deliverable
-[Programming Assignment 2](https://classroom.github.com/a/2iEor66t) is due on Tue, Sept 10th, 2024 11:59 PM.
+[Written Assignment 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) is due on Fri, Sept 20th, 2024 11:59 PM.
 :::
 
 ::: {.callout-caution}
 # Deliverable
-[Written Assignment 1](https://docs.google.com/document/d/1vRoSzj1mckpqtmpI7py7vbXHw7t1_t2g1cvNeOBbcjY/edit?usp=sharing) is due on Fri, Sept 6th, 2024 11:59 PM.
+[Programming Assignment 2](https://classroom.github.com/a/2iEor66t) is due on Tue, Sept 10th, 2024 11:59 PM.
 :::
+
 
 
 
 
 ::: {.callout-tip}
 ## Open-Door Policy
-I have an Open-Door Policy and am in my office (Riley Hall 200-D) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!
+I have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!
 
 Alternatively, send me an email or schedule an appointment
 :::
