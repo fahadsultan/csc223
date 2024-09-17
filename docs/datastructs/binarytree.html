@@ -506,7 +506,19 @@ window.Quarto = {
    
   <ul>
   <li><a href="#properties-of-a-binary-tree" id="toc-properties-of-a-binary-tree" class="nav-link active" data-scroll-target="#properties-of-a-binary-tree">Properties of a Binary Tree</a></li>
+  <li><a href="#traversals" id="toc-traversals" class="nav-link" data-scroll-target="#traversals"><strong>Traversals</strong></a>
+  <ul class="collapse">
   <li><a href="#level-order-traversal-breath-first-traversal" id="toc-level-order-traversal-breath-first-traversal" class="nav-link" data-scroll-target="#level-order-traversal-breath-first-traversal">Level Order Traversal (Breath-First Traversal)</a></li>
+  <li><a href="#preorder-traversal-dfs-root-left-right" id="toc-preorder-traversal-dfs-root-left-right" class="nav-link" data-scroll-target="#preorder-traversal-dfs-root-left-right">Preorder Traversal (DFS: Root-Left-Right)</a></li>
+  <li><a href="#in-order-traversal-dfs-left-root-right" id="toc-in-order-traversal-dfs-left-root-right" class="nav-link" data-scroll-target="#in-order-traversal-dfs-left-root-right">In-order Traversal (DFS: Left-Root-Right)</a></li>
+  <li><a href="#post-order-traversal-dfs-left-right-root" id="toc-post-order-traversal-dfs-left-right-root" class="nav-link" data-scroll-target="#post-order-traversal-dfs-left-right-root">Post-order Traversal (DFS: Left-Right-Root)</a></li>
+  </ul></li>
+  <li><a href="#operations" id="toc-operations" class="nav-link" data-scroll-target="#operations">Operations</a>
+  <ul class="collapse">
+  <li><a href="#insertion" id="toc-insertion" class="nav-link" data-scroll-target="#insertion">Insertion</a></li>
+  <li><a href="#deletion" id="toc-deletion" class="nav-link" data-scroll-target="#deletion">Deletion</a></li>
+  <li><a href="#searching" id="toc-searching" class="nav-link" data-scroll-target="#searching">Searching</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -541,24 +553,191 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="properties-of-a-binary-tree">Properties of a Binary Tree</h2>
 <p>Trees have the following properties:</p>
 <ul>
-<li><p>A tree with <span class="math inline">\(n\)</span> nodes has <span class="math inline">\(n-1\)</span> edges.</p></li>
-<li><p>A tree with height <span class="math inline">\(h\)</span> has at most <span class="math inline">\(2^h - 1\)</span> nodes.</p></li>
-<li><p>A binary tree with height <span class="math inline">\(h\)</span> has at most <span class="math inline">\(2^{(h+1)} - 1\)</span> nodes.</p></li>
-<li><p>The height of a binary tree with <span class="math inline">\(n\)</span> nodes is <span class="math inline">\(log(n+1) - 1\)</span>.</p></li>
+<li><p><b><big>A tree with <span class="math inline">\(n\)</span> nodes has <span class="math inline">\(n-1\)</span> edges</big></b>.</p>
+<p>A tree with <span class="math inline">\(n\)</span> nodes has <span class="math inline">\(n - 1\)</span> edges because of its fundamental properties: it is a connected and acyclic graph.</p>
+<p>Starting with a single node and no edges, each additional node requires exactly one edge to connect it to the existing tree, ensuring connectivity without forming cycles. This process continues as the tree grows, with each new node adding exactly one edge. As a result, a tree with <span class="math inline">\(n\)</span> nodes will always have <span class="math inline">\(n - 1\)</span> edges.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nodes (<span class="math inline">\(n\)</span>)</th>
+<th style="text-align: center;">Edges (<span class="math inline">\(n-1\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">n-1</td>
+</tr>
+</tbody>
+</table>
+<p>This can also be proven by induction, where adding one node to a tree with <span class="math inline">\(k\)</span> nodes (and <span class="math inline">\(k - 1\)</span> edges) leads to <span class="math inline">\(k\)</span> edges.</p></li>
 </ul>
-<!-- 
-## Traversal of a Binary Tree
-
-Traversal is the process of visiting each node in the tree in a specific order. There are three main types of tree traversal:
-
-* **Inorder Traversal**: In this traversal, the left subtree is visited first, followed by the root, and then the right subtree.
-
-* **Preorder Traversal**: In this traversal, the root node is visited first, followed by the left subtree, and then the right subtree.
-
-* **Postorder Traversal**: In this traversal, the left subtree is visited first, followed by the right subtree, and then the root node. -->
+<hr>
+<p><br></p>
+<ul>
+<li><p><b><big>The maximum number of nodes at level <span class="math inline">\(l\)</span> of a binary tree is <span class="math inline">\(2^l\)</span></big></b></p>
+<p>Here level is the number of edges from the root to the node. The level of the root is <span class="math inline">\(0\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Level (<span class="math inline">\(l\)</span>)</th>
+<th style="text-align: center;">Maximum Nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(l\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^l\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Each level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the maximum number of nodes at level <span class="math inline">\(l\)</span> is <span class="math inline">\(2^l\)</span>.</p></li>
+</ul>
+<hr>
+<p><br></p>
+<ul>
+<li><p><b><big>A tree with height <span class="math inline">\(h\)</span> has at most <span class="math inline">\(2^{h+1} - 1\)</span> nodes</big></b>.</p>
+<p>Each level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the total number of nodes in a binary tree of height h is the sum of the nodes at each level, which is given by the formula <span class="math inline">\(2^0 + 2^1 + ... + 2^(h-1) = 2^{h+1} -1\)</span> .</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Height (<span class="math inline">\(h\)</span>)</th>
+<th style="text-align: center;">Maximum Nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(h\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{h+1} - 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Some textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the maximum number of nodes in a tree of height h is <span class="math inline">\(2^h - 1\)</span> .</p></li>
+</ul>
+<hr>
+<p><br></p>
+<ul>
+<li><p><b><big>The height of a binary tree with <span class="math inline">\(n\)</span> nodes is <span class="math inline">\(log_2(n+1) - 1\)</span></big></b>.</p>
+<p>The height of a binary tree with <span class="math inline">\(n\)</span> nodes is <span class="math inline">\(log(n+1) - 1\)</span> . This formula calculates the height of a binary tree based on the number of nodes it contains. The height of a binary tree is the length of the longest path from the root to a leaf node. By using the formula <span class="math inline">\(log(n+1) - 1\)</span> , we can determine the height of a binary tree given the number of nodes it contains.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nodes (<span class="math inline">\(n\)</span>)</th>
+<th style="text-align: center;">Height</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">n</td>
+<td style="text-align: center;"><span class="math inline">\(log_2(n+1) - 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Some textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the height of a binary tree with <span class="math inline">\(n\)</span> nodes is <span class="math inline">\(log_2(n) + 1\)</span> .</p></li>
+</ul>
 </section>
-<section id="level-order-traversal-breath-first-traversal" class="level2">
-<h2 class="anchored" data-anchor-id="level-order-traversal-breath-first-traversal">Level Order Traversal (Breath-First Traversal)</h2>
+<section id="traversals" class="level2">
+<h2 class="anchored" data-anchor-id="traversals"><strong>Traversals</strong></h2>
+<p>Traversal is the process of visiting each node in the tree in a specific order.</p>
+<p>There are two main types of tree traversal:</p>
+<ul>
+<li><strong>Breadth-First Traversal (BFS)</strong>: A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.</li>
+</ul>
+<p>Breadth-first traversal is also known as level-order traversal.</p>
+<ul>
+<li><strong>Depth-First Traversal (DFS)</strong>: A traversal algorithm that explores as far as possible along each branch before backtracking.</li>
+</ul>
+<p>Depth-first traversal includes three types of traversals: preorder, inorder, and postorder.</p>
+<br>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124251/Tree-Traversal-Techniques.webp" style="filter:invert(1);" width="100%">
+</center>
+<center>
+<img src="https://cs-people.bu.edu/tvashwin/cs112_spring09/lab06_files/tree_example.png" style="filter:invert(1);" width="100%">
+</center>
+<p><br></p>
+<section id="level-order-traversal-breath-first-traversal" class="level3">
+<h3 class="anchored" data-anchor-id="level-order-traversal-breath-first-traversal">Level Order Traversal (Breath-First Traversal)</h3>
 <p>Level-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.</p>
 <center>
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429134701/Level-Order-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="80%"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*6eyB7JKPDzsXI6C4PQHH5g.gif" style="filter:invert(1);" width="80%">
@@ -577,8 +756,129 @@ Traversal is the process of visiting each node in the tree in a specific order. 
 </ol>
 </blockquote>
 <p>The time complexity of level order traversal is <span class="math inline">\(O(n)\)</span>, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+<p>The space complexity of level order traversal is <span class="math inline">\(O(n)\)</span>, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+<hr>
+</section>
+<section id="preorder-traversal-dfs-root-left-right" class="level3">
+<h3 class="anchored" data-anchor-id="preorder-traversal-dfs-root-left-right">Preorder Traversal (DFS: Root-Left-Right)</h3>
+<p><br></p>
+<p>Visit the root node first, then recursively do a preorder traversal of the left subtree, followed by a preorder traversal of the right subtree.</p>
+<p>The preorder traversal of a binary tree is a depth-first traversal that visits the root node first, followed by the left subtree and then the right subtree.</p>
+<p>The pseudocode for preorder traversal is as follows:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Visit the root node.</em></li>
+<li><em>Recursively do a preorder traversal of the left subtree.</em></li>
+<li><em>Recursively do a preorder traversal of the right subtree.</em></li>
+</ol>
+</blockquote>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124832/Inorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Preorder-traversal.gif" style="filter:invert(1);" width="60%">
+</center>
+<p><br></p>
+<p>Preorder traversal has the following applications:</p>
+<ul>
+<li><p><strong>Expression Tree</strong>: Preorder traversal is used to convert an infix expression to a prefix expression (also known as Polish notation). e.g., <code>A + B</code> to <code>+ A B</code>. Prefix expressions are easier to evaluate using a stack-based algorithm.</p></li>
+<li><p><strong>Clone a Tree</strong>: Preorder traversal is used to clone a binary tree. This is because the root node is visited first, making it easy to create a copy of the tree and connecting the left and right subtrees.</p></li>
+</ul>
+<hr>
+</section>
+<section id="in-order-traversal-dfs-left-root-right" class="level3">
+<h3 class="anchored" data-anchor-id="in-order-traversal-dfs-left-root-right">In-order Traversal (DFS: Left-Root-Right)</h3>
+<p><br></p>
+<p>In-order traversal is a depth-first traversal that visits the left subtree first, followed by the root node, and then the right subtree.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124538/Preorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif" style="filter:invert(1);" width="60%">
+</center>
+<p><br></p>
+<p>The pseudocode for in-order traversal is as follows:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Recursively do an in-order traversal of the left subtree.</em></li>
+<li><em>Visit the root node.</em></li>
+<li><em>Recursively do an in-order traversal of the right subtree.</em></li>
+</ol>
+</blockquote>
+<p>In-order traversal has the following applications:</p>
+<ul>
+<li><p><strong>Binary Search Tree (BST)</strong>: In-order traversal of a BST results in a sorted list of elements. This property is used to find the k-th smallest element in a BST.</p></li>
+<li><p><strong>Postfix Expression and Evaluation</strong>: In-order traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., <code>A + B</code> to <code>A B +</code>. Postfix expressions are easier to evaluate using a stack-based algorithm.</p></li>
+</ul>
+<hr>
+</section>
+<section id="post-order-traversal-dfs-left-right-root" class="level3">
+<h3 class="anchored" data-anchor-id="post-order-traversal-dfs-left-right-root">Post-order Traversal (DFS: Left-Right-Root)</h3>
+<p><br> Recursively do a postorder traversal of the left subtree, followed by a postorder traversal of the right subtree, and then visit the root node.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429125100/Postorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif" style="filter:invert(1);" width="60%">
+</center>
+<p><br></p>
+<p>The pseudocode for postorder traversal is as follows:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Recursively do a postorder traversal of the left subtree.</em></li>
+<li><em>Recursively do a postorder traversal of the right subtree.</em></li>
+<li><em>Visit the root node.</em></li>
+</ol>
+</blockquote>
+<p>Postorder traversal has the following applications:</p>
+<ul>
+<li><p><strong>Expression Tree</strong>: Postorder traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., <code>A + B</code> to <code>A B +</code>. Postfix expressions are easier to evaluate using a stack-based algorithm.</p></li>
+<li><p><strong>Delete a Tree</strong>: Postorder traversal is used to delete a binary tree. This is because the root node is visited last, making it easy to delete the tree from the leaves up to the root.</p></li>
+</ul>
+<p>Postorder traversal is commonly used in expression trees to evaluate expressions.</p>
+<hr>
+</section>
+</section>
+<section id="operations" class="level2">
+<h2 class="anchored" data-anchor-id="operations">Operations</h2>
+<section id="insertion" class="level3">
+<h3 class="anchored" data-anchor-id="insertion">Insertion</h3>
+<p>Insertion is the process of adding a new node to the binary tree. The new node is inserted based on the value of the node and the properties of the binary tree.</p>
+<p>The pseudocode for inserting a node in a binary tree that is not a binary search tree is as follows:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Create a new node with the given value.</em></li>
+<li><em>If the root is null, set the new node as the root.</em></li>
+<li><em>Else, perform a level order traversal to find the first node that has an empty left or right child.</em></li>
+<li><em>Insert the new node as the left child if the left child is empty, otherwise insert it as the right child.</em></li>
+</ol>
+</blockquote>
+<p>The time complexity of inserting a node in a binary tree is <span class="math inline">\(O(n)\)</span> in the worst case, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+<p>The space complexity of inserting a node in a binary tree is <span class="math inline">\(O(n)\)</span> in the worst case, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+</section>
+<section id="deletion" class="level3">
+<h3 class="anchored" data-anchor-id="deletion">Deletion</h3>
+<p>Deletion is the process of removing a node from the binary tree. The node to be deleted is removed based on the value of the node and the properties of the binary tree.</p>
+<p>The pseudocode for deleting a node in a binary tree is as follows:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Find the node to be deleted using a level order traversal or any other traversal method.</em></li>
+<li><em>If the node has no children, simply remove the node.</em></li>
+<li><em>If the node has one child, replace the node with its child.</em></li>
+<li><em>If the node has two children, find the inorder successor or predecessor of the node.</em></li>
+<li><em>Replace the node with the inorder successor or predecessor.</em></li>
+</ol>
+</blockquote>
+<p>The time complexity of deleting a node in a binary tree is <span class="math inline">\(O(n)\)</span> in the worst case, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+<p>The space complexity of deleting a node in a binary tree is <span class="math inline">\(O(n)\)</span> in the worst case, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+</section>
+<section id="searching" class="level3">
+<h3 class="anchored" data-anchor-id="searching">Searching</h3>
+<p>Searching is the process of finding a specific node in the binary tree based on its value.</p>
+<p>The pseudocode for searching a node in a binary tree is as follows:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><em>Perform a level order traversal or any other traversal method to search for the node.</em></li>
+<li><em>If the node is found, return the node.</em></li>
+<li><em>If the node is not found, return null.</em></li>
+</ol>
+</blockquote>
+<p>The time complexity of searching for a node in a binary tree is <span class="math inline">\(O(n)\)</span> in the worst case, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
+<p>The space complexity of searching for a node in a binary tree is <span class="math inline">\(O(n)\)</span> in the worst case, where <span class="math inline">\(n\)</span> is the number of nodes in the binary tree.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

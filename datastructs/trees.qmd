@@ -65,7 +65,7 @@ The tree data structure come with a non-trivial amount of terminology. Here are 
 
 * **<u>Descendant of a node</u>**: A node that is on the path from a given node to a leaf.
 
-## Types of Trees
+## Types of Trees 
 
 There are many different types of trees, each with its own unique properties and characteristics. Here we are focusing on types of trees based on the number of children each node can have.
 

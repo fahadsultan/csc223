@@ -9,34 +9,106 @@ Binary trees are a type of tree data structure in which each node has <u>at most
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200219144238/General-Tree-vs-Binary-Tree.png" style="filter:invert(1);" width="80%">
 </center>
 
-
 <br/>
 
 ## Properties of a Binary Tree
 
 Trees have the following properties:
 
-* A tree with $n$ nodes has $n-1$ edges.
+* <b><big>A tree with $n$ nodes has $n-1$ edges</big></b>.
 
-* A tree with height $h$ has at most $2^h - 1$ nodes.
+    A tree with  $n$  nodes has  $n - 1$  edges because of its fundamental properties: it is a connected and acyclic graph. 
 
-* A binary tree with height $h$ has at most $2^{(h+1)} - 1$ nodes.
+    Starting with a single node and no edges, each additional node requires exactly one edge to connect it to the existing tree, ensuring connectivity without forming cycles. This process continues as the tree grows, with each new node adding exactly one edge. As a result, a tree with  $n$  nodes will always have  $n - 1$  edges. 
 
-* The height of a binary tree with $n$ nodes is $log(n+1) - 1$.
+    | Nodes ($n$) | Edges ($n-1$) |
+    |:-----------:|:-------------:|
+    | 1         | 0           |
+    | 2         | 1           |
+    | 3         | 2           |
+    | 4         | 3           |
+    | ...       | ...         |
+    | n         | n-1         |
 
-<!-- 
-## Traversal of a Binary Tree
+    This can also be proven by induction, where adding one node to a tree with  $k$  nodes (and  $k - 1$  edges) leads to  $k$  edges.
 
-Traversal is the process of visiting each node in the tree in a specific order. There are three main types of tree traversal:
+<hr/>
+<br/>
 
-* **Inorder Traversal**: In this traversal, the left subtree is visited first, followed by the root, and then the right subtree.
+* <b><big>The maximum number of nodes at level $l$ of a binary tree is $2^l$</b></big>
 
-* **Preorder Traversal**: In this traversal, the root node is visited first, followed by the left subtree, and then the right subtree.
+    Here level is the number of edges from the root to the node. The level of the root is $0$.
 
-* **Postorder Traversal**: In this traversal, the left subtree is visited first, followed by the right subtree, and then the root node. -->
+    | Level ($l$) | Maximum Nodes |
+    |:-----------:|:--------------:|
+    | 0         | 1            |
+    | 1         | 2            |
+    | 2         | 4            |
+    | 3         | 8            |
+    | ...       | ...          |
+    | $l$         | $2^l$        |
+
+    Each level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the maximum number of nodes at level $l$ is $2^l$.
+
+<hr/>
+<br/>
+
+* <b><big>A tree with height $h$ has at most $2^{h+1} - 1$ nodes</big></b>.
+
+    Each level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the total number of nodes in a binary tree of height  h  is the sum of the nodes at each level, which is given by the formula  $2^0 + 2^1 + ... + 2^(h-1) = 2^{h+1} -1$ .
+
+    | Height ($h$) | Maximum Nodes |
+    |:------------:|:-------------:|
+    | 0          | 1           |
+    | 1          | 3           |
+    | 2          | 7           |
+    | 3          | 15          |
+    | ...        | ...         |
+    | $h$          | $2^{h+1} - 1$ |
+
+    Some textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the maximum number of nodes in a tree of height  h  is  $2^h - 1$ .
+
+<hr/>
+<br/>
+
+* <b><big>The height of a binary tree with $n$ nodes is $log_2(n+1) - 1$</b></big>.
+
+    The height of a binary tree with  $n$  nodes is  $log(n+1) - 1$ . This formula calculates the height of a binary tree based on the number of nodes it contains. The height of a binary tree is the length of the longest path from the root to a leaf node. By using the formula  $log(n+1) - 1$ , we can determine the height of a binary tree given the number of nodes it contains.
+
+    | Nodes ($n$) | Height |
+    |:-----------:|:------:|
+    | 1         | 0      |
+    | 2         | 1      |
+    | 3         | 1      |
+    | 4         | 2      |
+    | ...       | ...    |
+    | n         | $log_2(n+1) - 1$ |
 
 
-## Level Order Traversal (Breath-First Traversal)
+    Some textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the height of a binary tree with  $n$  nodes is  $log_2(n) + 1$ .
+
+
+## **Traversals**
+
+Traversal is the process of visiting each node in the tree in a specific order. 
+
+There are two main types of tree traversal:
+
+* **Breadth-First Traversal (BFS)**: A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.
+
+Breadth-first traversal is also known as level-order traversal.
+
+* **Depth-First Traversal (DFS)**: A traversal algorithm that explores as far as possible along each branch before backtracking.
+
+Depth-first traversal includes three types of traversals: preorder, inorder, and postorder.
+
+<br/>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124251/Tree-Traversal-Techniques.webp" style="filter:invert(1);" width="100%"></center>
+<center><img src="https://cs-people.bu.edu/tvashwin/cs112_spring09/lab06_files/tree_example.png" style="filter:invert(1);" width="100%"></center>
+
+<br/>
+
+### Level Order Traversal (Breath-First Traversal)
 
 Level-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.
 
@@ -58,4 +130,142 @@ Psuedocode for level order traversal:
 >    2.4. _Enqueue the right child of the node if it exists._ \
 
 The time complexity of level order traversal is $O(n)$, where $n$ is the number of nodes in the binary tree.
+
+The space complexity of level order traversal is $O(n)$, where $n$ is the number of nodes in the binary tree.
+
+<hr/>
+
+### Preorder Traversal (DFS: Root-Left-Right)
+
+<br/>
+
+Visit the root node first, then recursively do a preorder traversal of the left subtree, followed by a preorder traversal of the right subtree.
+
+The preorder traversal of a binary tree is a depth-first traversal that visits the root node first, followed by the left subtree and then the right subtree.
+
+The pseudocode for preorder traversal is as follows:
+
+> 1. _Visit the root node._
+> 2. _Recursively do a preorder traversal of the left subtree._
+> 3. _Recursively do a preorder traversal of the right subtree._
+
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124832/Inorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Preorder-traversal.gif" style="filter:invert(1);" width="60%">
+</center>
+
+<br/>
+
+Preorder traversal has the following applications:
+
+* **Expression Tree**: Preorder traversal is used to convert an infix expression to a prefix expression (also known as Polish notation). e.g., `A + B` to `+ A B`. Prefix expressions are easier to evaluate using a stack-based algorithm.
+
+* **Clone a Tree**: Preorder traversal is used to clone a binary tree. This is because the root node is visited first, making it easy to create a copy of the tree and connecting the left and right subtrees.
+
+<hr/>
+
+### In-order Traversal (DFS: Left-Root-Right)
+
+<br/>
+
+In-order traversal is a depth-first traversal that visits the left subtree first, followed by the root node, and then the right subtree.
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240429124538/Preorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif" style="filter:invert(1);" width="60%">
+</center>
+
+<br/>
+
+The pseudocode for in-order traversal is as follows:
+
+> 1. _Recursively do an in-order traversal of the left subtree._
+> 2. _Visit the root node._
+> 3. _Recursively do an in-order traversal of the right subtree._
+
+
+In-order traversal has the following applications:
+
+* **Binary Search Tree (BST)**: In-order traversal of a BST results in a sorted list of elements. This property is used to find the k-th smallest element in a BST.
+
+* **Postfix Expression and Evaluation**: In-order traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., `A + B` to `A B +`. Postfix expressions are easier to evaluate using a stack-based algorithm. 
+
+<hr/>
+
+### Post-order Traversal (DFS: Left-Right-Root)
+<br/>
+Recursively do a postorder traversal of the left subtree, followed by a postorder traversal of the right subtree, and then visit the root node.
+
+<center>
+<img  src="https://media.geeksforgeeks.org/wp-content/uploads/20240429125100/Postorder-Traversal-of-Binary-Tree.webp" style="filter:invert(1);" width="60%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif" style="filter:invert(1);" width="60%">
+</center>
+<br/>
+
+The pseudocode for postorder traversal is as follows:
+
+> 1. _Recursively do a postorder traversal of the left subtree._
+> 2. _Recursively do a postorder traversal of the right subtree._
+> 3. _Visit the root node._
+
+Postorder traversal has the following applications:
+
+* **Expression Tree**: Postorder traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., `A + B` to `A B +`. Postfix expressions are easier to evaluate using a stack-based algorithm.
+
+* **Delete a Tree**: Postorder traversal is used to delete a binary tree. This is because the root node is visited last, making it easy to delete the tree from the leaves up to the root.
+
+Postorder traversal is commonly used in expression trees to evaluate expressions.
+
+<hr/>
+
+## Operations 
+
+### Insertion
+
+Insertion is the process of adding a new node to the binary tree. The new node is inserted based on the value of the node and the properties of the binary tree.
+
+The pseudocode for inserting a node in a binary tree that is not a binary search tree is as follows:
+
+> 1. _Create a new node with the given value._
+> 2. _If the root is null, set the new node as the root._
+> 3. _Else, perform a level order traversal to find the first node that has an empty left or right child._
+> 4. _Insert the new node as the left child if the left child is empty, otherwise insert it as the right child._
+
+The time complexity of inserting a node in a binary tree is $O(n)$ in the worst case, where $n$ is the number of nodes in the binary tree.
+
+The space complexity of inserting a node in a binary tree is $O(n)$ in the worst case, where $n$ is the number of nodes in the binary tree.
+
+### Deletion
+
+Deletion is the process of removing a node from the binary tree. The node to be deleted is removed based on the value of the node and the properties of the binary tree.
+
+The pseudocode for deleting a node in a binary tree is as follows:
+
+> 1. _Find the node to be deleted using a level order traversal or any other traversal method._
+> 2. _If the node has no children, simply remove the node._
+> 3. _If the node has one child, replace the node with its child._
+> 4. _If the node has two children, find the inorder successor or predecessor of the node._
+> 5. _Replace the node with the inorder successor or predecessor._
+
+The time complexity of deleting a node in a binary tree is $O(n)$ in the worst case, where $n$ is the number of nodes in the binary tree.
+
+The space complexity of deleting a node in a binary tree is $O(n)$ in the worst case, where $n$ is the number of nodes in the binary tree.
+
+### Searching
+
+Searching is the process of finding a specific node in the binary tree based on its value.
+
+The pseudocode for searching a node in a binary tree is as follows:
+
+> 1. _Perform a level order traversal or any other traversal method to search for the node._
+> 2. _If the node is found, return the node._
+> 3. _If the node is not found, return null._
+
+The time complexity of searching for a node in a binary tree is $O(n)$ in the worst case, where $n$ is the number of nodes in the binary tree.
+
+The space complexity of searching for a node in a binary tree is $O(n)$ in the worst case, where $n$ is the number of nodes in the binary tree.
+
+
+
 
