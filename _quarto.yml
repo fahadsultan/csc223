@@ -20,6 +20,8 @@ website:
         href: https://courses.furman.edu/course/view.php?id=18720
       - text: "Github Classroom"
         href: https://classroom.github.com/classrooms/179249964-csc-223
+      - text: "TA"
+        href: ta.qmd
       - text: "Set an Appointment"
         href: https://calendly.com/ssultan-dpq/
     tools:

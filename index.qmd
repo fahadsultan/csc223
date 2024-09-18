@@ -16,17 +16,16 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 Please note that my office is now in Riley Hall **200-H** ✅, previously it was <s>200-D</s>❌.
 :::
 
+
+::: {.callout-caution}
+# Deliverable
+[Programming Assignment 3](https://classroom.github.com/a/iS2yxdqG) is due on Tue, Sept 24th, 2024 11:59 PM.
+:::
+
 ::: {.callout-caution}
 # Deliverable
 [Written Assignment 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) is due on Fri, Sept 20th, 2024 11:59 PM.
 :::
-
-::: {.callout-caution}
-# Deliverable
-[Programming Assignment 2](https://classroom.github.com/a/2iEor66t) is due on Tue, Sept 10th, 2024 11:59 PM.
-:::
-
-
 
 
 
