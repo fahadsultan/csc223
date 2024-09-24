@@ -13,10 +13,10 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 
 ::: {.callout-caution}
-# Exam 1
-The first exam is on **Wednesday, October 9th** from 2:30 - 4:30 PM in the lab.
+# Exam 1 
+The first exam is on **Wednesday, October 2nd** from 2:30 - 4:30 PM in the lab.
 
-Please make sure to bring your laptop and charger.
+Please make sure to bring your laptop and charger. 
 :::
 
 ::: {.callout-caution}
