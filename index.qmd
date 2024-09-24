@@ -11,11 +11,13 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 👇🏾 Below, you can find important links and important announcements.
 
+
 ::: {.callout-caution}
+# Exam 1
+The first exam is on **Wednesday, October 9th** from 2:30 - 4:30 PM in the lab.
 
-Please note that my office is now in Riley Hall **200-H** ✅, previously it was <s>200-D</s>❌.
+Please make sure to bring your laptop and charger.
 :::
-
 
 ::: {.callout-caution}
 # Deliverable

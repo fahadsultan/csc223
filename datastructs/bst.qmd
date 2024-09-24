@@ -3,32 +3,52 @@ title: "Binary Search Tree"
 toc: true
 ---
 
-A **binary search tree (BST)** is a binary tree data structure that follows the property of the binary search algorithm. In a BST, each node has a key (value), and the keys in the left subtree are less than the key in the root, while the keys in the right subtree are greater than the key in the root.
+A **binary search tree (BST)** is a binary tree data structure that is used to <u>store data in a sorted order</u>.
 
+The binary search tree must at all times satisfy the binary search tree property:
+
+1. The <u>left subtree of a node</u> contains only nodes with values <u><b>less than or equal to the node's value</b></u>.
+
+2. The <u>right subtree of a node</u> contains only nodes with values <u><b>greater than or equal to the node's value</u></b>.
+
+3. Both the left and right subtrees must themselves be binary search trees>.
+
+As a result of this property, the inorder traversal of a binary search tree will always return the nodes in sorted order.
 
 <center>
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240418110011/Binary-Search-Tree.webp" style="filter:invert(1);" width="90%">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240418110011/Binary-Search-Tree.webp" style="filter:invert(1);" width="100%">
 </center>
 
-## Operations on Trees
+<br/><br/>
 
+## Operations on Binary Search Trees
 
-### **Search**: Finding a specific node in the tree.
+All operations on a binary search tree have a time complexity of O(h), where h is the height of the tree. h is equal to the number of levels in the tree. 
+
+For a balanced binary search tree, the height is O(log n), where n is the number of nodes in the tree.  
+
+For an unbalanced binary search tree, the height is O(n).
+
+### **Search**
+
+Searching for a node in a binary search tree is similar to searching for a value in a sorted array.
+
+<center><img src="https://www.freelancinggig.com/blog/wp-content/uploads/2019/02/BFS-and-DFS-Algorithms.png" style="filter:invert(1);" width="100%"></center>
 
 #### Depth First Search (DFS)
 
 A traversal algorithm that explores as far as possible along each branch before backtracking.
 
-```python
-def dfs(root, target):
-	if root is None:
-		return False
-	if root.val == target:
-		return True
-	return dfs(root.left, target) or dfs(root.right, target)
-```
+Depth First Search can be implemented using the following steps: 
 
-<img src="https://www.freelancinggig.com/blog/wp-content/uploads/2019/02/BFS-and-DFS-Algorithms.png" style="filter:invert(1);" width="80%">
+* If the tree is empty, return False.
+
+* If the current node is the target node, return True.
+
+* Recursively search the left subtree.
+
+* Recursively search the right subtree.
+
 
 #### Breadth First Search (BFS)
 
@@ -51,75 +71,71 @@ def bfs(root, target):
 	return False
 ```
 
+### Insertion
+
+<img align="right" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Binary-search-tree-insertion-animation.gif" style="filter:invert(1);" width="50%">
+
+Adding a new node to the tree follows the following steps:
+
+* If the tree is empty, create a new node and set it as the root of the tree.
+
+* If the tree is not empty
+
+	* Compare the value of the new node with the value of the current node.
+
+	* If the value of the new node is less than the value of the current node, move to the left subtree.
+
+	* If the value of the new node is greater than the value of the current node, move to the right subtree.
+
+	* Repeat steps 2.1 to 2.3 until you reach a leaf node.
+
+	   * Insert the new node as the left child if the value of the new node is less than the value of the leaf node, or as the right child if the value of the new node is greater than the value of the leaf node.
+
+### Deletion
 
 
-## Binary Search Tree Operations
+Deletion of a node in a binary search tree involves the following steps:
 
-### **Insertion**
+* If the tree is empty, return the tree.
 
-Adding a new node to the tree.
+* If the value of the node to be deleted is less than the value of the current node, move to the left subtree.
 
-```python
-class TreeNode:
-	def __init__(self, val=0, left=None, right=None):
-		self.val = val
-		self.left = left
-		self.right = right
+* If the value of the node to be deleted is greater than the value of the current node, move to the right subtree.
+
+* If the value of the node to be deleted is equal to the value of the current node, delete the node.
+
+	* If the node has no children, simply delete the node.
+
+	* If the node has one child, replace the node with its child.
+
+	* If the node has two children, find the <u>inorder successor</u> of the node, replace the node with the inorder successor, and delete the inorder successor. 
+	
+		The <u>inorder successor</u> is the smallest node in the right subtree of the node to be deleted.
+
+<br/>
+<center>
+
+Case 1: Node to be deleted has no children
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230726182925/d1.png" style="filter:invert(1);" width="100%">
+
+Case 2: Node to be deleted has one child
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20231004182120/file.png" style="filter:invert(1);" width="100%">
+
+Case 3: Node to be deleted has two children
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20231006112704/d3.png" style="filter:invert(1);" width="100%">
+
+</center>
 
 
-def insert(root, val): 
-	"""
-	Inserts a new node with value `val` into the binary search tree.
-	"""
-	if root is None:
-		return TreeNode(val)
-	if val < root.val:
-		root.left = insert(root.left, val)
-	else:
-		root.right = insert(root.right, val)
-	return root
-```
-### **Deletion**
+### Update 
 
-Removing a node from the tree.
+Updating a node in a binary search tree involves deleting the node and inserting a new node with the updated value.
 
-```python
-def delete(root, val):
-	"""
-	Deletes a node with value `val` from the binary search tree.
-	"""
-	if root is None:
-		return root
-	if val < root.val:
-		root.left = delete(root.left, val)
-	elif val > root.val:
-		root.right = delete(root.right, val)
-	else:
-		if root.left is None:
-			return root.right
-		elif root.right is None:
-			return root.left
-		root.val = find_min(root.right)
-		root.right = delete(root.right, root.val)
-	return root
-```
+The time complexity of inserting a node in a binary search tree is O(h), where h is the height of the tree.
 
-### **Update**
+The time complexity of deleting a node in a binary search tree is also O(h), where h is the height of the tree.
 
-Changing the data value of a node in the tree.
-
-```python
-def update(root, target, new_val):
-	"""
-	Updates the value of the node with value `target` to `new_val`.
-	"""
-	if root is None:
-		return
-	if root.val == target:
-		root.val = new_val
-	update(root.left, target, new_val)
-	update(root.right, target, new_val)
-```
+Therefore, the time complexity of updating a node in a binary search tree is O(h).
 
 
 
