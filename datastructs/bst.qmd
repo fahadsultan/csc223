@@ -31,7 +31,7 @@ For an unbalanced binary search tree, the height is O(n).
 
 ### **Search**
 
-Searching for a node in a binary search tree is similar to searching for a value in a sorted array.
+Searching for a node in a binary search tree is very similar to searching for a value in a sorted array.
 
 <center><img src="https://www.freelancinggig.com/blog/wp-content/uploads/2019/02/BFS-and-DFS-Algorithms.png" style="filter:invert(1);" width="100%"></center>
 
@@ -54,22 +54,19 @@ Depth First Search can be implemented using the following steps:
 
 A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.
 
+Breadth First Search can be implemented using the following steps:
 
-```python
-def bfs(root, target):
-	if root is None:
-		return False
-	queue = [root]
-	while queue:
-		node = queue.pop(0)
-		if node.val == target:
-			return True
-		if node.left:
-			queue.append(node.left)
-		if node.right:
-			queue.append(node.right)
-	return False
-```
+* If the tree is empty, return False.
+
+* Create a queue and add the root node to the queue.
+
+* While the queue is not empty, remove the first node from the queue.
+
+	* If the current node is the target node, return True.
+
+	* Add the left child of the current node to the queue if it exists.
+
+	* Add the right child of the current node to the queue if it exists.
 
 ### Insertion
 

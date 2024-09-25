@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -565,7 +531,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For an unbalanced binary search tree, the height is O(n).</p>
 <section id="search" class="level3">
 <h3 class="anchored" data-anchor-id="search"><strong>Search</strong></h3>
-<p>Searching for a node in a binary search tree is similar to searching for a value in a sorted array.</p>
+<p>Searching for a node in a binary search tree is very similar to searching for a value in a sorted array.</p>
 <center>
 <img src="https://www.freelancinggig.com/blog/wp-content/uploads/2019/02/BFS-and-DFS-Algorithms.png" style="filter:invert(1);" width="100%">
 </center>
@@ -583,19 +549,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="breadth-first-search-bfs" class="level4">
 <h4 class="anchored" data-anchor-id="breadth-first-search-bfs">Breadth First Search (BFS)</h4>
 <p>A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bfs(root, target):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> root <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    queue <span class="op">=</span> [root]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> queue:</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        node <span class="op">=</span> queue.pop(<span class="dv">0</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> node.val <span class="op">==</span> target:</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> node.left:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            queue.append(node.left)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> node.right:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            queue.append(node.right)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Breadth First Search can be implemented using the following steps:</p>
+<ul>
+<li><p>If the tree is empty, return False.</p></li>
+<li><p>Create a queue and add the root node to the queue.</p></li>
+<li><p>While the queue is not empty, remove the first node from the queue.</p>
+<ul>
+<li><p>If the current node is the target node, return True.</p></li>
+<li><p>Add the left child of the current node to the queue if it exists.</p></li>
+<li><p>Add the right child of the current node to the queue if it exists.</p></li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="insertion" class="level3">
