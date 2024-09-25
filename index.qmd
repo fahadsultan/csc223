@@ -14,19 +14,14 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 ::: {.callout-caution}
 # Exam 1 
-The first exam is on **Wednesday, October 2nd** from 2:30 - 4:30 PM in the lab.
+The first exam is on **Wednesday, October 2nd** from 2:30 - 4:30 PM in the lab. 
 
 Please make sure to bring your laptop and charger. 
 :::
 
 ::: {.callout-caution}
 # Deliverable
-[Programming Assignment 3](https://classroom.github.com/a/iS2yxdqG) is due on Tue, Sept 24th, 2024 11:59 PM.
-:::
-
-::: {.callout-caution}
-# Deliverable
-[Written Assignment 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) is due on Fri, Sept 20th, 2024 11:59 PM.
+[Programming Assignment 4](https://classroom.github.com/a/HaJCh0Jz) is due on Tue, Oct 1st, 2024 11:59 PM.
 :::
 
 

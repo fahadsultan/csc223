@@ -8,8 +8,11 @@ Please note that this is a tentative plan and is subject to change.
 |---|----|---|---|---|---|---|
 | 1 | Introduction + Git | [Pro Git](https://git-scm.com/book/en/v2) |  [Intro](intro.qmd)  | [Version Control](se/version_control/version_control.qmd) | [WA 1](https://docs.google.com/document/d/1vRoSzj1mckpqtmpI7py7vbXHw7t1_t2g1cvNeOBbcjY/edit?usp=sharing) | [Lab 1](https://docs.google.com/document/d/1HIKpiqWcxSTER-SAyb88wG-b-Qe_S9w_L5uRBXlrwaY/edit?usp=sharing) |
 | 2 | Programming in Java  | [Segdwick Ch. 1-4](https://introcs.cs.princeton.edu/java/home/) | [Abstractions](/basics/abstractions/java.html) | [Operations](/basics/operations/operations.ipynb) + [Control Flow](/basics/controls/controls.qmd) |  | [PA 1](https://classroom.github.com/a/2iEor66t) |
-| 3 | Java 2 | |  |  | | |
-| 4 | Java 3 | |  |  | | |
+| 3 | Java 2 | |  |  | | [PA 2](https://classroom.github.com/a/2iEor66t) |
+| 4 | Binary Trees | |  |  | | [PA 3](https://classroom.github.com/a/2iEor66t) | 
+| 4 | Binary Search Trees | |  |  | | [PA 4](https://classroom.github.com/assignment-invitations/d70d28ccafd0d4440faff1716338f777) | 
+
+
 
 <br/>
 <center>_EXAM 1_</center>
