@@ -25,6 +25,12 @@ Please make sure to bring your laptop and charger.
 :::
 
 
+::: {.callout-caution}
+# Deliverable
+[WA3](https://docs.google.com/document/d/1T_NdCl4588sas--RGvYQWfGr3GK8yVenhq4XtQiXes0/edit?usp=sharing) is due on Fri, Oct 4th, 2024 11:59 PM.
+:::
+
+
 
 ::: {.callout-tip}
 ## Open-Door Policy

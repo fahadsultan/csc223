@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nSegdwick Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nSegdwick Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Segdwick Ch. 3\nBST 1\nBST 2\n\nPA 4\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n\n\n\nEXAM 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nEXAM 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -232,7 +232,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nExam 1\n\n\n\nThe first exam is on Wednesday, October 2nd from 2:30 - 4:30 PM in the lab.\nPlease make sure to bring your laptop and charger.\n\n\n\n\n\n\n\n\nDeliverable\n\n\n\nProgramming Assignment 4 is due on Tue, Oct 1st, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nExam 1\n\n\n\nThe first exam is on Wednesday, October 2nd from 2:30 - 4:30 PM in the lab.\nPlease make sure to bring your laptop and charger.\n\n\n\n\n\n\n\n\nDeliverable\n\n\n\nProgramming Assignment 4 is due on Tue, Oct 1st, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nDeliverable\n\n\n\nWA3 is due on Fri, Oct 4th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -1998,6 +1998,32 @@
       "PROGRAMMING, IN JAVA",
       "Operations",
       "Testing in Java"
+    ]
+  },
+  {
+    "objectID": "datastructs/bst.html#operations-on-trees",
+    "href": "datastructs/bst.html#operations-on-trees",
+    "title": "Binary Search Tree",
+    "section": "Operations on Trees",
+    "text": "Operations on Trees\n\nSearch: Finding a specific node in the tree.\n\nDepth First Search (DFS)\nA traversal algorithm that explores as far as possible along each branch before backtracking.\ndef dfs(root, target):\n    if root is None:\n        return False\n    if root.val == target:\n        return True\n    return dfs(root.left, target) or dfs(root.right, target)\n\n\n\nBreadth First Search (BFS)\nA traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.\ndef bfs(root, target):\n    if root is None:\n        return False\n    queue = [root]\n    while queue:\n        node = queue.pop(0)\n        if node.val == target:\n            return True\n        if node.left:\n            queue.append(node.left)\n        if node.right:\n            queue.append(node.right)\n    return False",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Trees",
+      "Binary Search Tree"
+    ]
+  },
+  {
+    "objectID": "datastructs/bst.html#binary-search-tree-operations",
+    "href": "datastructs/bst.html#binary-search-tree-operations",
+    "title": "Binary Search Tree",
+    "section": "Binary Search Tree Operations",
+    "text": "Binary Search Tree Operations\n\nInsertion\nAdding a new node to the tree.\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\n\ndef insert(root, val): \n    \"\"\"\n    Inserts a new node with value `val` into the binary search tree.\n    \"\"\"\n    if root is None:\n        return TreeNode(val)\n    if val &lt; root.val:\n        root.left = insert(root.left, val)\n    else:\n        root.right = insert(root.right, val)\n    return root\n\n\nDeletion\nRemoving a node from the tree.\ndef delete(root, val):\n    \"\"\"\n    Deletes a node with value `val` from the binary search tree.\n    \"\"\"\n    if root is None:\n        return root\n    if val &lt; root.val:\n        root.left = delete(root.left, val)\n    elif val &gt; root.val:\n        root.right = delete(root.right, val)\n    else:\n        if root.left is None:\n            return root.right\n        elif root.right is None:\n            return root.left\n        root.val = find_min(root.right)\n        root.right = delete(root.right, root.val)\n    return root\n\n\nUpdate\nChanging the data value of a node in the tree.\ndef update(root, target, new_val):\n    \"\"\"\n    Updates the value of the node with value `target` to `new_val`.\n    \"\"\"\n    if root is None:\n        return\n    if root.val == target:\n        root.val = new_val\n    update(root.left, target, new_val)\n    update(root.right, target, new_val)",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Trees",
+      "Binary Search Tree"
     ]
   }
 ]

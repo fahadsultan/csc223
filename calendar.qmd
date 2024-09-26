@@ -7,10 +7,10 @@ Please note that this is a tentative plan and is subject to change.
 | # | TOPIC | READING | MEETING 1 | MEETING 2 | WRITTEN  ASSIGNMENT | PROGRAMMING ASSIGNMENT |
 |---|----|---|---|---|---|---|
 | 1 | Introduction + Git | [Pro Git](https://git-scm.com/book/en/v2) |  [Intro](intro.qmd)  | [Version Control](se/version_control/version_control.qmd) |  | [Lab 1](https://docs.google.com/document/d/1HIKpiqWcxSTER-SAyb88wG-b-Qe_S9w_L5uRBXlrwaY/edit?usp=sharing) |
-| 2 | Programming in Java  | [Segdwick Ch. 1-4](https://introcs.cs.princeton.edu/java/home/) | [Abstractions](/basics/abstractions/java.html) | [Operations](/basics/operations/operations.ipynb) + [Control Flow](/basics/controls/controls.qmd) | [WA 1](https://docs.google.com/document/d/1vRoSzj1mckpqtmpI7py7vbXHw7t1_t2g1cvNeOBbcjY/edit?usp=sharing) | [PA 1](https://classroom.github.com/a/2iEor66t) |
-| 3 | Programming in Java | [Segdwick Ch. 1-4](https://introcs.cs.princeton.edu/java/home/) | [Abstractions 1](basics/abstractions/abstractions.qmd) | [Abstractions 2](basics/abstractions/classes.qmd) | | [PA 2](https://classroom.github.com/a/2iEor66t) |
+| 2 | Programming in Java  | [Intro to Java Ch. 1-4](https://introcs.cs.princeton.edu/java/home/) | [Abstractions](/basics/abstractions/java.html) | [Operations](/basics/operations/operations.ipynb) + [Control Flow](/basics/controls/controls.qmd) | [WA 1](https://docs.google.com/document/d/1vRoSzj1mckpqtmpI7py7vbXHw7t1_t2g1cvNeOBbcjY/edit?usp=sharing) | [PA 1](https://classroom.github.com/a/2iEor66t) |
+| 3 | Programming in Java | [Into to Java Ch. 1-4](https://introcs.cs.princeton.edu/java/home/) | [Abstractions 1](basics/abstractions/abstractions.qmd) | [Abstractions 2](basics/abstractions/classes.qmd) | | [PA 2](https://classroom.github.com/a/2iEor66t) |
 | 4 | Binary Trees | | [Trees](datastructs/trees.qmd) | [Binary Trees](datastructs/binarytree.qmd)  | [WA 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) | [PA 3](https://classroom.github.com/a/2iEor66t) | 
-| 5 | Binary Search Trees | [Algorithms Segdwick Ch. 3](https://algs4.cs.princeton.edu/32bst/) | [BST 1](datastructs/bst.qmd) | [BST 2](datastructs/bst.qmd) | | [PA 4](https://classroom.github.com/assignment-invitations/d70d28ccafd0d4440faff1716338f777) | 
+| 5 | Binary Search Trees | [Algorithms Ch. 3](https://algs4.cs.princeton.edu/32bst/) | [BST 1](datastructs/bst.qmd) | [BST 2](datastructs/bst.qmd) | [WA3](https://docs.google.com/document/d/1T_NdCl4588sas--RGvYQWfGr3GK8yVenhq4XtQiXes0/edit?usp=sharing) | [PA 4](https://classroom.github.com/assignment-invitations/d70d28ccafd0d4440faff1716338f777) | 
 
 
 
