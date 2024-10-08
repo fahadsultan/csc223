@@ -1,4 +1,193 @@
 ---
-title: "Heaps"
+title: "Heaps / Priority Queues"
 toc: true
 ---
+
+A heap is a specific data structure with a strict ordering property. A priority queue is an abstract data type, often implemented using a heap, to retrieve elements based on their priority.
+
+# Heaps 
+
+A heap is a binary tree with the following properties:
+
+1. It is a <u>complete binary tree</u>: 
+
+    All levels of the tree are fully filled except possibly for the last level, which is filled from left to right.
+
+2. It satisfies one of the <u>heap property</u>, depending on the type of heap:
+
+    - In a <b><u>Max-heap</u></b>, the value of each node is _greater than or equal to ($\geq$)_ the values of its children.
+
+    - In a <b><u>Min-heap</u></b>, the value of each node is _less than or equal to ($\leq$)_ the values of its children.
+
+<center><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221220165711/MinHeapAndMaxHeap1.png" width="80%"></center>
+
+<br/>
+
+The heap property guarantees that the largest (in a max-heap) or smallest (in a min-heap) value is always at the root, and the tree maintains a specific order based on the type of heap.
+
+
+<!-- <center><img style="filter:invert(1)" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*hLuOzweqg8rrz6NKdkjqmQ.png" width="80%"></center> -->
+
+<br/>
+
+
+## Operations
+
+A heap supports the following operations:
+
+1. **Insert**: Insert an element into the heap, maintaining the heap property and the complete binary tree property.
+
+2. **Extract / Delete**: Remove and return the root element of the heap, maintaining the heap property and the complete binary tree property.
+
+3. **Heap Sort**: Sort an array using a heap.
+
+<br/>
+<br/>
+
+### Insert
+
+Inserting an element into a heap involves the following steps:
+
+1. Add the element to the end of the heap, maintaining the complete binary tree property i.e. fill from left to right at the last level.
+
+<center><i>**Step 1**: Add the element to the end of the heap. **Step 2**: Heapify<br/></i><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20230901130152/Insertion-In-Max-Heap.png" width="80%"></center>
+
+<br/>
+
+2. **Heapify**: Restore the heap property by swapping the element with its parent until the heap property is satisfied.
+<br/>
+
+<center><i>Step 2: Heapify (broken down into substeps)</i><br/><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20231108125652/heapify-operations-in-max-heap.png" width="80%"></center>
+
+<br/>
+<br/>
+
+### Read / Peek
+
+Reading or peeking at the root element of a heap involves returning the value of the root element without removing it from the heap.
+
+### Update
+
+Updating an element in a heap involves the following steps:
+
+1. Update the element with the new value.
+
+2. **Heapify**: Restore the heap property by moving the element up or down the heap until the heap property is satisfied.
+
+### Extract / Delete 
+
+Extracting the maximum element from a max-heap or the minimum element from a min-heap involves the following steps:
+
+<center><img style="filter:invert(1)" width="35%" src="https://media.geeksforgeeks.org/wp-content/uploads/20230901130454/Max-Heap-Data-Structure.png"></center>
+
+<br/>
+
+1. Replace the root element with the last element in the heap (rigthmost element in the last level).
+
+2. Remove the last element from the heap.
+
+
+<center><i>**Step 1**: Replace the root element with the last element. **Step 2**: Remove the last node</i><br/><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20230901130624/Max-Heap-Data-Structure-step-1.png" width="80%"></center>
+
+
+<br/>
+
+3. **Heapify**: Restore the heap property by moving the new root element down the heap until the heap property is satisfied.
+
+<br/>
+
+<center><i>Step 3: Heapify (broken down into substeps)</i><br/><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20231219131517/Max-Heap-Data-Structure-step-2.jpg" width="80%"></center>
+
+<br/>
+
+### Heapify
+
+Heapify is an operation that restores the heap property in a heap. It involves moving an element up or down the heap to satisfy the heap property.
+
+Generally, heapify is used after an insert or extract operation to maintain the heap property.
+
+This is needed because the insert and extract operations focus on a particular path from the leaf to the root, and the heap property may be violated on other paths.
+
+Heapify generally starts from the root and moves the element down the heap until the heap property is satisfied.
+
+In case of a max-heap, heapify involves moving a node down the heap until it is greater than or equal to its children.
+
+<center><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)"></center>
+
+
+
+## Implementation
+
+
+Heaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:
+
+<br/>
+
+<center><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20210623102553/Untitleddrawing37-660x227.png" width="100%"></center>
+
+<br/>
+
+There are several ways to implement a heap, including using arrays, linked lists, or binary trees.
+
+Heaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index $i$ are stored at indices $2i + 1$ and $2i + 2$. 
+
+<br/>
+
+| Node | Position in Array |
+|:------:|:-------------------:|
+| Root | 0                 |
+| Left Child of node at index $i$ | $2i + 1$      |
+| Right Child of node at index $i$ | $2i + 2$     |
+| \n Parent of node at index $i$ | $$\lfloor \frac{i-1}{2} \rfloor$$ |
+
+<br/>
+
+This representation allows for efficient access to the parent and children of a node.
+
+<center><img style="filter:invert(1)" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg" width="60%"></center>
+
+
+
+
+# Applications
+
+Heaps are used in various applications, including:
+
+
+## Priority Queues
+
+A priority queue is an <u>abstract</u> data type, often implemented using a heap, that allows elements to be inserted and extracted based on their priority.
+
+The element with the highest priority is at the root of the heap (max-heap) or the element with the lowest priority is at the root of the heap (min-heap).
+
+Priority queues are commonly used in algorithms and applications where elements need to be processed based on their priority, such as task scheduling, Dijkstra's algorithm, Prim's algorithm, Huffman coding, and more.
+
+Note that the terms "max-priority queue" and "min-priority queue" are used interchangeably with "max-heap" and "min-heap," respectively, when implementing priority queues using heaps.
+
+<center><img style="filter:invert(1)" src="https://ucarecdn.com/302e0305-9f38-4481-a0a3-bb81e8128b1b/-/stretch/off/-/resize/2200x/-/format/webp/" width="80%"></center>
+
+<br/>
+
+Please note that priority queue are distinct from queues or stacks, which are first-in-first-out (FIFO) and last-in-first-out (LIFO) data structures, respectively.
+
+## Heap Sort
+
+Heap sort is a sorting algorithm that uses a heap to sort an array. It involves converting the array into a heap using the heapify operation and then extracting the root element of the heap until the heap is empty.
+
+Heap sort involves the following steps:
+
+1. **Build Heap**: Convert the array into a heap using the heapify operation.
+
+2. **Extract Max/Min**: Repeatedly extract the maximum (in a max-heap) or minimum (in a min-heap) element from the heap until the heap is empty.
+
+3. **Sort**: The extracted elements form a sorted array.
+
+<br/>
+
+<center><img width="60%" src="https://he-s3.s3.amazonaws.com/media/uploads/e9d6f12.png" style="filter:invert(1)"></center>
+
+<br/>
+
+The heap data structure allows for efficient allocation and deallocation of memory blocks of varying sizes.
+
+Heap sort has a time complexity of $O(n log n)$ and is an in-place sorting algorithm.

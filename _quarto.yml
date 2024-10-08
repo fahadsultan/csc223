@@ -67,6 +67,7 @@ website:
                 - basics/abstractions/datastructures.qmd
                 - basics/abstractions/datastructures2.qmd
                 - basics/abstractions/classes.qmd
+                - basics/abstractions/interfaces.qmd
             - section: "Operations"
               href: basics/operations/operations.ipynb
               contents:
@@ -92,7 +93,7 @@ website:
               contents: 
                 - datastructs/binarytree.qmd
                 - datastructs/bst.qmd
-            - datastructs/heaps.qmd
+                - datastructs/heaps.qmd
             - datastructs/graphs.qmd
             - datastructs/hashmaps.qmd
         - section: 
