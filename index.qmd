@@ -31,6 +31,11 @@ Please make sure to bring your laptop and charger.
 :::
 
 
+::: {.callout-caution}
+# Programming Assignment 5
+[PA 5](https://classroom.github.com/a/-u7dmMCa) is due on <b><u>Wednesday, Oct 16th, 2024 2:30 PM</b></u>.
+:::
+
 
 ::: {.callout-tip}
 ## Open-Door Policy
