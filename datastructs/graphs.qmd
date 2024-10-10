@@ -2,3 +2,159 @@
 title: "Graphs"
 toc: true
 ---
+
+A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.
+
+<center><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/undirectedgraph.png" width="70%" style="filter:invert(1)"></center>
+
+# Graph Terminology
+
+- **Vertex (Node)**: A fundamental unit of a graph. It represents an entity, such as a city, person, or object.
+
+- **Edge**: A connection between two vertices. It represents a relationship between the entities represented by the vertices.
+
+- **Directed Graph (Digraph)**: A graph in which the edges have a direction associated with them. The edges are ordered pairs of vertices.
+
+- **Undirected Graph**: A graph in which the edges do not have a direction associated with them. The edges are unordered pairs of vertices.
+
+- **Weighted Graph**: A graph in which each edge has an associated weight or cost. The weight can represent distance, time, cost, or any other relevant metric.
+
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:2000/1*IBtDZq0_4yWpXt0mhda0jw.png" width="100%" style="filter:invert(1)">
+</center>
+
+- **Path**: A sequence of vertices connected by edges. It represents a route from one vertex to another.
+
+- **Cycle**: A path that starts and ends at the same vertex.
+
+- **Connected Graph**: A graph in which there is a path between every pair of vertices.
+
+- **Disconnected Graph**: A graph in which there are vertices that are not connected by any path.
+
+<br/>
+<center>
+<img width="100%" style="filter:invert(1)" src="https://cdn-images-1.medium.com/v2/resize:fit:800/1*dX9TdlR6wD5lkPnWG1h80g.png">
+<!-- <img width="100%" style="filter:invert(1)" src="https://studyglance.in/ds/images/Types-of-graphs.jpg"> -->
+</center>
+<br/>
+
+- **Degree of a Vertex**: The number of edges incident to a vertex. In a directed graph, the degree is divided into the in-degree (number of incoming edges) and out-degree (number of outgoing edges).
+
+- **Adjacency**: Two vertices are adjacent if there is an edge connecting them.
+
+- **Adjacency Matrix**: A matrix representation of a graph in which the rows and columns correspond to vertices, and the entries indicate whether an edge exists between the vertices.
+
+- **Adjacency List**: A list representation of a graph in which each vertex has a list of adjacent vertices.
+
+# Graph Representation
+
+There are two common ways to represent a graph: adjacency matrix and adjacency list.
+
+<center><img src="https://notes.shichao.io/clrs/figure_22.1.png" style="filter:invert(1)" width="85%"></center>
+
+## Adjacency Matrix
+
+An adjacency matrix is a 2D array of size $V \times V$, where $V$ is the number of vertices in the graph. If the value of the matrix element at row $i$ and column $j$ is 1, it indicates an edge between vertices $i$ and $j$. For weighted graphs, the matrix can store the weight of the edge instead of 1.
+
+<center><img width="80%" style="filter:invert(1)" src="https://mathworld.wolfram.com/images/eps-svg/AdjacencyMatrix_1002.svg"></center>
+
+There are two types of adjacency matrices:
+
+- **Unweighted Graphs**: The matrix elements are 0 or 1, indicating the absence or presence of an edge.
+
+- **Weighted Graphs**: The matrix elements are the weights of the edges.
+
+Similarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.
+
+Adjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.
+
+## Adjacency List
+
+An adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.
+
+<center><img src="https://kb.novaordis.com/images/3/30/Adjacency_List_Undirected_Graph.png" style="filter:invert(1)" width="80%"></center>
+
+<br/>
+
+In an adjacency list:
+
+- For an undirected graph, each edge $(u, v)$ is stored twice: once in the list of $u$ and once in the list of $v$.
+
+- For a directed graph, the edge $(u, v)$ is stored only in the list of $u$.
+
+Adjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.
+
+# Graph Traversal
+
+Graph traversal is the process of visiting all the vertices and edges of a graph. Two common graph traversal algorithms are Depth-First Search (DFS) and Breadth-First Search (BFS).
+
+## Depth-First Search (DFS)
+
+DFS is an algorithm that explores as far as possible along each branch before backtracking. It uses a stack to keep track of the vertices to visit next.
+
+### DFS Algorithm
+
+1. Start at a vertex $v$ and mark it as visited.
+
+2. Recursively visit all adjacent vertices of $v$ that have not been visited.
+
+3. Repeat step 2 for each unvisited adjacent vertex.
+
+### Example of DFS
+
+Consider the following graph:
+
+```
+    0 -- 1
+    |    |
+    3 -- 2
+
+```
+
+Starting at vertex 0, a DFS traversal would visit the vertices in the order 0, 1, 2, 3.
+
+## Breadth-First Search (BFS)
+
+BFS is an algorithm that explores all the vertices at the present depth before moving on to the vertices at the next depth. It uses a queue to keep track of the vertices to visit next.
+
+### BFS Algorithm
+
+1. Start at a vertex $v$ and mark it as visited.
+
+2. Enqueue $v$ into a queue.
+
+3. While the queue is not empty, dequeue a vertex $u$ from the queue.
+
+4. Visit all unvisited adjacent vertices of $u$ and mark them as visited. Enqueue them into the queue.
+
+
+### Example of BFS
+
+Consider the same graph as before:
+
+```
+    0 -- 1
+    |    |
+    3 -- 2
+
+```
+
+Starting at vertex 0, a BFS traversal would visit the vertices in the order 0, 1, 3, 2.
+
+# Graph Algorithms
+
+Graphs are used to solve a variety of problems, and several algorithms have been developed to work with graphs efficiently. Some common graph algorithms include:
+
+- **Dijkstra's Algorithm**: Finds the shortest path between two vertices in a weighted graph.
+
+- **Bellman-Ford Algorithm**: Finds the shortest path between two vertices in a weighted graph with negative edge weights.
+
+- **Prim's Algorithm**: Finds the minimum spanning tree of a connected, undirected graph.
+
+- **Kruskal's Algorithm**: Finds the minimum spanning tree of a connected, undirected graph.
+
+- **Floyd-Warshall Algorithm**: Finds the shortest paths between all pairs of vertices in a weighted graph.
+
+- **Topological Sorting**: Arranges the vertices of a directed acyclic graph in a linear order.
+
+- **Strongly Connected Components**: Identifies the strongly connected components in a directed graph. 

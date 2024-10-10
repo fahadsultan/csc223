@@ -8,8 +8,18 @@
 | Class Participation $^1$ | 10% |
 | Written Assignments | 10% |
 | Labs / Programming Assignments $^2$ | 20% |
+| Midterm | 25% |
+| Final (Cumulative)   | 35% |
+
+_Previously_:
+
+| Component | Percentage |
+|---------|------|
+| Class Participation $^1$ | 10% |
+| Written Assignments | 10% |
+| Labs / Programming Assignments $^2$ | 20% |
 | Exam 1 | 10% |
-| Exam 2 | 20% |
+| Exam 2 Midterm | 20% |
 | Final (Cumulative)   | 30% |
 
 $^1$ Details in [Introduction](../intro.qmd)

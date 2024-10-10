@@ -1,11 +1,7 @@
 ---
-title: "Heaps / Priority Queues"
+title: "Heaps"
 toc: true
 ---
-
-A heap is a specific data structure with a strict ordering property. A priority queue is an abstract data type, often implemented using a heap, to retrieve elements based on their priority.
-
-# Heaps 
 
 A heap is a binary tree with the following properties:
 
@@ -31,7 +27,39 @@ The heap property guarantees that the largest (in a max-heap) or smallest (in a 
 <br/>
 
 
-## Operations
+# Array-based Implementation
+
+
+Heaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:
+
+<br/>
+
+<center><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20210623102553/Untitleddrawing37-660x227.png" width="100%"></center>
+
+<br/>
+
+There are several ways to implement a heap, including using arrays, linked lists, or binary trees.
+
+Heaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index $i$ are stored at indices $2i + 1$ and $2i + 2$. 
+
+<br/>
+
+| Node | Position in Array |
+|:------:|:-------------------:|
+| Root | 0                 |
+| Left Child of node at index $i$ | $2i + 1$      |
+| Right Child of node at index $i$ | $2i + 2$     |
+| \n Parent of node at index $i$ | $$\lfloor \frac{i-1}{2} \rfloor$$ |
+
+<br/>
+
+This representation allows for efficient access to the parent and children of a node.
+
+<center><img style="filter:invert(1)" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg" width="60%"></center>
+
+
+
+# Operations
 
 A heap supports the following operations:
 
@@ -58,6 +86,10 @@ Inserting an element into a heap involves the following steps:
 <br/>
 
 <center><i>Step 2: Heapify (broken down into substeps)</i><br/><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20231108125652/heapify-operations-in-max-heap.png" width="80%"></center>
+
+The heapify operation involves moving the element up the heap (in the case of a max-heap) or down the heap (in the case of a min-heap) until the heap property is satisfied.
+
+The time complexity of inserting an element into a heap is $O(\log n)$, where $n$ is the number of elements in the heap. Step 1 takes $O(1)$ time, and step 2 (heapify) takes $O(\log n)$ time to go from the leaf to the root.
 
 <br/>
 <br/>
@@ -106,48 +138,11 @@ Heapify is an operation that restores the heap property in a heap. It involves m
 
 Generally, heapify is used after an insert or extract operation to maintain the heap property.
 
-This is needed because the insert and extract operations focus on a particular path from the leaf to the root, and the heap property may be violated on other paths.
-
 Heapify generally starts from the root and moves the element down the heap until the heap property is satisfied.
 
 In case of a max-heap, heapify involves moving a node down the heap until it is greater than or equal to its children.
 
 <center><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)"></center>
-
-
-
-## Implementation
-
-
-Heaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:
-
-<br/>
-
-<center><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20210623102553/Untitleddrawing37-660x227.png" width="100%"></center>
-
-<br/>
-
-There are several ways to implement a heap, including using arrays, linked lists, or binary trees.
-
-Heaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index $i$ are stored at indices $2i + 1$ and $2i + 2$. 
-
-<br/>
-
-| Node | Position in Array |
-|:------:|:-------------------:|
-| Root | 0                 |
-| Left Child of node at index $i$ | $2i + 1$      |
-| Right Child of node at index $i$ | $2i + 2$     |
-| \n Parent of node at index $i$ | $$\lfloor \frac{i-1}{2} \rfloor$$ |
-
-<br/>
-
-This representation allows for efficient access to the parent and children of a node.
-
-<center><img style="filter:invert(1)" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg" width="60%"></center>
-
-
-
 
 # Applications
 
@@ -188,6 +183,4 @@ Heap sort involves the following steps:
 
 <br/>
 
-The heap data structure allows for efficient allocation and deallocation of memory blocks of varying sizes.
-
-Heap sort has a time complexity of $O(n log n)$ and is an in-place sorting algorithm.
+Heap sort has a time complexity of $O(\text{n log n})$ and is an in-place sorting algorithm with a space complexity of $O(1)$.

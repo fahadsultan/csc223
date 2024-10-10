@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Heaps / Priority Queues</title>
+<title>Heaps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -212,7 +212,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/trees.html">Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/heaps.html">Heaps / Priority Queues</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/trees.html">Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/heaps.html">Heaps</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -457,7 +457,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datastructs/heaps.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Heaps / Priority Queues</span></a>
+ <span class="menu-text">Heaps</span></a>
   </div>
 </li>
       </ul>
@@ -515,8 +515,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#heaps" id="toc-heaps" class="nav-link active" data-scroll-target="#heaps">Heaps</a>
-  <ul class="collapse">
+  <li><a href="#array-based-implementation" id="toc-array-based-implementation" class="nav-link active" data-scroll-target="#array-based-implementation">Array-based Implementation</a></li>
   <li><a href="#operations" id="toc-operations" class="nav-link" data-scroll-target="#operations">Operations</a>
   <ul class="collapse">
   <li><a href="#insert" id="toc-insert" class="nav-link" data-scroll-target="#insert">Insert</a></li>
@@ -524,8 +523,6 @@ window.Quarto = {
   <li><a href="#update" id="toc-update" class="nav-link" data-scroll-target="#update">Update</a></li>
   <li><a href="#extract-delete" id="toc-extract-delete" class="nav-link" data-scroll-target="#extract-delete">Extract / Delete</a></li>
   <li><a href="#heapify" id="toc-heapify" class="nav-link" data-scroll-target="#heapify">Heapify</a></li>
-  </ul></li>
-  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a>
   <ul class="collapse">
@@ -538,9 +535,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/trees.html">Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/heaps.html">Heaps / Priority Queues</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/trees.html">Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/heaps.html">Heaps</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Heaps / Priority Queues</h1>
+<h1 class="title">Heaps</h1>
 </div>
 
 
@@ -557,9 +554,6 @@ window.Quarto = {
 </header>
 
 
-<p>A heap is a specific data structure with a strict ordering property. A priority queue is an abstract data type, often implemented using a heap, to retrieve elements based on their priority.</p>
-<section id="heaps" class="level1">
-<h1>Heaps</h1>
 <p>A heap is a binary tree with the following properties:</p>
 <ol type="1">
 <li><p>It is a <u>complete binary tree</u>:</p>
@@ -577,8 +571,51 @@ window.Quarto = {
 <p>The heap property guarantees that the largest (in a max-heap) or smallest (in a min-heap) value is always at the root, and the tree maintains a specific order based on the type of heap.</p>
 <!-- <center><img style="filter:invert(1)" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*hLuOzweqg8rrz6NKdkjqmQ.png" width="80%"></center> -->
 <p><br></p>
-<section id="operations" class="level2">
-<h2 class="anchored" data-anchor-id="operations">Operations</h2>
+<section id="array-based-implementation" class="level1">
+<h1>Array-based Implementation</h1>
+<p>Heaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:</p>
+<p><br></p>
+<center>
+<img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20210623102553/Untitleddrawing37-660x227.png" width="100%">
+</center>
+<p><br></p>
+<p>There are several ways to implement a heap, including using arrays, linked lists, or binary trees.</p>
+<p>Heaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index <span class="math inline">\(i\)</span> are stored at indices <span class="math inline">\(2i + 1\)</span> and <span class="math inline">\(2i + 2\)</span>.</p>
+<p><br></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Node</th>
+<th style="text-align: center;">Position in Array</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Root</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Left Child of node at index <span class="math inline">\(i\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2i + 1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Right Child of node at index <span class="math inline">\(i\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2i + 2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Parent of node at index <span class="math inline">\(i\)</span></td>
+<td style="text-align: center;"><span class="math display">\[\lfloor \frac{i-1}{2} \rfloor\]</span></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>This representation allows for efficient access to the parent and children of a node.</p>
+<center>
+<img style="filter:invert(1)" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg" width="60%">
+</center>
+</section>
+<section id="operations" class="level1">
+<h1>Operations</h1>
 <p>A heap supports the following operations:</p>
 <ol type="1">
 <li><p><strong>Insert</strong>: Insert an element into the heap, maintaining the heap property and the complete binary tree property.</p></li>
@@ -602,6 +639,8 @@ window.Quarto = {
 <center>
 <i>Step 2: Heapify (broken down into substeps)</i><br><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20231108125652/heapify-operations-in-max-heap.png" width="80%">
 </center>
+<p>The heapify operation involves moving the element up the heap (in the case of a max-heap) or down the heap (in the case of a min-heap) until the heap property is satisfied.</p>
+<p>The time complexity of inserting an element into a heap is <span class="math inline">\(O(\log n)\)</span>, where <span class="math inline">\(n\)</span> is the number of elements in the heap. Step 1 takes <span class="math inline">\(O(1)\)</span> time, and step 2 (heapify) takes <span class="math inline">\(O(\log n)\)</span> time to go from the leaf to the root.</p>
 <p><br> <br></p>
 </section>
 <section id="read-peek" class="level3">
@@ -644,55 +683,10 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="heapify">Heapify</h3>
 <p>Heapify is an operation that restores the heap property in a heap. It involves moving an element up or down the heap to satisfy the heap property.</p>
 <p>Generally, heapify is used after an insert or extract operation to maintain the heap property.</p>
-<p>This is needed because the insert and extract operations focus on a particular path from the leaf to the root, and the heap property may be violated on other paths.</p>
 <p>Heapify generally starts from the root and moves the element down the heap until the heap property is satisfied.</p>
 <p>In case of a max-heap, heapify involves moving a node down the heap until it is greater than or equal to its children.</p>
 <center>
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)">
-</center>
-</section>
-</section>
-<section id="implementation" class="level2">
-<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
-<p>Heaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:</p>
-<p><br></p>
-<center>
-<img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20210623102553/Untitleddrawing37-660x227.png" width="100%">
-</center>
-<p><br></p>
-<p>There are several ways to implement a heap, including using arrays, linked lists, or binary trees.</p>
-<p>Heaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index <span class="math inline">\(i\)</span> are stored at indices <span class="math inline">\(2i + 1\)</span> and <span class="math inline">\(2i + 2\)</span>.</p>
-<p><br></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Node</th>
-<th style="text-align: center;">Position in Array</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Root</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Left Child of node at index <span class="math inline">\(i\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2i + 1\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Right Child of node at index <span class="math inline">\(i\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2i + 2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Parent of node at index <span class="math inline">\(i\)</span></td>
-<td style="text-align: center;"><span class="math display">\[\lfloor \frac{i-1}{2} \rfloor\]</span></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p>This representation allows for efficient access to the parent and children of a node.</p>
-<center>
-<img style="filter:invert(1)" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg" width="60%">
 </center>
 </section>
 </section>
@@ -725,8 +719,7 @@ window.Quarto = {
 <img width="60%" src="https://he-s3.s3.amazonaws.com/media/uploads/e9d6f12.png" style="filter:invert(1)">
 </center>
 <p><br></p>
-<p>The heap data structure allows for efficient allocation and deallocation of memory blocks of varying sizes.</p>
-<p>Heap sort has a time complexity of <span class="math inline">\(O(n log n)\)</span> and is an in-place sorting algorithm.</p>
+<p>Heap sort has a time complexity of <span class="math inline">\(O(\text{n log n})\)</span> and is an in-place sorting algorithm with a space complexity of <span class="math inline">\(O(1)\)</span>.</p>
 
 
 </section>
