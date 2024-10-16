@@ -36,6 +36,12 @@ Please make sure to bring your laptop and charger.
 [PA 5](https://classroom.github.com/a/-u7dmMCa) is due on <b><u>Wednesday, Oct 16th, 2024 2:30 PM</b></u>.
 :::
 
+
+::: {.callout-caution}
+# Programming Assignment 6
+[PA 4](https://classroom.github.com/a/K7_4WB3Y) is due before the midterm on <b><u>Friday, Oct 23rd, 2024 2:30 PM</b></u>.
+:::
+
 ::: {.callout-caution}
 # Midterm Exam
 The midterm exam is on **Wednesday, October 23rd** from 2:30 - 4:30 PM in the lab.

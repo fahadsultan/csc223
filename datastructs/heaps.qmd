@@ -82,12 +82,16 @@ Inserting an element into a heap involves the following steps:
 
 <br/>
 
-2. **Heapify**: Restore the heap property by swapping the element with its parent until the heap property is satisfied.
+2. **Bubble Up (Heapify)**: Restore the heap property by swapping the element with its parent until the heap property is satisfied.
 <br/>
 
 <center><i>Step 2: Heapify (broken down into substeps)</i><br/><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20231108125652/heapify-operations-in-max-heap.png" width="80%"></center>
 
-The heapify operation involves moving the element up the heap (in the case of a max-heap) or down the heap (in the case of a min-heap) until the heap property is satisfied.
+Bubble up is an example of a heapify operation that moves an element up the heap until the heap property is satisfied. 
+
+For a max-heap, the element is moved up the heap until it is greater than or equal to its parent or until it reaches the root.
+
+For a min-heap, the element is moved up the heap until it is less than or equal to its parent or until it reaches the root.
 
 The time complexity of inserting an element into a heap is $O(\log n)$, where $n$ is the number of elements in the heap. Step 1 takes $O(1)$ time, and step 2 (heapify) takes $O(\log n)$ time to go from the leaf to the root.
 
@@ -98,15 +102,12 @@ The time complexity of inserting an element into a heap is $O(\log n)$, where $n
 
 Reading or peeking at the root element of a heap involves returning the value of the root element without removing it from the heap.
 
-### Update
-
-Updating an element in a heap involves the following steps:
-
-1. Update the element with the new value.
-
-2. **Heapify**: Restore the heap property by moving the element up or down the heap until the heap property is satisfied.
 
 ### Extract / Delete 
+
+Deleting from a heap (also known as extracting) always involves removing the root element from the heap.
+
+
 
 Extracting the maximum element from a max-heap or the minimum element from a min-heap involves the following steps:
 
@@ -124,7 +125,7 @@ Extracting the maximum element from a max-heap or the minimum element from a min
 
 <br/>
 
-3. **Heapify**: Restore the heap property by moving the new root element down the heap until the heap property is satisfied.
+3. **Bubble Down**: Restore the heap property by moving the new root element down the heap until the heap property is satisfied.
 
 <br/>
 
@@ -134,15 +135,60 @@ Extracting the maximum element from a max-heap or the minimum element from a min
 
 ### Heapify
 
-Heapify is an operation that restores the heap property in a heap. It involves moving an element up or down the heap to satisfy the heap property.
+Heapify is an operation that restores the heap property in a heap. It involves moving an element up (bubble up) or down the heap (bubble down) to satisfy the heap property.
 
 Generally, heapify is used after an insert or extract operation to maintain the heap property.
 
-Heapify generally starts from the root and moves the element down the heap until the heap property is satisfied.
+<br/>
 
-In case of a max-heap, heapify involves moving a node down the heap until it is greater than or equal to its children.
+#### Heapify Type 1: Bubble Up
 
-<center><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)"></center>
+Bubble up is needed after inserting an element into a heap to maintain the heap property. It involves moving the element up the heap until the heap property is satisfied.
+
+Regardless of the type of heap (max-heap or min-heap), bubble up is fairly simple and consists of the following steps: 
+
+1. Compare the element with its parent.
+2. If the element is greater than (in a max-heap) or less than (in a min-heap) its parent, swap the element with its parent.
+3. Repeat steps 1 and 2 until the heap property is satisfied or until the element reaches the root.
+
+<br/>
+
+#### Heapify Type 2: Bubble Down 
+
+Bubble down is needed after extracting an element from a heap to maintain the heap property. It involves moving an element down the heap until the heap property is satisfied.
+
+Bubble down is a little more complex than bubble up and consists of the following steps:
+
+For a **max-heap**:
+
+0. Set current position to 0 (the root).
+1. Compare the element at current position with its children.
+2. Swap the element with the larger of its children.
+3. The new current position is the index of the child that the element was swapped with.
+4. Repeat steps 1 and 2 until 
+    * the heap property is satisfied: 
+    
+      _OR_
+
+    * until the element reaches the last level.
+
+
+For a **min-heap**:
+
+0. Set current position to 0 (the root).
+1. Compare the element at current position with its children.
+2. Swap the element with the smaller of its children.
+3. The new current position is the index of the child that the element was swapped with.
+4. Repeat steps 1 and 2 until 
+    * the heap property is satisfied: 
+    
+      _OR_
+
+    * until the element reaches the last level.
+
+
+<center><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)"></center>
+<center><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/" width="80%" style="filter:invert(1)"></center>
 
 # Applications
 

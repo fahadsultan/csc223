@@ -520,7 +520,6 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#insert" id="toc-insert" class="nav-link" data-scroll-target="#insert">Insert</a></li>
   <li><a href="#read-peek" id="toc-read-peek" class="nav-link" data-scroll-target="#read-peek">Read / Peek</a></li>
-  <li><a href="#update" id="toc-update" class="nav-link" data-scroll-target="#update">Update</a></li>
   <li><a href="#extract-delete" id="toc-extract-delete" class="nav-link" data-scroll-target="#extract-delete">Extract / Delete</a></li>
   <li><a href="#heapify" id="toc-heapify" class="nav-link" data-scroll-target="#heapify">Heapify</a></li>
   </ul></li>
@@ -634,12 +633,14 @@ window.Quarto = {
 </center>
 <p><br></p>
 <ol start="2" type="1">
-<li><strong>Heapify</strong>: Restore the heap property by swapping the element with its parent until the heap property is satisfied. <br></li>
+<li><strong>Bubble Up (Heapify)</strong>: Restore the heap property by swapping the element with its parent until the heap property is satisfied. <br></li>
 </ol>
 <center>
 <i>Step 2: Heapify (broken down into substeps)</i><br><img style="filter:invert(1)" src="https://media.geeksforgeeks.org/wp-content/uploads/20231108125652/heapify-operations-in-max-heap.png" width="80%">
 </center>
-<p>The heapify operation involves moving the element up the heap (in the case of a max-heap) or down the heap (in the case of a min-heap) until the heap property is satisfied.</p>
+<p>Bubble up is an example of a heapify operation that moves an element up the heap until the heap property is satisfied.</p>
+<p>For a max-heap, the element is moved up the heap until it is greater than or equal to its parent or until it reaches the root.</p>
+<p>For a min-heap, the element is moved up the heap until it is less than or equal to its parent or until it reaches the root.</p>
 <p>The time complexity of inserting an element into a heap is <span class="math inline">\(O(\log n)\)</span>, where <span class="math inline">\(n\)</span> is the number of elements in the heap. Step 1 takes <span class="math inline">\(O(1)\)</span> time, and step 2 (heapify) takes <span class="math inline">\(O(\log n)\)</span> time to go from the leaf to the root.</p>
 <p><br> <br></p>
 </section>
@@ -647,16 +648,9 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="read-peek">Read / Peek</h3>
 <p>Reading or peeking at the root element of a heap involves returning the value of the root element without removing it from the heap.</p>
 </section>
-<section id="update" class="level3">
-<h3 class="anchored" data-anchor-id="update">Update</h3>
-<p>Updating an element in a heap involves the following steps:</p>
-<ol type="1">
-<li><p>Update the element with the new value.</p></li>
-<li><p><strong>Heapify</strong>: Restore the heap property by moving the element up or down the heap until the heap property is satisfied.</p></li>
-</ol>
-</section>
 <section id="extract-delete" class="level3">
 <h3 class="anchored" data-anchor-id="extract-delete">Extract / Delete</h3>
+<p>Deleting from a heap (also known as extracting) always involves removing the root element from the heap.</p>
 <p>Extracting the maximum element from a max-heap or the minimum element from a min-heap involves the following steps:</p>
 <center>
 <img style="filter:invert(1)" width="35%" src="https://media.geeksforgeeks.org/wp-content/uploads/20230901130454/Max-Heap-Data-Structure.png">
@@ -671,7 +665,7 @@ window.Quarto = {
 </center>
 <p><br></p>
 <ol start="3" type="1">
-<li><strong>Heapify</strong>: Restore the heap property by moving the new root element down the heap until the heap property is satisfied.</li>
+<li><strong>Bubble Down</strong>: Restore the heap property by moving the new root element down the heap until the heap property is satisfied.</li>
 </ol>
 <p><br></p>
 <center>
@@ -681,13 +675,57 @@ window.Quarto = {
 </section>
 <section id="heapify" class="level3">
 <h3 class="anchored" data-anchor-id="heapify">Heapify</h3>
-<p>Heapify is an operation that restores the heap property in a heap. It involves moving an element up or down the heap to satisfy the heap property.</p>
+<p>Heapify is an operation that restores the heap property in a heap. It involves moving an element up (bubble up) or down the heap (bubble down) to satisfy the heap property.</p>
 <p>Generally, heapify is used after an insert or extract operation to maintain the heap property.</p>
-<p>Heapify generally starts from the root and moves the element down the heap until the heap property is satisfied.</p>
-<p>In case of a max-heap, heapify involves moving a node down the heap until it is greater than or equal to its children.</p>
+<p><br></p>
+<section id="heapify-type-1-bubble-up" class="level4">
+<h4 class="anchored" data-anchor-id="heapify-type-1-bubble-up">Heapify Type 1: Bubble Up</h4>
+<p>Bubble up is needed after inserting an element into a heap to maintain the heap property. It involves moving the element up the heap until the heap property is satisfied.</p>
+<p>Regardless of the type of heap (max-heap or min-heap), bubble up is fairly simple and consists of the following steps:</p>
+<ol type="1">
+<li>Compare the element with its parent.</li>
+<li>If the element is greater than (in a max-heap) or less than (in a min-heap) its parent, swap the element with its parent.</li>
+<li>Repeat steps 1 and 2 until the heap property is satisfied or until the element reaches the root.</li>
+</ol>
+<p><br></p>
+</section>
+<section id="heapify-type-2-bubble-down" class="level4">
+<h4 class="anchored" data-anchor-id="heapify-type-2-bubble-down">Heapify Type 2: Bubble Down</h4>
+<p>Bubble down is needed after extracting an element from a heap to maintain the heap property. It involves moving an element down the heap until the heap property is satisfied.</p>
+<p>Bubble down is a little more complex than bubble up and consists of the following steps:</p>
+<p>For a <strong>max-heap</strong>:</p>
+<ol start="0" type="1">
+<li>Set current position to 0 (the root).</li>
+<li>Compare the element at current position with its children.</li>
+<li>Swap the element with the larger of its children.</li>
+<li>The new current position is the index of the child that the element was swapped with.</li>
+<li>Repeat steps 1 and 2 until
+<ul>
+<li><p>the heap property is satisfied:</p>
+<p><em>OR</em></p></li>
+<li><p>until the element reaches the last level.</p></li>
+</ul></li>
+</ol>
+<p>For a <strong>min-heap</strong>:</p>
+<ol start="0" type="1">
+<li>Set current position to 0 (the root).</li>
+<li>Compare the element at current position with its children.</li>
+<li>Swap the element with the smaller of its children.</li>
+<li>The new current position is the index of the child that the element was swapped with.</li>
+<li>Repeat steps 1 and 2 until
+<ul>
+<li><p>the heap property is satisfied:</p>
+<p><em>OR</em></p></li>
+<li><p>until the element reaches the last level.</p></li>
+</ul></li>
+</ol>
 <center>
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)">
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6bxwph6auhpuis9ldsb.gif" width="80%" style="filter:invert(1)">
 </center>
+<center>
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--juojkFU_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/" width="80%" style="filter:invert(1)">
+</center>
+</section>
 </section>
 </section>
 <section id="applications" class="level1">

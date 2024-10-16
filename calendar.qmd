@@ -13,25 +13,20 @@ Please note that this is a tentative plan and is subject to change.
 | 5 | Binary Search Trees | [Algorithms Ch. 3](https://algs4.cs.princeton.edu/32bst/) | [BST 1](datastructs/bst.qmd) | [BST 2](datastructs/bst.qmd) | [WA3](https://docs.google.com/document/d/1T_NdCl4588sas--RGvYQWfGr3GK8yVenhq4XtQiXes0/edit?usp=sharing) | [PA 4](https://classroom.github.com/assignment-invitations/d70d28ccafd0d4440faff1716338f777) | 
 
 
-
-<br/>
-<center>_EXAM 1_</center>
-<br/>
-
 | # | TOPIC | READING | MEETING 1 | MEETING 2 | WRITTEN  ASSIGNMENT | PROGRAMMING ASSIGNMENT |
 |---|----|---|---|---|---|---|
-| 5 | Hashmaps | |  |  | | |
 | 6 | Trees | |  |  | | |
 | 7 | Heaps | |  |  | | |
 | 8 | Graphs| |  |  | | |
 
 <br/>
-<center>_EXAM 2_</center>
+<center>_MIDTERM_</center>
 <br/>
 
 
 | # | TOPIC | READING | MEETING 1 | MEETING 2 | WRITTEN  ASSIGNMENT | PROGRAMMING ASSIGNMENT |
 |---|----|---|---|---|---|---|
+| 5 | Hashmaps | |  |  | | |
 | 9 | Backtracking | |  |  | | |
 | 10 | Greedy | |  |  | | |
 | 11 | Dynamic Programming 1 | |  |  | | |
