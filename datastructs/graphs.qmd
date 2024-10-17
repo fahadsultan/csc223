@@ -141,7 +141,7 @@ Consider the same graph as before:
 
 Starting at vertex 0, a BFS traversal would visit the vertices in the order 0, 1, 3, 2.
 
-# Graph Algorithms
+<!-- # Graph Algorithms
 
 Graphs are used to solve a variety of problems, and several algorithms have been developed to work with graphs efficiently. Some common graph algorithms include:
 
@@ -157,4 +157,4 @@ Graphs are used to solve a variety of problems, and several algorithms have been
 
 - **Topological Sorting**: Arranges the vertices of a directed acyclic graph in a linear order.
 
-- **Strongly Connected Components**: Identifies the strongly connected components in a directed graph. 
+- **Strongly Connected Components**: Identifies the strongly connected components in a directed graph.  -->
