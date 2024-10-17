@@ -1,0 +1,67 @@
+---
+title: "Traversals"
+toc: true
+---
+
+## Breadth-First Search (BFS)
+
+BFS for a graph is similar to BFS for a tree. The main difference is that graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.
+
+<center><img src="https://skilled.dev/images/bfs.gif" width="60%" style="filter:invert(1)"></center>
+
+Similar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.
+
+The additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.
+
+<center><img src="https://lh6.googleusercontent.com/fURnjlwT2vEA5qOD0tnqbAIGgRg9LhOjrLTz79syMKZp7HEPCeZkFW2AMYZN1Fo4RI0ENYdSQxwHaRlW66rwwSLC23RLtJs6-ROdZ45ApqqEejqO2KUDgOQosuXayGIrKNyk2l7vnffA8-vBjCkh4j8" width="60%" style="filter:invert(1)"></center>
+
+<br/>
+
+The time complexity of BFS for a graph is $O(V + E)$, where $V$ is the number of vertices and $E$ is the number of edges in the graph.
+
+The space complexity of BFS for a graph is $O(V)$, where $V$ is the number of vertices in the graph.
+
+
+## Depth-First Search (DFS)
+
+DFS is an algorithm that explores as far as possible along each branch before backtracking. 
+
+<center><img src="https://inginious.org/course/competitive-programming/graphs-dfs/dfs.gif" width="80%" style="filter:invert(1)"></center>
+
+<br/>
+
+It uses a stack to keep track of the vertices to visit next. The pseudocode for DFS is as follows:
+
+1. Start at a vertex $v$ and mark it as visited.
+2. Recursively visit all adjacent vertices of $v$ that have not been visited.
+3. Repeat step 2 for each unvisited adjacent vertex.
+
+The time complexity of DFS for a graph is $O(V + E)$, where $V$ is the number of vertices and $E$ is the number of edges in the graph.
+
+## Applications of Graph Traversals
+
+Graph traversals are fundamental algorithms in graph theory and have many applications, including:
+
+- Pathfinding algorithms like Dijkstra's algorithm and A* search algorithm.
+- Network analysis and routing algorithms.
+- Topological sorting algorithms.
+- Detecting cycles in a graph.
+
+## Finding Cycle in a Graph
+
+A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.
+
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/DFS_finding_cycle.gif/320px-DFS_finding_cycle.gif" width="60%" style="filter:invert(1)"></center>
+
+<br/>
+
+To detect cycles in a graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array `visited` to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.
+
+## Finding Connected Components in a Graph
+
+Connected components in a graph are subgraphs in which every pair of vertices is connected by a path. To find connected components in a graph, we can use either Depth-First Search (DFS) or Breadth-First Search (BFS).
+
+<center><img src="https://inginious.org/course/competitive-programming/graphs-undcc/anim.gif" width="60%" style="filter:invert(1)"></center>
+
+The idea is to start a traversal from each unvisited vertex and mark all the vertices reachable from that vertex. The number of times we start a traversal is the number of connected components in the graph.
+

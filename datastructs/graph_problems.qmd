@@ -1,0 +1,13 @@
+---
+title: "Traversals"
+toc: true
+---
+
+# Finding Cycle 
+
+A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.
+
+## Cycle Detection in Directed Graphs
+
+To detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array `visited` to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.
+

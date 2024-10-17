@@ -12,34 +12,9 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 👇🏾 Below, you can find important links and important announcements.
 
 
-<!-- ::: {.callout-caution}
-# Exam 1 
-The first exam is on **Wednesday, October 2nd** from 2:30 - 4:30 PM in the lab. 
-
-Please make sure to bring your laptop and charger. 
-::: -->
-
-::: {.callout-caution}
-# Programming Assignment 4
-[PA 4](https://classroom.github.com/a/HaJCh0Jz) is now due on <b><u>Friday, Oct 11th, 2024 11:59 PM</b></u>.
-:::
-
-
-::: {.callout-caution}
-# Written Assignment 3
-[WA3](https://docs.google.com/document/d/1T_NdCl4588sas--RGvYQWfGr3GK8yVenhq4XtQiXes0/edit?usp=sharing) is now due on <b><u>Friday, Oct 11th, 2024 11:59 PM</b></u>.
-:::
-
-
-::: {.callout-caution}
-# Programming Assignment 5
-[PA 5](https://classroom.github.com/a/-u7dmMCa) is due on <b><u>Wednesday, Oct 16th, 2024 2:30 PM</b></u>.
-:::
-
-
 ::: {.callout-caution}
 # Programming Assignment 6
-[PA 4](https://classroom.github.com/a/K7_4WB3Y) is due before the midterm on <b><u>Friday, Oct 23rd, 2024 2:30 PM</b></u>.
+[PA 4](https://classroom.github.com/a/K7_4WB3Y) is due before the midterm on <b><u>Wednesday, Oct 23rd, 2024 2:30 PM</b></u>.
 :::
 
 ::: {.callout-caution}

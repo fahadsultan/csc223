@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n6\nTrees\n\n\n\n\n\n\n\n7\nHeaps\n\n\n\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n\n\n\nMIDTERM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n5\nHashmaps\n\n\n\n\n\n\n\n9\nBacktracking\n\n\n\n\n\n\n\n10\nGreedy\n\n\n\n\n\n\n\n11\nDynamic Programming 1\n\n\n\n\n\n\n\n12\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n6\nArray Representation of Complete Binary Trees\n\n\n\n\nPA5\n\n\n7\nHeaps\n\n\n\n\nPA6\n\n\n\n\n\nMIDTERM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n9\nHashmaps\n\n\n\n\n\n\n\n10\nBacktracking\n\n\n\n\n\n\n\n11\nGreedy\n\n\n\n\n\n\n\n12\nDynamic Programming 1\n\n\n\n\n\n\n\n13\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -192,7 +192,7 @@
     "href": "syllabus/grading.html",
     "title": "Grading",
     "section": "",
-    "text": "Component\nPercentage\n\n\n\n\nClass Participation \\(^1\\)\n10%\n\n\nWritten Assignments\n10%\n\n\nLabs / Programming Assignments \\(^2\\)\n20%\n\n\nExam 1\n10%\n\n\nExam 2\n20%\n\n\nFinal (Cumulative)\n30%\n\n\n\n\\(^1\\) Details in Introduction\n\\(^2\\) Labs / Programming assignments will only be graded in-person in my office or in the lab, within 10 calendar days of them being posted.\nUse this link to schedule a time to get your assignments graded.\n\n\n\n(+/- at instructor’s discretion)\n\n\n\nLetter Grade\nRange\n\n\n\n\nA\n&gt; 90 %\n\n\nB\n80 - 90 %\n\n\nC\n70 - 80 %\n\n\nD\n60 - 70 %\n\n\nF\n&lt; 60 %\n\n\n\n\n\n\nIn order to pass this class, you must 1. Earn \\(\\geq\\) 60% of the total points 2. Attend \\(\\geq\\) 80% of the lectures and labs. 3. Submit \\(\\geq\\) 80% of written and programmming assignments. 4. Take ALL tests and final!\nIn other words, you cannot blow off an entire aspect of the course and pass this class!\nNote that this basic requirement is necessary but not sufficient to pass the class.",
+    "text": "Component\nPercentage\n\n\n\n\nClass Participation \\(^1\\)\n10%\n\n\nWritten Assignments\n10%\n\n\nLabs / Programming Assignments \\(^2\\)\n20%\n\n\nMidterm\n25%\n\n\nFinal (Cumulative)\n35%\n\n\n\nPreviously:\n\n\n\nComponent\nPercentage\n\n\n\n\nClass Participation \\(^1\\)\n10%\n\n\nWritten Assignments\n10%\n\n\nLabs / Programming Assignments \\(^2\\)\n20%\n\n\nExam 1\n10%\n\n\nExam 2 Midterm\n20%\n\n\nFinal (Cumulative)\n30%\n\n\n\n\\(^1\\) Details in Introduction\n\\(^2\\) Labs / Programming assignments will only be graded in-person in my office or in the lab, within 10 calendar days of them being posted.\nUse this link to schedule a time to get your assignments graded.\n\n\n\n(+/- at instructor’s discretion)\n\n\n\nLetter Grade\nRange\n\n\n\n\nA\n&gt; 90 %\n\n\nB\n80 - 90 %\n\n\nC\n70 - 80 %\n\n\nD\n60 - 70 %\n\n\nF\n&lt; 60 %\n\n\n\n\n\n\nIn order to pass this class, you must 1. Earn \\(\\geq\\) 60% of the total points 2. Attend \\(\\geq\\) 80% of the lectures and labs. 3. Submit \\(\\geq\\) 80% of written and programmming assignments. 4. Take ALL tests and final!\nIn other words, you cannot blow off an entire aspect of the course and pass this class!\nNote that this basic requirement is necessary but not sufficient to pass the class.",
     "crumbs": [
       "Grading"
     ]
@@ -202,7 +202,7 @@
     "href": "syllabus/grading.html#grade-breakdown",
     "title": "Grading",
     "section": "",
-    "text": "Component\nPercentage\n\n\n\n\nClass Participation \\(^1\\)\n10%\n\n\nWritten Assignments\n10%\n\n\nLabs / Programming Assignments \\(^2\\)\n20%\n\n\nExam 1\n10%\n\n\nExam 2\n20%\n\n\nFinal (Cumulative)\n30%\n\n\n\n\\(^1\\) Details in Introduction\n\\(^2\\) Labs / Programming assignments will only be graded in-person in my office or in the lab, within 10 calendar days of them being posted.\nUse this link to schedule a time to get your assignments graded.",
+    "text": "Component\nPercentage\n\n\n\n\nClass Participation \\(^1\\)\n10%\n\n\nWritten Assignments\n10%\n\n\nLabs / Programming Assignments \\(^2\\)\n20%\n\n\nMidterm\n25%\n\n\nFinal (Cumulative)\n35%\n\n\n\nPreviously:\n\n\n\nComponent\nPercentage\n\n\n\n\nClass Participation \\(^1\\)\n10%\n\n\nWritten Assignments\n10%\n\n\nLabs / Programming Assignments \\(^2\\)\n20%\n\n\nExam 1\n10%\n\n\nExam 2 Midterm\n20%\n\n\nFinal (Cumulative)\n30%\n\n\n\n\\(^1\\) Details in Introduction\n\\(^2\\) Labs / Programming assignments will only be graded in-person in my office or in the lab, within 10 calendar days of them being posted.\nUse this link to schedule a time to get your assignments graded.",
     "crumbs": [
       "Grading"
     ]
@@ -232,9 +232,147 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\n\nProgramming Assignment 4\n\n\n\nPA 4 is now due on Friday, Oct 11th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nWritten Assignment 3\n\n\n\nWA3 is now due on Friday, Oct 11th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nProgramming Assignment 5\n\n\n\nPA 5 is due on Wednesday, Oct 16th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nProgramming Assignment 6\n\n\n\nPA 4 is due before the midterm on Friday, Oct 23rd, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nMidterm Exam\n\n\n\nThe midterm exam is on Wednesday, October 23rd from 2:30 - 4:30 PM in the lab.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 6\n\n\n\nPA 4 is due before the midterm on Wednesday, Oct 23rd, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nMidterm Exam\n\n\n\nThe midterm exam is on Wednesday, October 23rd from 2:30 - 4:30 PM in the lab.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs.html",
+    "href": "datastructs/graphs.html",
+    "title": "Graphs",
+    "section": "",
+    "text": "A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs.html#adjacency-matrix",
+    "href": "datastructs/graphs.html#adjacency-matrix",
+    "title": "Graphs",
+    "section": "Adjacency Matrix",
+    "text": "Adjacency Matrix\nAn adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs.html#adjacency-list",
+    "href": "datastructs/graphs.html#adjacency-list",
+    "title": "Graphs",
+    "section": "Adjacency List",
+    "text": "Adjacency List\nAn adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.\n\n\n\n\nIn an adjacency list:\n\nFor an undirected graph, each edge \\((u, v)\\) is stored twice: once in the list of \\(u\\) and once in the list of \\(v\\).\nFor a directed graph, the edge \\((u, v)\\) is stored only in the list of \\(u\\).\n\nAdjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs.html#depth-first-search-dfs",
+    "href": "datastructs/graphs.html#depth-first-search-dfs",
+    "title": "Graphs",
+    "section": "Depth-First Search (DFS)",
+    "text": "Depth-First Search (DFS)\nDFS is an algorithm that explores as far as possible along each branch before backtracking. It uses a stack to keep track of the vertices to visit next.\n\nDFS Algorithm\n\nStart at a vertex \\(v\\) and mark it as visited.\nRecursively visit all adjacent vertices of \\(v\\) that have not been visited.\nRepeat step 2 for each unvisited adjacent vertex.\n\n\n\nExample of DFS\nConsider the following graph:\n    0 -- 1\n    |    |\n    3 -- 2\n\nStarting at vertex 0, a DFS traversal would visit the vertices in the order 0, 1, 2, 3.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs.html#breadth-first-search-bfs",
+    "href": "datastructs/graphs.html#breadth-first-search-bfs",
+    "title": "Graphs",
+    "section": "Breadth-First Search (BFS)",
+    "text": "Breadth-First Search (BFS)\nBFS is an algorithm that explores all the vertices at the present depth before moving on to the vertices at the next depth. It uses a queue to keep track of the vertices to visit next.\n\nBFS Algorithm\n\nStart at a vertex \\(v\\) and mark it as visited.\nEnqueue \\(v\\) into a queue.\nWhile the queue is not empty, dequeue a vertex \\(u\\) from the queue.\nVisit all unvisited adjacent vertices of \\(u\\) and mark them as visited. Enqueue them into the queue.\n\n\n\nExample of BFS\nConsider the same graph as before:\n    0 -- 1\n    |    |\n    3 -- 2\n\nStarting at vertex 0, a BFS traversal would visit the vertices in the order 0, 1, 3, 2.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_traversals.html",
+    "href": "datastructs/graph_traversals.html",
+    "title": "Traversals",
+    "section": "",
+    "text": "BFS for a graph is similar to BFS for a tree. The main difference is that graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.\n\n\n\nSimilar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.\nThe additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.\n\n\n\n\nThe time complexity of BFS for a graph is \\(O(V + E)\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.\nThe space complexity of BFS for a graph is \\(O(V)\\), where \\(V\\) is the number of vertices in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_traversals.html#breadth-first-search-bfs",
+    "href": "datastructs/graph_traversals.html#breadth-first-search-bfs",
+    "title": "Traversals",
+    "section": "",
+    "text": "BFS for a graph is similar to BFS for a tree. The main difference is that graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.\n\n\n\nSimilar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.\nThe additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.\n\n\n\n\nThe time complexity of BFS for a graph is \\(O(V + E)\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.\nThe space complexity of BFS for a graph is \\(O(V)\\), where \\(V\\) is the number of vertices in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_traversals.html#depth-first-search-dfs",
+    "href": "datastructs/graph_traversals.html#depth-first-search-dfs",
+    "title": "Traversals",
+    "section": "Depth-First Search (DFS)",
+    "text": "Depth-First Search (DFS)\nDFS is an algorithm that explores as far as possible along each branch before backtracking.\n\n\n\n\nIt uses a stack to keep track of the vertices to visit next. The pseudocode for DFS is as follows:\n\nStart at a vertex \\(v\\) and mark it as visited.\nRecursively visit all adjacent vertices of \\(v\\) that have not been visited.\nRepeat step 2 for each unvisited adjacent vertex.\n\nThe time complexity of DFS for a graph is \\(O(V + E)\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_traversals.html#applications-of-graph-traversals",
+    "href": "datastructs/graph_traversals.html#applications-of-graph-traversals",
+    "title": "Traversals",
+    "section": "Applications of Graph Traversals",
+    "text": "Applications of Graph Traversals\nGraph traversals are fundamental algorithms in graph theory and have many applications, including:\n\nPathfinding algorithms like Dijkstra’s algorithm and A* search algorithm.\nNetwork analysis and routing algorithms.\nTopological sorting algorithms.\nDetecting cycles in a graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_traversals.html#finding-cycle-in-a-graph",
+    "href": "datastructs/graph_traversals.html#finding-cycle-in-a-graph",
+    "title": "Traversals",
+    "section": "Finding Cycle in a Graph",
+    "text": "Finding Cycle in a Graph\nA cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.\n\n\n\n\nTo detect cycles in a graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_traversals.html#finding-connected-components-in-a-graph",
+    "href": "datastructs/graph_traversals.html#finding-connected-components-in-a-graph",
+    "title": "Traversals",
+    "section": "Finding Connected Components in a Graph",
+    "text": "Finding Connected Components in a Graph\nConnected components in a graph are subgraphs in which every pair of vertices is connected by a path. To find connected components in a graph, we can use either Depth-First Search (DFS) or Breadth-First Search (BFS).\n\n\n\nThe idea is to start a traversal from each unvisited vertex and mark all the vertices reachable from that vertex. The number of times we start a traversal is the number of connected components in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
     ]
   },
   {
@@ -1712,7 +1850,7 @@
     "href": "basics/abstractions/oop1.html#dot-.-operator",
     "title": "User-defined Types",
     "section": "Dot . operator",
-    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```mqguvqyj https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
+    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```zkmrxpdi https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
   },
   {
     "objectID": "basics/abstractions/oop1.html#methods",
@@ -1807,32 +1945,6 @@
     ]
   },
   {
-    "objectID": "datastructs/heaps.html#operations",
-    "href": "datastructs/heaps.html#operations",
-    "title": "Heaps",
-    "section": "Operations",
-    "text": "Operations\nA heap supports the following operations:\n\nInsert: Insert an element into the heap, maintaining the heap property and the complete binary tree property.\nExtract / Delete: Remove and return the root element of the heap, maintaining the heap property and the complete binary tree property.\nHeap Sort: Sort an array using a heap.\n\n \n\nInsert\nInserting an element into a heap involves the following steps:\n\nAdd the element to the end of the heap, maintaining the complete binary tree property i.e. fill from left to right at the last level.\n\n\nStep 1: Add the element to the end of the heap. Step 2: Heapify\n\n\n\nHeapify: Restore the heap property by swapping the element with its parent until the heap property is satisfied. \n\n\nStep 2: Heapify (broken down into substeps)\n\nThe heapify operation involves moving the element up the heap (in the case of a max-heap) or down the heap (in the case of a min-heap) until the heap property is satisfied.\n \n\n\nRead / Peek\nReading or peeking at the root element of a heap involves returning the value of the root element without removing it from the heap.\n\n\nUpdate\nUpdating an element in a heap involves the following steps:\n\nUpdate the element with the new value.\nHeapify: Restore the heap property by moving the element up or down the heap until the heap property is satisfied.\n\n\n\nExtract / Delete\nExtracting the maximum element from a max-heap or the minimum element from a min-heap involves the following steps:\n\n\n\n\n\nReplace the root element with the last element in the heap (rigthmost element in the last level).\nRemove the last element from the heap.\n\n\nStep 1: Replace the root element with the last element. Step 2: Remove the last node\n\n\n\nHeapify: Restore the heap property by moving the new root element down the heap until the heap property is satisfied.\n\n\n\nStep 3: Heapify (broken down into substeps)\n\n\n\n\nHeapify\nHeapify is an operation that restores the heap property in a heap. It involves moving an element up or down the heap to satisfy the heap property.\nGenerally, heapify is used after an insert or extract operation to maintain the heap property.\nThis is needed because the insert and extract operations focus on a particular path from the leaf to the root, and the heap property may be violated on other paths.\nHeapify generally starts from the root and moves the element down the heap until the heap property is satisfied.\nIn case of a max-heap, heapify involves moving a node down the heap until it is greater than or equal to its children.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Trees",
-      "Heaps"
-    ]
-  },
-  {
-    "objectID": "datastructs/heaps.html#implementation",
-    "href": "datastructs/heaps.html#implementation",
-    "title": "Heaps / Priority Queues",
-    "section": "Implementation",
-    "text": "Implementation\nHeaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:\n\n\n\n\n\nThere are several ways to implement a heap, including using arrays, linked lists, or binary trees.\nHeaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index \\(i\\) are stored at indices \\(2i + 1\\) and \\(2i + 2\\).\n\n\n\n\nNode\nPosition in Array\n\n\n\n\nRoot\n0\n\n\nLeft Child of node at index \\(i\\)\n\\(2i + 1\\)\n\n\nRight Child of node at index \\(i\\)\n\\(2i + 2\\)\n\n\nParent of node at index \\(i\\)\n\\[\\lfloor \\frac{i-1}{2} \\rfloor\\]\n\n\n\n\nThis representation allows for efficient access to the parent and children of a node.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Trees",
-      "Heaps / Priority Queues"
-    ]
-  },
-  {
     "objectID": "datastructs/heaps.html#priority-queues",
     "href": "datastructs/heaps.html#priority-queues",
     "title": "Heaps",
@@ -1856,6 +1968,32 @@
       "DATA STRUCTURES",
       "Trees",
       "Heaps"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_problems.html",
+    "href": "datastructs/graph_problems.html",
+    "title": "Traversals",
+    "section": "",
+    "text": "A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.\n\n\nTo detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_problems.html#cycle-detection-in-directed-graphs",
+    "href": "datastructs/graph_problems.html#cycle-detection-in-directed-graphs",
+    "title": "Traversals",
+    "section": "",
+    "text": "To detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Traversals"
     ]
   },
   {
@@ -2076,79 +2214,6 @@
       "PROGRAMMING, IN JAVA",
       "Operations",
       "Testing in Java"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs.html",
-    "href": "datastructs/graphs.html",
-    "title": "Graphs",
-    "section": "",
-    "text": "A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Graphs"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs.html#adjacency-matrix",
-    "href": "datastructs/graphs.html#adjacency-matrix",
-    "title": "Graphs",
-    "section": "Adjacency Matrix",
-    "text": "Adjacency Matrix\nAn adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Graphs"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs.html#adjacency-list",
-    "href": "datastructs/graphs.html#adjacency-list",
-    "title": "Graphs",
-    "section": "Adjacency List",
-    "text": "Adjacency List\nAn adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.\n\n\n\n\nIn an adjacency list:\n\nFor an undirected graph, each edge \\((u, v)\\) is stored twice: once in the list of \\(u\\) and once in the list of \\(v\\).\nFor a directed graph, the edge \\((u, v)\\) is stored only in the list of \\(u\\).\n\nAdjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Graphs"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs.html#depth-first-search-dfs",
-    "href": "datastructs/graphs.html#depth-first-search-dfs",
-    "title": "Graphs",
-    "section": "Depth-First Search (DFS)",
-    "text": "Depth-First Search (DFS)\nDFS is an algorithm that explores as far as possible along each branch before backtracking. It uses a stack to keep track of the vertices to visit next.\n\nDFS Algorithm\n\nStart at a vertex \\(v\\) and mark it as visited.\nRecursively visit all adjacent vertices of \\(v\\) that have not been visited.\nRepeat step 2 for each unvisited adjacent vertex.\n\n\n\nExample of DFS\nConsider the following graph:\n    0 -- 1\n    |    |\n    3 -- 2\n\nStarting at vertex 0, a DFS traversal would visit the vertices in the order 0, 1, 2, 3.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Graphs"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs.html#breadth-first-search-bfs",
-    "href": "datastructs/graphs.html#breadth-first-search-bfs",
-    "title": "Graphs",
-    "section": "Breadth-First Search (BFS)",
-    "text": "Breadth-First Search (BFS)\nBFS is an algorithm that explores all the vertices at the present depth before moving on to the vertices at the next depth. It uses a queue to keep track of the vertices to visit next.\n\nBFS Algorithm\n\nStart at a vertex \\(v\\) and mark it as visited.\nEnqueue \\(v\\) into a queue.\nWhile the queue is not empty, dequeue a vertex \\(u\\) from the queue.\nVisit all unvisited adjacent vertices of \\(u\\) and mark them as visited. Enqueue them into the queue.\n\n\n\nExample of BFS\nConsider the same graph as before:\n    0 -- 1\n    |    |\n    3 -- 2\n\nStarting at vertex 0, a BFS traversal would visit the vertices in the order 0, 1, 3, 2.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Graphs"
-    ]
-  },
-  {
-    "objectID": "datastructs/heaps.html#array-based-implementation",
-    "href": "datastructs/heaps.html#array-based-implementation",
-    "title": "Heaps / Priority Queues",
-    "section": "Array-based Implementation",
-    "text": "Array-based Implementation\nHeaps can be implemented using arrays or linked lists. The following is an implementation of a max-heap using an array:\n\n\n\n\n\nThere are several ways to implement a heap, including using arrays, linked lists, or binary trees.\nHeaps are commonly implemented using arrays, where the root element is stored at index 0, and the children of the node at index \\(i\\) are stored at indices \\(2i + 1\\) and \\(2i + 2\\).\n\n\n\n\nNode\nPosition in Array\n\n\n\n\nRoot\n0\n\n\nLeft Child of node at index \\(i\\)\n\\(2i + 1\\)\n\n\nRight Child of node at index \\(i\\)\n\\(2i + 2\\)\n\n\nParent of node at index \\(i\\)\n\\[\\lfloor \\frac{i-1}{2} \\rfloor\\]\n\n\n\n\nThis representation allows for efficient access to the parent and children of a node.",
-    "crumbs": [
-      "Home",
-      "DATA STRUCTURES",
-      "Trees",
-      "Heaps / Priority Queues"
     ]
   }
 ]

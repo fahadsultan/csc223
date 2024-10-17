@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hashmaps</title>
+<title>Traversals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -183,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/hashmaps.html">Hashmaps</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs.html">Graphs</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_traversals.html">Traversals</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -437,14 +466,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Traversals</span></a>
   </div>
 </li>
@@ -458,7 +487,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link active">
+  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hashmaps</span></a>
   </div>
 </li>
@@ -498,15 +527,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#breadth-first-search-bfs" id="toc-breadth-first-search-bfs" class="nav-link active" data-scroll-target="#breadth-first-search-bfs">Breadth-First Search (BFS)</a></li>
+  <li><a href="#depth-first-search-dfs" id="toc-depth-first-search-dfs" class="nav-link" data-scroll-target="#depth-first-search-dfs">Depth-First Search (DFS)</a></li>
+  <li><a href="#applications-of-graph-traversals" id="toc-applications-of-graph-traversals" class="nav-link" data-scroll-target="#applications-of-graph-traversals">Applications of Graph Traversals</a></li>
+  <li><a href="#finding-cycle-in-a-graph" id="toc-finding-cycle-in-a-graph" class="nav-link" data-scroll-target="#finding-cycle-in-a-graph">Finding Cycle in a Graph</a></li>
+  <li><a href="#finding-connected-components-in-a-graph" id="toc-finding-connected-components-in-a-graph" class="nav-link" data-scroll-target="#finding-connected-components-in-a-graph">Finding Connected Components in a Graph</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/hashmaps.html">Hashmaps</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs.html">Graphs</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_traversals.html">Traversals</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Hashmaps</h1>
+<h1 class="title">Traversals</h1>
 </div>
 
 
@@ -523,8 +562,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="breadth-first-search-bfs" class="level2">
+<h2 class="anchored" data-anchor-id="breadth-first-search-bfs">Breadth-First Search (BFS)</h2>
+<p>BFS for a graph is similar to BFS for a tree. The main difference is that graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.</p>
+<center>
+<img src="https://skilled.dev/images/bfs.gif" width="60%" style="filter:invert(1)">
+</center>
+<p>Similar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.</p>
+<p>The additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.</p>
+<center>
+<img src="https://lh6.googleusercontent.com/fURnjlwT2vEA5qOD0tnqbAIGgRg9LhOjrLTz79syMKZp7HEPCeZkFW2AMYZN1Fo4RI0ENYdSQxwHaRlW66rwwSLC23RLtJs6-ROdZ45ApqqEejqO2KUDgOQosuXayGIrKNyk2l7vnffA8-vBjCkh4j8" width="60%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<p>The time complexity of BFS for a graph is <span class="math inline">\(O(V + E)\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices and <span class="math inline">\(E\)</span> is the number of edges in the graph.</p>
+<p>The space complexity of BFS for a graph is <span class="math inline">\(O(V)\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices in the graph.</p>
+</section>
+<section id="depth-first-search-dfs" class="level2">
+<h2 class="anchored" data-anchor-id="depth-first-search-dfs">Depth-First Search (DFS)</h2>
+<p>DFS is an algorithm that explores as far as possible along each branch before backtracking.</p>
+<center>
+<img src="https://inginious.org/course/competitive-programming/graphs-dfs/dfs.gif" width="80%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<p>It uses a stack to keep track of the vertices to visit next. The pseudocode for DFS is as follows:</p>
+<ol type="1">
+<li>Start at a vertex <span class="math inline">\(v\)</span> and mark it as visited.</li>
+<li>Recursively visit all adjacent vertices of <span class="math inline">\(v\)</span> that have not been visited.</li>
+<li>Repeat step 2 for each unvisited adjacent vertex.</li>
+</ol>
+<p>The time complexity of DFS for a graph is <span class="math inline">\(O(V + E)\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices and <span class="math inline">\(E\)</span> is the number of edges in the graph.</p>
+</section>
+<section id="applications-of-graph-traversals" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-graph-traversals">Applications of Graph Traversals</h2>
+<p>Graph traversals are fundamental algorithms in graph theory and have many applications, including:</p>
+<ul>
+<li>Pathfinding algorithms like Dijkstra’s algorithm and A* search algorithm.</li>
+<li>Network analysis and routing algorithms.</li>
+<li>Topological sorting algorithms.</li>
+<li>Detecting cycles in a graph.</li>
+</ul>
+</section>
+<section id="finding-cycle-in-a-graph" class="level2">
+<h2 class="anchored" data-anchor-id="finding-cycle-in-a-graph">Finding Cycle in a Graph</h2>
+<p>A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.</p>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/DFS_finding_cycle.gif/320px-DFS_finding_cycle.gif" width="60%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<p>To detect cycles in a graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array <code>visited</code> to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.</p>
+</section>
+<section id="finding-connected-components-in-a-graph" class="level2">
+<h2 class="anchored" data-anchor-id="finding-connected-components-in-a-graph">Finding Connected Components in a Graph</h2>
+<p>Connected components in a graph are subgraphs in which every pair of vertices is connected by a path. To find connected components in a graph, we can use either Depth-First Search (DFS) or Breadth-First Search (BFS).</p>
+<center>
+<img src="https://inginious.org/course/competitive-programming/graphs-undcc/anim.gif" width="60%" style="filter:invert(1)">
+</center>
+<p>The idea is to start a traversal from each unvisited vertex and mark all the vertices reachable from that vertex. The number of times we start a traversal is the number of connected components in the graph.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

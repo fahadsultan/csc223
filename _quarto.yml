@@ -94,7 +94,11 @@ website:
                 - datastructs/binarytree.qmd
                 - datastructs/bst.qmd
                 - datastructs/heaps.qmd
-            - datastructs/graphs.qmd
+            - section: 
+              href: datastructs/graphs.qmd
+              contents:
+                - datastructs/graph_traversals.qmd
+                - datastructs/graph_problems.qmd
             - datastructs/hashmaps.qmd
         - section: 
           href: algos/algos.qmd

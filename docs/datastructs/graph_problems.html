@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hashmaps</title>
+<title>Traversals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/hashmaps.html">Hashmaps</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs.html">Graphs</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_problems.html">Traversals</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -437,11 +437,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
@@ -450,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/graph_problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_problems.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Traversals</span></a>
   </div>
 </li>
@@ -458,7 +458,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link active">
+  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hashmaps</span></a>
   </div>
 </li>
@@ -498,15 +498,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#finding-cycle" id="toc-finding-cycle" class="nav-link active" data-scroll-target="#finding-cycle">Finding Cycle</a>
+  <ul class="collapse">
+  <li><a href="#cycle-detection-in-directed-graphs" id="toc-cycle-detection-in-directed-graphs" class="nav-link" data-scroll-target="#cycle-detection-in-directed-graphs">Cycle Detection in Directed Graphs</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/hashmaps.html">Hashmaps</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs.html">Graphs</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_problems.html">Traversals</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Hashmaps</h1>
+<h1 class="title">Traversals</h1>
 </div>
 
 
@@ -523,8 +532,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="finding-cycle" class="level1">
+<h1>Finding Cycle</h1>
+<p>A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.</p>
+<section id="cycle-detection-in-directed-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="cycle-detection-in-directed-graphs">Cycle Detection in Directed Graphs</h2>
+<p>To detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array <code>visited</code> to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
