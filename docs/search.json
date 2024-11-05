@@ -232,7 +232,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 6\n\n\n\nPA 6 is due before the midterm on Wednesday, Oct 23rd, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nMidterm Exam\n\n\n\nThe midterm exam is on Wednesday, October 23rd from 2:30 - 4:30 PM in the lab.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -242,7 +242,7 @@
     "href": "datastructs/graphs.html",
     "title": "Graphs",
     "section": "",
-    "text": "A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.",
+    "text": "A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.\n\n\n\n\nGraph Terminology\n\nVertex (Node): A fundamental unit of a graph. It represents an entity, such as a city, person, or object.\nEdge: A connection between two vertices. It represents a relationship between the entities represented by the vertices.\nDirected Graph (Digraph): A graph in which the edges have a direction associated with them. The edges are ordered pairs of vertices.\nUndirected Graph: A graph in which the edges do not have a direction associated with them. The edges are unordered pairs of vertices.\nWeighted Graph: A graph in which each edge has an associated weight or cost. The weight can represent distance, time, cost, or any other relevant metric.\n\n\n\n\n\nPath: A sequence of vertices connected by edges. It represents a route from one vertex to another.\nCycle: A path that starts and ends at the same vertex.\nConnected Graph: A graph in which there is a path between every pair of vertices.\nDisconnected Graph: A graph in which there are vertices that are not connected by any path.\n\n\n\n \n\n\n\nDegree of a Vertex: The number of edges incident to a vertex. In a directed graph, the degree is divided into the in-degree (number of incoming edges) and out-degree (number of outgoing edges).\nAdjacency: Two vertices are adjacent if there is an edge connecting them.\nAdjacency Matrix: A matrix representation of a graph in which the rows and columns correspond to vertices, and the entries indicate whether an edge exists between the vertices.\nAdjacency List: A list representation of a graph in which each vertex has a list of adjacent vertices.\n\n\n\nGraph Representation\nThere are two common ways to represent a graph: adjacency matrix and adjacency list.",
     "crumbs": [
       "Home",
       "DATA STRUCTURES",
@@ -2202,6 +2202,188 @@
       "PROGRAMMING, IN JAVA",
       "Operations",
       "Testing in Java"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_implementations.html",
+    "href": "datastructs/graph_implementations.html",
+    "title": "Implementations",
+    "section": "",
+    "text": "There are several ways to implement a graph, each with its own advantages and disadvantages. The choice of implementation depends on the specific requirements of the application, such as the number of vertices and edges, the operations to be performed on the graph, and the memory constraints.\nFour common ways to represent a graph are:\n\n\n\n\n\n\n\n\nRepresentation\nDescription\nSpace Complexity\n\n\n\n\n1. Adjacency Matrix\nA 2D array of size \\(V \\times V\\) where \\(V\\) is the number of vertices in the graph.\n\\(O(V^2)\\)\n\n\n2. Adjacency List\nAn array of lists where each list represents the neighbors of a vertex.\n\\(O(V + E)\\)\n\n\n3. Edge List\nA list of all the edges in the graph.\n\\(O(E)\\)\n\n\n4. Incidence Matrix\nA 2D array of size \\(V \\times E\\) where \\(V\\) is the number of vertices and \\(E\\) is the number of edges.\n\\(O(V \\times E)\\)\n\n\n\n\n\nAn adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.\n\n\n\nAn adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.\n\n\n\n\nIn an adjacency list:\n\nFor an undirected graph, each edge \\((u, v)\\) is stored twice: once in the list of \\(u\\) and once in the list of \\(v\\).\nFor a directed graph, the edge \\((u, v)\\) is stored only in the list of \\(u\\).\n\nAdjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.\n\n\n\nAn edge list is a list of all the edges in the graph. Each edge is represented as a tuple \\((u, v)\\), where \\(u\\) and \\(v\\) are the vertices connected by the edge. For weighted graphs, the tuple can include the weight of the edge.\n\n\n\nEdge lists are useful for algorithms that require iterating over all the edges of the graph.\n\n\n\nAn incidence matrix is a 2D array of size \\(V \\times E\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph. Each row represents a vertex, and each column represents an edge. The matrix elements indicate the incidence of a vertex in an edge.\n\n\n\nIncidence matrices are useful for bipartite graphs and network flow problems.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Implementations"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_implementations.html#adjacency-matrix-1",
+    "href": "datastructs/graph_implementations.html#adjacency-matrix-1",
+    "title": "Implementation",
+    "section": "",
+    "text": "An adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Implementation"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_implementations.html#adjacency-list",
+    "href": "datastructs/graph_implementations.html#adjacency-list",
+    "title": "Implementations",
+    "section": "",
+    "text": "An adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.\n\n\n\n\nIn an adjacency list:\n\nFor an undirected graph, each edge \\((u, v)\\) is stored twice: once in the list of \\(u\\) and once in the list of \\(v\\).\nFor a directed graph, the edge \\((u, v)\\) is stored only in the list of \\(u\\).\n\nAdjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Implementations"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_implementations.html#adjacency-matrix",
+    "href": "datastructs/graph_implementations.html#adjacency-matrix",
+    "title": "Implementations",
+    "section": "",
+    "text": "An adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Implementations"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_implementations.html#edge-list",
+    "href": "datastructs/graph_implementations.html#edge-list",
+    "title": "Implementations",
+    "section": "",
+    "text": "An edge list is a list of all the edges in the graph. Each edge is represented as a tuple \\((u, v)\\), where \\(u\\) and \\(v\\) are the vertices connected by the edge. For weighted graphs, the tuple can include the weight of the edge.\n\n\n\nEdge lists are useful for algorithms that require iterating over all the edges of the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Implementations"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_implementations.html#incidence-matrix",
+    "href": "datastructs/graph_implementations.html#incidence-matrix",
+    "title": "Implementations",
+    "section": "",
+    "text": "An incidence matrix is a 2D array of size \\(V \\times E\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph. Each row represents a vertex, and each column represents an edge. The matrix elements indicate the incidence of a vertex in an edge.\n\n\n\nIncidence matrices are useful for bipartite graphs and network flow problems.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Implementations"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html",
+    "href": "datastructs/graph_paths.html",
+    "title": "Path finding",
+    "section": "",
+    "text": "Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.\nInputs to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.\nOutput is the shortest path between the starting and target vertices.\nFormally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.\nThe length of a path is the sum of the weights of the edges between the vertices in the path.\nGenerally, path finding algorithms can be classified into two categories:\n\nSingle-source Shortest Path Algorithms: These algorithms find the shortest path from a single source vertex to all other vertices in the graph. Examples include Dijkstra’s algorithm and Bellman-Ford algorithm.\nAll-pairs Shortest Path Algorithms: These algorithms find the shortest path between all pairs of vertices in the graph. Examples include Floyd-Warshall algorithm.\n\n\n\nDijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\n\n\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#dijsktras-algorithm",
+    "href": "datastructs/graph_paths.html#dijsktras-algorithm",
+    "title": "Path finding",
+    "section": "",
+    "text": "Dijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\n\n\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#unweighted-graphs",
+    "href": "datastructs/graph_paths.html#unweighted-graphs",
+    "title": "Shortest Path",
+    "section": "",
+    "text": "In an unweighted graph, all edges have the same weight, typically 1.\n\n\nBreadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.\n\n\n\n\nInitialize a queue to store vertices to visit and a set to store visited vertices.\nEnqueue the starting vertex into the queue and mark it as visited.\nWhile the queue is not empty:\n\nDequeue a vertex from the queue.\nFor each neighbor of the dequeued vertex that has not been visited:\n\nEnqueue the neighbor into the queue and mark it as visited.\nRecord the parent of the neighbor (the vertex from which it was reached).\n\n\nOnce the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.\n\n\n\n\nThe time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#unweighted-graphs-breadth-first-search-bfs",
+    "href": "datastructs/graph_paths.html#unweighted-graphs-breadth-first-search-bfs",
+    "title": "Shortest Path",
+    "section": "Unweighted Graphs: Breadth-First Search (BFS)",
+    "text": "Unweighted Graphs: Breadth-First Search (BFS)\nIn an unweighted graph, all edges have the same weight, typically 1.\nBreadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.\n\nAlgorithm Steps\n\nInitialize a queue to store vertices to visit and a set to store visited vertices.\nEnqueue the starting vertex into the queue and mark it as visited.\nWhile the queue is not empty:\n\nDequeue a vertex from the queue.\nFor each neighbor of the dequeued vertex that has not been visited:\n\nEnqueue the neighbor into the queue and mark it as visited.\nRecord the parent of the neighbor (the vertex from which it was reached).\n\n\nOnce the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.\n\n\n\n\nThe time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#weighted-graphs",
+    "href": "datastructs/graph_paths.html#weighted-graphs",
+    "title": "Shortest Path",
+    "section": "Weighted Graphs",
+    "text": "Weighted Graphs",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#unweighted-graphs-bfs",
+    "href": "datastructs/graph_paths.html#unweighted-graphs-bfs",
+    "title": "Shortest Path",
+    "section": "Unweighted Graphs: BFS",
+    "text": "Unweighted Graphs: BFS\nIn an unweighted graph, all edges have the same weight, typically 1.\nBreadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.\n\nAlgorithm Steps\n\nInitialize a queue to store vertices to visit and a set to store visited vertices.\nEnqueue the starting vertex into the queue and mark it as visited.\nWhile the queue is not empty:\n\nDequeue a vertex from the queue.\nFor each neighbor of the dequeued vertex that has not been visited:\n\nEnqueue the neighbor into the queue and mark it as visited.\nRecord the parent of the neighbor (the vertex from which it was reached).\n\n\nOnce the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.\n\n\n\n\nThe time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#positive-weighted-graphs-dijkstras-algorithm",
+    "href": "datastructs/graph_paths.html#positive-weighted-graphs-dijkstras-algorithm",
+    "title": "Shortest Path",
+    "section": "Positive Weighted Graphs: Dijkstra’s Algorithm",
+    "text": "Positive Weighted Graphs: Dijkstra’s Algorithm",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#negative-weighted-graphs-bellman-ford-algorithm",
+    "href": "datastructs/graph_paths.html#negative-weighted-graphs-bellman-ford-algorithm",
+    "title": "Shortest Path",
+    "section": "Negative Weighted Graphs: Bellman-Ford Algorithm",
+    "text": "Negative Weighted Graphs: Bellman-Ford Algorithm\nBellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.\n\nAlgorithm Steps\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\n‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.\nRelax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.\nCheck for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.\n\n\n\n\nThe time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
     ]
   }
 ]

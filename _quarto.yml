@@ -97,7 +97,9 @@ website:
             - section: 
               href: datastructs/graphs.qmd
               contents:
+                - datastructs/graph_implementations.qmd
                 - datastructs/graph_traversals.qmd
+                - datastructs/graph_paths.qmd
                 # - datastructs/graph_problems.qmd
             - datastructs/hashmaps.qmd
         - section: 
