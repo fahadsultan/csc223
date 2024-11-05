@@ -12,16 +12,10 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 👇🏾 Below, you can find important links and important announcements.
 
 
-<!-- ::: {.callout-caution}
-# Programming Assignment 6
-[PA 6](https://classroom.github.com/a/K7_4WB3Y) is due before the midterm on <b><u>Wednesday, Oct 23rd, 2024 2:30 PM</b></u>.
-:::
-
 ::: {.callout-caution}
-# Midterm Exam
-The midterm exam is on **Wednesday, October 23rd** from 2:30 - 4:30 PM in the lab.
-::: -->
-
+# Programming Assignment 7
+[PA 7](https://classroom.github.com/a/BP_UpTlu) is due before the midterm on <b><u>Wednesday, Nov 6th, 2024 2:30 PM</b></u>.
+:::
 
 
 ::: {.callout-tip}

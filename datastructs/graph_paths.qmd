@@ -76,7 +76,7 @@ Bellman-Ford algorithm is a single-source shortest path algorithm that can handl
 1. Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.
 
 2. 'Relax' all edges V-1 times, where V is the number of vertices in the graph.
-
+ 
     Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.
 
 3. Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.

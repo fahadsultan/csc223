@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>graph_paths</title>
+<title>Shortest Path</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -504,15 +504,49 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unweighted-graphs-bfs" id="toc-unweighted-graphs-bfs" class="nav-link active" data-scroll-target="#unweighted-graphs-bfs">Unweighted Graphs: BFS</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-steps" id="toc-algorithm-steps" class="nav-link" data-scroll-target="#algorithm-steps">Algorithm Steps</a></li>
+  </ul></li>
+  <li><a href="#positive-weighted-graphs-dijkstras-algorithm" id="toc-positive-weighted-graphs-dijkstras-algorithm" class="nav-link" data-scroll-target="#positive-weighted-graphs-dijkstras-algorithm">Positive Weighted Graphs: Dijkstra’s Algorithm</a></li>
+  <li><a href="#dijsktras-algorithm" id="toc-dijsktras-algorithm" class="nav-link" data-scroll-target="#dijsktras-algorithm">Dijsktra’s Algorithm</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-steps-1" id="toc-algorithm-steps-1" class="nav-link" data-scroll-target="#algorithm-steps-1">Algorithm Steps</a></li>
+  </ul></li>
+  <li><a href="#negative-weighted-graphs-bellman-ford-algorithm" id="toc-negative-weighted-graphs-bellman-ford-algorithm" class="nav-link" data-scroll-target="#negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-steps-2" id="toc-algorithm-steps-2" class="nav-link" data-scroll-target="#algorithm-steps-2">Algorithm Steps</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/datastructs.html">DATA STRUCTURES</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs.html">Graphs</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_paths.html">Shortest Path</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Shortest Path</h1>
+</div>
 
 
 
-<section id="path-finding" class="level1">
-<h1>Path finding</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.</p>
 <p><strong>Inputs</strong> to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.</p>
 <p><strong>Output</strong> is the shortest path between the starting and target vertices.</p>
@@ -523,12 +557,42 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Single-source Shortest Path Algorithms</strong>: These algorithms find the shortest path from a single source vertex to all other vertices in the graph. Examples include Dijkstra’s algorithm and Bellman-Ford algorithm.</p></li>
 <li><p><strong>All-pairs Shortest Path Algorithms</strong>: These algorithms find the shortest path between all pairs of vertices in the graph. Examples include Floyd-Warshall algorithm.</p></li>
 </ol>
+<section id="unweighted-graphs-bfs" class="level2">
+<h2 class="anchored" data-anchor-id="unweighted-graphs-bfs">Unweighted Graphs: BFS</h2>
+<p>In an unweighted graph, all edges have the same weight, typically 1.</p>
+<p>Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.</p>
+<section id="algorithm-steps" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-steps">Algorithm Steps</h3>
+<ol type="1">
+<li><p>Initialize a queue to store vertices to visit and a set to store visited vertices.</p></li>
+<li><p>Enqueue the starting vertex into the queue and mark it as visited.</p></li>
+<li><p>While the queue is not empty:</p>
+<ul>
+<li>Dequeue a vertex from the queue.</li>
+<li>For each neighbor of the dequeued vertex that has not been visited:
+<ul>
+<li>Enqueue the neighbor into the queue and mark it as visited.</li>
+<li>Record the parent of the neighbor (the vertex from which it was reached).</li>
+</ul></li>
+</ul></li>
+<li><p>Once the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.</p></li>
+</ol>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Algorithm.gif" width="50%" style="filter:invert(1)">
+</center>
+<p>The time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.</p>
+<p>In case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.</p>
+</section>
+</section>
+<section id="positive-weighted-graphs-dijkstras-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="positive-weighted-graphs-dijkstras-algorithm">Positive Weighted Graphs: Dijkstra’s Algorithm</h2>
+</section>
 <section id="dijsktras-algorithm" class="level2">
 <h2 class="anchored" data-anchor-id="dijsktras-algorithm">Dijsktra’s Algorithm</h2>
 <p>Dijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.</p>
 <p><u>A limitation of Dijkstra’s algorithm is that it does not work with negative edge weights</u>.</p>
-<section id="algorithm-steps" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-steps">Algorithm Steps</h3>
+<section id="algorithm-steps-1" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-steps-1">Algorithm Steps</h3>
 <ol type="1">
 <li><p>Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.</p></li>
 <li><p>Create a priority queue to store vertices and their distances from the source vertex.</p></li>
@@ -545,9 +609,25 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" width="50%" style="filter:invert(1)">
 </center>
-
-
 </section>
+</section>
+<section id="negative-weighted-graphs-bellman-ford-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</h2>
+<p>Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.</p>
+<section id="algorithm-steps-2" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-steps-2">Algorithm Steps</h3>
+<ol type="1">
+<li><p>Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.</p></li>
+<li><p>‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.</p>
+<p>Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.</p></li>
+<li><p>Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.</p></li>
+</ol>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Bellman-Ford-example.svg" width="50%" style="filter:invert(1)">
+</center>
+<p>The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.</p>
+
+
 </section>
 </section>
 

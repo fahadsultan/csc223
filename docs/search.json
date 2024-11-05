@@ -232,7 +232,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 7\n\n\n\nPA 7 is due before the midterm on Wednesday, Nov 6th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -2285,9 +2285,9 @@
   {
     "objectID": "datastructs/graph_paths.html",
     "href": "datastructs/graph_paths.html",
-    "title": "Path finding",
+    "title": "Shortest Path",
     "section": "",
-    "text": "Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.\nInputs to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.\nOutput is the shortest path between the starting and target vertices.\nFormally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.\nThe length of a path is the sum of the weights of the edges between the vertices in the path.\nGenerally, path finding algorithms can be classified into two categories:\n\nSingle-source Shortest Path Algorithms: These algorithms find the shortest path from a single source vertex to all other vertices in the graph. Examples include Dijkstra’s algorithm and Bellman-Ford algorithm.\nAll-pairs Shortest Path Algorithms: These algorithms find the shortest path between all pairs of vertices in the graph. Examples include Floyd-Warshall algorithm.\n\n\n\nDijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\n\n\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
+    "text": "Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.\nInputs to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.\nOutput is the shortest path between the starting and target vertices.\nFormally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.\nThe length of a path is the sum of the weights of the edges between the vertices in the path.\nGenerally, path finding algorithms can be classified into two categories:",
     "crumbs": [
       "Home",
       "DATA STRUCTURES",
@@ -2298,9 +2298,9 @@
   {
     "objectID": "datastructs/graph_paths.html#dijsktras-algorithm",
     "href": "datastructs/graph_paths.html#dijsktras-algorithm",
-    "title": "Path finding",
-    "section": "",
-    "text": "Dijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\n\n\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
+    "title": "Shortest Path",
+    "section": "Dijsktra’s Algorithm",
+    "text": "Dijsktra’s Algorithm\nDijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\n\nAlgorithm Steps\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
     "crumbs": [
       "Home",
       "DATA STRUCTURES",
