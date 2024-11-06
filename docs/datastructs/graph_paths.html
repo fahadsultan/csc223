@@ -460,14 +460,37 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Shortest Path</span></a>
   </div>
 </li>
-      </ul>
-  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hashmaps</span></a>
+  <a href="../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Minimum Spanning Trees</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hashmaps</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hashing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/sets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -509,19 +532,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#unweighted-graphs-bfs" id="toc-unweighted-graphs-bfs" class="nav-link active" data-scroll-target="#unweighted-graphs-bfs">Unweighted Graphs: BFS</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-steps" id="toc-algorithm-steps" class="nav-link" data-scroll-target="#algorithm-steps">Algorithm Steps</a></li>
-  </ul></li>
-  <li><a href="#positive-weighted-graphs-dijkstras-algorithm" id="toc-positive-weighted-graphs-dijkstras-algorithm" class="nav-link" data-scroll-target="#positive-weighted-graphs-dijkstras-algorithm">Positive Weighted Graphs: Dijkstra’s Algorithm</a></li>
-  <li><a href="#dijsktras-algorithm" id="toc-dijsktras-algorithm" class="nav-link" data-scroll-target="#dijsktras-algorithm">Dijsktra’s Algorithm</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-steps-1" id="toc-algorithm-steps-1" class="nav-link" data-scroll-target="#algorithm-steps-1">Algorithm Steps</a></li>
-  </ul></li>
-  <li><a href="#negative-weighted-graphs-bellman-ford-algorithm" id="toc-negative-weighted-graphs-bellman-ford-algorithm" class="nav-link" data-scroll-target="#negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-steps-2" id="toc-algorithm-steps-2" class="nav-link" data-scroll-target="#algorithm-steps-2">Algorithm Steps</a></li>
-  </ul></li>
+  <li><a href="#unweighted-graphs-bfs" id="toc-unweighted-graphs-bfs" class="nav-link active" data-scroll-target="#unweighted-graphs-bfs">Unweighted Graphs: BFS</a></li>
+  <li><a href="#positive-weighted-graph-dijsktras-algorithm" id="toc-positive-weighted-graph-dijsktras-algorithm" class="nav-link" data-scroll-target="#positive-weighted-graph-dijsktras-algorithm">Positive Weighted Graph: Dijsktra’s Algorithm</a></li>
+  <li><a href="#negative-weighted-graphs-bellman-ford-algorithm" id="toc-negative-weighted-graphs-bellman-ford-algorithm" class="nav-link" data-scroll-target="#negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</a></li>
   </ul>
 </nav>
     </div>
@@ -561,8 +574,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="unweighted-graphs-bfs">Unweighted Graphs: BFS</h2>
 <p>In an unweighted graph, all edges have the same weight, typically 1.</p>
 <p>Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.</p>
-<section id="algorithm-steps" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-steps">Algorithm Steps</h3>
+<p>The steps of BFS are as follows:</p>
 <ol type="1">
 <li><p>Initialize a queue to store vertices to visit and a set to store visited vertices.</p></li>
 <li><p>Enqueue the starting vertex into the queue and mark it as visited.</p></li>
@@ -578,21 +590,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Once the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.</p></li>
 </ol>
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Algorithm.gif" width="50%" style="filter:invert(1)">
+<img src="https://codeabbey.github.io/data/breadth_first_search_1.gif" width="50%" style="filter:invert(1)">
 </center>
 <p>The time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.</p>
 <p>In case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.</p>
 </section>
-</section>
-<section id="positive-weighted-graphs-dijkstras-algorithm" class="level2">
-<h2 class="anchored" data-anchor-id="positive-weighted-graphs-dijkstras-algorithm">Positive Weighted Graphs: Dijkstra’s Algorithm</h2>
-</section>
-<section id="dijsktras-algorithm" class="level2">
-<h2 class="anchored" data-anchor-id="dijsktras-algorithm">Dijsktra’s Algorithm</h2>
+<section id="positive-weighted-graph-dijsktras-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="positive-weighted-graph-dijsktras-algorithm">Positive Weighted Graph: Dijsktra’s Algorithm</h2>
 <p>Dijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.</p>
 <p><u>A limitation of Dijkstra’s algorithm is that it does not work with negative edge weights</u>.</p>
-<section id="algorithm-steps-1" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-steps-1">Algorithm Steps</h3>
+<p>The steps of Dijkstra’s algorithm are as follows:</p>
 <ol type="1">
 <li><p>Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.</p></li>
 <li><p>Create a priority queue to store vertices and their distances from the source vertex.</p></li>
@@ -607,15 +614,13 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" width="50%" style="filter:invert(1)">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" width="40%" style="filter:invert(1)">
 </center>
-</section>
 </section>
 <section id="negative-weighted-graphs-bellman-ford-algorithm" class="level2">
 <h2 class="anchored" data-anchor-id="negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</h2>
 <p>Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.</p>
-<section id="algorithm-steps-2" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-steps-2">Algorithm Steps</h3>
+<p>The steps of the Bellman-Ford algorithm are as follows:</p>
 <ol type="1">
 <li><p>Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.</p></li>
 <li><p>‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.</p>
@@ -623,12 +628,11 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.</p></li>
 </ol>
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Bellman-Ford-example.svg" width="50%" style="filter:invert(1)">
+<img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)">
 </center>
 <p>The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

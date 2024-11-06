@@ -1,0 +1,63 @@
+---
+title: "Minimum Spanning Trees"
+toc: true
+---
+
+A **minimum spanning tree (MST)** of a connected, undirected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight.
+
+## Kruskal's Algorithm
+
+Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.
+
+### Algorithm Steps
+
+1. Sort all the edges in non-decreasing order of their weight.
+
+2. Initialize an empty graph to store the MST.
+
+3. For each edge in the sorted list of edges:
+    - If adding the edge does not form a cycle in the MST, add it to the MST.
+
+4. Repeat step 3 until there are V-1 edges in the MST, where V is the number of vertices in the graph.
+
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/KruskalDemo.gif" width="50%" style="filter:invert(1)">
+    <figcaption>Kruskal's Algorithm Visualization</figcaption>
+</figure>
+
+The time complexity of Kruskal's algorithm is O(E log E), where E is the number of edges in the graph.
+
+## Prim's Algorithm
+
+Prim's algorithm is another greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by starting at an arbitrary vertex and adding the next smallest edge that connects a vertex in the MST to a vertex outside the MST.
+
+### Algorithm Steps
+
+1. Initialize an empty graph to store the MST and a set to store visited vertices.
+
+2. Choose an arbitrary starting vertex and add it to the MST.
+
+3. While there are fewer than V vertices in the MST, where V is the number of vertices in the graph:
+    - Find the minimum-weight edge that connects a vertex in the MST to a vertex outside the MST.
+    - Add the edge and the new vertex to the MST.
+
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" width="50%" style="filter:invert(1)">
+    <figcaption>Prim's Algorithm Visualization</figcaption>
+</figure>
+
+The time complexity of Prim's algorithm is O(V^2) with an adjacency matrix representation and O(E log V) with an adjacency list representation, where V is the number of vertices and E is the number of edges in the graph.
+
+## Applications of Minimum Spanning Trees
+
+- **Network Design**: Finding the minimum cost network that connects all the nodes.
+
+- **Cluster Analysis**: Grouping related data points together based on similarity.
+
+- **Approximate Solutions**: Providing near-optimal solutions to complex optimization problems. 
+
+- **Image Segmentation**: Dividing an image into regions based on pixel similarity.
+
+- **Circuit Design**: Designing circuits with minimum wire length.
+
+- **Routing Algorithms**: Finding the shortest path in a network.

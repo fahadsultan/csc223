@@ -100,8 +100,11 @@ website:
                 - datastructs/graph_implementations.qmd
                 - datastructs/graph_traversals.qmd
                 - datastructs/graph_paths.qmd
-                # - datastructs/graph_problems.qmd
-            - datastructs/hashmaps.qmd
+                - datastructs/graphs_spanning.qmd
+            - section: datastructs/hashmaps.qmd
+              contents:
+                - datastructs/hash.qmd
+                - datastructs/sets.qmd
         - section: 
           href: algos/algos.qmd
           contents:
