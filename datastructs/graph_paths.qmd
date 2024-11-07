@@ -5,6 +5,8 @@ toc: true
 
 Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra's algorithm, A* search, and Floyd-Warshall algorithm.
 
+<center><img src="https://miro.medium.com/v2/resize:fit:1400/1*aW9WuI3Oswg0u0C9wXGK6Q.jpeg" width="70%" style="filter:invert(1)"></center>
+
 **Inputs** to path finding algorithms typically include: a graph, a starting vertex, and a target vertex. 
 
 **Output** is the shortest path between the starting and target vertices.
@@ -13,39 +15,20 @@ Formally, a path is a sequence of vertices in a graph such that each vertex is a
 
 The <u>length of a path</u> is the sum of the weights of the edges between the vertices in the path.
 
+
 Generally, path finding algorithms can be classified into two categories:
 
 1. **Single-source Shortest Path Algorithms**: These algorithms find the shortest path from a single source vertex to all other vertices in the graph. Examples include Dijkstra's algorithm and Bellman-Ford algorithm.
 
 2. **All-pairs Shortest Path Algorithms**: These algorithms find the shortest path between all pairs of vertices in the graph. Examples include Floyd-Warshall algorithm.
 
-## Unweighted Graphs: BFS
+## BFS: unweighted graphs
 
 In an unweighted graph, all edges have the same weight, typically 1.
 
-Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.
-
-The steps of BFS are as follows:
-
-1. Initialize a queue to store vertices to visit and a set to store visited vertices.
-
-2. Enqueue the starting vertex into the queue and mark it as visited.
-
-3. While the queue is not empty:
-    - Dequeue a vertex from the queue.
-    - For each neighbor of the dequeued vertex that has not been visited:
-        - Enqueue the neighbor into the queue and mark it as visited.
-        - Record the parent of the neighbor (the vertex from which it was reached).
-
-4. Once the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.
-
-<center><img src="https://codeabbey.github.io/data/breadth_first_search_1.gif" width="50%" style="filter:invert(1)"></center>
-
-The time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.
-
 In case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.
 
-## Positive Weighted Graph: Dijsktra's Algorithm
+## Dijsktra's Algorithm: +ve weights
 
 Dijkstra's algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph. 
 
@@ -65,7 +48,7 @@ The steps of Dijkstra's algorithm are as follows:
 
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" width="40%" style="filter:invert(1)"></center>
 
-## Negative Weighted Graphs: Bellman-Ford Algorithm
+## Bellman-Ford Algorithm: -ve weights
 
 Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.
 

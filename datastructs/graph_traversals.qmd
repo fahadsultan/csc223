@@ -5,15 +5,52 @@ toc: true
 
 ## Breadth-First Search (BFS)
 
-BFS for a graph is similar to BFS for a tree. The main difference is that graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.
+Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.
+
+BFS for a graph is similar to BFS for a tree. The main difference is that: 
+
+* nodes in a graph can have multiple parents, whereas nodes in a tree have only one parent. So, we need to keep track of the parent of each node to reconstruct the path from the starting node to the target node.
+
+* trees are acyclic, so we do not need to keep track of visited vertices, whereas graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.
 
 <center><img src="https://skilled.dev/images/bfs.gif" width="60%" style="filter:invert(1)"></center>
+<!-- <center><img src="https://codeabbey.github.io/data/breadth_first_search_1.gif" width="50%" style="filter:invert(1)"></center> -->
+
+The steps of BFS are as follows:
+
+1. Initialize a queue to store vertices to visit and a set to store visited vertices.
+
+2. Enqueue the starting vertex into the queue and mark it as visited.
+
+3. While the queue is not empty:
+    - Dequeue a vertex from the queue.
+    - For each neighbor of the dequeued vertex that has not been visited:
+        - Enqueue the neighbor into the queue and mark it as visited.
+        - Record the parent of the neighbor (the vertex from which it was reached).
+
+4. Once the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153148/BFS-on-Graph.webp" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153145/BFS-on-Graph-2.webp" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153146/BFS-on-Graph-3.webp" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153146/BFS-on-Graph-4.webp" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153147/BFS-on-Graph-5.webp" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153147/BFS-on-Graph-6.webp" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240924153148/BFS-on-Graph-7.webp" width="70%" style="filter:invert(1)">
+</center>
+
+The time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+
+
 
 Similar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.
 
 The additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.
 
 <center><img src="https://lh6.googleusercontent.com/fURnjlwT2vEA5qOD0tnqbAIGgRg9LhOjrLTz79syMKZp7HEPCeZkFW2AMYZN1Fo4RI0ENYdSQxwHaRlW66rwwSLC23RLtJs6-ROdZ45ApqqEejqO2KUDgOQosuXayGIrKNyk2l7vnffA8-vBjCkh4j8" width="60%" style="filter:invert(1)"></center>
+
+
 
 <br/>
 

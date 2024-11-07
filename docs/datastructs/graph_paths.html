@@ -532,9 +532,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#unweighted-graphs-bfs" id="toc-unweighted-graphs-bfs" class="nav-link active" data-scroll-target="#unweighted-graphs-bfs">Unweighted Graphs: BFS</a></li>
-  <li><a href="#positive-weighted-graph-dijsktras-algorithm" id="toc-positive-weighted-graph-dijsktras-algorithm" class="nav-link" data-scroll-target="#positive-weighted-graph-dijsktras-algorithm">Positive Weighted Graph: Dijsktra’s Algorithm</a></li>
-  <li><a href="#negative-weighted-graphs-bellman-ford-algorithm" id="toc-negative-weighted-graphs-bellman-ford-algorithm" class="nav-link" data-scroll-target="#negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</a></li>
+  <li><a href="#bfs-unweighted-graphs" id="toc-bfs-unweighted-graphs" class="nav-link active" data-scroll-target="#bfs-unweighted-graphs">BFS: unweighted graphs</a></li>
+  <li><a href="#dijsktras-algorithm-ve-weights" id="toc-dijsktras-algorithm-ve-weights" class="nav-link" data-scroll-target="#dijsktras-algorithm-ve-weights">Dijsktra’s Algorithm: +ve weights</a></li>
+  <li><a href="#bellman-ford-algorithm--ve-weights" id="toc-bellman-ford-algorithm--ve-weights" class="nav-link" data-scroll-target="#bellman-ford-algorithm--ve-weights">Bellman-Ford Algorithm: -ve weights</a></li>
   </ul>
 </nav>
     </div>
@@ -561,6 +561,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.</p>
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*aW9WuI3Oswg0u0C9wXGK6Q.jpeg" width="70%" style="filter:invert(1)">
+</center>
 <p><strong>Inputs</strong> to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.</p>
 <p><strong>Output</strong> is the shortest path between the starting and target vertices.</p>
 <p>Formally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.</p>
@@ -570,33 +573,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Single-source Shortest Path Algorithms</strong>: These algorithms find the shortest path from a single source vertex to all other vertices in the graph. Examples include Dijkstra’s algorithm and Bellman-Ford algorithm.</p></li>
 <li><p><strong>All-pairs Shortest Path Algorithms</strong>: These algorithms find the shortest path between all pairs of vertices in the graph. Examples include Floyd-Warshall algorithm.</p></li>
 </ol>
-<section id="unweighted-graphs-bfs" class="level2">
-<h2 class="anchored" data-anchor-id="unweighted-graphs-bfs">Unweighted Graphs: BFS</h2>
+<section id="bfs-unweighted-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="bfs-unweighted-graphs">BFS: unweighted graphs</h2>
 <p>In an unweighted graph, all edges have the same weight, typically 1.</p>
-<p>Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.</p>
-<p>The steps of BFS are as follows:</p>
-<ol type="1">
-<li><p>Initialize a queue to store vertices to visit and a set to store visited vertices.</p></li>
-<li><p>Enqueue the starting vertex into the queue and mark it as visited.</p></li>
-<li><p>While the queue is not empty:</p>
-<ul>
-<li>Dequeue a vertex from the queue.</li>
-<li>For each neighbor of the dequeued vertex that has not been visited:
-<ul>
-<li>Enqueue the neighbor into the queue and mark it as visited.</li>
-<li>Record the parent of the neighbor (the vertex from which it was reached).</li>
-</ul></li>
-</ul></li>
-<li><p>Once the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.</p></li>
-</ol>
-<center>
-<img src="https://codeabbey.github.io/data/breadth_first_search_1.gif" width="50%" style="filter:invert(1)">
-</center>
-<p>The time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.</p>
 <p>In case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.</p>
 </section>
-<section id="positive-weighted-graph-dijsktras-algorithm" class="level2">
-<h2 class="anchored" data-anchor-id="positive-weighted-graph-dijsktras-algorithm">Positive Weighted Graph: Dijsktra’s Algorithm</h2>
+<section id="dijsktras-algorithm-ve-weights" class="level2">
+<h2 class="anchored" data-anchor-id="dijsktras-algorithm-ve-weights">Dijsktra’s Algorithm: +ve weights</h2>
 <p>Dijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.</p>
 <p><u>A limitation of Dijkstra’s algorithm is that it does not work with negative edge weights</u>.</p>
 <p>The steps of Dijkstra’s algorithm are as follows:</p>
@@ -617,8 +600,8 @@ ul.task-list li input[type="checkbox"] {
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" width="40%" style="filter:invert(1)">
 </center>
 </section>
-<section id="negative-weighted-graphs-bellman-ford-algorithm" class="level2">
-<h2 class="anchored" data-anchor-id="negative-weighted-graphs-bellman-ford-algorithm">Negative Weighted Graphs: Bellman-Ford Algorithm</h2>
+<section id="bellman-ford-algorithm--ve-weights" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford-algorithm--ve-weights">Bellman-Ford Algorithm: -ve weights</h2>
 <p>Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.</p>
 <p>The steps of the Bellman-Ford algorithm are as follows:</p>
 <ol type="1">
