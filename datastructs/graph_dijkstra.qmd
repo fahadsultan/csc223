@@ -1,0 +1,229 @@
+---
+title: "Dijkstra's Algorithm"
+toc: true
+---
+
+Dijkstra's algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph. 
+
+<u>A limitation of Dijkstra's algorithm is that it does not work with negative edge weights</u>.
+
+
+
+## How it Works 
+
+How it works:
+
+1. Set initial distances for all vertices: 0 for the source vertex, and infinity for all the other.
+
+2. Choose the unvisited vertex with the shortest distance from the start to be the current vertex. So the algorithm will always start with the source as the current vertex.
+
+3. For each of the current vertex's unvisited neighbor vertices, calculate the distance from the source and update the distance if the new, calculated, distance is lower.
+
+4. We are now done with the current vertex, so we mark it as visited. A visited vertex is not checked again.
+
+5. Go back to step 2 to choose a new current vertex, and keep repeating these steps until all vertices are visited.
+
+6. In the end we are left with the shortest path from the source vertex to every other vertex in the graph.
+
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" width="40%" style="filter:invert(1)"></center>
+
+## Pseudocode 
+
+The pseudocode of Dijkstra's algorithm are as follows:
+
+1. Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.
+
+2. Create a priority queue to store vertices and their distances from the source vertex.
+
+3. While the priority queue is not empty:
+    - Dequeue the vertex with the minimum distance from the priority queue.
+    - For each neighbor of the dequeued vertex:
+        - Calculate the distance to the neighbor through the dequeued vertex.
+        - If the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.
+
+
+## Example
+
+<center>
+
+### Initial 
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-76.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-78.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-77.png" width="20%" style="filter:invert(1)">
+
+### Visit Node 0
+
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-83.png" width="70%" style="filter:invert(1)">
+
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-90.png" width="30%" style="filter:invert(1)">
+
+<img src="https://cdn-media-0.freecodecamp.org/2020/06/image-90.png" width="30%" style="filter:invert(1)">  -->
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-92.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-87.png" width="70%" style="filter:invert(1)">
+
+<br/>
+
+### Visit Node 1
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-94.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-98.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-93.png" width="70%" style="filter:invert(1)">
+
+
+<!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-96.png" width="70%" style="filter:invert(1)">
+
+<img src="https://cdn-media-0.freecodecamp.org/2020/06/image-99.png" width="30%" style="filter:invert(1)"> -->
+
+<br/>
+
+### Visit Node 2
+
+<br/>
+
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-104.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-101.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-100.png" width="70%" style="filter:invert(1)">
+
+
+
+<!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-103.png" width="70%" style="filter:invert(1)"> -->
+
+<br/>
+
+### Visit Node 3
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-104.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-105.png" width="50%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-106.png" width="70%" style="filter:invert(1)">
+
+<!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-108.png" width="30%" style="filter:invert(1)"> -->
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-107.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-109.png" width="70%" style="filter:invert(1)">
+
+<!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-108.png" width="30%" style="filter:invert(1)"> -->
+
+<br/>
+
+### Visit Node 4
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-112.png" width="70%" style="filter:invert(1)">
+
+<!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-111.png" width="70%" style="filter:invert(1)"> -->
+
+<!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-113.png" width="70%" style="filter:invert(1)"> -->
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-110.png" width="70%" style="filter:invert(1)">
+
+<br/>
+
+### Visit Node 5 and 6
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-115.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-114.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-116.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-140.png" width="30%" style="filter:invert(1)">
+
+
+
+
+
+
+
+</center>
+
+## Implementation 
+
+Here is an implementation of Dijkstra's algorithm in Java:
+
+```java
+// Edge class to represent an edge between two nodes with a weight
+private static class Edge implements Comparable<Edge>{
+    int source;
+    int destination;
+    int weight;
+
+    public Edge(int source, int destination, int weight) {
+        this.source = source;
+        this.destination = destination;
+        this.weight = weight;
+    }
+
+    // Compare edges based on their weight
+    @Override
+    public int compareTo(Edge other) {
+        return Integer.compare(this.weight, other.weight);
+    }
+}
+```
+
+```java
+import java.util.*;
+
+public class GraphAdjacencyList {
+    private int vertices; // Number of vertices
+    private List<List<Edge>> adjacencyList; // Adjacency list for the graph
+
+    public GraphAdjacencyList(int vertices) {
+        this.vertices = vertices;
+        adjacencyList = new ArrayList<>(vertices);
+        for (int i = 0; i < vertices; i++) {
+            adjacencyList.add(new ArrayList<>());
+        }
+    }
+
+    // Add an edge to the graph
+    public void addEdge(int source, int destination, int weight) {
+        adjacencyList.get(source).add(new Edge(source, destination, weight));
+    }
+
+    // Dijkstra's algorithm implementation
+    public int[] dijkstra(int startVertex) {
+        int[] distances = new int[vertices];
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[startVertex] = 0;
+
+        PriorityQueue<Edge> pq = new PriorityQueue<>();
+        pq.add(new Edge(-1, startVertex, 0));
+
+        while (!pq.isEmpty()) {
+            Edge current = pq.poll();
+            int currentVertex = current.destination;
+
+            for (Edge edge : adjacencyList.get(currentVertex)) {
+                int newDist = distances[currentVertex] + edge.weight;
+                if (newDist < distances[edge.destination]) {
+                    distances[edge.destination] = newDist;
+                    pq.add(new Edge(currentVertex, edge.destination, newDist));
+                }
+            }
+        }
+
+        return distances;
+    }
+```

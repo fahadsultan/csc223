@@ -85,26 +85,28 @@ website:
                 - basics/controls/conditionals.qmd
                 - basics/controls/loops.qmd
                 - basics/controls/exceptions.qmd
-        - section: 
-          href: datastructs/datastructs.qmd
+        # - section: 
+        #   href: datastructs/datastructs.qmd
+        #   contents:
+        - section:
+          href: datastructs/trees.qmd
+          contents: 
+            - datastructs/binarytree.qmd
+            - datastructs/bst.qmd
+            - datastructs/heaps.qmd
+        - section: datastructs/graphs.qmd
           contents:
-            - section:
-              href: datastructs/trees.qmd
-              contents: 
-                - datastructs/binarytree.qmd
-                - datastructs/bst.qmd
-                - datastructs/heaps.qmd
-            - section: 
-              href: datastructs/graphs.qmd
+            - datastructs/graph_implementations.qmd
+            - datastructs/graph_traversals.qmd
+            - section: datastructs/graph_paths.qmd
               contents:
-                - datastructs/graph_implementations.qmd
-                - datastructs/graph_traversals.qmd
-                - datastructs/graph_paths.qmd
-                - datastructs/graphs_spanning.qmd
-            - section: datastructs/hashmaps.qmd
-              contents:
-                - datastructs/hash.qmd
-                - datastructs/sets.qmd
+                - datastructs/graph_dijkstra.qmd
+                - datastructs/graphs_bellmanford.qmd
+            - datastructs/graphs_spanning.qmd
+        - section: datastructs/hashmaps.qmd
+          contents:
+            - datastructs/hash.qmd
+            - datastructs/sets.qmd
         - section: 
           href: algos/algos.qmd
           contents:

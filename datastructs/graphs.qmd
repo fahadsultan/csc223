@@ -1,5 +1,5 @@
 ---
-title: "Graphs"
+title: "GRAPHS"
 toc: true
 ---
 

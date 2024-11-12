@@ -1,0 +1,93 @@
+---
+title: "Bellman-Ford Algorithm"
+toc: true
+---
+
+Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.
+
+The steps of the Bellman-Ford algorithm are as follows:
+
+1. Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.
+
+2. 'Relax' all edges V-1 times, where V is the number of vertices in the graph.
+ 
+    Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.
+
+3. Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.
+
+<center><img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)"></center>
+
+The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.
+
+## Implementation
+
+```java
+import java.util.*;
+
+public class GraphAdjacencyList {
+    private int vertices; // Number of vertices
+    private List<List<Edge>> adjacencyList; // Adjacency list for the graph
+
+    // Edge class to represent an edge between two nodes with a weight
+    private static class Edge implements Comparable<Edge>{
+        int source;
+        int destination;
+        int weight;
+
+        public Edge(int source, int destination, int weight) {
+            this.source = source;
+            this.destination = destination;
+            this.weight = weight;
+        }
+
+        // Compare edges based on their weight
+        @Override
+        public int compareTo(Edge other) {
+            return Integer.compare(this.weight, other.weight);
+        }
+    }
+
+    public GraphAdjacencyList(int vertices) {
+        this.vertices = vertices;
+        adjacencyList = new ArrayList<>(vertices);
+        for (int i = 0; i < vertices; i++) {
+            adjacencyList.add(new ArrayList<>());
+        }
+    }
+
+    // Add an edge to the graph
+    public void addEdge(int source, int destination, int weight) {
+        adjacencyList.get(source).add(new Edge(source, destination, weight));
+    }
+
+    // Bellman-Ford algorithm implementation
+    public int[] bellmanFord(int startVertex) throws Exception {
+        int[] distances = new int[vertices];
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[startVertex] = 0;
+
+        // Relax all edges |V| - 1 times
+        for (int i = 0; i < vertices - 1; i++) {
+            for (int u = 0; u < vertices; u++) {
+                for (Edge edge : adjacencyList.get(u)) {
+                    int newDist = distances[u] + edge.weight;
+                    if (distances[u] != Integer.MAX_VALUE && newDist < distances[edge.destination]) {
+                        distances[edge.destination] = newDist;
+                    }
+                }
+            }
+        }
+
+        // Check for negative-weight cycles
+        for (int u = 0; u < vertices; u++) {
+            for (Edge edge : adjacencyList.get(u)) {
+                if (distances[u] != Integer.MAX_VALUE && distances[u] + edge.weight < distances[edge.destination]) {
+                    throw new Exception("Graph contains a negative-weight cycle");
+                }
+            }
+        }
+
+        return distances;
+    }
+``` 
+

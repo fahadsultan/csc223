@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Testing in Java</title>
+<title>Bellman-Ford Algorithm</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,23 +57,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -113,8 +113,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,11 +124,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./calendar.html"> 
+    <a class="nav-link" href="../calendar.html"> 
 <span class="menu-text">Calendar</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -137,41 +137,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
         <li>
-    <a class="dropdown-item" href="./syllabus/about.html">
+    <a class="dropdown-item" href="../syllabus/about.html">
  <span class="dropdown-text">Course Description and Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/grading.html">
+    <a class="dropdown-item" href="../syllabus/grading.html">
  <span class="dropdown-text">Grading</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/academic_success.html">
+    <a class="dropdown-item" href="../syllabus/academic_success.html">
  <span class="dropdown-text">Center for Academic Success</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/textbook.html">
+    <a class="dropdown-item" href="../syllabus/textbook.html">
  <span class="dropdown-text">Textbooks &amp; Other Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/integrity.html">
+    <a class="dropdown-item" href="../syllabus/integrity.html">
  <span class="dropdown-text">Academic Integrity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/mental_health.html">
+    <a class="dropdown-item" href="../syllabus/mental_health.html">
  <span class="dropdown-text">Mental Health Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/accomodations.html">
+    <a class="dropdown-item" href="../syllabus/accomodations.html">
  <span class="dropdown-text">Accomodations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./syllabus/title_9.html">
+    <a class="dropdown-item" href="../syllabus/title_9.html">
  <span class="dropdown-text">Nondiscrimination Policy and Sexual Misconduct</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus/appointment.html"> 
+    <a class="nav-link" href="../syllabus/appointment.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
   <li class="nav-item">
@@ -183,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Github Classroom</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ta.html"> 
+    <a class="nav-link" href="../ta.html"> 
 <span class="menu-text">TA</span></a>
   </li>  
   <li class="nav-item">
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="./basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="./test.html">Testing in Java</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/graphs.html">GRAPHS</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_paths.html">Shortest Path</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs_bellmanford.html">Bellman-Ford Algorithm</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -239,19 +239,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./se/se.html" class="sidebar-item-text sidebar-link">
+            <a href="../se/se.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOFTWARE ENGINEERING</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -260,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
+            <a href="../se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -269,31 +269,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/shell.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/shell.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shell (sh)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/ssh.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secure Shell (ssh)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Individual)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Team)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/version_control/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github (Community)</span></a>
   </div>
 </li>
@@ -301,13 +301,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/tdd.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/tdd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Test Driven Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./se/interview.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/interview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technical Interviews</span></a>
   </div>
 </li>
@@ -315,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics/java.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/java.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PROGRAMMING, IN JAVA</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -324,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abstractions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -333,31 +333,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/data.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Primitive Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fixed-Size Reference Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dynamic-Size Reference Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classes: User Defined Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Interfaces</span></a>
   </div>
 </li>
@@ -365,34 +365,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics/operations/operations.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Operations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Math Operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Built-in Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File I/O</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link active">
+  <a href="../test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing in Java</span></a>
   </div>
 </li>
@@ -400,7 +400,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics/controls/controls.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Flow</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -409,19 +409,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conditionals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/controls/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exception Handling</span></a>
   </div>
 </li>
@@ -431,7 +431,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./datastructs/trees.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TREES</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -440,19 +440,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binary Tree</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/bst.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/bst.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binary Search Tree</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/heaps.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Heaps</span></a>
   </div>
 </li>
@@ -460,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./datastructs/graphs.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GRAPHS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -469,34 +469,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Implementations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Traversals</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./datastructs/graph_paths.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/graph_paths.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shortest Path</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/graph_dijkstra.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_dijkstra.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dijkstra’s Algorithm</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/graphs_bellmanford.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graphs_bellmanford.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Bellman-Ford Algorithm</span></a>
   </div>
 </li>
@@ -504,7 +504,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Minimum Spanning Trees</span></a>
   </div>
 </li>
@@ -512,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HASHMAPS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -521,13 +521,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/hash.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hashing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datastructs/sets.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sets</span></a>
   </div>
 </li>
@@ -535,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./algos/algos.html" class="sidebar-item-text sidebar-link">
+            <a href="../algos/algos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ALGORITHMS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -544,19 +544,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./algos/backtracking.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/backtracking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Backtracking</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./algos/greedy.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/greedy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greedy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./algos/dp.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/dp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dynamic Programming</span></a>
   </div>
 </li>
@@ -572,20 +572,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#unit-testing" id="toc-unit-testing" class="nav-link active" data-scroll-target="#unit-testing">Unit Testing</a>
-  <ul class="collapse">
-  <li><a href="#junit-framework" id="toc-junit-framework" class="nav-link" data-scroll-target="#junit-framework">JUnit Framework</a></li>
-  <li><a href="#running-tests" id="toc-running-tests" class="nav-link" data-scroll-target="#running-tests">Running Tests</a></li>
-  </ul></li>
+  <li><a href="#implementation" id="toc-implementation" class="nav-link active" data-scroll-target="#implementation">Implementation</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="./basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="./test.html">Testing in Java</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/graphs.html">GRAPHS</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_paths.html">Shortest Path</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs_bellmanford.html">Bellman-Ford Algorithm</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Testing in Java</h1>
+<h1 class="title">Bellman-Ford Algorithm</h1>
 </div>
 
 
@@ -602,43 +598,89 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Testing in Java is a crucial part of the development process. It helps to ensure that the code is working as expected and that any changes made to the code do not introduce new bugs. In this section, we will discuss the basics of testing in Java, including unit testing, integration testing, and test-driven development.</p>
-<section id="unit-testing" class="level2">
-<h2 class="anchored" data-anchor-id="unit-testing">Unit Testing</h2>
-<p>Unit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.</p>
-<section id="junit-framework" class="level3">
-<h3 class="anchored" data-anchor-id="junit-framework">JUnit Framework</h3>
-<p>JUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Test</span><span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">static</span><span class="im"> org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Assertions</span><span class="op">.*;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CalculatorTest <span class="op">{</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Test</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">testAddition</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        Calculator calculator <span class="op">=</span> <span class="kw">new</span> <span class="fu">Calculator</span><span class="op">();</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> result <span class="op">=</span> calculator<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">);</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">5</span><span class="op">,</span> result<span class="op">);</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<p>Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.</p>
+<p>The steps of the Bellman-Ford algorithm are as follows:</p>
+<ol type="1">
+<li><p>Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.</p></li>
+<li><p>‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.</p>
+<p>Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.</p></li>
+<li><p>Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.</p></li>
+</ol>
+<center>
+<img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)">
+</center>
+<p>The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.</p>
+<section id="implementation" class="level2">
+<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.*;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> GraphAdjacencyList <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> vertices<span class="op">;</span> <span class="co">// Number of vertices</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">List</span><span class="op">&lt;</span><span class="bu">List</span><span class="op">&lt;</span>Edge<span class="op">&gt;&gt;</span> adjacencyList<span class="op">;</span> <span class="co">// Adjacency list for the graph</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Edge class to represent an edge between two nodes with a weight</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> Edge <span class="kw">implements</span> <span class="bu">Comparable</span><span class="op">&lt;</span>Edge<span class="op">&gt;{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> source<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> destination<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> weight<span class="op">;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Test</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">testSubtraction</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        Calculator calculator <span class="op">=</span> <span class="kw">new</span> <span class="fu">Calculator</span><span class="op">();</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> result <span class="op">=</span> calculator<span class="op">.</span><span class="fu">subtract</span><span class="op">(</span><span class="dv">5</span><span class="op">,</span> <span class="dv">3</span><span class="op">);</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> result<span class="op">);</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In the above example, we have a test class <code>CalculatorTest</code> that contains two test methods <code>testAddition</code> and <code>testSubtraction</code>. Each test method creates an instance of the <code>Calculator</code> class, calls a method on it, and asserts that the result is as expected using the <code>assertEquals</code> method.</p>
-<p>The name of the test class should end with <code>Test</code>, and the test methods should be annotated with <code>@Test</code>. The <code>assertEquals</code> method is used to compare the expected result with the actual result.</p>
-</section>
-<section id="running-tests" class="level3">
-<h3 class="anchored" data-anchor-id="running-tests">Running Tests</h3>
-<p>To run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the <code>java</code> command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> junit-platform-console-standalone-1.8.2.jar <span class="at">--class-path</span> target/test-classes <span class="at">--scan-class-path</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In the above command, <code>junit-platform-console-standalone-1.8.2.jar</code> is the JUnit platform launcher JAR file, <code>target/test-classes</code> is the directory containing the compiled test classes, and <code>--scan-class-path</code> tells</p>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">public</span> <span class="fu">Edge</span><span class="op">(</span><span class="dt">int</span> source<span class="op">,</span> <span class="dt">int</span> destination<span class="op">,</span> <span class="dt">int</span> weight<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">source</span> <span class="op">=</span> source<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">destination</span> <span class="op">=</span> destination<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">weight</span> <span class="op">=</span> weight<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Compare edges based on their weight</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">@Override</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">public</span> <span class="dt">int</span> <span class="fu">compareTo</span><span class="op">(</span>Edge other<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">compare</span><span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">weight</span><span class="op">,</span> other<span class="op">.</span><span class="fu">weight</span><span class="op">);</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">GraphAdjacencyList</span><span class="op">(</span><span class="dt">int</span> vertices<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">vertices</span> <span class="op">=</span> vertices<span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        adjacencyList <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;(</span>vertices<span class="op">);</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vertices<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            adjacencyList<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;());</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Add an edge to the graph</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addEdge</span><span class="op">(</span><span class="dt">int</span> source<span class="op">,</span> <span class="dt">int</span> destination<span class="op">,</span> <span class="dt">int</span> weight<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        adjacencyList<span class="op">.</span><span class="fu">get</span><span class="op">(</span>source<span class="op">).</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Edge</span><span class="op">(</span>source<span class="op">,</span> destination<span class="op">,</span> weight<span class="op">));</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Bellman-Ford algorithm implementation</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">int</span><span class="op">[]</span> <span class="fu">bellmanFord</span><span class="op">(</span><span class="dt">int</span> startVertex<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span><span class="op">[]</span> distances <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span>vertices<span class="op">];</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Arrays</span><span class="op">.</span><span class="fu">fill</span><span class="op">(</span>distances<span class="op">,</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">MAX_VALUE</span><span class="op">);</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        distances<span class="op">[</span>startVertex<span class="op">]</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Relax all edges |V| - 1 times</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vertices <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> u <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> u <span class="op">&lt;</span> vertices<span class="op">;</span> u<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> <span class="op">(</span>Edge edge <span class="op">:</span> adjacencyList<span class="op">.</span><span class="fu">get</span><span class="op">(</span>u<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">int</span> newDist <span class="op">=</span> distances<span class="op">[</span>u<span class="op">]</span> <span class="op">+</span> edge<span class="op">.</span><span class="fu">weight</span><span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="op">(</span>distances<span class="op">[</span>u<span class="op">]</span> <span class="op">!=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">MAX_VALUE</span> <span class="op">&amp;&amp;</span> newDist <span class="op">&lt;</span> distances<span class="op">[</span>edge<span class="op">.</span><span class="fu">destination</span><span class="op">])</span> <span class="op">{</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>                        distances<span class="op">[</span>edge<span class="op">.</span><span class="fu">destination</span><span class="op">]</span> <span class="op">=</span> newDist<span class="op">;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                    <span class="op">}</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Check for negative-weight cycles</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> u <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> u <span class="op">&lt;</span> vertices<span class="op">;</span> u<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span>Edge edge <span class="op">:</span> adjacencyList<span class="op">.</span><span class="fu">get</span><span class="op">(</span>u<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="op">(</span>distances<span class="op">[</span>u<span class="op">]</span> <span class="op">!=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">MAX_VALUE</span> <span class="op">&amp;&amp;</span> distances<span class="op">[</span>u<span class="op">]</span> <span class="op">+</span> edge<span class="op">.</span><span class="fu">weight</span> <span class="op">&lt;</span> distances<span class="op">[</span>edge<span class="op">.</span><span class="fu">destination</span><span class="op">])</span> <span class="op">{</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Exception</span><span class="op">(</span><span class="st">"Graph contains a negative-weight cycle"</span><span class="op">);</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> distances<span class="op">;</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

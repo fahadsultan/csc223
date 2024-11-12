@@ -11,8 +11,7 @@ Please note that this is a tentative plan and is subject to change.
 | 3 | Programming in Java | [Into to Java Ch. 1-4](https://introcs.cs.princeton.edu/java/home/) | [Abstractions 1](basics/abstractions/abstractions.qmd) | [Abstractions 2](basics/abstractions/classes.qmd) | | [PA 2](https://classroom.github.com/a/2iEor66t) |
 | 4 | Binary Trees | | [Trees](datastructs/trees.qmd) | [Binary Trees](datastructs/binarytree.qmd)  | [WA 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) | [PA 3](https://classroom.github.com/a/2iEor66t) | 
 | 5 | Binary Search Trees | [Algorithms Ch. 3](https://algs4.cs.princeton.edu/32bst/) | [BST 1](datastructs/bst.qmd) | [BST 2](datastructs/bst.qmd) | [WA3](https://docs.google.com/document/d/1T_NdCl4588sas--RGvYQWfGr3GK8yVenhq4XtQiXes0/edit?usp=sharing) | [PA 4](https://classroom.github.com/assignment-invitations/d70d28ccafd0d4440faff1716338f777) | 
-| 6 | Array Representation of Complete Binary Trees | |  |  | | [PA5](https://classroom.github.com/a/-u7dmMCa) |
-| 7 | Heaps | |  |  | [WA4](https://docs.google.com/document/d/1yZLFctZgFoyuK0_5f6i5iePVw3UzlFJa2k0JePw40tA/edit?usp=sharing) | [PA6](https://classroom.github.com/a/K7_4WB3Y) |
+| 6 | Heaps |  | [Array based Representation]() | [Extraction + Heapify]() | [WA4](https://docs.google.com/document/d/1yZLFctZgFoyuK0_5f6i5iePVw3UzlFJa2k0JePw40tA/edit?usp=sharing) | [PA5](https://classroom.github.com/a/-u7dmMCa) + [PA6](https://classroom.github.com/a/K7_4WB3Y) |
 
 <br/>
 <center>_MIDTERM_</center>
@@ -21,12 +20,12 @@ Please note that this is a tentative plan and is subject to change.
 
 | # | TOPIC | READING | MEETING 1 | MEETING 2 | WRITTEN  ASSIGNMENT | PROGRAMMING ASSIGNMENT |
 |---|----|---|---|---|---|---|
-| 8 | Graphs| |  |  | | |
+| 7 | Graphs 1 | | [Traversal]() | [Dijkstra]() | | [PA7](https://classroom.github.com/assignment-invitations/2f220d29093a46fb38c3d44b7ef02aea) |
+| 8 | Graphs 2 | | [Bellman Ford]() | [Minimum Spanning Tree]() | | [PA8](https://classroom.github.com/assignment-invitations/baada28e8d4a261d30051162cc1b219c) |
 | 9 | Hashmaps | |  |  | | |
 | 10 | Backtracking | |  |  | | |
 | 11 | Greedy | |  |  | | |
-| 12 | Dynamic Programming 1 | |  |  | | |
-| 13 | Dynamic Programming 2  | |  |  | | |
+| 12 | Dynamic Programming | |  |  | | |
 
 
 <br/>

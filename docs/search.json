@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n6\nArray Representation of Complete Binary Trees\n\n\n\n\nPA5\n\n\n7\nHeaps\n\n\n\nWA4\nPA6\n\n\n\n\n\nMIDTERM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n8\nGraphs\n\n\n\n\n\n\n\n9\nHashmaps\n\n\n\n\n\n\n\n10\nBacktracking\n\n\n\n\n\n\n\n11\nGreedy\n\n\n\n\n\n\n\n12\nDynamic Programming 1\n\n\n\n\n\n\n\n13\nDynamic Programming 2\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n6\nHeaps\n\nArray based Representation\nExtraction + Heapify\nWA4\nPA5 + PA6\n\n\n\n\n\nMIDTERM\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n7\nGraphs 1\n\nTraversal\nDijkstra\n\nPA7\n\n\n8\nGraphs 2\n\nBellman Ford\nMinimum Spanning Tree\n\nPA8\n\n\n9\nHashmaps\n\n\n\n\n\n\n\n10\nBacktracking\n\n\n\n\n\n\n\n11\nGreedy\n\n\n\n\n\n\n\n12\nDynamic Programming\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -240,13 +240,12 @@
   {
     "objectID": "datastructs/graphs.html",
     "href": "datastructs/graphs.html",
-    "title": "Graphs",
+    "title": "GRAPHS",
     "section": "",
     "text": "A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.\n\n\n\n\nGraph Terminology\n\nVertex (Node): A fundamental unit of a graph. It represents an entity, such as a city, person, or object.\nEdge: A connection between two vertices. It represents a relationship between the entities represented by the vertices.\nDirected Graph (Digraph): A graph in which the edges have a direction associated with them. The edges are ordered pairs of vertices.\nUndirected Graph: A graph in which the edges do not have a direction associated with them. The edges are unordered pairs of vertices.\nWeighted Graph: A graph in which each edge has an associated weight or cost. The weight can represent distance, time, cost, or any other relevant metric.\n\n\n\n\n\nPath: A sequence of vertices connected by edges. It represents a route from one vertex to another.\nCycle: A path that starts and ends at the same vertex.\nConnected Graph: A graph in which there is a path between every pair of vertices.\nDisconnected Graph: A graph in which there are vertices that are not connected by any path.\n\n\n\n \n\n\n\nDegree of a Vertex: The number of edges incident to a vertex. In a directed graph, the degree is divided into the in-degree (number of incoming edges) and out-degree (number of outgoing edges).\nAdjacency: Two vertices are adjacent if there is an edge connecting them.\nAdjacency Matrix: A matrix representation of a graph in which the rows and columns correspond to vertices, and the entries indicate whether an edge exists between the vertices.\nAdjacency List: A list representation of a graph in which each vertex has a list of adjacent vertices.\n\n\n\nGraph Representation\nThere are two common ways to represent a graph: adjacency matrix and adjacency list.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs"
+      "GRAPHS"
     ]
   },
   {
@@ -257,8 +256,7 @@
     "text": "A binary search tree (BST) is a binary tree data structure that is used to store data in a sorted order.\nThe binary search tree must at all times satisfy the binary search tree property:\nAs a result of this property, the inorder traversal of a binary search tree will always return the nodes in sorted order.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees",
+      "TREES",
       "Binary Search Tree"
     ]
   },
@@ -270,8 +268,7 @@
     "text": "Operations on Binary Search Trees\nAll operations on a binary search tree have a time complexity of O(h), where h is the height of the tree. h is equal to the number of levels in the tree.\nFor a balanced binary search tree, the height is O(log n), where n is the number of nodes in the tree.\nFor an unbalanced binary search tree, the height is O(n).\n\nSearch\nSearching for a node in a binary search tree is very similar to searching for a value in a sorted array.\n\n\n\n\nDepth First Search (DFS)\nA traversal algorithm that explores as far as possible along each branch before backtracking.\nDepth First Search can be implemented using the following steps:\n\nIf the tree is empty, return False.\nIf the current node is the target node, return True.\nRecursively search the left subtree.\nRecursively search the right subtree.\n\n\n\nBreadth First Search (BFS)\nA traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.\nBreadth First Search can be implemented using the following steps:\n\nIf the tree is empty, return False.\nCreate a queue and add the root node to the queue.\nWhile the queue is not empty, remove the first node from the queue.\n\nIf the current node is the target node, return True.\nAdd the left child of the current node to the queue if it exists.\nAdd the right child of the current node to the queue if it exists.\n\n\n\n\n\nInsertion\n\nAdding a new node to the tree follows the following steps:\n\nIf the tree is empty, create a new node and set it as the root of the tree.\nIf the tree is not empty\n\nCompare the value of the new node with the value of the current node.\nIf the value of the new node is less than the value of the current node, move to the left subtree.\nIf the value of the new node is greater than the value of the current node, move to the right subtree.\nRepeat steps 2.1 to 2.3 until you reach a leaf node.\n\nInsert the new node as the left child if the value of the new node is less than the value of the leaf node, or as the right child if the value of the new node is greater than the value of the leaf node.\n\n\n\n\n\nDeletion\nDeletion of a node in a binary search tree involves the following steps:\n\nIf the tree is empty, return the tree.\nIf the value of the node to be deleted is less than the value of the current node, move to the left subtree.\nIf the value of the node to be deleted is greater than the value of the current node, move to the right subtree.\nIf the value of the node to be deleted is equal to the value of the current node, delete the node.\n\nIf the node has no children, simply delete the node.\nIf the node has one child, replace the node with its child.\nIf the node has two children, find the inorder successor of the node, replace the node with the inorder successor, and delete the inorder successor.\nThe inorder successor is the smallest node in the right subtree of the node to be deleted.\n\n\n\n\nCase 1: Node to be deleted has no children \nCase 2: Node to be deleted has one child \nCase 3: Node to be deleted has two children \n\n\n\nUpdate\nUpdating a node in a binary search tree involves deleting the node and inserting a new node with the updated value.\nThe time complexity of inserting a node in a binary search tree is O(h), where h is the height of the tree.\nThe time complexity of deleting a node in a binary search tree is also O(h), where h is the height of the tree.\nTherefore, the time complexity of updating a node in a binary search tree is O(h).",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees",
+      "TREES",
       "Binary Search Tree"
     ]
   },
@@ -297,8 +294,7 @@
     "text": "Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.\nInputs to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.\nOutput is the shortest path between the starting and target vertices.\nFormally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.\nThe length of a path is the sum of the weights of the edges between the vertices in the path.\nGenerally, path finding algorithms can be classified into two categories:",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Shortest Path"
     ]
   },
@@ -310,8 +306,7 @@
     "text": "BFS: unweighted graphs\nIn an unweighted graph, all edges have the same weight, typically 1.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Shortest Path"
     ]
   },
@@ -323,8 +318,7 @@
     "text": "Dijsktra’s Algorithm: +ve weights\nDijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\nThe steps of Dijkstra’s algorithm are as follows:\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Shortest Path"
     ]
   },
@@ -336,8 +330,7 @@
     "text": "Bellman-Ford Algorithm: -ve weights\nBellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.\nThe steps of the Bellman-Ford algorithm are as follows:\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\n‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.\nRelax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.\nCheck for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.\n\n\n\n\nThe time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Shortest Path"
     ]
   },
@@ -1870,8 +1863,7 @@
     "text": "Binary trees are a type of tree data structure in which each node has at most two children, referred to as the left child and the right child.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees",
+      "TREES",
       "Binary Tree"
     ]
   },
@@ -1883,8 +1875,7 @@
     "text": "Properties of a Binary Tree\nTrees have the following properties:\n\nA tree with \\(n\\) nodes has \\(n-1\\) edges.\nA tree with \\(n\\) nodes has \\(n - 1\\) edges because of its fundamental properties: it is a connected and acyclic graph.\nStarting with a single node and no edges, each additional node requires exactly one edge to connect it to the existing tree, ensuring connectivity without forming cycles. This process continues as the tree grows, with each new node adding exactly one edge. As a result, a tree with \\(n\\) nodes will always have \\(n - 1\\) edges.\n\n\n\nNodes (\\(n\\))\nEdges (\\(n-1\\))\n\n\n\n\n1\n0\n\n\n2\n1\n\n\n3\n2\n\n\n4\n3\n\n\n…\n…\n\n\nn\nn-1\n\n\n\nThis can also be proven by induction, where adding one node to a tree with \\(k\\) nodes (and \\(k - 1\\) edges) leads to \\(k\\) edges.\n\n\n\n\nThe maximum number of nodes at level \\(l\\) of a binary tree is \\(2^l\\)\nHere level is the number of edges from the root to the node. The level of the root is \\(0\\).\n\n\n\nLevel (\\(l\\))\nMaximum Nodes\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n4\n\n\n3\n8\n\n\n…\n…\n\n\n\\(l\\)\n\\(2^l\\)\n\n\n\nEach level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the maximum number of nodes at level \\(l\\) is \\(2^l\\).\n\n\n\n\nA tree with height \\(h\\) has at most \\(2^{h+1} - 1\\) nodes.\nEach level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the total number of nodes in a binary tree of height h is the sum of the nodes at each level, which is given by the formula \\(2^0 + 2^1 + ... + 2^(h-1) = 2^{h+1} -1\\) .\n\n\n\nHeight (\\(h\\))\nMaximum Nodes\n\n\n\n\n0\n1\n\n\n1\n3\n\n\n2\n7\n\n\n3\n15\n\n\n…\n…\n\n\n\\(h\\)\n\\(2^{h+1} - 1\\)\n\n\n\nSome textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the maximum number of nodes in a tree of height h is \\(2^h - 1\\) .\n\n\n\n\nThe height of a binary tree with \\(n\\) nodes is \\(log_2(n+1) - 1\\).\nThe height of a binary tree with \\(n\\) nodes is \\(log(n+1) - 1\\) . This formula calculates the height of a binary tree based on the number of nodes it contains. The height of a binary tree is the length of the longest path from the root to a leaf node. By using the formula \\(log(n+1) - 1\\) , we can determine the height of a binary tree given the number of nodes it contains.\n\n\n\nNodes (\\(n\\))\nHeight\n\n\n\n\n1\n0\n\n\n2\n1\n\n\n3\n1\n\n\n4\n2\n\n\n…\n…\n\n\nn\n\\(log_2(n+1) - 1\\)\n\n\n\nSome textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the height of a binary tree with \\(n\\) nodes is \\(log_2(n) + 1\\) .",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees",
+      "TREES",
       "Binary Tree"
     ]
   },
@@ -1896,8 +1887,7 @@
     "text": "Traversals\nTraversal is the process of visiting each node in the tree in a specific order.\nThere are two main types of tree traversal:\n\nBreadth-First Traversal (BFS): A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.\n\nBreadth-first traversal is also known as level-order traversal.\n\nDepth-First Traversal (DFS): A traversal algorithm that explores as far as possible along each branch before backtracking.\n\nDepth-first traversal includes three types of traversals: preorder, inorder, and postorder.\n\n\n\n\n\n\n\n\n\nLevel Order Traversal (Breath-First Traversal)\nLevel-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.\n\n \n\n\nPsuedocode for level order traversal:\n\n\nCreate a queue and enqueue the root node.\nWhile the queue is not empty:\n2.1. Dequeue a node from the queue.\n2.2. Process the node (e.g., print its value).\n2.3. Enqueue the left child of the node if it exists.\n2.4. Enqueue the right child of the node if it exists.\n\n\n\nThe time complexity of level order traversal is \\(O(n)\\), where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of level order traversal is \\(O(n)\\), where \\(n\\) is the number of nodes in the binary tree.\n\n\n\nPreorder Traversal (DFS: Root-Left-Right)\n\nVisit the root node first, then recursively do a preorder traversal of the left subtree, followed by a preorder traversal of the right subtree.\nThe preorder traversal of a binary tree is a depth-first traversal that visits the root node first, followed by the left subtree and then the right subtree.\nThe pseudocode for preorder traversal is as follows:\n\n\nVisit the root node.\nRecursively do a preorder traversal of the left subtree.\nRecursively do a preorder traversal of the right subtree.\n\n\n\n \n\n\nPreorder traversal has the following applications:\n\nExpression Tree: Preorder traversal is used to convert an infix expression to a prefix expression (also known as Polish notation). e.g., A + B to + A B. Prefix expressions are easier to evaluate using a stack-based algorithm.\nClone a Tree: Preorder traversal is used to clone a binary tree. This is because the root node is visited first, making it easy to create a copy of the tree and connecting the left and right subtrees.\n\n\n\n\nIn-order Traversal (DFS: Left-Root-Right)\n\nIn-order traversal is a depth-first traversal that visits the left subtree first, followed by the root node, and then the right subtree.\n\n \n\n\nThe pseudocode for in-order traversal is as follows:\n\n\nRecursively do an in-order traversal of the left subtree.\nVisit the root node.\nRecursively do an in-order traversal of the right subtree.\n\n\nIn-order traversal has the following applications:\n\nBinary Search Tree (BST): In-order traversal of a BST results in a sorted list of elements. This property is used to find the k-th smallest element in a BST.\nPostfix Expression and Evaluation: In-order traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., A + B to A B +. Postfix expressions are easier to evaluate using a stack-based algorithm.\n\n\n\n\nPost-order Traversal (DFS: Left-Right-Root)\n Recursively do a postorder traversal of the left subtree, followed by a postorder traversal of the right subtree, and then visit the root node.\n\n \n\n\nThe pseudocode for postorder traversal is as follows:\n\n\nRecursively do a postorder traversal of the left subtree.\nRecursively do a postorder traversal of the right subtree.\nVisit the root node.\n\n\nPostorder traversal has the following applications:\n\nExpression Tree: Postorder traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., A + B to A B +. Postfix expressions are easier to evaluate using a stack-based algorithm.\nDelete a Tree: Postorder traversal is used to delete a binary tree. This is because the root node is visited last, making it easy to delete the tree from the leaves up to the root.\n\nPostorder traversal is commonly used in expression trees to evaluate expressions.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees",
+      "TREES",
       "Binary Tree"
     ]
   },
@@ -1909,8 +1899,7 @@
     "text": "Operations\n\nInsertion\nInsertion is the process of adding a new node to the binary tree. The new node is inserted based on the value of the node and the properties of the binary tree.\nThe pseudocode for inserting a node in a binary tree that is not a binary search tree is as follows:\n\n\nCreate a new node with the given value.\nIf the root is null, set the new node as the root.\nElse, perform a level order traversal to find the first node that has an empty left or right child.\nInsert the new node as the left child if the left child is empty, otherwise insert it as the right child.\n\n\nThe time complexity of inserting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of inserting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\n\n\nDeletion\nDeletion is the process of removing a node from the binary tree. The node to be deleted is removed based on the value of the node and the properties of the binary tree.\nThe pseudocode for deleting a node in a binary tree is as follows:\n\n\nFind the node to be deleted using a level order traversal or any other traversal method.\nIf the node has no children, simply remove the node.\nIf the node has one child, replace the node with its child.\nIf the node has two children, find the inorder successor or predecessor of the node.\nReplace the node with the inorder successor or predecessor.\n\n\nThe time complexity of deleting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of deleting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\n\n\nSearching\nSearching is the process of finding a specific node in the binary tree based on its value.\nThe pseudocode for searching a node in a binary tree is as follows:\n\n\nPerform a level order traversal or any other traversal method to search for the node.\nIf the node is found, return the node.\nIf the node is not found, return null.\n\n\nThe time complexity of searching for a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of searching for a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees",
+      "TREES",
       "Binary Tree"
     ]
   },
@@ -1982,73 +1971,67 @@
   {
     "objectID": "datastructs/hashmaps.html",
     "href": "datastructs/hashmaps.html",
-    "title": "Hashmaps",
+    "title": "HASHMAPS",
     "section": "",
     "text": "Hashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table. Hash tables are used in a wide variety of applications, including databases, caching systems, and symbol tables.\n\n\n\n\nHash sets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\n\nTOC {:toc}\n\n\n\nHash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Hashmaps"
+      "HASHMAPS"
     ]
   },
   {
     "objectID": "datastructs/hashmaps.html#hash-table",
     "href": "datastructs/hashmaps.html#hash-table",
-    "title": "Hashmaps",
+    "title": "HASHMAPS",
     "section": "",
     "text": "Hash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Hashmaps"
+      "HASHMAPS"
     ]
   },
   {
     "objectID": "datastructs/trees.html",
     "href": "datastructs/trees.html",
-    "title": "Trees",
+    "title": "TREES",
     "section": "",
     "text": "Trees are one of the most important data structures in computer science. They are a non-linear data structure that store data in a hierarchical manner.\nTrees offer efficient insertion, deletion, and search operations, making them a versatile data structure for a wide range of applications.\nTrees are ubiquitous in computer science and are used for a wide variety of applications, including file systems, parsing languages, and artificial intelligence to plan out strategies and make decisions.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees"
+      "TREES"
     ]
   },
   {
     "objectID": "datastructs/trees.html#terminology",
     "href": "datastructs/trees.html#terminology",
-    "title": "Trees",
+    "title": "TREES",
     "section": "Terminology",
     "text": "Terminology\nThe tree data structure come with a non-trivial amount of terminology. Here are some of the key terms:\n\nNodes: The individual elements in a tree that store data. These are depicted as circles in the diagram. They are very similar to linked list nodes.\nEdges: The connections between nodes. These are depicted as lines in the diagram.\nRoot Node: The topmost node in a tree. It is the only node in the tree that has no parent.\n\n\n\n\n\n\nParent Node: A node that has child nodes. Each node in the tree, except the root node, has exactly one parent node.\nChild Node: A node that is connected to a parent node. Each node in the tree can have zero or more children.\nLeaf: Nodes that have no child nodes. They are the nodes at the bottom of the tree.\nPath: A sequence of nodes connected by edges.\nHeight of a tree: The length of the longest path from the root to a leaf. Length is measured in the number of edges.\nHeight of a node: The length of the longest path from the node to a leaf. Length is measured in the number of edges.\nDepth: The length of the path from the root to a node. Length is measured in the number of edges.\nLevel: The depth of a node in the tree. The root node is at level 0.\nSubtree: A tree that is part of a larger tree. It consists of a node and all its descendants.\nInternal Node: A node that has at least one child node. Essentially, any node that is not a leaf.\nExternal Node: A node that has no child nodes. Essentially, a leaf node.\nSibling: Nodes that share the same parent.\nAncestors of a node: A node that is on the upward path a given node to the root.\nDescendant of a node: A node that is on the path from a given node to a leaf.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees"
+      "TREES"
     ]
   },
   {
     "objectID": "datastructs/trees.html#types-of-trees",
     "href": "datastructs/trees.html#types-of-trees",
-    "title": "Trees",
+    "title": "TREES",
     "section": "Types of Trees",
     "text": "Types of Trees\nThere are many different types of trees, each with its own unique properties and characteristics. Here we are focusing on types of trees based on the number of children each node can have.\nNote that we are going the following mathematical notation for trees:\n\n\\(n\\) to represent the number of nodes in the tree,\n\\(N\\) to represent the maximum number of children each node can have\n\\(h\\) to represent the height of the tree.\n\n\n\n\n\nThe most common types of trees Binary trees that have at most two children per node. Binary trees are further classified into different types based on their properties.\n\n\n\n\nFull Tree\nAn \\(N\\)-ary tree in which every node has either zero or \\(N\\) children.\nComplete Tree\nAn \\(N\\)-ary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.\nDegenerate Tree\nA tree in which each parent node has only one child node. This is essentially a linked list.\nPerfect Tree\nAn \\(N\\)-ary tree in which all interior nodes have \\(N\\) children and all leaves have the same depth or same level.\nBalanced Tree\nA \\(N\\)-ary tree in which the heights of all the subtrees of each node differ by at most one.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees"
+      "TREES"
     ]
   },
   {
     "objectID": "datastructs/trees.html#properties-of-trees",
     "href": "datastructs/trees.html#properties-of-trees",
-    "title": "Trees",
+    "title": "TREES",
     "section": "Properties of Trees",
     "text": "Properties of Trees\nTrees have the following properties:\n\nTree Property: A tree with \\(n\\) nodes has \\(n-1\\) edges.\nThe number of edges in a tree is always one less than the number of nodes.\nThis is because each node, except the root node, has exactly one parent node.\nFull Tree Property: An N-ary tree with height \\(h\\) has at most \\(N^h\\) nodes.\nA full tree is a tree in which each node has exactly \\(N\\) children.\nHeight Property: The height of an N-ary tree with \\(n\\) nodes is \\(\\log_N(n+1) - 1\\).\nThe height of a tree is the length of the longest path from the root to a leaf.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Trees"
+      "TREES"
     ]
   },
   {
@@ -2059,8 +2042,7 @@
     "text": "Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.\nBFS for a graph is similar to BFS for a tree. The main difference is that:\n\nnodes in a graph can have multiple parents, whereas nodes in a tree have only one parent. So, we need to keep track of the parent of each node to reconstruct the path from the starting node to the target node.\ntrees are acyclic, so we do not need to keep track of visited vertices, whereas graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.\n\n\n\n\n\nThe steps of BFS are as follows:\n\nInitialize a queue to store vertices to visit and a set to store visited vertices.\nEnqueue the starting vertex into the queue and mark it as visited.\nWhile the queue is not empty:\n\nDequeue a vertex from the queue.\nFor each neighbor of the dequeued vertex that has not been visited:\n\nEnqueue the neighbor into the queue and mark it as visited.\nRecord the parent of the neighbor (the vertex from which it was reached).\n\n\nOnce the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.\n\n\n      \n\nThe time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.\nSimilar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.\nThe additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.\n\n\n\n\nThe time complexity of BFS for a graph is \\(O(V + E)\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.\nThe space complexity of BFS for a graph is \\(O(V)\\), where \\(V\\) is the number of vertices in the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Traversals"
     ]
   },
@@ -2072,8 +2054,7 @@
     "text": "Breadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.\nBFS for a graph is similar to BFS for a tree. The main difference is that:\n\nnodes in a graph can have multiple parents, whereas nodes in a tree have only one parent. So, we need to keep track of the parent of each node to reconstruct the path from the starting node to the target node.\ntrees are acyclic, so we do not need to keep track of visited vertices, whereas graphs can contain cycles, so we may visit the same vertex again. To avoid processing a vertex more than once, we use a boolean array to mark the visited vertices.\n\n\n\n\n\nThe steps of BFS are as follows:\n\nInitialize a queue to store vertices to visit and a set to store visited vertices.\nEnqueue the starting vertex into the queue and mark it as visited.\nWhile the queue is not empty:\n\nDequeue a vertex from the queue.\nFor each neighbor of the dequeued vertex that has not been visited:\n\nEnqueue the neighbor into the queue and mark it as visited.\nRecord the parent of the neighbor (the vertex from which it was reached).\n\n\nOnce the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.\n\n\n      \n\nThe time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.\nSimilar to BFS for a tree, BFS for a graph uses a Queue internally to keep track of the vertices to visit next.\nThe additional data structure used in BFS for a graph is a boolean array to keep track of visited vertices.\n\n\n\n\nThe time complexity of BFS for a graph is \\(O(V + E)\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.\nThe space complexity of BFS for a graph is \\(O(V)\\), where \\(V\\) is the number of vertices in the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Traversals"
     ]
   },
@@ -2085,8 +2066,7 @@
     "text": "Depth-First Search (DFS)\nDFS is an algorithm that explores as far as possible along each branch before backtracking.\n\n\n\n\nIt uses a stack to keep track of the vertices to visit next. The pseudocode for DFS is as follows:\n\nStart at a vertex \\(v\\) and mark it as visited.\nRecursively visit all adjacent vertices of \\(v\\) that have not been visited.\nRepeat step 2 for each unvisited adjacent vertex.\n\nThe time complexity of DFS for a graph is \\(O(V + E)\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Traversals"
     ]
   },
@@ -2098,8 +2078,7 @@
     "text": "Applications of Graph Traversals\nGraph traversals are fundamental algorithms in graph theory and have many applications, including:\n\nPathfinding algorithms like Dijkstra’s algorithm and A* search algorithm.\nNetwork analysis and routing algorithms.\nTopological sorting algorithms.\nDetecting cycles in a graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Traversals"
     ]
   },
@@ -2111,8 +2090,7 @@
     "text": "Finding Cycle in a Graph\nA cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.\n\n\n\n\nTo detect cycles in a graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Traversals"
     ]
   },
@@ -2124,8 +2102,7 @@
     "text": "Finding Connected Components in a Graph\nConnected components in a graph are subgraphs in which every pair of vertices is connected by a path. To find connected components in a graph, we can use either Depth-First Search (DFS) or Breadth-First Search (BFS).\n\n\n\nThe idea is to start a traversal from each unvisited vertex and mark all the vertices reachable from that vertex. The number of times we start a traversal is the number of connected components in the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Traversals"
     ]
   },
@@ -2137,8 +2114,7 @@
     "text": "There are several ways to implement a graph, each with its own advantages and disadvantages. The choice of implementation depends on the specific requirements of the application, such as the number of vertices and edges, the operations to be performed on the graph, and the memory constraints.\nFour common ways to represent a graph are:\n\n\n\n\n\n\n\n\nRepresentation\nDescription\nSpace Complexity\n\n\n\n\n1. Adjacency Matrix\nA 2D array of size \\(V \\times V\\) where \\(V\\) is the number of vertices in the graph.\n\\(O(V^2)\\)\n\n\n2. Adjacency List\nAn array of lists where each list represents the neighbors of a vertex.\n\\(O(V + E)\\)\n\n\n3. Edge List\nA list of all the edges in the graph.\n\\(O(E)\\)\n\n\n4. Incidence Matrix\nA 2D array of size \\(V \\times E\\) where \\(V\\) is the number of vertices and \\(E\\) is the number of edges.\n\\(O(V \\times E)\\)\n\n\n\n\n\nAn adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.\n\n\n\nAn adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.\n\n\n\n\nIn an adjacency list:\n\nFor an undirected graph, each edge \\((u, v)\\) is stored twice: once in the list of \\(u\\) and once in the list of \\(v\\).\nFor a directed graph, the edge \\((u, v)\\) is stored only in the list of \\(u\\).\n\nAdjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.\n\n\n\nAn edge list is a list of all the edges in the graph. Each edge is represented as a tuple \\((u, v)\\), where \\(u\\) and \\(v\\) are the vertices connected by the edge. For weighted graphs, the tuple can include the weight of the edge.\n\n\n\nEdge lists are useful for algorithms that require iterating over all the edges of the graph.\n\n\n\nAn incidence matrix is a 2D array of size \\(V \\times E\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph. Each row represents a vertex, and each column represents an edge. The matrix elements indicate the incidence of a vertex in an edge.\n\n\n\nIncidence matrices are useful for bipartite graphs and network flow problems.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Implementations"
     ]
   },
@@ -2150,8 +2126,7 @@
     "text": "An adjacency matrix is a 2D array of size \\(V \\times V\\), where \\(V\\) is the number of vertices in the graph. If the value of the matrix element at row \\(i\\) and column \\(j\\) is 1, it indicates an edge between vertices \\(i\\) and \\(j\\). For weighted graphs, the matrix can store the weight of the edge instead of 1.\n\n\n\nThere are two types of adjacency matrices:\n\nUnweighted Graphs: The matrix elements are 0 or 1, indicating the absence or presence of an edge.\nWeighted Graphs: The matrix elements are the weights of the edges.\n\nSimilarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.\nAdjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Implementations"
     ]
   },
@@ -2163,8 +2138,7 @@
     "text": "An adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.\n\n\n\n\nIn an adjacency list:\n\nFor an undirected graph, each edge \\((u, v)\\) is stored twice: once in the list of \\(u\\) and once in the list of \\(v\\).\nFor a directed graph, the edge \\((u, v)\\) is stored only in the list of \\(u\\).\n\nAdjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Implementations"
     ]
   },
@@ -2176,8 +2150,7 @@
     "text": "An edge list is a list of all the edges in the graph. Each edge is represented as a tuple \\((u, v)\\), where \\(u\\) and \\(v\\) are the vertices connected by the edge. For weighted graphs, the tuple can include the weight of the edge.\n\n\n\nEdge lists are useful for algorithms that require iterating over all the edges of the graph.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Implementations"
     ]
   },
@@ -2189,8 +2162,7 @@
     "text": "An incidence matrix is a 2D array of size \\(V \\times E\\), where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph. Each row represents a vertex, and each column represents an edge. The matrix elements indicate the incidence of a vertex in an edge.\n\n\n\nIncidence matrices are useful for bipartite graphs and network flow problems.",
     "crumbs": [
       "Home",
-      "DATA STRUCTURES",
-      "Graphs",
+      "GRAPHS",
       "Implementations"
     ]
   },
@@ -2386,6 +2358,149 @@
       "PROGRAMMING, IN JAVA",
       "Operations",
       "Testing in Java"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#unweighted-graphs-bfs",
+    "href": "datastructs/graph_paths.html#unweighted-graphs-bfs",
+    "title": "Shortest Path",
+    "section": "Unweighted Graphs: BFS",
+    "text": "Unweighted Graphs: BFS\nIn an unweighted graph, all edges have the same weight, typically 1.\nBreadth-first search (BFS) is a graph traversal algorithm that explores all vertices at the current depth before moving to the vertices at the next depth.\n\nAlgorithm Steps\n\nInitialize a queue to store vertices to visit and a set to store visited vertices.\nEnqueue the starting vertex into the queue and mark it as visited.\nWhile the queue is not empty:\n\nDequeue a vertex from the queue.\nFor each neighbor of the dequeued vertex that has not been visited:\n\nEnqueue the neighbor into the queue and mark it as visited.\nRecord the parent of the neighbor (the vertex from which it was reached).\n\n\nOnce the target vertex is reached, reconstruct the path from the starting vertex to the target vertex using the recorded parents.\n\n\n\n\nThe time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#positive-weighted-graphs-dijkstras-algorithm",
+    "href": "datastructs/graph_paths.html#positive-weighted-graphs-dijkstras-algorithm",
+    "title": "Shortest Path",
+    "section": "Positive Weighted Graphs: Dijkstra’s Algorithm",
+    "text": "Positive Weighted Graphs: Dijkstra’s Algorithm",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#dijsktras-algorithm",
+    "href": "datastructs/graph_paths.html#dijsktras-algorithm",
+    "title": "Shortest Path",
+    "section": "Dijsktra’s Algorithm",
+    "text": "Dijsktra’s Algorithm\nDijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.\n\nAlgorithm Steps\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_paths.html#negative-weighted-graphs-bellman-ford-algorithm",
+    "href": "datastructs/graph_paths.html#negative-weighted-graphs-bellman-ford-algorithm",
+    "title": "Shortest Path",
+    "section": "Negative Weighted Graphs: Bellman-Ford Algorithm",
+    "text": "Negative Weighted Graphs: Bellman-Ford Algorithm\nBellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.\n\nAlgorithm Steps\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\n‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.\nRelax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.\nCheck for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.\n\n\n\n\nThe time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.",
+    "crumbs": [
+      "Home",
+      "DATA STRUCTURES",
+      "Graphs",
+      "Shortest Path"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_dijkstra.html",
+    "href": "datastructs/graph_dijkstra.html",
+    "title": "Dijkstra’s Algorithm",
+    "section": "",
+    "text": "Dijkstra’s algorithm is a single-source shortest path algorithm that finds the shortest path from a source vertex to all other vertices in a weighted graph.\nA limitation of Dijkstra’s algorithm is that it does not work with negative edge weights.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Dijkstra's Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_bellmanford.html",
+    "href": "datastructs/graphs_bellmanford.html",
+    "title": "Bellman-Ford Algorithm",
+    "section": "",
+    "text": "Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.\nThe steps of the Bellman-Ford algorithm are as follows:\nThe time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Bellman-Ford Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_dijkstra.html#how-it-works",
+    "href": "datastructs/graph_dijkstra.html#how-it-works",
+    "title": "Dijkstra’s Algorithm",
+    "section": "How it Works",
+    "text": "How it Works\nHow it works:\n\nSet initial distances for all vertices: 0 for the source vertex, and infinity for all the other.\nChoose the unvisited vertex with the shortest distance from the start to be the current vertex. So the algorithm will always start with the source as the current vertex.\nFor each of the current vertex’s unvisited neighbor vertices, calculate the distance from the source and update the distance if the new, calculated, distance is lower.\nWe are now done with the current vertex, so we mark it as visited. A visited vertex is not checked again.\nGo back to step 2 to choose a new current vertex, and keep repeating these steps until all vertices are visited.\nIn the end we are left with the shortest path from the source vertex to every other vertex in the graph.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Dijkstra's Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_dijkstra.html#pseudocode",
+    "href": "datastructs/graph_dijkstra.html#pseudocode",
+    "title": "Dijkstra’s Algorithm",
+    "section": "Pseudocode",
+    "text": "Pseudocode\nThe pseudocode of Dijkstra’s algorithm are as follows:\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\nCreate a priority queue to store vertices and their distances from the source vertex.\nWhile the priority queue is not empty:\n\nDequeue the vertex with the minimum distance from the priority queue.\nFor each neighbor of the dequeued vertex:\n\nCalculate the distance to the neighbor through the dequeued vertex.\nIf the new distance is less than the current distance to the neighbor, update the distance and enqueue the neighbor.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Dijkstra's Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_dijkstra.html#example",
+    "href": "datastructs/graph_dijkstra.html#example",
+    "title": "Dijkstra’s Algorithm",
+    "section": "Example",
+    "text": "Example\n\n\nInitial\n\n\n\n\n\nVisit Node 0\n\n\n\n\n\n\n\nVisit Node 1\n\n\n\n\n\n\n\n\nVisit Node 2\n\n\n\n\n\n\n\n\nVisit Node 3\n\n\n\n\n\n\n\n\n\n\n\nVisit Node 4\n\n\n\n\n\n\n\n\nVisit Node 5 and 6",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Dijkstra's Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graph_dijkstra.html#implementation",
+    "href": "datastructs/graph_dijkstra.html#implementation",
+    "title": "Dijkstra’s Algorithm",
+    "section": "Implementation",
+    "text": "Implementation\nHere is an implementation of Dijkstra’s algorithm in Java:\n// Edge class to represent an edge between two nodes with a weight\nprivate static class Edge implements Comparable&lt;Edge&gt;{\n    int source;\n    int destination;\n    int weight;\n\n    public Edge(int source, int destination, int weight) {\n        this.source = source;\n        this.destination = destination;\n        this.weight = weight;\n    }\n\n    // Compare edges based on their weight\n    @Override\n    public int compareTo(Edge other) {\n        return Integer.compare(this.weight, other.weight);\n    }\n}\nimport java.util.*;\n\npublic class GraphAdjacencyList {\n    private int vertices; // Number of vertices\n    private List&lt;List&lt;Edge&gt;&gt; adjacencyList; // Adjacency list for the graph\n\n    public GraphAdjacencyList(int vertices) {\n        this.vertices = vertices;\n        adjacencyList = new ArrayList&lt;&gt;(vertices);\n        for (int i = 0; i &lt; vertices; i++) {\n            adjacencyList.add(new ArrayList&lt;&gt;());\n        }\n    }\n\n    // Add an edge to the graph\n    public void addEdge(int source, int destination, int weight) {\n        adjacencyList.get(source).add(new Edge(source, destination, weight));\n    }\n\n    // Dijkstra's algorithm implementation\n    public int[] dijkstra(int startVertex) {\n        int[] distances = new int[vertices];\n        Arrays.fill(distances, Integer.MAX_VALUE);\n        distances[startVertex] = 0;\n\n        PriorityQueue&lt;Edge&gt; pq = new PriorityQueue&lt;&gt;();\n        pq.add(new Edge(-1, startVertex, 0));\n\n        while (!pq.isEmpty()) {\n            Edge current = pq.poll();\n            int currentVertex = current.destination;\n\n            for (Edge edge : adjacencyList.get(currentVertex)) {\n                int newDist = distances[currentVertex] + edge.weight;\n                if (newDist &lt; distances[edge.destination]) {\n                    distances[edge.destination] = newDist;\n                    pq.add(new Edge(currentVertex, edge.destination, newDist));\n                }\n            }\n        }\n\n        return distances;\n    }",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Dijkstra's Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_bellmanford.html#implementation",
+    "href": "datastructs/graphs_bellmanford.html#implementation",
+    "title": "Bellman-Ford Algorithm",
+    "section": "Implementation",
+    "text": "Implementation\nimport java.util.*;\n\npublic class GraphAdjacencyList {\n    private int vertices; // Number of vertices\n    private List&lt;List&lt;Edge&gt;&gt; adjacencyList; // Adjacency list for the graph\n\n    // Edge class to represent an edge between two nodes with a weight\n    private static class Edge implements Comparable&lt;Edge&gt;{\n        int source;\n        int destination;\n        int weight;\n\n        public Edge(int source, int destination, int weight) {\n            this.source = source;\n            this.destination = destination;\n            this.weight = weight;\n        }\n\n        // Compare edges based on their weight\n        @Override\n        public int compareTo(Edge other) {\n            return Integer.compare(this.weight, other.weight);\n        }\n    }\n\n    public GraphAdjacencyList(int vertices) {\n        this.vertices = vertices;\n        adjacencyList = new ArrayList&lt;&gt;(vertices);\n        for (int i = 0; i &lt; vertices; i++) {\n            adjacencyList.add(new ArrayList&lt;&gt;());\n        }\n    }\n\n    // Add an edge to the graph\n    public void addEdge(int source, int destination, int weight) {\n        adjacencyList.get(source).add(new Edge(source, destination, weight));\n    }\n\n    // Bellman-Ford algorithm implementation\n    public int[] bellmanFord(int startVertex) throws Exception {\n        int[] distances = new int[vertices];\n        Arrays.fill(distances, Integer.MAX_VALUE);\n        distances[startVertex] = 0;\n\n        // Relax all edges |V| - 1 times\n        for (int i = 0; i &lt; vertices - 1; i++) {\n            for (int u = 0; u &lt; vertices; u++) {\n                for (Edge edge : adjacencyList.get(u)) {\n                    int newDist = distances[u] + edge.weight;\n                    if (distances[u] != Integer.MAX_VALUE && newDist &lt; distances[edge.destination]) {\n                        distances[edge.destination] = newDist;\n                    }\n                }\n            }\n        }\n\n        // Check for negative-weight cycles\n        for (int u = 0; u &lt; vertices; u++) {\n            for (Edge edge : adjacencyList.get(u)) {\n                if (distances[u] != Integer.MAX_VALUE && distances[u] + edge.weight &lt; distances[edge.destination]) {\n                    throw new Exception(\"Graph contains a negative-weight cycle\");\n                }\n            }\n        }\n\n        return distances;\n    }",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Bellman-Ford Algorithm"
     ]
   }
 ]
