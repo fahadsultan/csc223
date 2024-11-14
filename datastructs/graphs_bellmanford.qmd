@@ -3,6 +3,41 @@ title: "Bellman-Ford Algorithm"
 toc: true
 ---
 
+Dijkstra’s algorithm cannot handle negative weights because it assumes that once a node is reached with the shortest possible distance, there’s no need to revisit or update that distance later. This assumption holds true for graphs with only non-negative edge weights but fails when negative weights are present.
+
+To handle graphs with negative weights, the Bellman-Ford algorithm is typically used. The Bellman-Ford algorithm can also be used for graphs with positive edges (both directed and undirected), like we can with Dijkstra's algorithm, but Dijkstra's algorithm is preferred in such cases because it is faster.
+
+
+Unlike Dijkstra’s algorithm, Bellman-Ford doesn’t rely on the greedy process of visiting each node in order of the current shortest known distance. Instead, Bellman-Ford performs multiple passes to “relax” each edge, ensuring that it correctly updates the shortest path distances even in the presence of negative weights. It also detects negative cycles, making it more robust for such cases.
+
+#### Key Insight of Bellman-Ford Algorithm
+
+Worst case scenario the shortest path between two vertices in a graph with V vertices and E edges is V-1 edges. So, we need to relax all edges V-1 times to find the shortest path between two vertices.
+
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175632718977/baleman-fort.webp" width="50%" style="filter:invert(1)"></center>
+
+## Pseudocode
+
+1. Set initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.
+2. For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.
+3. Check all edges (step 2) $V−1$ times. This is as many times as there are vertices ($V$), minus one.
+4. Optional: Check for negative cycles. This will be explained in better detail later.
+
+## Negative Cycles
+
+Using the Bellman-Ford algorithm on a graph with negative cycles will not produce a result of shortest paths because in a negative cycle we can always go one more round and get a shorter path.
+
+A **_negative cycle_** is a path we can follow in circles, where the sum of the edge weights is negative.
+
+Luckily, the Bellman-Ford algorithm can be implemented to safely detect and report the presence of negative cycles.
+
+
+## Pseudocode
+
+The Bellman-Ford algorithm is best suited to find the shortest paths in a directed graph, with one or more negative edge weights, from the source vertex to all other vertices.
+
+It does so by repeatedly checking all the edges in the graph for shorter paths, as many times as there are vertices in the graph (minus 1).
+
 Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.
 
 The steps of the Bellman-Ford algorithm are as follows:
@@ -18,76 +53,3 @@ The steps of the Bellman-Ford algorithm are as follows:
 <center><img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)"></center>
 
 The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.
-
-## Implementation
-
-```java
-import java.util.*;
-
-public class GraphAdjacencyList {
-    private int vertices; // Number of vertices
-    private List<List<Edge>> adjacencyList; // Adjacency list for the graph
-
-    // Edge class to represent an edge between two nodes with a weight
-    private static class Edge implements Comparable<Edge>{
-        int source;
-        int destination;
-        int weight;
-
-        public Edge(int source, int destination, int weight) {
-            this.source = source;
-            this.destination = destination;
-            this.weight = weight;
-        }
-
-        // Compare edges based on their weight
-        @Override
-        public int compareTo(Edge other) {
-            return Integer.compare(this.weight, other.weight);
-        }
-    }
-
-    public GraphAdjacencyList(int vertices) {
-        this.vertices = vertices;
-        adjacencyList = new ArrayList<>(vertices);
-        for (int i = 0; i < vertices; i++) {
-            adjacencyList.add(new ArrayList<>());
-        }
-    }
-
-    // Add an edge to the graph
-    public void addEdge(int source, int destination, int weight) {
-        adjacencyList.get(source).add(new Edge(source, destination, weight));
-    }
-
-    // Bellman-Ford algorithm implementation
-    public int[] bellmanFord(int startVertex) throws Exception {
-        int[] distances = new int[vertices];
-        Arrays.fill(distances, Integer.MAX_VALUE);
-        distances[startVertex] = 0;
-
-        // Relax all edges |V| - 1 times
-        for (int i = 0; i < vertices - 1; i++) {
-            for (int u = 0; u < vertices; u++) {
-                for (Edge edge : adjacencyList.get(u)) {
-                    int newDist = distances[u] + edge.weight;
-                    if (distances[u] != Integer.MAX_VALUE && newDist < distances[edge.destination]) {
-                        distances[edge.destination] = newDist;
-                    }
-                }
-            }
-        }
-
-        // Check for negative-weight cycles
-        for (int u = 0; u < vertices; u++) {
-            for (Edge edge : adjacencyList.get(u)) {
-                if (distances[u] != Integer.MAX_VALUE && distances[u] + edge.weight < distances[edge.destination]) {
-                    throw new Exception("Graph contains a negative-weight cycle");
-                }
-            }
-        }
-
-        return distances;
-    }
-``` 
-
