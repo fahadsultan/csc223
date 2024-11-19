@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -468,23 +497,40 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Minimum Spanning Trees</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Minimum Spanning Trees</span></a>
+  <a href="../datastructs/graphs_prim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prim-Jarník Algorithm</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graphs_kruskal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kruskal’s Algorithm</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HASHMAPS</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
@@ -538,15 +584,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#kruskals-algorithm" id="toc-kruskals-algorithm" class="nav-link active" data-scroll-target="#kruskals-algorithm">Kruskal’s Algorithm</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-steps" id="toc-algorithm-steps" class="nav-link" data-scroll-target="#algorithm-steps">Algorithm Steps</a></li>
-  </ul></li>
-  <li><a href="#prims-algorithm" id="toc-prims-algorithm" class="nav-link" data-scroll-target="#prims-algorithm">Prim’s Algorithm</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-steps-1" id="toc-algorithm-steps-1" class="nav-link" data-scroll-target="#algorithm-steps-1">Algorithm Steps</a></li>
-  </ul></li>
-  <li><a href="#applications-of-minimum-spanning-trees" id="toc-applications-of-minimum-spanning-trees" class="nav-link" data-scroll-target="#applications-of-minimum-spanning-trees">Applications of Minimum Spanning Trees</a></li>
+  <li><a href="#spanning-tree" id="toc-spanning-tree" class="nav-link active" data-scroll-target="#spanning-tree">Spanning Tree</a></li>
+  <li><a href="#minimum-spanning-tree" id="toc-minimum-spanning-tree" class="nav-link" data-scroll-target="#minimum-spanning-tree">Minimum Spanning Tree</a></li>
+  <li><a href="#cut-property" id="toc-cut-property" class="nav-link" data-scroll-target="#cut-property">Cut Property</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
   </ul>
 </nav>
     </div>
@@ -572,63 +613,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A <strong>minimum spanning tree (MST)</strong> of a connected, undirected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight.</p>
-<section id="kruskals-algorithm" class="level2">
-<h2 class="anchored" data-anchor-id="kruskals-algorithm">Kruskal’s Algorithm</h2>
-<p>Kruskal’s algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.</p>
-<section id="algorithm-steps" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-steps">Algorithm Steps</h3>
-<ol type="1">
-<li><p>Sort all the edges in non-decreasing order of their weight.</p></li>
-<li><p>Initialize an empty graph to store the MST.</p></li>
-<li><p>For each edge in the sorted list of edges:</p>
+<section id="spanning-tree" class="level2">
+<h2 class="anchored" data-anchor-id="spanning-tree">Spanning Tree</h2>
+<p>A <strong>spanning tree</strong> of a connected graph <span class="math inline">\(G(V, E)\)</span> is a subgraph <span class="math inline">\(G'\)</span>, containing all the vertices <span class="math inline">\(V\)</span> and a subset of the edges <span class="math inline">\(E\)</span>, that is a tree and connects all the vertices together.</p>
+<p>Formally, <span class="math inline">\(G'(V, E')\)</span> is a spanning tree of <span class="math inline">\(G(V, E)\)</span> if <span class="math inline">\(E' \subseteq E\)</span> and <span class="math inline">\(G'\)</span> is a tree.</p>
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:1400/0*A9tQ2gjDUzAIvqZ0" width="70%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<p>The number of edges in a spanning tree is always <span class="math inline">\(V - 1\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices in the graph.</p>
+<p>Note that the key distinction between trees and graphs is that trees are acyclic, while graphs can have cycles. Therefore, by definition, a spanning tree must be acyclic and connected (i.e., there is a path between every pair of vertices).</p>
+<p>Spanning Tree is not defined for disconnected graphs.</p>
+<p>Note that a graph can have multiple spanning trees, depending on which edges are included in the subgraph.</p>
+</section>
+<section id="minimum-spanning-tree" class="level2">
+<h2 class="anchored" data-anchor-id="minimum-spanning-tree">Minimum Spanning Tree</h2>
+<p>A <strong>minimum spanning tree (MST)</strong> of a connected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight.</p>
+<p>Formally, MST of a graph <span class="math inline">\(G(V, E)\)</span> is a spanning tree <span class="math inline">\(G'(V, E')\)</span> such that the sum of the weights of the edges <span class="math inline">\(\sum_{e \in E'} w(e)\)</span> is minimized.</p>
+<p>For a graph with $ |V| = n $ vertices, the MST will have $ n - 1 $ edges.</p>
+<p>MST is not unique, and a graph can have multiple MSTs if there are multiple edges with the same weight.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20231003111632/MSTdrawio.png" width="80%" style="filter:invert(1)">
+</center>
+</section>
+<section id="cut-property" class="level2">
+<h2 class="anchored" data-anchor-id="cut-property">Cut Property</h2>
+<p>The <strong>cut property</strong> is a key property that helps in understanding the construction of minimum spanning trees.</p>
+<p>Given a graph <span class="math inline">\(G(V, E)\)</span> and a partition of the vertices <span class="math inline">\(V\)</span> into two sets <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span>, a <strong>cut</strong> is a set of edges that have one endpoint in <span class="math inline">\(S_1\)</span> and the other endpoint in <span class="math inline">\(S_2\)</span>.</p>
+<center>
+<img src="https://www.baeldung.com/wp-content/uploads/sites/4/2020/10/after-performing-the-cut-operation-1024x691.png" width="80%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<p>For any cut <span class="math inline">\((S_1, S_2)\)</span> of the graph, if an edge <span class="math inline">\(e\)</span> has the minimum weight among all the edges that cross the cut, then this edge <span class="math inline">\(e\)</span> must be part of the minimum spanning tree of the graph.</p>
+<center>
+<img src="https://i.ibb.co/TBKyY6Q/cutproperty.png" width="75%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<p>This property is crucial in the design of algorithms for finding minimum spanning trees, such as Kruskal’s algorithm and Prim’s algorithm.</p>
+</section>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
 <ul>
-<li>If adding the edge does not form a cycle in the MST, add it to the MST.</li>
-</ul></li>
-<li><p>Repeat step 3 until there are V-1 edges in the MST, where V is the number of vertices in the graph.</p></li>
-</ol>
-<figure class="figure">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/KruskalDemo.gif" width="50%" style="filter:invert(1)" class="figure-img">
-<figcaption>
-Kruskal’s Algorithm Visualization
-</figcaption>
-</figure>
-<p>The time complexity of Kruskal’s algorithm is O(E log E), where E is the number of edges in the graph.</p>
-</section>
-</section>
-<section id="prims-algorithm" class="level2">
-<h2 class="anchored" data-anchor-id="prims-algorithm">Prim’s Algorithm</h2>
-<p>Prim’s algorithm is another greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by starting at an arbitrary vertex and adding the next smallest edge that connects a vertex in the MST to a vertex outside the MST.</p>
-<section id="algorithm-steps-1" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-steps-1">Algorithm Steps</h3>
-<ol type="1">
-<li><p>Initialize an empty graph to store the MST and a set to store visited vertices.</p></li>
-<li><p>Choose an arbitrary starting vertex and add it to the MST.</p></li>
-<li><p>While there are fewer than V vertices in the MST, where V is the number of vertices in the graph:</p>
-<ul>
-<li>Find the minimum-weight edge that connects a vertex in the MST to a vertex outside the MST.</li>
-<li>Add the edge and the new vertex to the MST.</li>
-</ul></li>
-</ol>
-<figure class="figure">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" width="50%" style="filter:invert(1)" class="figure-img">
-<figcaption>
-Prim’s Algorithm Visualization
-</figcaption>
-</figure>
-<p>The time complexity of Prim’s algorithm is O(V^2) with an adjacency matrix representation and O(E log V) with an adjacency list representation, where V is the number of vertices and E is the number of edges in the graph.</p>
-</section>
-</section>
-<section id="applications-of-minimum-spanning-trees" class="level2">
-<h2 class="anchored" data-anchor-id="applications-of-minimum-spanning-trees">Applications of Minimum Spanning Trees</h2>
-<ul>
-<li><p><strong>Network Design</strong>: Finding the minimum cost network that connects all the nodes.</p></li>
-<li><p><strong>Cluster Analysis</strong>: Grouping related data points together based on similarity.</p></li>
-<li><p><strong>Approximate Solutions</strong>: Providing near-optimal solutions to complex optimization problems.</p></li>
-<li><p><strong>Image Segmentation</strong>: Dividing an image into regions based on pixel similarity.</p></li>
-<li><p><strong>Circuit Design</strong>: Designing circuits with minimum wire length.</p></li>
-<li><p><strong>Routing Algorithms</strong>: Finding the shortest path in a network.</p></li>
+<li><strong>Network Design and Routing</strong>: Finding the minimum cost network that connects all the nodes. For example, laying cables to connect all houses with minimum cost or designing a circuit with minimum cost that connects all components.</li>
 </ul>
+<center>
+<img src="https://image.slidesharecdn.com/spanningtreesapplications-120903115339-phpapp02/85/Spanning-trees-applications-18-320.jpg" width="45%" style="filter:invert(1)"> <img src="https://images.javatpoint.com/tutorial/daa/images/applications-of-minimum-spanning-tree3.png" width="45%" style="filter:invert(1)">
+</center>
+<p><br></p>
+<ul>
+<li><strong>Cluster Analysis and Image Segmentation</strong>: The minimum spanning tree can be used to identify clusters of data points, where the edges represent say euclidean distance between points. The tree can be “cut” at high cost edges to get desired number of clusters.</li>
+</ul>
+<center>
+<p><img src="https://www.projectrhea.org/rhea/images/0/02/Cluster_Old_Kiwi.png" width="45%" style="filter:invert(1)"></p>
+<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S003040262031144X-gr1.jpg" width="45%" style="filter:invert(1)"></p>
+</center>
 
 
 </section>

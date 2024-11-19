@@ -3,61 +3,67 @@ title: "Minimum Spanning Trees"
 toc: true
 ---
 
-A **minimum spanning tree (MST)** of a connected, undirected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight.
+## Spanning Tree
 
-## Kruskal's Algorithm
+A **spanning tree** of a connected graph $G(V, E)$ is a subgraph $G'$, containing all the vertices $V$ and a subset of the edges $E$, that is a tree and connects all the vertices together. 
 
-Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.
+Formally, $G'(V, E')$ is a spanning tree of $G(V, E)$ if $E' \subseteq E$ and $G'$ is a tree.
 
-### Algorithm Steps
+<center><img src="https://miro.medium.com/v2/resize:fit:1400/0*A9tQ2gjDUzAIvqZ0" width="70%" style="filter:invert(1)"></center>
 
-1. Sort all the edges in non-decreasing order of their weight.
+<br/>
 
-2. Initialize an empty graph to store the MST.
+The number of edges in a spanning tree is always $V - 1$, where $V$ is the number of vertices in the graph.
 
-3. For each edge in the sorted list of edges:
-    - If adding the edge does not form a cycle in the MST, add it to the MST.
+Note that the key distinction between trees and graphs is that trees are acyclic, while graphs can have cycles. Therefore, by definition, a spanning tree must be acyclic and connected (i.e., there is a path between every pair of vertices).
 
-4. Repeat step 3 until there are V-1 edges in the MST, where V is the number of vertices in the graph.
+Spanning Tree is not defined for disconnected graphs.
 
-<figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/KruskalDemo.gif" width="50%" style="filter:invert(1)">
-    <figcaption>Kruskal's Algorithm Visualization</figcaption>
-</figure>
+Note that a graph can have multiple spanning trees, depending on which edges are included in the subgraph.
 
-The time complexity of Kruskal's algorithm is O(E log E), where E is the number of edges in the graph.
+## Minimum Spanning Tree
 
-## Prim's Algorithm
+A **minimum spanning tree (MST)** of a connected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight. 
 
-Prim's algorithm is another greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by starting at an arbitrary vertex and adding the next smallest edge that connects a vertex in the MST to a vertex outside the MST.
+Formally, MST of a graph $G(V, E)$ is a spanning tree $G'(V, E')$ such that the sum of the weights of the edges $\sum_{e \in E'} w(e)$ is minimized.
 
-### Algorithm Steps
+For a graph with $ |V| = n $ vertices, the MST will have $ n - 1 $ edges.
 
-1. Initialize an empty graph to store the MST and a set to store visited vertices.
+MST is not unique, and a graph can have multiple MSTs if there are multiple edges with the same weight.
 
-2. Choose an arbitrary starting vertex and add it to the MST.
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/20231003111632/MSTdrawio.png" width="80%" style="filter:invert(1)"></center>
 
-3. While there are fewer than V vertices in the MST, where V is the number of vertices in the graph:
-    - Find the minimum-weight edge that connects a vertex in the MST to a vertex outside the MST.
-    - Add the edge and the new vertex to the MST.
+## Cut Property
 
-<figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" width="50%" style="filter:invert(1)">
-    <figcaption>Prim's Algorithm Visualization</figcaption>
-</figure>
+The **cut property** is a key property that helps in understanding the construction of minimum spanning trees.
 
-The time complexity of Prim's algorithm is O(V^2) with an adjacency matrix representation and O(E log V) with an adjacency list representation, where V is the number of vertices and E is the number of edges in the graph.
+Given a graph $G(V, E)$ and a partition of the vertices $V$ into two sets $S_1$ and $S_2$, a **cut** is a set of edges that have one endpoint in $S_1$ and the other endpoint in $S_2$.
 
-## Applications of Minimum Spanning Trees
+<center><img src="https://www.baeldung.com/wp-content/uploads/sites/4/2020/10/after-performing-the-cut-operation-1024x691.png" width="80%" style="filter:invert(1)"></center>
 
-- **Network Design**: Finding the minimum cost network that connects all the nodes.
+<br/>
 
-- **Cluster Analysis**: Grouping related data points together based on similarity.
+For any cut $(S_1, S_2)$ of the graph, if an edge $e$ has the minimum weight among all the edges that cross the cut, then this edge $e$ must be part of the minimum spanning tree of the graph.
 
-- **Approximate Solutions**: Providing near-optimal solutions to complex optimization problems. 
+<center><img src="https://i.ibb.co/TBKyY6Q/cutproperty.png" width="75%" style="filter:invert(1)"></center>
 
-- **Image Segmentation**: Dividing an image into regions based on pixel similarity.
+<br/>
 
-- **Circuit Design**: Designing circuits with minimum wire length.
+This property is crucial in the design of algorithms for finding minimum spanning trees, such as Kruskal's algorithm and Prim's algorithm.
 
-- **Routing Algorithms**: Finding the shortest path in a network.
+## Applications 
+
+- **Network Design and Routing**: Finding the minimum cost network that connects all the nodes. For example, laying cables to connect all houses with minimum cost or designing a circuit with minimum cost that connects all components.
+
+<center><img src="https://image.slidesharecdn.com/spanningtreesapplications-120903115339-phpapp02/85/Spanning-trees-applications-18-320.jpg" width="45%" style="filter:invert(1)">  <img src="https://images.javatpoint.com/tutorial/daa/images/applications-of-minimum-spanning-tree3.png" width="45%" style="filter:invert(1)"></center>
+
+<br/>
+
+- **Cluster Analysis and Image Segmentation**: The minimum spanning tree can be used to identify clusters of data points, where the edges represent say euclidean distance between points. The tree can be "cut" at high cost edges to get desired number of clusters.
+
+<center><img src="https://www.projectrhea.org/rhea/images/0/02/Cluster_Old_Kiwi.png" width="45%" style="filter:invert(1)">
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S003040262031144X-gr1.jpg" width="45%" style="filter:invert(1)">
+
+</center>
+

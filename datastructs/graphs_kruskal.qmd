@@ -1,0 +1,43 @@
+---
+title: "Kruskal's Algorithm"
+toc: true
+---
+
+Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.
+
+<center>
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/KruskalDemo.gif" width="50%" style="filter:invert(1)">
+    <figcaption>Kruskal's Algorithm Visualization</figcaption>
+</figure>
+</center>
+
+
+<center>
+<img src="https://i.ibb.co/vH0z3j8/kruskal1.png" width="80%" style="filter:invert(1)">
+<img src="https://i.ibb.co/59nPYH6/kruskal2.png" width="80%" style="filter:invert(1)">
+<img src="https://i.ibb.co/5KPjD0y/kruskal3.png" width="80%" style="filter:invert(1)">
+</center>
+
+
+### Psuedocode
+
+Algorithm $\text{Kruskal}(G)$:
+
+**Input**: An undirected, weighted, connected graph $G$ with $n$ vertices and $m$ edges
+
+**Output**: A minimum spanning tree $T$ for $G$
+
+1. Sort all the edges in non-decreasing order of their weight.
+
+2. Initialize an empty graph $T$ to store the MST.
+
+3. **for** each edge $e$ in the sorted list of edges **do**
+    - **if** adding edge $e$ does not form a cycle in $T$ **then**
+        - add edge $e$ to $T$
+
+4. **return** $T$
+
+# Analysis 
+
+The time complexity of Kruskal's algorithm is O(E log E), where E is the number of edges in the graph.

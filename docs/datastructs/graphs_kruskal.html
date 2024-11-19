@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Control Flow</title>
+<title>Kruskal’s Algorithm</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,8 +68,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../style.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -79,8 +108,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../logo.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,11 +119,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../calendar.html"> 
+    <a class="nav-link" href="../calendar.html"> 
 <span class="menu-text">Calendar</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -103,41 +132,41 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
         <li>
-    <a class="dropdown-item" href="../../syllabus/about.html">
+    <a class="dropdown-item" href="../syllabus/about.html">
  <span class="dropdown-text">Course Description and Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/grading.html">
+    <a class="dropdown-item" href="../syllabus/grading.html">
  <span class="dropdown-text">Grading</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/academic_success.html">
+    <a class="dropdown-item" href="../syllabus/academic_success.html">
  <span class="dropdown-text">Center for Academic Success</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/textbook.html">
+    <a class="dropdown-item" href="../syllabus/textbook.html">
  <span class="dropdown-text">Textbooks &amp; Other Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/integrity.html">
+    <a class="dropdown-item" href="../syllabus/integrity.html">
  <span class="dropdown-text">Academic Integrity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/mental_health.html">
+    <a class="dropdown-item" href="../syllabus/mental_health.html">
  <span class="dropdown-text">Mental Health Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/accomodations.html">
+    <a class="dropdown-item" href="../syllabus/accomodations.html">
  <span class="dropdown-text">Accomodations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../syllabus/title_9.html">
+    <a class="dropdown-item" href="../syllabus/title_9.html">
  <span class="dropdown-text">Nondiscrimination Policy and Sexual Misconduct</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus/appointment.html"> 
+    <a class="nav-link" href="../syllabus/appointment.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
   <li class="nav-item">
@@ -149,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Github Classroom</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../ta.html"> 
+    <a class="nav-link" href="../ta.html"> 
 <span class="menu-text">TA</span></a>
   </li>  
   <li class="nav-item">
@@ -183,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/controls/controls.html">Control Flow</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/graphs.html">GRAPHS</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs_spanning.html">Minimum Spanning Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs_kruskal.html">Kruskal’s Algorithm</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,19 +234,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../se/se.html" class="sidebar-item-text sidebar-link">
+            <a href="../se/se.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOFTWARE ENGINEERING</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -226,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
+            <a href="../se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -235,31 +264,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/shell.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/shell.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shell (sh)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/ssh.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secure Shell (ssh)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Individual)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git (Team)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/version_control/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/version_control/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github (Community)</span></a>
   </div>
 </li>
@@ -267,13 +296,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/tdd.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/tdd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Test Driven Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../se/interview.html" class="sidebar-item-text sidebar-link">
+  <a href="../se/interview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technical Interviews</span></a>
   </div>
 </li>
@@ -281,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/java.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/java.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PROGRAMMING, IN JAVA</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -290,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abstractions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -299,31 +328,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/data.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Primitive Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fixed-Size Reference Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dynamic-Size Reference Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classes: User Defined Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Interfaces</span></a>
   </div>
 </li>
@@ -331,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
+            <a href="../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Operations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -340,25 +369,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Math Operators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Built-in Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File I/O</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../test.html" class="sidebar-item-text sidebar-link">
+  <a href="../test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing in Java</span></a>
   </div>
 </li>
@@ -366,28 +395,28 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../basics/controls/controls.html" class="sidebar-item-text sidebar-link active">
+            <a href="../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Flow</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conditionals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
+  <a href="../basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exception Handling</span></a>
   </div>
 </li>
@@ -397,7 +426,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../datastructs/trees.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TREES</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -406,19 +435,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binary Tree</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/bst.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/bst.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binary Search Tree</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Heaps</span></a>
   </div>
 </li>
@@ -426,7 +455,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GRAPHS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -435,19 +464,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Implementations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Traversals</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../datastructs/graph_paths.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/graph_paths.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shortest Path</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -456,13 +485,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graph_dijkstra.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graph_dijkstra.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dijkstra’s Algorithm</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graphs_bellmanford.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graphs_bellmanford.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bellman-Ford Algorithm</span></a>
   </div>
 </li>
@@ -470,22 +499,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Minimum Spanning Trees</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graphs_prim.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graphs_prim.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prim-Jarník Algorithm</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/graphs_kruskal.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/graphs_kruskal.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Kruskal’s Algorithm</span></a>
   </div>
 </li>
@@ -495,7 +524,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HASHMAPS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -504,13 +533,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/hash.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hashing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../datastructs/sets.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sets</span></a>
   </div>
 </li>
@@ -518,7 +547,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../algos/algos.html" class="sidebar-item-text sidebar-link">
+            <a href="../algos/algos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ALGORITHMS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -527,19 +556,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../algos/backtracking.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/backtracking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Backtracking</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../algos/greedy.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/greedy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greedy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../algos/dp.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/dp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dynamic Programming</span></a>
   </div>
 </li>
@@ -555,16 +584,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#flow-directionality-of-execution" id="toc-flow-directionality-of-execution" class="nav-link active" data-scroll-target="#flow-directionality-of-execution">Flow / Directionality of Execution</a></li>
+  <li><a href="#psuedocode" id="toc-psuedocode" class="nav-link active" data-scroll-target="#psuedocode">Psuedocode</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/controls/controls.html">Control Flow</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/graphs.html">GRAPHS</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs_spanning.html">Minimum Spanning Trees</a></li><li class="breadcrumb-item"><a href="../datastructs/graphs_kruskal.html">Kruskal’s Algorithm</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Control Flow</h1>
+<h1 class="title">Kruskal’s Algorithm</h1>
 </div>
 
 
@@ -581,30 +611,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- 
-
-### `if` Statements
-
-* `if` statements are used to execute code **conditionally**.
-
-* The code inside the `if` statement is executed **only if** the condition is `True`.
-
-* The condition is a **boolean expression**.
-
-* The code inside the `if` statement is **indented**.
-
-* The `if` statement **ends** when the indentation ends. -->
-<section id="flow-directionality-of-execution" class="level2">
-<h2 class="anchored" data-anchor-id="flow-directionality-of-execution">Flow / Directionality of Execution</h2>
+<p>Kruskal’s algorithm is a greedy algorithm that finds a minimum spanning tree for a connected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.</p>
+<center>
+<figure class="figure">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/KruskalDemo.gif" width="50%" style="filter:invert(1)" class="figure-img">
+<figcaption>
+Kruskal’s Algorithm Visualization
+</figcaption>
+</figure>
+</center>
+<center>
+<img src="https://i.ibb.co/vH0z3j8/kruskal1.png" width="80%" style="filter:invert(1)"> <img src="https://i.ibb.co/59nPYH6/kruskal2.png" width="80%" style="filter:invert(1)"> <img src="https://i.ibb.co/5KPjD0y/kruskal3.png" width="80%" style="filter:invert(1)">
+</center>
+<section id="psuedocode" class="level3">
+<h3 class="anchored" data-anchor-id="psuedocode">Psuedocode</h3>
+<p>Algorithm <span class="math inline">\(\text{Kruskal}(G)\)</span>:</p>
+<p><strong>Input</strong>: An undirected, weighted, connected graph <span class="math inline">\(G\)</span> with <span class="math inline">\(n\)</span> vertices and <span class="math inline">\(m\)</span> edges</p>
+<p><strong>Output</strong>: A minimum spanning tree <span class="math inline">\(T\)</span> for <span class="math inline">\(G\)</span></p>
 <ol type="1">
-<li><p><strong>Programs</strong> (multiple lines of code) run each line of code sequentially <strong>top to bottom</strong></p></li>
-<li><p><strong>Statements</strong> (single line of code) run <strong>right to left</strong></p>
+<li><p>Sort all the edges in non-decreasing order of their weight.</p></li>
+<li><p>Initialize an empty graph <span class="math inline">\(T\)</span> to store the MST.</p></li>
+<li><p><strong>for</strong> each edge <span class="math inline">\(e\)</span> in the sorted list of edges <strong>do</strong></p>
 <ul>
-<li><p>Expression on right hand side of assignment/boolean operator is executed first</p></li>
-<li><p>Then, left hand expression of assignment operator is executed</p></li>
+<li><strong>if</strong> adding edge <span class="math inline">\(e\)</span> does not form a cycle in <span class="math inline">\(T\)</span> <strong>then</strong>
+<ul>
+<li>add edge <span class="math inline">\(e\)</span> to <span class="math inline">\(T\)</span></li>
 </ul></li>
-<li><p><strong>Expressions</strong> ( &lt; 1 line of code) run as per rules of precedence; for operators of equal precedence, expressions run <strong>left to right</strong>.</p></li>
+</ul></li>
+<li><p><strong>return</strong> <span class="math inline">\(T\)</span></p></li>
 </ol>
+</section>
+<section id="analysis" class="level1">
+<h1>Analysis</h1>
+<p>The time complexity of Kruskal’s algorithm is O(E log E), where E is the number of edges in the graph.</p>
 
 
 </section>

@@ -1,0 +1,78 @@
+---
+title: "Prim-Jarník Algorithm"
+toc: true
+---
+
+Prim's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. 
+
+The algorithm builds the MST by:  
+
+* Starting at an arbitrary vertex
+* Adding the next smallest edge that connects a vertex in the MST to a vertex outside the MST.
+* Repeating this process until all vertices are in the MST.
+
+The main idea is similar to that of Dijkstra’s algorithm. 
+
+<center>
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" width="50%" style="filter:invert(1)">
+    <figcaption>Prim's Algorithm Visualization</figcaption>
+</figure>
+</center>
+
+In the Prim-Jarník algorithm, we grow a minimum spanning tree from a single cluster starting from some “root” vertex s. 
+
+We will begin with some vertex $s$, defining the initial “cloud” of vertices $C$. 
+
+Then, in each iteration, we choose a minimum-weight edge $e = (u, v)$, connecting $a$ vertex $u$ in the cloud $C$ to a vertex $v$ outside of $C$. 
+
+The vertex v is then brought into the cloud C and the process is repeated until a spanning tree is formed. Again, the crucial fact about minimum spanning trees comes into play, for by always choosing the smallest-weight edge joining a vertex inside C to one outside C, we are assured of always adding a valid edge to the MST.
+
+<center>
+<img src="https://i.ibb.co/F7xRKbv/prim1.png" width="80%" style="filter:invert(1)">
+<img src="https://i.ibb.co/8XMKp0N/prim2.png" width="80%" style="filter:invert(1)">
+</center>
+
+
+### Psuedocode
+
+Algorithm $\text{PrimJarnik}(G)$:
+
+**Input**: An undirected, weighted, connected graph $G$ with $n$ vertices and $m$ edges 
+
+**Output**: A minimum spanning tree $T$ for $G$
+
+* Pick any vertex $s$ of $G$ \
+* $D[s]$ = 0
+* **for** each vertex $v \neq s$ **do**
+    * $D[v] = ∞$
+* Initialize $T = ∅$.
+* Initialize a priority queue $Q$ with an entry $(D[v],v)$ for each vertex $v$.
+* For each vertex $v$, maintain $\text{parent}(v)$ as the edge achieving $D[v]$ (if any). 
+
+\
+
+* **while** $Q$ is not empty do
+    * Let $u$ be the value of the entry returned by $Q.\text{removeMin()}$. 
+    * Connect vertex $u$ to $T$ using edge $\text{parent}(e)$. 
+    * **for** each edge $e′ =(u,v)$ such that $v$ is in $Q$ **do**
+        * **if** $w(u, v) < D[v]$ **then** 
+            * $D[v] = w(u,v)$
+        * $\text{parent}(v) = e′$
+        * Change the key of vertex $v$ in $Q$ to $D[v]$.
+
+* **return** the tree $T$
+
+
+
+## Analysis 
+
+The time complexity of Prim's algorithm is $O(V^2)$ with an adjacency matrix representation and $O(E log V)$ with an adjacency list representation, where $V$ is the number of vertices and $E$ is the number of edges in the graph.
+
+The implementation issues for the Prim-Jarník algorithm are similar to those for Dijkstra’s algorithm, relying on an adaptable priority queue $Q$. We initially perform $n$ insertions into $Q$, later perform $n$ extract-min operations, and may update a total of $m$ priorities as part of the algorithm. 
+
+Those steps are the primary contributions to the overall running time. 
+
+With a heap-based priority queue, each operation runs in $O(log n)$ time, and the overall time for the algorithm is $O((n+m)logn)$, which is $O(mlogn)$ for a connected graph. 
+
+Alternatively, we can achieve $O(n^2)$ running time by using an unsorted list as a priority queue.

@@ -338,129 +338,201 @@
     ]
   },
   {
-    "objectID": "datastructs/trees.html",
-    "href": "datastructs/trees.html",
-    "title": "TREES",
+    "objectID": "datastructs/graph_problems.html",
+    "href": "datastructs/graph_problems.html",
+    "title": "Traversals",
     "section": "",
-    "text": "Trees are one of the most important data structures in computer science. They are a non-linear data structure that store data in a hierarchical manner.\nTrees offer efficient insertion, deletion, and search operations, making them a versatile data structure for a wide range of applications.\nTrees are ubiquitous in computer science and are used for a wide variety of applications, including file systems, parsing languages, and artificial intelligence to plan out strategies and make decisions.",
-    "crumbs": [
-      "Home",
-      "TREES"
-    ]
+    "text": "A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.\n\n\nTo detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph."
   },
   {
-    "objectID": "datastructs/trees.html#terminology",
-    "href": "datastructs/trees.html#terminology",
-    "title": "TREES",
-    "section": "Terminology",
-    "text": "Terminology\nThe tree data structure come with a non-trivial amount of terminology. Here are some of the key terms:\n\nNodes: The individual elements in a tree that store data. These are depicted as circles in the diagram. They are very similar to linked list nodes.\nEdges: The connections between nodes. These are depicted as lines in the diagram.\nRoot Node: The topmost node in a tree. It is the only node in the tree that has no parent.\n\n\n\n\n\n\nParent Node: A node that has child nodes. Each node in the tree, except the root node, has exactly one parent node.\nChild Node: A node that is connected to a parent node. Each node in the tree can have zero or more children.\nLeaf: Nodes that have no child nodes. They are the nodes at the bottom of the tree.\nPath: A sequence of nodes connected by edges.\nHeight of a tree: The length of the longest path from the root to a leaf. Length is measured in the number of edges.\nHeight of a node: The length of the longest path from the node to a leaf. Length is measured in the number of edges.\nDepth: The length of the path from the root to a node. Length is measured in the number of edges.\nLevel: The depth of a node in the tree. The root node is at level 0.\nSubtree: A tree that is part of a larger tree. It consists of a node and all its descendants.\nInternal Node: A node that has at least one child node. Essentially, any node that is not a leaf.\nExternal Node: A node that has no child nodes. Essentially, a leaf node.\nSibling: Nodes that share the same parent.\nAncestors of a node: A node that is on the upward path a given node to the root.\nDescendant of a node: A node that is on the path from a given node to a leaf.",
-    "crumbs": [
-      "Home",
-      "TREES"
-    ]
-  },
-  {
-    "objectID": "datastructs/trees.html#types-of-trees",
-    "href": "datastructs/trees.html#types-of-trees",
-    "title": "TREES",
-    "section": "Types of Trees",
-    "text": "Types of Trees\nThere are many different types of trees, each with its own unique properties and characteristics. Here we are focusing on types of trees based on the number of children each node can have.\nNote that we are going the following mathematical notation for trees:\n\n\\(n\\) to represent the number of nodes in the tree,\n\\(N\\) to represent the maximum number of children each node can have\n\\(h\\) to represent the height of the tree.\n\n\n\n\n\nThe most common types of trees Binary trees that have at most two children per node. Binary trees are further classified into different types based on their properties.\n\n\n\n\nFull Tree\nAn \\(N\\)-ary tree in which every node has either zero or \\(N\\) children.\nComplete Tree\nAn \\(N\\)-ary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.\nDegenerate Tree\nA tree in which each parent node has only one child node. This is essentially a linked list.\nPerfect Tree\nAn \\(N\\)-ary tree in which all interior nodes have \\(N\\) children and all leaves have the same depth or same level.\nBalanced Tree\nA \\(N\\)-ary tree in which the heights of all the subtrees of each node differ by at most one.",
-    "crumbs": [
-      "Home",
-      "TREES"
-    ]
-  },
-  {
-    "objectID": "datastructs/trees.html#properties-of-trees",
-    "href": "datastructs/trees.html#properties-of-trees",
-    "title": "TREES",
-    "section": "Properties of Trees",
-    "text": "Properties of Trees\nTrees have the following properties:\n\nTree Property: A tree with \\(n\\) nodes has \\(n-1\\) edges.\nThe number of edges in a tree is always one less than the number of nodes.\nThis is because each node, except the root node, has exactly one parent node.\nFull Tree Property: An N-ary tree with height \\(h\\) has at most \\(N^h\\) nodes.\nA full tree is a tree in which each node has exactly \\(N\\) children.\nHeight Property: The height of an N-ary tree with \\(n\\) nodes is \\(\\log_N(n+1) - 1\\).\nThe height of a tree is the length of the longest path from the root to a leaf.",
-    "crumbs": [
-      "Home",
-      "TREES"
-    ]
-  },
-  {
-    "objectID": "datastructs/hashmaps.html",
-    "href": "datastructs/hashmaps.html",
-    "title": "HASHMAPS",
+    "objectID": "datastructs/graph_problems.html#cycle-detection-in-directed-graphs",
+    "href": "datastructs/graph_problems.html#cycle-detection-in-directed-graphs",
+    "title": "Traversals",
     "section": "",
-    "text": "Hashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table. Hash tables are used in a wide variety of applications, including databases, caching systems, and symbol tables.\n\n\n\n\nHash sets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\n\nTOC {:toc}\n\n\n\nHash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
+    "text": "To detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph."
+  },
+  {
+    "objectID": "datastructs/graph_paths.html",
+    "href": "datastructs/graph_paths.html",
+    "title": "Shortest Path",
+    "section": "",
+    "text": "Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.\nInputs to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.\nOutput is the shortest path between the starting and target vertices.\nFormally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.\nThe length of a path is the sum of the weights of the edges between the vertices in the path.\nGenerally, path finding algorithms can be classified into two categories:",
     "crumbs": [
       "Home",
-      "HASHMAPS"
+      "GRAPHS",
+      "Shortest Path"
     ]
   },
   {
-    "objectID": "datastructs/hashmaps.html#hash-table",
-    "href": "datastructs/hashmaps.html#hash-table",
-    "title": "HASHMAPS",
-    "section": "",
-    "text": "Hash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
+    "objectID": "datastructs/graph_paths.html#bfs-unweighted-graphs",
+    "href": "datastructs/graph_paths.html#bfs-unweighted-graphs",
+    "title": "Shortest Path",
+    "section": "BFS: unweighted graphs",
+    "text": "BFS: unweighted graphs\nIn an unweighted graph, all edges have the same weight, typically 1.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
     "crumbs": [
       "Home",
-      "HASHMAPS"
+      "GRAPHS",
+      "Shortest Path"
     ]
   },
   {
-    "objectID": "datastructs/hash.html",
-    "href": "datastructs/hash.html",
-    "title": "Hashing",
+    "objectID": "datastructs/graphs_bellmanford.html",
+    "href": "datastructs/graphs_bellmanford.html",
+    "title": "Bellman-Ford Algorithm",
     "section": "",
-    "text": "Hashing\nHashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table.\nHow it works:\n\nHash Function: You provide your data items into the hash function.\nHash Code: The hash function crunches the data and give a unique hash code.\nHash Table: The hash code then points you to a specific location within the hash table.\n\nA hash table is also known as a hash map. It is a data structure that stores key-value pairs. It uses a hash function to map keys to a fixed-size array, called a hash table. This allows in faster search, insertion, and deletion operations.\n\n\nHash Function\nThe hash function is a function that takes a key and returns an index into the hash table. The goal of a hash function is to distribute keys evenly across the hash table, minimizing collisions (when two keys map to the same index).\nCommon hash functions include:\n\nDivision Method: Key % Hash Table Size\nMultiplication Method: (Key * Constant) % Hash Table Size\nUniversal Hashing: A family of hash functions designed to minimize collisions\n\n\n\nHash Collision\nA hash collision occurs when two different keys map to the same index in a hash table. This can happen even with a good hash function, especially if the hash table is full or the keys are similar.\nCauses of Hash Collisions:\n\nPoor Hash Function: A hash function that does not distribute keys evenly across the hash table can lead to more collisions.\nHigh Load Factor: A high load factor (ratio of keys to hash table size) increases the probability of collisions.\nSimilar Keys: Keys that are similar in value or structure are more likely to collide.\n\n\n\nCollision Resolution Techniques\nThere are two types of collision resolution techniques:\n\nOpen Addressing:\n\nLinear Probing: Search for an empty slot sequentially\nQuadratic Probing: Search for an empty slot using a quadratic function\n\n\n\n\n\n\nClosed Addressing:\n\nChaining: Store colliding keys in a linked list or binary search tree at each index\nCuckoo Hashing: Use multiple hash functions to distribute keys\n\n\n\n\n\nHash tables are used in a wide variety of applications, including:\nDatabases: Storing and retrieving data based on unique keys Caching: Storing frequently accessed data for faster retrieval Symbol Tables: Mapping identifiers to their values in programming languages Network Routing: Determining the best path for data packets",
+    "text": "Dijkstra’s algorithm cannot handle negative weights because it assumes that once a node is reached with the shortest possible distance, there’s no need to revisit or update that distance later. This assumption holds true for graphs with only non-negative edge weights but fails when negative weights are present.\nTo handle graphs with negative weights, the Bellman-Ford algorithm is typically used. The Bellman-Ford algorithm can also be used for graphs with positive edges (both directed and undirected), like we can with Dijkstra’s algorithm, but Dijkstra’s algorithm is preferred in such cases because it is faster.\nUnlike Dijkstra’s algorithm, Bellman-Ford doesn’t rely on the greedy process of visiting each node in order of the current shortest known distance. Instead, Bellman-Ford performs multiple passes to “relax” each edge, ensuring that it correctly updates the shortest path distances even in the presence of negative weights. It also detects negative cycles, making it more robust for such cases.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Bellman-Ford Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_bellmanford.html#pseudocode",
+    "href": "datastructs/graphs_bellmanford.html#pseudocode",
+    "title": "Bellman-Ford Algorithm",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\nSet initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.\nFor each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.\nCheck all edges (step 2) \\(V−1\\) times. This is as many times as there are vertices (\\(V\\)), minus one.\nOptional: Check for negative cycles. This will be explained in better detail later.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Bellman-Ford Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_bellmanford.html#negative-cycles",
+    "href": "datastructs/graphs_bellmanford.html#negative-cycles",
+    "title": "Bellman-Ford Algorithm",
+    "section": "Negative Cycles",
+    "text": "Negative Cycles\nUsing the Bellman-Ford algorithm on a graph with negative cycles will not produce a result of shortest paths because in a negative cycle we can always go one more round and get a shorter path.\nA negative cycle is a path we can follow in circles, where the sum of the edge weights is negative.\nLuckily, the Bellman-Ford algorithm can be implemented to safely detect and report the presence of negative cycles.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Bellman-Ford Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_bellmanford.html#pseudocode-1",
+    "href": "datastructs/graphs_bellmanford.html#pseudocode-1",
+    "title": "Bellman-Ford Algorithm",
+    "section": "Pseudocode",
+    "text": "Pseudocode\nThe Bellman-Ford algorithm is best suited to find the shortest paths in a directed graph, with one or more negative edge weights, from the source vertex to all other vertices.\nIt does so by repeatedly checking all the edges in the graph for shorter paths, as many times as there are vertices in the graph (minus 1).\nBellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.\nThe steps of the Bellman-Ford algorithm are as follows:\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\n‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.\nRelax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.\nCheck for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.\n\n\n\n\nThe time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Shortest Path",
+      "Bellman-Ford Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/sets.html",
+    "href": "datastructs/sets.html",
+    "title": "Sets",
+    "section": "",
+    "text": "A set is a collection of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are implemented using hash tables in many programming languages, which allows for fast search and retrieval of elements. Sets are useful for removing duplicates from a list, checking for the presence of an element, and performing set operations.\n\n\nIn Python, sets are implemented using the set data structure, which is a built-in data type that stores unique elements. Sets are unordered collections of elements, and they do not allow duplicate values.\n# Create a set\ns = set([1, 2, 3, 4, 5])\n\n# Add an element to the set\ns.add(6)\n\n# Remove an element from the set\ns.remove(3)\n\n# Check if an element is in the set\nif 4 in s:\n    print(\"Element found in set\")\n\n\n\nSets support a variety of operations, including:\n\nUnion: Combines two sets to create a new set containing all unique elements from both sets.\nIntersection: Finds the common elements between two sets and creates a new set with those elements.\nDifference: Finds the elements that are in one set but not the other and creates a new set with those elements.\nSubset: Checks if one set is a subset of another set.\nSuperset: Checks if one set is a superset of another set.\n\n\n# Create two sets\ns1 = set([1, 2, 3, 4, 5])\ns2 = set([4, 5, 6, 7, 8])\n\n# Union of two sets\nunion_set = s1.union(s2)\n\n# Intersection of two sets\nintersection_set = s1.intersection(s2)\n\n# Difference of two sets\ndifference_set = s1.difference(s2)\n\n# Check if s1 is a subset of s2\nis_subset = s1.issubset(s2)\n\n# Check if s1 is a superset of s2\nis_superset = s1.issuperset(s2)\n\n\n\nThe time complexity of set operations is similar to hash table operations, with an time complexity of O(1) for search, insert, and delete operations. The space complexity of a set is O(n), where n is the number of elements in the set.\nUnion and intersection operations have a time complexity of O(n) in the worst case, where n is the number of elements in the larger set. The space complexity of set operations depends on the size of the input sets and the implementation of the set data structure.",
     "crumbs": [
       "Home",
       "HASHMAPS",
-      "Hashing"
+      "Sets"
     ]
   },
   {
-    "objectID": "datastructs/graphs_spanning.html",
-    "href": "datastructs/graphs_spanning.html",
-    "title": "Minimum Spanning Trees",
+    "objectID": "datastructs/sets.html#sets",
+    "href": "datastructs/sets.html#sets",
+    "title": "Sets",
     "section": "",
-    "text": "A minimum spanning tree (MST) of a connected, undirected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight.",
+    "text": "A set is a collection of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are implemented using hash tables in many programming languages, which allows for fast search and retrieval of elements. Sets are useful for removing duplicates from a list, checking for the presence of an element, and performing set operations.\n\n\nIn Python, sets are implemented using the set data structure, which is a built-in data type that stores unique elements. Sets are unordered collections of elements, and they do not allow duplicate values.\n# Create a set\ns = set([1, 2, 3, 4, 5])\n\n# Add an element to the set\ns.add(6)\n\n# Remove an element from the set\ns.remove(3)\n\n# Check if an element is in the set\nif 4 in s:\n    print(\"Element found in set\")\n\n\n\nSets support a variety of operations, including:\n\nUnion: Combines two sets to create a new set containing all unique elements from both sets.\nIntersection: Finds the common elements between two sets and creates a new set with those elements.\nDifference: Finds the elements that are in one set but not the other and creates a new set with those elements.\nSubset: Checks if one set is a subset of another set.\nSuperset: Checks if one set is a superset of another set.\n\n\n# Create two sets\ns1 = set([1, 2, 3, 4, 5])\ns2 = set([4, 5, 6, 7, 8])\n\n# Union of two sets\nunion_set = s1.union(s2)\n\n# Intersection of two sets\nintersection_set = s1.intersection(s2)\n\n# Difference of two sets\ndifference_set = s1.difference(s2)\n\n# Check if s1 is a subset of s2\nis_subset = s1.issubset(s2)\n\n# Check if s1 is a superset of s2\nis_superset = s1.issuperset(s2)\n\n\n\nThe time complexity of set operations is similar to hash table operations, with an time complexity of O(1) for search, insert, and delete operations. The space complexity of a set is O(n), where n is the number of elements in the set.\nUnion and intersection operations have a time complexity of O(n) in the worst case, where n is the number of elements in the larger set. The space complexity of set operations depends on the size of the input sets and the implementation of the set data structure.",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Minimum Spanning Trees"
+      "HASHMAPS",
+      "Sets"
     ]
   },
   {
-    "objectID": "datastructs/graphs_spanning.html#kruskals-algorithm",
-    "href": "datastructs/graphs_spanning.html#kruskals-algorithm",
-    "title": "Minimum Spanning Trees",
-    "section": "Kruskal’s Algorithm",
-    "text": "Kruskal’s Algorithm\nKruskal’s algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.\n\nAlgorithm Steps\n\nSort all the edges in non-decreasing order of their weight.\nInitialize an empty graph to store the MST.\nFor each edge in the sorted list of edges:\n\nIf adding the edge does not form a cycle in the MST, add it to the MST.\n\nRepeat step 3 until there are V-1 edges in the MST, where V is the number of vertices in the graph.\n\n\n\n\nKruskal’s Algorithm Visualization\n\n\nThe time complexity of Kruskal’s algorithm is O(E log E), where E is the number of edges in the graph.",
+    "objectID": "datastructs/heaps.html",
+    "href": "datastructs/heaps.html",
+    "title": "Heaps",
+    "section": "",
+    "text": "A heap is a binary tree with the following properties:\nThe heap property guarantees that the largest (in a max-heap) or smallest (in a min-heap) value is always at the root, and the tree maintains a specific order based on the type of heap.",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Minimum Spanning Trees"
+      "TREES",
+      "Heaps"
     ]
   },
   {
-    "objectID": "datastructs/graphs_spanning.html#prims-algorithm",
-    "href": "datastructs/graphs_spanning.html#prims-algorithm",
-    "title": "Minimum Spanning Trees",
-    "section": "Prim’s Algorithm",
-    "text": "Prim’s Algorithm\nPrim’s algorithm is another greedy algorithm that finds a minimum spanning tree for a connected, undirected graph. The algorithm builds the MST by starting at an arbitrary vertex and adding the next smallest edge that connects a vertex in the MST to a vertex outside the MST.\n\nAlgorithm Steps\n\nInitialize an empty graph to store the MST and a set to store visited vertices.\nChoose an arbitrary starting vertex and add it to the MST.\nWhile there are fewer than V vertices in the MST, where V is the number of vertices in the graph:\n\nFind the minimum-weight edge that connects a vertex in the MST to a vertex outside the MST.\nAdd the edge and the new vertex to the MST.\n\n\n\n\n\nPrim’s Algorithm Visualization\n\n\nThe time complexity of Prim’s algorithm is O(V^2) with an adjacency matrix representation and O(E log V) with an adjacency list representation, where V is the number of vertices and E is the number of edges in the graph.",
+    "objectID": "datastructs/heaps.html#priority-queues",
+    "href": "datastructs/heaps.html#priority-queues",
+    "title": "Heaps",
+    "section": "Priority Queues",
+    "text": "Priority Queues\nA priority queue is an abstract data type, often implemented using a heap, that allows elements to be inserted and extracted based on their priority.\nThe element with the highest priority is at the root of the heap (max-heap) or the element with the lowest priority is at the root of the heap (min-heap).\nPriority queues are commonly used in algorithms and applications where elements need to be processed based on their priority, such as task scheduling, Dijkstra’s algorithm, Prim’s algorithm, Huffman coding, and more.\nNote that the terms “max-priority queue” and “min-priority queue” are used interchangeably with “max-heap” and “min-heap,” respectively, when implementing priority queues using heaps.\n\n\n\n\nPlease note that priority queue are distinct from queues or stacks, which are first-in-first-out (FIFO) and last-in-first-out (LIFO) data structures, respectively.",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Minimum Spanning Trees"
+      "TREES",
+      "Heaps"
     ]
   },
   {
-    "objectID": "datastructs/graphs_spanning.html#applications-of-minimum-spanning-trees",
-    "href": "datastructs/graphs_spanning.html#applications-of-minimum-spanning-trees",
-    "title": "Minimum Spanning Trees",
-    "section": "Applications of Minimum Spanning Trees",
-    "text": "Applications of Minimum Spanning Trees\n\nNetwork Design: Finding the minimum cost network that connects all the nodes.\nCluster Analysis: Grouping related data points together based on similarity.\nApproximate Solutions: Providing near-optimal solutions to complex optimization problems.\nImage Segmentation: Dividing an image into regions based on pixel similarity.\nCircuit Design: Designing circuits with minimum wire length.\nRouting Algorithms: Finding the shortest path in a network.",
+    "objectID": "datastructs/heaps.html#heap-sort",
+    "href": "datastructs/heaps.html#heap-sort",
+    "title": "Heaps",
+    "section": "Heap Sort",
+    "text": "Heap Sort\nHeap sort is a sorting algorithm that uses a heap to sort an array. It involves converting the array into a heap using the heapify operation and then extracting the root element of the heap until the heap is empty.\nHeap sort involves the following steps:\n\nBuild Heap: Convert the array into a heap using the heapify operation.\nExtract Max/Min: Repeatedly extract the maximum (in a max-heap) or minimum (in a min-heap) element from the heap until the heap is empty.\nSort: The extracted elements form a sorted array.\n\n\n\n\n\n\nHeap sort has a time complexity of \\(O(\\text{n log n})\\) and is an in-place sorting algorithm with a space complexity of \\(O(1)\\).",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Minimum Spanning Trees"
+      "TREES",
+      "Heaps"
+    ]
+  },
+  {
+    "objectID": "datastructs/binarytree.html",
+    "href": "datastructs/binarytree.html",
+    "title": "Binary Tree",
+    "section": "",
+    "text": "Binary trees are a type of tree data structure in which each node has at most two children, referred to as the left child and the right child.",
+    "crumbs": [
+      "Home",
+      "TREES",
+      "Binary Tree"
+    ]
+  },
+  {
+    "objectID": "datastructs/binarytree.html#properties-of-a-binary-tree",
+    "href": "datastructs/binarytree.html#properties-of-a-binary-tree",
+    "title": "Binary Tree",
+    "section": "Properties of a Binary Tree",
+    "text": "Properties of a Binary Tree\nTrees have the following properties:\n\nA tree with \\(n\\) nodes has \\(n-1\\) edges.\nA tree with \\(n\\) nodes has \\(n - 1\\) edges because of its fundamental properties: it is a connected and acyclic graph.\nStarting with a single node and no edges, each additional node requires exactly one edge to connect it to the existing tree, ensuring connectivity without forming cycles. This process continues as the tree grows, with each new node adding exactly one edge. As a result, a tree with \\(n\\) nodes will always have \\(n - 1\\) edges.\n\n\n\nNodes (\\(n\\))\nEdges (\\(n-1\\))\n\n\n\n\n1\n0\n\n\n2\n1\n\n\n3\n2\n\n\n4\n3\n\n\n…\n…\n\n\nn\nn-1\n\n\n\nThis can also be proven by induction, where adding one node to a tree with \\(k\\) nodes (and \\(k - 1\\) edges) leads to \\(k\\) edges.\n\n\n\n\nThe maximum number of nodes at level \\(l\\) of a binary tree is \\(2^l\\)\nHere level is the number of edges from the root to the node. The level of the root is \\(0\\).\n\n\n\nLevel (\\(l\\))\nMaximum Nodes\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n4\n\n\n3\n8\n\n\n…\n…\n\n\n\\(l\\)\n\\(2^l\\)\n\n\n\nEach level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the maximum number of nodes at level \\(l\\) is \\(2^l\\).\n\n\n\n\nA tree with height \\(h\\) has at most \\(2^{h+1} - 1\\) nodes.\nEach level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the total number of nodes in a binary tree of height h is the sum of the nodes at each level, which is given by the formula \\(2^0 + 2^1 + ... + 2^(h-1) = 2^{h+1} -1\\) .\n\n\n\nHeight (\\(h\\))\nMaximum Nodes\n\n\n\n\n0\n1\n\n\n1\n3\n\n\n2\n7\n\n\n3\n15\n\n\n…\n…\n\n\n\\(h\\)\n\\(2^{h+1} - 1\\)\n\n\n\nSome textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the maximum number of nodes in a tree of height h is \\(2^h - 1\\) .\n\n\n\n\nThe height of a binary tree with \\(n\\) nodes is \\(log_2(n+1) - 1\\).\nThe height of a binary tree with \\(n\\) nodes is \\(log(n+1) - 1\\) . This formula calculates the height of a binary tree based on the number of nodes it contains. The height of a binary tree is the length of the longest path from the root to a leaf node. By using the formula \\(log(n+1) - 1\\) , we can determine the height of a binary tree given the number of nodes it contains.\n\n\n\nNodes (\\(n\\))\nHeight\n\n\n\n\n1\n0\n\n\n2\n1\n\n\n3\n1\n\n\n4\n2\n\n\n…\n…\n\n\nn\n\\(log_2(n+1) - 1\\)\n\n\n\nSome textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the height of a binary tree with \\(n\\) nodes is \\(log_2(n) + 1\\) .",
+    "crumbs": [
+      "Home",
+      "TREES",
+      "Binary Tree"
+    ]
+  },
+  {
+    "objectID": "datastructs/binarytree.html#traversals",
+    "href": "datastructs/binarytree.html#traversals",
+    "title": "Binary Tree",
+    "section": "Traversals",
+    "text": "Traversals\nTraversal is the process of visiting each node in the tree in a specific order.\nThere are two main types of tree traversal:\n\nBreadth-First Traversal (BFS): A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.\n\nBreadth-first traversal is also known as level-order traversal.\n\nDepth-First Traversal (DFS): A traversal algorithm that explores as far as possible along each branch before backtracking.\n\nDepth-first traversal includes three types of traversals: preorder, inorder, and postorder.\n\n\n\n\n\n\n\n\n\nLevel Order Traversal (Breath-First Traversal)\nLevel-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.\n\n \n\n\nPsuedocode for level order traversal:\n\n\nCreate a queue and enqueue the root node.\nWhile the queue is not empty:\n2.1. Dequeue a node from the queue.\n2.2. Process the node (e.g., print its value).\n2.3. Enqueue the left child of the node if it exists.\n2.4. Enqueue the right child of the node if it exists.\n\n\n\nThe time complexity of level order traversal is \\(O(n)\\), where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of level order traversal is \\(O(n)\\), where \\(n\\) is the number of nodes in the binary tree.\n\n\n\nPreorder Traversal (DFS: Root-Left-Right)\n\nVisit the root node first, then recursively do a preorder traversal of the left subtree, followed by a preorder traversal of the right subtree.\nThe preorder traversal of a binary tree is a depth-first traversal that visits the root node first, followed by the left subtree and then the right subtree.\nThe pseudocode for preorder traversal is as follows:\n\n\nVisit the root node.\nRecursively do a preorder traversal of the left subtree.\nRecursively do a preorder traversal of the right subtree.\n\n\n\n \n\n\nPreorder traversal has the following applications:\n\nExpression Tree: Preorder traversal is used to convert an infix expression to a prefix expression (also known as Polish notation). e.g., A + B to + A B. Prefix expressions are easier to evaluate using a stack-based algorithm.\nClone a Tree: Preorder traversal is used to clone a binary tree. This is because the root node is visited first, making it easy to create a copy of the tree and connecting the left and right subtrees.\n\n\n\n\nIn-order Traversal (DFS: Left-Root-Right)\n\nIn-order traversal is a depth-first traversal that visits the left subtree first, followed by the root node, and then the right subtree.\n\n \n\n\nThe pseudocode for in-order traversal is as follows:\n\n\nRecursively do an in-order traversal of the left subtree.\nVisit the root node.\nRecursively do an in-order traversal of the right subtree.\n\n\nIn-order traversal has the following applications:\n\nBinary Search Tree (BST): In-order traversal of a BST results in a sorted list of elements. This property is used to find the k-th smallest element in a BST.\nPostfix Expression and Evaluation: In-order traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., A + B to A B +. Postfix expressions are easier to evaluate using a stack-based algorithm.\n\n\n\n\nPost-order Traversal (DFS: Left-Right-Root)\n Recursively do a postorder traversal of the left subtree, followed by a postorder traversal of the right subtree, and then visit the root node.\n\n \n\n\nThe pseudocode for postorder traversal is as follows:\n\n\nRecursively do a postorder traversal of the left subtree.\nRecursively do a postorder traversal of the right subtree.\nVisit the root node.\n\n\nPostorder traversal has the following applications:\n\nExpression Tree: Postorder traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., A + B to A B +. Postfix expressions are easier to evaluate using a stack-based algorithm.\nDelete a Tree: Postorder traversal is used to delete a binary tree. This is because the root node is visited last, making it easy to delete the tree from the leaves up to the root.\n\nPostorder traversal is commonly used in expression trees to evaluate expressions.",
+    "crumbs": [
+      "Home",
+      "TREES",
+      "Binary Tree"
+    ]
+  },
+  {
+    "objectID": "datastructs/binarytree.html#operations",
+    "href": "datastructs/binarytree.html#operations",
+    "title": "Binary Tree",
+    "section": "Operations",
+    "text": "Operations\n\nInsertion\nInsertion is the process of adding a new node to the binary tree. The new node is inserted based on the value of the node and the properties of the binary tree.\nThe pseudocode for inserting a node in a binary tree that is not a binary search tree is as follows:\n\n\nCreate a new node with the given value.\nIf the root is null, set the new node as the root.\nElse, perform a level order traversal to find the first node that has an empty left or right child.\nInsert the new node as the left child if the left child is empty, otherwise insert it as the right child.\n\n\nThe time complexity of inserting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of inserting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\n\n\nDeletion\nDeletion is the process of removing a node from the binary tree. The node to be deleted is removed based on the value of the node and the properties of the binary tree.\nThe pseudocode for deleting a node in a binary tree is as follows:\n\n\nFind the node to be deleted using a level order traversal or any other traversal method.\nIf the node has no children, simply remove the node.\nIf the node has one child, replace the node with its child.\nIf the node has two children, find the inorder successor or predecessor of the node.\nReplace the node with the inorder successor or predecessor.\n\n\nThe time complexity of deleting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of deleting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\n\n\nSearching\nSearching is the process of finding a specific node in the binary tree based on its value.\nThe pseudocode for searching a node in a binary tree is as follows:\n\n\nPerform a level order traversal or any other traversal method to search for the node.\nIf the node is found, return the node.\nIf the node is not found, return null.\n\n\nThe time complexity of searching for a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of searching for a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.",
+    "crumbs": [
+      "Home",
+      "TREES",
+      "Binary Tree"
     ]
   },
   {
@@ -547,7 +619,7 @@
     "href": "basics/abstractions/oop1.html#dot-.-operator",
     "title": "User-defined Types",
     "section": "Dot . operator",
-    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```sextoumd https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
+    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```mhlavjld https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
   },
   {
     "objectID": "basics/abstractions/oop1.html#methods",
@@ -1920,202 +1992,181 @@
     ]
   },
   {
-    "objectID": "datastructs/binarytree.html",
-    "href": "datastructs/binarytree.html",
-    "title": "Binary Tree",
+    "objectID": "datastructs/graphs_kruskal.html",
+    "href": "datastructs/graphs_kruskal.html",
+    "title": "Kruskal’s Algorithm",
     "section": "",
-    "text": "Binary trees are a type of tree data structure in which each node has at most two children, referred to as the left child and the right child.",
+    "text": "Kruskal’s algorithm is a greedy algorithm that finds a minimum spanning tree for a connected graph. The algorithm builds the MST by adding edges one at a time, starting with the smallest edge and adding the next smallest edge that does not form a cycle in the tree.\n\n\n\n\nKruskal’s Algorithm Visualization\n\n\n\n\n  \n\n\nPsuedocode\nAlgorithm \\(\\text{Kruskal}(G)\\):\nInput: An undirected, weighted, connected graph \\(G\\) with \\(n\\) vertices and \\(m\\) edges\nOutput: A minimum spanning tree \\(T\\) for \\(G\\)\n\nSort all the edges in non-decreasing order of their weight.\nInitialize an empty graph \\(T\\) to store the MST.\nfor each edge \\(e\\) in the sorted list of edges do\n\nif adding edge \\(e\\) does not form a cycle in \\(T\\) then\n\nadd edge \\(e\\) to \\(T\\)\n\n\nreturn \\(T\\)\n\n\n\nAnalysis\nThe time complexity of Kruskal’s algorithm is O(E log E), where E is the number of edges in the graph.",
     "crumbs": [
       "Home",
-      "TREES",
-      "Binary Tree"
+      "GRAPHS",
+      "Minimum Spanning Trees",
+      "Kruskal's Algorithm"
     ]
   },
   {
-    "objectID": "datastructs/binarytree.html#properties-of-a-binary-tree",
-    "href": "datastructs/binarytree.html#properties-of-a-binary-tree",
-    "title": "Binary Tree",
-    "section": "Properties of a Binary Tree",
-    "text": "Properties of a Binary Tree\nTrees have the following properties:\n\nA tree with \\(n\\) nodes has \\(n-1\\) edges.\nA tree with \\(n\\) nodes has \\(n - 1\\) edges because of its fundamental properties: it is a connected and acyclic graph.\nStarting with a single node and no edges, each additional node requires exactly one edge to connect it to the existing tree, ensuring connectivity without forming cycles. This process continues as the tree grows, with each new node adding exactly one edge. As a result, a tree with \\(n\\) nodes will always have \\(n - 1\\) edges.\n\n\n\nNodes (\\(n\\))\nEdges (\\(n-1\\))\n\n\n\n\n1\n0\n\n\n2\n1\n\n\n3\n2\n\n\n4\n3\n\n\n…\n…\n\n\nn\nn-1\n\n\n\nThis can also be proven by induction, where adding one node to a tree with \\(k\\) nodes (and \\(k - 1\\) edges) leads to \\(k\\) edges.\n\n\n\n\nThe maximum number of nodes at level \\(l\\) of a binary tree is \\(2^l\\)\nHere level is the number of edges from the root to the node. The level of the root is \\(0\\).\n\n\n\nLevel (\\(l\\))\nMaximum Nodes\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n4\n\n\n3\n8\n\n\n…\n…\n\n\n\\(l\\)\n\\(2^l\\)\n\n\n\nEach level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the maximum number of nodes at level \\(l\\) is \\(2^l\\).\n\n\n\n\nA tree with height \\(h\\) has at most \\(2^{h+1} - 1\\) nodes.\nEach level of the tree doubles the number of nodes from the previous level. The root node is at level 0, and each subsequent level has twice as many nodes as the previous level. Therefore, the total number of nodes in a binary tree of height h is the sum of the nodes at each level, which is given by the formula \\(2^0 + 2^1 + ... + 2^(h-1) = 2^{h+1} -1\\) .\n\n\n\nHeight (\\(h\\))\nMaximum Nodes\n\n\n\n\n0\n1\n\n\n1\n3\n\n\n2\n7\n\n\n3\n15\n\n\n…\n…\n\n\n\\(h\\)\n\\(2^{h+1} - 1\\)\n\n\n\nSome textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the maximum number of nodes in a tree of height h is \\(2^h - 1\\) .\n\n\n\n\nThe height of a binary tree with \\(n\\) nodes is \\(log_2(n+1) - 1\\).\nThe height of a binary tree with \\(n\\) nodes is \\(log(n+1) - 1\\) . This formula calculates the height of a binary tree based on the number of nodes it contains. The height of a binary tree is the length of the longest path from the root to a leaf node. By using the formula \\(log(n+1) - 1\\) , we can determine the height of a binary tree given the number of nodes it contains.\n\n\n\nNodes (\\(n\\))\nHeight\n\n\n\n\n1\n0\n\n\n2\n1\n\n\n3\n1\n\n\n4\n2\n\n\n…\n…\n\n\nn\n\\(log_2(n+1) - 1\\)\n\n\n\nSome textbooks count the height of a tree as the number of nodes on the longest path from the root to a leaf node. In that case, the height of a binary tree with \\(n\\) nodes is \\(log_2(n) + 1\\) .",
-    "crumbs": [
-      "Home",
-      "TREES",
-      "Binary Tree"
-    ]
-  },
-  {
-    "objectID": "datastructs/binarytree.html#traversals",
-    "href": "datastructs/binarytree.html#traversals",
-    "title": "Binary Tree",
-    "section": "Traversals",
-    "text": "Traversals\nTraversal is the process of visiting each node in the tree in a specific order.\nThere are two main types of tree traversal:\n\nBreadth-First Traversal (BFS): A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.\n\nBreadth-first traversal is also known as level-order traversal.\n\nDepth-First Traversal (DFS): A traversal algorithm that explores as far as possible along each branch before backtracking.\n\nDepth-first traversal includes three types of traversals: preorder, inorder, and postorder.\n\n\n\n\n\n\n\n\n\nLevel Order Traversal (Breath-First Traversal)\nLevel-order traversal is a breadth-first search (BFS) algorithm that visits all the nodes at the present depth before moving on to the nodes at the next depth.\n\n \n\n\nPsuedocode for level order traversal:\n\n\nCreate a queue and enqueue the root node.\nWhile the queue is not empty:\n2.1. Dequeue a node from the queue.\n2.2. Process the node (e.g., print its value).\n2.3. Enqueue the left child of the node if it exists.\n2.4. Enqueue the right child of the node if it exists.\n\n\n\nThe time complexity of level order traversal is \\(O(n)\\), where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of level order traversal is \\(O(n)\\), where \\(n\\) is the number of nodes in the binary tree.\n\n\n\nPreorder Traversal (DFS: Root-Left-Right)\n\nVisit the root node first, then recursively do a preorder traversal of the left subtree, followed by a preorder traversal of the right subtree.\nThe preorder traversal of a binary tree is a depth-first traversal that visits the root node first, followed by the left subtree and then the right subtree.\nThe pseudocode for preorder traversal is as follows:\n\n\nVisit the root node.\nRecursively do a preorder traversal of the left subtree.\nRecursively do a preorder traversal of the right subtree.\n\n\n\n \n\n\nPreorder traversal has the following applications:\n\nExpression Tree: Preorder traversal is used to convert an infix expression to a prefix expression (also known as Polish notation). e.g., A + B to + A B. Prefix expressions are easier to evaluate using a stack-based algorithm.\nClone a Tree: Preorder traversal is used to clone a binary tree. This is because the root node is visited first, making it easy to create a copy of the tree and connecting the left and right subtrees.\n\n\n\n\nIn-order Traversal (DFS: Left-Root-Right)\n\nIn-order traversal is a depth-first traversal that visits the left subtree first, followed by the root node, and then the right subtree.\n\n \n\n\nThe pseudocode for in-order traversal is as follows:\n\n\nRecursively do an in-order traversal of the left subtree.\nVisit the root node.\nRecursively do an in-order traversal of the right subtree.\n\n\nIn-order traversal has the following applications:\n\nBinary Search Tree (BST): In-order traversal of a BST results in a sorted list of elements. This property is used to find the k-th smallest element in a BST.\nPostfix Expression and Evaluation: In-order traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., A + B to A B +. Postfix expressions are easier to evaluate using a stack-based algorithm.\n\n\n\n\nPost-order Traversal (DFS: Left-Right-Root)\n Recursively do a postorder traversal of the left subtree, followed by a postorder traversal of the right subtree, and then visit the root node.\n\n \n\n\nThe pseudocode for postorder traversal is as follows:\n\n\nRecursively do a postorder traversal of the left subtree.\nRecursively do a postorder traversal of the right subtree.\nVisit the root node.\n\n\nPostorder traversal has the following applications:\n\nExpression Tree: Postorder traversal is used to convert an infix expression to a postfix expression (also known as Reverse Polish notation). e.g., A + B to A B +. Postfix expressions are easier to evaluate using a stack-based algorithm.\nDelete a Tree: Postorder traversal is used to delete a binary tree. This is because the root node is visited last, making it easy to delete the tree from the leaves up to the root.\n\nPostorder traversal is commonly used in expression trees to evaluate expressions.",
-    "crumbs": [
-      "Home",
-      "TREES",
-      "Binary Tree"
-    ]
-  },
-  {
-    "objectID": "datastructs/binarytree.html#operations",
-    "href": "datastructs/binarytree.html#operations",
-    "title": "Binary Tree",
-    "section": "Operations",
-    "text": "Operations\n\nInsertion\nInsertion is the process of adding a new node to the binary tree. The new node is inserted based on the value of the node and the properties of the binary tree.\nThe pseudocode for inserting a node in a binary tree that is not a binary search tree is as follows:\n\n\nCreate a new node with the given value.\nIf the root is null, set the new node as the root.\nElse, perform a level order traversal to find the first node that has an empty left or right child.\nInsert the new node as the left child if the left child is empty, otherwise insert it as the right child.\n\n\nThe time complexity of inserting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of inserting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\n\n\nDeletion\nDeletion is the process of removing a node from the binary tree. The node to be deleted is removed based on the value of the node and the properties of the binary tree.\nThe pseudocode for deleting a node in a binary tree is as follows:\n\n\nFind the node to be deleted using a level order traversal or any other traversal method.\nIf the node has no children, simply remove the node.\nIf the node has one child, replace the node with its child.\nIf the node has two children, find the inorder successor or predecessor of the node.\nReplace the node with the inorder successor or predecessor.\n\n\nThe time complexity of deleting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of deleting a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\n\n\nSearching\nSearching is the process of finding a specific node in the binary tree based on its value.\nThe pseudocode for searching a node in a binary tree is as follows:\n\n\nPerform a level order traversal or any other traversal method to search for the node.\nIf the node is found, return the node.\nIf the node is not found, return null.\n\n\nThe time complexity of searching for a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.\nThe space complexity of searching for a node in a binary tree is \\(O(n)\\) in the worst case, where \\(n\\) is the number of nodes in the binary tree.",
-    "crumbs": [
-      "Home",
-      "TREES",
-      "Binary Tree"
-    ]
-  },
-  {
-    "objectID": "datastructs/heaps.html",
-    "href": "datastructs/heaps.html",
-    "title": "Heaps",
+    "objectID": "datastructs/graphs_spanning.html",
+    "href": "datastructs/graphs_spanning.html",
+    "title": "Minimum Spanning Trees",
     "section": "",
-    "text": "A heap is a binary tree with the following properties:\nThe heap property guarantees that the largest (in a max-heap) or smallest (in a min-heap) value is always at the root, and the tree maintains a specific order based on the type of heap.",
+    "text": "A spanning tree of a connected graph \\(G(V, E)\\) is a subgraph \\(G'\\), containing all the vertices \\(V\\) and a subset of the edges \\(E\\), that is a tree and connects all the vertices together.\nFormally, \\(G'(V, E')\\) is a spanning tree of \\(G(V, E)\\) if \\(E' \\subseteq E\\) and \\(G'\\) is a tree.\n\n\n\n\nThe number of edges in a spanning tree is always \\(V - 1\\), where \\(V\\) is the number of vertices in the graph.\nNote that the key distinction between trees and graphs is that trees are acyclic, while graphs can have cycles. Therefore, by definition, a spanning tree must be acyclic and connected (i.e., there is a path between every pair of vertices).\nSpanning Tree is not defined for disconnected graphs.\nNote that a graph can have multiple spanning trees, depending on which edges are included in the subgraph.",
     "crumbs": [
       "Home",
-      "TREES",
-      "Heaps"
+      "GRAPHS",
+      "Minimum Spanning Trees"
     ]
   },
   {
-    "objectID": "datastructs/heaps.html#priority-queues",
-    "href": "datastructs/heaps.html#priority-queues",
-    "title": "Heaps",
-    "section": "Priority Queues",
-    "text": "Priority Queues\nA priority queue is an abstract data type, often implemented using a heap, that allows elements to be inserted and extracted based on their priority.\nThe element with the highest priority is at the root of the heap (max-heap) or the element with the lowest priority is at the root of the heap (min-heap).\nPriority queues are commonly used in algorithms and applications where elements need to be processed based on their priority, such as task scheduling, Dijkstra’s algorithm, Prim’s algorithm, Huffman coding, and more.\nNote that the terms “max-priority queue” and “min-priority queue” are used interchangeably with “max-heap” and “min-heap,” respectively, when implementing priority queues using heaps.\n\n\n\n\nPlease note that priority queue are distinct from queues or stacks, which are first-in-first-out (FIFO) and last-in-first-out (LIFO) data structures, respectively.",
-    "crumbs": [
-      "Home",
-      "TREES",
-      "Heaps"
-    ]
-  },
-  {
-    "objectID": "datastructs/heaps.html#heap-sort",
-    "href": "datastructs/heaps.html#heap-sort",
-    "title": "Heaps",
-    "section": "Heap Sort",
-    "text": "Heap Sort\nHeap sort is a sorting algorithm that uses a heap to sort an array. It involves converting the array into a heap using the heapify operation and then extracting the root element of the heap until the heap is empty.\nHeap sort involves the following steps:\n\nBuild Heap: Convert the array into a heap using the heapify operation.\nExtract Max/Min: Repeatedly extract the maximum (in a max-heap) or minimum (in a min-heap) element from the heap until the heap is empty.\nSort: The extracted elements form a sorted array.\n\n\n\n\n\n\nHeap sort has a time complexity of \\(O(\\text{n log n})\\) and is an in-place sorting algorithm with a space complexity of \\(O(1)\\).",
-    "crumbs": [
-      "Home",
-      "TREES",
-      "Heaps"
-    ]
-  },
-  {
-    "objectID": "datastructs/sets.html",
-    "href": "datastructs/sets.html",
-    "title": "Sets",
+    "objectID": "datastructs/graphs_spanning.html#spanning-tree",
+    "href": "datastructs/graphs_spanning.html#spanning-tree",
+    "title": "Minimum Spanning Trees",
     "section": "",
-    "text": "A set is a collection of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are implemented using hash tables in many programming languages, which allows for fast search and retrieval of elements. Sets are useful for removing duplicates from a list, checking for the presence of an element, and performing set operations.\n\n\nIn Python, sets are implemented using the set data structure, which is a built-in data type that stores unique elements. Sets are unordered collections of elements, and they do not allow duplicate values.\n# Create a set\ns = set([1, 2, 3, 4, 5])\n\n# Add an element to the set\ns.add(6)\n\n# Remove an element from the set\ns.remove(3)\n\n# Check if an element is in the set\nif 4 in s:\n    print(\"Element found in set\")\n\n\n\nSets support a variety of operations, including:\n\nUnion: Combines two sets to create a new set containing all unique elements from both sets.\nIntersection: Finds the common elements between two sets and creates a new set with those elements.\nDifference: Finds the elements that are in one set but not the other and creates a new set with those elements.\nSubset: Checks if one set is a subset of another set.\nSuperset: Checks if one set is a superset of another set.\n\n\n# Create two sets\ns1 = set([1, 2, 3, 4, 5])\ns2 = set([4, 5, 6, 7, 8])\n\n# Union of two sets\nunion_set = s1.union(s2)\n\n# Intersection of two sets\nintersection_set = s1.intersection(s2)\n\n# Difference of two sets\ndifference_set = s1.difference(s2)\n\n# Check if s1 is a subset of s2\nis_subset = s1.issubset(s2)\n\n# Check if s1 is a superset of s2\nis_superset = s1.issuperset(s2)\n\n\n\nThe time complexity of set operations is similar to hash table operations, with an time complexity of O(1) for search, insert, and delete operations. The space complexity of a set is O(n), where n is the number of elements in the set.\nUnion and intersection operations have a time complexity of O(n) in the worst case, where n is the number of elements in the larger set. The space complexity of set operations depends on the size of the input sets and the implementation of the set data structure.",
+    "text": "A spanning tree of a connected graph \\(G(V, E)\\) is a subgraph \\(G'\\), containing all the vertices \\(V\\) and a subset of the edges \\(E\\), that is a tree and connects all the vertices together.\nFormally, \\(G'(V, E')\\) is a spanning tree of \\(G(V, E)\\) if \\(E' \\subseteq E\\) and \\(G'\\) is a tree.\n\n\n\n\nThe number of edges in a spanning tree is always \\(V - 1\\), where \\(V\\) is the number of vertices in the graph.\nNote that the key distinction between trees and graphs is that trees are acyclic, while graphs can have cycles. Therefore, by definition, a spanning tree must be acyclic and connected (i.e., there is a path between every pair of vertices).\nSpanning Tree is not defined for disconnected graphs.\nNote that a graph can have multiple spanning trees, depending on which edges are included in the subgraph.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Minimum Spanning Trees"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_spanning.html#minimum-spanning-tree",
+    "href": "datastructs/graphs_spanning.html#minimum-spanning-tree",
+    "title": "Minimum Spanning Trees",
+    "section": "Minimum Spanning Tree",
+    "text": "Minimum Spanning Tree\nA minimum spanning tree (MST) of a connected graph is a subgraph that is a tree and connects all the vertices together with the minimum possible total edge weight.\nFormally, MST of a graph \\(G(V, E)\\) is a spanning tree \\(G'(V, E')\\) such that the sum of the weights of the edges \\(\\sum_{e \\in E'} w(e)\\) is minimized.\nFor a graph with $ |V| = n $ vertices, the MST will have $ n - 1 $ edges.\nMST is not unique, and a graph can have multiple MSTs if there are multiple edges with the same weight.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Minimum Spanning Trees"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_spanning.html#cut-property",
+    "href": "datastructs/graphs_spanning.html#cut-property",
+    "title": "Minimum Spanning Trees",
+    "section": "Cut Property",
+    "text": "Cut Property\nThe cut property is a key property that helps in understanding the construction of minimum spanning trees.\nGiven a graph \\(G(V, E)\\) and a partition of the vertices \\(V\\) into two sets \\(S_1\\) and \\(S_2\\), a cut is a set of edges that have one endpoint in \\(S_1\\) and the other endpoint in \\(S_2\\).\n\n\n\n\nFor any cut \\((S_1, S_2)\\) of the graph, if an edge \\(e\\) has the minimum weight among all the edges that cross the cut, then this edge \\(e\\) must be part of the minimum spanning tree of the graph.\n\n\n\n\nThis property is crucial in the design of algorithms for finding minimum spanning trees, such as Kruskal’s algorithm and Prim’s algorithm.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Minimum Spanning Trees"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_spanning.html#applications",
+    "href": "datastructs/graphs_spanning.html#applications",
+    "title": "Minimum Spanning Trees",
+    "section": "Applications",
+    "text": "Applications\n\nNetwork Design and Routing: Finding the minimum cost network that connects all the nodes. For example, laying cables to connect all houses with minimum cost or designing a circuit with minimum cost that connects all components.\n\n\n \n\n\n\nCluster Analysis and Image Segmentation: The minimum spanning tree can be used to identify clusters of data points, where the edges represent say euclidean distance between points. The tree can be “cut” at high cost edges to get desired number of clusters.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Minimum Spanning Trees"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html",
+    "href": "datastructs/hash.html",
+    "title": "Hashing",
+    "section": "",
+    "text": "Hashing\nHashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table.\nHow it works:\n\nHash Function: You provide your data items into the hash function.\nHash Code: The hash function crunches the data and give a unique hash code.\nHash Table: The hash code then points you to a specific location within the hash table.\n\nA hash table is also known as a hash map. It is a data structure that stores key-value pairs. It uses a hash function to map keys to a fixed-size array, called a hash table. This allows in faster search, insertion, and deletion operations.\n\n\nHash Function\nThe hash function is a function that takes a key and returns an index into the hash table. The goal of a hash function is to distribute keys evenly across the hash table, minimizing collisions (when two keys map to the same index).\nCommon hash functions include:\n\nDivision Method: Key % Hash Table Size\nMultiplication Method: (Key * Constant) % Hash Table Size\nUniversal Hashing: A family of hash functions designed to minimize collisions\n\n\n\nHash Collision\nA hash collision occurs when two different keys map to the same index in a hash table. This can happen even with a good hash function, especially if the hash table is full or the keys are similar.\nCauses of Hash Collisions:\n\nPoor Hash Function: A hash function that does not distribute keys evenly across the hash table can lead to more collisions.\nHigh Load Factor: A high load factor (ratio of keys to hash table size) increases the probability of collisions.\nSimilar Keys: Keys that are similar in value or structure are more likely to collide.\n\n\n\nCollision Resolution Techniques\nThere are two types of collision resolution techniques:\n\nOpen Addressing:\n\nLinear Probing: Search for an empty slot sequentially\nQuadratic Probing: Search for an empty slot using a quadratic function\n\n\n\n\n\n\nClosed Addressing:\n\nChaining: Store colliding keys in a linked list or binary search tree at each index\nCuckoo Hashing: Use multiple hash functions to distribute keys\n\n\n\n\n\nHash tables are used in a wide variety of applications, including:\nDatabases: Storing and retrieving data based on unique keys Caching: Storing frequently accessed data for faster retrieval Symbol Tables: Mapping identifiers to their values in programming languages Network Routing: Determining the best path for data packets",
     "crumbs": [
       "Home",
       "HASHMAPS",
-      "Sets"
+      "Hashing"
     ]
   },
   {
-    "objectID": "datastructs/sets.html#sets",
-    "href": "datastructs/sets.html#sets",
-    "title": "Sets",
+    "objectID": "datastructs/hashmaps.html",
+    "href": "datastructs/hashmaps.html",
+    "title": "HASHMAPS",
     "section": "",
-    "text": "A set is a collection of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are implemented using hash tables in many programming languages, which allows for fast search and retrieval of elements. Sets are useful for removing duplicates from a list, checking for the presence of an element, and performing set operations.\n\n\nIn Python, sets are implemented using the set data structure, which is a built-in data type that stores unique elements. Sets are unordered collections of elements, and they do not allow duplicate values.\n# Create a set\ns = set([1, 2, 3, 4, 5])\n\n# Add an element to the set\ns.add(6)\n\n# Remove an element from the set\ns.remove(3)\n\n# Check if an element is in the set\nif 4 in s:\n    print(\"Element found in set\")\n\n\n\nSets support a variety of operations, including:\n\nUnion: Combines two sets to create a new set containing all unique elements from both sets.\nIntersection: Finds the common elements between two sets and creates a new set with those elements.\nDifference: Finds the elements that are in one set but not the other and creates a new set with those elements.\nSubset: Checks if one set is a subset of another set.\nSuperset: Checks if one set is a superset of another set.\n\n\n# Create two sets\ns1 = set([1, 2, 3, 4, 5])\ns2 = set([4, 5, 6, 7, 8])\n\n# Union of two sets\nunion_set = s1.union(s2)\n\n# Intersection of two sets\nintersection_set = s1.intersection(s2)\n\n# Difference of two sets\ndifference_set = s1.difference(s2)\n\n# Check if s1 is a subset of s2\nis_subset = s1.issubset(s2)\n\n# Check if s1 is a superset of s2\nis_superset = s1.issuperset(s2)\n\n\n\nThe time complexity of set operations is similar to hash table operations, with an time complexity of O(1) for search, insert, and delete operations. The space complexity of a set is O(n), where n is the number of elements in the set.\nUnion and intersection operations have a time complexity of O(n) in the worst case, where n is the number of elements in the larger set. The space complexity of set operations depends on the size of the input sets and the implementation of the set data structure.",
+    "text": "Hashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table. Hash tables are used in a wide variety of applications, including databases, caching systems, and symbol tables.\n\n\n\n\nHash sets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\n\nTOC {:toc}\n\n\n\nHash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
     "crumbs": [
       "Home",
-      "HASHMAPS",
-      "Sets"
+      "HASHMAPS"
     ]
   },
   {
-    "objectID": "datastructs/graphs_bellmanford.html",
-    "href": "datastructs/graphs_bellmanford.html",
-    "title": "Bellman-Ford Algorithm",
+    "objectID": "datastructs/hashmaps.html#hash-table",
+    "href": "datastructs/hashmaps.html#hash-table",
+    "title": "HASHMAPS",
     "section": "",
-    "text": "Dijkstra’s algorithm cannot handle negative weights because it assumes that once a node is reached with the shortest possible distance, there’s no need to revisit or update that distance later. This assumption holds true for graphs with only non-negative edge weights but fails when negative weights are present.\nTo handle graphs with negative weights, the Bellman-Ford algorithm is typically used. The Bellman-Ford algorithm can also be used for graphs with positive edges (both directed and undirected), like we can with Dijkstra’s algorithm, but Dijkstra’s algorithm is preferred in such cases because it is faster.\nUnlike Dijkstra’s algorithm, Bellman-Ford doesn’t rely on the greedy process of visiting each node in order of the current shortest known distance. Instead, Bellman-Ford performs multiple passes to “relax” each edge, ensuring that it correctly updates the shortest path distances even in the presence of negative weights. It also detects negative cycles, making it more robust for such cases.",
+    "text": "Hash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Shortest Path",
-      "Bellman-Ford Algorithm"
+      "HASHMAPS"
     ]
   },
   {
-    "objectID": "datastructs/graphs_bellmanford.html#pseudocode",
-    "href": "datastructs/graphs_bellmanford.html#pseudocode",
-    "title": "Bellman-Ford Algorithm",
-    "section": "Pseudocode",
-    "text": "Pseudocode\n\nSet initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.\nFor each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.\nCheck all edges (step 2) \\(V−1\\) times. This is as many times as there are vertices (\\(V\\)), minus one.\nOptional: Check for negative cycles. This will be explained in better detail later.",
-    "crumbs": [
-      "Home",
-      "GRAPHS",
-      "Shortest Path",
-      "Bellman-Ford Algorithm"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs_bellmanford.html#negative-cycles",
-    "href": "datastructs/graphs_bellmanford.html#negative-cycles",
-    "title": "Bellman-Ford Algorithm",
-    "section": "Negative Cycles",
-    "text": "Negative Cycles\nUsing the Bellman-Ford algorithm on a graph with negative cycles will not produce a result of shortest paths because in a negative cycle we can always go one more round and get a shorter path.\nA negative cycle is a path we can follow in circles, where the sum of the edge weights is negative.\nLuckily, the Bellman-Ford algorithm can be implemented to safely detect and report the presence of negative cycles.",
-    "crumbs": [
-      "Home",
-      "GRAPHS",
-      "Shortest Path",
-      "Bellman-Ford Algorithm"
-    ]
-  },
-  {
-    "objectID": "datastructs/graphs_bellmanford.html#pseudocode-1",
-    "href": "datastructs/graphs_bellmanford.html#pseudocode-1",
-    "title": "Bellman-Ford Algorithm",
-    "section": "Pseudocode",
-    "text": "Pseudocode\nThe Bellman-Ford algorithm is best suited to find the shortest paths in a directed graph, with one or more negative edge weights, from the source vertex to all other vertices.\nIt does so by repeatedly checking all the edges in the graph for shorter paths, as many times as there are vertices in the graph (minus 1).\nBellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.\nThe steps of the Bellman-Ford algorithm are as follows:\n\nInitialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.\n‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.\nRelax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.\nCheck for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.\n\n\n\n\nThe time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.",
-    "crumbs": [
-      "Home",
-      "GRAPHS",
-      "Shortest Path",
-      "Bellman-Ford Algorithm"
-    ]
-  },
-  {
-    "objectID": "datastructs/graph_paths.html",
-    "href": "datastructs/graph_paths.html",
-    "title": "Shortest Path",
+    "objectID": "datastructs/trees.html",
+    "href": "datastructs/trees.html",
+    "title": "TREES",
     "section": "",
-    "text": "Path finding is the process of finding a path from a starting vertex to a target vertex in a graph. There are several algorithms for path finding, including Dijkstra’s algorithm, A* search, and Floyd-Warshall algorithm.\nInputs to path finding algorithms typically include: a graph, a starting vertex, and a target vertex.\nOutput is the shortest path between the starting and target vertices.\nFormally, a path is a sequence of vertices in a graph such that each vertex is adjacent to the next vertex in the sequence.\nThe length of a path is the sum of the weights of the edges between the vertices in the path.\nGenerally, path finding algorithms can be classified into two categories:",
+    "text": "Trees are one of the most important data structures in computer science. They are a non-linear data structure that store data in a hierarchical manner.\nTrees offer efficient insertion, deletion, and search operations, making them a versatile data structure for a wide range of applications.\nTrees are ubiquitous in computer science and are used for a wide variety of applications, including file systems, parsing languages, and artificial intelligence to plan out strategies and make decisions.",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Shortest Path"
+      "TREES"
     ]
   },
   {
-    "objectID": "datastructs/graph_paths.html#bfs-unweighted-graphs",
-    "href": "datastructs/graph_paths.html#bfs-unweighted-graphs",
-    "title": "Shortest Path",
-    "section": "BFS: unweighted graphs",
-    "text": "BFS: unweighted graphs\nIn an unweighted graph, all edges have the same weight, typically 1.\nIn case of an unweighted graph, the shortest path found by BFS is guaranteed to be the shortest path in terms of the number of edges.",
+    "objectID": "datastructs/trees.html#terminology",
+    "href": "datastructs/trees.html#terminology",
+    "title": "TREES",
+    "section": "Terminology",
+    "text": "Terminology\nThe tree data structure come with a non-trivial amount of terminology. Here are some of the key terms:\n\nNodes: The individual elements in a tree that store data. These are depicted as circles in the diagram. They are very similar to linked list nodes.\nEdges: The connections between nodes. These are depicted as lines in the diagram.\nRoot Node: The topmost node in a tree. It is the only node in the tree that has no parent.\n\n\n\n\n\n\nParent Node: A node that has child nodes. Each node in the tree, except the root node, has exactly one parent node.\nChild Node: A node that is connected to a parent node. Each node in the tree can have zero or more children.\nLeaf: Nodes that have no child nodes. They are the nodes at the bottom of the tree.\nPath: A sequence of nodes connected by edges.\nHeight of a tree: The length of the longest path from the root to a leaf. Length is measured in the number of edges.\nHeight of a node: The length of the longest path from the node to a leaf. Length is measured in the number of edges.\nDepth: The length of the path from the root to a node. Length is measured in the number of edges.\nLevel: The depth of a node in the tree. The root node is at level 0.\nSubtree: A tree that is part of a larger tree. It consists of a node and all its descendants.\nInternal Node: A node that has at least one child node. Essentially, any node that is not a leaf.\nExternal Node: A node that has no child nodes. Essentially, a leaf node.\nSibling: Nodes that share the same parent.\nAncestors of a node: A node that is on the upward path a given node to the root.\nDescendant of a node: A node that is on the path from a given node to a leaf.",
     "crumbs": [
       "Home",
-      "GRAPHS",
-      "Shortest Path"
+      "TREES"
     ]
   },
   {
-    "objectID": "datastructs/graph_problems.html",
-    "href": "datastructs/graph_problems.html",
-    "title": "Traversals",
-    "section": "",
-    "text": "A cycle in a graph is a path that starts and ends at the same vertex. Detecting cycles in a graph is an important problem in graph theory and has many applications, such as deadlock detection in operating systems, cycle detection in resource allocation, and detecting negative cycles in financial transactions.\n\n\nTo detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph."
+    "objectID": "datastructs/trees.html#types-of-trees",
+    "href": "datastructs/trees.html#types-of-trees",
+    "title": "TREES",
+    "section": "Types of Trees",
+    "text": "Types of Trees\nThere are many different types of trees, each with its own unique properties and characteristics. Here we are focusing on types of trees based on the number of children each node can have.\nNote that we are going the following mathematical notation for trees:\n\n\\(n\\) to represent the number of nodes in the tree,\n\\(N\\) to represent the maximum number of children each node can have\n\\(h\\) to represent the height of the tree.\n\n\n\n\n\nThe most common types of trees Binary trees that have at most two children per node. Binary trees are further classified into different types based on their properties.\n\n\n\n\nFull Tree\nAn \\(N\\)-ary tree in which every node has either zero or \\(N\\) children.\nComplete Tree\nAn \\(N\\)-ary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.\nDegenerate Tree\nA tree in which each parent node has only one child node. This is essentially a linked list.\nPerfect Tree\nAn \\(N\\)-ary tree in which all interior nodes have \\(N\\) children and all leaves have the same depth or same level.\nBalanced Tree\nA \\(N\\)-ary tree in which the heights of all the subtrees of each node differ by at most one.",
+    "crumbs": [
+      "Home",
+      "TREES"
+    ]
   },
   {
-    "objectID": "datastructs/graph_problems.html#cycle-detection-in-directed-graphs",
-    "href": "datastructs/graph_problems.html#cycle-detection-in-directed-graphs",
-    "title": "Traversals",
+    "objectID": "datastructs/trees.html#properties-of-trees",
+    "href": "datastructs/trees.html#properties-of-trees",
+    "title": "TREES",
+    "section": "Properties of Trees",
+    "text": "Properties of Trees\nTrees have the following properties:\n\nTree Property: A tree with \\(n\\) nodes has \\(n-1\\) edges.\nThe number of edges in a tree is always one less than the number of nodes.\nThis is because each node, except the root node, has exactly one parent node.\nFull Tree Property: An N-ary tree with height \\(h\\) has at most \\(N^h\\) nodes.\nA full tree is a tree in which each node has exactly \\(N\\) children.\nHeight Property: The height of an N-ary tree with \\(n\\) nodes is \\(\\log_N(n+1) - 1\\).\nThe height of a tree is the length of the longest path from the root to a leaf.",
+    "crumbs": [
+      "Home",
+      "TREES"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_prim.html",
+    "href": "datastructs/graphs_prim.html",
+    "title": "Prim-Jarník Algorithm",
     "section": "",
-    "text": "To detect cycles in a directed graph, we can use the Depth-First Search (DFS) algorithm. The idea is to maintain a boolean array visited to keep track of the vertices visited during the DFS traversal. If we encounter a vertex that is already visited and is not the parent of the current vertex, then there is a cycle in the graph."
+    "text": "Prim’s algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph.\nThe algorithm builds the MST by:\nThe main idea is similar to that of Dijkstra’s algorithm.\nIn the Prim-Jarník algorithm, we grow a minimum spanning tree from a single cluster starting from some “root” vertex s.\nWe will begin with some vertex \\(s\\), defining the initial “cloud” of vertices \\(C\\).\nThen, in each iteration, we choose a minimum-weight edge \\(e = (u, v)\\), connecting \\(a\\) vertex \\(u\\) in the cloud \\(C\\) to a vertex \\(v\\) outside of \\(C\\).\nThe vertex v is then brought into the cloud C and the process is repeated until a spanning tree is formed. Again, the crucial fact about minimum spanning trees comes into play, for by always choosing the smallest-weight edge joining a vertex inside C to one outside C, we are assured of always adding a valid edge to the MST.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Minimum Spanning Trees",
+      "Prim-Jarník Algorithm"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_prim.html#analysis",
+    "href": "datastructs/graphs_prim.html#analysis",
+    "title": "Prim-Jarník Algorithm",
+    "section": "Analysis",
+    "text": "Analysis\nThe time complexity of Prim’s algorithm is \\(O(V^2)\\) with an adjacency matrix representation and \\(O(E log V)\\) with an adjacency list representation, where \\(V\\) is the number of vertices and \\(E\\) is the number of edges in the graph.\nThe implementation issues for the Prim-Jarník algorithm are similar to those for Dijkstra’s algorithm, relying on an adaptable priority queue \\(Q\\). We initially perform \\(n\\) insertions into \\(Q\\), later perform \\(n\\) extract-min operations, and may update a total of \\(m\\) priorities as part of the algorithm.\nThose steps are the primary contributions to the overall running time.\nWith a heap-based priority queue, each operation runs in \\(O(log n)\\) time, and the overall time for the algorithm is \\(O((n+m)logn)\\), which is \\(O(mlogn)\\) for a connected graph.\nAlternatively, we can achieve \\(O(n^2)\\) running time by using an unsorted list as a priority queue.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Minimum Spanning Trees",
+      "Prim-Jarník Algorithm"
+    ]
   },
   {
     "objectID": "datastructs/graph_traversals.html",

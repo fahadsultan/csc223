@@ -102,7 +102,10 @@ website:
               contents:
                 - datastructs/graph_dijkstra.qmd
                 - datastructs/graphs_bellmanford.qmd
-            - datastructs/graphs_spanning.qmd
+            - section: datastructs/graphs_spanning.qmd
+              contents:
+                - datastructs/graphs_prim.qmd
+                - datastructs/graphs_kruskal.qmd
         - section: datastructs/hashmaps.qmd
           contents:
             - datastructs/hash.qmd
