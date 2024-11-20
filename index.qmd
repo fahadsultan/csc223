@@ -5,7 +5,7 @@ toc: true
 
 Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾
 
-I am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!
+I am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you! 
 
 From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️
 

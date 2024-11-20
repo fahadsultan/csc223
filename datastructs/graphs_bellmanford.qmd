@@ -30,13 +30,14 @@ The steps of the Bellman-Ford algorithm are as follows:
 
 2. 'Relax' all edges $V-1$ times, where V is the number of vertices in the graph.
 
-    For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.
+    For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter. 
 
     Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.
 
 3. Check all edges (step 2) $V−1$ times. This is as many times as there are vertices ($V$), minus one.
 
 4. Optional: Check for negative cycles. This will be explained in better detail later. Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.
+
 
 ## Negative Cycles
 
@@ -49,3 +50,21 @@ Luckily, the Bellman-Ford algorithm can be implemented to safely detect and repo
 <center><img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)"></center>
 
 The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.
+
+## Example 
+
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175809761017/Bellman-Ford-Algorithm-1.webp" width="100%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175809891033/Bellman-Ford-Algorithm-2.webp" width="100%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175810019967/Bellman-Ford-Algorithm-3.webp" width="100%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175810146006/Bellman-Ford-Algorithm-4.webp" width="100%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175810272503/Bellman-Ford-Algorithm-5.webp" width="100%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175810398399/Bellman-Ford-Algorithm-6.webp" width="100%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20241016175810525185/Bellman-Ford-Algorithm-7.webp" width="100%" style="filter:invert(1)">
+</center>
+
+## Analysis 
+
+The time complexity of Bellman-Ford algorithm is O(V*E), where V is the number of vertices and E is the number of edges in the graph.
+
+The space complexity of Bellman-Ford algorithm is O(V), where V is the number of vertices in the graph.
