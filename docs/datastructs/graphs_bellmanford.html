@@ -586,7 +586,6 @@ window.Quarto = {
   <ul>
   <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link active" data-scroll-target="#pseudocode">Pseudocode</a></li>
   <li><a href="#negative-cycles" id="toc-negative-cycles" class="nav-link" data-scroll-target="#negative-cycles">Negative Cycles</a></li>
-  <li><a href="#pseudocode-1" id="toc-pseudocode-1" class="nav-link" data-scroll-target="#pseudocode-1">Pseudocode</a></li>
   </ul>
 </nav>
     </div>
@@ -624,11 +623,17 @@ window.Quarto = {
 </section>
 <section id="pseudocode" class="level2">
 <h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
+<p>The Bellman-Ford algorithm is best suited to find the shortest paths in a directed graph, with one or more negative edge weights, from the source vertex to all other vertices.</p>
+<p>It does so by repeatedly checking all the edges in the graph for shorter paths, as many times as there are vertices in the graph (minus 1).</p>
+<p>Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.</p>
+<p>The steps of the Bellman-Ford algorithm are as follows:</p>
 <ol type="1">
-<li>Set initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.</li>
-<li>For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.</li>
-<li>Check all edges (step 2) <span class="math inline">\(V−1\)</span> times. This is as many times as there are vertices (<span class="math inline">\(V\)</span>), minus one.</li>
-<li>Optional: Check for negative cycles. This will be explained in better detail later.</li>
+<li><p>Set initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.</p></li>
+<li><p>‘Relax’ all edges <span class="math inline">\(V-1\)</span> times, where V is the number of vertices in the graph.</p>
+<p>For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.</p>
+<p>Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.</p></li>
+<li><p>Check all edges (step 2) <span class="math inline">\(V−1\)</span> times. This is as many times as there are vertices (<span class="math inline">\(V\)</span>), minus one.</p></li>
+<li><p>Optional: Check for negative cycles. This will be explained in better detail later. Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.</p></li>
 </ol>
 </section>
 <section id="negative-cycles" class="level2">
@@ -636,19 +641,6 @@ window.Quarto = {
 <p>Using the Bellman-Ford algorithm on a graph with negative cycles will not produce a result of shortest paths because in a negative cycle we can always go one more round and get a shorter path.</p>
 <p>A <strong><em>negative cycle</em></strong> is a path we can follow in circles, where the sum of the edge weights is negative.</p>
 <p>Luckily, the Bellman-Ford algorithm can be implemented to safely detect and report the presence of negative cycles.</p>
-</section>
-<section id="pseudocode-1" class="level2">
-<h2 class="anchored" data-anchor-id="pseudocode-1">Pseudocode</h2>
-<p>The Bellman-Ford algorithm is best suited to find the shortest paths in a directed graph, with one or more negative edge weights, from the source vertex to all other vertices.</p>
-<p>It does so by repeatedly checking all the edges in the graph for shorter paths, as many times as there are vertices in the graph (minus 1).</p>
-<p>Bellman-Ford algorithm is a single-source shortest path algorithm that can handle graphs with negative edge weights.</p>
-<p>The steps of the Bellman-Ford algorithm are as follows:</p>
-<ol type="1">
-<li><p>Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.</p></li>
-<li><p>‘Relax’ all edges V-1 times, where V is the number of vertices in the graph.</p>
-<p>Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.</p></li>
-<li><p>Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.</p></li>
-</ol>
 <center>
 <img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)">
 </center>

@@ -18,22 +18,6 @@ Worst case scenario the shortest path between two vertices in a graph with V ver
 
 ## Pseudocode
 
-1. Set initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.
-2. For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.
-3. Check all edges (step 2) $V−1$ times. This is as many times as there are vertices ($V$), minus one.
-4. Optional: Check for negative cycles. This will be explained in better detail later.
-
-## Negative Cycles
-
-Using the Bellman-Ford algorithm on a graph with negative cycles will not produce a result of shortest paths because in a negative cycle we can always go one more round and get a shorter path.
-
-A **_negative cycle_** is a path we can follow in circles, where the sum of the edge weights is negative.
-
-Luckily, the Bellman-Ford algorithm can be implemented to safely detect and report the presence of negative cycles.
-
-
-## Pseudocode
-
 The Bellman-Ford algorithm is best suited to find the shortest paths in a directed graph, with one or more negative edge weights, from the source vertex to all other vertices.
 
 It does so by repeatedly checking all the edges in the graph for shorter paths, as many times as there are vertices in the graph (minus 1).
@@ -42,13 +26,25 @@ Bellman-Ford algorithm is a single-source shortest path algorithm that can handl
 
 The steps of the Bellman-Ford algorithm are as follows:
 
-1. Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.
+1. Set initial distance to zero for the source vertex, and set initial distances to infinity for all other vertices.
 
-2. 'Relax' all edges V-1 times, where V is the number of vertices in the graph.
- 
+2. 'Relax' all edges $V-1$ times, where V is the number of vertices in the graph.
+
+    For each edge, check if a shorter distance can be calculated, and update the distance if the calculated distance is shorter.
+
     Relax an edge (u, v) means to update the distance to vertex v if the distance to vertex u plus the weight of edge (u, v) is less than the current distance to vertex v.
 
-3. Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.
+3. Check all edges (step 2) $V−1$ times. This is as many times as there are vertices ($V$), minus one.
+
+4. Optional: Check for negative cycles. This will be explained in better detail later. Check for negative weight cycles by relaxing all edges one more time. If any distance is updated in this step, then the graph contains a negative weight cycle.
+
+## Negative Cycles
+
+Using the Bellman-Ford algorithm on a graph with negative cycles will not produce a result of shortest paths because in a negative cycle we can always go one more round and get a shorter path.
+
+A **_negative cycle_** is a path we can follow in circles, where the sum of the edge weights is negative.
+
+Luckily, the Bellman-Ford algorithm can be implemented to safely detect and report the presence of negative cycles.
 
 <center><img src="https://raw.githubusercontent.com/redspider110/blog-images/master/_images/0099-spt-bellman-ford-negative-weight.gif" width="50%" style="filter:invert(1)"></center>
 
