@@ -1,0 +1,41 @@
+---
+title: "Topological Sorting"
+toc: true
+---
+
+Topological sorting is a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$ from vertex $u$ to vertex $v$, vertex $u$ _"comes before"_ vertex $v$ in the ordering.
+
+By comes before, we mean that there is a directed path from $u$ to $v$ in the graph and no directed path from $v$ to $u$.
+
+<center><img src="https://i.imgur.com/Q3MA6dZ.png" width="100%" style="filter:invert(1)"></center>
+<br/>
+
+Topological sorting is used in many applications, such as task scheduling, data processing, and resolving dependencies between tasks.
+
+Topological sorting is not possible if the graph has a cycle, as there is no way to order the vertices in a linear fashion without violating the edge directions.
+
+<!-- 
+<center><img src="https://miro.medium.com/v2/resize:fit:1178/1*0M2zPLlRPJXb_Rhn5l-Gvg.png" width="70%" style="filter:invert(1)"></center> -->
+
+Topological sorting is not unique, as there can be multiple valid orderings of the vertices in a DAG.
+
+## Applications
+
+Topological sorting has many practical applications, including:
+
+- **Task Scheduling**: In project management, tasks can be represented as vertices in a graph, with directed edges indicating dependencies between tasks. Topological sorting can be used to determine the order in which tasks should be executed to meet all dependencies.
+
+- **Course Prerequisites**: In academic settings, courses can be represented as vertices, with directed edges indicating prerequisites between courses. Topological sorting can be used to determine the order in which courses should be taken to satisfy all prerequisites.
+
+<center><img src="../assets/prereqs.png" width="70%" ></center>
+
+<br/>
+
+- **Data Processing**: In data processing pipelines, tasks can be represented as vertices, with directed edges indicating the flow of data between tasks. Topological sorting can be used to determine the order in which tasks should be executed to ensure that data is processed correctly.
+
+- **Package Dependency Resolution**: In software development, packages or modules can be represented as vertices, with directed edges indicating dependencies between packages. Topological sorting can be used to determine the order in which packages should be installed to satisfy all dependencies.
+
+<center><img src="https://miro.medium.com/v2/resize:fit:1178/1*0M2zPLlRPJXb_Rhn5l-Gvg.png" width="70%" style="filter:invert(1)"></center>
+<br/>
+
+- **Instruction Scheduling**: In compiler design, instructions can be represented as vertices, with directed edges indicating data dependencies between instructions. Topological sorting can be used to determine the order in which instructions should be executed to minimize data hazards.

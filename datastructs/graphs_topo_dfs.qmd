@@ -1,0 +1,61 @@
+---
+title: "Depth-First Search based"
+toc: true
+---
+
+Topological sorting is a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$ from vertex $u$ to vertex $v$, vertex $u$ _"comes before"_ vertex $v$ in the ordering.
+
+<center><img src="https://miro.medium.com/v2/resize:fit:1400/1*zn_aKvjJF5TGxnBpgCs2MA.jpeg" width="70%" style="filter:invert(1)"></center>
+
+By comes before, we mean that there is a directed path from $u$ to $v$ in the graph and no directed path from $v$ to $u.
+
+Topological sorting is used in many applications, such as task scheduling, data processing, and resolving dependencies between tasks.
+
+Topological sorting is not possible if the graph has a cycle, as there is no way to order the vertices in a linear fashion without violating the edge directions.
+
+## Algorithm
+
+The topological sort algorithm using depth-first search (DFS) maintains the following data structures:
+
+- Sorted: stack to store the topological ordering of the vertices.
+- Visited: set to keep track of visited vertices.
+
+The topological sort algorithm using depth-first search (DFS) works as follows:
+
+1. Pick an unvisited vertex and perform a depth-first search (DFS) on it.
+
+2. When a vertex has no unvisited adjacent vertices, 
+
+    * push the vertex onto the Sorted stack.
+    * mark the vertex as visited.
+
+3. Repeat step 1 and 2 until all vertices are visited.
+
+4. The Sorted stack contains the topological ordering of the graph.
+
+## Pseudocode
+
+The pseudocode for the topological sort algorithm using depth-first search (DFS) is as follows:
+
+```
+function topologicalSort(graph):
+    Sorted = stack()
+    Visited = set()
+    for each vertex in graph:
+        if vertex is not in Visited:
+            DFS(vertex, Sorted, Visited)
+
+    return Sorted
+
+
+function DFS(vertex, Sorted, Visited):
+    add vertex to Visited
+
+    for each neighbor of vertex:
+        if neighbor is not in Visited:
+            DFS(neighbor, Sorted, Visited)
+
+    push vertex onto Sorted
+```
+
+

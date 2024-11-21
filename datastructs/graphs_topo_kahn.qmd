@@ -1,0 +1,80 @@
+---
+title: "BFS-based: Kahn's Algorithm"
+toc: true
+---
+
+Kahn's algorithm is a topological sorting algorithm that finds a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$ from vertex $u$ to vertex $v$, vertex $u$ _"comes before"_ vertex $v$ in the ordering.
+
+By _"comes before"_, we mean that there is a directed path from $u$ to $v$ in the graph and no directed path from $v$ to $u.
+
+Kahn's algorithm is used to find a topological ordering of the vertices in a DAG. It is based on the concept of in-degree, which is the number of incoming edges to a vertex.
+
+<center><img src="https://iq.opengenus.org/content/images/2020/03/algo.gif" width="90%" style="filter:invert(1)"></center>
+
+Kahn's algorithm maintains the following data structures:
+
+- InDegree: array to store the in-degree of each vertex.
+
+- Sorted: list to store the topological ordering of the vertices.
+
+- Queue: queue to keep track of vertices with in-degree 0.
+
+The Kahn's algorithm works as follows:
+
+1. Calculate the in-degree of each vertex in the graph.
+
+2. Enqueue all vertices with in-degree 0 into the Queue.
+
+3. While the Queue is not empty:
+
+    - Dequeue a vertex $u$ from the Queue.
+    
+    - Add $u$ to the Sorted list.
+    
+    - For each neighbor $v$ of $u$:
+    
+        - Decrement the in-degree of $v$ by 1.
+        
+        - If the in-degree of $v$ becomes 0, enqueue $v$ into the Queue.
+
+4. If the Sorted list contains all vertices, return the Sorted list as the topological ordering. Otherwise, the graph has a cycle, and no topological ordering exists.
+
+## Pseudocode
+
+The pseudocode for Kahn's algorithm is as follows:
+
+```
+function topologicalSort(graph):
+    InDegree = array of size |V| initialized to 0
+    Sorted = empty list
+    Queue = empty queue
+    
+    for each vertex in graph:
+        for each neighbor of vertex:
+            InDegree[neighbor]++
+    
+    for each vertex in graph:
+        if InDegree[vertex] == 0:
+            Queue.enqueue(vertex)
+    
+    while Queue is not empty:
+        u = Queue.dequeue()
+        Sorted.add(u)
+        
+        for each neighbor v of u:
+            InDegree[v]--
+            if InDegree[v] == 0:
+                Queue.enqueue(v)
+    
+    if Sorted.size() == |V|:
+        return Sorted
+    else:
+        return "Graph has a cycle"
+```
+
+## Analysis
+
+The time complexity of Kahn's algorithm is $O(V + E)$, where $V$ is the number of vertices and $E$ is the number of edges in the graph. The algorithm calculates the in-degree of each vertex in $O(V + E)$ time, and each vertex is enqueued and dequeued at most once, resulting in a total time complexity of $O(V + E)$.
+
+The space complexity of Kahn's algorithm is $O(V)$, where $V$ is the number of vertices in the graph. The algorithm maintains an array of in-degrees, a list of the topological ordering, and a queue of vertices with in-degree 0, each requiring $O(V)$ space.
+

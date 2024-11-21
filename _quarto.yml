@@ -106,6 +106,10 @@ website:
               contents:
                 - datastructs/graphs_prim.qmd
                 - datastructs/graphs_kruskal.qmd
+            - section: datastructs/graphs_topological.qmd 
+              contents:
+                - datastructs/graphs_topo_dfs.qmd
+                - datastructs/graphs_topo_kahn.qmd
         - section: datastructs/hashmaps.qmd
           contents:
             - datastructs/hash.qmd
