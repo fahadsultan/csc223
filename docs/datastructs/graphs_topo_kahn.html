@@ -634,63 +634,61 @@ window.Quarto = {
 </header>
 
 
-<p>Kahn’s algorithm is a topological sorting algorithm that finds a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge <span class="math inline">\(uv\)</span> from vertex <span class="math inline">\(u\)</span> to vertex <span class="math inline">\(v\)</span>, vertex <span class="math inline">\(u\)</span> <em>“comes before”</em> vertex <span class="math inline">\(v\)</span> in the ordering.</p>
-<p>By <em>“comes before”</em>, we mean that there is a directed path from <span class="math inline">\(u\)</span> to <span class="math inline">\(v\)</span> in the graph and no directed path from <span class="math inline">\(v\)</span> to $u.</p>
 <p>Kahn’s algorithm is used to find a topological ordering of the vertices in a DAG. It is based on the concept of in-degree, which is the number of incoming edges to a vertex.</p>
 <center>
 <img src="https://iq.opengenus.org/content/images/2020/03/algo.gif" width="90%" style="filter:invert(1)">
 </center>
-<p>Kahn’s algorithm maintains the following data structures:</p>
-<ul>
-<li><p>InDegree: array to store the in-degree of each vertex.</p></li>
-<li><p>Sorted: list to store the topological ordering of the vertices.</p></li>
-<li><p>Queue: queue to keep track of vertices with in-degree 0.</p></li>
-</ul>
-<p>The Kahn’s algorithm works as follows:</p>
-<ol type="1">
-<li><p>Calculate the in-degree of each vertex in the graph.</p></li>
-<li><p>Enqueue all vertices with in-degree 0 into the Queue.</p></li>
-<li><p>While the Queue is not empty:</p>
-<ul>
-<li><p>Dequeue a vertex <span class="math inline">\(u\)</span> from the Queue.</p></li>
-<li><p>Add <span class="math inline">\(u\)</span> to the Sorted list.</p></li>
-<li><p>For each neighbor <span class="math inline">\(v\)</span> of <span class="math inline">\(u\)</span>:</p>
-<ul>
-<li><p>Decrement the in-degree of <span class="math inline">\(v\)</span> by 1.</p></li>
-<li><p>If the in-degree of <span class="math inline">\(v\)</span> becomes 0, enqueue <span class="math inline">\(v\)</span> into the Queue.</p></li>
-</ul></li>
-</ul></li>
-<li><p>If the Sorted list contains all vertices, return the Sorted list as the topological ordering. Otherwise, the graph has a cycle, and no topological ordering exists.</p></li>
-</ol>
+<p><br></p>
+<p>Kahn’s algorithm is a method used to compute the topological order of vertices in a directed acyclic graph (DAG). It relies on the concept of <b><u>In-degree</u></b>, which is the count of incoming edges for each vertex.</p>
+<p>The algorithm identifies vertices with no incoming edges (in-degree 0) as starting points for the ordering. These vertices can be processed first because they have no dependencies. To keep track of in-degrees, the algorithm uses an array called <code>InDegree</code>. It also uses a list called <code>Sorted</code> to store the topological order as it is constructed and a <code>Queue</code> to manage vertices with in-degree 0.</p>
+<p>Next, all vertices with an in-degree of 0 are added to the queue, as they can be processed immediately. The algorithm then enters a loop, where it repeatedly removes a vertex from the queue, adds it to the Sorted list, and processes its neighbors. For each neighbor, the algorithm reduces its in-degree by 1 to reflect that one of its dependencies has been processed. If a neighbor’s in-degree becomes 0, it is added to the Queue, making it ready for processing in subsequent iterations.</p>
+<p>This process continues until the queue is empty. If all vertices have been added to the Sorted list by the end, the algorithm returns the list as the topological order. However, <u>if some vertices remain unprocessed (i.e., the Sorted list does not contain all vertices), it indicates the presence of a cycle in the graph</u>, which makes a topological order impossible. This systematic approach ensures that vertices are processed only after all their dependencies have been handled, making it a reliable method for topological sorting.</p>
 <section id="pseudocode" class="level2">
 <h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
 <p>The pseudocode for Kahn’s algorithm is as follows:</p>
-<pre><code>function topologicalSort(graph):
-    InDegree = array of size |V| initialized to 0
-    Sorted = empty list
-    Queue = empty queue
-    
-    for each vertex in graph:
-        for each neighbor of vertex:
-            InDegree[neighbor]++
-    
-    for each vertex in graph:
-        if InDegree[vertex] == 0:
-            Queue.enqueue(vertex)
-    
-    while Queue is not empty:
-        u = Queue.dequeue()
-        Sorted.add(u)
-        
-        for each neighbor v of u:
-            InDegree[v]--
-            if InDegree[v] == 0:
-                Queue.enqueue(v)
-    
-    if Sorted.size() == |V|:
-        return Sorted
-    else:
-        return "Graph has a cycle"</code></pre>
+<p><strong>Function:</strong> <span class="math inline">\(topologicalSort(graph)\)</span><br>
+<strong>Input:</strong> A directed graph <span class="math inline">\(G = (V, E)\)</span><br>
+<strong>Output:</strong> Topological order of vertices or a message indicating a cycle</p>
+<ol type="1">
+<li><strong>Initialize</strong> <span class="math inline">\(InDegree\)</span> as an array of size <span class="math inline">\(|V|\)</span> with all values set to <span class="math inline">\(0\)</span>.</li>
+<li><strong>Initialize</strong> <span class="math inline">\(Sorted\)</span> as an empty list.</li>
+<li><strong>Initialize</strong> <span class="math inline">\(Queue\)</span> as an empty queue.</li>
+<li><strong>For each vertex</strong> <span class="math inline">\(u\)</span> in <span class="math inline">\(V\)</span>:
+<ul>
+<li><strong>For each neighbor</strong> <span class="math inline">\(v\)</span> of <span class="math inline">\(u\)</span>:
+<ul>
+<li>Increment <span class="math inline">\(InDegree[v]\)</span> by <span class="math inline">\(1\)</span>.</li>
+</ul></li>
+</ul></li>
+<li><strong>For each vertex</strong> <span class="math inline">\(u\)</span> in <span class="math inline">\(V\)</span>:
+<ul>
+<li><strong>If</strong> <span class="math inline">\(InDegree[u] == 0\)</span>:
+<ul>
+<li>Enqueue <span class="math inline">\(u\)</span> into <span class="math inline">\(Queue\)</span>.</li>
+</ul></li>
+</ul></li>
+<li><strong>While</strong> <span class="math inline">\(Queue\)</span> is not empty:
+<ul>
+<li>Dequeue <span class="math inline">\(u\)</span> from <span class="math inline">\(Queue\)</span>.</li>
+<li>Add <span class="math inline">\(u\)</span> to <span class="math inline">\(Sorted\)</span>.</li>
+<li><strong>For each neighbor</strong> <span class="math inline">\(v\)</span> of <span class="math inline">\(u\)</span>:
+<ul>
+<li>Decrement <span class="math inline">\(InDegree[v]\)</span> by <span class="math inline">\(1\)</span>.</li>
+<li><strong>If</strong> <span class="math inline">\(InDegree[v] == 0\)</span>:
+<ul>
+<li>Enqueue <span class="math inline">\(v\)</span> into <span class="math inline">\(Queue\)</span>.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>If</strong> the size of <span class="math inline">\(Sorted\)</span> equals <span class="math inline">\(|V|\)</span>:
+<ul>
+<li><strong>Return</strong> <span class="math inline">\(Sorted\)</span>.</li>
+</ul></li>
+<li><strong>Else</strong>:
+<ul>
+<li><strong>Return</strong> “Graph has a cycle”.</li>
+</ul></li>
+</ol>
 </section>
 <section id="analysis" class="level2">
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>

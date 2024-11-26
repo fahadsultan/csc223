@@ -3,7 +3,7 @@ title: "Depth-First Search based"
 toc: true
 ---
 
-Topological sorting is a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$ from vertex $u$ to vertex $v$, vertex $u$ _"comes before"_ vertex $v$ in the ordering.
+Topological sorting is a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$ from vertex $u$ to vertex $v$, vertex $u$ _"comes before"_ vertex $v$ in the ordering. 
 
 <center><img src="https://miro.medium.com/v2/resize:fit:1400/1*zn_aKvjJF5TGxnBpgCs2MA.jpeg" width="70%" style="filter:invert(1)"></center>
 
@@ -58,4 +58,6 @@ function DFS(vertex, Sorted, Visited):
     push vertex onto Sorted
 ```
 
+## Analysis
 
+The time complexity of the topological sort algorithm using depth-first search (DFS) is $O(V + E)$, where $V$ is the number of vertices and $E$ is the number of edges in the graph. The algorithm performs a depth-first search on each unvisited vertex, visiting each edge at most once, resulting in a total time complexity of $O(V + E)$.

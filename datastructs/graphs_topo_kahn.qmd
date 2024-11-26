@@ -3,74 +3,49 @@ title: "BFS-based: Kahn's Algorithm"
 toc: true
 ---
 
-Kahn's algorithm is a topological sorting algorithm that finds a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$ from vertex $u$ to vertex $v$, vertex $u$ _"comes before"_ vertex $v$ in the ordering.
-
-By _"comes before"_, we mean that there is a directed path from $u$ to $v$ in the graph and no directed path from $v$ to $u.
-
 Kahn's algorithm is used to find a topological ordering of the vertices in a DAG. It is based on the concept of in-degree, which is the number of incoming edges to a vertex.
 
 <center><img src="https://iq.opengenus.org/content/images/2020/03/algo.gif" width="90%" style="filter:invert(1)"></center>
 
-Kahn's algorithm maintains the following data structures:
+<br/>
 
-- InDegree: array to store the in-degree of each vertex.
+Kahn’s algorithm is a method used to compute the topological order of vertices in a directed acyclic graph (DAG). It relies on the concept of <b><u>In-degree</u></b>, which is the count of incoming edges for each vertex. 
 
-- Sorted: list to store the topological ordering of the vertices.
+The algorithm identifies vertices with no incoming edges (in-degree 0) as starting points for the ordering. These vertices can be processed first because they have no dependencies. To keep track of in-degrees, the algorithm uses an array called `InDegree`. It also uses a list called `Sorted` to store the topological order as it is constructed and a `Queue` to manage vertices with in-degree 0.
 
-- Queue: queue to keep track of vertices with in-degree 0.
+Next, all vertices with an in-degree of 0 are added to the queue, as they can be processed immediately. The algorithm then enters a loop, where it repeatedly removes a vertex from the queue, adds it to the Sorted list, and processes its neighbors. For each neighbor, the algorithm reduces its in-degree by 1 to reflect that one of its dependencies has been processed. If a neighbor’s in-degree becomes 0, it is added to the Queue, making it ready for processing in subsequent iterations.
 
-The Kahn's algorithm works as follows:
-
-1. Calculate the in-degree of each vertex in the graph.
-
-2. Enqueue all vertices with in-degree 0 into the Queue.
-
-3. While the Queue is not empty:
-
-    - Dequeue a vertex $u$ from the Queue.
-    
-    - Add $u$ to the Sorted list.
-    
-    - For each neighbor $v$ of $u$:
-    
-        - Decrement the in-degree of $v$ by 1.
-        
-        - If the in-degree of $v$ becomes 0, enqueue $v$ into the Queue.
-
-4. If the Sorted list contains all vertices, return the Sorted list as the topological ordering. Otherwise, the graph has a cycle, and no topological ordering exists.
+This process continues until the queue is empty. If all vertices have been added to the Sorted list by the end, the algorithm returns the list as the topological order. However, <u>if some vertices remain unprocessed (i.e., the Sorted list does not contain all vertices), it indicates the presence of a cycle in the graph</u>, which makes a topological order impossible. This systematic approach ensures that vertices are processed only after all their dependencies have been handled, making it a reliable method for topological sorting.
 
 ## Pseudocode
 
 The pseudocode for Kahn's algorithm is as follows:
 
-```
-function topologicalSort(graph):
-    InDegree = array of size |V| initialized to 0
-    Sorted = empty list
-    Queue = empty queue
-    
-    for each vertex in graph:
-        for each neighbor of vertex:
-            InDegree[neighbor]++
-    
-    for each vertex in graph:
-        if InDegree[vertex] == 0:
-            Queue.enqueue(vertex)
-    
-    while Queue is not empty:
-        u = Queue.dequeue()
-        Sorted.add(u)
-        
-        for each neighbor v of u:
-            InDegree[v]--
-            if InDegree[v] == 0:
-                Queue.enqueue(v)
-    
-    if Sorted.size() == |V|:
-        return Sorted
-    else:
-        return "Graph has a cycle"
-```
+
+**Function:** $topologicalSort(graph)$  
+**Input:** A directed graph $G = (V, E)$  
+**Output:** Topological order of vertices or a message indicating a cycle  
+
+1. **Initialize** $InDegree$ as an array of size $|V|$ with all values set to $0$.
+2. **Initialize** $Sorted$ as an empty list.
+3. **Initialize** $Queue$ as an empty queue.
+4. **For each vertex** $u$ in $V$:
+   - **For each neighbor** $v$ of $u$:
+     - Increment $InDegree[v]$ by $1$.
+5. **For each vertex** $u$ in $V$:
+   - **If** $InDegree[u] == 0$:
+     - Enqueue $u$ into $Queue$.
+6. **While** $Queue$ is not empty:
+   - Dequeue $u$ from $Queue$.
+   - Add $u$ to $Sorted$.
+   - **For each neighbor** $v$ of $u$:
+     - Decrement $InDegree[v]$ by $1$.
+     - **If** $InDegree[v] == 0$:
+       - Enqueue $v$ into $Queue$.
+7. **If** the size of $Sorted$ equals $|V|$:
+   - **Return** $Sorted$.
+8. **Else**:
+   - **Return** "Graph has a cycle".
 
 ## Analysis
 

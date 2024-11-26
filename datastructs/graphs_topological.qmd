@@ -39,3 +39,4 @@ Topological sorting has many practical applications, including:
 <br/>
 
 - **Instruction Scheduling**: In compiler design, instructions can be represented as vertices, with directed edges indicating data dependencies between instructions. Topological sorting can be used to determine the order in which instructions should be executed to minimize data hazards.
+ 

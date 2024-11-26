@@ -609,6 +609,7 @@ window.Quarto = {
   <ul>
   <li><a href="#algorithm" id="toc-algorithm" class="nav-link active" data-scroll-target="#algorithm">Algorithm</a></li>
   <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -681,6 +682,10 @@ function DFS(vertex, Sorted, Visited):
             DFS(neighbor, Sorted, Visited)
 
     push vertex onto Sorted</code></pre>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>The time complexity of the topological sort algorithm using depth-first search (DFS) is <span class="math inline">\(O(V + E)\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices and <span class="math inline">\(E\)</span> is the number of edges in the graph. The algorithm performs a depth-first search on each unvisited vertex, visiting each edge at most once, resulting in a total time complexity of <span class="math inline">\(O(V + E)\)</span>.</p>
 
 
 </section>
