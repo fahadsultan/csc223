@@ -232,7 +232,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 9\n\n\n\nPA 9 is due before the next lab on Wednesday, Nov 27th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 10\n\n\n\nPA 10 is due before the next lab on Wednesday, Dec 4th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nProgramming Assignment 9\n\n\n\nPA 9 is due before the next lab on Wednesday, Nov 27th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -463,7 +463,7 @@
     "text": "A set is a collection of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are implemented using hash tables in many programming languages, which allows for fast search and retrieval of elements. Sets are useful for removing duplicates from a list, checking for the presence of an element, and performing set operations.\n\n\nIn Python, sets are implemented using the set data structure, which is a built-in data type that stores unique elements. Sets are unordered collections of elements, and they do not allow duplicate values.\n# Create a set\ns = set([1, 2, 3, 4, 5])\n\n# Add an element to the set\ns.add(6)\n\n# Remove an element from the set\ns.remove(3)\n\n# Check if an element is in the set\nif 4 in s:\n    print(\"Element found in set\")\n\n\n\nSets support a variety of operations, including:\n\nUnion: Combines two sets to create a new set containing all unique elements from both sets.\nIntersection: Finds the common elements between two sets and creates a new set with those elements.\nDifference: Finds the elements that are in one set but not the other and creates a new set with those elements.\nSubset: Checks if one set is a subset of another set.\nSuperset: Checks if one set is a superset of another set.\n\n\n# Create two sets\ns1 = set([1, 2, 3, 4, 5])\ns2 = set([4, 5, 6, 7, 8])\n\n# Union of two sets\nunion_set = s1.union(s2)\n\n# Intersection of two sets\nintersection_set = s1.intersection(s2)\n\n# Difference of two sets\ndifference_set = s1.difference(s2)\n\n# Check if s1 is a subset of s2\nis_subset = s1.issubset(s2)\n\n# Check if s1 is a superset of s2\nis_superset = s1.issuperset(s2)\n\n\n\nThe time complexity of set operations is similar to hash table operations, with an time complexity of O(1) for search, insert, and delete operations. The space complexity of a set is O(n), where n is the number of elements in the set.\nUnion and intersection operations have a time complexity of O(n) in the worst case, where n is the number of elements in the larger set. The space complexity of set operations depends on the size of the input sets and the implementation of the set data structure.",
     "crumbs": [
       "Home",
-      "HASHMAPS",
+      "HASHING",
       "Sets"
     ]
   },
@@ -475,7 +475,7 @@
     "text": "A set is a collection of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are implemented using hash tables in many programming languages, which allows for fast search and retrieval of elements. Sets are useful for removing duplicates from a list, checking for the presence of an element, and performing set operations.\n\n\nIn Python, sets are implemented using the set data structure, which is a built-in data type that stores unique elements. Sets are unordered collections of elements, and they do not allow duplicate values.\n# Create a set\ns = set([1, 2, 3, 4, 5])\n\n# Add an element to the set\ns.add(6)\n\n# Remove an element from the set\ns.remove(3)\n\n# Check if an element is in the set\nif 4 in s:\n    print(\"Element found in set\")\n\n\n\nSets support a variety of operations, including:\n\nUnion: Combines two sets to create a new set containing all unique elements from both sets.\nIntersection: Finds the common elements between two sets and creates a new set with those elements.\nDifference: Finds the elements that are in one set but not the other and creates a new set with those elements.\nSubset: Checks if one set is a subset of another set.\nSuperset: Checks if one set is a superset of another set.\n\n\n# Create two sets\ns1 = set([1, 2, 3, 4, 5])\ns2 = set([4, 5, 6, 7, 8])\n\n# Union of two sets\nunion_set = s1.union(s2)\n\n# Intersection of two sets\nintersection_set = s1.intersection(s2)\n\n# Difference of two sets\ndifference_set = s1.difference(s2)\n\n# Check if s1 is a subset of s2\nis_subset = s1.issubset(s2)\n\n# Check if s1 is a superset of s2\nis_superset = s1.issuperset(s2)\n\n\n\nThe time complexity of set operations is similar to hash table operations, with an time complexity of O(1) for search, insert, and delete operations. The space complexity of a set is O(n), where n is the number of elements in the set.\nUnion and intersection operations have a time complexity of O(n) in the worst case, where n is the number of elements in the larger set. The space complexity of set operations depends on the size of the input sets and the implementation of the set data structure.",
     "crumbs": [
       "Home",
-      "HASHMAPS",
+      "HASHING",
       "Sets"
     ]
   },
@@ -2147,35 +2147,36 @@
   {
     "objectID": "datastructs/hash.html",
     "href": "datastructs/hash.html",
-    "title": "Hashing",
+    "title": "HASHING",
     "section": "",
-    "text": "Hashing\nHashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table.\nHow it works:\n\nHash Function: You provide your data items into the hash function.\nHash Code: The hash function crunches the data and give a unique hash code.\nHash Table: The hash code then points you to a specific location within the hash table.\n\nA hash table is also known as a hash map. It is a data structure that stores key-value pairs. It uses a hash function to map keys to a fixed-size array, called a hash table. This allows in faster search, insertion, and deletion operations.\n\n\nHash Function\nThe hash function is a function that takes a key and returns an index into the hash table. The goal of a hash function is to distribute keys evenly across the hash table, minimizing collisions (when two keys map to the same index).\nCommon hash functions include:\n\nDivision Method: Key % Hash Table Size\nMultiplication Method: (Key * Constant) % Hash Table Size\nUniversal Hashing: A family of hash functions designed to minimize collisions\n\n\n\nHash Collision\nA hash collision occurs when two different keys map to the same index in a hash table. This can happen even with a good hash function, especially if the hash table is full or the keys are similar.\nCauses of Hash Collisions:\n\nPoor Hash Function: A hash function that does not distribute keys evenly across the hash table can lead to more collisions.\nHigh Load Factor: A high load factor (ratio of keys to hash table size) increases the probability of collisions.\nSimilar Keys: Keys that are similar in value or structure are more likely to collide.\n\n\n\nCollision Resolution Techniques\nThere are two types of collision resolution techniques:\n\nOpen Addressing:\n\nLinear Probing: Search for an empty slot sequentially\nQuadratic Probing: Search for an empty slot using a quadratic function\n\n\n\n\n\n\nClosed Addressing:\n\nChaining: Store colliding keys in a linked list or binary search tree at each index\nCuckoo Hashing: Use multiple hash functions to distribute keys\n\n\n\n\n\nHash tables are used in a wide variety of applications, including:\nDatabases: Storing and retrieving data based on unique keys Caching: Storing frequently accessed data for faster retrieval Symbol Tables: Mapping identifiers to their values in programming languages Network Routing: Determining the best path for data packets",
+    "text": "Hashing refers to the process of mapping data values (refered to as keys) to a specific location in the data structure that enables reading, writing, and searching operations to be performed far more efficiently than possible with other data structures.\nThe transformation of a key to the corresponding value is done using a Hash Function and the value obtained from the hash function is called Hash Code or simply hashes.\nHashing is used in various applications such as databases, caches, and programming languages to optimize search and retrieval operations.",
     "crumbs": [
       "Home",
-      "HASHMAPS",
-      "Hashing"
+      "HASHING"
     ]
   },
   {
     "objectID": "datastructs/hashmaps.html",
     "href": "datastructs/hashmaps.html",
-    "title": "HASHMAPS",
+    "title": "HashMaps",
     "section": "",
     "text": "Hashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table. Hash tables are used in a wide variety of applications, including databases, caching systems, and symbol tables.\n\n\n\n\nHash sets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\nSets are collections of distinct elements that are stored in a way that allows for quick access and retrieval. Sets are commonly used in computer science to store unique elements and perform set operations such as union, intersection, and difference.\n\nTOC {:toc}\n\n\n\nHash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
     "crumbs": [
       "Home",
-      "HASHMAPS"
+      "HASHING",
+      "HashMaps"
     ]
   },
   {
     "objectID": "datastructs/hashmaps.html#hash-table",
     "href": "datastructs/hashmaps.html#hash-table",
-    "title": "HASHMAPS",
+    "title": "HashMaps",
     "section": "",
     "text": "Hash Table (also known as a hash map) is a fundamental data structure that efficiently stores and retrieves data in a way that allows for quick access. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. This method is commonly used in databases, caching systems, and various programming applications to optimize search and retrieval operations.\n\n\n\n\nIn Python, hash tables are implemented using the dict data structure, which is a built-in data type that stores key-value pairs. Hash tables in Python are optimized for fast search, insert, and delete operations.\n# Create a hash table\nhash_table = {}\n\n# Insert a key-value pair\nhash_table[\"key1\"] = \"value1\"\n\n# Retrieve a value based on key\nvalue = hash_table[\"key1\"]\n\n# Check if a key is in the hash table\nif \"key1\" in hash_table:\n    print(\"Key found in hash table\")\n\n\n\nHash tables support a variety of operations, including:\n\nSearch: Retrieve the value associated with a key.\nInsert: Add a new key-value pair to the hash table.\nDelete: Remove a key-value pair from the hash table.\nUpdate: Change the value associated with a key.\nSize: Get the number of key-value pairs in the hash table.\n\n# Create a hash table\nhash_table = {}\n\n# Insert key-value pairs\nhash_table[\"key1\"] = \"value1\"\nhash_table[\"key2\"] = \"value2\"\nhash_table[\"key3\"] = \"value3\"\n\n# Search for a key\nvalue = hash_table.get(\"key2\")\n\n# Delete a key\ndel hash_table[\"key3\"]\n\n# Update a value\nhash_table[\"key1\"] = \"new_value\"\n\n# Get the size of the hash table\nsize = len(hash_table)\n\n\n\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
     "crumbs": [
       "Home",
-      "HASHMAPS"
+      "HASHING",
+      "HashMaps"
     ]
   },
   {
@@ -2620,6 +2621,130 @@
       "PROGRAMMING, IN JAVA",
       "Operations",
       "Testing in Java"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_topological.html#how-it-works",
+    "href": "datastructs/graphs_topological.html#how-it-works",
+    "title": "Topological Sort",
+    "section": "How it Works",
+    "text": "How it Works\nThe topological sort algorithm works as follows:\n\nPerform a depth-first search (DFS) on the graph.\nWhen a vertex has no unvisited adjacent vertices, add it to the front of a list.\nRepeat step 2 for all vertices in the graph.\nThe list of vertices obtained is a topological ordering of the graph.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Topological Sorting"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_topological.html#pseudocode",
+    "href": "datastructs/graphs_topological.html#pseudocode",
+    "title": "Topological Sort",
+    "section": "Pseudocode",
+    "text": "Pseudocode\nThe pseudocode for the topological sort algorithm is as follows:\n\nInitialize an empty list to store the topological ordering.\nPerform a depth-first search (DFS) on the graph:\n\nFor each unvisited vertex \\(v\\):\n\nCall the DFS function on \\(v\\).\n\n\nIn the DFS function:\n\nMark the current vertex as visited.\nFor each unvisited neighbor \\(u\\) of the current vertex:\n\nCall the DFS function on $u.\n\nAdd the current vertex to the front of the topological ordering list.\n\nReturn the topological ordering list.",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Topological Sorting"
+    ]
+  },
+  {
+    "objectID": "datastructs/graphs_topological.html#example",
+    "href": "datastructs/graphs_topological.html#example",
+    "title": "Topological Sort",
+    "section": "Example",
+    "text": "Example\nConsider the following graph:",
+    "crumbs": [
+      "Home",
+      "GRAPHS",
+      "Topological Sorting"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#building-a-hash-table",
+    "href": "datastructs/hash.html#building-a-hash-table",
+    "title": "HASHING",
+    "section": "Building a Hash Table",
+    "text": "Building a Hash Table\nTo get the idea of what a Hash Table is, let’s try to build one from scratch, to store unique first names inside it.\nWe will build the Hash Set in 5 steps:\n\nStarting with an array.\nStoring names using a hash function.\nLooking up an element using a hash function.\nHandling collisions.\nThe basic Hash Set code example and simulation.\n\n\nHashing\nHashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table.\nHow it works:\n\nHash Function: You provide your data items into the hash function.\nHash Code: The hash function crunches the data and give a unique hash code.\nHash Table: The hash code then points you to a specific location within the hash table.\n\nA hash table is also known as a hash map. It is a data structure that stores key-value pairs. It uses a hash function to map keys to a fixed-size array, called a hash table. This allows in faster search, insertion, and deletion operations.\n\n\nHash Function\nThe hash function is a function that takes a key and returns an index into the hash table. The goal of a hash function is to distribute keys evenly across the hash table, minimizing collisions (when two keys map to the same index).\nCommon hash functions include:\n\nDivision Method: Key % Hash Table Size\nMultiplication Method: (Key * Constant) % Hash Table Size\nUniversal Hashing: A family of hash functions designed to minimize collisions\n\n\n\nHash Collision\nA hash collision occurs when two different keys map to the same index in a hash table. This can happen even with a good hash function, especially if the hash table is full or the keys are similar.\nCauses of Hash Collisions:\n\nPoor Hash Function: A hash function that does not distribute keys evenly across the hash table can lead to more collisions.\nHigh Load Factor: A high load factor (ratio of keys to hash table size) increases the probability of collisions.\nSimilar Keys: Keys that are similar in value or structure are more likely to collide.\n\nHash tables are used in a wide variety of applications, including:\nDatabases: Storing and retrieving data based on unique keys Caching: Storing frequently accessed data for faster retrieval Symbol Tables: Mapping identifiers to their values in programming languages Network Routing: Determining the best path for data packets",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#example-of-hashing",
+    "href": "datastructs/hash.html#example-of-hashing",
+    "title": "HASHING",
+    "section": "Example of Hashing",
+    "text": "Example of Hashing\nSuppose we have a set of strings {“ab”, “cd”, “efg”} and we would like to store in our data structure.",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#collisions",
+    "href": "datastructs/hash.html#collisions",
+    "title": "HASHING",
+    "section": "Collisions",
+    "text": "Collisions\nIf we consider the above example, the hash function we used is the sum of the letters, but if we examined the hash function closely then the problem can be easily visualized that for different strings same hash value is being generated by the hash function.\nFor example: {“ab”, “ba”} both have the same hash value, and string {“cd”,”be”} also generate the same hash value, etc. This is known as collision and it creates problem in searching, insertion, deletion, and updating of value.\n\n\n\n\nCollision in Hashing occurs when two different keys map to the same hash value. Hash collisions can be intentionally created for many hash algorithms. The probability of a hash collision depends on the size of the algorithm, the distribution of hash values and the efficiency of Hash function.\nThe hashing process generates a small number for a big key, so there is a possibility that two keys could produce the same value. The situation where the newly inserted key maps to an already occupied, and it must be handled using some collision handling technology.",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#collision-handling",
+    "href": "datastructs/hash.html#collision-handling",
+    "title": "HASHING",
+    "section": "Collision Handling",
+    "text": "Collision Handling\nThere are mainly two methods to handle collision:\n\nOpen Addressing: In open addressing, all elements are stored in the hash table itself. When a new element is inserted, the hash function is computed and if the slot is already occupied, then the next slot is checked. This process continues until an empty slot is found.\nOpen Addressing has the following techniques:\n\nLinear Probing: Search for an empty slot sequentially\nQuadratic Probing: Search for an empty slot using a quadratic function\nDouble Hashing: Use a second hash function to find the next slot\n\n\n\n\n\n\n\nSeparate Chaining: In separate chaining, each slot of the hash table is a linked list. When a new element is inserted, the hash function is computed and the element is inserted at the head of the linked list at that slot. This allows multiple elements to be stored at the same slot.",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#load-factor",
+    "href": "datastructs/hash.html#load-factor",
+    "title": "HASHING",
+    "section": "Load Factor",
+    "text": "Load Factor\nThe load factor of a hash table is the ratio of the number of elements stored in the hash table to the size of the hash table. It is used to measure how full the hash table is and can affect the performance of the hash table.\nThe load factor is calculated as:\n\\[ \\text{Load Factor} = \\frac{\\text{Number of Elements}}{\\text{Size of Hash Table}} \\]\nA high load factor means that the hash table is full and may have more collisions, which can slow down operations. A low load factor means that the hash table is not full and may have more empty slots, which can waste memory.\nThe load factor is used to determine when to resize the hash table. When the load factor exceeds a certain threshold, the hash table is resized to a larger size to reduce the number of collisions and improve performance.",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#example",
+    "href": "datastructs/hash.html#example",
+    "title": "HASHING",
+    "section": "Example",
+    "text": "Example\nSuppose we want to store string values in a data structure, say array, of size 7. We then need to map the string values to a specific index in the internal array. We can use a hash function to map the strings to a specific index in the data structure.\nOne simple hash function is to consider the position of each character in the string values in the English alphabet and sum them up. For example, the hash value of “abc” would be 1 + 2 + 3 = 6. The hash value of “xyz” would be 24 + 25 + 26 = 75. We can then use the modulo operator % to map the hash value to an index in the array.\n\n\n\nOther possible simple hash functions could have been to consider only the first or last character of the string, instead of summing all the characters. Another option could be to sum the ASCII values of the characters in the string or to use the length of the string as the hash value.",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#hash-set-vs.-hash-map",
+    "href": "datastructs/hash.html#hash-set-vs.-hash-map",
+    "title": "HASHING",
+    "section": "Hash Set vs. Hash Map",
+    "text": "Hash Set vs. Hash Map\nHashing is used to implement two common data structures: hash sets and hash maps (also known as dictionaries).\n\n\n\n\nA hash set is a data structure that stores a collection of unique elements, similar to a set in mathematics. A hash set uses a hash table to store the elements and provides fast search, insert, and delete operations.\nA hash map is a data structure that stores key-value pairs, similar to a dictionary in Python. A hash map uses a hash table to store the key-value pairs and provides fast search, insert, and delete operations based on the keys.",
+    "crumbs": [
+      "Home",
+      "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash.html#analysis",
+    "href": "datastructs/hash.html#analysis",
+    "title": "HASHING",
+    "section": "Analysis",
+    "text": "Analysis\nThe time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.\nThe space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.",
+    "crumbs": [
+      "Home",
+      "HASHING"
     ]
   }
 ]

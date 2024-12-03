@@ -110,16 +110,17 @@ website:
               contents:
                 - datastructs/graphs_topo_dfs.qmd
                 - datastructs/graphs_topo_kahn.qmd
-        - section: datastructs/hashmaps.qmd
-          contents:
-            - datastructs/hash.qmd
-            - datastructs/sets.qmd
-        - section: 
-          href: algos/algos.qmd
-          contents:
-            - algos/backtracking.qmd
-            - algos/greedy.qmd
-            - algos/dp.qmd
+        - datastructs/hash.qmd
+        # - section: datastructs/hash.qmd
+          # contents:
+          #   - datastructs/hashmaps.qmd
+          #   - datastructs/sets.qmd
+        # - section: 
+        #   href: algos/algos.qmd
+        #   contents:
+        #     - algos/backtracking.qmd
+        #     - algos/greedy.qmd
+        #     - algos/dp.qmd
     - id: syllabus
       title: "Syllabus"
       background: light

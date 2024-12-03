@@ -1,8 +1,7 @@
 ---
-title: "HASHMAPS"
+title: "HashMaps"
 toc: true
 ---
-
 
 # Hashing & Sets
 

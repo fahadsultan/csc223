@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hashing</title>
+<title>HASHING</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -183,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/hashmaps.html">HASHMAPS</a></li><li class="breadcrumb-item"><a href="../datastructs/hash.html">Hashing</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/hash.html">HASHING</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -516,58 +545,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../datastructs/hashmaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HASHMAPS</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Hashing</span></a>
+ <span class="menu-text">HASHING</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../datastructs/sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sets</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../algos/algos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ALGORITHMS</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/backtracking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Backtracking</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/greedy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Greedy</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/dp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dynamic Programming</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -578,19 +561,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hashing" id="toc-hashing" class="nav-link active" data-scroll-target="#hashing">Hashing</a></li>
-  <li><a href="#hash-function" id="toc-hash-function" class="nav-link" data-scroll-target="#hash-function">Hash Function</a></li>
-  <li><a href="#hash-collision" id="toc-hash-collision" class="nav-link" data-scroll-target="#hash-collision">Hash Collision</a></li>
-  <li><a href="#collision-resolution-techniques" id="toc-collision-resolution-techniques" class="nav-link" data-scroll-target="#collision-resolution-techniques">Collision Resolution Techniques</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
+  <li><a href="#collisions" id="toc-collisions" class="nav-link" data-scroll-target="#collisions">Collisions</a></li>
+  <li><a href="#collision-handling" id="toc-collision-handling" class="nav-link" data-scroll-target="#collision-handling">Collision Handling</a></li>
+  <li><a href="#load-factor" id="toc-load-factor" class="nav-link" data-scroll-target="#load-factor">Load Factor</a></li>
+  <li><a href="#hash-set-vs.-hash-map" id="toc-hash-set-vs.-hash-map" class="nav-link" data-scroll-target="#hash-set-vs.-hash-map">Hash Set vs.&nbsp;Hash Map</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/hashmaps.html">HASHMAPS</a></li><li class="breadcrumb-item"><a href="../datastructs/hash.html">Hashing</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hashing</h1>
+<h1 class="title">HASHING</h1>
 </div>
 
 
@@ -607,62 +592,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="hashing" class="level3">
-<h3 class="anchored" data-anchor-id="hashing">Hashing</h3>
-<p>Hashing is a technique used in data structures to store and retrieve data efficiently. It involves using a hash function to map data items to a fixed-size array which is called a hash table.</p>
-<p>How it works:</p>
+<p>Hashing refers to the process of mapping data values (refered to as <em>keys</em>) to a specific location in the data structure that enables reading, writing, and searching operations to be performed far more efficiently than possible with other data structures.</p>
+<center>
+<img src="https://images.spiceworks.com/wp-content/uploads/2023/06/06103705/image-65-1024x580.png" style="filter:invert(100%);" width="80%">
+</center>
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:1200/1*jszc1jvaaEedwjoru1iVPg.png" style="filter:invert(100%);" width="80%">
+</center>
+<p><br></p>
+<p>The transformation of a key to the corresponding value is done using a <u>Hash Function</u> and the value obtained from the hash function is called <u>Hash Code</u> or simply <em>hashes</em>.</p>
+<p>Hashing is used in various applications such as databases, caches, and programming languages to optimize search and retrieval operations.</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Suppose we want to store string values in a data structure, say array, of size 7. We then need to map the string values to a specific index in the internal array. We can use a hash function to map the strings to a specific index in the data structure.</p>
+<p>One simple hash function is to consider the position of each character in the string values in the English alphabet and sum them up. For example, the hash value of “abc” would be 1 + 2 + 3 = 6. The hash value of “xyz” would be 24 + 25 + 26 = 75. We can then use the modulo operator <code>%</code> to map the hash value to an index in the array.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240514124555/Mapping-Key-with-indices-of-Array.webp" style="filter:invert(100%);" width="80%">
+</center>
+<p>Other possible simple hash functions could have been to consider only the first or last character of the string, instead of summing all the characters. Another option could be to sum the ASCII values of the characters in the string or to use the length of the string as the hash value.</p>
+</section>
+<section id="collisions" class="level2">
+<h2 class="anchored" data-anchor-id="collisions">Collisions</h2>
+<p>If we consider the above example, the hash function we used is the sum of the letters, but if we examined the hash function closely then the problem can be easily visualized that for different strings same hash value is being generated by the hash function.</p>
+<p>For example: {“ab”, “ba”} both have the same hash value, and string {“cd”,”be”} also generate the same hash value, etc. This is known as collision and it creates problem in searching, insertion, deletion, and updating of value.</p>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hash_table_4_1_1_0_0_1_0_LL.svg/1200px-Hash_table_4_1_1_0_0_1_0_LL.svg.png" style="filter:invert(100%)" width="60%">
+</center>
+<p><br></p>
+<p>Collision in Hashing occurs when two different keys map to the same hash value. Hash collisions can be intentionally created for many hash algorithms. The probability of a hash collision depends on the size of the algorithm, the distribution of hash values and the efficiency of Hash function.</p>
+<p>The hashing process generates a small number for a big key, so there is a possibility that two keys could produce the same value. The situation where the newly inserted key maps to an already occupied, and it must be handled using some collision handling technology.</p>
+</section>
+<section id="collision-handling" class="level2">
+<h2 class="anchored" data-anchor-id="collision-handling">Collision Handling</h2>
+<p>There are mainly two methods to handle collision:</p>
 <ol type="1">
-<li>Hash Function: You provide your data items into the hash function.</li>
-<li>Hash Code: The hash function crunches the data and give a unique hash code.</li>
-<li>Hash Table: The hash code then points you to a specific location within the hash table.</li>
-</ol>
-<p>A hash table is also known as a hash map. It is a data structure that stores key-value pairs. It uses a hash function to map keys to a fixed-size array, called a hash table. This allows in faster search, insertion, and deletion operations.</p>
-</section>
-<section id="hash-function" class="level3">
-<h3 class="anchored" data-anchor-id="hash-function">Hash Function</h3>
-<p>The hash function is a function that takes a key and returns an index into the hash table. The goal of a hash function is to distribute keys evenly across the hash table, minimizing collisions (when two keys map to the same index).</p>
-<p>Common hash functions include:</p>
-<ul>
-<li>Division Method: Key % Hash Table Size</li>
-<li>Multiplication Method: (Key * Constant) % Hash Table Size</li>
-<li>Universal Hashing: A family of hash functions designed to minimize collisions</li>
-</ul>
-</section>
-<section id="hash-collision" class="level3">
-<h3 class="anchored" data-anchor-id="hash-collision">Hash Collision</h3>
-<p>A hash collision occurs when two different keys map to the same index in a hash table. This can happen even with a good hash function, especially if the hash table is full or the keys are similar.</p>
-<p>Causes of Hash Collisions:</p>
-<ul>
-<li><strong>Poor Hash Function</strong>: A hash function that does not distribute keys evenly across the hash table can lead to more collisions.</li>
-<li><strong>High Load Factor</strong>: A high load factor (ratio of keys to hash table size) increases the probability of collisions.</li>
-<li><strong>Similar Keys</strong>: Keys that are similar in value or structure are more likely to collide.</li>
-</ul>
-</section>
-<section id="collision-resolution-techniques" class="level3">
-<h3 class="anchored" data-anchor-id="collision-resolution-techniques">Collision Resolution Techniques</h3>
-<p>There are two types of collision resolution techniques:</p>
-<ol type="1">
-<li>Open Addressing:
+<li><p><strong>Open Addressing</strong>: In open addressing, all elements are stored in the hash table itself. When a new element is inserted, the hash function is computed and if the slot is already occupied, then the next slot is checked. This process continues until an empty slot is found.</p>
+<p>Open Addressing has the following techniques:</p>
 <ul>
 <li>Linear Probing: Search for an empty slot sequentially</li>
 <li>Quadratic Probing: Search for an empty slot using a quadratic function</li>
+<li>Double Hashing: Use a second hash function to find the next slot</li>
 </ul></li>
 </ol>
 <center>
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Hash_table_5_0_1_1_1_1_0_LL.svg" style="filter:invert(100%);border-width:1px;">
 </center>
+<p><br></p>
 <ol start="2" type="1">
-<li>Closed Addressing:
-<ul>
-<li>Chaining: Store colliding keys in a linked list or binary search tree at each index</li>
-<li>Cuckoo Hashing: Use multiple hash functions to distribute keys</li>
-</ul></li>
+<li><strong>Separate Chaining</strong>: In separate chaining, each slot of the hash table is a linked list. When a new element is inserted, the hash function is computed and the element is inserted at the head of the linked list at that slot. This allows multiple elements to be stored at the same slot.</li>
 </ol>
 <center>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg/1280px-Hash_table_5_0_1_1_1_1_1_LL.svg.png" style="filter:invert(100%);border-width:1px;" width="80%">
 </center>
-<p>Hash tables are used in a wide variety of applications, including:</p>
-<p>Databases: Storing and retrieving data based on unique keys Caching: Storing frequently accessed data for faster retrieval Symbol Tables: Mapping identifiers to their values in programming languages Network Routing: Determining the best path for data packets</p>
+</section>
+<section id="load-factor" class="level2">
+<h2 class="anchored" data-anchor-id="load-factor">Load Factor</h2>
+<p>The load factor of a hash table is the ratio of the number of elements stored in the hash table to the size of the hash table. It is used to measure how full the hash table is and can affect the performance of the hash table.</p>
+<p>The load factor is calculated as:</p>
+<p><span class="math display">\[ \text{Load Factor} = \frac{\text{Number of Elements}}{\text{Size of Hash Table}} \]</span></p>
+<p>A high load factor means that the hash table is full and may have more collisions, which can slow down operations. A low load factor means that the hash table is not full and may have more empty slots, which can waste memory.</p>
+<p>The load factor is used to determine when to resize the hash table. When the load factor exceeds a certain threshold, the hash table is resized to a larger size to reduce the number of collisions and improve performance.</p>
+</section>
+<section id="hash-set-vs.-hash-map" class="level2">
+<h2 class="anchored" data-anchor-id="hash-set-vs.-hash-map">Hash Set vs.&nbsp;Hash Map</h2>
+<p>Hashing is used to implement two common data structures: hash sets and hash maps (also known as dictionaries).</p>
+<center>
+<img src="https://javaconceptoftheday.com/wp-content/uploads/2016/01/HashSetVsHashMap.png" style="filter:invert(100%);" width="80%">
+</center>
+<p><br></p>
+<p>A hash set is a data structure that stores a collection of unique elements, similar to a set in mathematics. A hash set uses a hash table to store the elements and provides fast search, insert, and delete operations.</p>
+<p>A hash map is a data structure that stores key-value pairs, similar to a dictionary in Python. A hash map uses a hash table to store the key-value pairs and provides fast search, insert, and delete operations based on the keys.</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>The time complexity of hash table operations depends on the efficiency of the hash function and the collision resolution technique. In general, hash table operations have an average-case time complexity of O(1) for search, insert, and delete operations.</p>
+<p>The space complexity of a hash table is O(n), where n is the number of key-value pairs stored in the table. The space complexity can vary based on the load factor and the collision resolution technique used.</p>
 
 
 </section>
