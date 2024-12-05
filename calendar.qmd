@@ -20,12 +20,11 @@ Please note that this is a tentative plan and is subject to change.
 
 | # | TOPIC | READING | MEETING 1 | MEETING 2 | WRITTEN  ASSIGNMENT | PROGRAMMING ASSIGNMENT |
 |---|----|---|---|---|---|---|
-| 7 | Graphs 1 | | [Traversal]() | [Dijkstra]() | | [PA7](https://classroom.github.com/assignment-invitations/2f220d29093a46fb38c3d44b7ef02aea) |
-| 8 | Graphs 2 | | [Bellman Ford]() | [Minimum Spanning Tree]() | | [PA8](https://classroom.github.com/assignment-invitations/baada28e8d4a261d30051162cc1b219c) |
-| 9 | Hashmaps | |  |  | | |
-| 10 | Backtracking | |  |  | | |
-| 11 | Greedy | |  |  | | |
-| 12 | Dynamic Programming | |  |  | | |
+| 7 | Graphs Intro | | [Terminology](datastructs/graphs.html) | [Implementation](datastructs/graph_implementations.html) | | [PA7](https://classroom.github.com/assignment-invitations/2f220d29093a46fb38c3d44b7ef02aea) |
+| 8 | Shortest Path | | [Dijkstra](datastructs/graph_dijkstra.html)  | [Bellman Ford](datastructs/graphs_bellmanford.html) | | [PA8](https://classroom.github.com/assignment-invitations/baada28e8d4a261d30051162cc1b219c) |
+| 9 | Minimum Spanning Trees | | [Prim-Jarnik](datastructs/graphs_prim.html) | [Kruskal](datastructs/graphs_kruskal.html) | | [PA9](https://classroom.github.com/assignment-invitations/baada28e8d4a261d30051162cc1b219c)|
+| 10 | Topological Sorting | | [DFS-based](datastructs/graphs_topo_dfs.html) | [BFS-based / Kahn's](datastructs/graphs_topo_kahn.html) | | [PA10](https://classroom.github.com/assignment-invitations/baada28e8d4a261d30051162cc1b219c)|
+| 11 | Hashing | |  |  | | [PA11](https://classroom.github.com/assignment-invitations/baada28e8d4a261d30051162cc1b219c)|
 
 
 <br/>

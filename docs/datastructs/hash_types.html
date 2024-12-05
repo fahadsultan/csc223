@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>graph_implementations</title>
+<title>Hashing Functions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -212,7 +212,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/graphs.html">GRAPHS</a></li><li class="breadcrumb-item"><a href="../datastructs/graph_implementations.html">Implementations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/hash.html">HASHING</a></li><li class="breadcrumb-item"><a href="../datastructs/hash_types.html">Hashing Functions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -464,7 +464,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link active">
+  <a href="../datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Implementations</span></a>
   </div>
 </li>
@@ -545,107 +545,196 @@ window.Quarto = {
   </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HASHING</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash_types.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hashing Functions</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash_prob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collision Avoidance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#desired-properties" id="toc-desired-properties" class="nav-link active" data-scroll-target="#desired-properties">Desired Properties</a>
+  <ul class="collapse">
+  <li><a href="#universal-hashing" id="toc-universal-hashing" class="nav-link" data-scroll-target="#universal-hashing">Universal Hashing</a></li>
+  <li><a href="#perfect-hashing" id="toc-perfect-hashing" class="nav-link" data-scroll-target="#perfect-hashing">Perfect Hashing</a></li>
+  </ul></li>
+  <li><a href="#common-hash-functions" id="toc-common-hash-functions" class="nav-link" data-scroll-target="#common-hash-functions">Common Hash Functions</a>
+  <ul class="collapse">
+  <li><a href="#division-method" id="toc-division-method" class="nav-link" data-scroll-target="#division-method">Division Method</a></li>
+  <li><a href="#multiplication-method" id="toc-multiplication-method" class="nav-link" data-scroll-target="#multiplication-method">Multiplication Method</a></li>
+  <li><a href="#mid-square-method" id="toc-mid-square-method" class="nav-link" data-scroll-target="#mid-square-method">Mid-Square Method</a></li>
+  <li><a href="#folding-method" id="toc-folding-method" class="nav-link" data-scroll-target="#folding-method">Folding Method</a></li>
+  <li><a href="#cryptographic-hash-functions" id="toc-cryptographic-hash-functions" class="nav-link" data-scroll-target="#cryptographic-hash-functions">Cryptographic Hash Functions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/hash.html">HASHING</a></li><li class="breadcrumb-item"><a href="../datastructs/hash_types.html">Hashing Functions</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Hashing Functions</h1>
+</div>
 
 
 
-<section id="implementations" class="level1">
-<h1>Implementations</h1>
-<p>There are several ways to implement a graph, each with its own advantages and disadvantages. The choice of implementation depends on the specific requirements of the application, such as the number of vertices and edges, the operations to be performed on the graph, and the memory constraints.</p>
-<p>Four common ways to represent a graph are:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 29%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Representation</th>
-<th style="text-align: center;">Description</th>
-<th style="text-align: center;">Space Complexity</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1. Adjacency Matrix</td>
-<td style="text-align: center;">A 2D array of size <span class="math inline">\(V \times V\)</span> where <span class="math inline">\(V\)</span> is the number of vertices in the graph.</td>
-<td style="text-align: center;"><span class="math inline">\(O(V^2)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2. Adjacency List</td>
-<td style="text-align: center;">An array of lists where each list represents the neighbors of a vertex.</td>
-<td style="text-align: center;"><span class="math inline">\(O(V + E)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3. Edge List</td>
-<td style="text-align: center;">A list of all the edges in the graph.</td>
-<td style="text-align: center;"><span class="math inline">\(O(E)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4. Incidence Matrix</td>
-<td style="text-align: center;">A 2D array of size <span class="math inline">\(V \times E\)</span> where <span class="math inline">\(V\)</span> is the number of vertices and <span class="math inline">\(E\)</span> is the number of edges.</td>
-<td style="text-align: center;"><span class="math inline">\(O(V \times E)\)</span></td>
-</tr>
-</tbody>
-</table>
-<section id="adjacency-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="adjacency-matrix">Adjacency Matrix</h2>
-<p>An adjacency matrix is a 2D array of size <span class="math inline">\(V \times V\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices in the graph. If the value of the matrix element at row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> is 1, it indicates an edge between vertices <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>. For weighted graphs, the matrix can store the weight of the edge instead of 1.</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Hash functions are used to map data values (keys) to specific locations in a data structure.</p>
+<p>The input to a hash function is a key, which can be of any data type, such as an integer, string, or object.</p>
+<p>The output of a hash function is a hash value, which is used to determine the location where the key should be stored in the data structure.</p>
 <center>
-<img width="80%" style="filter:invert(1)" src="https://mathworld.wolfram.com/images/eps-svg/AdjacencyMatrix_1002.svg">
-</center>
-<p>There are two types of adjacency matrices:</p>
-<ul>
-<li><p><strong>Unweighted Graphs</strong>: The matrix elements are 0 or 1, indicating the absence or presence of an edge.</p></li>
-<li><p><strong>Weighted Graphs</strong>: The matrix elements are the weights of the edges.</p></li>
-</ul>
-<p>Similarly, for directed graphs, the adjacency matrix can be asymmetric, with different values for the in-degree and out-degree.</p>
-<p>Adjacency matrices are useful for dense graphs, where the number of edges is close to the maximum possible number of edges.</p>
-</section>
-<section id="adjacency-list" class="level2">
-<h2 class="anchored" data-anchor-id="adjacency-list">Adjacency List</h2>
-<p>An adjacency list is a collection of lists or arrays used to represent the graph. Each vertex has a list of adjacent vertices. This representation is more space-efficient than an adjacency matrix for sparse graphs.</p>
-<center>
-<img src="https://kb.novaordis.com/images/3/30/Adjacency_List_Undirected_Graph.png" style="filter:invert(1)" width="80%">
+<img src="https://www.tutorialspoint.com/cryptography/images/hash_functions.jpg" style="filter:invert(100%);" width="40%"><br><br> <img src="https://www.kindsonthegenius.com/wp-content/uploads/2020/09/Hashing-1.jpg" style="filter:invert(100%);" width="90%">
 </center>
 <p><br></p>
-<p>In an adjacency list:</p>
+<p>There are many hash functions that use numeric or alphanumeric keys. This article focuses on discussing different hash functions:</p>
 <ul>
-<li><p>For an undirected graph, each edge <span class="math inline">\((u, v)\)</span> is stored twice: once in the list of <span class="math inline">\(u\)</span> and once in the list of <span class="math inline">\(v\)</span>.</p></li>
-<li><p>For a directed graph, the edge <span class="math inline">\((u, v)\)</span> is stored only in the list of <span class="math inline">\(u\)</span>.</p></li>
+<li>Division Method</li>
+<li>Multiplication Method</li>
+<li>Mid-Square Method</li>
+<li>Folding Method</li>
+<li>Cryptographic Hash Functions</li>
+<li>Universal Hashing</li>
+<li>Perfect Hashing</li>
 </ul>
-<p>Adjacency lists are useful for sparse graphs, where the number of edges is much less than the maximum possible number of edges.</p>
+<p>All of the following hash functions are defined for numeric keys.</p>
+<p>Most programming languages provide built-in hash functions that can be used for hashing strings, objects, and other data types.</p>
+<p>For example, Java provides the <code>hashCode()</code> method for objects, which can be used to generate hash values for objects. In Python, the <code>hash()</code> function can be used to generate hash values for objects.</p>
+<p>These built-in hash functions are designed to produce guarenteed unique hash values for different objects and are optimized for performance. The guarenteed uniqueness of hash values is accomplished by using a combination of the object’s memory address among other properties.</p>
+<section id="desired-properties" class="level2">
+<h2 class="anchored" data-anchor-id="desired-properties">Desired Properties</h2>
+<p>Some of the desired properties of a good hash function are:</p>
+<ul>
+<li><p><strong>Deterministic</strong>: The same input should always produce the same output.</p></li>
+<li><p><strong>Uniformity</strong>: The hash values should be uniformly distributed across the hash table to minimize collisions.</p></li>
+<li><p><strong>Efficiency</strong>: The hash function should be computationally efficient to calculate the hash value quickly.</p></li>
+<li><p><strong>Consistency</strong>: The hash function should produce consistent hash values for the same key.</p></li>
+<li><p><strong>Avalanche Effect</strong>: A small change in the input should produce a significantly different hash value.</p></li>
+<li><p><strong>Non-reversibility</strong>: It should be difficult to reverse-engineer the original input from the hash value.</p></li>
+<li><p><strong>Collision Resistance</strong>: It should be difficult to find two different inputs that produce the same hash value.</p></li>
+</ul>
+<section id="universal-hashing" class="level3">
+<h3 class="anchored" data-anchor-id="universal-hashing">Universal Hashing</h3>
+<p>Universal hashing is a technique that involves selecting a hash function randomly from a family of hash functions. The goal of universal hashing is to minimize collisions and distribute the keys evenly across the hash table.</p>
+<p>A family of hash functions is considered universal if, for any two distinct keys <span class="math inline">\(k_1\)</span> and <span class="math inline">\(k_2\)</span>, the probability that they collide under a randomly chosen hash function is at most <span class="math inline">\(1/m\)</span>, where <span class="math inline">\(m\)</span> is the size of the hash table.</p>
+<p>A common universal hash function is the polynomial hash function, which is defined as:</p>
+<p><span class="math display">\[ h(k) = ((a \cdot k + b) \mod p) \mod m \]</span></p>
+<p>Where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are randomly chosen constants, <span class="math inline">\(p\)</span> is a prime number greater than <span class="math inline">\(m\)</span>, and <span class="math inline">\(k\)</span> is the key.</p>
+<p>Universal hashing is useful in scenarios where the keys are not known in advance, and the hash function needs to be selected dynamically.</p>
 </section>
-<section id="edge-list" class="level2">
-<h2 class="anchored" data-anchor-id="edge-list">Edge List</h2>
-<p>An edge list is a list of all the edges in the graph. Each edge is represented as a tuple <span class="math inline">\((u, v)\)</span>, where <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> are the vertices connected by the edge. For weighted graphs, the tuple can include the weight of the edge.</p>
-<center>
-<img src="https://www.lucadavidian.com/wp-content/uploads/2020/08/edge-list___.jpg" style="filter:invert(1)" width="80%">
-</center>
-<p>Edge lists are useful for algorithms that require iterating over all the edges of the graph.</p>
+<section id="perfect-hashing" class="level3">
+<h3 class="anchored" data-anchor-id="perfect-hashing">Perfect Hashing</h3>
+<p>Perfect hashing is a technique that eliminates collisions by guaranteeing that each key maps to a unique hash value. Perfect hashing is useful in scenarios where the keys are known in advance, and the hash function can be optimized for the specific set of keys.</p>
+<p>There are two types of perfect hashing:</p>
+<ul>
+<li><p><u>Static perfect hashing</u>: The hash function is precomputed and optimized for a fixed set of keys. It guarantees no collisions for the given set of keys.</p></li>
+<li><p><u>Dynamic perfect hashing</u>: The hash function is computed dynamically based on the keys inserted into the hash table. It adjusts the hash function to minimize collisions as keys are added or removed.</p></li>
+</ul>
+<p>Perfect hashing is used in applications where fast lookup times are critical, such as compilers, databases, and network routers.</p>
 </section>
-<section id="incidence-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="incidence-matrix">Incidence Matrix</h2>
-<p>An incidence matrix is a 2D array of size <span class="math inline">\(V \times E\)</span>, where <span class="math inline">\(V\)</span> is the number of vertices and <span class="math inline">\(E\)</span> is the number of edges in the graph. Each row represents a vertex, and each column represents an edge. The matrix elements indicate the incidence of a vertex in an edge.</p>
+</section>
+<section id="common-hash-functions" class="level2">
+<h2 class="anchored" data-anchor-id="common-hash-functions">Common Hash Functions</h2>
+<section id="division-method" class="level3">
+<h3 class="anchored" data-anchor-id="division-method">Division Method</h3>
+<p>The division method is the simplest hash function. It involves dividing the key by the table size and taking the remainder as the hash value. The hash function is given by:</p>
+<p><span class="math display">\[ h(k) = k\mod m \]</span></p>
+<p>where <span class="math inline">\(k\)</span> is the key and <span class="math inline">\(m\)</span> is the size of the hash table. The division method is easy to implement and works well for integer keys.</p>
 <center>
-<img src="https://mathworld.wolfram.com/images/eps-svg/IncidenceMatrix_999.svg" style="filter:invert(1)" width="80%">
+<img src="https://www.digitalbithub.com/media/posts/media/division-modulo-method.jpg" style="filter:invert(100%);" width="80%"><img src="https://faculty.cs.niu.edu/~freedman/340/340notes/gifImages/340hash2.gif" style="filter:invert(100%);" width="80%">
 </center>
-<p>Incidence matrices are useful for bipartite graphs and network flow problems.</p>
+<p><br></p>
+<p>When using the division method, it is important to choose a prime number <span class="math inline">\(m\)</span> as the size of the hash table to reduce collisions.</p>
+<p>Prime numbers are preferred because they have fewer divisors, which can help distribute the keys more evenly across the hash table.</p>
+<!-- <center><img src="https://faculty.cs.niu.edu/~freedman/340/340notes/gifImages/340hash2.gif" style="filter:invert(100%);" width="80%"></center> -->
+<p><br></p>
+<p>However, it can lead to collisions if the keys are not uniformly distributed.</p>
+</section>
+<section id="multiplication-method" class="level3">
+<h3 class="anchored" data-anchor-id="multiplication-method">Multiplication Method</h3>
+<p>The multiplication method is another simple hash function. It involves multiplying the key by a constant <span class="math inline">\(A\)</span> and taking the fractional part of the product. The hash function is given by:</p>
+<p><span class="math display">\[ h(k) = \lfloor m \cdot (k \cdot A \mod 1) \rfloor \]</span></p>
+<p>where <span class="math inline">\(k\)</span> is the key, <span class="math inline">\(m\)</span> is the size of the hash table, and <span class="math inline">\(A\)</span> is a constant in the range <span class="math inline">\((0,1)\)</span>.</p>
+<p><span class="math inline">\(A \mod 1\)</span> is the fractional part of <span class="math inline">\(A\)</span>, and the multiplication is done using floating-point arithmetic.</p>
+<center>
+<img src="https://www2.hawaii.edu/~nodari/teaching/s18/Notes/Topic-06/Fig-11-4-multiplication-hashing.jpg" style="filter:invert(100%);" width="50%">
+</center>
+<p><br></p>
+<p>When using the multiplication method, it is important to choose a good constant <span class="math inline">\(A\)</span> to minimize collisions. A common choice for <span class="math inline">\(A\)</span> is the golden ratio <span class="math inline">\((\sqrt{5}-1)/2\)</span> = 0.6180339887.</p>
+<p>The golden ratio is known to produce a good distribution of hash values.</p>
+<p>The multiplication method is more effective than the division method in avoiding collisions.</p>
+</section>
+<section id="mid-square-method" class="level3">
+<h3 class="anchored" data-anchor-id="mid-square-method">Mid-Square Method</h3>
+<p>The mid-square method is a hash function that involves squaring the key, taking the middle digits, and using them as the hash value. The hash function is given by:</p>
+<p><span class="math display">\[ h(k) = \text{middle}(k^2) \]</span></p>
+<p>where <span class="math inline">\(k\)</span> is the key and <span class="math inline">\(\text{middle}(x)\)</span> returns the middle digits of <span class="math inline">\(x\)</span>.</p>
+<p>The middle digits are selected based on the size of the hash table. For example, if the hash table size is 1000, the middle three digits of the square are used.</p>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Middle-square_method.svg/800px-Middle-square_method.svg.png" style="filter:invert(100%);" width="30%">
+</center>
+<p><br></p>
+<p>Mid-square function is known to produce a good distribution of hash values but can be computationally expensive for large keys.</p>
+<p>Compared to the division and multiplication methods, the mid-square method is less commonly used.</p>
+</section>
+<section id="folding-method" class="level3">
+<h3 class="anchored" data-anchor-id="folding-method">Folding Method</h3>
+<p>The folding method is a hash function that involves dividing the key into equal-sized parts, adding them together, and taking the remainder as the hash value. The hash function is given by:</p>
+<p><span class="math display">\[ h(k) = (k_1 + k_2 + \ldots + k_n) \mod m \]</span></p>
+<p>where <span class="math inline">\(k\)</span> is the key, <span class="math inline">\(k_i\)</span> are the parts of the key, <span class="math inline">\(m\)</span> is the size of the hash table, and <span class="math inline">\(n\)</span> is the number of parts.</p>
+<center>
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--KNpHUFle--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://programmerprodigycode.files.wordpress.com/2021/01/image-3.png%3Fw%3D852" style="filter:invert(100%);" width="80%">
+</center>
+<p><br></p>
+<p>The folding method is useful for keys that are longer than the hash table size. It breaks down the key into smaller parts and combines them to generate the hash value.</p>
+<p>The folding method can be used with different folding techniques, such as folding by digits, folding by characters, or folding by groups of digits.</p>
+</section>
+<section id="cryptographic-hash-functions" class="level3">
+<h3 class="anchored" data-anchor-id="cryptographic-hash-functions">Cryptographic Hash Functions</h3>
+<p>Cryptographic hash functions are hash functions that are designed to be secure and resistant to attacks. They are used in cryptography to generate hash values for digital signatures, message authentication codes, and password hashing.</p>
+<p><strong>How MD5 Processes Data</strong>:</p>
+<p>MD5 is a cryptographic hash function that applies a series of mathematical operations to transform the input into a fixed-length output (128-bit hash). Here’s a step-by-step breakdown:</p>
+<ol type="1">
+<li><p><strong>Input Data Preparation</strong>: Break the input data into 512-bit blocks (64 bytes each). If the data isn’t a multiple of 512 bits, pad it by appending a ‘1’ bit, followed by enough ‘0’ bits, and finally append the original length of the data in bits as a 64-bit value.</p></li>
+<li><p><strong>Initialize MD5 State Variables</strong>: Use four 32-bit state variables (A, B, C, D) initialized to predefined constants. These variables will hold intermediate and final hash values.</p></li>
+<li><p><strong>Iterative Hash Computation</strong>: For each 512-bit block, perform four rounds of non-linear functions and bitwise operations (like AND, OR, XOR, rotations) on the state variables using the block’s data. After processing all blocks, combine the state variables to produce the final 128-bit hash output.</p></li>
+</ol>
 
 
 </section>

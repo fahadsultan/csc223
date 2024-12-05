@@ -110,7 +110,10 @@ website:
               contents:
                 - datastructs/graphs_topo_dfs.qmd
                 - datastructs/graphs_topo_kahn.qmd
-        - datastructs/hash.qmd
+        - section: datastructs/hash.qmd
+          contents:
+            - datastructs/hash_types.qmd
+            - datastructs/hash_prob.qmd
         # - section: datastructs/hash.qmd
           # contents:
           #   - datastructs/hashmaps.qmd

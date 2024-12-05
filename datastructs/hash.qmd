@@ -42,7 +42,7 @@ Collision in Hashing occurs when two different keys map to the same hash value. 
 
 The hashing process generates a small number for a big key, so there is a possibility that two keys could produce the same value. The situation where the newly inserted key maps to an already occupied, and it must be handled using some collision handling technology.
 
-## Collision Handling 
+<!-- ## Collision Handling 
 
 There are mainly two methods to handle collision:
 
@@ -58,14 +58,8 @@ There are mainly two methods to handle collision:
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Hash_table_5_0_1_1_1_1_0_LL.svg" style="filter:invert(100%);border-width:1px;">
 </center>
 
-<br/>
+<br/> -->
 
-
-2. **Separate Chaining**: In separate chaining, each slot of the hash table is a linked list. When a new element is inserted, the hash function is computed and the element is inserted at the head of the linked list at that slot. This allows multiple elements to be stored at the same slot.
-
-<center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg/1280px-Hash_table_5_0_1_1_1_1_1_LL.svg.png" style="filter:invert(100%);border-width:1px;" width="80%">
-</center>
 
 
 ## Load Factor

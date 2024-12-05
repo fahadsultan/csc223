@@ -4,7 +4,7 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n6\nHeaps\n\nArray based Representation\nExtraction + Heapify\nWA4\nPA5 + PA6\n\n\n\n\n\nMIDTERM\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n7\nGraphs 1\n\nTraversal\nDijkstra\n\nPA7\n\n\n8\nGraphs 2\n\nBellman Ford\nMinimum Spanning Tree\n\nPA8\n\n\n9\nHashmaps\n\n\n\n\n\n\n\n10\nBacktracking\n\n\n\n\n\n\n\n11\nGreedy\n\n\n\n\n\n\n\n12\nDynamic Programming\n\n\n\n\n\n\n\n\n\n\nFINAL EXAM"
+    "text": "Calendar\n\n\n\n\n\n\nCaution\n\n\n\nPlease note that this is a tentative plan and is subject to change.\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n1\nIntroduction + Git\nPro Git\nIntro\nVersion Control\n\nLab 1\n\n\n2\nProgramming in Java\nIntro to Java Ch. 1-4\nAbstractions\nOperations + Control Flow\nWA 1\nPA 1\n\n\n3\nProgramming in Java\nInto to Java Ch. 1-4\nAbstractions 1\nAbstractions 2\n\nPA 2\n\n\n4\nBinary Trees\n\nTrees\nBinary Trees\nWA 2\nPA 3\n\n\n5\nBinary Search Trees\nAlgorithms Ch. 3\nBST 1\nBST 2\nWA3\nPA 4\n\n\n6\nHeaps\n\nArray based Representation\nExtraction + Heapify\nWA4\nPA5 + PA6\n\n\n\n\n\nMIDTERM\n\n\n\n\n\n#\nTOPIC\nREADING\nMEETING 1\nMEETING 2\nWRITTEN ASSIGNMENT\nPROGRAMMING ASSIGNMENT\n\n\n\n\n7\nGraphs Intro\n\nTerminology\nImplementation\n\nPA7\n\n\n8\nShortest Path\n\nDijkstra\nBellman Ford\n\nPA8\n\n\n9\nMinimum Spanning Trees\n\nPrim-Jarnik\nKruskal\n\nPA9\n\n\n10\nTopological Sorting\n\nDFS-based\nBFS-based / Kahn’s\n\nPA10\n\n\n11\nHashing\n\n\n\n\nPA11\n\n\n\n\n\nFINAL EXAM"
   },
   {
     "objectID": "references.html",
@@ -232,7 +232,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Fall 2024)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 10\n\n\n\nPA 10 is due before the next lab on Wednesday, Dec 4th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nProgramming Assignment 9\n\n\n\nPA 9 is due before the next lab on Wednesday, Nov 27th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\nProgramming Assignment 11\n\n\n\nPA 10 is due before the next lab on Wednesday, Dec 4th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -2745,6 +2745,174 @@
     "crumbs": [
       "Home",
       "HASHING"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html",
+    "href": "datastructs/hash_types.html",
+    "title": "Hashing Functions",
+    "section": "",
+    "text": "Hash functions are used to map data values (keys) to specific locations in a data structure.\nThe input to a hash function is a key, which can be of any data type, such as an integer, string, or object.\nThe output of a hash function is a hash value, which is used to determine the location where the key should be stored in the data structure.\nThere are many hash functions that use numeric or alphanumeric keys. This article focuses on discussing different hash functions:\nAll of the following hash functions are defined for numeric keys.\nMost programming languages provide built-in hash functions that can be used for hashing strings, objects, and other data types.\nFor example, Java provides the hashCode() method for objects, which can be used to generate hash values for objects. In Python, the hash() function can be used to generate hash values for objects.\nThese built-in hash functions are designed to produce guarenteed unique hash values for different objects and are optimized for performance. The guarenteed uniqueness of hash values is accomplished by using a combination of the object’s memory address among other properties.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#division-method",
+    "href": "datastructs/hash_types.html#division-method",
+    "title": "Types of Hashing",
+    "section": "Division Method",
+    "text": "Division Method\nThe division method is the simplest hash function. It involves dividing the key by the table size and taking the remainder as the hash value. The hash function is given by:\n\\[ h(k) = k \\mod m \\]\nwhere \\(k\\) is the key and \\(m\\) is the size of the hash table. The division method is easy to implement and works well for integer keys.\nHowever, it can lead to collisions if the keys are not uniformly distributed.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#multiplication-method",
+    "href": "datastructs/hash_types.html#multiplication-method",
+    "title": "Hashing Functions",
+    "section": "Multiplication Method",
+    "text": "Multiplication Method\nThe multiplication method is another simple hash function. It involves multiplying the key by a constant \\(A\\) and taking the fractional part of the product. The hash function is given by:\n\\[ h(k) = \\lfloor m \\cdot (k \\cdot A \\mod 1) \\rfloor \\]\nwhere \\(k\\) is the key, \\(m\\) is the size of the hash table, and \\(A\\) is a constant in the range \\((0,1)\\).\n\\(A \\mod 1\\) is the fractional part of \\(A\\), and the multiplication is done using floating-point arithmetic.\nWhen using the multiplication method, it is important to choose a good constant \\(A\\) to minimize collisions. A common choice for \\(A\\) is the golden ratio \\((\\sqrt{5}-1)/2\\) = 0.6180339887.\nThe golden ratio is known to produce a good distribution of hash values.\nThe multiplication method is more effective than the division method in avoiding collisions.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#mid-square-method",
+    "href": "datastructs/hash_types.html#mid-square-method",
+    "title": "Hashing Functions",
+    "section": "Mid-Square Method",
+    "text": "Mid-Square Method\nThe mid-square method is a hash function that involves squaring the key, taking the middle digits, and using them as the hash value. The hash function is given by:\n\\[ h(k) = \\text{middle}(k^2) \\]\nwhere \\(k\\) is the key and \\(\\text{middle}(x)\\) returns the middle digits of \\(x\\).\nThe middle digits are selected based on the size of the hash table. For example, if the hash table size is 1000, the middle three digits of the square are used.\nMid-square function is known to produce a good distribution of hash values but can be computationally expensive for large keys.\nCompared to the division and multiplication methods, the mid-square method is less commonly used.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#folding-method",
+    "href": "datastructs/hash_types.html#folding-method",
+    "title": "Hashing Functions",
+    "section": "Folding Method",
+    "text": "Folding Method\nThe folding method is a hash function that involves dividing the key into equal-sized parts, adding them together, and taking the remainder as the hash value. The hash function is given by:\n\\[ h(k) = (k_1 + k_2 + \\ldots + k_n) \\mod m \\]\nwhere \\(k\\) is the key, \\(k_i\\) are the parts of the key, \\(m\\) is the size of the hash table, and \\(n\\) is the number of parts.\nThe folding method is useful for keys that are longer than the hash table size. It breaks down the key into smaller parts and combines them to generate the hash value.\nThe folding method can be used with different folding techniques, such as folding by digits, folding by characters, or folding by groups of digits.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#cryptographic-hash-functions",
+    "href": "datastructs/hash_types.html#cryptographic-hash-functions",
+    "title": "Hashing Functions",
+    "section": "Cryptographic Hash Functions",
+    "text": "Cryptographic Hash Functions\nCryptographic hash functions are hash functions that are designed to be secure and resistant to attacks. They are used in cryptography to generate hash values for digital signatures, message authentication codes, and password hashing.\nCryptographic hash functions have the following properties:\n\nDeterministic: The same input always produces the same output.\nFast: The hash function should be computationally efficient.\nPre-image resistance: Given the hash value, it should be difficult to find the original input.\nCollision resistance: It should be difficult to find two different inputs that produce the same hash value.\nAvalanche effect: A small change in the input should produce a significantly different hash value.\n\nCommon cryptographic hash functions include SHA-256, SHA-3, and MD5. These hash functions are widely used in security applications.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#universal-hashing",
+    "href": "datastructs/hash_types.html#universal-hashing",
+    "title": "Hashing Functions",
+    "section": "Universal Hashing",
+    "text": "Universal Hashing\nUniversal hashing is a technique that involves selecting a hash function randomly from a family of hash functions. The goal of universal hashing is to minimize collisions and distribute the keys evenly across the hash table.\nA family of hash functions is considered universal if, for any two distinct keys \\(k_1\\) and \\(k_2\\), the probability that they collide under a randomly chosen hash function is at most \\(1/m\\), where \\(m\\) is the size of the hash table.\nA common universal hash function is the polynomial hash function, which is defined as:\n\\[ h(k) = ((a \\cdot k + b) \\mod p) \\mod m \\]\nWhere \\(a\\) and \\(b\\) are randomly chosen constants, \\(p\\) is a prime number greater than \\(m\\), and \\(k\\) is the key.\nUniversal hashing is useful in scenarios where the keys are not known in advance, and the hash function needs to be selected dynamically.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#perfect-hashing",
+    "href": "datastructs/hash_types.html#perfect-hashing",
+    "title": "Hashing Functions",
+    "section": "Perfect Hashing",
+    "text": "Perfect Hashing\nPerfect hashing is a technique that eliminates collisions by guaranteeing that each key maps to a unique hash value. Perfect hashing is useful in scenarios where the keys are known in advance, and the hash function can be optimized for the specific set of keys.\nThere are two types of perfect hashing:\n\nStatic perfect hashing: The hash function is precomputed and optimized for a fixed set of keys. It guarantees no collisions for the given set of keys.\nDynamic perfect hashing: The hash function is computed dynamically based on the keys inserted into the hash table. It adjusts the hash function to minimize collisions as keys are added or removed.\n\nPerfect hashing is used in applications where fast lookup times are critical, such as compilers, databases, and network routers.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#common-hash-functions",
+    "href": "datastructs/hash_types.html#common-hash-functions",
+    "title": "Hashing Functions",
+    "section": "Common Hash Functions",
+    "text": "Common Hash Functions\n\nDivision Method\nThe division method is the simplest hash function. It involves dividing the key by the table size and taking the remainder as the hash value. The hash function is given by:\n\\[ h(k) = k\\mod m \\]\nwhere \\(k\\) is the key and \\(m\\) is the size of the hash table. The division method is easy to implement and works well for integer keys.\n\n\n\n\nWhen using the division method, it is important to choose a prime number \\(m\\) as the size of the hash table to reduce collisions.\nPrime numbers are preferred because they have fewer divisors, which can help distribute the keys more evenly across the hash table.\n\n\nHowever, it can lead to collisions if the keys are not uniformly distributed.\n\n\nMultiplication Method\nThe multiplication method is another simple hash function. It involves multiplying the key by a constant \\(A\\) and taking the fractional part of the product. The hash function is given by:\n\\[ h(k) = \\lfloor m \\cdot (k \\cdot A \\mod 1) \\rfloor \\]\nwhere \\(k\\) is the key, \\(m\\) is the size of the hash table, and \\(A\\) is a constant in the range \\((0,1)\\).\n\\(A \\mod 1\\) is the fractional part of \\(A\\), and the multiplication is done using floating-point arithmetic.\n\n\n\n\nWhen using the multiplication method, it is important to choose a good constant \\(A\\) to minimize collisions. A common choice for \\(A\\) is the golden ratio \\((\\sqrt{5}-1)/2\\) = 0.6180339887.\nThe golden ratio is known to produce a good distribution of hash values.\nThe multiplication method is more effective than the division method in avoiding collisions.\n\n\nMid-Square Method\nThe mid-square method is a hash function that involves squaring the key, taking the middle digits, and using them as the hash value. The hash function is given by:\n\\[ h(k) = \\text{middle}(k^2) \\]\nwhere \\(k\\) is the key and \\(\\text{middle}(x)\\) returns the middle digits of \\(x\\).\nThe middle digits are selected based on the size of the hash table. For example, if the hash table size is 1000, the middle three digits of the square are used.\n\n\n\n\nMid-square function is known to produce a good distribution of hash values but can be computationally expensive for large keys.\nCompared to the division and multiplication methods, the mid-square method is less commonly used.\n\n\nFolding Method\nThe folding method is a hash function that involves dividing the key into equal-sized parts, adding them together, and taking the remainder as the hash value. The hash function is given by:\n\\[ h(k) = (k_1 + k_2 + \\ldots + k_n) \\mod m \\]\nwhere \\(k\\) is the key, \\(k_i\\) are the parts of the key, \\(m\\) is the size of the hash table, and \\(n\\) is the number of parts.\n\n\n\n\nThe folding method is useful for keys that are longer than the hash table size. It breaks down the key into smaller parts and combines them to generate the hash value.\nThe folding method can be used with different folding techniques, such as folding by digits, folding by characters, or folding by groups of digits.\n\n\nCryptographic Hash Functions\nCryptographic hash functions are hash functions that are designed to be secure and resistant to attacks. They are used in cryptography to generate hash values for digital signatures, message authentication codes, and password hashing.\nHow MD5 Processes Data:\nMD5 is a cryptographic hash function that applies a series of mathematical operations to transform the input into a fixed-length output (128-bit hash). Here’s a step-by-step breakdown:\n\nInput Data Preparation: Break the input data into 512-bit blocks (64 bytes each). If the data isn’t a multiple of 512 bits, pad it by appending a ‘1’ bit, followed by enough ‘0’ bits, and finally append the original length of the data in bits as a 64-bit value.\nInitialize MD5 State Variables: Use four 32-bit state variables (A, B, C, D) initialized to predefined constants. These variables will hold intermediate and final hash values.\nIterative Hash Computation: For each 512-bit block, perform four rounds of non-linear functions and bitwise operations (like AND, OR, XOR, rotations) on the state variables using the block’s data. After processing all blocks, combine the state variables to produce the final 128-bit hash output.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_types.html#desired-properties",
+    "href": "datastructs/hash_types.html#desired-properties",
+    "title": "Hashing Functions",
+    "section": "Desired Properties",
+    "text": "Desired Properties\nSome of the desired properties of a good hash function are:\n\nDeterministic: The same input should always produce the same output.\nUniformity: The hash values should be uniformly distributed across the hash table to minimize collisions.\nEfficiency: The hash function should be computationally efficient to calculate the hash value quickly.\nConsistency: The hash function should produce consistent hash values for the same key.\nAvalanche Effect: A small change in the input should produce a significantly different hash value.\nNon-reversibility: It should be difficult to reverse-engineer the original input from the hash value.\nCollision Resistance: It should be difficult to find two different inputs that produce the same hash value.\n\n\nUniversal Hashing\nUniversal hashing is a technique that involves selecting a hash function randomly from a family of hash functions. The goal of universal hashing is to minimize collisions and distribute the keys evenly across the hash table.\nA family of hash functions is considered universal if, for any two distinct keys \\(k_1\\) and \\(k_2\\), the probability that they collide under a randomly chosen hash function is at most \\(1/m\\), where \\(m\\) is the size of the hash table.\nA common universal hash function is the polynomial hash function, which is defined as:\n\\[ h(k) = ((a \\cdot k + b) \\mod p) \\mod m \\]\nWhere \\(a\\) and \\(b\\) are randomly chosen constants, \\(p\\) is a prime number greater than \\(m\\), and \\(k\\) is the key.\nUniversal hashing is useful in scenarios where the keys are not known in advance, and the hash function needs to be selected dynamically.\n\n\nPerfect Hashing\nPerfect hashing is a technique that eliminates collisions by guaranteeing that each key maps to a unique hash value. Perfect hashing is useful in scenarios where the keys are known in advance, and the hash function can be optimized for the specific set of keys.\nThere are two types of perfect hashing:\n\nStatic perfect hashing: The hash function is precomputed and optimized for a fixed set of keys. It guarantees no collisions for the given set of keys.\nDynamic perfect hashing: The hash function is computed dynamically based on the keys inserted into the hash table. It adjusts the hash function to minimize collisions as keys are added or removed.\n\nPerfect hashing is used in applications where fast lookup times are critical, such as compilers, databases, and network routers.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Hashing Functions"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_prob.html",
+    "href": "datastructs/hash_prob.html",
+    "title": "Collision Avoidance",
+    "section": "",
+    "text": "There are mainly two methods to handle collision:",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_prob.html#linear-probing",
+    "href": "datastructs/hash_prob.html#linear-probing",
+    "title": "Collision Avoidance",
+    "section": "Linear Probing",
+    "text": "Linear Probing\nSearch for an empty slot sequentially. The next slot is checked if the current slot is occupied. This process continues until an empty slot is found.\nFormally, the probing sequence is given by:\n\\[ h(k, i) = (h'(k) + i) \\mod m \\]\nwhere:\n\n\\(h(k, i)\\) is the probing sequence\n\\(h'(k)\\) is the hash function for key \\(k\\) such that \\(0 \\leq h'(k) &lt; m\\)\n\\(m\\) is the size of the hash table\n\\(i\\) is the probe number\n\nWhen insertions are done in a linear sequence, searching for an element is also done in a linear sequence.\nTo check if an element is present in the hash table, the same probing sequence is used to find the slot where the element should be located. If the element is found at that slot, then it is present in the hash table. If a different element is found at that slot, then the search continues by checking the next slot in the probing sequence.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_prob.html#quadratic-probing",
+    "href": "datastructs/hash_prob.html#quadratic-probing",
+    "title": "Collision Avoidance",
+    "section": "Quadratic Probing",
+    "text": "Quadratic Probing\nSearch for an empty slot using a quadratic function\nFormally, the probing sequence is given by:\n\\[ h(k, i) = (h'(k) + c_1 \\cdot i + c_2 \\cdot i^2) \\mod m \\]\nwhere:\n\n\\(h(k, i)\\) is the probing sequence\n\\(h'(k)\\) is the hash function for key \\(k\\) such that \\(0 \\leq h'(k) &lt; m\\)\n\\(m\\) is the size of the hash table\n\\(i\\) is the probe number\n\\(c_1\\) and \\(c_2\\) are constants\n\nThe quadratic probing technique uses a quadratic function to compute the next slot to check when resolving collisions. This technique reduces the clustering effect that can occur with linear probing and spreads out the elements more evenly in the hash table.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "objectID": "datastructs/hash_prob.html#double-hashing",
+    "href": "datastructs/hash_prob.html#double-hashing",
+    "title": "Collision Avoidance",
+    "section": "Double Hashing",
+    "text": "Double Hashing\nUse a second hash function to find the next slot. If the slot is already occupied, a second hash function is used to compute the next slot to check. This process continues until an empty slot is found.\nFormally, the probing sequence is given by:\n\\[ h(k, i) = (h_1(k) + i \\cdot h_2(k)) \\mod m \\]\nwhere:\n\n\\(h(k, i)\\) is the probing sequence\n\\(h_1(k)\\) is the primary hash function for key \\(k\\) such that \\(0 \\leq h_1(k) &lt; m\\)\n\\(h_2(k)\\) is the secondary hash function for key \\(k\\) such that \\(0 &lt; h_2(k) &lt; m\\)\n\\(m\\) is the size of the hash table\n\nDouble hashing uses two hash functions to compute the next slot to check when resolving collisions. The secondary hash function is used to compute the step size for probing, which can help reduce clustering and distribute the elements more evenly in the hash table.",
+    "crumbs": [
+      "Home",
+      "HASHING",
+      "Collision Avoidance"
     ]
   }
 ]

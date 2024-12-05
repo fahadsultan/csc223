@@ -545,12 +545,29 @@ window.Quarto = {
   </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link active">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">HASHING</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash_types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hashing Functions</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash_prob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collision Avoidance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -563,7 +580,6 @@ window.Quarto = {
   <ul>
   <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
   <li><a href="#collisions" id="toc-collisions" class="nav-link" data-scroll-target="#collisions">Collisions</a></li>
-  <li><a href="#collision-handling" id="toc-collision-handling" class="nav-link" data-scroll-target="#collision-handling">Collision Handling</a></li>
   <li><a href="#load-factor" id="toc-load-factor" class="nav-link" data-scroll-target="#load-factor">Load Factor</a></li>
   <li><a href="#hash-set-vs.-hash-map" id="toc-hash-set-vs.-hash-map" class="nav-link" data-scroll-target="#hash-set-vs.-hash-map">Hash Set vs.&nbsp;Hash Map</a></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
@@ -621,29 +637,23 @@ window.Quarto = {
 <p><br></p>
 <p>Collision in Hashing occurs when two different keys map to the same hash value. Hash collisions can be intentionally created for many hash algorithms. The probability of a hash collision depends on the size of the algorithm, the distribution of hash values and the efficiency of Hash function.</p>
 <p>The hashing process generates a small number for a big key, so there is a possibility that two keys could produce the same value. The situation where the newly inserted key maps to an already occupied, and it must be handled using some collision handling technology.</p>
-</section>
-<section id="collision-handling" class="level2">
-<h2 class="anchored" data-anchor-id="collision-handling">Collision Handling</h2>
-<p>There are mainly two methods to handle collision:</p>
-<ol type="1">
-<li><p><strong>Open Addressing</strong>: In open addressing, all elements are stored in the hash table itself. When a new element is inserted, the hash function is computed and if the slot is already occupied, then the next slot is checked. This process continues until an empty slot is found.</p>
-<p>Open Addressing has the following techniques:</p>
-<ul>
-<li>Linear Probing: Search for an empty slot sequentially</li>
-<li>Quadratic Probing: Search for an empty slot using a quadratic function</li>
-<li>Double Hashing: Use a second hash function to find the next slot</li>
-</ul></li>
-</ol>
+<!-- ## Collision Handling 
+
+There are mainly two methods to handle collision:
+
+1. **Open Addressing**: In open addressing, all elements are stored in the hash table itself. When a new element is inserted, the hash function is computed and if the slot is already occupied, then the next slot is checked. This process continues until an empty slot is found. 
+
+    Open Addressing has the following techniques:
+
+    * Linear Probing: Search for an empty slot sequentially
+    * Quadratic Probing: Search for an empty slot using a quadratic function
+    * Double Hashing: Use a second hash function to find the next slot
+
 <center>
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Hash_table_5_0_1_1_1_1_0_LL.svg" style="filter:invert(100%);border-width:1px;">
 </center>
-<p><br></p>
-<ol start="2" type="1">
-<li><strong>Separate Chaining</strong>: In separate chaining, each slot of the hash table is a linked list. When a new element is inserted, the hash function is computed and the element is inserted at the head of the linked list at that slot. This allows multiple elements to be stored at the same slot.</li>
-</ol>
-<center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg/1280px-Hash_table_5_0_1_1_1_1_1_LL.svg.png" style="filter:invert(100%);border-width:1px;" width="80%">
-</center>
+
+<br/> -->
 </section>
 <section id="load-factor" class="level2">
 <h2 class="anchored" data-anchor-id="load-factor">Load Factor</h2>

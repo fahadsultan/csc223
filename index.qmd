@@ -13,15 +13,9 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 
 ::: {.callout-caution}
-# Programming Assignment 10
+# Programming Assignment 11
 [PA 10](https://classroom.github.com/a/4TIv-oW9) is due before the next lab on <b><u>Wednesday, Dec 4th, 2024 2:30 PM</b></u>.
 :::
- 
-::: {.callout-caution}
-# Programming Assignment 9
-[PA 9](https://classroom.github.com/assignment-invitations/254950e4a97031015c2b622aed62df79) is due before the next lab on <b><u>Wednesday, Nov 27th, 2024 2:30 PM</b></u>.
-:::
-
 
 ::: {.callout-tip}
 ## Open-Door Policy
