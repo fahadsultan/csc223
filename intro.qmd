@@ -53,8 +53,13 @@ During my PhD, I worked at the intersection of **computational neuroscience, bio
 
 I live in Travelers Rest with my wife and cat. 
 
+<br/>
+<br/>
+
 
 ### How to Reach Me
+
+
 
 **Office**: Riley Hall 200-H
 
@@ -68,6 +73,9 @@ You can also **schedule a meeting [using this link](https://calendly.com/ssultan
 <img width="60%" style="filter:invert(1)" src="assets/office.png"></img>
 </center>
 
+<br/>
+<br/>
+
 
 ## About the Course
  
@@ -80,6 +88,10 @@ All of the course content will be posted on this website.
 Important announcements will be made on both the course website homepage and in class. 
 
 You are to submit assignments and exams on **[the course Moodle page](https://courses.furman.edu/course/view.php?id=18720)**. I will also upload all of your grades there.
+
+<br/>
+<br/>
+
 
 
 ### How-to knowledge > What-is knowledge
@@ -98,17 +110,17 @@ Research shows that there is only one way to acquire imperative knowledge: **Pra
 
 In this course, you will be given ample opportunities to practice along with regular feedback.
 
+<br/>
+<br/>
+
 ### Assignments 
 
 Approach assignments purely as **opportunities to learn**, prepare for exams and to prepare for your career.
 
 <img align="right" style="filter:invert(0.87)" src="https://theteachingdelusioncom.files.wordpress.com/2021/12/practice-feedback-loop.jpg?w=1024" width="40%">
 
-It is **not worth cheating** on assignments. Just come talk to me if you are struggling with an assignment. I will literally just tell you the answer. 
+It is <u>**not worth cheating**</u> on assignments. Just come talk to me if you are struggling with an assignment. I will literally just tell you the answer. 
 
-On assignments, expect **near maximal flexibility** from me. Every assignment will be due 10 days calendar after it is posted. 
-
-You can schedule a time to get your assignments graded [using this link](https://calendly.com/ssultan-dpq/15-minute-meeting). 
 
 <u>**Written Assignments:**</u>
 
@@ -116,42 +128,47 @@ Written assignments are to help you build a deeper understanding of algorithms a
 
 These could simply be math problems or involve tracing algorithms and dry-runs. 
 
-Both handwritten or typed submissions are acceptable. Submissions, as always, on Moodle. 
-
-<u>**Programming Assignments:**</u>
-
-Programming assignments are going to be posted at the start of the lab session each week and will be due in 10 days, unless otherwise specified.
-
-All **Programming assignments** will be graded through an **in-person code review**. You are to give a walkthrough of your code and be able to answer questions about it. 
-
-During these code review, you will be given feedback on how to improve your code and avoid common mistakes.
+Both handwritten or typed submissions are acceptable. Submissions on Moodle. 
 
 You should expect questions in the exams similar to assignments.
 
+<u>**Programming Assignments:**</u>
+
+Programming assignments are going to be posted at the start of the lab session each week and will be due by the start of the next lab session, unless otherwise specified.
+
+<br/>
+
 ### Class Participation
 
-I have created 10 graded items under class participation on Moodle. In class, you will be asked to answer a question or solve a problem. You will be graded on the basis of your participation. It is your responsibility to make sure you have 10 points by the end of the semester.
+Class Participation is 5\% of your grade. 
 
-There are 10 graded items under class participation on Moodle. In class, you will be asked to answer a question or solve a problem. You will be graded on the basis of your participation. It is your responsibility to make sure you have 10 points by the end of the semester.
+**Class Participation** is not just about attendance. It is about being engaged in the class.
 
-$$\frac{24~\text{students} \times 10~\text{points needed by each student}}{15~\text{weeks} \times 2~\text{classes per week}} = 8~\text{points given out class, on average}$$
+**Engagement** is the key to learning. 
 
-
-I will give out class participation points in every class class for answering or asking a question. 
+Ask questions, answer questions, participate in discussions.
 
 Given the glut of information accessible online and otherwise in this day and age, **meaningful interactions with your peers and teachers is essentially why you are paying your college tuition**. 
 
-Please come to class, labs and office hours 
+<u>The only reason you are paying such a high tuition is to have access to the collective knowledge and wisdom of your professors and peers. 
 
-Please ask questions during class
+Otherwise, you could just watch YouTube videos and read books on your own.</u>
 
-Please answer questions and participate in discussions during class
+### Professionalism
+
+Professionalism is 5\% of your grade.
+
+Professionalism is about how you conduct yourself in the class.
+
+This includes, but is not limited to:
+
+1. **Respect and Courtesy**: Being respectful and courteous to your peers and your instructor.
+2. **Punctuality**: Being on time for class and for assignments.
+3. **Communication**: Communicating clearly and effectively with your peers and your instructor.
 
 ### Exams 
 
 There will be **three** exams in the course, including the final. The final exam will be cumulative. Exams constitute **60%** of your course grade.
-
-**All exams will be on computer, with a large programming component**. Questions will be posted on Moodle and you will have to submit your solutions on Moodle, just like assignments.
 
 You will be evaluated on your ability to apply knowledge to new problems and not just on your ability to retain and recall information.
 
@@ -161,6 +178,7 @@ All exams are going to be cumulative, with focus on the topics covered since las
 
 Diligent work on the homework and assignments will be rewarded here. 
 
+<br/>
 
 ### Giant Asterisk * 
 

@@ -1,9 +1,13 @@
 
 
-# TA 
+# Teaching Assistant
 
-Flynn Nisbet is the TA for the class this semester. 
+<img src="assets/chace.png" width="30%" align="right">
 
-His office hours are: Monday 7 - 10 PM in Riley 203. 
+Chace Sledge is the Teaching Assistant for the class this semester. 
+
+He is a Computer Science major and Data Analytics minor graduating in May 2026. 
+
+His office hours are: Tuesdays 8 - 10 PM in Riley 203. 
 
 
