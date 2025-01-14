@@ -1,5 +1,5 @@
 ---
-title: "CSC-223: Advanced Data Structures and Software Development (Fall 2024)"
+title: "CSC-223: Advanced Data Structures and Software Development (Spring 2025)"
 toc: true
 ---
 
@@ -11,7 +11,7 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 👇🏾 Below, you can find important links and important announcements.
 
-
+<!-- 
 ::: {.callout-caution}
 # Programming Assignment 11
 [PA 10](https://classroom.github.com/a/4TIv-oW9) is due before the next lab on <b><u>Wednesday, Dec 4th, 2024 2:30 PM</b></u>.
@@ -19,7 +19,7 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 
 ::: {.callout-tip}
 Enjoy the break 
-:::
+::: -->
 
 ::: {.callout-tip}
 ## Open-Door Policy
