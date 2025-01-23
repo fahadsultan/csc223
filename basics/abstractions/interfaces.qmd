@@ -1,4 +1,237 @@
+---
+title: "Functions"
+toc: true
+---
 
 # Interfaces
 
+Interfaces in Java are similar to classes but with some differences. 
+
+An interface is a reference type in Java that is used to define a blueprint of a class. 
+
+It contains only abstract methods and constants. 
+
+An interface cannot have constructors, fields, or static methods. 
+
+A class can implement multiple interfaces, but it can extend only one class.
+
+## Declaring an Interface
+
+An interface in Java is declared using the `interface` keyword followed by the interface name. Here is an example of an interface declaration:
+
+```java
+public interface Shape {
+    double getArea();
+    double getPerimeter();
+}
+
+```
+
+## Implementing an Interface
+
+A class can implement an interface using the `implements` keyword. The class must provide implementations for all the abstract methods defined in the interface. Here is an example of a class implementing the `Shape` interface:
+
+```java
+public class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+```
+
+## Extending an Interface
+
+An interface can extend another interface using the `extends` keyword. The sub-interface inherits the abstract methods and constants of the super-interface. Here is an example of an interface extending another interface:
+
+```java
+public interface Drawable extends Shape {
+    void draw();
+}
+```
+
+## Default Methods
+
+An interface can have default methods that provide a default implementation for a method. A class that implements the interface can override the default method if needed. Here is an example of a default method in an interface:
+
+```java
+public interface Shape {
+    double getArea();
+    double getPerimeter();
+
+    default void printDetails() {
+        System.out.println("Area: " + getArea());
+        System.out.println("Perimeter: " + getPerimeter());
+    }
+}
+```
+
+## Static Methods
+
+An interface can have static methods that are associated with the interface itself, not with any instance of the interface. Here is an example of a static method in an interface:
+
+```java
+public interface Shape {
+    double getArea();
+    double getPerimeter();
+
+    static void printInfo() {
+        System.out.println("This is a Shape interface");
+    }
+}
+```
+
+## Constants
+
+An interface can have constants that are implicitly `public`, `static`, and `final`. Here is an example of a constant in an interface:
+
+```java
+public interface Shape {
+    double PI = 3.14159;
+
+    double getArea();
+    double getPerimeter();
+}
+```
+
 # Generics
+
+Generics in Java allow you to define classes, interfaces, and methods that operate on a type parameter.
+
+Generics provide type safety by allowing you to specify the type of objects that a class or method can work with.
+
+Generics enable you to create classes, interfaces, and methods that are type-independent and can be reused with different data types.
+
+## Declaring a Generic Class
+
+A generic class in Java is declared using angle brackets (`<>`) to specify one or more type parameters. Here is an example of a generic class:
+
+```java
+public class Box<T> {
+    private T value;
+
+    public Box(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
+    }
+}
+```
+
+## Using a Generic Class
+
+You can create an instance of a generic class by specifying the type parameter in angle brackets. Here is an example of using the `Box` class:
+
+```java
+Box<Integer> intBox = new Box<>(10);
+int value = intBox.getValue();
+System.out.println("Value: " + value);
+```
+
+## Declaring a Generic Interface
+
+A generic interface in Java is declared similar to a generic class. Here is an example of a generic interface:
+
+```java
+
+public interface Pair<K, V> {
+    K getKey();
+    V getValue();
+}
+```
+
+## Implementing a Generic Interface
+
+A class can implement a generic interface by specifying the type parameters. Here is an example of a class implementing the `Pair` interface:
+
+```java
+public class OrderedPair<K, V> implements Pair<K, V> {
+    private K key;
+    private V value;
+
+    public OrderedPair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    @Override
+    public K getKey() {
+        return key;
+    }
+
+    @Override
+    public V getValue() {
+        return value;
+    }
+}
+```
+
+# Abstract Classes
+
+An abstract class in Java is a class that cannot be instantiated and is used to define common behavior for subclasses.
+
+An abstract class can have abstract methods, concrete methods, and fields.
+
+A class that extends an abstract class must provide implementations for all the abstract methods.
+
+## Declaring an Abstract Class
+
+Declaring an abstract class in Java is similar to declaring a regular class, but with the `abstract` keyword. Here is an example of an abstract class:
+
+```java
+public abstract class Shape {
+    public abstract double getArea();
+    public abstract double getPerimeter();
+}
+```
+
+## Extending an Abstract Class
+
+A class can extend an abstract class using the `extends` keyword. The subclass must provide implementations for all the abstract methods. Here is an example of a class extending the `Shape` abstract class:
+
+```java
+
+public class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+```
+
+## Abstract Classes vs. Interfaces
+
+Abstract classes and interfaces are similar in that they both define abstract methods that must be implemented by subclasses.
+
+Abstract classes can have fields, constructors, and concrete methods, while interfaces cannot.
+
+A class can extend only one abstract class, but it can implement multiple interfaces.
+
+Abstract classes are used when you want to provide a common base implementation for subclasses, while interfaces are used when you want to define a contract for classes to implement.
+
+
