@@ -12,14 +12,20 @@ From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you
 👇🏾 Below, you can find important links and important announcements.
 
 <!-- 
-::: {.callout-caution}
-# Programming Assignment 11
-[PA 10](https://classroom.github.com/a/4TIv-oW9) is due before the next lab on <b><u>Wednesday, Dec 4th, 2024 2:30 PM</b></u>.
-:::
 
 ::: {.callout-tip}
 Enjoy the break 
 ::: -->
+
+::: {.callout-caution}
+# Programming Assignment 1
+[PA 1](https://github.com/CSC223-Fall25/ADSASE) is due before the next lab on <b><u>Wednesday, Jan 29th, 2024 2:30 PM</b></u>.
+:::
+
+::: {.callout-caution}
+# Written Assignment 1
+[WA 1](https://docs.google.com/document/d/1C8TBnIxMdBGEcFFHqEx1GCeVmvvXBwNK-Z6z5izx-Jc/edit?usp=sharing) is due on <b><u>Wednesday, Jan 29th, 2024 11:59 PM</b></u>.
+:::
 
 ::: {.callout-tip}
 ## Open-Door Policy

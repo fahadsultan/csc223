@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>title_9</title>
+<title>Interfaces / Contract based Programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -90,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -183,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../syllabus/title_9.html">Nondiscrimination Policy and Sexual Misconduct</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../se/interfacebased.html">Interfaces / Contract based Programming</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,70 +239,420 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course Description and Goals</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/grading.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Grading</span></a>
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../se/se.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SOFTWARE ENGINEERING</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../se/version_control/version_control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Version Control</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/academic_success.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Center for Academic Success</span></a>
+  <a href="../se/shell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shell (sh)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/textbook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Textbooks &amp; Other Resources</span></a>
+  <a href="../se/ssh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Secure Shell (ssh)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/integrity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Academic Integrity</span></a>
+  <a href="../se/version_control/git_solo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git (Individual)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/mental_health.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mental Health Resources</span></a>
+  <a href="../se/version_control/git_colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git (Team)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/accomodations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Accomodations</span></a>
+  <a href="../se/version_control/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Github (Community)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/title_9.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Nondiscrimination Policy and Sexual Misconduct</span></a>
+  <a href="../se/tdd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test Driven Development</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../se/interfacebased.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Interfaces / Contract based Programming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../se/interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Interviews</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics/java.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PROGRAMMING, IN JAVA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics/abstractions/abstractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstractions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Primitive Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/abstractions/datastructures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fixed-Size Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/abstractions/datastructures2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dynamic-Size Reference Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/abstractions/classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes: User Defined Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaces and Abstract Classes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics/operations/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/operations/math_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Math Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/operations/builtinfuncs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Built-in Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">File I/O</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing in Java</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics/controls/controls.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Flow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/controls/conditionals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditionals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/controls/loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basics/controls/exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exception Handling</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/trees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TREES</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/binarytree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binary Tree</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/bst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binary Search Tree</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/heaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Heaps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GRAPHS</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graph_implementations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Implementations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graph_traversals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Traversals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/graph_paths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shortest Path</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graph_dijkstra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dijkstra’s Algorithm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graphs_bellmanford.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bellman-Ford Algorithm</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/graphs_spanning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Minimum Spanning Trees</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graphs_prim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prim-Jarník Algorithm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graphs_kruskal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kruskal’s Algorithm</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/graphs_topological.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topological Sorting</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graphs_topo_dfs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Depth-First Search based</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/graphs_topo_kahn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BFS-based: Kahn’s Algorithm</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datastructs/hash.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HASHING</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash_types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hashing Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datastructs/hash_prob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collision Avoidance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-concepts-of-interface-based-programming" id="toc-key-concepts-of-interface-based-programming" class="nav-link active" data-scroll-target="#key-concepts-of-interface-based-programming">Key Concepts of Interface Based Programming</a></li>
+  <li><a href="#interfaces-as-contracts" id="toc-interfaces-as-contracts" class="nav-link" data-scroll-target="#interfaces-as-contracts">Interfaces as Contracts</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../se/se.html">SOFTWARE ENGINEERING</a></li><li class="breadcrumb-item"><a href="../se/interfacebased.html">Interfaces / Contract based Programming</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Interfaces / Contract based Programming</h1>
+</div>
 
 
 
-<section id="nondiscrimination-policy-and-sexual-misconduct" class="level1">
-<h1>Nondiscrimination Policy and Sexual Misconduct</h1>
-<p>Furman University and its faculty are committed to supporting our students and seeking an environment that is free of bias, discrimination, and harassment. Furman does not unlawfully discriminate on the basis of race, color, national origin, sex, sexual orientation, gender identity, pregnancy, disability, age, religion, veteran status, or any other characteristic or status protected by applicable local, state, or federal law in admission, treatment, or access to, or employment in, its programs and activities.</p>
-<p>If you have encountered any form of discrimination or harassment, including sexual misconduct (e.g.&nbsp;sexual assault, sexual harassment or gender-based harassment, sexual exploitation or intimidation, stalking, intimate partner violence), we encourage you to report this to the institution. If you wish to report such an incident of misconduct, you may contact Furman’s Title IX Coordinator, <strong><a href="https://www.furman.edu/people/melissa-nichols/">Melissa Nichols</a> (Trone Center, Suite 215; Melissa.nichols@furman.edu; 864.294.2221)</strong>.</p>
-<p>If you would like to speak with someone who can advise you but maintain complete confidentiality, you can talk with a counselor, a professional in the Student Health Center or someone in the Office of Spiritual Life. If you speak with a faculty member, understand that as a “Responsible Employee” of the University, the faculty member MUST report to the University’s Title IX Coordinator what you share to help ensure that your safety and welfare are being addressed, consistent with the requirements of the law.</p>
-<p>Additional information about Furman’s Sexual Misconduct Policy, how to report sexual misconduct and your rights can be found at the Furman <b><a href="https://www.furman.edu/title-ix/">Title IX Webpage</a></b>. You do not have to go through the experience alone.</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Interface based programming is a design principle that focuses on defining the contract first before implementing the functionality. This approach is widely used in Test-Driven Development (TDD) and Agile methodologies to ensure that the code meets the requirements specified by the interface.</p>
+<section id="key-concepts-of-interface-based-programming" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-of-interface-based-programming">Key Concepts of Interface Based Programming</h2>
+<ol type="1">
+<li><p><strong>Interface Definition</strong>: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.</p></li>
+<li><p><strong>Loose Coupling</strong>: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.</p></li>
+<li><p><strong>Dependency Inversion Principle (DIP)</strong>: Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).</p></li>
+<li><p><strong>Testability</strong>: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.</p></li>
+<li><p><strong>Modularity</strong>: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.</p></li>
+<li><p><strong>Polymorphism</strong>: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.</p></li>
+</ol>
+</section>
+<section id="interfaces-as-contracts" class="level2">
+<h2 class="anchored" data-anchor-id="interfaces-as-contracts">Interfaces as Contracts</h2>
+<p>In interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> <span class="bu">Shape</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> <span class="fu">getArea</span><span class="op">();</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> <span class="fu">getPerimeter</span><span class="op">();</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that the interface does not contain any implementation details but only method signatures. The implementing class is responsible for providing the actual implementation of these methods. The interface acts as a contract that specifies what methods the implementing class must have.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Circle <span class="kw">implements</span> <span class="bu">Shape</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> radius<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Circle</span><span class="op">(</span><span class="dt">double</span> radius<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">radius</span> <span class="op">=</span> radius<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getArea</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">PI</span> <span class="op">*</span> radius <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getPerimeter</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">PI</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Functions</title>
+<title>Interfaces and Abstract Classes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -179,8 +179,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Moodle Page</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://classroom.github.com/classrooms/179249964-csc-223"> 
-<span class="menu-text">Github Classroom</span></a>
+    <a class="nav-link" href="https://github.com/CSC223-Fall25"> 
+<span class="menu-text">Github Organization</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../ta.html"> 
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/interfaces.html">Functions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/interfaces.html">Interfaces and Abstract Classes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -307,6 +307,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../se/interfacebased.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaces / Contract based Programming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../se/interview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technical Interviews</span></a>
   </div>
@@ -358,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Functions</span></a>
+ <span class="menu-text">Interfaces and Abstract Classes</span></a>
   </div>
 </li>
       </ul>
@@ -599,15 +605,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#declaring-a-generic-interface" id="toc-declaring-a-generic-interface" class="nav-link" data-scroll-target="#declaring-a-generic-interface">Declaring a Generic Interface</a></li>
   <li><a href="#implementing-a-generic-interface" id="toc-implementing-a-generic-interface" class="nav-link" data-scroll-target="#implementing-a-generic-interface">Implementing a Generic Interface</a></li>
   </ul></li>
+  <li><a href="#abstract-classes" id="toc-abstract-classes" class="nav-link" data-scroll-target="#abstract-classes">Abstract Classes</a>
+  <ul class="collapse">
+  <li><a href="#declaring-an-abstract-class" id="toc-declaring-an-abstract-class" class="nav-link" data-scroll-target="#declaring-an-abstract-class">Declaring an Abstract Class</a></li>
+  <li><a href="#extending-an-abstract-class" id="toc-extending-an-abstract-class" class="nav-link" data-scroll-target="#extending-an-abstract-class">Extending an Abstract Class</a></li>
+  <li><a href="#abstract-classes-vs.-interfaces" id="toc-abstract-classes-vs.-interfaces" class="nav-link" data-scroll-target="#abstract-classes-vs.-interfaces">Abstract Classes vs.&nbsp;Interfaces</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/interfaces.html">Functions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/abstractions.html">Abstractions</a></li><li class="breadcrumb-item"><a href="../../basics/abstractions/interfaces.html">Interfaces and Abstract Classes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Functions</h1>
+<h1 class="title">Interfaces and Abstract Classes</h1>
 </div>
 
 
@@ -761,6 +773,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> value<span class="op">;</span></span>
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="abstract-classes" class="level1">
+<h1>Abstract Classes</h1>
+<p>An abstract class in Java is a class that cannot be instantiated and is used to define common behavior for subclasses.</p>
+<p>An abstract class can have abstract methods, concrete methods, and fields.</p>
+<p>A class that extends an abstract class must provide implementations for all the abstract methods.</p>
+<section id="declaring-an-abstract-class" class="level2">
+<h2 class="anchored" data-anchor-id="declaring-an-abstract-class">Declaring an Abstract Class</h2>
+<p>Declaring an abstract class in Java is similar to declaring a regular class, but with the <code>abstract</code> keyword. Here is an example of an abstract class:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> <span class="bu">Shape</span> <span class="op">{</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> <span class="dt">double</span> <span class="fu">getArea</span><span class="op">();</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> <span class="dt">double</span> <span class="fu">getPerimeter</span><span class="op">();</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="extending-an-abstract-class" class="level2">
+<h2 class="anchored" data-anchor-id="extending-an-abstract-class">Extending an Abstract Class</h2>
+<p>A class can extend an abstract class using the <code>extends</code> keyword. The subclass must provide implementations for all the abstract methods. Here is an example of a class extending the <code>Shape</code> abstract class:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Circle <span class="kw">extends</span> <span class="bu">Shape</span> <span class="op">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> radius<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Circle</span><span class="op">(</span><span class="dt">double</span> radius<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">radius</span> <span class="op">=</span> radius<span class="op">;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getArea</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">PI</span> <span class="op">*</span> radius <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getPerimeter</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">PI</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="abstract-classes-vs.-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="abstract-classes-vs.-interfaces">Abstract Classes vs.&nbsp;Interfaces</h2>
+<p>Abstract classes and interfaces are similar in that they both define abstract methods that must be implemented by subclasses.</p>
+<p>Abstract classes can have fields, constructors, and concrete methods, while interfaces cannot.</p>
+<p>A class can extend only one abstract class, but it can implement multiple interfaces.</p>
+<p>Abstract classes are used when you want to provide a common base implementation for subclasses, while interfaces are used when you want to define a contract for classes to implement.</p>
 
 
 </section>

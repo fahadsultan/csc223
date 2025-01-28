@@ -1,0 +1,54 @@
+---
+title: "Interfaces / Contract based Programming"
+toc: true
+---
+
+Interface based programming is a design principle that focuses on defining the contract first before implementing the functionality. This approach is widely used in Test-Driven Development (TDD) and Agile methodologies to ensure that the code meets the requirements specified by the interface.
+
+## Key Concepts of Interface Based Programming
+
+1. **Interface Definition**: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.
+
+2. **Loose Coupling**: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.
+
+3. **Dependency Inversion Principle (DIP)**: Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).
+
+4. **Testability**: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.
+
+5. **Modularity**: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.
+
+6. **Polymorphism**: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.
+
+## Interfaces as Contracts
+
+In interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.
+
+```java
+public interface Shape {
+    double getArea();
+    double getPerimeter();
+}
+```
+
+Note that the interface does not contain any implementation details but only method signatures. The implementing class is responsible for providing the actual implementation of these methods. The interface acts as a contract that specifies what methods the implementing class must have.
+
+```java
+public class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+```
+

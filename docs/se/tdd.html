@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -145,8 +179,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Moodle Page</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://classroom.github.com/classrooms/179249964-csc-223"> 
-<span class="menu-text">Github Classroom</span></a>
+    <a class="nav-link" href="https://github.com/CSC223-Fall25"> 
+<span class="menu-text">Github Organization</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ta.html"> 
@@ -273,6 +307,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../se/interfacebased.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaces / Contract based Programming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../se/interview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technical Interviews</span></a>
   </div>
@@ -324,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basics/abstractions/interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interfaces</span></a>
+ <span class="menu-text">Interfaces and Abstract Classes</span></a>
   </div>
 </li>
       </ul>
@@ -544,8 +584,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-tdd-cycle-red-green-refactor" id="toc-the-tdd-cycle-red-green-refactor" class="nav-link active" data-scroll-target="#the-tdd-cycle-red-green-refactor">The TDD Cycle: Red-Green-Refactor</a></li>
+  <li><a href="#benefits-of-tdd" id="toc-benefits-of-tdd" class="nav-link" data-scroll-target="#benefits-of-tdd">Benefits of TDD</a></li>
+  <li><a href="#tdd-in-the-industry" id="toc-tdd-in-the-industry" class="nav-link" data-scroll-target="#tdd-in-the-industry">TDD in the Industry</a></li>
+  <li><a href="#key-principles" id="toc-key-principles" class="nav-link" data-scroll-target="#key-principles">Key Principles</a></li>
+  <li><a href="#writing-good-tests" id="toc-writing-good-tests" class="nav-link" data-scroll-target="#writing-good-tests">Writing Good Tests</a></li>
+  <li><a href="#common-tools-frameworks" id="toc-common-tools-frameworks" class="nav-link" data-scroll-target="#common-tools-frameworks">Common Tools &amp; Frameworks</a>
+  <ul class="collapse">
+  <li><a href="#junit-java" id="toc-junit-java" class="nav-link" data-scroll-target="#junit-java">JUnit (Java)</a></li>
+  </ul></li>
+  <li><a href="#software-testing-and-quality-assurance-qa-in-the-software-industry" id="toc-software-testing-and-quality-assurance-qa-in-the-software-industry" class="nav-link" data-scroll-target="#software-testing-and-quality-assurance-qa-in-the-software-industry">Software Testing and Quality Assurance (QA) in the Software Industry</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -569,8 +624,117 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><img src="https://marsner.com/wp-content/uploads/test-driven-development-TDD.png" alt="TDD Cycle" width="50%" style="filter:invert(1)" align="right"></p>
+<p><strong>Test-Driven Development</strong> (TDD) is a software development methodology where tests are written before the actual code. It follows the <strong>Red-Green-Refactor</strong> cycle to ensure functionality and maintainable code.</p>
+<p>TDD helps in creating high-quality code by writing tests that define the expected behavior of the code. It also ensures that the code is modular and easy to maintain. TDD is widely used in Agile and Extreme Programming (XP) environments.</p>
+<p><br></p>
+<section id="the-tdd-cycle-red-green-refactor" class="level2">
+<h2 class="anchored" data-anchor-id="the-tdd-cycle-red-green-refactor">The TDD Cycle: Red-Green-Refactor</h2>
+<ol type="1">
+<li><p><strong>Red</strong>: Write a failing test.</p>
+<ul>
+<li><p>Ensure the test fails (no code yet!).</p></li>
+<li><p>Example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="dt">void</span> <span class="fu">testAdd</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">5</span><span class="op">,</span> <span class="fu">add</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">));</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+<li><p><strong>Green</strong>: Write the minimum code to pass the test.</p>
+<ul>
+<li><p>Focus only on functionality to make the test pass.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="dt">int</span> <span class="fu">add</span><span class="op">(</span><span class="dt">int</span> a<span class="op">,</span> <span class="dt">int</span> b<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+<li><p><strong>Refactor</strong>: Optimize the code while keeping tests green.</p>
+<ul>
+<li><p>Clean up duplication or inefficiencies.</p></li>
+<li><p>Example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No changes needed for this example.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="benefits-of-tdd" class="level2">
+<h2 class="anchored" data-anchor-id="benefits-of-tdd">Benefits of TDD</h2>
+<ul>
+<li><strong>Higher code quality</strong>: Reduces bugs in production.</li>
+<li><strong>Confidence in changes</strong>: Tests act as a safety net.</li>
+<li><strong>Better design</strong>: Forces modular, testable code.</li>
+<li><strong>Documentation</strong>: Tests clarify code behavior.</li>
+</ul>
+<hr>
+</section>
+<section id="tdd-in-the-industry" class="level2">
+<h2 class="anchored" data-anchor-id="tdd-in-the-industry">TDD in the Industry</h2>
+<ul>
+<li>TDD is widely used in <strong>Agile</strong> and <strong>Extreme Programming (XP)</strong> environments.</li>
+<li>Adoption varies by industry and team size:
+<ul>
+<li><strong>Large Tech Companies</strong>: Used extensively for critical systems, e.g., Google, Microsoft, and Meta.</li>
+<li><strong>Startups</strong>: Sometimes skipped for speed, but it’s growing in popularity.</li>
+<li><strong>Enterprise Development</strong>: Common in sectors like finance, healthcare, and embedded systems for quality-critical software.</li>
+</ul></li>
+<li><strong>Stats</strong>: According to surveys:
+<ul>
+<li>~30-40% of developers report using TDD regularly.</li>
+<li>Usage is higher among teams practicing Agile or DevOps.</li>
+</ul></li>
+<li><strong>Challenges in Adoption</strong>:
+<ul>
+<li>Learning curve and initial setup can be time-intensive.</li>
+<li>Requires discipline to strictly follow the TDD process.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="key-principles" class="level2">
+<h2 class="anchored" data-anchor-id="key-principles">Key Principles</h2>
+<ol type="1">
+<li><strong>Start small</strong>: Write a single test for a specific functionality.</li>
+<li><strong>Fail first</strong>: Ensure the test fails to validate it’s testing correctly.</li>
+<li><strong>Write minimal code</strong>: Only write enough to pass the test.</li>
+<li><strong>Refactor</strong>: Regularly clean up to improve code quality.</li>
+<li><strong>Repeat</strong>: Iterate for every new feature or bug fix.</li>
+</ol>
+<hr>
+</section>
+<section id="writing-good-tests" class="level2">
+<h2 class="anchored" data-anchor-id="writing-good-tests">Writing Good Tests</h2>
+<ul>
+<li><strong>Be specific</strong>: Test one feature per test.</li>
+<li><strong>Use clear names</strong>: Example: <code>test_user_login_successful()</code>.</li>
+<li><strong>Test edge cases</strong>: Ensure robustness (e.g., empty inputs, large values).</li>
+<li><strong>Use mocks</strong>: Isolate the code being tested by mocking dependencies.</li>
+</ul>
+<hr>
+</section>
+<section id="common-tools-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="common-tools-frameworks">Common Tools &amp; Frameworks</h2>
+<section id="junit-java" class="level3">
+<h3 class="anchored" data-anchor-id="junit-java">JUnit (Java)</h3>
+<ul>
+<li><p><strong>Description</strong>: A popular unit testing framework for Java.</p></li>
+<li><p><strong>Example</strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">static</span><span class="im"> org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">Assert</span><span class="op">.</span><span class="im">assertEquals</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">Test</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MyTest <span class="op">{</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Test</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">testAdd</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">5</span><span class="op">,</span> <span class="fu">add</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">));</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</section>
+</section>
+<section id="software-testing-and-quality-assurance-qa-in-the-software-industry" class="level2">
+<h2 class="anchored" data-anchor-id="software-testing-and-quality-assurance-qa-in-the-software-industry">Software Testing and Quality Assurance (QA) in the Software Industry</h2>
+<p>Software testing and quality assurance (QA) are critical roles in the software development lifecycle, ensuring that products meet high standards of functionality, performance, and reliability. QA professionals are responsible for identifying bugs, verifying that software meets specified requirements, and ensuring a seamless user experience before products are released. Roles in QA often include tasks like writing test cases, automating repetitive testing processes, and conducting performance or security tests. With the rise of Agile and DevOps methodologies, testing has become more integrated into development processes, with testers working closely alongside developers and product teams.</p>
+<p>QA jobs often serve as an excellent entry point into the software industry. Many QA professionals transition to traditional software engineering roles over time, especially those involved in test automation. Writing automated tests requires strong programming skills and familiarity with tools like Selenium, Cypress, or JUnit, which overlap significantly with software development tasks. Through such experiences, QA professionals often gain a deeper understanding of codebases, development workflows, and problem-solving techniques. This exposure, coupled with opportunities to work closely with developers, equips QA engineers with the technical skills and domain knowledge to pivot into roles like full-stack or back-end software engineering. As a result, QA roles can be both fulfilling career paths and stepping stones into broader development careers.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -2,3 +2,105 @@
 title: "Test Driven Development"
 toc: true
 ---
+
+<img src="https://marsner.com/wp-content/uploads/test-driven-development-TDD.png" alt="TDD Cycle" width="50%" style="filter:invert(1)" align="right" />
+
+**Test-Driven Development** (TDD) is a software development methodology where tests are written before the actual code. It follows the **Red-Green-Refactor** cycle to ensure functionality and maintainable code.
+
+TDD helps in creating high-quality code by writing tests that define the expected behavior of the code. It also ensures that the code is modular and easy to maintain. TDD is widely used in Agile and Extreme Programming (XP) environments. 
+
+<br/>
+
+## The TDD Cycle: Red-Green-Refactor
+1. **Red**: Write a failing test.
+
+
+   - Ensure the test fails (no code yet!).
+   - Example:
+     ```java
+        public void testAdd() {
+            assertEquals(5, add(2, 3));
+        }
+     ```
+
+2. **Green**: Write the minimum code to pass the test.
+   - Focus only on functionality to make the test pass.
+     ```java
+        public int add(int a, int b) {
+            return a + b;
+        }
+     ```
+3. **Refactor**: Optimize the code while keeping tests green.
+   - Clean up duplication or inefficiencies.
+   - Example:
+     ```python
+     # No changes needed for this example.
+     ```
+
+---
+
+## Benefits of TDD
+- **Higher code quality**: Reduces bugs in production.
+- **Confidence in changes**: Tests act as a safety net.
+- **Better design**: Forces modular, testable code.
+- **Documentation**: Tests clarify code behavior.
+
+---
+
+## TDD in the Industry
+- TDD is widely used in **Agile** and **Extreme Programming (XP)** environments.
+- Adoption varies by industry and team size:
+  - **Large Tech Companies**: Used extensively for critical systems, e.g., Google, Microsoft, and Meta.
+  - **Startups**: Sometimes skipped for speed, but it's growing in popularity.
+  - **Enterprise Development**: Common in sectors like finance, healthcare, and embedded systems for quality-critical software.
+- **Stats**: According to surveys:
+  - ~30-40% of developers report using TDD regularly.
+  - Usage is higher among teams practicing Agile or DevOps.
+- **Challenges in Adoption**:
+  - Learning curve and initial setup can be time-intensive.
+  - Requires discipline to strictly follow the TDD process.
+
+---
+
+
+
+## Key Principles
+1. **Start small**: Write a single test for a specific functionality.
+2. **Fail first**: Ensure the test fails to validate it’s testing correctly.
+3. **Write minimal code**: Only write enough to pass the test.
+4. **Refactor**: Regularly clean up to improve code quality.
+5. **Repeat**: Iterate for every new feature or bug fix.
+
+---
+
+## Writing Good Tests
+- **Be specific**: Test one feature per test.
+- **Use clear names**: Example: `test_user_login_successful()`.
+- **Test edge cases**: Ensure robustness (e.g., empty inputs, large values).
+- **Use mocks**: Isolate the code being tested by mocking dependencies.
+
+---
+
+## Common Tools & Frameworks
+
+### JUnit (Java)
+
+- **Description**: A popular unit testing framework for Java.
+- **Example**:
+  ```java
+  import static org.junit.Assert.assertEquals;
+  import org.junit.Test;
+
+  public class MyTest {
+      @Test
+      public void testAdd() {
+          assertEquals(5, add(2, 3));
+      }
+  }
+  ```
+
+## Software Testing and Quality Assurance (QA) in the Software Industry
+
+Software testing and quality assurance (QA) are critical roles in the software development lifecycle, ensuring that products meet high standards of functionality, performance, and reliability. QA professionals are responsible for identifying bugs, verifying that software meets specified requirements, and ensuring a seamless user experience before products are released. Roles in QA often include tasks like writing test cases, automating repetitive testing processes, and conducting performance or security tests. With the rise of Agile and DevOps methodologies, testing has become more integrated into development processes, with testers working closely alongside developers and product teams.
+
+QA jobs often serve as an excellent entry point into the software industry. Many QA professionals transition to traditional software engineering roles over time, especially those involved in test automation. Writing automated tests requires strong programming skills and familiarity with tools like Selenium, Cypress, or JUnit, which overlap significantly with software development tasks. Through such experiences, QA professionals often gain a deeper understanding of codebases, development workflows, and problem-solving techniques. This exposure, coupled with opportunities to work closely with developers, equips QA engineers with the technical skills and domain knowledge to pivot into roles like full-stack or back-end software engineering. As a result, QA roles can be both fulfilling career paths and stepping stones into broader development careers.

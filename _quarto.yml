@@ -18,8 +18,8 @@ website:
         href: syllabus/appointment.md
       - text: "Moodle Page"
         href: https://courses.furman.edu/course/view.php?id=18720
-      - text: "Github Classroom"
-        href: https://classroom.github.com/classrooms/179249964-csc-223
+      - text: "Github Organization"
+        href: https://github.com/CSC223-Fall25
       - text: "TA"
         href: ta.qmd
       - text: "Schedule Appointment"
@@ -55,6 +55,7 @@ website:
               - se/version_control/git_colab.qmd
               - se/version_control/github.qmd
           - se/tdd.qmd
+          - se/interfacebased.qmd
           - se/interview.qmd
         - section: 
           href: basics/java.qmd
