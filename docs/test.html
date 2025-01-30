@@ -393,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basics/operations/file_io.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">File I/O</span></a>
+ <span class="menu-text">I/O</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -593,7 +593,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#junit-framework" id="toc-junit-framework" class="nav-link" data-scroll-target="#junit-framework">JUnit Framework</a></li>
   <li><a href="#running-tests" id="toc-running-tests" class="nav-link" data-scroll-target="#running-tests">Running Tests</a></li>
+  <li><a href="#other-assertions" id="toc-other-assertions" class="nav-link" data-scroll-target="#other-assertions">Other Assertions</a></li>
+  <li><a href="#other-junit-annotations" id="toc-other-junit-annotations" class="nav-link" data-scroll-target="#other-junit-annotations">Other JUnit Annotations</a></li>
   </ul></li>
+  <li><a href="#integration-testing" id="toc-integration-testing" class="nav-link" data-scroll-target="#integration-testing">Integration Testing</a></li>
   </ul>
 </nav>
     </div>
@@ -653,9 +656,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the <code>java</code> command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> junit-platform-console-standalone-1.8.2.jar <span class="at">--class-path</span> target/test-classes <span class="at">--scan-class-path</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In the above command, <code>junit-platform-console-standalone-1.8.2.jar</code> is the JUnit platform launcher JAR file, <code>target/test-classes</code> is the directory containing the compiled test classes, and <code>--scan-class-path</code> tells</p>
-
-
 </section>
+<section id="other-assertions" class="level3">
+<h3 class="anchored" data-anchor-id="other-assertions">Other Assertions</h3>
+<p>In addition to <code>assertEquals</code>, JUnit provides other assertion methods such as <code>assertTrue</code>, <code>assertFalse</code>, <code>assertNull</code>, <code>assertNotNull</code>, <code>assertArrayEquals</code>, <code>assertSame</code>, and <code>assertNotSame</code> to test different conditions in your code.</p>
+<p>For example,</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assertTrue</span><span class="op">(</span>result <span class="op">&gt;</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">assertFalse</span><span class="op">(</span>result <span class="op">&lt;</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">assertNull</span><span class="op">(</span>value<span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">assertNotNull</span><span class="op">(</span>value<span class="op">);</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">assertArrayEquals</span><span class="op">(</span>expectedArray<span class="op">,</span> resultArray<span class="op">);</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">assertSame</span><span class="op">(</span>expectedObject<span class="op">,</span> resultObject<span class="op">);</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">assertNotSame</span><span class="op">(</span>expectedObject<span class="op">,</span> resultObject<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="other-junit-annotations" class="level3">
+<h3 class="anchored" data-anchor-id="other-junit-annotations">Other JUnit Annotations</h3>
+<p>JUnit provides other annotations such as <code>@BeforeEach</code>, <code>@AfterEach</code>, <code>@BeforeAll</code>, and <code>@AfterAll</code> to set up and tear down resources before and after tests. These annotations can be used to initialize objects, close connections, or perform other setup and cleanup tasks.</p>
+<p>For example,</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">@BeforeEach</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">setUp</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Initialize resources before each test</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">@AfterEach</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">tearDown</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Clean up resources after each test</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">@BeforeAll</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">init</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Initialize resources before all tests</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">@AfterAll</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">cleanUp</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Clean up resources after all tests</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="integration-testing" class="level2">
+<h2 class="anchored" data-anchor-id="integration-testing">Integration Testing</h2>
+<p>Integration testing is a software testing technique where individual units or components of a software application are combined and tested as a group. The goal of integration testing is to verify that the units work together correctly and that the integrated system meets the requirements. In Java, integration testing can be done using frameworks like Spring Boot Test or TestNG.</p>
+<p>Integration testing is more complex than unit testing as it involves testing the interactions between different components of the system. It is essential to have a good understanding of the system architecture and dependencies to write effective integration tests.</p>
+
+
 </section>
 
 </main> <!-- /main -->

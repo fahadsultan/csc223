@@ -1,12 +1,14 @@
 
 ---
-title: "File I/O"
+title: "I/O"
 toc: true
 ---
 
 File Input/Output (I/O) operations are used to read data from files or write data to files. In Java, file I/O operations are performed using classes from the `java.io` package. In this tutorial, we will learn how to read from and write to files in Java.
 
-## Reading from a File
+## File I/O
+
+### Reading from a File
 
 To read data from a file in Java, you can use the `FileInputStream` and `BufferedReader` classes. The `FileInputStream` class is used to read bytes from a file, and the `BufferedReader` class is used to read text from a character-input stream. Here is an example of reading data from a file:
 
@@ -34,7 +36,7 @@ public class ReadFile {
 
 In the above example, we use the `BufferedReader` class to read data from a file named `input.txt`. We read each line from the file using the `readLine()` method and print it to the console.
 
-## Writing to a File
+### Writing to a File
 
 To write data to a file in Java, you can use the `FileOutputStream` and `BufferedWriter` classes. The `FileOutputStream` class is used to write bytes to a file, and the `BufferedWriter` class is used to write text to a character-output stream. Here is an example of writing data to a file:
 
@@ -58,3 +60,39 @@ public class WriteFile {
 
 In the above example, we use the `BufferedWriter` class to write the text "Hello, World!" to a file named `output.txt`.
 
+
+## User I/O
+
+### Reading User Input
+
+To read user input from the console in Java, you can use the `Scanner` class. The `Scanner` class is used to read input from various sources, including the console. Here is an example of reading user input:
+
+```java
+import java.util.Scanner;
+
+public class ReadUserInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+        scanner.close();
+    }
+}
+```
+
+In the above example, we use the `Scanner` class to read the user's name from the console and print a greeting message.
+
+### Writing Output
+
+To write output to the console in Java, you can use the `System.out.println()` method. This method is used to print text to the console. Here is an example of writing output to the console:
+
+```java
+public class WriteOutput {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+In the above example, we use the `System.out.println()` method to print the text "Hello, World!" to the console.

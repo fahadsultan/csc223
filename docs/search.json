@@ -232,7 +232,7 @@
     "href": "index.html",
     "title": "CSC-223: Advanced Data Structures and Software Development (Spring 2025)",
     "section": "",
-    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\n\nProgramming Assignment 1\n\n\n\nPA 1 is due before the next lab on Wednesday, Jan 29th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nWritten Assignment 1\n\n\n\nWA 1 is due on Wednesday, Jan 29th, 2024 11:59 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
+    "text": "Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾\nI am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you!\nFrom the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️\n👇🏾 Below, you can find important links and important announcements.\n\n\n\n\n\n\n\nProgramming Assignment 2\n\n\n\nPA 2 is due before the next lab on Wednesday, Feb 5th, 2024 2:30 PM.\n\n\n\n\n\n\n\n\nOpen-Door Policy\n\n\n\nI have an Open-Door Policy and am in my office (Riley Hall 200-H) between 9 AM - 5 PM most weekdays. Please drop by with your questions or just to say hi!\nAlternatively, send me an email or schedule an appointment",
     "crumbs": [
       "Home"
     ]
@@ -1218,40 +1218,40 @@
   {
     "objectID": "basics/operations/file_io.html",
     "href": "basics/operations/file_io.html",
-    "title": "File I/O",
+    "title": "I/O",
     "section": "",
     "text": "File Input/Output (I/O) operations are used to read data from files or write data to files. In Java, file I/O operations are performed using classes from the java.io package. In this tutorial, we will learn how to read from and write to files in Java.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Operations",
-      "File I/O"
+      "I/O"
     ]
   },
   {
     "objectID": "basics/operations/file_io.html#reading-from-a-file",
     "href": "basics/operations/file_io.html#reading-from-a-file",
-    "title": "File I/O",
+    "title": "I/O",
     "section": "Reading from a File",
     "text": "Reading from a File\nTo read data from a file in Java, you can use the FileInputStream and BufferedReader classes. The FileInputStream class is used to read bytes from a file, and the BufferedReader class is used to read text from a character-input stream. Here is an example of reading data from a file:\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"));\n            String line = reader.readLine();\n            while (line != null) {\n                System.out.println(line);\n                line = reader.readLine();\n            }\n            reader.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedReader class to read data from a file named input.txt. We read each line from the file using the readLine() method and print it to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Operations",
-      "File I/O"
+      "I/O"
     ]
   },
   {
     "objectID": "basics/operations/file_io.html#writing-to-a-file",
     "href": "basics/operations/file_io.html#writing-to-a-file",
-    "title": "File I/O",
+    "title": "I/O",
     "section": "Writing to a File",
     "text": "Writing to a File\nTo write data to a file in Java, you can use the FileOutputStream and BufferedWriter classes. The FileOutputStream class is used to write bytes to a file, and the BufferedWriter class is used to write text to a character-output stream. Here is an example of writing data to a file:\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFile {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Hello, World!\");\n            writer.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedWriter class to write the text “Hello, World!” to a file named output.txt.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Operations",
-      "File I/O"
+      "I/O"
     ]
   },
   {
@@ -1445,9 +1445,9 @@
   {
     "objectID": "se/interfacebased.html",
     "href": "se/interfacebased.html",
-    "title": "Interfaces / Contract based Programming",
+    "title": "Interface / Contract based Programming",
     "section": "",
-    "text": "Interface based programming is a design principle that focuses on defining the contract first before implementing the functionality. This approach is widely used in Test-Driven Development (TDD) and Agile methodologies to ensure that the code meets the requirements specified by the interface.",
+    "text": "Interface based programming is a design principle that focuses on defining the contract first before implementing the functionality. This approach is widely used in Test-Driven Development (TDD) and Agile methodologies to ensure that the code meets the requirements specified by the interface.\n\n\n\nInterface Definition: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.\nLoose Coupling: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.\nDependency Inversion Principle (DIP): Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).\nTestability: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.\nModularity: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.\nPolymorphism: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.\n\n\n\n\nIn interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\n\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -1457,9 +1457,9 @@
   {
     "objectID": "se/interfacebased.html#key-concepts-of-interface-based-programming",
     "href": "se/interfacebased.html#key-concepts-of-interface-based-programming",
-    "title": "Interfaces / Contract based Programming",
-    "section": "Key Concepts of Interface Based Programming",
-    "text": "Key Concepts of Interface Based Programming\n\nInterface Definition: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.\nLoose Coupling: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.\nDependency Inversion Principle (DIP): Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).\nTestability: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.\nModularity: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.\nPolymorphism: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.",
+    "title": "Interface / Contract based Programming",
+    "section": "",
+    "text": "Interface Definition: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.\nLoose Coupling: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.\nDependency Inversion Principle (DIP): Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).\nTestability: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.\nModularity: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.\nPolymorphism: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -1469,9 +1469,9 @@
   {
     "objectID": "se/interfacebased.html#interfaces-as-contracts",
     "href": "se/interfacebased.html#interfaces-as-contracts",
-    "title": "Interfaces / Contract based Programming",
-    "section": "Interfaces as Contracts",
-    "text": "Interfaces as Contracts\nIn interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\nNote that the interface does not contain any implementation details but only method signatures. The implementing class is responsible for providing the actual implementation of these methods. The interface acts as a contract that specifies what methods the implementing class must have.\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
+    "title": "Interface / Contract based Programming",
+    "section": "",
+    "text": "In interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\n\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -2965,7 +2965,46 @@
     "href": "test.html#unit-testing",
     "title": "Testing in Java",
     "section": "Unit Testing",
-    "text": "Unit Testing\nUnit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\nJUnit Framework\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\nRunning Tests\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells",
+    "text": "Unit Testing\nUnit testing is a software testing technique where individual units or components of a software application are tested in isolation. The goal of unit testing is to validate that each unit of the software performs as expected. In Java, unit testing is commonly done using the JUnit framework.\n\nJUnit Framework\nJUnit is a popular testing framework for Java that provides annotations and assertions to write and run unit tests. JUnit tests are written as methods in a test class and are executed by a test runner. Here is an example of a simple JUnit test class:\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class CalculatorTest {\n\n    @Test\n    public void testAddition() {\n        Calculator calculator = new Calculator();\n        int result = calculator.add(2, 3);\n        assertEquals(5, result);\n    }\n\n    @Test\n    public void testSubtraction() {\n        Calculator calculator = new Calculator();\n        int result = calculator.subtract(5, 3);\n        assertEquals(2, result);\n    }\n}\nIn the above example, we have a test class CalculatorTest that contains two test methods testAddition and testSubtraction. Each test method creates an instance of the Calculator class, calls a method on it, and asserts that the result is as expected using the assertEquals method.\nThe name of the test class should end with Test, and the test methods should be annotated with @Test. The assertEquals method is used to compare the expected result with the actual result.\n\n\nRunning Tests\nTo run JUnit tests in Java, you can use an IDE that supports JUnit, such as IntelliJ IDEA or Eclipse. You can also run tests from the command line using the java command with the JUnit platform launcher. Here is an example of running JUnit tests from the command line:\njava -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-classes --scan-class-path\nIn the above command, junit-platform-console-standalone-1.8.2.jar is the JUnit platform launcher JAR file, target/test-classes is the directory containing the compiled test classes, and --scan-class-path tells\n\n\nOther Assertions\nIn addition to assertEquals, JUnit provides other assertion methods such as assertTrue, assertFalse, assertNull, assertNotNull, assertArrayEquals, assertSame, and assertNotSame to test different conditions in your code.\nFor example,\nassertTrue(result &gt; 0);\nassertFalse(result &lt; 0);\nassertNull(value);\nassertNotNull(value);\nassertArrayEquals(expectedArray, resultArray);\nassertSame(expectedObject, resultObject);\nassertNotSame(expectedObject, resultObject);\n\n\nOther JUnit Annotations\nJUnit provides other annotations such as @BeforeEach, @AfterEach, @BeforeAll, and @AfterAll to set up and tear down resources before and after tests. These annotations can be used to initialize objects, close connections, or perform other setup and cleanup tasks.\nFor example,\n@BeforeEach\npublic void setUp() {\n    // Initialize resources before each test\n}\n\n@AfterEach\npublic void tearDown() {\n    // Clean up resources after each test\n}\n\n@BeforeAll\npublic static void init() {\n    // Initialize resources before all tests\n}\n\n@AfterAll\npublic static void cleanUp() {\n    // Clean up resources after all tests\n}",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "Testing in Java"
+    ]
+  },
+  {
+    "objectID": "basics/operations/file_io.html#file-io",
+    "href": "basics/operations/file_io.html#file-io",
+    "title": "I/O",
+    "section": "File I/O",
+    "text": "File I/O\n\nReading from a File\nTo read data from a file in Java, you can use the FileInputStream and BufferedReader classes. The FileInputStream class is used to read bytes from a file, and the BufferedReader class is used to read text from a character-input stream. Here is an example of reading data from a file:\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"));\n            String line = reader.readLine();\n            while (line != null) {\n                System.out.println(line);\n                line = reader.readLine();\n            }\n            reader.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedReader class to read data from a file named input.txt. We read each line from the file using the readLine() method and print it to the console.\n\n\nWriting to a File\nTo write data to a file in Java, you can use the FileOutputStream and BufferedWriter classes. The FileOutputStream class is used to write bytes to a file, and the BufferedWriter class is used to write text to a character-output stream. Here is an example of writing data to a file:\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFile {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Hello, World!\");\n            writer.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedWriter class to write the text “Hello, World!” to a file named output.txt.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "I/O"
+    ]
+  },
+  {
+    "objectID": "basics/operations/file_io.html#user-io",
+    "href": "basics/operations/file_io.html#user-io",
+    "title": "I/O",
+    "section": "User I/O",
+    "text": "User I/O\n\nReading User Input\nTo read user input from the console in Java, you can use the Scanner class. The Scanner class is used to read input from various sources, including the console. Here is an example of reading user input:\nimport java.util.Scanner;\n\npublic class ReadUserInput {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter your name: \");\n        String name = scanner.nextLine();\n        System.out.println(\"Hello, \" + name + \"!\");\n        scanner.close();\n    }\n}\nIn the above example, we use the Scanner class to read the user’s name from the console and print a greeting message.\n\n\nWriting Output\nTo write output to the console in Java, you can use the System.out.println() method. This method is used to print text to the console. Here is an example of writing output to the console:\npublic class WriteOutput {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\nIn the above example, we use the System.out.println() method to print the text “Hello, World!” to the console.",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Operations",
+      "I/O"
+    ]
+  },
+  {
+    "objectID": "test.html#integration-testing",
+    "href": "test.html#integration-testing",
+    "title": "Testing in Java",
+    "section": "Integration Testing",
+    "text": "Integration Testing\nIntegration testing is a software testing technique where individual units or components of a software application are combined and tested as a group. The goal of integration testing is to verify that the units work together correctly and that the integrated system meets the requirements. In Java, integration testing can be done using frameworks like Spring Boot Test or TestNG.\nIntegration testing is more complex than unit testing as it involves testing the interactions between different components of the system. It is essential to have a good understanding of the system architecture and dependencies to write effective integration tests.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",

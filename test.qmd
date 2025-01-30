@@ -48,3 +48,55 @@ java -jar junit-platform-console-standalone-1.8.2.jar --class-path target/test-c
 ```
 
 In the above command, `junit-platform-console-standalone-1.8.2.jar` is the JUnit platform launcher JAR file, `target/test-classes` is the directory containing the compiled test classes, and `--scan-class-path` tells
+
+### Other Assertions
+
+In addition to `assertEquals`, JUnit provides other assertion methods such as `assertTrue`, `assertFalse`, `assertNull`, `assertNotNull`, `assertArrayEquals`, `assertSame`, and `assertNotSame` to test different conditions in your code.
+
+For example, 
+
+```java
+assertTrue(result > 0);
+assertFalse(result < 0);
+assertNull(value);
+assertNotNull(value);
+assertArrayEquals(expectedArray, resultArray);
+assertSame(expectedObject, resultObject);
+assertNotSame(expectedObject, resultObject);
+```
+
+### Other JUnit Annotations
+
+JUnit provides other annotations such as `@BeforeEach`, `@AfterEach`, `@BeforeAll`, and `@AfterAll` to set up and tear down resources before and after tests. These annotations can be used to initialize objects, close connections, or perform other setup and cleanup tasks.
+
+For example,
+
+```java
+@BeforeEach
+public void setUp() {
+    // Initialize resources before each test
+}
+
+@AfterEach
+public void tearDown() {
+    // Clean up resources after each test
+}
+
+@BeforeAll
+public static void init() {
+    // Initialize resources before all tests
+}
+
+@AfterAll
+public static void cleanUp() {
+    // Clean up resources after all tests
+}
+
+```
+
+
+## Integration Testing
+
+Integration testing is a software testing technique where individual units or components of a software application are combined and tested as a group. The goal of integration testing is to verify that the units work together correctly and that the integrated system meets the requirements. In Java, integration testing can be done using frameworks like Spring Boot Test or TestNG. 
+
+Integration testing is more complex than unit testing as it involves testing the interactions between different components of the system. It is essential to have a good understanding of the system architecture and dependencies to write effective integration tests.

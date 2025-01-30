@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>File I/O</title>
+<title>I/O</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="../../basics/operations/file_io.html">File I/O</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="../../basics/operations/file_io.html">I/O</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -393,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basics/operations/file_io.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">File I/O</span></a>
+ <span class="menu-text">I/O</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -589,17 +589,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reading-from-a-file" id="toc-reading-from-a-file" class="nav-link active" data-scroll-target="#reading-from-a-file">Reading from a File</a></li>
+  <li><a href="#file-io" id="toc-file-io" class="nav-link active" data-scroll-target="#file-io">File I/O</a>
+  <ul class="collapse">
+  <li><a href="#reading-from-a-file" id="toc-reading-from-a-file" class="nav-link" data-scroll-target="#reading-from-a-file">Reading from a File</a></li>
   <li><a href="#writing-to-a-file" id="toc-writing-to-a-file" class="nav-link" data-scroll-target="#writing-to-a-file">Writing to a File</a></li>
+  </ul></li>
+  <li><a href="#user-io" id="toc-user-io" class="nav-link" data-scroll-target="#user-io">User I/O</a>
+  <ul class="collapse">
+  <li><a href="#reading-user-input" id="toc-reading-user-input" class="nav-link" data-scroll-target="#reading-user-input">Reading User Input</a></li>
+  <li><a href="#writing-output" id="toc-writing-output" class="nav-link" data-scroll-target="#writing-output">Writing Output</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="../../basics/operations/file_io.html">File I/O</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basics/java.html">PROGRAMMING, IN JAVA</a></li><li class="breadcrumb-item"><a href="../../basics/operations/operations.html">Operations</a></li><li class="breadcrumb-item"><a href="../../basics/operations/file_io.html">I/O</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">File I/O</h1>
+<h1 class="title">I/O</h1>
 </div>
 
 
@@ -617,8 +625,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>File Input/Output (I/O) operations are used to read data from files or write data to files. In Java, file I/O operations are performed using classes from the <code>java.io</code> package. In this tutorial, we will learn how to read from and write to files in Java.</p>
-<section id="reading-from-a-file" class="level2">
-<h2 class="anchored" data-anchor-id="reading-from-a-file">Reading from a File</h2>
+<section id="file-io" class="level2">
+<h2 class="anchored" data-anchor-id="file-io">File I/O</h2>
+<section id="reading-from-a-file" class="level3">
+<h3 class="anchored" data-anchor-id="reading-from-a-file">Reading from a File</h3>
 <p>To read data from a file in Java, you can use the <code>FileInputStream</code> and <code>BufferedReader</code> classes. The <code>FileInputStream</code> class is used to read bytes from a file, and the <code>BufferedReader</code> class is used to read text from a character-input stream. Here is an example of reading data from a file:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">BufferedReader</span><span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">FileReader</span><span class="op">;</span></span>
@@ -641,8 +651,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In the above example, we use the <code>BufferedReader</code> class to read data from a file named <code>input.txt</code>. We read each line from the file using the <code>readLine()</code> method and print it to the console.</p>
 </section>
-<section id="writing-to-a-file" class="level2">
-<h2 class="anchored" data-anchor-id="writing-to-a-file">Writing to a File</h2>
+<section id="writing-to-a-file" class="level3">
+<h3 class="anchored" data-anchor-id="writing-to-a-file">Writing to a File</h3>
 <p>To write data to a file in Java, you can use the <code>FileOutputStream</code> and <code>BufferedWriter</code> classes. The <code>FileOutputStream</code> class is used to write bytes to a file, and the <code>BufferedWriter</code> class is used to write text to a character-output stream. Here is an example of writing data to a file:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">BufferedWriter</span><span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">FileWriter</span><span class="op">;</span></span>
@@ -660,8 +670,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In the above example, we use the <code>BufferedWriter</code> class to write the text “Hello, World!” to a file named <code>output.txt</code>.</p>
+</section>
+</section>
+<section id="user-io" class="level2">
+<h2 class="anchored" data-anchor-id="user-io">User I/O</h2>
+<section id="reading-user-input" class="level3">
+<h3 class="anchored" data-anchor-id="reading-user-input">Reading User Input</h3>
+<p>To read user input from the console in Java, you can use the <code>Scanner</code> class. The <code>Scanner</code> class is used to read input from various sources, including the console. Here is an example of reading user input:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ReadUserInput <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your name: "</span><span class="op">);</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> name <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Hello, "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span><span class="op">);</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, we use the <code>Scanner</code> class to read the user’s name from the console and print a greeting message.</p>
+</section>
+<section id="writing-output" class="level3">
+<h3 class="anchored" data-anchor-id="writing-output">Writing Output</h3>
+<p>To write output to the console in Java, you can use the <code>System.out.println()</code> method. This method is used to print text to the console. Here is an example of writing output to the console:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> WriteOutput <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Hello, World!"</span><span class="op">);</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the above example, we use the <code>System.out.println()</code> method to print the text “Hello, World!” to the console.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
