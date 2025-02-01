@@ -876,7 +876,7 @@
     "href": "basics/abstractions/oop1.html#dot-.-operator",
     "title": "User-defined Types",
     "section": "Dot . operator",
-    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```djkfyrwx https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
+    "text": "Dot . operator\nThe . operator is used to access the attributes and methods of a class.\nThe dot operator is the primary means of interaction with the objects of a class. It is used to:\n\naccess the values of attributes\nassign values to attributes\nmodify attributes values\ncall the methods of the class\n\nExamples of the use of the dot operator are given in following sections.\n\n\n\n\n\n```nksferfv https://i.ibb.co/YbpDxmC/oop-hierarchy.png\n\n\n\n\nname: oop-hierarchy\n\n\nwidth: 100%\n\n\nalign: center\n\n\n\nClass definitions in Python are comprised primarily of attributes and methods. There are two types of attributes: instance attributes and class attributes. There are three types of methods: instance methods, class methods, and static methods.\n\n## Attributes\n\nLike real world objects, object instances have both form and function. The form consists of data elements contained within the instance. These data elements are called **attributes** (also known as _variables_ or _properties_). \n\nThere are two types of data attributes in Python:\n\n1. **Instance attributes / variables** are attributes that are unique to each instance. They are defined inside the constructor method `__init__` and are prefixed with `self` keyword.\n\n2. **Class attributes / variables** are attributes that have the same value for all class instances. We define class attributes outside all the methods, usually they are placed at the top, right below the class header.\n\n&lt;center&gt;&lt;img src=\"https://miro.medium.com/v2/resize:fit:2000/1*pGmNqM1bvCZexV8rskqIKg.png\" width=\"70%\"&gt;&lt;/center&gt;\n\n&lt;br&gt;&lt;br&gt;\n\n### Instance attributes\n\nThe attributes of an object are also called **instance variables** because they are associated with a particular instance of the class. These variables are not shared by all instances of the class, and they are not defined until the instance is created.\n\nWe can add new data elements to an instance using **dot operator**:\n\n::: {#cell-10 .cell}\n``` {.python .cell-code}\np.x = 3\np.y = 4\n:::\nThis syntax is similar to the syntax for selecting a variable from a module, such as list.append or string.lower. In this case the attribute we are selecting is a data item from an instance.\nThe following state diagram shows the result of these assignments:\n \nThe variable p refers to a Point object, which contains two attributes. Each attribute refers to a number.\nWe can read the value of an attribute using the same syntax:\n\nprint(p.y)\nx = p.x\nprint(x)\n\nThe expression p.x means, “Go to the object p refers to and get the value of x”. In this case, we assign that value to a variable named x.\nNote that there is no conflict between the variable x and the attribute x. The purpose of dot operator is to identify which variable you are referring to unambiguously.\nYou can use dot operator as part of any expression, so the following statements are legal:\n\nprint('(%d, %d)' % (p.x, p.y))\ndistance_squared = p.x * p.x + p.y * p.y\n\nThe first line outputs (3, 4); the second line calculates the value 25.\nNow that we have defined a new custom type, we can create instances of that type and manipulate them as we would an object of any native type. For example, you can pass objects of custom type as an argument to a function in the usual way:\ndef print_point(p):\n    print('(%s, %s)' % (str(p.x), str(p.y)))\nprint_point takes a point as an argument and displays it in the standard format. If you call print_point(p) with point p as defined previously, the output is (3, 4).\n\n\n\n\nClass Attributes\nNot all attributes are instance attributes. Some attributes are shared by all instances of a class. These attributes are called class attributes.\nClass attributes are defined within the class definition but outside any of the class’s methods. They are not tied to any particular instance of the class, but rather are shared by all instances of the class.\nFor example, in the Point class, we could add a class attribute to keep track of how many points have been created. We’ll call this class attribute n:\nclass Point:\n    n = 0\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n        Point.n += 1\nThe n attribute is created when the Point class is defined, and it is accessed using dot operator. The following code demonstrates how the n attribute is used:\np1 = Point()\nprint(p1.n) # 1\np2 = Point()\nprint(p2.n) # 2\nThe n attribute is shared by all instances of the Point class. Any changes made to the n attribute are reflected in all instances of the class."
   },
   {
     "objectID": "basics/abstractions/oop1.html#methods",
@@ -895,183 +895,196 @@
   {
     "objectID": "basics/abstractions/interfaces.html",
     "href": "basics/abstractions/interfaces.html",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "Interfaces in Java are similar to classes but with some differences.\nAn interface is a reference type in Java that is used to define a blueprint of a class.\nIt contains only abstract methods and constants.\nAn interface cannot have constructors, fields, or static methods.\nA class can implement multiple interfaces, but it can extend only one class.\n\n\nAn interface in Java is declared using the interface keyword followed by the interface name. Here is an example of an interface declaration:\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\n\n\n\nA class can implement an interface using the implements keyword. The class must provide implementations for all the abstract methods defined in the interface. Here is an example of a class implementing the Shape interface:\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}\n\n\n\nAn interface can extend another interface using the extends keyword. The sub-interface inherits the abstract methods and constants of the super-interface. Here is an example of an interface extending another interface:\npublic interface Drawable extends Shape {\n    void draw();\n}\n\n\n\nAn interface can have default methods that provide a default implementation for a method. A class that implements the interface can override the default method if needed. Here is an example of a default method in an interface:\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n\n    default void printDetails() {\n        System.out.println(\"Area: \" + getArea());\n        System.out.println(\"Perimeter: \" + getPerimeter());\n    }\n}\n\n\n\nAn interface can have static methods that are associated with the interface itself, not with any instance of the interface. Here is an example of a static method in an interface:\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n\n    static void printInfo() {\n        System.out.println(\"This is a Shape interface\");\n    }\n}\n\n\n\nAn interface can have constants that are implicitly public, static, and final. Here is an example of a constant in an interface:\npublic interface Shape {\n    double PI = 3.14159;\n\n    double getArea();\n    double getPerimeter();\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#declaring-an-interface",
     "href": "basics/abstractions/interfaces.html#declaring-an-interface",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "An interface in Java is declared using the interface keyword followed by the interface name. Here is an example of an interface declaration:\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#implementing-an-interface",
     "href": "basics/abstractions/interfaces.html#implementing-an-interface",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "A class can implement an interface using the implements keyword. The class must provide implementations for all the abstract methods defined in the interface. Here is an example of a class implementing the Shape interface:\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#extending-an-interface",
     "href": "basics/abstractions/interfaces.html#extending-an-interface",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "An interface can extend another interface using the extends keyword. The sub-interface inherits the abstract methods and constants of the super-interface. Here is an example of an interface extending another interface:\npublic interface Drawable extends Shape {\n    void draw();\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#default-methods",
     "href": "basics/abstractions/interfaces.html#default-methods",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "An interface can have default methods that provide a default implementation for a method. A class that implements the interface can override the default method if needed. Here is an example of a default method in an interface:\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n\n    default void printDetails() {\n        System.out.println(\"Area: \" + getArea());\n        System.out.println(\"Perimeter: \" + getPerimeter());\n    }\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#static-methods",
     "href": "basics/abstractions/interfaces.html#static-methods",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "An interface can have static methods that are associated with the interface itself, not with any instance of the interface. Here is an example of a static method in an interface:\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n\n    static void printInfo() {\n        System.out.println(\"This is a Shape interface\");\n    }\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#constants",
     "href": "basics/abstractions/interfaces.html#constants",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "",
     "text": "An interface can have constants that are implicitly public, static, and final. Here is an example of a constant in an interface:\npublic interface Shape {\n    double PI = 3.14159;\n\n    double getArea();\n    double getPerimeter();\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#declaring-a-generic-class",
     "href": "basics/abstractions/interfaces.html#declaring-a-generic-class",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Declaring a Generic Class",
     "text": "Declaring a Generic Class\nA generic class in Java is declared using angle brackets (&lt;&gt;) to specify one or more type parameters. Here is an example of a generic class:\npublic class Box&lt;T&gt; {\n    private T value;\n\n    public Box(T value) {\n        this.value = value;\n    }\n\n    public T getValue() {\n        return value;\n    }\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#using-a-generic-class",
     "href": "basics/abstractions/interfaces.html#using-a-generic-class",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Using a Generic Class",
     "text": "Using a Generic Class\nYou can create an instance of a generic class by specifying the type parameter in angle brackets. Here is an example of using the Box class:\nBox&lt;Integer&gt; intBox = new Box&lt;&gt;(10);\nint value = intBox.getValue();\nSystem.out.println(\"Value: \" + value);",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#declaring-a-generic-interface",
     "href": "basics/abstractions/interfaces.html#declaring-a-generic-interface",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Declaring a Generic Interface",
     "text": "Declaring a Generic Interface\nA generic interface in Java is declared similar to a generic class. Here is an example of a generic interface:\n\npublic interface Pair&lt;K, V&gt; {\n    K getKey();\n    V getValue();\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#implementing-a-generic-interface",
     "href": "basics/abstractions/interfaces.html#implementing-a-generic-interface",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Implementing a Generic Interface",
     "text": "Implementing a Generic Interface\nA class can implement a generic interface by specifying the type parameters. Here is an example of a class implementing the Pair interface:\npublic class OrderedPair&lt;K, V&gt; implements Pair&lt;K, V&gt; {\n    private K key;\n    private V value;\n\n    public OrderedPair(K key, V value) {\n        this.key = key;\n        this.value = value;\n    }\n\n    @Override\n    public K getKey() {\n        return key;\n    }\n\n    @Override\n    public V getValue() {\n        return value;\n    }\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
+    ]
+  },
+  {
+    "objectID": "basics/abstractions/interfaces.html#generics-example",
+    "href": "basics/abstractions/interfaces.html#generics-example",
+    "title": "Interfaces, Generics and Abstract Classes",
+    "section": "Generics Example",
+    "text": "Generics Example\nHere is an example of how to create an array-based Stack using generics:\npackage temp;\n\npublic class Stack&lt;T&gt;{ \n\n    T[] data;\n    int curr;\n    int capacity;\n\n    public Stack(){        \n        this.capacity = 10;\n        this.data = (T[]) new Object[this.capacity];\n        this.curr = 0;\n    }\n    \n    public void push(T x){\n        if (this.curr &lt; this.data.length){\n            this.data[this.curr] = x;\n            this.curr += 1;\n        }\n        else {\n            this.capacity = this.capacity + 10;\n            T[] newdata = (T[]) new Object[this.capacity];\n\n            for (int i = 0; i &lt; this.data.length; i++){\n                newdata[i] = this.data[i];\n            }\n            this.data = newdata;\n            this.data[curr] = x;\n            this.curr += 1;\n\n        }\n    }\n\n    public T pop(){\n        if (this.curr == 0){\n            return null;\n        }\n        else{\n            this.curr -= 1;\n            return this.data[this.curr];\n        }\n    }\n\n    public T peek(){\n        return this.data[this.curr -1];\n    }\n\n    public static void main(String[] args){\n        Stack&lt;String&gt; s = new Stack&lt;&gt;();\n        s.push(\"a\");\n        s.push(\"b\");\n        s.push(\"c\");\n        System.out.println(s.pop());\n    }\n}",
+    "crumbs": [
+      "Home",
+      "PROGRAMMING, IN JAVA",
+      "Abstractions",
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#declaring-an-abstract-class",
     "href": "basics/abstractions/interfaces.html#declaring-an-abstract-class",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Declaring an Abstract Class",
     "text": "Declaring an Abstract Class\nDeclaring an abstract class in Java is similar to declaring a regular class, but with the abstract keyword. Here is an example of an abstract class:\npublic abstract class Shape {\n    public abstract double getArea();\n    public abstract double getPerimeter();\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#extending-an-abstract-class",
     "href": "basics/abstractions/interfaces.html#extending-an-abstract-class",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Extending an Abstract Class",
     "text": "Extending an Abstract Class\nA class can extend an abstract class using the extends keyword. The subclass must provide implementations for all the abstract methods. Here is an example of a class extending the Shape abstract class:\n\npublic class Circle extends Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
     "objectID": "basics/abstractions/interfaces.html#abstract-classes-vs.-interfaces",
     "href": "basics/abstractions/interfaces.html#abstract-classes-vs.-interfaces",
-    "title": "Interfaces and Abstract Classes",
+    "title": "Interfaces, Generics and Abstract Classes",
     "section": "Abstract Classes vs. Interfaces",
     "text": "Abstract Classes vs. Interfaces\nAbstract classes and interfaces are similar in that they both define abstract methods that must be implemented by subclasses.\nAbstract classes can have fields, constructors, and concrete methods, while interfaces cannot.\nA class can extend only one abstract class, but it can implement multiple interfaces.\nAbstract classes are used when you want to provide a common base implementation for subclasses, while interfaces are used when you want to define a contract for classes to implement.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
       "Abstractions",
-      "Interfaces and Abstract Classes"
+      "Interfaces, Generics and Abstract Classes"
     ]
   },
   {
@@ -1229,11 +1242,11 @@
     ]
   },
   {
-    "objectID": "basics/operations/file_io.html#reading-from-a-file",
-    "href": "basics/operations/file_io.html#reading-from-a-file",
+    "objectID": "basics/operations/file_io.html#file-io",
+    "href": "basics/operations/file_io.html#file-io",
     "title": "I/O",
-    "section": "Reading from a File",
-    "text": "Reading from a File\nTo read data from a file in Java, you can use the FileInputStream and BufferedReader classes. The FileInputStream class is used to read bytes from a file, and the BufferedReader class is used to read text from a character-input stream. Here is an example of reading data from a file:\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"));\n            String line = reader.readLine();\n            while (line != null) {\n                System.out.println(line);\n                line = reader.readLine();\n            }\n            reader.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedReader class to read data from a file named input.txt. We read each line from the file using the readLine() method and print it to the console.",
+    "section": "File I/O",
+    "text": "File I/O\n\nReading from a File\nTo read data from a file in Java, you can use the FileInputStream and BufferedReader classes. The FileInputStream class is used to read bytes from a file, and the BufferedReader class is used to read text from a character-input stream. Here is an example of reading data from a file:\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"));\n            String line = reader.readLine();\n            while (line != null) {\n                System.out.println(line);\n                line = reader.readLine();\n            }\n            reader.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedReader class to read data from a file named input.txt. We read each line from the file using the readLine() method and print it to the console.\n\n\nWriting to a File\nTo write data to a file in Java, you can use the FileOutputStream and BufferedWriter classes. The FileOutputStream class is used to write bytes to a file, and the BufferedWriter class is used to write text to a character-output stream. Here is an example of writing data to a file:\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFile {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Hello, World!\");\n            writer.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedWriter class to write the text “Hello, World!” to a file named output.txt.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -1242,11 +1255,11 @@
     ]
   },
   {
-    "objectID": "basics/operations/file_io.html#writing-to-a-file",
-    "href": "basics/operations/file_io.html#writing-to-a-file",
+    "objectID": "basics/operations/file_io.html#user-io",
+    "href": "basics/operations/file_io.html#user-io",
     "title": "I/O",
-    "section": "Writing to a File",
-    "text": "Writing to a File\nTo write data to a file in Java, you can use the FileOutputStream and BufferedWriter classes. The FileOutputStream class is used to write bytes to a file, and the BufferedWriter class is used to write text to a character-output stream. Here is an example of writing data to a file:\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFile {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Hello, World!\");\n            writer.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedWriter class to write the text “Hello, World!” to a file named output.txt.",
+    "section": "User I/O",
+    "text": "User I/O\n\nReading User Input\nTo read user input from the console in Java, you can use the Scanner class. The Scanner class is used to read input from various sources, including the console. Here is an example of reading user input:\nimport java.util.Scanner;\n\npublic class ReadUserInput {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter your name: \");\n        String name = scanner.nextLine();\n        System.out.println(\"Hello, \" + name + \"!\");\n        scanner.close();\n    }\n}\nIn the above example, we use the Scanner class to read the user’s name from the console and print a greeting message.\n\n\nWriting Output\nTo write output to the console in Java, you can use the System.out.println() method. This method is used to print text to the console. Here is an example of writing output to the console:\npublic class WriteOutput {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\nIn the above example, we use the System.out.println() method to print the text “Hello, World!” to the console.",
     "crumbs": [
       "Home",
       "PROGRAMMING, IN JAVA",
@@ -1445,9 +1458,9 @@
   {
     "objectID": "se/interfacebased.html",
     "href": "se/interfacebased.html",
-    "title": "Interface / Contract based Programming",
+    "title": "Interfaces / Contract based Programming",
     "section": "",
-    "text": "Interface based programming is a design principle that focuses on defining the contract first before implementing the functionality. This approach is widely used in Test-Driven Development (TDD) and Agile methodologies to ensure that the code meets the requirements specified by the interface.\n\n\n\nInterface Definition: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.\nLoose Coupling: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.\nDependency Inversion Principle (DIP): Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).\nTestability: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.\nModularity: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.\nPolymorphism: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.\n\n\n\n\nIn interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\n\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
+    "text": "Interface based programming is a design principle that focuses on defining the contract first before implementing the functionality. This approach is widely used in Test-Driven Development (TDD) and Agile methodologies to ensure that the code meets the requirements specified by the interface.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -1457,9 +1470,9 @@
   {
     "objectID": "se/interfacebased.html#key-concepts-of-interface-based-programming",
     "href": "se/interfacebased.html#key-concepts-of-interface-based-programming",
-    "title": "Interface / Contract based Programming",
-    "section": "",
-    "text": "Interface Definition: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.\nLoose Coupling: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.\nDependency Inversion Principle (DIP): Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).\nTestability: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.\nModularity: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.\nPolymorphism: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.",
+    "title": "Interfaces / Contract based Programming",
+    "section": "Key Concepts of Interface Based Programming",
+    "text": "Key Concepts of Interface Based Programming\n\nInterface Definition: An interface defines a contract that specifies the methods and properties that a class must implement. It serves as a blueprint for the classes that implement it.\nLoose Coupling: By defining interfaces, classes are decoupled from each other, allowing for flexibility and easier maintenance. Changes in one class do not affect other classes as long as they adhere to the interface.\nDependency Inversion Principle (DIP): Interface based programming follows the DIP, which states that high-level modules should not depend on low-level modules directly but should depend on abstractions (interfaces).\nTestability: Interfaces make it easier to write unit tests by providing clear boundaries for testing. Mocking interfaces allows for isolated testing of components.\nModularity: Interfaces promote modularity by breaking down complex systems into smaller, manageable components. This makes the codebase more maintainable and scalable.\nPolymorphism: Interfaces enable polymorphism, allowing different classes to implement the same interface and be treated interchangeably. This enhances code reusability and flexibility.",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -1469,9 +1482,9 @@
   {
     "objectID": "se/interfacebased.html#interfaces-as-contracts",
     "href": "se/interfacebased.html#interfaces-as-contracts",
-    "title": "Interface / Contract based Programming",
-    "section": "",
-    "text": "In interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\n\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
+    "title": "Interfaces / Contract based Programming",
+    "section": "Interfaces as Contracts",
+    "text": "Interfaces as Contracts\nIn interface based programming, an interface serves as a contract between the client and the implementing class. The interface defines the methods and properties that the implementing class must provide, ensuring consistency and adherence to the contract.\npublic interface Shape {\n    double getArea();\n    double getPerimeter();\n}\nNote that the interface does not contain any implementation details but only method signatures. The implementing class is responsible for providing the actual implementation of these methods. The interface acts as a contract that specifies what methods the implementing class must have.\npublic class Circle implements Shape {\n    private double radius;\n\n    public Circle(double radius) {\n        this.radius = radius;\n    }\n\n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n\n    @Override\n    public double getPerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}",
     "crumbs": [
       "Home",
       "SOFTWARE ENGINEERING",
@@ -2971,32 +2984,6 @@
       "PROGRAMMING, IN JAVA",
       "Operations",
       "Testing in Java"
-    ]
-  },
-  {
-    "objectID": "basics/operations/file_io.html#file-io",
-    "href": "basics/operations/file_io.html#file-io",
-    "title": "I/O",
-    "section": "File I/O",
-    "text": "File I/O\n\nReading from a File\nTo read data from a file in Java, you can use the FileInputStream and BufferedReader classes. The FileInputStream class is used to read bytes from a file, and the BufferedReader class is used to read text from a character-input stream. Here is an example of reading data from a file:\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"));\n            String line = reader.readLine();\n            while (line != null) {\n                System.out.println(line);\n                line = reader.readLine();\n            }\n            reader.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedReader class to read data from a file named input.txt. We read each line from the file using the readLine() method and print it to the console.\n\n\nWriting to a File\nTo write data to a file in Java, you can use the FileOutputStream and BufferedWriter classes. The FileOutputStream class is used to write bytes to a file, and the BufferedWriter class is used to write text to a character-output stream. Here is an example of writing data to a file:\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFile {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Hello, World!\");\n            writer.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\nIn the above example, we use the BufferedWriter class to write the text “Hello, World!” to a file named output.txt.",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "I/O"
-    ]
-  },
-  {
-    "objectID": "basics/operations/file_io.html#user-io",
-    "href": "basics/operations/file_io.html#user-io",
-    "title": "I/O",
-    "section": "User I/O",
-    "text": "User I/O\n\nReading User Input\nTo read user input from the console in Java, you can use the Scanner class. The Scanner class is used to read input from various sources, including the console. Here is an example of reading user input:\nimport java.util.Scanner;\n\npublic class ReadUserInput {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter your name: \");\n        String name = scanner.nextLine();\n        System.out.println(\"Hello, \" + name + \"!\");\n        scanner.close();\n    }\n}\nIn the above example, we use the Scanner class to read the user’s name from the console and print a greeting message.\n\n\nWriting Output\nTo write output to the console in Java, you can use the System.out.println() method. This method is used to print text to the console. Here is an example of writing output to the console:\npublic class WriteOutput {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\nIn the above example, we use the System.out.println() method to print the text “Hello, World!” to the console.",
-    "crumbs": [
-      "Home",
-      "PROGRAMMING, IN JAVA",
-      "Operations",
-      "I/O"
     ]
   },
   {
