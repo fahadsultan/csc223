@@ -19,9 +19,14 @@ Enjoy the break
 
 ::: {.callout-caution}
 # Programming Assignment 2
-[PA 2](https://github.com/orgs/CSC223-Fall25/repositories) is due before the next lab on <b><u>Wednesday, Feb 5th, 2024 2:30 PM</b></u>.
+[PA 2](https://github.com/orgs/CSC223-Fall25/repositories) is due before the next lab on <b><u>Wednesday, Feb 5th, 2025 2:30 PM</b></u>.
 :::
 
+
+::: {.callout-caution} 
+# Written Assignment 2
+[WA 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) is due on <b><u>Monday, Feb 10th, 2025 11:59 PM</b></u>.
+:::
 
 ::: {.callout-tip}
 ## Open-Door Policy
