@@ -590,7 +590,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#git-fetch" id="toc-git-fetch" class="nav-link active" data-scroll-target="#git-fetch"><code>git fetch</code></a></li>
-  <li><a href="#git-merge" id="toc-git-merge" class="nav-link" data-scroll-target="#git-merge"><code>git merge</code></a></li>
+  <li><a href="#git-merge-fast-forward" id="toc-git-merge-fast-forward" class="nav-link" data-scroll-target="#git-merge-fast-forward"><code>git merge</code> (Fast-Forward)</a>
+  <ul class="collapse">
+  <li><a href="#git-merge-with-conflicts" id="toc-git-merge-with-conflicts" class="nav-link" data-scroll-target="#git-merge-with-conflicts"><code>git merge</code> with conflicts</a></li>
+  </ul></li>
   <li><a href="#git-pull" id="toc-git-pull" class="nav-link" data-scroll-target="#git-pull"><code>git pull</code></a></li>
   <li><a href="#resolving-conflicts" id="toc-resolving-conflicts" class="nav-link" data-scroll-target="#resolving-conflicts">Resolving Conflicts</a></li>
   <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests">Pull Requests</a></li>
@@ -627,17 +630,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git fetch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>These changes will be downloaded to your local repository, but they will not be merged into your working directory. To merge the changes into your working directory, you can use the <code>git merge</code> command.</p>
 </section>
-<section id="git-merge" class="level2">
-<h2 class="anchored" data-anchor-id="git-merge"><code>git merge</code></h2>
+<section id="git-merge-fast-forward" class="level2">
+<h2 class="anchored" data-anchor-id="git-merge-fast-forward"><code>git merge</code> (Fast-Forward)</h2>
 <p>The <code>git merge</code> command is used to merge changes from one branch into another. It will take the changes from the specified branch and apply them to the current branch.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If there are any conflicts between the two branches, Git will prompt you to resolve them before completing the merge.</p>
 <p>There are two ways to resolve conflicts: manually editing the conflicted files or using a merge tool. Some popular merge tools include <code>vimdiff</code>, <code>kdiff3</code>, and <code>meld</code>.</p>
+<p>If there are no conflicts between your local branch and the remote branch, Git will automatically merge the changes and update your working directory. This is known as a “fast-forward” merge.</p>
+<section id="git-merge-with-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="git-merge-with-conflicts"><code>git merge</code> with conflicts</h3>
+<p>When you attempt to merge two branches (one that you fetched and one that you are currently on) that have conflicting changes, Git will stop the merge and prompt you to resolve the conflicts.</p>
+<p>This is because Git cannot automatically merge the changes due to the conflicts. You will need to manually resolve the conflicts before the merge can be completed.</p>
+<p>Conflicts can occur when the same lines of code have been changed in both branches. You will need to manually resolve these conflicts before the merge can be completed.</p>
+<p>When you’ll try to merge two branches with conflicts, you’ll see a message like this:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Auto-merging</span> <span class="op">&lt;</span>file name<span class="op">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in <span class="op">&lt;</span>file name<span class="op">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To resolve the conflicts, you will need to open the conflicted file in your text editor and manually edit the file to resolve the conflicts.</p>
+<p>Conflicts are marked with special markers in the file. You will need to edit the file to remove the conflict markers and resolve the conflicts.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> is the code from the current branch</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">=======</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> is the code from the branch you are merging</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="op">&lt;</span>branch <span class="ex">name</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the example above, the code between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> is the code from the current branch (local/main), and the code between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; &lt;branch name&gt;</code> is the code from the branch you are mergin (origin/main).</p>
+<p>You will need to edit the file to resolve the conflicts and remove the conflict markers. Resolve the conflicts by choosing which code to keep or combining the code from both branches.</p>
+<p>Once you have resolved all the conflicts, you can save the file and commit the changes.</p>
+<p>WARNING: Git might be default open the file in a text editor called <code>vim</code>. If you are not familiar with <code>vim</code>, you can use another text editor to open the file. The <code>vim</code> editor can be a bit confusing for beginners. It is recommended to use a text editor like <code>nano</code> or <code>VSCode</code> to open the conflicted file.</p>
+<p>If you find yourself in the <code>vim</code> editor, you can press <code>i</code> to enter insert mode, make your changes, then press <code>Esc</code> to exit insert mode. To save and exit, you can type <code>:wq</code> and press <code>Enter</code>.</p>
+</section>
 </section>
 <section id="git-pull" class="level2">
 <h2 class="anchored" data-anchor-id="git-pull"><code>git pull</code></h2>
 <p>The <code>git pull</code> command is a combination of <code>git fetch</code> and <code>git merge</code>. It will download changes from a remote repository and merge them into your working directory in one step.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="resolving-conflicts" class="level2">
 <h2 class="anchored" data-anchor-id="resolving-conflicts">Resolving Conflicts</h2>
@@ -653,15 +680,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="working-with-branches">Working with Branches</h2>
 <p>Branches are an important concept in Git that allow you to work on different features or fixes in isolation. When you create a new branch, you are creating a new line of development that is independent of the main branch (usually called <code>master</code> or <code>main</code>).</p>
 <p>To <u>create a new branch</u>, you can use the <code>git checkout -b</code> command. This will create a new branch and switch to it in one step.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Once you have made changes on a branch, you can <u>merge those changes back into the main</u> branch using the <code>git merge</code> command.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout main</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout main</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 <img src="https://cdn.prod.website-files.com/622642781cd7e96ac1f66807/62d0ef2b68ea1652c722e7a6_image-10.png" width="80%" style="filter:invert(1);">
 </center>
 <p>At any point, you can check which branch you are on using the <code>git branch</code> command.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

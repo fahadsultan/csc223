@@ -5,7 +5,7 @@ toc: true
 
 Hi! Welcome to the CSC-223 Advanced Data Structures & Software Development course website 👋🏾 
 
-I am excited to talk code 💻, algorithms 🔄 🔀 and software engineering 📊 in this course with you! 
+I am excited to talk code 💻, algorithms 🔄 🔀 and software engineering ⚒️ in this course with you! 
 
 From the navigation bar on the top ☝🏾 and sidebar on the left 👈🏾, you should be able to navigate to any topic relevant to the course. If that does not help, there should also be a search icon 🔍 in the top left corner ↗️
 
@@ -18,14 +18,14 @@ Enjoy the break
 ::: -->
 
 ::: {.callout-caution}
-# Programming Assignment 2
-[PA 2](https://github.com/orgs/CSC223-Fall25/repositories) is due before the next lab on <b><u>Wednesday, Feb 5th, 2025 2:30 PM</b></u>.
+# Exam 1
+Exam 1 is scheduled for <b><u>Wednesday, Feb 19th, 2025</b> at 2:30 PM in Riley 203</u>.
 :::
 
 
 ::: {.callout-caution} 
-# Written Assignment 2 
-[WA 2](https://docs.google.com/document/d/1kcL9j3cE0m04tJCIOmgHrrvgiF70jV_WBfXesn3myeg/edit?usp=sharing) is due on <b><u>Monday, Feb 10th, 2025 11:59 PM</b></u>.
+# Programming Assignment 4 
+[PA 4](https://docs.google.com/document/d/1GrJOablT6q7hJboYw16V1cGcYKjA2RMChopjd9o-6p8/edit?usp=sharing) is before the first test on <b><u>Wednesday, Feb 19th, 2025 2:30 PM</b></u>.
 :::
 
 ::: {.callout-tip}
