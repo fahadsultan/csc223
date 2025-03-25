@@ -46,9 +46,17 @@ The pseudocode of Dijkstra's algorithm are as follows:
 
 <center>
 
-### Initial 
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303115424/d1-(1).png" width="70%" style="filter:invert(1)">
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-76.png" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303124731/d2-(1).png" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303125338/d3-(1).png" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240102151831/Dijkstra-Algorithm--step-3-768.jpg" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303133722/d5-(1).png" width="70%" style="filter:invert(1)">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303134335/d6.png" width="70%" style="filter:invert(1)">
+
+<!-- ### Initial  -->
+
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-76.png" width="70%" style="filter:invert(1)">
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-78.png" width="70%" style="filter:invert(1)">
 
@@ -57,13 +65,13 @@ The pseudocode of Dijkstra's algorithm are as follows:
 ### Visit Node 0
 
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-83.png" width="70%" style="filter:invert(1)">
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-83.png" width="70%" style="filter:invert(1)"> -->
 
 <!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-90.png" width="30%" style="filter:invert(1)">
 
 <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-90.png" width="30%" style="filter:invert(1)">  -->
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-92.png" width="30%" style="filter:invert(1)">
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-92.png" width="30%" style="filter:invert(1)">
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-87.png" width="70%" style="filter:invert(1)">
 
@@ -77,14 +85,14 @@ The pseudocode of Dijkstra's algorithm are as follows:
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-98.png" width="30%" style="filter:invert(1)">
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-93.png" width="70%" style="filter:invert(1)">
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-93.png" width="70%" style="filter:invert(1)"> -->
 
 
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-96.png" width="70%" style="filter:invert(1)">
 
 <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-99.png" width="30%" style="filter:invert(1)"> -->
 
-<br/>
+<!-- <br/>
 
 ### Visit Node 2
 
@@ -97,11 +105,11 @@ The pseudocode of Dijkstra's algorithm are as follows:
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-100.png" width="70%" style="filter:invert(1)">
 
-
+ -->
 
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-103.png" width="70%" style="filter:invert(1)"> -->
 
-<br/>
+<!-- <br/>
 
 ### Visit Node 3
 
@@ -111,29 +119,29 @@ The pseudocode of Dijkstra's algorithm are as follows:
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-105.png" width="50%" style="filter:invert(1)">
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-106.png" width="70%" style="filter:invert(1)">
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-106.png" width="70%" style="filter:invert(1)"> -->
 
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-108.png" width="30%" style="filter:invert(1)"> -->
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-107.png" width="30%" style="filter:invert(1)">
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-107.png" width="30%" style="filter:invert(1)">
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-109.png" width="70%" style="filter:invert(1)">
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-109.png" width="70%" style="filter:invert(1)"> -->
 
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-108.png" width="30%" style="filter:invert(1)"> -->
 
-<br/>
+<!-- <br/>
 
 ### Visit Node 4
 
 <br/>
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-112.png" width="70%" style="filter:invert(1)">
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-112.png" width="70%" style="filter:invert(1)"> -->
 
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-111.png" width="70%" style="filter:invert(1)"> -->
 
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-113.png" width="70%" style="filter:invert(1)"> -->
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-110.png" width="70%" style="filter:invert(1)">
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-110.png" width="70%" style="filter:invert(1)">
 
 <br/>
 
@@ -147,13 +155,7 @@ The pseudocode of Dijkstra's algorithm are as follows:
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-116.png" width="70%" style="filter:invert(1)">
 
-<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-140.png" width="30%" style="filter:invert(1)">
-
-
-
-
-
-
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-140.png" width="30%" style="filter:invert(1)"> -->
 
 </center>
 

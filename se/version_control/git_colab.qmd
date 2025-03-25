@@ -16,7 +16,7 @@ $ git fetch
 
 These changes will be downloaded to your local repository, but they will not be merged into your working directory. To merge the changes into your working directory, you can use the `git merge` command.
 
-## `git merge`
+## `git merge` (Fast-Forward)
 
 The `git merge` command is used to merge changes from one branch into another. It will take the changes from the specified branch and apply them to the current branch.
 
@@ -27,6 +27,47 @@ $ git merge <branch name>
 If there are any conflicts between the two branches, Git will prompt you to resolve them before completing the merge.
 
 There are two ways to resolve conflicts: manually editing the conflicted files or using a merge tool. Some popular merge tools include `vimdiff`, `kdiff3`, and `meld`.
+
+If there are no conflicts between your local branch and the remote branch, Git will automatically merge the changes and update your working directory. This is known as a "fast-forward" merge.
+
+### `git merge` with conflicts
+
+When you attempt to merge two branches (one that you fetched and one that you are currently on) that have conflicting changes, Git will stop the merge and prompt you to resolve the conflicts.
+
+This is because Git cannot automatically merge the changes due to the conflicts. You will need to manually resolve the conflicts before the merge can be completed.
+
+Conflicts can occur when the same lines of code have been changed in both branches. You will need to manually resolve these conflicts before the merge can be completed.
+
+When you'll try to merge two branches with conflicts, you'll see a message like this:
+
+```bash
+$ git merge <branch name>
+Auto-merging <file name>
+CONFLICT (content): Merge conflict in <file name>
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+To resolve the conflicts, you will need to open the conflicted file in your text editor and manually edit the file to resolve the conflicts. 
+
+Conflicts are marked with special markers in the file. You will need to edit the file to remove the conflict markers and resolve the conflicts.
+
+```bash
+<<<<<<< HEAD
+This is the code from the current branch
+=======
+This is the code from the branch you are merging
+>>>>>>> <branch name>
+```
+
+In the example above, the code between `<<<<<<< HEAD` and `=======` is the code from the current branch (local/main), and the code between `=======` and `>>>>>>> <branch name>` is the code from the branch you are mergin (origin/main). 
+
+You will need to edit the file to resolve the conflicts and remove the conflict markers. Resolve the conflicts by choosing which code to keep or combining the code from both branches.
+
+Once you have resolved all the conflicts, you can save the file and commit the changes.
+
+WARNING: Git might be default open the file in a text editor called `vim`. If you are not familiar with `vim`, you can use another text editor to open the file. The `vim` editor can be a bit confusing for beginners. It is recommended to use a text editor like `nano` or `VSCode` to open the conflicted file.
+
+If you find yourself in the `vim` editor, you can press `i` to enter insert mode, make your changes, then press `Esc` to exit insert mode. To save and exit, you can type `:wq` and press `Enter`.
 
 ## `git pull`
 

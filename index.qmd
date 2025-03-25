@@ -18,14 +18,8 @@ Enjoy the break
 ::: -->
 
 ::: {.callout-caution}
-# Exam 1
-Exam 1 is scheduled for <b><u>Wednesday, Feb 19th, 2025</b> at 2:30 PM in Riley 203</u>.
-:::
-
-
-::: {.callout-caution} 
-# Programming Assignment 4 
-[PA 4](https://docs.google.com/document/d/1GrJOablT6q7hJboYw16V1cGcYKjA2RMChopjd9o-6p8/edit?usp=sharing) is before the first test on <b><u>Wednesday, Feb 19th, 2025 2:30 PM</b></u>.
+# Exam 2
+Exam 2 is scheduled for <b><u>Wednesday, April 2nd, 2025</b> at 2:30 PM in Riley 203</u>.
 :::
 
 ::: {.callout-tip}

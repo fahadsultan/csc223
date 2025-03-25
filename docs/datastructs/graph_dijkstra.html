@@ -591,16 +591,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link active" data-scroll-target="#how-it-works">How it Works</a></li>
   <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a>
-  <ul class="collapse">
-  <li><a href="#initial" id="toc-initial" class="nav-link" data-scroll-target="#initial">Initial</a></li>
-  <li><a href="#visit-node-0" id="toc-visit-node-0" class="nav-link" data-scroll-target="#visit-node-0">Visit Node 0</a></li>
-  <li><a href="#visit-node-1" id="toc-visit-node-1" class="nav-link" data-scroll-target="#visit-node-1">Visit Node 1</a></li>
-  <li><a href="#visit-node-2" id="toc-visit-node-2" class="nav-link" data-scroll-target="#visit-node-2">Visit Node 2</a></li>
-  <li><a href="#visit-node-3" id="toc-visit-node-3" class="nav-link" data-scroll-target="#visit-node-3">Visit Node 3</a></li>
-  <li><a href="#visit-node-4" id="toc-visit-node-4" class="nav-link" data-scroll-target="#visit-node-4">Visit Node 4</a></li>
-  <li><a href="#visit-node-5-and-6" id="toc-visit-node-5-and-6" class="nav-link" data-scroll-target="#visit-node-5-and-6">Visit Node 5 and 6</a></li>
-  </ul></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
   </ul>
 </nav>
@@ -664,73 +655,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="example" class="level2">
 <h2 class="anchored" data-anchor-id="example">Example</h2>
 <center>
-<section id="initial" class="level3">
-<h3 class="anchored" data-anchor-id="initial">Initial</h3>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-76.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-78.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-77.png" width="20%" style="filter:invert(1)"></p>
-</section>
-<section id="visit-node-0" class="level3">
-<h3 class="anchored" data-anchor-id="visit-node-0">Visit Node 0</h3>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-83.png" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303115424/d1-(1).png" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303124731/d2-(1).png" width="70%" style="filter:invert(1)"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303125338/d3-(1).png" width="70%" style="filter:invert(1)"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240102151831/Dijkstra-Algorithm--step-3-768.jpg" width="70%" style="filter:invert(1)"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303133722/d5-(1).png" width="70%" style="filter:invert(1)"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230303134335/d6.png" width="70%" style="filter:invert(1)"></p>
+<!-- ### Initial  -->
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-76.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-78.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-77.png" width="20%" style="filter:invert(1)">
+
+### Visit Node 0
+
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-83.png" width="70%" style="filter:invert(1)"> -->
 <!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-90.png" width="30%" style="filter:invert(1)">
 
 <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-90.png" width="30%" style="filter:invert(1)">  -->
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-92.png" width="30%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-87.png" width="70%" style="filter:invert(1)"></p>
-<p><br></p>
-</section>
-<section id="visit-node-1" class="level3">
-<h3 class="anchored" data-anchor-id="visit-node-1">Visit Node 1</h3>
-<p><br></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-94.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-98.png" width="30%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-93.png" width="70%" style="filter:invert(1)"></p>
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-92.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-87.png" width="70%" style="filter:invert(1)">
+
+<br/>
+
+### Visit Node 1
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-94.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-98.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-93.png" width="70%" style="filter:invert(1)"> -->
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-96.png" width="70%" style="filter:invert(1)">
 
 <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-99.png" width="30%" style="filter:invert(1)"> -->
-<p><br></p>
-</section>
-<section id="visit-node-2" class="level3">
-<h3 class="anchored" data-anchor-id="visit-node-2">Visit Node 2</h3>
-<p><br></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-104.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-101.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-100.png" width="70%" style="filter:invert(1)"></p>
+<!-- <br/>
+
+### Visit Node 2
+
+<br/>
+
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-104.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-101.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-100.png" width="70%" style="filter:invert(1)">
+
+ -->
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-103.png" width="70%" style="filter:invert(1)"> -->
-<p><br></p>
-</section>
-<section id="visit-node-3" class="level3">
-<h3 class="anchored" data-anchor-id="visit-node-3">Visit Node 3</h3>
-<p><br></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-104.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-105.png" width="50%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-106.png" width="70%" style="filter:invert(1)"></p>
+<!-- <br/>
+
+### Visit Node 3
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-104.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-105.png" width="50%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-106.png" width="70%" style="filter:invert(1)"> -->
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-108.png" width="30%" style="filter:invert(1)"> -->
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-107.png" width="30%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-109.png" width="70%" style="filter:invert(1)"></p>
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-107.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-109.png" width="70%" style="filter:invert(1)"> -->
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-108.png" width="30%" style="filter:invert(1)"> -->
-<p><br></p>
-</section>
-<section id="visit-node-4" class="level3">
-<h3 class="anchored" data-anchor-id="visit-node-4">Visit Node 4</h3>
-<p><br></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-112.png" width="70%" style="filter:invert(1)"></p>
+<!-- <br/>
+
+### Visit Node 4
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-112.png" width="70%" style="filter:invert(1)"> -->
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-111.png" width="70%" style="filter:invert(1)"> -->
 <!-- <img src="https://cdn-media-0.freecodecamp.org/2020/06/image-113.png" width="70%" style="filter:invert(1)"> -->
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-110.png" width="70%" style="filter:invert(1)"></p>
-<p><br></p>
-</section>
-<section id="visit-node-5-and-6" class="level3">
-<h3 class="anchored" data-anchor-id="visit-node-5-and-6">Visit Node 5 and 6</h3>
-<p><br></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-115.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-114.png" width="30%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-116.png" width="70%" style="filter:invert(1)"></p>
-<p><img src="https://www.freecodecamp.org/news/content/images/2020/06/image-140.png" width="30%" style="filter:invert(1)"></p>
-</section></center>
-</section>
+<!-- <img src="https://www.freecodecamp.org/news/content/images/2020/06/image-110.png" width="70%" style="filter:invert(1)">
 
+<br/>
+
+### Visit Node 5 and 6
+
+<br/>
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-115.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-114.png" width="30%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-116.png" width="70%" style="filter:invert(1)">
+
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/image-140.png" width="30%" style="filter:invert(1)"> -->
+</center>
+</section>
 <section id="implementation" class="level2">
 <h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
 <p>Here is an implementation of Dijkstra’s algorithm in Java:</p>
