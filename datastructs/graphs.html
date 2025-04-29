@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dynamic Programming</title>
+<title>GRAPHS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algos/dp.html">Dynamic Programming</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/graphs.html">GRAPHS</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -432,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link">
+            <a href="../datastructs/graphs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">GRAPHS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -545,43 +545,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../algos/dp.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Dynamic Programming</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/dp1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1-dimensional DP</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/dp2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2-dimensional DP</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#graph-terminology" id="toc-graph-terminology" class="nav-link active" data-scroll-target="#graph-terminology">Graph Terminology</a></li>
+  <li><a href="#graph-representation" id="toc-graph-representation" class="nav-link" data-scroll-target="#graph-representation">Graph Representation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dynamic Programming</h1>
+<h1 class="title">GRAPHS</h1>
 </div>
 
 
@@ -598,9 +582,123 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems. It is applicable when the problem can be divided into overlapping subproblems that can be solved independently. The key idea is to store the results of subproblems to avoid redundant computations.</p>
+<p>A graph is a data structure that consists of a finite set of vertices (nodes) and a collection of edges that connect pairs of vertices. Graphs are used to model relationships between objects, such as cities connected by roads, friends connected by social networks, or dependencies between tasks in a project.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/undirectedgraph.png" width="70%" style="filter:invert(1)">
+</center>
+<section id="graph-terminology" class="level1">
+<h1>Graph Terminology</h1>
+<ul>
+<li><p><strong>Vertex (Node)</strong>: A fundamental unit of a graph. It represents an entity, such as a city, person, or object.</p></li>
+<li><p><strong>Edge</strong>: A connection between two vertices. It represents a relationship between the entities represented by the vertices.</p></li>
+<li><p><strong>Directed Graph (Digraph)</strong>: A graph in which the edges have a direction associated with them. The edges are ordered pairs of vertices.</p></li>
+<li><p><strong>Undirected Graph</strong>: A graph in which the edges do not have a direction associated with them. The edges are unordered pairs of vertices.</p></li>
+<li><p><strong>Weighted Graph</strong>: A graph in which each edge has an associated weight or cost. The weight can represent distance, time, cost, or any other relevant metric.</p></li>
+</ul>
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:2000/1*IBtDZq0_4yWpXt0mhda0jw.png" width="100%" style="filter:invert(1)">
+</center>
+<ul>
+<li><p><strong>Path</strong>: A sequence of vertices connected by edges. It represents a route from one vertex to another.</p></li>
+<li><p><strong>Cycle</strong>: A path that starts and ends at the same vertex.</p></li>
+<li><p><strong>Connected Graph</strong>: A graph in which there is a path between every pair of vertices.</p></li>
+<li><p><strong>Disconnected Graph</strong>: A graph in which there are vertices that are not connected by any path.</p></li>
+</ul>
+<br>
+<center>
+<img width="100%" style="filter:invert(1)" src="https://cdn-images-1.medium.com/v2/resize:fit:800/1*dX9TdlR6wD5lkPnWG1h80g.png"> <!-- <img width="100%" style="filter:invert(1)" src="https://studyglance.in/ds/images/Types-of-graphs.jpg"> -->
+</center>
+<p><br></p>
+<ul>
+<li><p><strong>Degree of a Vertex</strong>: The number of edges incident to a vertex. In a directed graph, the degree is divided into the in-degree (number of incoming edges) and out-degree (number of outgoing edges).</p></li>
+<li><p><strong>Adjacency</strong>: Two vertices are adjacent if there is an edge connecting them.</p></li>
+<li><p><strong>Adjacency Matrix</strong>: A matrix representation of a graph in which the rows and columns correspond to vertices, and the entries indicate whether an edge exists between the vertices.</p></li>
+<li><p><strong>Adjacency List</strong>: A list representation of a graph in which each vertex has a list of adjacent vertices.</p></li>
+</ul>
+</section>
+<section id="graph-representation" class="level1">
+<h1>Graph Representation</h1>
+<p>There are two common ways to represent a graph: adjacency matrix and adjacency list.</p>
+<center>
+<img src="https://notes.shichao.io/clrs/figure_22.1.png" style="filter:invert(1)" width="85%">
+</center>
+<!-- # Graph Traversal
+
+Graph traversal is the process of visiting all the vertices and edges of a graph. Two common graph traversal algorithms are Depth-First Search (DFS) and Breadth-First Search (BFS).
+
+## Depth-First Search (DFS)
+
+DFS is an algorithm that explores as far as possible along each branch before backtracking. It uses a stack to keep track of the vertices to visit next.
+
+### DFS Algorithm
+
+1. Start at a vertex $v$ and mark it as visited.
+
+2. Recursively visit all adjacent vertices of $v$ that have not been visited.
+
+3. Repeat step 2 for each unvisited adjacent vertex.
+
+### Example of DFS
+
+Consider the following graph:
+
+```
+    0 -- 1
+    |    |
+    3 -- 2
+
+```
+
+Starting at vertex 0, a DFS traversal would visit the vertices in the order 0, 1, 2, 3.
+
+## Breadth-First Search (BFS)
+
+BFS is an algorithm that explores all the vertices at the present depth before moving on to the vertices at the next depth. It uses a queue to keep track of the vertices to visit next.
+
+### BFS Algorithm
+
+1. Start at a vertex $v$ and mark it as visited.
+
+2. Enqueue $v$ into a queue.
+
+3. While the queue is not empty, dequeue a vertex $u$ from the queue.
+
+4. Visit all unvisited adjacent vertices of $u$ and mark them as visited. Enqueue them into the queue.
 
 
+### Example of BFS
+
+Consider the same graph as before:
+
+```
+    0 -- 1
+    |    |
+    3 -- 2
+
+```
+
+Starting at vertex 0, a BFS traversal would visit the vertices in the order 0, 1, 3, 2.
+ 
+ # Graph Algorithms
+
+Graphs are used to solve a variety of problems, and several algorithms have been developed to work with graphs efficiently. Some common graph algorithms include:
+
+- **Dijkstra's Algorithm**: Finds the shortest path between two vertices in a weighted graph.
+
+- **Bellman-Ford Algorithm**: Finds the shortest path between two vertices in a weighted graph with negative edge weights.
+
+- **Prim's Algorithm**: Finds the minimum spanning tree of a connected, undirected graph.
+
+- **Kruskal's Algorithm**: Finds the minimum spanning tree of a connected, undirected graph.
+
+- **Floyd-Warshall Algorithm**: Finds the shortest paths between all pairs of vertices in a weighted graph.
+
+- **Topological Sorting**: Arranges the vertices of a directed acyclic graph in a linear order.
+
+- **Strongly Connected Components**: Identifies the strongly connected components in a directed graph.  -->
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

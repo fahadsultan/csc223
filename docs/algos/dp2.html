@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dynamic Programming</title>
+<title>dp2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -183,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algos/dp.html">Dynamic Programming</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algos/dp.html">Dynamic Programming</a></li><li class="breadcrumb-item"><a href="../algos/dp2.html">2-dimensional DP</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -547,7 +581,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../algos/dp.html" class="sidebar-item-text sidebar-link active">
+            <a href="../algos/dp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dynamic Programming</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -562,7 +596,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algos/dp2.html" class="sidebar-item-text sidebar-link">
+  <a href="../algos/dp2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">2-dimensional DP</span></a>
   </div>
 </li>
@@ -573,34 +607,73 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Dynamic Programming</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
+<section id="dimensional-dp" class="level2">
+<h2 class="anchored" data-anchor-id="dimensional-dp">2-dimensional DP</h2>
+<p>2-d DP problems can be solved using a 2D array to store the results of subproblems. The array is typically indexed by two dimensions, representing the two parameters of the problem.</p>
+</section>
+<section id="edit-distance" class="level2">
+<h2 class="anchored" data-anchor-id="edit-distance">Edit Distance</h2>
+<p>Given two strings s1 and s2 and below operations that can be performed on s1. The task is to find the minimum number of edits (operations) to convert ’s1‘ into ’s2‘.</p>
+<p>Insert: Insert any character before or after any index of s1 Remove: Remove a character of s1 Replace: Replace a character at any index of s1 with some other character.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> EditDistance <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">minDistance</span><span class="op">(</span><span class="bu">String</span> word1<span class="op">,</span> <span class="bu">String</span> word2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> m <span class="op">=</span> word1<span class="op">.</span><span class="fu">length</span><span class="op">();</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> n <span class="op">=</span> word2<span class="op">.</span><span class="fu">length</span><span class="op">();</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span><span class="op">[][]</span> dp <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span>m <span class="op">+</span> <span class="dv">1</span><span class="op">][</span>n <span class="op">+</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;=</span> m<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;=</span> n<span class="op">;</span> j<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="op">(</span>i <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                    dp<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> j<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>j <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                    dp<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>word1<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">)</span> <span class="op">==</span> word2<span class="op">.</span><span class="fu">charAt</span><span class="op">(</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                    dp<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">][</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                    dp<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span><span class="op">(</span>dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">][</span>j<span class="op">],</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span><span class="op">(</span>dp<span class="op">[</span>i<span class="op">][</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">],</span> dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">][</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">]));</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> dp<span class="op">[</span>m<span class="op">][</span>n<span class="op">];</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<center>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152756598467/Edit-Distance-1.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152756970536/Edit-Distance-2.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152757193893/Edit-Distance-3.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152757455291/Edit-Distance-4.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152757632163/Edit-Distance-5.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152757820597/Edit-Distance-6.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250308152757971587/Edit-Distance-7.webp" alt="Edit Distance" width="70%" style="filter:invert(1)"></p>
+</center></section>
+<section id="coin-change-problem" class="level2">
+<h2 class="anchored" data-anchor-id="coin-change-problem">Coin Change Problem</h2>
+<p>The Coin Change Problem is a classic problem in dynamic programming. Given a set of coins of different denominations and a total amount, the goal is to find the minimum number of coins needed to make up that amount. If that amount cannot be made up by any combination of the coins, return -1.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CoinChange <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">coinChange</span><span class="op">(</span><span class="dt">int</span><span class="op">[]</span> coins<span class="op">,</span> <span class="dt">int</span> amount<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span><span class="op">[]</span> dp <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span>amount <span class="op">+</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Arrays</span><span class="op">.</span><span class="fu">fill</span><span class="op">(</span>dp<span class="op">,</span> amount <span class="op">+</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        dp<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> coin <span class="op">:</span> coins<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> x <span class="op">=</span> coin<span class="op">;</span> x <span class="op">&lt;=</span> amount<span class="op">;</span> x<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                dp<span class="op">[</span>x<span class="op">]</span> <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span><span class="op">(</span>dp<span class="op">[</span>x<span class="op">],</span> dp<span class="op">[</span>x <span class="op">-</span> coin<span class="op">]</span> <span class="op">+</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> dp<span class="op">[</span>amount<span class="op">]</span> <span class="op">==</span> amount <span class="op">+</span> <span class="dv">1</span> <span class="op">?</span> <span class="op">-</span><span class="dv">1</span> <span class="op">:</span> dp<span class="op">[</span>amount<span class="op">];</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<center>
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Coin%20Change%20Problem%20-%20soni/dynamic-programming-solution-using-coin-change-problem.png" alt="Coin Change Problem" width="70%" style="filter:invert(1)">
+</center>
 
-    
-  
-    
-  </div>
-  
 
-
-</header>
-
-
-<p>Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems. It is applicable when the problem can be divided into overlapping subproblems that can be solved independently. The key idea is to store the results of subproblems to avoid redundant computations.</p>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

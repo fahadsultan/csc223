@@ -124,7 +124,10 @@ website:
         #   contents:
         #     - algos/backtracking.qmd
         #     - algos/greedy.qmd
-        #     - algos/dp.qmd
+        - section: algos/dp.qmd
+          contents:
+            - algos/dp1.qmd
+            - algos/dp2.qmd
     - id: syllabus
       title: "Syllabus"
       background: light

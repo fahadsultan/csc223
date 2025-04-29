@@ -1,0 +1,31 @@
+
+## 1-dimensional DP
+
+1-d DP problems can be solved using a single array to store the results of subproblems. The array is typically indexed by the size of the problem, and the value at each index represents the solution to that subproblem.
+
+### Fibonacci Numbers
+
+The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence is defined by the recurrence relation:
+
+F(n) = F(n-1) + F(n-2)
+with base cases F(0) = 0 and F(1) = 1.
+The Fibonacci sequence starts as follows: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+The Fibonacci numbers can be computed using dynamic programming by storing the results of previously computed Fibonacci numbers in an array.
+
+This avoids redundant calculations and allows for efficient computation of larger Fibonacci numbers.
+
+<img src="https://miro.medium.com/v2/resize:fit:617/1*EmGt1nAA3PNd0dcgE24wAw.png" alt="Fibonacci Numbers" width="70%" style="filter:invert(1)"/>
+
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    dp = [0] * (n + 1)
+    dp[0], dp[1] = 0, 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    return dp[n]
+```
+
+

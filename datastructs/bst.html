@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dynamic Programming</title>
+<title>Binary Search Tree</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algos/dp.html">Dynamic Programming</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/trees.html">TREES</a></li><li class="breadcrumb-item"><a href="../datastructs/bst.html">Binary Search Tree</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -418,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datastructs/bst.html" class="sidebar-item-text sidebar-link">
+  <a href="../datastructs/bst.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Binary Search Tree</span></a>
   </div>
 </li>
@@ -545,43 +545,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../algos/dp.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Dynamic Programming</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/dp1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1-dimensional DP</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algos/dp2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2-dimensional DP</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#operations-on-binary-search-trees" id="toc-operations-on-binary-search-trees" class="nav-link active" data-scroll-target="#operations-on-binary-search-trees">Operations on Binary Search Trees</a>
+  <ul class="collapse">
+  <li><a href="#search" id="toc-search" class="nav-link" data-scroll-target="#search"><strong>Search</strong></a></li>
+  <li><a href="#insertion" id="toc-insertion" class="nav-link" data-scroll-target="#insertion">Insertion</a></li>
+  <li><a href="#deletion" id="toc-deletion" class="nav-link" data-scroll-target="#deletion">Deletion</a></li>
+  <li><a href="#update" id="toc-update" class="nav-link" data-scroll-target="#update">Update</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datastructs/trees.html">TREES</a></li><li class="breadcrumb-item"><a href="../datastructs/bst.html">Binary Search Tree</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Dynamic Programming</h1>
+<h1 class="title">Binary Search Tree</h1>
 </div>
 
 
@@ -598,9 +587,150 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems. It is applicable when the problem can be divided into overlapping subproblems that can be solved independently. The key idea is to store the results of subproblems to avoid redundant computations.</p>
+<p>A <strong>binary search tree (BST)</strong> is a binary tree data structure that is used to <u>store data in a sorted order</u>.</p>
+<p>The binary search tree must at all times satisfy the binary search tree property:</p>
+<ol type="1">
+<li><p>The <u>left subtree of a node</u> contains only nodes with values <u><b>less than or equal to the node’s value</b></u>.</p></li>
+<li><p>The <u>right subtree of a node</u> contains only nodes with values <u><b>greater than or equal to the node’s value</b></u>.</p></li>
+<li><p>Both the left and right subtrees must themselves be binary search trees&gt;.</p></li>
+</ol>
+<p>As a result of this property, the inorder traversal of a binary search tree will always return the nodes in sorted order.</p>
+<center>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240418110011/Binary-Search-Tree.webp" style="filter:invert(1);" width="100%">
+</center>
+<p><br><br></p>
+<section id="operations-on-binary-search-trees" class="level2">
+<h2 class="anchored" data-anchor-id="operations-on-binary-search-trees">Operations on Binary Search Trees</h2>
+<p>All operations on a binary search tree have a time complexity of O(h), where h is the height of the tree. h is equal to the number of levels in the tree.</p>
+<p>For a balanced binary search tree, the height is O(log n), where n is the number of nodes in the tree.</p>
+<p>For an unbalanced binary search tree, the height is O(n).</p>
+<section id="search" class="level3">
+<h3 class="anchored" data-anchor-id="search"><strong>Search</strong></h3>
+<p>Searching for a node in a binary search tree is very similar to searching for a value in a sorted array.</p>
+<center>
+<img src="https://www.freelancinggig.com/blog/wp-content/uploads/2019/02/BFS-and-DFS-Algorithms.png" style="filter:invert(1);" width="100%">
+</center>
+<section id="depth-first-search-dfs" class="level4">
+<h4 class="anchored" data-anchor-id="depth-first-search-dfs">Depth First Search (DFS)</h4>
+<p>A traversal algorithm that explores as far as possible along each branch before backtracking.</p>
+<p>Depth First Search can be implemented using the following steps:</p>
+<ul>
+<li><p>If the tree is empty, return False.</p></li>
+<li><p>If the current node is the target node, return True.</p></li>
+<li><p>Recursively search the left subtree.</p></li>
+<li><p>Recursively search the right subtree.</p></li>
+</ul>
+</section>
+<section id="breadth-first-search-bfs" class="level4">
+<h4 class="anchored" data-anchor-id="breadth-first-search-bfs">Breadth First Search (BFS)</h4>
+<p>A traversal algorithm that explores all the nodes at the present depth before moving on to the nodes at the next depth.</p>
+<p>Breadth First Search can be implemented using the following steps:</p>
+<ul>
+<li><p>If the tree is empty, return False.</p></li>
+<li><p>Create a queue and add the root node to the queue.</p></li>
+<li><p>While the queue is not empty, remove the first node from the queue.</p>
+<ul>
+<li><p>If the current node is the target node, return True.</p></li>
+<li><p>Add the left child of the current node to the queue if it exists.</p></li>
+<li><p>Add the right child of the current node to the queue if it exists.</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="insertion" class="level3">
+<h3 class="anchored" data-anchor-id="insertion">Insertion</h3>
+<p><img align="right" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Binary-search-tree-insertion-animation.gif" style="filter:invert(1);" width="50%"></p>
+<p>Adding a new node to the tree follows the following steps:</p>
+<ul>
+<li><p>If the tree is empty, create a new node and set it as the root of the tree.</p></li>
+<li><p>If the tree is not empty</p>
+<ul>
+<li><p>Compare the value of the new node with the value of the current node.</p></li>
+<li><p>If the value of the new node is less than the value of the current node, move to the left subtree.</p></li>
+<li><p>If the value of the new node is greater than the value of the current node, move to the right subtree.</p></li>
+<li><p>Repeat steps 2.1 to 2.3 until you reach a leaf node.</p>
+<ul>
+<li>Insert the new node as the left child if the value of the new node is less than the value of the leaf node, or as the right child if the value of the new node is greater than the value of the leaf node.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="deletion" class="level3">
+<h3 class="anchored" data-anchor-id="deletion">Deletion</h3>
+<p>Deletion of a node in a binary search tree involves the following steps:</p>
+<ul>
+<li><p>If the tree is empty, return the tree.</p></li>
+<li><p>If the value of the node to be deleted is less than the value of the current node, move to the left subtree.</p></li>
+<li><p>If the value of the node to be deleted is greater than the value of the current node, move to the right subtree.</p></li>
+<li><p>If the value of the node to be deleted is equal to the value of the current node, delete the node.</p>
+<ul>
+<li><p>If the node has no children, simply delete the node.</p></li>
+<li><p>If the node has one child, replace the node with its child.</p></li>
+<li><p>If the node has two children, find the <u>inorder successor</u> of the node, replace the node with the inorder successor, and delete the inorder successor.</p>
+<p>The <u>inorder successor</u> is the smallest node in the right subtree of the node to be deleted.</p></li>
+</ul></li>
+</ul>
+<br>
+<center>
+<p>Case 1: Node to be deleted has no children <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230726182925/d1.png" style="filter:invert(1);" width="100%"></p>
+<p>Case 2: Node to be deleted has one child <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231004182120/file.png" style="filter:invert(1);" width="100%"></p>
+<p>Case 3: Node to be deleted has two children <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231006112704/d3.png" style="filter:invert(1);" width="100%"></p>
+</center>
+</section>
+<section id="update" class="level3">
+<h3 class="anchored" data-anchor-id="update">Update</h3>
+<p>Updating a node in a binary search tree involves deleting the node and inserting a new node with the updated value.</p>
+<p>The time complexity of inserting a node in a binary search tree is O(h), where h is the height of the tree.</p>
+<p>The time complexity of deleting a node in a binary search tree is also O(h), where h is the height of the tree.</p>
+<p>Therefore, the time complexity of updating a node in a binary search tree is O(h).</p>
+<!-- ## Depth First Search -->
+<!-- Maximum Depth of Binary Tree
+    Solution
+    Easy
+
+    Leaf-Similar Trees
+    Solution
+    Easy
+
+    Count Good Nodes in Binary Tree
+    Solution
+    Medium
+
+    Path Sum III
+    Solution
+    Medium
+
+    Longest ZigZag Path in a Binary Tree
+    Solution
+    Medium
+
+    Lowest Common Ancestor of a Binary Tree
+    Solution
+    Medium -->
+<!-- ## Breadth First Search -->
+<!--
+    Binary Tree Right Side View
+    Solution
+    Medium
+
+    Maximum Level Sum of a Binary Tree
+    Solution
+    Medium
+-->
+<!-- # Binary Search Tree -->
+<!--
+    Search in a Binary Search Tree
+    Solution
+    Easy
+
+    Delete Node in a BST
+    Solution
+    Medium
+-->
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

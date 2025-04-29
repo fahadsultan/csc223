@@ -18,8 +18,8 @@ Enjoy the break
 ::: -->
 
 ::: {.callout-caution}
-# Exam 2
-Exam 2 is scheduled for <b><u>Wednesday, April 2nd, 2025</b> at 2:30 PM in Riley 203</u>.
+# Final Exam
+Final is scheduled for <b><u>Monday, May 5th, 2025</b> at 8:30 AM in Riley 204</u>.
 :::
 
 ::: {.callout-tip}
